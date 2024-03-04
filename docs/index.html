@@ -16,7 +16,6 @@
         }
 
         function performMatrixMultiplication() {
-            // Example weighting (or transformation), replace with actual use case
             let matrixA = [
                 [1], // Weight for question 1
                 [2], // Weight for question 2
@@ -25,12 +24,23 @@
             ];
             let matrixB = [results]; // Survey results as matrix
         
-            // Perform operation akin to element-wise multiplication
             let resultMatrix = matrixA.map((value, index) => value[0] * matrixB[0][index]);
         
-            // Display the result
             document.getElementById('matrixResult').innerText = 'Result: ' + resultMatrix.join(', ');
         }
+
+        function loadTextFile() {
+            fetch('anal.txt')
+                .then(response => response.text())
+                .then(text => {
+                    document.getElementById('textFileContent').innerText = text;
+                })
+                .catch(error => console.error('Error fetching the text file:', error));
+        }
+
+        window.onload = () => {
+            loadTextFile(); // Load the text file content when the page loads
+        };
     </script>
 </head>
 <body>
