@@ -1,40 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey and 3D Embeddings Analysis</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <title>1st Analysis</title>
     <link rel="shortcut icon" type="image/png" href="python-logo.png"/>
     <script>
-        // JavaScript function to calculate results
-        let results = [0, 0, 0, 0]; // Array to keep track of yes(1) or no(0) answers
+        let results = [0, 0, 0, 0]; // Initialize survey results
 
         function registerChoice(questionNumber, choice) {
-            results[questionNumber] = choice; // Store choice (1 for Yes, 0 for No)
+            results[questionNumber] = choice; // 1 for Yes, 0 for No
+            document.getElementById('surveyResult').innerText = 'Survey responses: ' + results.join(', ');
+        }
 
-            // Check if all questions were answered
-            let totalAnswers = results.reduce((a, b) => a + b, 0); // Sum of all choices
-            if (results.filter(val => val !== null).length === 4) {
-                document.getElementById("result").innerText = "Total Yes Answers: " + totalAnswers;
+        function performMatrixMultiplication() {
+            // Example matrices
+            let matrixA = [
+                [1, 0, 2],
+                [0, 1, 1],
+                [1, 1, 0],
+                [0, 2, 1]
+            ]; // Replace with actual survey analysis matrix
+            let matrixB = [
+                [results[0]], 
+                [results[1]], 
+                [results[2]],
+                [results[3]]
+            ]; // Matrix representing user answers
+
+            // Perform matrix multiplication matrixA * matrixB
+            let resultMatrix = [];
+            for (let i = 0; i < matrixA.length; i++) {
+                let sum = 0;
+                for (let j = 0; j < matrixB.length; j++) {
+                    sum += matrixA[i][j] * matrixB[j][0];
+                }
+                resultMatrix.push([sum]);
             }
+
+            // Display the result
+            document.getElementById('matrixResult').innerText = 'Matrix multiplication result: ' + resultMatrix.join(', ');
         }
     </script>
 </head>
 <body>
-    <h1>3D Embeddings of all Members of the 58th UK parliament</h1>
-    <p>Each MP in the UK votes either For, Against or abstains on any bill that comes through parliament. By converting these votes to [-1, 0, 1], I used singular value decomposition to reduce the voting matrix to 3 dimensions, rendering a 3D embedding for each MP:</p>
-    <iframe src="3D.html" width="1200" height="900" style="border:1px solid black;"></iframe>
+    <div class="container">
+        <h1>3D Embeddings of all Members of the 58th UK parliament</h1>
+        <p>Each MP in the UK votes either For, Against or abstains on any bill that comes through parliament. By converting these votes to [-1, 0, 1], I used singular value decomposition to reduce the voting matrix to 3 dimensions, rendering a 3D embedding for each MP:</p>
+        <iframe src="3D.html" width="1200" height="900" style="border:1px solid black;"></iframe>
 
-    <div class="my-3">
-        <h2>Survey:</h2>
-        <div id="questions">
-            <p>1. Do you agree with the first policy? <button class="btn btn-success" onclick="registerChoice(0, 1)">Yes</button> <button class="btn btn-danger" onclick="registerChoice(0, 0)">No</button></p>
-            <p>2. Do you agree with the second policy? <button class="btn btn-success" onclick="registerChoice(1, 1)">Yes</button> <button class="btn btn-danger" onclick="registerChoice(1, 0)">No</button></p>
-            <p>3. Do you agree with the third policy? <button class="btn btn-success" onclick="registerChoice(2, 1)">Yes</button> <button class="btn btn-danger" onclick="registerChoice(2, 0)">No</button></p>
-            <p>4. Do you agree with the fourth policy? <button class="btn btn-success" onclick="registerChoice(3, 1)">Yes</button> <button class="btn btn-danger" onclick="registerChoice(3, 0)">No</button></p>
+        <div class="my-3">
+            <h2>Survey:</h2>
+            <div id="questions">
+                <p>1. Do you agree with the first policy? <button class="btn btn-success" onclick="registerChoice(0, 1)">Yes</button> <button class="btn btn-danger" onclick="registerChoice(0, 0)">No</button></p>
+                <p>2. Do you agree with the second policy? <button class="btn btn-success" onclick="registerChoice(1, 1)">Yes</button> <button class="btn btn-danger" onclick="registerChoice(1, 0)">No</button></p>
+                <p>3. Do you agree with the third policy? <button class="btn btn-success" onclick="registerChoice(2, 1)">Yes</button> <button class="btn btn-danger" onclick="registerChoice(2, 0)">No</button></p>
+                <p>4. Do you agree with the fourth policy? <button class="btn btn-success" onclick="registerChoice(3, 1)">Yes</button> <button class="btn btn-danger" onclick="registerChoice(3, 0)">No</button></p>
+                <button class="btn btn-primary" onclick="performMatrixMultiplication()">Calculate Result</button>
+            </div>
+            <div id="surveyResult" class="mt-3"></div>
+            <div id="matrixResult" class="mt-3"></div>
         </div>
-        <div id="result" class="mt-3"></div>
     </div>
-
 </body>
 </html>
