@@ -16,32 +16,20 @@
         }
 
         function performMatrixMultiplication() {
-            // Example matrices
+            // Example weighting (or transformation), replace with actual use case
             let matrixA = [
-                [1, 0, 2],
-                [0, 1, 1],
-                [1, 1, 0],
-                [0, 2, 1]
-            ]; // Replace with actual survey analysis matrix
-            let matrixB = [
-                [results[0]], 
-                [results[1]], 
-                [results[2]],
-                [results[3]]
-            ]; // Matrix representing user answers
-
-            // Perform matrix multiplication matrixA * matrixB
-            let resultMatrix = [];
-            for (let i = 0; i < matrixA.length; i++) {
-                let sum = 0;
-                for (let j = 0; j < matrixB.length; j++) {
-                    sum += matrixA[i][j] * matrixB[j][0];
-                }
-                resultMatrix.push([sum]);
-            }
-
+                [1], // Weight for question 1
+                [2], // Weight for question 2
+                [3], // Weight for question 3
+                [4]  // Weight for question 4
+            ];
+            let matrixB = [results]; // Survey results as matrix
+        
+            // Perform operation akin to element-wise multiplication
+            let resultMatrix = matrixA.map((value, index) => value[0] * matrixB[0][index]);
+        
             // Display the result
-            document.getElementById('matrixResult').innerText = 'Matrix multiplication result: ' + resultMatrix.join(', ');
+            document.getElementById('matrixResult').innerText = 'Result: ' + resultMatrix.join(', ');
         }
     </script>
 </head>
