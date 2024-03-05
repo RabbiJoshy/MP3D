@@ -25,7 +25,9 @@
             })
             .then(response => response.json())
             .then(data => {
-                document.getElementById('serverResponse').innerHTML = 'Average response: ' + data.mean.toFixed(2) + '<br>PCA Object: ' + data.p;
+                // Update this line to reflect the new response structure
+                document.getElementById('serverResponse').innerHTML = 
+                    'Embedding: ' + data.embedding + '<br>Closest MP: ' + data['closest MP'];
             })
             .catch((error) => {
                 console.error('Error:', error);
