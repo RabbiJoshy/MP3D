@@ -34,7 +34,7 @@
 
         // Add this function for Heroku dynamic content
         function getHelloWorld() {
-            fetch('https://threedempee.herokuapp.com/helloworld')
+            fetch('https://threedempee-a6d964fcaa65.herokuapp.com/helloworld')
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById('helloWorld').innerText = data.message;
