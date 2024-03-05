@@ -12,35 +12,23 @@
 
         function registerChoice(questionNumber, choice) {
             results[questionNumber] = choice; // 1 for Yes, 0 for No
+            updateSurveyResults();
+        }
+
+        function updateSurveyResults() {
+            // Update the display of survey responses
             document.getElementById('surveyResult').innerText = 'Survey responses: ' + results.join(', ');
-        }
 
-        function performMatrixMultiplication() {
-            // Example weighting (or transformation), replace with actual use case
-            let matrixA = [
-                [1], // Weight for question 1
-                [2], // Weight for question 2
-                [3], // Weight for question 3
-                [4]  // Weight for question 4
-            ];
-            let matrixB = [results]; // Survey results as matrix
-        
-            // Perform operation akin to element-wise multiplication
-            let resultMatrix = matrixA.map((value, index) => value[0] * matrixB[0][index]);
-        
-            // Display the result
-            document.getElementById('matrixResult').innerText = 'Result: ' + resultMatrix.join(', ');
-        }
-
-        // Add this function for Heroku dynamic content
-        function getHelloWorld() {
+            // Fetch and display the result from the Flask app
             fetch('https://threedempee-a6d964fcaa65.herokuapp.com/helloworld')
                 .then(response => response.json())
                 .then(data => {
-                    document.getElementById('helloWorld').innerText = data.message;
+                    // Combine the survey responses with the message from the Flask app
+                    document.getElementById('appResponse').innerText = 'Survey choices: ' + results.join(', ') + '. Server says: ' + data.message;
                 })
                 .catch(error => {
-                    console.error('Error fetching Hello World:', error);
+                    console.error('Error fetching from Flask app:', error);
+                    document.getElementById('appResponse').innerText = 'Error fetching response';
                 });
         }
     </script>
@@ -48,23 +36,20 @@
 <body>
     <div class="container">
         <h1>3D Embeddings of all Members of the 58th UK parliament</h1>
-        <!-- Additional section for Heroku app response -->
-        <div class="my-3">
-            <h2>Heroku App Response:</h2>
-            <button onclick="getHelloWorld()" class="btn btn-primary">Get Hello World</button>
-            <p id="helloWorld">Hello world result will appear here</p>
-        </div>
-        <!-- Existing content -->
         <p>Each MP in the UK votes either For, Against or abstains on any bill that comes through parliament. By converting these votes to [-1, 0, 1], I used singular value decomposition to reduce the voting matrix to 3 dimensions, rendering a 3D embedding for each MP:</p>
         <iframe src="3D2.html" width="1200" height="900" style="border:1px solid black;"></iframe>
 
         <div class="my-3">
             <h2>Survey:</h2>
             <div id="questions">
-                <!-- Your existing survey buttons and questions -->
+                <!-- Example questions -->
+                <p>1. Do you agree with the first policy? <button class="btn btn-success" onclick="registerChoice(0, 1)">Yes</button> <button class="btn btn-danger" onclick="registerChoice(0, 0)">No</button></p>
+                <p>2. Do you agree with the second policy? <button class="btn btn-success" onclick="registerChoice(1, 1)">Yes</button> <button class="btn btn-danger" onclick="registerChoice(1, 0)">No</button></p>
+                <p>3. Do you agree with the third policy? <button class="btn btn-success" onclick="registerChoice(2, 1)">Yes</button> <button class="btn btn-danger" onclick="registerChoice(2, 0)">No</button></p>
+                <p>4. Do you agree with the fourth policy? <button class="btn btn-success" onclick="registerChoice(3, 1)">Yes</button> <button class="btn btn-danger" onclick="registerChoice(3, 0)">No</button></p>
             </div>
             <div id="surveyResult" class="mt-3"></div>
-            <div id="matrixResult" class="mt-3"></div>
+            <div id="appResponse" class="mt-3"></div> <!-- This is where we will show the response -->
         </div>
     </div>
 </body>
