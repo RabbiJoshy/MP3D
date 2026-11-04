@@ -1,8 +1,8 @@
 """Group topics into regions using two signals, then lay out regions and topics in 3D.
 
 Two topics are related if they use similar words, or if the same MPs talk about both.
-Regions: Ward clustering on both signals. Layout: MDS between regions, then MDS inside each region,
-so a neighbourhood always stays together. Out: data/quick/topic_layout.npz
+Regions: Ward clustering on both signals. Layout: one MDS across all topics, so distances are comparable
+everywhere on the map. Regions are colours on that map, so they can overlap. Out: data/quick/topic_layout.npz
 """
 import os
 import pathlib
@@ -13,6 +13,7 @@ os.environ.setdefault("OPENBLAS_NUM_THREADS", "2")
 os.environ.setdefault("VECLIB_MAXIMUM_THREADS", "2")
 
 import numpy as np
+from scipy.stats import spearmanr
 from sklearn.cluster import AgglomerativeClustering
 from sklearn.decomposition import TruncatedSVD
 from sklearn.manifold import MDS
@@ -39,23 +40,22 @@ dist = np.clip(1 - sim, 0, None)
 np.fill_diagonal(dist, 0)
 
 reg_ids = sorted(set(labels))
-reg_dist = np.array([[dist[np.ix_(labels == a, labels == b)].mean() for b in reg_ids] for a in reg_ids])
-np.fill_diagonal(reg_dist, 0)
-reg_xyz = MDS(3, dissimilarity="precomputed", random_state=SEED, n_init=8, normalized_stress="auto").fit_transform(reg_dist)
-reg_xyz = reg_xyz / np.percentile(np.linalg.norm(reg_xyz - reg_xyz.mean(0), axis=1), 90) * 13
-
+# One shared space: every topic is placed relative to every other topic, so nearer generally means more related.
+layout = MDS(3, dissimilarity="precomputed", random_state=SEED, n_init=8, normalized_stress="auto").fit_transform(dist)
+layout = layout - np.median(layout, axis=0)
+layout = layout / np.percentile(np.linalg.norm(layout, axis=1), 95) * 15
 topic_pos = np.zeros((len(centres), 3))
-for r in reg_ids:
-    idx = np.where(labels == r)[0]
-    if len(idx) == 1:
-        local = np.zeros((1, 3))
-    else:
-        d = dist[np.ix_(idx, idx)]
-        local = MDS(3, dissimilarity="precomputed", random_state=SEED, n_init=8, normalized_stress="auto").fit_transform(d)
-        local = local - local.mean(0)
-        local = local / max(np.linalg.norm(local, axis=1).max(), 1e-6)
-    radius = 1.3 + 0.55 * np.sqrt(len(idx))
-    topic_pos[real[idx]] = reg_xyz[r] + local * radius
+topic_pos[real] = layout
+reg_xyz = np.array([layout[labels == r].mean(0) for r in reg_ids])
+
+iu = np.triu_indices(len(real), 1)
+same = labels[iu[0]] == labels[iu[1]]
+mapped = np.linalg.norm(layout[:, None] - layout[None], axis=2)
+print(f"map distance vs real similarity: all {spearmanr(mapped[iu], dist[iu])[0]:.2f}, "
+      f"same region {spearmanr(mapped[iu][same], dist[iu][same])[0]:.2f}, across regions {spearmanr(mapped[iu][~same], dist[iu][~same])[0]:.2f}")
+nearest = (mapped + np.eye(len(real)) * 1e9).argmin(1)
+print(f"nearest topic is in the same region for {(labels[nearest] == labels).mean():.0%} of topics; "
+      f"closest pair distance {np.min(mapped[iu]):.2f}, median nearest-topic distance {np.median((mapped + np.eye(len(real)) * 1e9).min(1)):.2f}")
 
 region = np.full(len(centres), -1)
 region[real] = labels
