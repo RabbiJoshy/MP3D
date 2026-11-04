@@ -1,20 +1,31 @@
-# Build a Static Webpage
+# Commons Word Space
 
-The purpose of this repository is to demonstrate how to build a static webpage using github pages and plotly.
+An interactive 3D map of what UK MPs talk about, and a tool for seeing which MPs voted like you.
 
-* You can view this repo as a static web page [here](https://plotly-dash-apps.github.io/101-static-website-github-pages/)
-* The notebook `create-html-plots.ipynb` can be used to produce the html files located in the `/docs` folder.
+**[Open the map](https://rabbijoshy.github.io/MP3D/)**
 
-Note:
-* Resourcese for free HTML templates:
-  - https://html5up.net
-  - https://picocss.com/
-  - https://technext.github.io/100-template-bundle/
-  - https://tailwindui.com/
-  - https://cruip.com/free-templates/
-  - https://codestitch.app/app
+- **Topics:** every star is a passage from a speech in the Commons since July 2024. Passages form 72 topics, and related topics form 11 neighbourhoods.
+- **People:** each MP is placed by their whole mix of topics, with party averages.
+- **Find your MPs:** answer up to 13 real Commons votes to see which MPs and parties voted most and least like you.
 
-How to host your static website:
-* [GitHub Pages](https://guides.github.com/features/pages/) are public webpages hosted and easily published through GitHub.
-* Read the [following blog](https://austinlasseter.medium.com/create-a-static-webpage-using-github-and-plotly-468ae89710d3) post about how to set up your own static webpage.
-* an alternative is [AWS Amplify for static website](https://aws.amazon.com/getting-started/hands-on/host-static-website/?refid=9eb02e4d-80e0-4f27-a621-b90b3c870bf3)
+## How it works
+
+1. `pipeline/01_download.py` downloads Commons divisions and MP profiles from the Parliament APIs, and daily Hansard XML from TheyWorkForYou.
+2. `pipeline/02_clean.py` removes chairs, procedural debates, forms of address, constituency names and repeated boilerplate, then cuts speeches into passages. That gives about 32 million words in 260,000 passages.
+3. `prototypes/topic_space.py` builds topics with TF-IDF, SVD and k-means, and lays out the passages with UMAP.
+4. `prototypes/topic_regions.py` groups topics by shared words and shared speakers.
+5. `prototypes/build_topic_page.py` builds the single-page site in `docs/`.
+
+Run the steps in order, then `pipeline/04_votes.py` before the final build. The data isn't in this repo, because the scripts can download it again.
+
+## Limits
+
+- This version uses word statistics, so it shows what MPs talk about far better than where they stand.
+- Topic and neighbourhood names were added by hand after reading each group's top words. The stance questions were also written by hand.
+- About 22% of passages were general parliamentary talk with no clear subject and aren't on the map.
+- General Committee debates aren't in the bulk Hansard files, so they're missing.
+- `pipeline/03_embed.py` and `05_noise_and_eval.py` are unfinished work towards an embedding-based version.
+
+The original 2024 voting map is kept at [`docs/2024.html`](docs/2024.html).
+
+Data: UK Parliament and TheyWorkForYou/ParlParse. Parliamentary information is licensed under the Open Parliament Licence.

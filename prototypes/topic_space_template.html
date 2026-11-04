@@ -1,0 +1,342 @@
+<meta charset="utf-8">
+<title>Commons Word Space</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Layout: the whole screen is a night sky over Commons-bench green; regions of debate glow as constellations, controls float at the edges. */
+:root{
+  --bench:#0a211b; --bench2:#143a30; --ink:#efece0; --dim:#a7b8ae; --brass:#d9b45f; --line:#2c5145;
+  --display:"Bricolage Grotesque","Trebuchet MS",sans-serif; --body:"Source Sans 3","Segoe UI",sans-serif;
+  color-scheme:dark;
+}
+html,body{height:100%}
+body{background:var(--bench);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.4;overflow:hidden;margin:0}
+#stage{position:fixed;left:0;top:0;width:100%;height:100%;display:block;cursor:grab;touch-action:none}
+#stage.drag{cursor:grabbing}
+#labels{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.lb{position:absolute;left:0;top:0;pointer-events:auto;cursor:pointer;background:none;border:0;padding:1px 4px;color:var(--ink);white-space:nowrap;text-shadow:0 0 4px var(--bench),0 0 9px var(--bench),0 1px 2px #000;will-change:transform}
+.rl{font:700 17px/1.1 var(--display)}
+.tl{font:500 12px/1.1 var(--body)}
+.tl:hover,.tl.on{color:var(--brass)}
+.lb:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+header{position:fixed;left:max(16px,env(safe-area-inset-left,0px));top:calc(14px + env(safe-area-inset-top,0px));width:min(270px,calc(100vw - 32px));display:flex;flex-direction:column;gap:9px;pointer-events:none}
+header>*{pointer-events:auto}
+h1{font:700 24px/1.05 var(--display);margin:0;text-wrap:balance}
+.sub{color:var(--dim);margin:0;font-size:13.5px}
+#searchwrap{position:relative}
+#search{width:100%;box-sizing:border-box;background:var(--bench2);border:1px solid var(--line);color:var(--ink);padding:7px 10px;border-radius:6px;font:inherit}
+#results{position:absolute;z-index:5;left:0;right:0;top:100%;margin:2px 0 0;padding:0;list-style:none;background:var(--bench2);border:1px solid var(--line);border-radius:6px;max-height:240px;overflow:auto}
+#results button{display:block;width:100%;text-align:left;background:none;border:0;color:var(--ink);font:inherit;padding:5px 10px;cursor:pointer}
+#results button:hover{background:var(--line)}
+#results small{color:var(--dim)}
+#parties{display:flex;flex-wrap:wrap;gap:4px}
+.chip{display:inline-flex;align-items:center;gap:5px;background:var(--bench2);border:1px solid var(--line);border-radius:999px;color:var(--ink);font:12.5px var(--body);padding:2px 8px;cursor:pointer}
+.chip i{width:9px;height:9px;border-radius:50%;display:block}
+.chip[aria-pressed=true]{border-color:var(--brass);color:var(--brass)}
+.tools{display:flex;gap:6px;flex-wrap:wrap}
+.tool{background:var(--bench2);border:1px solid var(--line);color:var(--ink);border-radius:6px;padding:4px 9px;font:13px var(--body);cursor:pointer}
+.tool:hover{border-color:var(--brass)}
+#panel{position:fixed;right:max(14px,env(safe-area-inset-right,0px));top:calc(14px + env(safe-area-inset-top,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));width:330px;background:color-mix(in srgb,var(--bench2) 94%,transparent);border:1px solid var(--line);border-radius:10px;padding:16px;overflow:auto;box-sizing:border-box;display:flex;flex-direction:column;gap:13px}
+#panel h2{font:700 21px/1.1 var(--display);margin:0;text-wrap:balance}
+#panel h3{font:600 11.5px var(--body);letter-spacing:.09em;text-transform:uppercase;color:var(--brass);margin:0 0 5px}
+.who{display:flex;gap:12px;align-items:center}
+.face{width:72px;height:72px;border-radius:50%;flex:none;border:3px solid;background-repeat:no-repeat}
+.meta{color:var(--dim);font-size:13.5px}
+.bar{display:grid;grid-template-columns:minmax(0,1fr) 38px;gap:0 8px;align-items:center;background:none;border:0;padding:2px 0;color:var(--ink);font:13.5px var(--body);width:100%;text-align:left;cursor:pointer}
+.bar:hover span:first-child{color:var(--brass)}
+.bar em{grid-column:1/3;display:block;height:4px;border-radius:2px;margin-top:2px}
+.bar b{font-weight:400;color:var(--dim);text-align:right;font-variant-numeric:tabular-nums}
+.pb{display:grid;grid-template-columns:42px minmax(0,1fr) 70px;gap:7px;align-items:center;font-size:13px;padding:2px 0}
+.pb .t{height:8px;background:var(--line);border-radius:4px;position:relative}
+.pb .t i{position:absolute;left:0;top:0;bottom:0;border-radius:4px;display:block}
+.pb .t u{position:absolute;top:-2px;bottom:-2px;width:2px;background:var(--ink);display:block}
+.pb b{font-weight:400;color:var(--dim);text-align:right;font-variant-numeric:tabular-nums}
+.words{display:flex;flex-wrap:wrap;gap:3px 9px;font-size:13.5px}
+.mates{display:flex;flex-direction:column}
+.mate{background:none;border:0;color:var(--ink);font:13.5px var(--body);display:flex;gap:7px;align-items:center;padding:3px 0;cursor:pointer;text-align:left}
+.mate:hover{color:var(--brass)}
+.mate i{width:9px;height:9px;border-radius:50%;flex:none}
+.mate small{color:var(--dim)}
+.topicchip{display:flex;gap:7px;align-items:center;background:none;border:0;color:var(--ink);font:13.5px var(--body);padding:2px 0;cursor:pointer;text-align:left}
+.topicchip i{width:9px;height:9px;border-radius:2px;flex:none}
+.topicchip:hover{color:var(--brass)}
+blockquote{margin:0;border:0;padding:0;font-size:14px}
+.src{color:var(--dim);font-size:12.5px;margin-top:3px}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.stats div{font:600 17px var(--display);font-variant-numeric:tabular-nums}
+.stats small{display:block;font:12px var(--body);color:var(--dim)}
+.tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border:1px solid var(--line);border-radius:7px;overflow:hidden;background:var(--bench2)}
+.tab{background:none;border:0;color:var(--ink);font:600 13px var(--body);padding:7px 3px;cursor:pointer}
+.tab+.tab{border-left:1px solid var(--line)}
+.tab[aria-selected=true]{background:var(--brass);color:#14241e}
+.crumbs{display:flex;flex-wrap:wrap;gap:3px 6px;align-items:center;font-size:13px;color:var(--dim)}
+.crumbs button{background:none;border:0;padding:0;color:var(--ink);font:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+.cl{font:600 13px/1.15 var(--display);color:var(--ink)}
+.pl{font:700 13px/1 var(--body);padding:4px 8px;border-radius:999px;color:#10201b;text-shadow:none;cursor:default}
+.you{font:700 13px/1 var(--body);padding:5px 9px;border-radius:999px;background:var(--brass);color:#14241e;text-shadow:none;pointer-events:none;box-shadow:0 0 0 4px rgba(217,180,95,.28)}
+.qu{padding:9px 0;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:5px}
+.qu p{margin:0;font-weight:600;font-size:14px}
+.ans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}
+.ans button{background:var(--bench);border:1px solid var(--line);border-radius:5px;color:var(--ink);padding:4px;font:13px var(--body);cursor:pointer}
+.ans button[aria-pressed=true]{background:var(--brass);border-color:var(--brass);color:#14241e;font-weight:600}
+.splits{display:flex;flex-wrap:wrap;gap:2px 9px;font-size:12.5px;color:var(--dim)}
+details summary{cursor:pointer;font-weight:600}
+.picks{display:flex;flex-wrap:wrap;gap:4px;margin-top:7px}
+.pick{background:var(--bench);border:1px solid var(--line);border-radius:999px;color:var(--ink);font:12.5px var(--body);padding:2px 8px;cursor:pointer}
+.pick[aria-pressed=true]{background:var(--brass);border-color:var(--brass);color:#14241e}
+#close{align-self:flex-end;margin-bottom:-8px}
+#tip{position:fixed;display:none;pointer-events:none;background:var(--bench2);border:1px solid var(--line);padding:3px 8px;border-radius:5px;font-size:13px;left:0;top:0;white-space:nowrap}
+@media (max-width:760px){
+  h1{font-size:19px}.sub{display:none}#parties{max-height:56px;overflow:auto}
+  #panel{left:max(10px,env(safe-area-inset-left,0px));right:max(10px,env(safe-area-inset-right,0px));top:auto;bottom:calc(10px + env(safe-area-inset-bottom,0px));width:auto;max-height:45%}
+  .rl{font-size:13px}.tl{font-size:10.5px}
+}
+</style>
+<canvas id="stage" aria-label="3D map of parliamentary topics and MPs. Use search to find an MP."></canvas>
+<div id="labels"></div>
+<div id="tip"></div>
+<header>
+  <h1>Commons Word Space</h1>
+  <div class="tabs" role="tablist"><button class="tab" role="tab" id="tab-topics" aria-selected="true">Topics</button><button class="tab" role="tab" id="tab-people" aria-selected="false">People</button><button class="tab" role="tab" id="tab-find" aria-selected="false">Find your MPs</button></div>
+  <p class="sub" id="modehelp"></p>
+  <div id="searchwrap"><input id="search" type="search" placeholder="Find an MP or constituency" autocomplete="off" aria-label="Find an MP or constituency"><ul id="results" hidden></ul></div>
+  <div id="parties"></div>
+  <div class="tools"><button class="tool" id="zin" aria-label="Zoom in">Zoom in</button><button class="tool" id="zout" aria-label="Zoom out">Zoom out</button><button class="tool" id="reset">Reset view</button><button class="tool" id="faces">Hide MPs</button><button class="tool" id="spin">Pause spin</button></div>
+</header>
+<aside id="panel"></aside>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const D=__DATA__;
+const ATLAS="__ATLAS__";
+const bytes=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+const XYZ=new Int16Array(bytes("__XYZ__").buffer),STOPIC=bytes("__TOPIC__"),SOWNER=new Int16Array(bytes("__OWNER__").buffer);
+const MIXQ=new Int8Array(bytes("__MIX__").buffer);
+const MPS=D.mps,TOPICS=D.topics,REGIONS=D.regions,N=MPS.length,S=D.stars;
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const pct=v=>Math.round(v*100)+"%";
+
+const canvas=$("stage");
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true});
+const DPR=Math.min(devicePixelRatio,2);renderer.setPixelRatio(DPR);
+const scene=new THREE.Scene();scene.background=new THREE.Color(0x0a211b);
+const camera=new THREE.PerspectiveCamera(50,1,.1,300);
+
+// Stars
+const sPos=new Float32Array(S*3),sCol=new Float32Array(S*3),sBase=new Float32Array(S*3),sBright=new Float32Array(S);
+const rc=REGIONS.map(r=>new THREE.Color(r.c));
+for(let i=0;i<S;i++){for(let j=0;j<3;j++)sPos[i*3+j]=XYZ[i*3+j]/32767*D.limit;
+  const c=rc[TOPICS[STOPIC[i]].r];sBase.set([c.r,c.g,c.b],i*3);sCol.set([c.r,c.g,c.b],i*3);sBright[i]=.75;}
+const sGeo=new THREE.BufferGeometry();
+sGeo.setAttribute("position",new THREE.BufferAttribute(sPos,3));
+sGeo.setAttribute("col",new THREE.BufferAttribute(sCol,3));
+sGeo.setAttribute("bright",new THREE.BufferAttribute(sBright,1));
+const sUni={px:{value:1},fade:{value:1}};
+const stars=new THREE.Points(sGeo,new THREE.ShaderMaterial({uniforms:sUni,transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,
+vertexShader:`attribute vec3 col;attribute float bright;uniform float px;varying vec3 vC;varying float vB;
+void main(){vC=col;vB=bright;vec4 mv=modelViewMatrix*vec4(position,1.);gl_Position=projectionMatrix*mv;gl_PointSize=max(1.5,px*(.5+bright*.9)/-mv.z);}`,
+fragmentShader:`uniform float fade;varying vec3 vC;varying float vB;void main(){float d=length(gl_PointCoord-.5);if(d>.5)discard;float a=smoothstep(.5,.05,d);gl_FragColor=vec4(vC*a*vB*.8*fade,a*fade);}`}));
+stars.frustumCulled=false;scene.add(stars);
+
+// MPs as faces
+const pos=new Float32Array(N*3),tile=new Float32Array(N*2),col=new Float32Array(N*3),scale=new Float32Array(N),glow=new Float32Array(N);
+const ts=D.tile/D.size;
+MPS.forEach((m,i)=>{pos.set(m.x,i*3);tile.set([(i%D.cols)*ts,Math.floor(i/D.cols)*ts],i*2);const c=new THREE.Color(m.c);col.set([c.r,c.g,c.b],i*3);scale[i]=1;glow[i]=1;});
+const geo=new THREE.BufferGeometry();
+geo.setAttribute("position",new THREE.BufferAttribute(pos,3));
+geo.setAttribute("tile",new THREE.BufferAttribute(tile,2));
+geo.setAttribute("col",new THREE.BufferAttribute(col,3));
+geo.setAttribute("scale",new THREE.BufferAttribute(scale,1));
+geo.setAttribute("glow",new THREE.BufferAttribute(glow,1));
+const uni={atlas:{value:null},px:{value:1},ts:{value:ts},bg:{value:new THREE.Color(0x0a211b)}};
+const mat=new THREE.ShaderMaterial({uniforms:uni,
+vertexShader:`attribute vec2 tile;attribute vec3 col;attribute float scale;attribute float glow;uniform float px;varying vec2 vT;varying vec3 vC;varying float vG;
+void main(){vT=tile;vC=col;vG=glow;vec4 mv=modelViewMatrix*vec4(position,1.);gl_Position=projectionMatrix*mv;gl_PointSize=max(3.,px*scale/-mv.z);}`,
+fragmentShader:`uniform sampler2D atlas;uniform float ts;uniform vec3 bg;varying vec2 vT;varying vec3 vC;varying float vG;
+void main(){vec2 p=gl_PointCoord;float d=length(p-.5);if(d>.5)discard;vec3 c=d>.42?vC:texture2D(atlas,vT+p*ts).rgb;gl_FragColor=vec4(mix(bg,c,vG),1.);}`});
+const points=new THREE.Points(geo,mat);points.frustumCulled=false;scene.add(points);
+const img=new Image();img.onload=()=>{const t=new THREE.Texture(img);t.flipY=false;t.minFilter=THREE.LinearMipmapLinearFilter;t.needsUpdate=true;uni.atlas.value=t;};img.src=ATLAS;
+
+// Lines from a selected MP to their topics
+const lGeo=new THREE.BufferGeometry();const lines=new THREE.LineSegments(lGeo,new THREE.LineBasicMaterial({color:0xd9b45f,transparent:true,opacity:.75}));lines.visible=false;scene.add(lines);
+
+const tv=TOPICS.map(t=>new THREE.Vector3(...t.x)),rv=REGIONS.map(r=>new THREE.Vector3(...r.x));
+const tLabels=TOPICS.map((t,k)=>{const b=document.createElement("button");b.className="lb tl";b.textContent=t.n;b.onclick=()=>selectTopic(k);$("labels").append(b);return b;});
+const rLabels=REGIONS.map((r,k)=>{const b=document.createElement("button");b.className="lb rl";b.textContent=r.n;b.style.color=r.c;b.onclick=()=>selectRegion(k);$("labels").append(b);return b;});
+
+const HOME=36;
+let az=.6,el=.28,dist=HOME,distTo=HOME,target=new THREE.Vector3(),targetTo=new THREE.Vector3(),spin=!reduce;
+let sel=null,topicSel=null,regionSel=null,soloParty=null,showMPs=true;
+let mode="topics",morph=0,morphTo=0,matchSet=null,youPos=null;
+const posA=Float32Array.from(pos),posB=new Float32Array(N*3);MPS.forEach((m,i)=>posB.set(m.y,i*3));
+const homeDist=()=>morphTo>0.5?32:HOME;
+const v=new THREE.Vector3();
+function resize(){const w=innerWidth,h=innerHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();if(w>760)camera.setViewOffset(w,h,165,0,w,h);else camera.clearViewOffset();const base=h*DPR/(2*Math.tan(25*Math.PI/180));uni.px.value=base*.30;sUni.px.value=base*.075;}
+addEventListener("resize",resize);resize();
+function project(p){v.copy(p).project(camera);return{x:(v.x+1)/2*innerWidth,y:(1-v.y)/2*innerHeight,z:v.z};}
+
+function refresh(){
+  for(let i=0;i<N;i++){const m=MPS[i];let g=1,s=1;
+    if(soloParty&&m.p!==soloParty)g=.08;
+    if(topicSel!=null){const e=m.t.find(a=>a[0]===topicSel);const a=e?Math.min(1,e[1]/.3):0;s=.5+a*2;g=Math.min(g,.08+a*.92);}
+    if(regionSel!=null&&topicSel==null){const a=m.t.filter(e=>TOPICS[e[0]].r===regionSel).reduce((x,e)=>x+e[1],0);g=Math.min(g,.08+Math.min(1,a/.4)*.92);}
+    if(matchSet&&sel==null){const r=matchSet.get(i);if(r!=null){s=r<5?2.6:1.5;g=1;}else{g=Math.min(g,.2);s=.75;}}
+    if(sel!=null){const near=MPS[sel].nn.includes(i);if(i===sel){s=3.4;g=1;}else if(near){s=1.5;g=1;}else{g=Math.min(g,.12);s=.7;}}
+    scale[i]=s;glow[i]=g;}
+  geo.attributes.scale.needsUpdate=true;geo.attributes.glow.needsUpdate=true;
+  const party=soloParty?new Set(MPS.map((m,i)=>m.p===soloParty?i:-1)):null;
+  for(let i=0;i<S;i++){let b=.75;const t=STOPIC[i],r=TOPICS[t].r,o=SOWNER[i];
+    if(party&&!party.has(o))b=.05;
+    if(regionSel!=null&&r!==regionSel)b=Math.min(b,.07);
+    if(topicSel!=null&&t!==topicSel)b=Math.min(b,.06);
+    if(sel!=null)b=o===sel?2:.05;
+    sBright[i]=b;}
+  sGeo.attributes.bright.needsUpdate=true;
+  if(sel!=null&&morphTo<.5){const m=MPS[sel];const a=[];m.t.filter(e=>e[1]>=.03).forEach(([k])=>a.push(...m.x,...TOPICS[k].x));lGeo.setAttribute("position",new THREE.Float32BufferAttribute(a,3));lines.visible=true;}else lines.visible=false;
+}
+function hoverAt(x,y){if(!showMPs)return-1;let best=-1,bd=1e9;const r=uni.px.value/DPR;const w=new THREE.Vector3();
+  for(let i=0;i<N;i++){w.set(pos[i*3],pos[i*3+1],pos[i*3+2]);const p=project(w);if(p.z>1)continue;const depth=camera.position.distanceTo(w);
+    const rad=Math.max(5,r*scale[i]/depth/2);if(Math.hypot(p.x-x,p.y-y)<rad&&glow[i]>.2&&depth<bd){bd=depth;best=i;}}
+  return best;}
+
+function faceStyle(i){const s=72/D.tile,cx=(i%D.cols)*D.tile*s,cy=Math.floor(i/D.cols)*D.tile*s;return `background-image:url(${ATLAS});background-size:${D.size*s}px;background-position:-${cx}px -${cy}px;border-color:${MPS[i].c}`;}
+const panel=$("panel");
+const closeBtn=`<button class="tool" id="close">Back to the full map</button>`;
+const mpBtn=(i,extra="")=>`<button class="mate" data-mp="${i}"><i style="background:${MPS[i].c}"></i>${esc(MPS[i].n)} <small>${esc(MPS[i].p)}${extra}</small></button>`;
+function intro(){panel.innerHTML=`<div><h3>What you're looking at</h3><h2>${REGIONS.length} neighbourhoods, ${TOPICS.length} topics, ${N} MPs</h2></div>
+<p style="margin:0">Everything said in the Commons since July 2024, cut into ${(D.nPassages/1000).toFixed(0)}k passages. The ${(S/1000).toFixed(0)}k stars are a sample. Nobody told the model what the subjects were. I added the names afterwards by reading each group's top words.</p>
+<div><h3>Neighbourhoods</h3><div class="mates">${REGIONS.map((r,k)=>`<button class="topicchip" data-region="${k}"><i style="background:${r.c}"></i>${esc(r.n)}</button>`).join("")}</div></div>
+<div><h3>Try an MP</h3><div class="mates">${["Nigel Farage","Kim Leadbeater","Zarah Sultana","Jim Shannon","Rachel Reeves"].map(n=>{const i=MPS.findIndex(m=>m.n.includes(n));return i<0?"":mpBtn(i);}).join("")}</div></div>
+<div><h3>Read it with care</h3><p style="margin:0" class="meta">This is a rough demo built in under a minute from word counts. It shows what people talk about far better than where they stand. Ministers tend to sit with their department's topics. ${pct(D.chatter)} of passages were general parliamentary talk with no clear subject and aren't on the map, and ${D.excluded} MPs have too little text to place. The layout keeps related topics together by design, so distances between neighbourhoods are only a rough guide.</p></div>`;wire();}
+function wire(){panel.querySelectorAll("[data-mp]").forEach(b=>b.onclick=()=>selectMP(+b.dataset.mp));panel.querySelectorAll("[data-topic]").forEach(b=>b.onclick=()=>selectTopic(+b.dataset.topic));panel.querySelectorAll("[data-region]").forEach(b=>b.onclick=()=>selectRegion(+b.dataset.region));const c=$("close");if(c)c.onclick=clearAll;panel.scrollTop=0;}
+function selectMP(i){sel=i;topicSel=null;regionSel=null;stopSpin();const m=MPS[i];targetTo.set(...(morphTo>.5?m.y:m.x));distTo=Math.max(22,Math.min(distTo,30));const max=m.t[0][1];
+  panel.innerHTML=`${closeBtn}<div class="who"><div class="face" style="${faceStyle(i)}"></div><div><h2>${esc(m.n)}</h2><div class="meta">${esc(m.pn)}<br>${esc(m.k)}</div></div></div>
+<div class="stats"><div>${(m.words/1000).toFixed(0)}k<small>words spoken</small></div>${m.v?`<div>${m.v[0]}<small>votes cast</small></div><div>${m.v[1]}<small>against own party</small></div>`:`<div>–<small>votes cast</small></div><div>–<small>against own party</small></div>`}</div>
+<div><h3>Topics that light up</h3>${m.t.filter(e=>e[1]>=.01).map(([k,s])=>`<button class="bar" data-topic="${k}"><span>${esc(TOPICS[k].n)}</span><b>${pct(s)}</b><em style="width:${Math.max(3,s/max*100)}%;background:${REGIONS[TOPICS[k].r].c}"></em></button>`).join("")}</div>
+${m.w.length?`<div><h3>Words that set them apart</h3><div class="words">${m.w.map(esc).join(" · ")}</div></div>`:""}
+<div><h3>In their words</h3><blockquote>${esc(m.q)}</blockquote><div class="src">${esc(m.qd)}. Cleaned for this map.</div></div>
+<div><h3>Most similar MPs by topic mix</h3><div class="mates">${m.nn.map(j=>mpBtn(j)).join("")}</div></div>
+${m.min>.2?`<p class="meta" style="margin:0">${pct(m.min)} of this text was spoken while holding a government post, so it partly reflects the job.</p>`:""}`;wire();refresh();}
+function selectTopic(k){topicSel=k;sel=null;regionSel=TOPICS[k].r;stopSpin();if(morphTo<.5){targetTo.copy(tv[k]);distTo=Math.min(distTo,15);}const t=TOPICS[k],r=REGIONS[t.r];const maxP=Math.max(...t.parties.map(p=>Math.max(p[1],p[2])));
+  panel.innerHTML=`${closeBtn}<div><h3 style="color:${r.c}">${esc(r.n)}</h3><h2>${esc(t.n)}</h2><div class="meta">${t.size.toLocaleString()} passages</div></div>
+<div><h3>Its top words</h3><div class="words">${t.terms.map(esc).join(" · ")}</div></div>
+<div><h3>Who's talking about this</h3>${t.parties.map(([p,a,b])=>`<div class="pb"><span>${esc(p)}</span><div class="t"><i style="width:${a/maxP*100}%;background:${partyColour[p]}"></i><u style="left:${b/maxP*100}%"></u></div><b>${pct(a)} vs ${pct(b)}</b></div>`).join("")}<p class="meta" style="margin:5px 0 0">Share of words on this topic, against the party's share of all words (the white tick).</p></div>
+<div><h3>Most devoted MPs</h3><div class="mates">${t.lead.map(([i,s])=>mpBtn(i," · "+pct(s))).join("")}</div></div>
+<div><h3>Typical passages</h3>${t.quotes.map(q=>`<div style="margin-bottom:9px"><blockquote>${esc(q.q)}</blockquote><div class="src">${esc(MPS[q.m].n)}, ${esc(MPS[q.m].p)}. ${esc(q.d)}</div></div>`).join("")}</div>`;wire();refresh();}
+function selectRegion(k){regionSel=k;topicSel=null;sel=null;stopSpin();const r=REGIONS[k];const ts=TOPICS.map((t,i)=>[t,i]).filter(([t])=>t.r===k);const c=new THREE.Vector3();ts.forEach(([t])=>c.add(new THREE.Vector3(...t.x)));c.divideScalar(ts.length);if(morphTo<.5){targetTo.copy(c);distTo=Math.min(distTo,17);}
+  const score=MPS.map((m,i)=>[m.t.filter(e=>TOPICS[e[0]].r===k).reduce((a,e)=>a+e[1],0),i]).sort((a,b)=>b[0]-a[0]).slice(0,8);
+  panel.innerHTML=`${closeBtn}<div><h3 style="color:${r.c}">Neighbourhood</h3><h2>${esc(r.n)}</h2></div>
+<div><h3>Topics here</h3><div class="mates">${ts.map(([t,i])=>`<button class="topicchip" data-topic="${i}"><i style="background:${r.c}"></i>${esc(t.n)}</button>`).join("")}</div></div>
+<div><h3>MPs who live here</h3><div class="mates">${score.map(([s,i])=>mpBtn(i)).join("")}</div></div>`;wire();refresh();}
+function clearAll(){sel=null;topicSel=null;regionSel=null;targetTo.set(0,0,0);distTo=homeDist();showHome();refresh();}
+function showHome(){if(mode==="find")renderFind();else if(mode==="people")peopleIntro();else intro();}
+const HELP={topics:"Every star is a passage from a speech. Stars form topics, and related topics form neighbourhoods. Click a name to fly there.",people:"Each MP is placed by their whole mix of topics, so MPs who care about the same combination sit together.",find:"Answer real Commons votes and see which MPs and parties voted like you."};
+function setMode(m){mode=m;morphTo=m==="topics"?0:1;sel=null;topicSel=null;regionSel=null;matchSet=null;
+  ["topics","people","find"].forEach(x=>$("tab-"+x).setAttribute("aria-selected",x===m));$("modehelp").textContent=HELP[m];
+  targetTo.set(0,0,0);distTo=homeDist();showHome();if(m==="find")updateFind();refresh();}
+function peopleIntro(){panel.innerHTML=`<div><h3>People view</h3><h2>Who cares about the same mix of things</h2></div>
+<p style="margin:0">Here each of the ${N} MPs is placed by their whole mix across ${TOPICS.length} topics, not one home topic. The stars are hidden. The pills mark each party's average mix.</p>
+<div><h3>Groups the data found</h3><div class="mates">${D.clusters.slice().sort((a,b)=>b.size-a.size).map(c=>`<div class="meta" style="padding:3px 0"><span style="color:var(--ink)">${esc(c.n)}</span><br>${c.size} MPs, mostly ${c.parties.map(p=>esc(p[0])+" "+p[1]).join(", ")}</div>`).join("")}</div></div>
+<p class="meta" style="margin:0">Topics you care about say nothing about your view on them. Two MPs can sit side by side here and disagree completely. Use Find your MPs to compare stances.</p>`;wire();}
+
+// Find your MPs
+const QS=D.questions,DIM=TOPICS.length;
+const mixOf=i=>{const a=new Array(DIM);for(let k=0;k<DIM;k++)a[k]=MIXQ[i*DIM+k];return a;};
+const answers=new Array(QS.length).fill(0);const picks=new Set();
+function matchVotes(ans){const answered=ans.filter(a=>a!==0).length,need=Math.max(3,Math.ceil(answered*.6));const out=[];
+  for(let i=0;i<N;i++){let shared=0,agree=0;for(let q=0;q<QS.length;q++){if(!ans[q])continue;const b=MPS[i].b[q];if(b==="0")continue;shared++;const yesVote=QS[q].yes===1?"+":"-";if((ans[q]===1)===(b===yesVote))agree++;}
+    if(shared>=need)out.push({i,shared,agree,score:agree/shared});}
+  return{out,answered};}
+function priority(){if(!picks.size)return null;const u=new Array(DIM).fill(0);picks.forEach(k=>u[k]=1);const un=Math.sqrt(picks.size);const s=new Float32Array(N);
+  for(let i=0;i<N;i++){let d=0,n=0;for(let k=0;k<DIM;k++){const m=MIXQ[i*DIM+k];d+=m*u[k];n+=m*m;}s[i]=d/(Math.sqrt(n)*un||1);}return s;}
+function partyAgreement(ans){const out={};const groups={};MPS.forEach((m,i)=>{(groups[m.p]=groups[m.p]||[]).push(i);});
+  Object.entries(groups).forEach(([p,ids])=>{if(ids.length<4||p==="Ind")return;let tot=0,cnt=0;for(let q=0;q<QS.length;q++){if(!ans[q])continue;let s=0,c=0;ids.forEach(i=>{const b=MPS[i].b[q];if(b==="0")return;c++;const y=QS[q].yes===1?"+":"-";if((ans[q]===1)===(b===y))s++;});if(c>=2){tot+=s/c;cnt++;}}
+    if(cnt)out[p]={a:tot/cnt,n:ids.length,q:cnt};});return out;}
+function renderFind(){panel.innerHTML=`<div><h3>Find your MPs</h3><h2>Where do you stand?</h2></div><div id="fr"></div>
+<div>${QS.map((q,i)=>`<div class="qu"><p>${esc(q.q)}</p><div class="ans" role="group"><button data-q="${i}" data-a="1" aria-pressed="${answers[i]===1}">Yes</button><button data-q="${i}" data-a="-1" aria-pressed="${answers[i]===-1}">No</button><button data-q="${i}" data-a="0" aria-pressed="${answers[i]===0}">Skip</button></div><div class="meta" style="font-size:12.5px">${esc(q.n)}</div><div class="splits">${Object.entries(q.split).map(([p,v])=>`<span>${esc(p)} ${pct(v)} yes</span>`).join("")}</div></div>`).join("")}</div>
+<details><summary>Also pick the topics you care about</summary><div class="picks">${TOPICS.map((t,k)=>[t,k]).sort((a,b)=>a[0].r-b[0].r).map(([t,k])=>`<button class="pick" data-pick="${k}" aria-pressed="${picks.has(k)}">${esc(t.n)}</button>`).join("")}</div></details>`;
+  panel.querySelectorAll("[data-q]").forEach(b=>b.onclick=()=>{const q=+b.dataset.q,a=+b.dataset.a;answers[q]=a;b.parentElement.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b));updateFind();});
+  panel.querySelectorAll("[data-pick]").forEach(b=>b.onclick=()=>{const k=+b.dataset.pick;picks.has(k)?picks.delete(k):picks.add(k);b.setAttribute("aria-pressed",picks.has(k));updateFind();});updateFind();}
+function updateFind(){const fr=$("fr");if(!fr)return;const{out,answered}=matchVotes(answers);const pr=priority();
+  if(answered<3&&!pr){matchSet=null;youPos=null;fr.innerHTML=`<p class="meta" style="margin:0">Answer at least 3 of these real Commons votes to see who matches you. ${answered?`${3-answered} more to go.`:""}</p>`;refresh();return;}
+  let ranked=[];
+  if(answered>=3)ranked=out.slice().sort((a,b)=>(b.score-a.score)||((pr?pr[b.i]-pr[a.i]:0))||(b.shared-a.shared));
+  const top=ranked.slice(0,5),far=ranked.slice(-3).reverse();const tied=ranked.filter(r=>r.score===(ranked[0]||{}).score).length;
+  const pa=partyAgreement(answers);const parties=Object.entries(pa).sort((a,b)=>b[1].a-a[1].a);
+  const prTop=pr?Array.from(pr).map((s,i)=>[s,i]).sort((a,b)=>b[0]-a[0]).slice(0,5):[];
+  const near=(ranked.length?ranked.slice(0,15).map(r=>r.i):prTop.map(p=>p[1]));
+  const c=[0,0,0];near.forEach(i=>{for(let j=0;j<3;j++)c[j]+=MPS[i].y[j]/near.length;});youPos=new THREE.Vector3(...c);
+  matchSet=new Map();near.forEach((i,r)=>matchSet.set(i,r));
+  fr.innerHTML=`${answered>=3?`<div><h3>Parties that voted most like you</h3>${parties.slice(0,6).map(([p,o])=>`<div class="pb"><span>${esc(p)}</span><div class="t"><i style="width:${o.a*100}%;background:${partyColour[p]}"></i></div><b>${pct(o.a)}</b></div>`).join("")}</div>
+<div style="margin-top:11px"><h3>MPs who voted most like you</h3><div class="mates">${top.map(r=>mpBtn(r.i,` · ${r.agree}/${r.shared} votes`)).join("")}</div>${tied>5?`<p class="meta" style="margin:4px 0 0">${tied} MPs tie on ${pct(ranked[0].score)}, because parties often vote as a block. ${pr?"Ties are ordered by the topics you picked.":"Pick topics below to separate them."}</p>`:""}</div>
+<div style="margin-top:11px"><h3>Voted least like you</h3><div class="mates">${far.map(r=>mpBtn(r.i,` · ${r.agree}/${r.shared} votes`)).join("")}</div></div>`:""}
+${pr?`<div style="margin-top:11px"><h3>Talk most about your topics</h3><div class="mates">${prTop.map(p=>mpBtn(p[1])).join("")}</div></div>`:""}
+<p class="meta" style="margin:9px 0 0">Based on ${answered} of ${QS.length} votes. An MP is compared only on votes they actually cast, and skipped votes and absences don't count.</p>`;
+  fr.querySelectorAll("[data-mp]").forEach(b=>b.onclick=()=>selectMP(+b.dataset.mp));refresh();}
+const cLabels=D.clusters.map(c=>{const b=document.createElement("div");b.className="lb cl";b.textContent=c.n;b.style.pointerEvents="none";$("labels").append(b);return{el:b,v:new THREE.Vector3(...c.x)};});
+const pLabels=D.partyAvg.map(a=>{const b=document.createElement("div");b.className="lb pl";b.textContent=a.p+" average";b.style.background=a.c;$("labels").append(b);return{el:b,v:new THREE.Vector3(...a.x)};});
+const youEl=document.createElement("div");youEl.className="lb you";youEl.textContent="You";youEl.style.display="none";$("labels").append(youEl);
+
+const partyColour={},counts={};MPS.forEach(m=>{partyColour[m.p]=m.c;(counts[m.p]=counts[m.p]||{n:0,c:m.c,name:m.pn}).n++;});
+Object.entries(counts).sort((a,b)=>b[1].n-a[1].n).forEach(([p,o])=>{if(o.n<2)return;const b=document.createElement("button");b.className="chip";b.setAttribute("aria-pressed","false");b.title=o.name;b.innerHTML=`<i style="background:${o.c}"></i>${esc(p)} ${o.n}`;
+  b.onclick=()=>{soloParty=soloParty===p?null:p;document.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed","false"));if(soloParty)b.setAttribute("aria-pressed","true");refresh();};$("parties").append(b);});
+
+const search=$("search"),results=$("results");
+search.oninput=()=>{const q=search.value.trim().toLowerCase();if(q.length<2){results.hidden=true;return;}
+  const hit=MPS.map((m,i)=>[m,i]).filter(([m])=>m.n.toLowerCase().includes(q)||m.k.toLowerCase().includes(q)).slice(0,8);
+  results.innerHTML=hit.length?hit.map(([m,i])=>`<li><button data-mp="${i}">${esc(m.n)} <small>${esc(m.p)} · ${esc(m.k)}</small></button></li>`).join(""):`<li style="padding:5px 10px" class="meta">No MP on the map matches that.</li>`;results.hidden=false;
+  results.querySelectorAll("button").forEach(b=>b.onclick=()=>{selectMP(+b.dataset.mp);results.hidden=true;search.value="";});};
+
+function stopSpin(){spin=false;syncSpin();}
+function syncSpin(){$("spin").textContent=spin?"Pause spin":"Spin";}
+$("reset").onclick=clearAll;
+["topics","people","find"].forEach(m=>$("tab-"+m).onclick=()=>setMode(m));
+$("zin").onclick=()=>{distTo=Math.max(3,distTo*.72);};$("zout").onclick=()=>{distTo=Math.min(70,distTo/.72);};
+$("faces").onclick=e=>{showMPs=!showMPs;points.visible=showMPs;e.target.textContent=showMPs?"Hide MPs":"Show MPs";};
+$("spin").onclick=()=>{spin=!spin;syncSpin();};syncSpin();
+addEventListener("keydown",e=>{if(e.target.tagName==="INPUT")return;const k=e.key;
+  if(k==="Escape")clearAll();else if(k==="ArrowLeft"){az-=.12;stopSpin();}else if(k==="ArrowRight"){az+=.12;stopSpin();}else if(k==="ArrowUp"){el=Math.min(1.45,el+.1);stopSpin();}else if(k==="ArrowDown"){el=Math.max(-1.45,el-.1);stopSpin();}else if(k==="+"||k==="="){distTo=Math.max(3,distTo*.8);}else if(k==="-"){distTo=Math.min(70,distTo/.8);}});
+
+const pointers=new Map();let moved=0,pinch=0;
+canvas.addEventListener("pointerdown",e=>{canvas.setPointerCapture(e.pointerId);pointers.set(e.pointerId,[e.clientX,e.clientY]);moved=0;canvas.classList.add("drag");});
+canvas.addEventListener("pointermove",e=>{
+  if(pointers.has(e.pointerId)){const[px,py]=pointers.get(e.pointerId);const dx=e.clientX-px,dy=e.clientY-py;pointers.set(e.pointerId,[e.clientX,e.clientY]);moved+=Math.abs(dx)+Math.abs(dy);
+    if(pointers.size===1){az-=dx*.006;el=Math.max(-1.45,Math.min(1.45,el+dy*.006));if(moved>5)stopSpin();}
+    else if(pointers.size===2){const[a,b]=[...pointers.values()];const d=Math.hypot(a[0]-b[0],a[1]-b[1]);if(pinch)distTo=Math.max(3,Math.min(70,distTo*pinch/d));pinch=d;}
+    $("tip").style.display="none";return;}
+  const h=hoverAt(e.clientX,e.clientY),tip=$("tip");
+  if(h>=0){tip.textContent=MPS[h].n+" · "+MPS[h].p;tip.style.display="block";tip.style.transform=`translate(${Math.min(e.clientX+12,innerWidth-200)}px,${e.clientY+12}px)`;canvas.style.cursor="pointer";}
+  else{tip.style.display="none";canvas.style.cursor="";}
+});
+const up=e=>{const was=pointers.size;pointers.delete(e.pointerId);pinch=0;canvas.classList.remove("drag");if(was===1&&moved<6){const h=hoverAt(e.clientX,e.clientY);if(h>=0)selectMP(h);}};
+canvas.addEventListener("pointerup",up);canvas.addEventListener("pointercancel",e=>{pointers.delete(e.pointerId);pinch=0;});
+canvas.addEventListener("wheel",e=>{e.preventDefault();distTo=Math.max(3,Math.min(70,distTo*Math.exp(e.deltaY*.0012)));},{passive:false});
+
+function place(b,p,o){const off=p.z>1;b.style.display=off?"none":"";if(off)return;b.style.opacity=o;b.style.pointerEvents=o<.25?"none":"auto";b.style.transform=`translate(${Math.round(p.x)}px,${Math.round(p.y)}px) translate(-50%,-50%)`;}
+function frame(){requestAnimationFrame(frame);
+  if(spin)az+=.0014;
+  if(Math.abs(morphTo-morph)>.001){morph+=(morphTo-morph)*.07;if(Math.abs(morphTo-morph)<.002)morph=morphTo;for(let i=0;i<N*3;i++)pos[i]=posA[i]+(posB[i]-posA[i])*morph;geo.attributes.position.needsUpdate=true;}
+  sUni.fade.value=1-morph;stars.visible=morph<.98;
+  target.lerp(targetTo,.08);dist+=(distTo-dist)*.08;
+  camera.position.set(target.x+dist*Math.cos(el)*Math.sin(az),target.y+dist*Math.sin(el),target.z+dist*Math.cos(el)*Math.cos(az));
+  camera.lookAt(target);camera.updateMatrixWorld();
+  const people=morph>.5;
+  const active=sel!=null?new Set(MPS[sel].t.filter(e=>e[1]>=.03).map(e=>e[0])):null;
+  TOPICS.forEach((t,k)=>{const b=tLabels[k],depth=camera.position.distanceTo(tv[k]);let o;
+    if(active)o=active.has(k)?1:0;
+    else if(topicSel!=null)o=k===topicSel?1:(t.r===regionSel?.45:0);
+    else if(regionSel!=null)o=t.r===regionSel?.95:0;
+    else o=Math.max(0,Math.min(.95,(26-depth)/8));
+    if(people)o=0;
+    b.classList.toggle("on",(active&&active.has(k))||k===topicSel);place(b,project(tv[k]),o);});
+  REGIONS.forEach((r,k)=>{const b=rLabels[k],depth=camera.position.distanceTo(rv[k]);let o=Math.max(.45,Math.min(1,1.35-depth/(dist*1.5)));
+    if(sel!=null)o=.25;else if(regionSel!=null)o=k===regionSel?0:.3;else if(dist<16)o=Math.min(o,.5);
+    if(people)o=0;
+    place(b,project(rv[k]),o);});
+  cLabels.forEach(l=>{const depth=camera.position.distanceTo(l.v);place(l.el,project(l.v),!people?0:(sel!=null||matchSet?.25:Math.max(.5,Math.min(1,1.4-depth/(dist*1.5)))));l.el.style.pointerEvents="none";});
+  pLabels.forEach(l=>{place(l.el,project(l.v),people?(sel!=null?.45:1):0);l.el.style.pointerEvents="none";});
+  if(youPos&&mode==="find"){youEl.style.display="";const p=project(youPos);if(p.z<=1)youEl.style.transform=`translate(${Math.round(p.x)}px,${Math.round(p.y)}px) translate(-50%,-50%)`;}else youEl.style.display="none";
+  renderer.render(scene,camera);}
+$("modehelp").textContent=HELP.topics;intro();refresh();frame();
+</script>

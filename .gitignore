@@ -129,3 +129,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# MP3D rebuild: downloaded and derived data is reproducible from pipeline/
+data/
+prototypes/quick_map.html
