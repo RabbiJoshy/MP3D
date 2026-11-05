@@ -133,3 +133,6 @@ dmypy.json
 # MP3D rebuild: downloaded and derived data is reproducible from pipeline/
 data/
 prototypes/quick_map.html
+.idea/
+prototypes/topic_only.html
+prototypes/topic_axes.html

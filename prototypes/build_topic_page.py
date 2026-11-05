@@ -201,6 +201,33 @@ star_owner = owner.reindex(passages.member_id.iloc[star_idx]).to_numpy().astype(
 buf = io.BytesIO()
 atlas.save(buf, "JPEG", quality=78)
 b64 = lambda a: base64.b64encode(a.tobytes()).decode()
+# Positions view: real axes from the polarity space, which never saw votes or party
+pol = np.load(ROOT / "data/quick/polarity.npz")
+row_of = {r["i"]: j for j, r in enumerate(rows)}
+AXIS_DIMS = [0, 1, 3]
+Zp = pol["Z"]
+Zs = Zp[:, AXIS_DIMS] / np.percentile(np.abs(Zp[:, AXIS_DIMS]), 97, axis=0) * 14
+unit_z = Zp / np.maximum(np.linalg.norm(Zp, axis=1, keepdims=True), 1e-9)
+sim_z = unit_z @ unit_z.T
+np.fill_diagonal(sim_z, -1)
+for r in rows:
+    r["z"], r["zn"] = None, []
+for a_i, mid in enumerate(pol["ids"]):
+    j = row_of.get(int(mid))
+    if j is not None:
+        rows[j]["z"] = [round(float(v), 2) for v in Zs[a_i]]
+        near = [row_of[int(pol["ids"][b])] for b in np.argsort(-sim_z[a_i])[:12] if int(pol["ids"][b]) in row_of]
+        rows[j]["zn"] = near[:6]
+position_party = []
+for p_name in party_list:
+    pts = [r["z"] for r in rows if r["p"] == p_name and r["z"]]
+    if len(pts) >= 4 and p_name != "Ind":
+        position_party.append({"p": p_name, "c": party_colour[p_name], "x": [round(float(v), 2) for v in np.mean(pts, axis=0)]})
+lab_order = np.argsort(pol["Zl"][:, 0])
+def lab_names(idx):
+    return [row_of[int(pol["lab_ids"][b])] for b in idx if int(pol["lab_ids"][b]) in row_of][:7]
+labour_split = {"a": lab_names(lab_order[:10]), "b": lab_names(lab_order[::-1][:10])}
+
 # Each people-space group is named after the topics its MPs over-use most, so these names come from the data
 clusters_out = []
 for g_id in range(cluster.max() + 1):
@@ -224,7 +251,7 @@ for qq in QUESTIONS:
     qq["split"] = split
 Vq = np.round(V / np.abs(V).max() * 127).astype("int8")
 
-data = {"mps": rows, "clusters": clusters_out, "partyAvg": party_avgs, "questions": QUESTIONS, "topics": topics_out, "regions": [{"n": REGIONS[r], "c": REGION_COLOURS[r], "x": [round(float(a), 2) for a in lay["reg_xyz"][r]]} for r in sorted(REGIONS)],
+data = {"positionParty": position_party, "labourSplit": labour_split, "mps": rows, "clusters": clusters_out, "partyAvg": party_avgs, "questions": QUESTIONS, "topics": topics_out, "regions": [{"n": REGIONS[r], "c": REGION_COLOURS[r], "x": [round(float(a), 2) for a in lay["reg_xyz"][r]]} for r in sorted(REGIONS)],
         "cols": COLS, "tile": TILE, "size": 2048, "limit": float(limit), "stars": len(final), "chatter": round(chatter_share, 3),
         "nPassages": len(passages), "excluded": int((~keep).sum())}
 page = (HERE / "topic_space_template.html").read_text()
@@ -233,7 +260,7 @@ page = page.replace("__ATLAS__", "data:image/jpeg;base64," + base64.b64encode(bu
 page = page.replace("__MIX__", b64(Vq)).replace("__XYZ__", b64(xyz16)).replace("__TOPIC__", b64(star_new_topic)).replace("__OWNER__", b64(star_owner))
 (HERE / "quick_map.html").write_text(page)
 # GitHub Pages copy: a full document, since the local template relies on the host page to supply these
-(ROOT / "docs/index.html").write_text('<!doctype html>\n<html lang="en">\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n' + page)
+(ROOT / "docs/map.html").write_text('<!doctype html>\n<html lang="en">\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n' + page)
 print("page KB", len(page.encode()) // 1024, "| MPs", len(rows), "| excluded", int((~keep).sum()), "| topics", len(topics_out), "| stars", len(final), "| chatter share", round(chatter_share, 3))
 for name in ["Gaza & Israel", "Asylum & small boats", "Chagos & Diego Garcia", "Water & sewage", "Farming & food", "Winter fuel", "EU, trade & Brexit", "Net zero & clean energy", "Assisted dying"]:
     t = next(x for x in topics_out if x["n"] == name)

@@ -65,14 +65,15 @@ blockquote{margin:0;border:0;padding:0;font-size:14px}
 .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
 .stats div{font:600 17px var(--display);font-variant-numeric:tabular-nums}
 .stats small{display:block;font:12px var(--body);color:var(--dim)}
-.tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border:1px solid var(--line);border-radius:7px;overflow:hidden;background:var(--bench2)}
-.tab{background:none;border:0;color:var(--ink);font:600 13px var(--body);padding:7px 3px;cursor:pointer}
+.tabs{display:grid;grid-template-columns:1fr 1fr 1.15fr 1fr;gap:0;border:1px solid var(--line);border-radius:7px;overflow:hidden;background:var(--bench2)}
+.tab{background:none;border:0;color:var(--ink);font:600 12px/1.1 var(--body);padding:7px 2px;cursor:pointer}
 .tab+.tab{border-left:1px solid var(--line)}
 .tab[aria-selected=true]{background:var(--brass);color:#14241e}
 .crumbs{display:flex;flex-wrap:wrap;gap:3px 6px;align-items:center;font-size:13px;color:var(--dim)}
 .crumbs button{background:none;border:0;padding:0;color:var(--ink);font:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
 .cl{font:600 13px/1.15 var(--display);color:var(--ink)}
 .pl{font:700 13px/1 var(--body);padding:4px 8px;border-radius:999px;color:#10201b;text-shadow:none;cursor:default}
+.ax{font:600 12.5px/1.15 var(--body);color:var(--brass);white-space:normal;width:150px;text-align:center}
 .you{font:700 13px/1 var(--body);padding:5px 9px;border-radius:999px;background:var(--brass);color:#14241e;text-shadow:none;pointer-events:none;box-shadow:0 0 0 4px rgba(217,180,95,.28)}
 .qu{padding:9px 0;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:5px}
 .qu p{margin:0;font-weight:600;font-size:14px}
@@ -97,7 +98,7 @@ details summary{cursor:pointer;font-weight:600}
 <div id="tip"></div>
 <header>
   <h1>Commons Word Space</h1>
-  <div class="tabs" role="tablist"><button class="tab" role="tab" id="tab-topics" aria-selected="true">Topics</button><button class="tab" role="tab" id="tab-people" aria-selected="false">People</button><button class="tab" role="tab" id="tab-find" aria-selected="false">Find your MPs</button></div>
+  <div class="tabs" role="tablist"><button class="tab" role="tab" id="tab-topics" aria-selected="true">Topics</button><button class="tab" role="tab" id="tab-people" aria-selected="false">People</button><button class="tab" role="tab" id="tab-positions" aria-selected="false">Positions</button><button class="tab" role="tab" id="tab-find" aria-selected="false">Find MPs</button></div>
   <p class="sub" id="modehelp"></p>
   <div id="searchwrap"><input id="search" type="search" placeholder="Find an MP or constituency" autocomplete="off" aria-label="Find an MP or constituency"><ul id="results" hidden></ul></div>
   <div id="parties"></div>
@@ -169,8 +170,9 @@ const HOME=36;
 let az=.6,el=.28,dist=HOME,distTo=HOME,target=new THREE.Vector3(),targetTo=new THREE.Vector3(),spin=!reduce;
 let sel=null,topicSel=null,regionSel=null,soloParty=null,showMPs=true;
 let mode="topics",morph=0,morphTo=0,matchSet=null,youPos=null;
-const posA=Float32Array.from(pos),posB=new Float32Array(N*3);MPS.forEach((m,i)=>posB.set(m.y,i*3));
-const homeDist=()=>morphTo>0.5?32:HOME;
+const posA=Float32Array.from(pos),posB=new Float32Array(N*3),posC=new Float32Array(N*3);MPS.forEach((m,i)=>{posB.set(m.y,i*3);posC.set(m.z||[0,-900,0],i*3);});
+let moving=false;
+const homeDist=()=>mode==="positions"?37:(morphTo>0.5?32:HOME);
 const v=new THREE.Vector3();
 function resize(){const w=innerWidth,h=innerHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();if(w>760)camera.setViewOffset(w,h,165,0,w,h);else camera.clearViewOffset();const base=h*DPR/(2*Math.tan(25*Math.PI/180));uni.px.value=base*.30;sUni.px.value=base*.075;}
 addEventListener("resize",resize);resize();
@@ -210,12 +212,13 @@ function intro(){panel.innerHTML=`<div><h3>What you're looking at</h3><h2>${REGI
 <div><h3>Try an MP</h3><div class="mates">${["Nigel Farage","Kim Leadbeater","Zarah Sultana","Jim Shannon","Rachel Reeves"].map(n=>{const i=MPS.findIndex(m=>m.n.includes(n));return i<0?"":mpBtn(i);}).join("")}</div></div>
 <div><h3>Read it with care</h3><p style="margin:0" class="meta">This is a rough demo built in under a minute from word counts. It shows what people talk about far better than where they stand. Ministers tend to sit with their department's topics. ${pct(D.chatter)} of passages were general parliamentary talk with no clear subject and aren't on the map, and ${D.excluded} MPs have too little text to place. All topics share one space, so nearer generally means more related, by shared words and shared speakers. A star's exact position inside its cloud isn't meaningful. The map shows subject, not side: two MPs who disagree can sit together.</p></div>`;wire();}
 function wire(){panel.querySelectorAll("[data-mp]").forEach(b=>b.onclick=()=>selectMP(+b.dataset.mp));panel.querySelectorAll("[data-topic]").forEach(b=>b.onclick=()=>selectTopic(+b.dataset.topic));panel.querySelectorAll("[data-region]").forEach(b=>b.onclick=()=>selectRegion(+b.dataset.region));const c=$("close");if(c)c.onclick=clearAll;panel.scrollTop=0;}
-function selectMP(i){sel=i;topicSel=null;regionSel=null;stopSpin();const m=MPS[i];targetTo.set(...(morphTo>.5?m.y:m.x));distTo=Math.max(22,Math.min(distTo,30));const max=m.t[0][1];
+function selectMP(i){sel=i;topicSel=null;regionSel=null;stopSpin();const m=MPS[i];targetTo.set(...(mode==="positions"&&m.z?m.z:(morphTo>.5?m.y:m.x)));distTo=Math.max(22,Math.min(distTo,30));const max=m.t[0][1];
   panel.innerHTML=`${closeBtn}<div class="who"><div class="face" style="${faceStyle(i)}"></div><div><h2>${esc(m.n)}</h2><div class="meta">${esc(m.pn)}<br>${esc(m.k)}</div></div></div>
 <div class="stats"><div>${(m.words/1000).toFixed(0)}k<small>words spoken</small></div>${m.v?`<div>${m.v[0]}<small>votes cast</small></div><div>${m.v[1]}<small>against own party</small></div>`:`<div>–<small>votes cast</small></div><div>–<small>against own party</small></div>`}</div>
 <div><h3>Topics that light up</h3>${m.t.filter(e=>e[1]>=.01).map(([k,s])=>`<button class="bar" data-topic="${k}"><span>${esc(TOPICS[k].n)}</span><b>${pct(s)}</b><em style="width:${Math.max(3,s/max*100)}%;background:${REGIONS[TOPICS[k].r].c}"></em></button>`).join("")}</div>
 ${m.w.length?`<div><h3>Words that set them apart</h3><div class="words">${m.w.map(esc).join(" · ")}</div></div>`:""}
 <div><h3>In their words</h3><blockquote>${esc(m.q)}</blockquote><div class="src">${esc(m.qd)}. Cleaned for this map.</div></div>
+${m.zn.length?`<div><h3>Closest by how they argue</h3><div class="mates">${m.zn.map(j=>mpBtn(j)).join("")}</div></div>`:(mode==="positions"?`<p class="meta" style="margin:0">Not on the Positions map, because there's too little text from outside a government post.</p>`:"")}
 <div><h3>Most similar MPs by topic mix</h3><div class="mates">${m.nn.map(j=>mpBtn(j)).join("")}</div></div>
 ${m.min>.2?`<p class="meta" style="margin:0">${pct(m.min)} of this text was spoken while holding a government post, so it partly reflects the job.</p>`:""}`;wire();refresh();}
 function selectTopic(k){topicSel=k;sel=null;regionSel=TOPICS[k].r;stopSpin();if(morphTo<.5){targetTo.copy(tv[k]);distTo=Math.min(distTo,15);}const t=TOPICS[k],r=REGIONS[t.r];const maxP=Math.max(...t.parties.map(p=>Math.max(p[1],p[2])));
@@ -230,10 +233,16 @@ function selectRegion(k){regionSel=k;topicSel=null;sel=null;stopSpin();const r=R
 <div><h3>Topics here</h3><div class="mates">${ts.map(([t,i])=>`<button class="topicchip" data-topic="${i}"><i style="background:${r.c}"></i>${esc(t.n)}</button>`).join("")}</div></div>
 <div><h3>MPs who live here</h3><div class="mates">${score.map(([s,i])=>mpBtn(i)).join("")}</div></div>`;wire();refresh();}
 function clearAll(){sel=null;topicSel=null;regionSel=null;targetTo.set(0,0,0);distTo=homeDist();showHome();refresh();}
-function showHome(){if(mode==="find")renderFind();else if(mode==="people")peopleIntro();else intro();}
-const HELP={topics:"Every star is a passage from a speech. Stars form topics, and related topics form neighbourhoods. Click a name to fly there.",people:"Each MP is placed by their whole mix of topics, so MPs who care about the same combination sit together.",find:"Answer real Commons votes and see which MPs and parties voted like you."};
-function setMode(m){mode=m;morphTo=m==="topics"?0:1;sel=null;topicSel=null;regionSel=null;matchSet=null;
-  ["topics","people","find"].forEach(x=>$("tab-"+x).setAttribute("aria-selected",x===m));$("modehelp").textContent=HELP[m];
+function showHome(){if(mode==="find")renderFind();else if(mode==="people")peopleIntro();else if(mode==="positions")positionsIntro();else intro();}
+const HELP={topics:"Every star is a passage from a speech. Stars form topics, and related topics form neighbourhoods. Click a name to fly there.",people:"Each MP is placed by their whole mix of topics, so MPs who care about the same combination sit together.",find:"Answer real Commons votes and see which MPs and parties voted like you.",positions:"MPs placed by how they argue, not what they talk about. These are real axes, built only from word use in speeches."};
+function positionsIntro(){const placed=MPS.filter(m=>m.z).length;panel.innerHTML=`<div><h3>Positions view</h3><h2>How MPs argue, not what they talk about</h2></div>
+<p style="margin:0">Inside each topic, the model finds the main differences in how backbenchers and opposition MPs use words. Differences that recur across many topics become these three axes. It never saw votes or party. I named the axes after reading their words.</p>
+<div><h3>The axes</h3><p class="meta" style="margin:0"><b style="color:var(--ink)">Axis 1:</b> local jobs and pride vs tax, debt and targets. Party explains 60% of this, so it's largely government vs opposition.<br><b style="color:var(--ink)">Axis 2:</b> dentists, banking and care vs unions, security and institutions.<br><b style="color:var(--ink)">Axis 3:</b> deterrence and illegal migration vs food banks, the two-child limit and compensation.</p></div>
+<div><h3>Labour's split, found from speech alone</h3><p class="meta" style="margin:0 0 5px">Inside Labour, the main axis runs from long-serving independent voices to newer MPs. It lines up with who rebelled on the Palestine Action ban, the asylum bill and welfare, though the rebel groups are small.</p>
+<div class="mates">${D.labourSplit.a.slice(0,4).map(i=>mpBtn(i)).join("")}</div><p class="meta" style="margin:5px 0">at one end, and at the other:</p><div class="mates">${D.labourSplit.b.slice(0,4).map(i=>mpBtn(i)).join("")}</div></div>
+<div><h3>Where it falls short</h3><p class="meta" style="margin:0">This is word use, not true stance, and some axes still mix in subject matter. It barely explains free votes inside a party: assisted dying scores 0.57, where 0.5 is chance. ${N-placed} MPs on this site aren't placed, mostly ministers with too little text from outside government.</p></div>`;wire();}
+function setMode(m){mode=m;moving=true;morphTo=m==="topics"?0:1;axes.visible=m==="positions";sel=null;topicSel=null;regionSel=null;matchSet=null;
+  ["topics","people","positions","find"].forEach(x=>$("tab-"+x).setAttribute("aria-selected",x===m));$("modehelp").textContent=HELP[m];
   targetTo.set(0,0,0);distTo=homeDist();showHome();if(m==="find")updateFind();refresh();}
 function peopleIntro(){panel.innerHTML=`<div><h3>People view</h3><h2>Who cares about the same mix of things</h2></div>
 <p style="margin:0">Here each of the ${N} MPs is placed by their whole mix across ${TOPICS.length} topics, not one home topic. The stars are hidden. The pills mark each party's average mix.</p>
@@ -276,6 +285,10 @@ ${pr?`<div style="margin-top:11px"><h3>Talk most about your topics</h3><div clas
   fr.querySelectorAll("[data-mp]").forEach(b=>b.onclick=()=>selectMP(+b.dataset.mp));refresh();}
 const cLabels=D.clusters.map(c=>{const b=document.createElement("div");b.className="lb cl";b.textContent=c.n;b.style.pointerEvents="none";$("labels").append(b);return{el:b,v:new THREE.Vector3(...c.x)};});
 const pLabels=D.partyAvg.map(a=>{const b=document.createElement("div");b.className="lb pl";b.textContent=a.p+" average";b.style.background=a.c;$("labels").append(b);return{el:b,v:new THREE.Vector3(...a.x)};});
+const zLabels=D.positionParty.map(a=>{const b=document.createElement("div");b.className="lb pl";b.textContent=a.p+" average";b.style.background=a.c;$("labels").append(b);return{el:b,v:new THREE.Vector3(...a.x)};});
+const AX=[["Local jobs, pride",[-16,0,0]],["Tax, debt, targets",[16,0,0]],["Dentists, banking, care",[0,-16,0]],["Unions, security, institutions",[0,16,0]],["Deterrence, illegal migration",[0,0,-16]],["Food banks, two-child limit",[0,0,16]]];
+const axes=new THREE.LineSegments(new THREE.BufferGeometry().setAttribute("position",new THREE.Float32BufferAttribute(AX.flatMap(a=>[0,0,0,...a[1]]),3)),new THREE.LineBasicMaterial({color:0xd9b45f,transparent:true,opacity:.55}));axes.visible=false;scene.add(axes);
+const axLabels=AX.map(a=>{const b=document.createElement("div");b.className="lb ax";b.textContent=a[0];$("labels").append(b);return{el:b,v:new THREE.Vector3(...a[1])};});
 const youEl=document.createElement("div");youEl.className="lb you";youEl.textContent="You";youEl.style.display="none";$("labels").append(youEl);
 
 const partyColour={},counts={};MPS.forEach(m=>{partyColour[m.p]=m.c;(counts[m.p]=counts[m.p]||{n:0,c:m.c,name:m.pn}).n++;});
@@ -291,7 +304,7 @@ search.oninput=()=>{const q=search.value.trim().toLowerCase();if(q.length<2){res
 function stopSpin(){spin=false;syncSpin();}
 function syncSpin(){$("spin").textContent=spin?"Pause spin":"Spin";}
 $("reset").onclick=clearAll;
-["topics","people","find"].forEach(m=>$("tab-"+m).onclick=()=>setMode(m));
+["topics","people","positions","find"].forEach(m=>$("tab-"+m).onclick=()=>setMode(m));
 $("zin").onclick=()=>{distTo=Math.max(3,distTo*.72);};$("zout").onclick=()=>{distTo=Math.min(70,distTo/.72);};
 $("faces").onclick=e=>{showMPs=!showMPs;points.visible=showMPs;e.target.textContent=showMPs?"Hide MPs":"Show MPs";};
 $("spin").onclick=()=>{spin=!spin;syncSpin();};syncSpin();
@@ -316,26 +329,29 @@ canvas.addEventListener("wheel",e=>{e.preventDefault();distTo=Math.max(3,Math.mi
 function place(b,p,o){const off=p.z>1;b.style.display=off?"none":"";if(off)return;b.style.opacity=o;b.style.pointerEvents=o<.25?"none":"auto";b.style.transform=`translate(${Math.round(p.x)}px,${Math.round(p.y)}px) translate(-50%,-50%)`;}
 function frame(){requestAnimationFrame(frame);
   if(spin)az+=.0014;
-  if(Math.abs(morphTo-morph)>.001){morph+=(morphTo-morph)*.07;if(Math.abs(morphTo-morph)<.002)morph=morphTo;for(let i=0;i<N*3;i++)pos[i]=posA[i]+(posB[i]-posA[i])*morph;geo.attributes.position.needsUpdate=true;}
+  if(Math.abs(morphTo-morph)>.001){morph+=(morphTo-morph)*.07;if(Math.abs(morphTo-morph)<.002)morph=morphTo;}
+  if(moving){const T=mode==="positions"?posC:(morphTo>.5?posB:posA);let far=0;for(let i=0;i<N*3;i++){const d=T[i]-pos[i];pos[i]+=d*.07;if(Math.abs(d)>far)far=Math.abs(d);}geo.attributes.position.needsUpdate=true;if(far<.01){for(let i=0;i<N*3;i++)pos[i]=T[i];moving=false;}}
   sUni.fade.value=1-morph;stars.visible=morph<.98;
   target.lerp(targetTo,.08);dist+=(distTo-dist)*.08;
   camera.position.set(target.x+dist*Math.cos(el)*Math.sin(az),target.y+dist*Math.sin(el),target.z+dist*Math.cos(el)*Math.cos(az));
   camera.lookAt(target);camera.updateMatrixWorld();
-  const people=morph>.5;
+  const hideTopics=morph>.5,people=hideTopics&&mode!=="positions",inPos=hideTopics&&mode==="positions";
   const active=sel!=null?new Set(MPS[sel].t.filter(e=>e[1]>=.03).map(e=>e[0])):null;
   TOPICS.forEach((t,k)=>{const b=tLabels[k],depth=camera.position.distanceTo(tv[k]);let o;
     if(active)o=active.has(k)?1:0;
     else if(topicSel!=null)o=k===topicSel?1:(t.r===regionSel?.45:0);
     else if(regionSel!=null)o=t.r===regionSel?.95:0;
     else o=Math.max(0,Math.min(.95,(26-depth)/8));
-    if(people)o=0;
+    if(hideTopics)o=0;
     b.classList.toggle("on",(active&&active.has(k))||k===topicSel);place(b,project(tv[k]),o);});
   REGIONS.forEach((r,k)=>{const b=rLabels[k],depth=camera.position.distanceTo(rv[k]);let o=Math.max(.45,Math.min(1,1.35-depth/(dist*1.5)));
     if(sel!=null)o=.25;else if(regionSel!=null)o=k===regionSel?0:.3;else if(dist<16)o=Math.min(o,.5);
-    if(people)o=0;
+    if(hideTopics)o=0;
     place(b,project(rv[k]),o);});
   cLabels.forEach(l=>{const depth=camera.position.distanceTo(l.v);place(l.el,project(l.v),!people?0:(sel!=null||matchSet?.25:Math.max(.5,Math.min(1,1.4-depth/(dist*1.5)))));l.el.style.pointerEvents="none";});
   pLabels.forEach(l=>{place(l.el,project(l.v),people?(sel!=null?.45:1):0);l.el.style.pointerEvents="none";});
+  zLabels.forEach(l=>{place(l.el,project(l.v),inPos?(sel!=null?.45:1):0);l.el.style.pointerEvents="none";});
+  axLabels.forEach(l=>{place(l.el,project(l.v),inPos?.95:0);l.el.style.pointerEvents="none";});
   if(youPos&&mode==="find"){youEl.style.display="";const p=project(youPos);if(p.z<=1)youEl.style.transform=`translate(${Math.round(p.x)}px,${Math.round(p.y)}px) translate(-50%,-50%)`;}else youEl.style.display="none";
   renderer.render(scene,camera);}
 $("modehelp").textContent=HELP.topics;intro();refresh();frame();
