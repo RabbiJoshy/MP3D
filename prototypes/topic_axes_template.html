@@ -41,6 +41,9 @@ svg{position:absolute;inset:0;width:100%;height:100%;display:block}
 .endx,.endy{position:absolute;font-size:13px;line-height:1.2;color:var(--ink);pointer-events:none}
 .endx{bottom:2px;max-width:42%}
 #xlo{left:0}#xhi{right:0;text-align:right}
+.pl3{position:absolute;left:0;top:0;pointer-events:none;font:700 12px/1 var(--body);padding:3px 7px;border-radius:999px;color:#10201b;border:2px solid var(--ink);white-space:nowrap}
+.l3{position:absolute;left:0;top:0;font-size:12px;line-height:1.15;color:var(--ink);pointer-events:none;white-space:nowrap;text-shadow:0 0 4px var(--bench),0 1px 2px #000}
+.l3 b{color:var(--brass);font:600 10px var(--body);letter-spacing:.08em;text-transform:uppercase;margin-right:4px}
 .endy{left:50%;transform:translateX(-50%);text-align:center;max-width:60%;background:color-mix(in srgb,var(--bench) 80%,transparent);padding:0 4px}
 #yhi{top:0}#ylo{bottom:24px}
 .endx b,.endy b{display:block;font:600 10.5px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--brass)}
@@ -63,19 +66,21 @@ blockquote{margin:0 0 3px;font-size:14px}
 <div class="app">
 <aside id="left">
   <h1>Commons Fault Lines</h1>
-  <p class="sub">What MPs differ on most in each subject, found from their speeches with no labels.</p>
+  <p class="sub">What MPs differ on most in each subject, found from their speeches with no labels. Each topic gets as many axes as the data supports, up to three.</p>
   <input id="tsearch" type="search" placeholder="Find a topic" aria-label="Find a topic" autocomplete="off">
-  <p class="meta"><span class="g strong"></span> strong <span class="g moderate"></span> moderate <span class="g weak"></span> weak</p>
+  <p class="meta" id="sorthelp">After each topic: how many reliable axes the data found (up to 3), then how stance-like its main axis looks, from 0 (a focus) to 100 (an argument).</p>
+  <button class="link" id="sortbtn" style="align-self:flex-start">Sort by how stance-like</button>
   <div id="topics"></div>
 </aside>
 <main>
   <div class="head"><h2 id="title"></h2><div style="position:relative;width:min(230px,100%)"><input id="mpsearch" type="search" placeholder="Follow an MP" aria-label="Follow an MP across topics" autocomplete="off"><ul id="mpresults" hidden></ul></div></div>
-  <div class="chips" id="chips"></div>
+  <div class="head"><div class="chips" id="chips"></div><p class="meta"><span id="axiscount"></span> <button class="link" id="swap" hidden>Show axis 3</button> <button class="link" id="v3" hidden>3D view</button> <button class="link" id="pav" aria-pressed="false">Show party averages</button></p></div>
   <div id="chartwrap"><svg id="chart" role="img" aria-label="MPs placed on this topic's two main axes"></svg><div class="endy" id="yhi"></div><div class="endy" id="ylo"></div><div class="endx" id="xlo"></div><div class="endx" id="xhi"></div></div>
 </main>
 <aside id="right"></aside>
 </div>
 <div id="tip"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 const D=__DATA__;const ATLAS="__ATLAS__";
 const T=D.topics,M=D.mps;const $=id=>document.getElementById(id);
@@ -84,40 +89,104 @@ const cap=s=>s.charAt(0).toUpperCase()+s.slice(1);
 const name=t=>cap(t.name.join(", "));
 let cur=0,sel=null,solo=null;
 const rank={strong:0,moderate:1,weak:2};
-const order=T.map((t,i)=>i).sort((a,b)=>rank[T[a].axes[0].grade]-rank[T[b].axes[0].grade]||T[b].mps-T[a].mps);
-function drawTopics(q=""){const box=$("topics");box.innerHTML="";order.filter(i=>{const t=T[i];return !q||t.words.some(w=>w.includes(q))||t.axes[0].lo.concat(t.axes[0].hi).some(w=>w.includes(q));}).forEach(i=>{const b=document.createElement("button");b.className="t";b.setAttribute("aria-current",i===cur);b.innerHTML=`<i class="${T[i].axes[0].grade}"></i><span>${esc(name(T[i]))}</span>`;b.onclick=()=>{cur=i;render();};box.append(b);});}
+let sortStance=false;
+const byAxes=T.map((t,i)=>i).sort((a,b)=>(T[b].combined?1:0)-(T[a].combined?1:0)||T[b].n_axes-T[a].n_axes||T[b].mps-T[a].mps);
+const byStance=T.map((t,i)=>i).sort((a,b)=>(T[b].combined?1:0)-(T[a].combined?1:0)||(T[a].stance_rank||999)-(T[b].stance_rank||999));
+let order=byAxes;
+function drawTopics(q=""){const box=$("topics");box.innerHTML="";order.filter(i=>{const t=T[i];return !q||t.words.some(w=>w.includes(q))||t.axes[0].lo.concat(t.axes[0].hi).some(w=>w.includes(q));}).forEach(i=>{const b=document.createElement("button");b.className="t";b.setAttribute("aria-current",i===cur);const tag=T[i].combined?"":`${T[i].n_axes||"–"} · ${Math.round((T[i].stance_score||0)*100)}`;b.innerHTML=`<i class="${T[i].combined?"strong":T[i].n_axes?T[i].axes[0].grade:"weak"}"></i><span>${esc(name(T[i]))} <span class="meta">${tag}</span></span>`;b.onclick=()=>{cur=i;render();};box.append(b);});}
+$("swap")&&0;
 $("tsearch").oninput=e=>drawTopics(e.target.value.trim().toLowerCase());
 const parties=Object.entries(M.reduce((a,m)=>{(a[m.p]=a[m.p]||{n:0,c:m.c}).n++;return a;},{})).sort((a,b)=>b[1].n-a[1].n);
 parties.forEach(([p,o])=>{if(o.n<2)return;const b=document.createElement("button");b.className="chip";b.setAttribute("aria-pressed","false");b.innerHTML=`<i style="background:${o.c}"></i>${esc(p)}`;b.onclick=()=>{solo=solo===p?null:p;document.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed","false"));if(solo)b.setAttribute("aria-pressed","true");drawChart();};$("chips").append(b);});
 const NS="http://www.w3.org/2000/svg";
+let alt=false,showParty=false;
+function partyMeans(t){const g={};t.pts.forEach(p=>{const mp=D.byId[p[0]];if(!mp)return;(g[mp.p]=g[mp.p]||{c:mp.c,n:0,s:[0,0,0]});g[mp.p].n++;for(let d=0;d<3;d++)g[mp.p].s[d]+=p[d+1];});
+  return Object.entries(g).filter(([p,o])=>o.n>=3&&p!=="Ind").map(([p,o])=>({p,c:o.c,n:o.n,x:o.s.map(v=>v/o.n)}));}
+const jitter=m=>((m*2654435761)%1000)/1000*1.3-.65;
 function drawChart(){const svg=$("chart"),w=svg.clientWidth,h=svg.clientHeight,t=T[cur],pad=26,bottom=56;svg.setAttribute("viewBox",`0 0 ${w} ${h}`);svg.innerHTML="";
+  const n=t.n_axes,flat=n<2,yi=alt&&n===3?3:2;
   const X=v=>pad+(Math.max(-1.25,Math.min(1.25,v))+1.25)/2.5*(w-2*pad),Y=v=>pad+(1.25-Math.max(-1.25,Math.min(1.25,v)))/2.5*(h-pad-bottom);
-  const line=(x1,y1,x2,y2)=>{const l=document.createElementNS(NS,"line");l.setAttribute("x1",x1);l.setAttribute("y1",y1);l.setAttribute("x2",x2);l.setAttribute("y2",y2);l.setAttribute("stroke","#2c5145");svg.append(l);};
-  line(pad,Y(0),w-pad,Y(0));line(X(0),pad,X(0),h-bottom);
+  const line=(x1,y1,x2,y2,dash)=>{const l=document.createElementNS(NS,"line");l.setAttribute("x1",x1);l.setAttribute("y1",y1);l.setAttribute("x2",x2);l.setAttribute("y2",y2);l.setAttribute("stroke","#2c5145");if(dash)l.setAttribute("stroke-dasharray","4 4");svg.append(l);};
+  line(pad,Y(0),w-pad,Y(0),n===0);if(!flat)line(X(0),pad,X(0),h-bottom);
+  if(n===0){const tx=document.createElementNS(NS,"text");tx.setAttribute("x",w/2);tx.setAttribute("y",pad+8);tx.setAttribute("text-anchor","middle");tx.setAttribute("fill","#a7b8ae");tx.setAttribute("font-size","13");tx.textContent="No reliable divide found. This is the widest difference, shown faintly.";svg.append(tx);}
+  if(flat){const tx=document.createElementNS(NS,"text");tx.setAttribute("x",w-pad);tx.setAttribute("y",h-bottom-4);tx.setAttribute("text-anchor","end");tx.setAttribute("fill","#a7b8ae");tx.setAttribute("font-size","11.5");tx.textContent="One axis: dots are stacked only where they would overlap.";svg.append(tx);}
   const pts=t.pts.slice().sort((a,b)=>(a[0]===sel)-(b[0]===sel));
-  pts.forEach(([m,x,y,n])=>{const mp=D.byId[m];if(!mp)return;const c=document.createElementNS(NS,"circle");c.setAttribute("cx",X(x));c.setAttribute("cy",Y(y));const r=3.2+Math.min(4,Math.sqrt(n)*.65);c.setAttribute("r",m===sel?r+4:r);c.setAttribute("fill",mp.c);const dim=(solo&&mp.p!==solo)||(sel!=null&&m!==sel&&false);c.setAttribute("fill-opacity",dim?.1:.82);c.setAttribute("stroke",m===sel?"#efece0":"#0a211b");c.setAttribute("stroke-width",m===sel?2.5:.8);c.setAttribute("tabindex",0);c.setAttribute("aria-label",`${mp.n}, ${mp.p}`);c.style.cursor="pointer";
-    c.onmousemove=e=>{const tip=$("tip");tip.textContent=`${mp.n} · ${mp.p}`;tip.style.display="block";tip.style.transform=`translate(${Math.min(e.clientX+12,innerWidth-220)}px,${e.clientY+12}px)`;};c.onmouseleave=()=>{$("tip").style.display="none";};c.onclick=()=>{sel=m;drawChart();panel();};c.onkeydown=e=>{if(e.key==="Enter"){sel=m;drawChart();panel();}};svg.append(c);});
-  const ends=(id,label,words)=>{$(id).innerHTML=`<b>${label}</b>${esc(words.slice(0,4).join(", "))}`;};
-  const a=t.axes;ends("xlo","Axis 1",a[0].lo);ends("xhi","Axis 1",a[0].hi);ends("ylo","Axis 2",a[1].lo);ends("yhi","Axis 2",a[1].hi);}
+  const stackY={};if(flat){const step=9,slots={};t.pts.slice().sort((a,b)=>a[1]-b[1]).forEach(p=>{const bin=Math.round(X(p[1])/step);const k=slots[bin]=(slots[bin]||0)+1;const off=(k===1?0:(k%2?1:-1)*Math.floor(k/2))*step;stackY[p[0]]=Y(0)+Math.max(-(h-bottom-pad)/2+8,Math.min((h-bottom-pad)/2-8,off));});}
+  pts.forEach(p=>{const m=p[0],x=p[1],y=flat?0:p[yi],n_=p[4];const mp=D.byId[m];if(!mp)return;const c=document.createElementNS(NS,"circle");c.setAttribute("cx",X(x));c.setAttribute("cy",flat?stackY[m]:Y(y));const r=flat?3.6:3.2+Math.min(4,Math.sqrt(n_)*(t.combined?.35:.65));c.setAttribute("r",m===sel?r+4:r);c.setAttribute("fill",mp.c);const dim=solo&&mp.p!==solo;c.setAttribute("fill-opacity",dim?.1:(n===0?.35:.82));c.setAttribute("stroke",m===sel?"#efece0":"#0a211b");c.setAttribute("stroke-width",m===sel?2.5:.8);c.setAttribute("tabindex",0);c.setAttribute("aria-label",`${mp.n}, ${mp.p}`);c.style.cursor="pointer";
+    c.onmousemove=e=>{const tip=$("tip");tip.textContent=`${mp.n} · ${mp.p}`;tip.style.display="block";tip.style.transform=`translate(${Math.min(e.clientX+12,innerWidth-220)}px,${e.clientY+12}px)`;};c.onmouseleave=()=>{$("tip").style.display="none";};c.onclick=()=>{sel=m;drawChart();panel();if(view3)draw3();};c.onkeydown=e=>{if(e.key==="Enter"){sel=m;drawChart();panel();}};svg.append(c);});
+  if(showParty)partyMeans(t).forEach(o=>{const cx=X(o.x[0]),cy=flat?Y(0):Y(o.x[yi-1]);const c=document.createElementNS(NS,"circle");c.setAttribute("cx",cx);c.setAttribute("cy",cy);c.setAttribute("r",10);c.setAttribute("fill",o.c);c.setAttribute("stroke","#efece0");c.setAttribute("stroke-width",2.5);c.setAttribute("pointer-events","none");svg.append(c);
+    const tx=document.createElementNS(NS,"text");tx.setAttribute("x",cx+13);tx.setAttribute("y",cy+4);tx.setAttribute("fill","#efece0");tx.setAttribute("font-size","12.5");tx.setAttribute("font-weight","700");tx.setAttribute("paint-order","stroke");tx.setAttribute("stroke","#0a211b");tx.setAttribute("stroke-width","3");tx.setAttribute("pointer-events","none");tx.textContent=`${o.p} average (${o.n})`;svg.append(tx);});
+  const ends=(id,label,words,show)=>{$(id).hidden=!show;if(show)$(id).innerHTML=`<b>${label}${t.combined?" (mix of many topics)":""}</b>${esc(words.slice(0,t.combined?3:4).join(t.combined?" · ":", "))}`;};
+  const a=t.axes,ya=a[yi-1];ends("xlo",n===0?"Widest difference":"Axis 1",a[0].lo,true);ends("xhi",n===0?"Widest difference":"Axis 1",a[0].hi,true);ends("ylo",`Axis ${yi}`,ya.lo,!flat);ends("yhi",`Axis ${yi}`,ya.hi,!flat);
+  const sw=$("swap");sw.hidden=n!==3;sw.textContent=alt?"Show axis 2":"Show axis 3";
+  $("axiscount").textContent=t.combined?"3 axes, combining every topic's reliable divides":n===0?"No reliable axis":n===1?"1 axis":`${n} axes`;}
 function faceStyle(id){const i=D.tiles[id];const s=72/D.tile;if(i==null)return "";return `background-image:url(${ATLAS});background-size:${D.size*s}px;background-position:-${(i%D.cols)*D.tile*s}px -${Math.floor(i/D.cols)*D.tile*s}px;border-color:${D.byId[id].c}`;}
-const gradeText={strong:"Strong: MPs land in similar places when this axis is rebuilt from separate debates, and it clearly beats shuffled speakers.",moderate:"Moderate: there's some stability across separate debates, so read it with care.",weak:"Weak: this is the widest difference found, but it could be noise."};
+const gradeText={strong:"Strong: MPs land in similar places when this axis is rebuilt from separate debates, and it clearly beats shuffled speakers.",moderate:"Passed: there's some stability across separate debates, so read it with care.",weak:"Didn't pass: this is the widest difference found, but it could be noise."};
 function panel(){const t=T[cur],a=t.axes,p=$("right");let h="";
   if(sel!=null&&D.byId[sel]){const m=D.byId[sel],q=t.quotes[sel],pt=t.pts.find(x=>x[0]===sel);
     h+=`<div><div class="who"><div class="face" style="${faceStyle(sel)}"></div><div><h2>${esc(m.n)}</h2><div class="meta">${esc(m.pn)}<br>${esc(m.k||"")}</div></div></div><p style="margin-top:6px"><button class="link" id="clear">Stop following</button></p></div>`;
     h+=pt?`<div><h3>In this topic</h3><blockquote>${esc(q?q.t:"")}</blockquote><div class="src">${q?`${esc(q.h)}, ${esc(q.d)}`:""}. ${pt[3]} speeches here.</div></div>`:`<div><h3>In this topic</h3><p class="meta">Not placed: there isn't enough speech from this MP here outside any government post. That isn't the same as having no view.</p></div>`;
     const mine=T.map((x,i)=>[x,i,x.pts.find(y=>y[0]===sel)]).filter(z=>z[2]).sort((x,y)=>y[2][3]-x[2][3]).slice(0,8);
     h+=`<div><h3>Their most-spoken topics</h3><div class="list">${mine.map(([x,i,y])=>`<button class="row" data-go="${i}">${esc(name(x))} <span class="meta">${y[3]}</span></button>`).join("")}</div></div>`;}
-  h+=`<div><h3>What this shows</h3><p class="meta">${t.mps} MPs with enough speech. Party explains ${Math.round(a[0].party*100)}% of the first axis. These axes show how MPs talk about this subject differently, which isn't always disagreement, so read the words at each end and the passages.</p></div>`;
-  [0,1].forEach(d=>{const x=a[d];h+=`<div><h3>Axis ${d+1} <span class="g ${x.grade}"></span></h3><p class="meta">${gradeText[x.grade]} Separate debates: ${x.held??"n/a"}. Variation ${(x.var/x.null).toFixed(2)}× chance.</p>
+  if(t.combined){h+=`<div><h3>What this shows</h3><p class="meta">${t.mps} MPs. ${t.desc?esc(t.desc):`MPs placed using every reliable axis from every topic (${D.stats.axesUsed} axes from ${D.stats.topicsUsed} topics). MPs sit close when they fall on similar sides of many topics' divides. Each axis explains only about 6% of the variation, against about 5% for shuffled data, so most of what separates MPs isn't captured here.`} Each end below lists the topics that pull hardest that way.</p></div>`;
+  t.dims.forEach((x,d)=>{h+=`<div><h3>Axis ${d+1}</h3><p class="meta">Separate debates ${x.held} (within Labour ${x.held_lab}). Party explains ${Math.round(x.party*100)}%. The separate-debate check uses axes built from all speech, so it runs high.</p><p style="margin-top:6px"><b>One end:</b></p>${x.lo.map(e=>`<p class="meta">${esc(cap(e.topic))}: ${esc(e.words.join(", "))}</p>`).join("")}<p style="margin-top:6px"><b>Other end:</b></p>${x.hi.map(e=>`<p class="meta">${esc(cap(e.topic))}: ${esc(e.words.join(", "))}</p>`).join("")}</div>`;});
+  h+=`<p class="meta">Built from ${D.stats.passages.toLocaleString()} backbench and opposition passages since July 2024. Ministers' speech is left out. Votes and party weren't used to place anyone.</p>`;p.innerHTML=h;p.scrollTop=0;const cc=$("clear");if(cc)cc.onclick=()=>{sel=null;render();};p.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>{cur=+b.dataset.go;render();});return;}
+  h+=`<div><h3>What this shows</h3><p class="meta">${t.mps} MPs with enough speech. ${t.n_axes===0?"No axis passed the reliability tests here.":`The data found ${t.n_axes} reliable ${t.n_axes===1?"axis":"axes"} here. Party explains ${Math.round(a[0].party*100)}% of the first.`} Axes show how MPs talk about this subject differently, which isn't always disagreement, so read the words at each end and the passages.</p>${t.stance_rank?`<p class="meta" style="margin-top:6px"><b style="color:var(--ink)">How stance-like the main axis looks: ${t.stance_rank<=25?"high":t.stance_rank<=70?"medium":"low"}</b> (rank ${t.stance_rank} of ${D.stats.topicsRanked}). Based on whether both ends speak in the same debates (${a[0].codebate}× chance), how much this axis dominates the next, and whether MPs split into two groups. It's a rough guide, and a few procedural topics score high.</p>`:""}</div>`;
+  Array.from({length:Math.max(1,t.n_axes)},(_,d)=>d).forEach(d=>{const x=a[d];h+=`<div><h3>Axis ${d+1} <span class="g ${x.grade}"></span></h3><p class="meta">${gradeText[x.grade]} Separate debates: ${x.held??"n/a"}. Variation ${(x.var/x.null).toFixed(2)}× chance.</p>
    <p style="margin-top:6px"><b>One end:</b> ${esc(x.lo.slice(0,7).join(", "))}</p>${x.ex_lo.map(e=>`<blockquote style="margin-top:5px">${esc(e.t)}</blockquote><div class="src">${esc((D.byId[e.m]||{}).n||"")}, ${esc(e.h)}, ${esc(e.d)}</div>`).join("")}
    <p style="margin-top:6px"><b>Other end:</b> ${esc(x.hi.slice(0,7).join(", "))}</p>${x.ex_hi.map(e=>`<blockquote style="margin-top:5px">${esc(e.t)}</blockquote><div class="src">${esc((D.byId[e.m]||{}).n||"")}, ${esc(e.h)}, ${esc(e.d)}</div>`).join("")}</div>`;});
   h+=`<p class="meta">Built from ${D.stats.passages.toLocaleString()} backbench and opposition passages since July 2024. Ministers' speech is left out, so most frontbench Government MPs aren't placed. Topic names and axis ends are the data's own words.</p>`;
   p.innerHTML=h;p.scrollTop=0;const c=$("clear");if(c)c.onclick=()=>{sel=null;render();};p.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>{cur=+b.dataset.go;render();});}
-function render(){$("title").textContent=name(T[cur]);drawTopics($("tsearch").value.trim().toLowerCase());drawChart();panel();}
+document.addEventListener("click",e=>{if(e.target.id==="swap"){alt=!alt;drawChart();}});
+
+
+// 3D view, for topics where the data found three axes, and for the combined space
+let view3=false,G=null;
+function ensure3(){if(G)return G;const wrap=$("chartwrap");const cv=document.createElement("canvas");cv.style.cssText="position:absolute;inset:0;width:100%;height:100%;display:none;cursor:grab;touch-action:none";wrap.append(cv);
+  const r=new THREE.WebGLRenderer({canvas:cv,antialias:true});r.setPixelRatio(Math.min(devicePixelRatio,2));const sc=new THREE.Scene();sc.background=new THREE.Color(0x0a211b);const cam=new THREE.PerspectiveCamera(45,1,.05,100);
+  const geo=new THREE.BufferGeometry();const uni={px:{value:1}};
+  const mat=new THREE.ShaderMaterial({uniforms:uni,transparent:true,depthWrite:true,vertexShader:`attribute vec3 col;attribute float sz;attribute float al;uniform float px;varying vec3 vC;varying float vA;void main(){vC=col;vA=al;vec4 mv=modelViewMatrix*vec4(position,1.);gl_Position=projectionMatrix*mv;gl_PointSize=max(3.,px*sz/-mv.z);}`,
+    fragmentShader:`varying vec3 vC;varying float vA;void main(){vec2 c=gl_PointCoord-.5;float d=length(c);if(d>.5)discard;vec3 col=d>.4?vec3(.04,.13,.1):vC;gl_FragColor=vec4(col,vA);}`});
+  const pts=new THREE.Points(geo,mat);pts.frustumCulled=false;sc.add(pts);
+  const ax=[];const axisCol=[0xd9b45f,0x8fd694,0x9db8ff];for(let d=0;d<3;d++){const a=[0,0,0,0,0,0];a[d]=-1.35;a[d+3]=1.35;const l=new THREE.Line(new THREE.BufferGeometry().setAttribute("position",new THREE.Float32BufferAttribute(a,3)),new THREE.LineBasicMaterial({color:axisCol[d],transparent:true,opacity:.6}));sc.add(l);ax.push(l);}
+  const labels=[];for(let i=0;i<6;i++){const el=document.createElement("div");el.className="l3";el.hidden=true;wrap.append(el);labels.push(el);}
+  const pgeo=new THREE.BufferGeometry();const ppts=new THREE.Points(pgeo,new THREE.ShaderMaterial({uniforms:uni,transparent:true,vertexShader:`attribute vec3 col;uniform float px;varying vec3 vC;void main(){vC=col;vec4 mv=modelViewMatrix*vec4(position,1.);gl_Position=projectionMatrix*mv;gl_PointSize=max(10.,px*3.2/-mv.z);}`,
+    fragmentShader:`varying vec3 vC;void main(){float d=length(gl_PointCoord-.5);if(d>.5)discard;gl_FragColor=vec4(d>.38?vec3(.94,.93,.88):vC,1.);}`}));ppts.frustumCulled=false;ppts.renderOrder=2;sc.add(ppts);
+  G={cv,r,sc,cam,geo,uni,labels,pgeo,ppts,plabels:[],pmeans:[],az:.75,el:.35,dist:4.4,spin:!matchMedia("(prefers-reduced-motion: reduce)").matches,ids:[],xyz:[]};
+  const pointers=new Map();let moved=0;
+  cv.addEventListener("pointerdown",e=>{cv.setPointerCapture(e.pointerId);pointers.set(e.pointerId,[e.clientX,e.clientY]);moved=0;G.spin=false;});
+  cv.addEventListener("pointermove",e=>{if(!pointers.has(e.pointerId)){const h=pick(e);const tip=$("tip");if(h!=null){const mp=D.byId[h];tip.textContent=`${mp.n} · ${mp.p}`;tip.style.display="block";tip.style.transform=`translate(${Math.min(e.clientX+12,innerWidth-220)}px,${e.clientY+12}px)`;}else tip.style.display="none";return;}
+    const[px,py]=pointers.get(e.pointerId);const dx=e.clientX-px,dy=e.clientY-py;pointers.set(e.pointerId,[e.clientX,e.clientY]);moved+=Math.abs(dx)+Math.abs(dy);G.az-=dx*.008;G.el=Math.max(-1.4,Math.min(1.4,G.el+dy*.008));});
+  cv.addEventListener("pointerup",e=>{pointers.delete(e.pointerId);if(moved<6){const h=pick(e);if(h!=null){sel=h;draw3();panel();}}});
+  cv.addEventListener("pointerleave",()=>{$("tip").style.display="none";});
+  cv.addEventListener("wheel",e=>{e.preventDefault();G.dist=Math.max(1.6,Math.min(9,G.dist*Math.exp(e.deltaY*.0012)));},{passive:false});
+  (function loop(){requestAnimationFrame(loop);if(!view3)return;const w=cv.clientWidth,h=cv.clientHeight;if(cv.width!==Math.round(w*G.r.getPixelRatio())){G.r.setSize(w,h,false);G.cam.aspect=w/h;G.cam.updateProjectionMatrix();G.uni.px.value=h*G.r.getPixelRatio()*.03;}
+    if(G.spin)G.az+=.0025;G.cam.position.set(G.dist*Math.cos(G.el)*Math.sin(G.az),G.dist*Math.sin(G.el),G.dist*Math.cos(G.el)*Math.cos(G.az));G.cam.lookAt(0,0,0);G.cam.updateMatrixWorld();
+    const ends=[[-1.42,0,0],[1.42,0,0],[0,-1.42,0],[0,1.42,0],[0,0,-1.42],[0,0,1.42]];G.labels.forEach((el,i)=>{const v=new THREE.Vector3(...ends[i]).project(G.cam);el.hidden=v.z>1;el.style.transform=`translate(${Math.round((v.x+1)/2*w)}px,${Math.round((1-v.y)/2*h)}px) translate(-50%,-50%)`;});
+    G.plabels.forEach((el,i)=>{const o=G.pmeans[i];if(!o||!showParty){el.hidden=true;return;}const v=new THREE.Vector3(...o.x).project(G.cam);el.hidden=v.z>1;el.style.transform=`translate(${Math.round((v.x+1)/2*w)+12}px,${Math.round((1-v.y)/2*h)}px) translate(0,-50%)`;});
+    G.r.render(G.sc,G.cam);})();
+  return G;}
+function pick(e){const rect=G.cv.getBoundingClientRect();const x=e.clientX-rect.left,y=e.clientY-rect.top;let best=null,bd=1e9;const v=new THREE.Vector3();
+  G.xyz.forEach((p,i)=>{v.set(...p).project(G.cam);const sx=(v.x+1)/2*rect.width,sy=(1-v.y)/2*rect.height;const d=Math.hypot(sx-x,sy-y);const depth=G.cam.position.distanceTo(new THREE.Vector3(...p));if(d<9&&depth<bd){bd=depth;best=G.ids[i];}});return best;}
+function draw3(){const g=ensure3(),t=T[cur],clamp=v=>Math.max(-1.25,Math.min(1.25,v));const pos=[],col=[],sz=[],al=[];g.ids=[];g.xyz=[];
+  t.pts.forEach(p=>{const mp=D.byId[p[0]];if(!mp)return;const xyz=[clamp(p[1]),clamp(p[2]),clamp(p[3])];g.ids.push(p[0]);g.xyz.push(xyz);pos.push(...xyz);const c=new THREE.Color(mp.c);col.push(c.r,c.g,c.b);const base=.9+Math.min(1.2,Math.sqrt(p[4])*(t.combined?.1:.18));sz.push(p[0]===sel?base*2.2:base);al.push(solo&&mp.p!==solo?.12:.9);});
+  g.geo.setAttribute("position",new THREE.Float32BufferAttribute(pos,3));g.geo.setAttribute("col",new THREE.Float32BufferAttribute(col,3));g.geo.setAttribute("sz",new THREE.Float32BufferAttribute(sz,1));g.geo.setAttribute("al",new THREE.Float32BufferAttribute(al,1));
+  g.pmeans=showParty?partyMeans(t).map(o=>({...o,x:o.x.map(clamp)})):[];g.ppts.visible=showParty;
+  const pp=[],pc=[];g.pmeans.forEach(o=>{pp.push(...o.x);const c=new THREE.Color(o.c);pc.push(c.r,c.g,c.b);});g.pgeo.setAttribute("position",new THREE.Float32BufferAttribute(pp,3));g.pgeo.setAttribute("col",new THREE.Float32BufferAttribute(pc,3));
+  while(g.plabels.length<g.pmeans.length){const el=document.createElement("div");el.className="pl3";el.hidden=true;$("chartwrap").append(el);g.plabels.push(el);}
+  g.plabels.forEach((el,i)=>{const o=g.pmeans[i];if(o){el.textContent=`${o.p} average`;el.style.background=o.c;}else el.hidden=true;});
+  const a=t.axes;const words=(x,k)=>esc((x[k]||[]).slice(0,t.combined?3:2).join(t.combined?" · ":", "));
+  [[0,"lo"],[0,"hi"],[1,"lo"],[1,"hi"],[2,"lo"],[2,"hi"]].forEach(([d,k],i)=>{g.labels[i].innerHTML=`<b>Axis ${d+1}</b>${words(a[d],k)}`;});}
+function setView3(on){view3=on&&(T[cur].combined||T[cur].n_axes===3);const g=view3?ensure3():G;$("chart").style.display=view3?"none":"";["xlo","xhi","ylo","yhi"].forEach(id=>$(id).style.visibility=view3?"hidden":"");if(G){G.cv.style.display=view3?"block":"none";G.labels.forEach(el=>el.style.display=view3?"":"none");G.plabels.forEach(el=>el.style.display=view3?"":"none");}
+  $("v3").textContent=view3?"Flat view":"3D view";$("swap").style.visibility=view3?"hidden":"";if(view3)draw3();else drawChart();}
+document.addEventListener("click",e=>{if(e.target.id==="sortbtn"){sortStance=!sortStance;order=sortStance?byStance:byAxes;e.target.textContent=sortStance?"Sort by number of axes":"Sort by how stance-like";$("sorthelp").textContent=sortStance?"Sorted by how stance-like the main axis looks, highest first. After each topic: number of axes, then the stance score from 0 to 100.":"After each topic: how many reliable axes the data found (up to 3), then how stance-like its main axis looks, from 0 (a focus) to 100 (an argument).";drawTopics($("tsearch").value.trim().toLowerCase());}
+  if(e.target.id==="v3")setView3(!view3);if(e.target.id==="pav"){showParty=!showParty;e.target.textContent=showParty?"Hide party averages":"Show party averages";e.target.setAttribute("aria-pressed",showParty);drawChart();if(view3)draw3();}});
+
+function render(){alt=false;$("title").textContent=name(T[cur]);drawTopics($("tsearch").value.trim().toLowerCase());drawChart();panel();$("v3").hidden=!(T[cur].combined||T[cur].n_axes===3);setView3(view3);}
 const mps=$("mpsearch"),mpr=$("mpresults");
 mps.oninput=()=>{const q=mps.value.trim().toLowerCase();if(q.length<2){mpr.hidden=true;return;}const hit=M.filter(m=>m.n.toLowerCase().includes(q)||(m.k||"").toLowerCase().includes(q)).slice(0,8);mpr.innerHTML=hit.length?hit.map(m=>`<li><button data-i="${m.i}">${esc(m.n)} <span class="meta">${esc(m.p)}</span></button></li>`).join(""):`<li style="padding:5px 9px" class="meta">No MP matches that.</li>`;mpr.hidden=false;mpr.querySelectorAll("button").forEach(b=>b.onclick=()=>{sel=+b.dataset.i;mps.value="";mpr.hidden=true;render();});};
 addEventListener("resize",drawChart);
-cur=Math.max(0,T.findIndex(t=>t.words.includes("gaza")));render();
+cur=Math.max(0,T.findIndex(t=>t.combined));render();
 </script>
 </body>
 </html>
