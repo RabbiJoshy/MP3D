@@ -7,8 +7,8 @@
 <title>Where Do You Stand?</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&display=swap">
 <style>
-/* One screen: the map of MPs on the left stays put, the panel on the right walks you through the questions and then shows your matches. */
-:root{--bench:#0a211b;--bench2:#143a30;--bench3:#1b463a;--ink:#efece0;--dim:#a7b8ae;--brass:#d9b45f;--line:#2c5145;--yes:#8fd694;--no:#e58e7a;--display:"Bricolage Grotesque","Trebuchet MS",sans-serif;--body:"Source Sans 3","Segoe UI",sans-serif;color-scheme:dark}
+/* One screen: the map of MPs (2D or 3D) on the left, the panel on the right walks you through a few questions and then shows your matches. */
+:root{--bench:#0a211b;--bench2:#143a30;--ink:#efece0;--dim:#a7b8ae;--brass:#d9b45f;--line:#2c5145;--yes:#8fd694;--no:#e58e7a;--display:"Bricolage Grotesque","Trebuchet MS",sans-serif;--body:"Source Sans 3","Segoe UI",sans-serif;color-scheme:dark}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bench);color:var(--ink);font:15px/1.45 var(--body)}
 .wrap{max-width:1280px;margin:0 auto;padding:18px max(16px,env(safe-area-inset-left,0px)) 40px max(16px,env(safe-area-inset-right,0px))}
@@ -20,14 +20,13 @@ p{margin:0}
 .meta{color:var(--dim);font-size:13.5px}
 .app{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:20px;margin-top:14px;align-items:start}
 .mapcard{position:sticky;top:12px;background:var(--bench2);border:1px solid var(--line);border-radius:12px;padding:10px;min-width:0}
-svg{display:block;width:100%;height:auto;touch-action:manipulation}
-.dot{transition:fill .35s,opacity .35s,r .35s;cursor:pointer}
-.plab{font:700 30px var(--display);fill:var(--ink);opacity:.55;pointer-events:none;paint-order:stroke;stroke:var(--bench2);stroke-width:7px}
-.axl{font:22px var(--body);fill:var(--dim)}
-.you{transition:transform .7s cubic-bezier(.3,1.3,.5,1);pointer-events:none}
-.halo{fill:var(--brass);fill-opacity:.12;stroke:var(--brass);stroke-opacity:.5;stroke-dasharray:4 4;transition:r .7s}
-.mlab{font:600 24px var(--body);fill:var(--ink);paint-order:stroke;stroke:var(--bench2);stroke-width:6px;pointer-events:none}
-.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px;color:var(--dim);padding:6px 4px 2px;align-items:center}
+.maptop{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:0 2px 8px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.seg button{background:none;border:0;color:var(--ink);padding:5px 14px;font:600 13.5px var(--body);cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--brass);color:#14241e}
+canvas{display:block;width:100%;border-radius:8px;touch-action:pan-y;cursor:default}
+canvas.orbit{touch-action:none;cursor:grab}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px;color:var(--dim);padding:8px 4px 2px;align-items:center}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
 .tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--bench);padding:5px 9px;border-radius:6px;font-size:13px;z-index:9;display:none;max-width:260px}
 .panel{background:var(--bench2);border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:14px;min-width:0}
@@ -38,12 +37,15 @@ svg{display:block;width:100%;height:auto;touch-action:manipulation}
 .ch{background:var(--bench);border:1px solid var(--line);border-radius:8px;color:var(--ink);padding:12px;font:600 15px var(--body);cursor:pointer;text-align:left}
 .ch:hover{border-color:var(--brass)}
 .ch[aria-pressed=true]{background:var(--brass);border-color:var(--brass);color:#14241e}
-.ch.y::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--yes);margin-right:8px}
-.ch.n::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--no);margin-right:8px}
+.ch.y::before,.ch.n::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:8px}
+.ch.y::before{background:var(--yes)}.ch.n::before{background:var(--no)}
 .row{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}
 .btn{background:var(--brass);border:0;border-radius:8px;color:#14241e;padding:11px 18px;font:700 15px var(--body);cursor:pointer}
+.btn[disabled]{opacity:.5;cursor:default}
 .link{background:none;border:0;padding:0;color:var(--brass);cursor:pointer;text-decoration:underline;text-underline-offset:2px;font:inherit}
 button:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+.mat{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 10px;align-items:center}
+.mat .seg button{padding:5px 10px;font-size:13px}
 .split{display:flex;height:8px;border-radius:4px;overflow:hidden;background:var(--line)}.split i{display:block;height:100%}
 .mp{display:grid;grid-template-columns:10px minmax(0,1fr) auto;gap:2px 10px;align-items:baseline;background:none;border:0;border-top:1px solid var(--line);color:var(--ink);text-align:left;padding:8px 0;cursor:pointer;font:inherit;width:100%}
 .mp:hover .nm{color:var(--brass)}
@@ -55,144 +57,195 @@ button:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
 .ev{border-left:3px solid var(--line);padding-left:10px;margin:6px 0}.ev.yes{border-color:var(--yes)}.ev.no{border-color:var(--no)}
 .tag{display:inline-block;font-size:12px;font-weight:600;padding:1px 7px;border-radius:999px;margin-right:6px}
 .tag.yes{background:var(--yes);color:#10201b}.tag.no{background:var(--no);color:#10201b}.tag.none{background:var(--line);color:var(--ink)}
-.ans{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 10px;font-size:13.5px;border-top:1px solid var(--line);padding:6px 0;background:none;border-left:0;border-right:0;border-bottom:0;color:var(--ink);text-align:left;width:100%;cursor:pointer;font-family:inherit}
+.more{display:flex;flex-wrap:wrap;gap:6px}
+.more button{background:var(--bench);border:1px solid var(--line);border-radius:999px;color:var(--ink);padding:5px 12px;font:600 13px var(--body);cursor:pointer}
+.ans{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 10px;font-size:13.5px;border:0;border-top:1px solid var(--line);padding:6px 0;background:none;color:var(--ink);text-align:left;width:100%;cursor:pointer;font-family:inherit}
 .card{background:var(--bench2);border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:12px;margin-top:22px}
 table{border-collapse:collapse;width:100%;font-size:13.5px}
 td,th{padding:4px 6px;text-align:left;border-top:1px solid var(--line);vertical-align:top}
 th{color:var(--dim);font-weight:600}
 .num{font-variant-numeric:tabular-nums;text-align:right}
-.check{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;font-size:14px}.check b{font-variant-numeric:tabular-nums;color:var(--yes)}
 .scroll{overflow-x:auto}
-@media (max-width:860px){svg{max-height:40vh}.app{grid-template-columns:1fr;gap:10px}.mapcard{position:static;padding:6px}.panel{padding:14px;gap:12px}h1{font-size:21px}.big{font-size:19px}.legend{font-size:12px}.ch{padding:10px}}
+[hidden]{display:none!important}
+@media (max-width:860px){.app{grid-template-columns:1fr;gap:10px}.mapcard{position:static;padding:6px}.panel{padding:14px;gap:12px}h1{font-size:21px}.big{font-size:19px}.legend{font-size:12px}.ch{padding:10px}}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header><h1>Where do you stand?</h1><p class="meta"><button class="link" data-go="checks">Does it work?</button> · <a href="faultlines.html" style="color:inherit">Commons Fault Lines</a></p></header>
+  <header><h1>Where do you stand?</h1><p class="meta" id="hdr"></p></header>
   <div class="app">
-    <div class="mapcard"><svg id="map" role="img" aria-label="Map of MPs placed by what they said in Parliament"></svg><div class="legend" id="legend"></div></div>
+    <div class="mapcard">
+      <div class="maptop"><div class="seg" role="group" aria-label="Map view"><button data-dim="2" aria-pressed="true">2D</button><button data-dim="3" aria-pressed="false">3D</button></div><span class="meta" id="hint"></span></div>
+      <canvas id="map" role="img" aria-label="Map of MPs placed by what they said in Parliament"></canvas>
+      <div class="legend" id="legend"></div>
+    </div>
     <section class="panel" id="panel" aria-live="polite"></section>
   </div>
-  <section class="card" id="checks"></section>
+  <section class="card" id="checks" hidden></section>
 </div>
 <div class="tip" id="tip"></div>
 <script>
 const D=__DATA__;const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const SB=D.subjects,M=D.mps,P=SB.flatMap(S=>S.proposals.map(p=>({...p,s:S}))),SP=D.space;
-const subOf=k=>k.split(".")[0];
-let ans={};try{ans=JSON.parse(localStorage.getItem("wdys")||"{}")}catch(e){}
-const save=()=>{try{localStorage.setItem("wdys",JSON.stringify(ans))}catch(e){}};
-let view="intro",qi=0,sel=null;
-const answered=()=>P.filter(p=>ans[p.k]!=null&&ans[p.k]!=="u");
+const SB=D.subjects,M=D.mps,SP=D.space,P=SB.flatMap(S=>S.proposals.map(p=>({...p,s:S})));
+const byK=Object.fromEntries(P.map(p=>[p.k,p]));
+let ans={},imp={};try{const s=JSON.parse(localStorage.getItem("wdys2")||"{}");ans=s.ans||{};imp=s.imp||{};}catch(e){}
+const save=()=>{try{localStorage.setItem("wdys2",JSON.stringify({ans,imp}))}catch(e){}};
+let view="intro",Q=[],qi=0,sel=null;
+const wt=k=>{const v=imp[k.split(".")[0]];return v==null?1:+v;};   // how much a subject matters to you: 0, 1 or 2
+const answered=()=>P.filter(p=>ans[p.k]!=null&&ans[p.k]!=="u"&&wt(p.k)>0);
+const cur=()=>view==="quiz"?Q[qi]:null;
 
-// ---------- the map ----------
-const xs=M.map(m=>m.x),ys=M.map(m=>m.y);
-const x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys);
-const VW=1000,pad=40,VH=Math.round(VW*Math.min(.85,Math.max(.6,(y1-y0)/(x1-x0))));
-const kx=(VW-2*pad)/(x1-x0),ky=(VH-2*pad)/(y1-y0);
-const sx=x=>pad+(x-x0)*kx,sy=y=>VH-pad-(y-y0)*ky;
-const short=k=>P.find(p=>p.k===k).label;
-function drawMap(){const svg=$("map");svg.setAttribute("viewBox",`0 0 ${VW} ${VH}`);
-  svg.innerHTML=`<line x1="${sx(0)}" y1="${pad/2}" x2="${sx(0)}" y2="${VH-pad/2}" stroke="var(--line)"/><line x1="${pad/2}" y1="${sy(0)}" x2="${VW-pad/2}" y2="${sy(0)}" stroke="var(--line)"/>
-  <g id="dots">${M.map(m=>`<circle class="dot" data-mp="${m.i}" cx="${sx(m.x).toFixed(1)}" cy="${sy(m.y).toFixed(1)}" r="5" fill="${m.c}"/>`).join("")}</g>
-  <g id="plabs">${SP.parties.filter(p=>p.n>=4&&p.p&&p.p!=="Ind").map(p=>`<text class="plab" x="${sx(p.x)}" y="${sy(p.y)}" text-anchor="middle">${esc(p.p)}</text>`).join("")}</g>
-  <g id="mlabs"></g>
-  <g class="you" id="you" style="transform:translate(${sx(SP.m0[0])}px,${sy(SP.m0[1])}px)"><circle class="halo" id="halo" r="200"/><circle r="15" fill="var(--brass)" stroke="var(--bench)" stroke-width="4"/><text y="-24" text-anchor="middle" style="font:700 30px var(--display);fill:var(--brass);paint-order:stroke;stroke:var(--bench2);stroke-width:7px">You</text></g>`;
-  const t=$("tip");svg.addEventListener("pointermove",e=>{const c=e.target.closest(".dot");if(!c){t.style.display="none";return;}const m=M.find(x=>x.i===+c.dataset.mp);const q=view==="quiz"&&m.positions[P[qi].k];
-    t.innerHTML=`<b>${esc(m.n)}</b> · ${esc(m.p)}${q?`<br>${q.s>0.2?"Said they support this":q.s<-0.2?"Said they oppose this":"Mixed on this"}`:""}`;t.style.display="block";t.style.left=Math.min(e.clientX+12,innerWidth-270)+"px";t.style.top=(e.clientY+14)+"px";});
-  svg.addEventListener("pointerleave",()=>t.style.display="none");}
-// Where you sit: the same Gaussian update used to place MPs, from your answers only. The halo is how unsure that is.
-function placeYou(){const inv=m=>{const d=m[0][0]*m[1][1]-m[0][1]*m[1][0];return[[m[1][1]/d,-m[0][1]/d],[-m[1][0]/d,m[0][0]/d]];};
-  const Pi=inv(SP.prior);let A=[[Pi[0][0],Pi[0][1]],[Pi[1][0],Pi[1][1]]],b=[Pi[0][0]*SP.m0[0]+Pi[0][1]*SP.m0[1],Pi[1][0]*SP.m0[0]+Pi[1][1]*SP.m0[1]];
-  answered().forEach(p=>{const j=SP.keys.indexOf(p.k);if(j<0)return;const w=SP.W[j],r=(+ans[p.k]-SP.mu[j])/SP.s2;A[0][0]+=w[0]*w[0]/SP.s2;A[0][1]+=w[0]*w[1]/SP.s2;A[1][0]+=w[1]*w[0]/SP.s2;A[1][1]+=w[1]*w[1]/SP.s2;b[0]+=w[0]*r;b[1]+=w[1]*r;});
-  const C=inv(A),z=[C[0][0]*b[0]+C[0][1]*b[1],C[1][0]*b[0]+C[1][1]*b[1]];
-  const X=Math.max(pad/2,Math.min(VW-pad/2,sx(z[0]))),Y=Math.max(pad/2,Math.min(VH-pad/2,sy(z[1])));
-  $("you").style.transform=`translate(${X}px,${Y}px)`;$("halo").setAttribute("r",Math.max(14,Math.sqrt((C[0][0]*kx*kx+C[1][1]*ky*ky)/2)).toFixed(0));return z;}
-function paint(){const dots=document.querySelectorAll(".dot");const q=view==="quiz"?P[qi]:null;const top=view==="results"?ranked().slice(0,5).map(x=>x.m.i):[];const s=sel;
-  dots.forEach(c=>{const m=M.find(x=>x.i===+c.dataset.mp);let f=m.c,o=1,r=7;
-    if(q){const pos=m.positions[q.k];if(pos&&Math.abs(pos.s)>0.2){f=pos.s>0?"var(--yes)":"var(--no)";r=8;}else{o=.13;}}
-    else if(view==="results"&&answered().length){o=top.includes(m.i)?1:.45;if(top.includes(m.i))r=12;}
-    if(s===m.i){r=14;o=1;}
-    c.setAttribute("fill",f);c.setAttribute("opacity",o);c.setAttribute("r",r);c.setAttribute("stroke",top.includes(m.i)||s===m.i?"var(--ink)":"none");c.setAttribute("stroke-width",3);});
-  $("plabs").style.opacity=q?.25:1;
-  const lab=[...new Set([...top.slice(0,3),...(s!=null?[s]:[])])].map(i=>M.find(m=>m.i===i));
-  $("mlabs").innerHTML=lab.map(m=>`<text class="mlab" x="${sx(m.x)+16}" y="${sy(m.y)+8}">${esc(m.n)}</text>`).join("");
-  const z=placeYou();
-  $("legend").innerHTML=q?`<span><i style="background:var(--yes)"></i>Said they support</span><span><i style="background:var(--no)"></i>Said they oppose</span><span><i style="background:var(--line)"></i>No clear position</span><span>${M.filter(m=>m.positions[q.k]&&Math.abs(m.positions[q.k].s)>0.2).length} MPs took a side</span>`
-    :`<span>Each dot is an MP, placed by what they said in Parliament. Nearby MPs said similar things.</span><span><button class="link" data-go="how">How the map is made</button></span>`;}
+// ---------- the map: one 3D scene; 2D is the same scene seen straight on ----------
+const cv=$("map"),cx=cv.getContext("2d");
+const rng=a=>{const s=[...a].sort((x,y)=>x-y);return[s[Math.floor(s.length*.01)],s[Math.ceil(s.length*.99)-1]];};
+const R3=["x","y","z"].map(a=>rng(M.map(m=>m[a])));
+const nrm=(v,i)=>((v-R3[i][0])/(R3[i][1]-R3[i][0]))*2-1;
+const pts=M.map(m=>({m,p:[nrm(m.x,0),nrm(m.y,1),nrm(m.z,2)]}));
+let cam={yaw:0,pitch:0},goal={yaw:0,pitch:0},dim=2,you=[0,0,0],youGoal=[0,0,0],halo=1,haloGoal=1,dirty=true,W0=0,H0=0;
+let drag=null,spunByUser=false;
+function size(){const r=cv.getBoundingClientRect(),d=devicePixelRatio||1;W0=r.width;H0=Math.min(r.width*.78,innerWidth<=860?innerHeight*.42:innerHeight*.72);cv.style.height=H0+"px";cv.width=W0*d;cv.height=H0*d;cx.setTransform(d,0,0,d,0,0);dirty=true;}
+function proj(p){const[x,y,z]=p,cy=Math.cos(cam.yaw),sy=Math.sin(cam.yaw),cp=Math.cos(cam.pitch),sp=Math.sin(cam.pitch);
+  const x1=x*cy+z*sy,z1=-x*sy+z*cy,y1=y*cp-z1*sp,z2=y*sp+z1*cp,f=dim===3?3.2/(3.2-z2):1,s=Math.min(W0*.42,H0*.56)*(dim===3?.8:1);
+  return[W0/2+x1*s*f*(dim===3?1:W0*.44/s),H0/2-y1*s*f*(dim===3?1:H0*.42/s),z2,f];}
+const endLab=(a,sgn)=>SP[a][sgn].slice(0,2).map(k=>byK[k].short).join(", ");
+function outlined(t,x,y,col){cx.strokeText(t,x,y);cx.fillStyle=col;cx.fillText(t,x,y);}
+function draw(){cx.clearRect(0,0,W0,H0);const q=cur(),top=view==="results"&&sel==null?ranked().slice(0,5).map(x=>x.m.i):[];
+  // axes, each end labelled with the proposals that pull MPs that way
+  cx.lineWidth=1;cx.font="12px 'Source Sans 3',sans-serif";cx.lineJoin="round";
+  [["x",[1,0,0]],["y",[0,1,0]],["z",[0,0,1]]].forEach(([a,v])=>{const A=proj(v.map(t=>t*1.05)),B=proj(v.map(t=>-t*1.05));if(Math.hypot(A[0]-B[0],A[1]-B[1])<30)return;
+    cx.strokeStyle="#2c5145";cx.beginPath();cx.moveTo(A[0],A[1]);cx.lineTo(B[0],B[1]);cx.stroke();
+    const lab=(P0,t)=>{cx.textAlign=P0[0]>W0*.66?"right":P0[0]<W0*.34?"left":"center";const X=Math.max(4,Math.min(W0-4,P0[0])),Y=Math.max(13,Math.min(H0-5,P0[1]+(P0[1]>H0/2?13:-5)));cx.lineWidth=3;cx.strokeStyle="#143a30";outlined(t,X,Y,"#a7b8ae");};
+    lab(A,endLab(a,"pos"));lab(B,endLab(a,"neg"));});
+  // dots, far to near
+  const L=pts.map(o=>({...o,r:proj(o.p)})).sort((a,b)=>a.r[2]-b.r[2]);
+  L.forEach(o=>{const m=o.m;let f=m.c,a=1,rad=3.4;
+    if(q){const pos=m.positions[q.k];if(pos&&Math.abs(pos.s)>.2){f=pos.s>0?"#8fd694":"#e58e7a";rad=4.2;}else a=.12;}
+    else if(top.length){a=top.includes(m.i)?1:.4;if(top.includes(m.i))rad=6;}
+    if(sel===m.i){rad=7.5;a=1;}
+    rad*=o.r[3];cx.globalAlpha=a*(dim===3?Math.max(.45,Math.min(1,.8+o.r[2]*.25)):1);cx.fillStyle=f;cx.beginPath();cx.arc(o.r[0],o.r[1],rad,0,7);cx.fill();
+    if(top.includes(m.i)||sel===m.i){cx.strokeStyle="#efece0";cx.lineWidth=1.5;cx.stroke();}});
+  cx.globalAlpha=1;
+  // party names
+  cx.font="700 15px 'Bricolage Grotesque',sans-serif";cx.textAlign="center";cx.lineWidth=4;cx.strokeStyle="#143a30";
+  SP.parties.filter(p=>p.n>=4&&p.p!=="Ind").forEach(p=>{const r=proj([nrm(p.x,0),nrm(p.y,1),nrm(p.z,2)]);cx.globalAlpha=q?.3:.8;outlined(p.p,r[0],r[1],"#efece0");});
+  cx.globalAlpha=1;
+  // you, with a dashed circle for how unsure your spot still is
+  const Y=proj(you);cx.fillStyle="rgba(217,180,95,.13)";cx.strokeStyle="rgba(217,180,95,.55)";cx.setLineDash([4,4]);cx.lineWidth=1.2;cx.beginPath();cx.arc(Y[0],Y[1],Math.max(12,halo*Math.min(W0,H0)*.42*Y[3]),0,7);cx.fill();cx.stroke();cx.setLineDash([]);
+  cx.fillStyle="#d9b45f";cx.strokeStyle="#0a211b";cx.lineWidth=3;cx.beginPath();cx.arc(Y[0],Y[1],8,0,7);cx.fill();cx.stroke();
+  cx.font="700 16px 'Bricolage Grotesque',sans-serif";cx.lineWidth=4;cx.strokeStyle="#143a30";outlined("You",Y[0],Y[1]-14,"#d9b45f");
+  // names of your closest matches, or the MP you opened
+  cx.font="600 12.5px 'Source Sans 3',sans-serif";cx.textAlign="left";cx.lineWidth=3.5;
+  [...new Set([...top.slice(0,3),...(sel!=null?[sel]:[])])].forEach(i=>{const o=L.find(o=>o.m.i===i);outlined(o.m.n,o.r[0]+9,o.r[1]+4,"#efece0");});
+  cv._L=L;}
+function tick(){let moving=false;
+  for(const a of["yaw","pitch"]){const d=goal[a]-cam[a];if(Math.abs(d)>.001){cam[a]+=d*.12;moving=true;}else cam[a]=goal[a];}
+  for(let i=0;i<3;i++){const d=youGoal[i]-you[i];if(Math.abs(d)>.002){you[i]+=d*.12;moving=true;}else you[i]=youGoal[i];}
+  if(Math.abs(haloGoal-halo)>.002){halo+=(haloGoal-halo)*.12;moving=true;}
+  if(dim===3&&!drag&&!spunByUser){goal.yaw+=.003;moving=true;}
+  if(moving||dirty){draw();dirty=false;}requestAnimationFrame(tick);}
+// in 3D, drag to turn the space; a click without dragging opens an MP
+cv.addEventListener("pointerdown",e=>{drag={x:e.clientX,y:e.clientY,yaw:goal.yaw,pitch:goal.pitch,moved:0};if(dim===3)cv.setPointerCapture(e.pointerId);});
+cv.addEventListener("pointermove",e=>{if(drag&&dim===3){const dx=e.clientX-drag.x,dy=e.clientY-drag.y;drag.moved=Math.max(drag.moved,Math.abs(dx)+Math.abs(dy));if(drag.moved>4){spunByUser=true;$("tip").style.display="none";goal.yaw=cam.yaw=drag.yaw+dx*.008;goal.pitch=cam.pitch=Math.max(-1.3,Math.min(1.3,drag.pitch-dy*.008));dirty=true;return;}}
+  const o=hit(e),t=$("tip");if(!o){t.style.display="none";return;}const m=o.m,q=cur(),pos=q&&m.positions[q.k];
+  t.innerHTML=`<b>${esc(m.n)}</b> · ${esc(m.p)}${pos?`<br>${pos.s>.2?"Said they support this":pos.s<-.2?"Said they oppose this":"Mixed on this"}`:""}`;t.style.display="block";t.style.left=Math.min(e.clientX+12,innerWidth-270)+"px";t.style.top=(e.clientY+14)+"px";});
+cv.addEventListener("pointerup",e=>{const was=drag;drag=null;if(!was||was.moved>4)return;const o=hit(e);if(o){sel=o.m.i;view="results";render();if(innerWidth<=860)$("panel").scrollIntoView({behavior:"smooth"});}});
+cv.addEventListener("pointerleave",()=>{$("tip").style.display="none";});
+function hit(e){const r=cv.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;let b=null,bd=100;(cv._L||[]).forEach(o=>{if(cur()&&!o.m.positions[cur().k])return;const d=(o.r[0]-x)**2+(o.r[1]-y)**2;if(d<bd){bd=d;b=o;}});return b;}
+function setDim(d){dim=d;spunByUser=false;goal=d===3?{yaw:-.65,pitch:.32}:{yaw:0,pitch:0};cv.classList.toggle("orbit",d===3);document.querySelectorAll("[data-dim]").forEach(b=>b.setAttribute("aria-pressed",String(+b.dataset.dim===d)));
+  $("hint").textContent=d===3?"Drag to turn it":"";dirty=true;}
+
+// Where you sit: the same Gaussian update used to place MPs, from your answers, weighted by how much each subject matters to you
+function inv(A){const K=A.length,a=A.map(r=>r.slice()),I=a.map((r,i)=>r.map((_,j)=>+(i===j)));
+  for(let c=0;c<K;c++){let p=c;for(let r=c+1;r<K;r++)if(Math.abs(a[r][c])>Math.abs(a[p][c]))p=r;[a[c],a[p]]=[a[p],a[c]];[I[c],I[p]]=[I[p],I[c]];const d=a[c][c];for(let j=0;j<K;j++){a[c][j]/=d;I[c][j]/=d;}
+    for(let r=0;r<K;r++)if(r!==c){const f=a[r][c];for(let j=0;j<K;j++){a[r][j]-=f*a[c][j];I[r][j]-=f*I[c][j];}}}return I;}
+function placeYou(){const K=3,Pi=inv(SP.prior),A=Pi.map(r=>r.slice()),b=Pi.map(r=>r.reduce((s,v,j)=>s+v*SP.m0[j],0));
+  answered().forEach(p=>{const j=SP.keys.indexOf(p.k);if(j<0)return;const w=SP.W[j],c=wt(p.k)/SP.s2,r=(+ans[p.k]-SP.mu[j])*c;for(let a=0;a<K;a++){b[a]+=w[a]*r;for(let d=0;d<K;d++)A[a][d]+=w[a]*w[d]*c;}});
+  const C=inv(A),z=C.map(r=>r.reduce((s,v,j)=>s+v*b[j],0));
+  youGoal=z.map((v,i)=>Math.max(-1.1,Math.min(1.1,nrm(v,i))));
+  haloGoal=Math.sqrt((C[0][0]/((R3[0][1]-R3[0][0])/2)**2+C[1][1]/((R3[1][1]-R3[1][0])/2)**2)/2);return z;}
+function paint(){placeYou();dirty=true;const q=cur();
+  $("legend").innerHTML=q?`<span><i style="background:var(--yes)"></i>Said they support</span><span><i style="background:var(--no)"></i>Said they oppose</span><span>${M.filter(m=>m.positions[q.k]&&Math.abs(m.positions[q.k].s)>.2).length} MPs took a side; the rest are faded</span>`
+    :`<span>Each dot is an MP, placed by what they said in Parliament. MPs near each other said similar things. Click one to read their words.</span>`;}
 
 // ---------- matching ----------
-function compare(m){let agree=0,disagree=0,shared=0;answered().forEach(p=>{const pos=m.positions[p.k];if(!pos||Math.abs(pos.s)<=0.2)return;shared++;if(Math.sign(+ans[p.k])===Math.sign(pos.s))agree++;else disagree++;});return{agree,disagree,shared};}
-function ranked(){const done=answered().length,min=Math.min(2,done);return M.map(m=>({m,...compare(m)})).filter(x=>x.shared>=min&&x.shared>0).sort((a,b)=>(b.agree-b.disagree)/b.shared-(a.agree-a.disagree)/a.shared||b.shared-a.shared);}
-const side=s=>s>0.2?["yes","Supports"]:s<-0.2?["no","Opposes"]:["none","Mixed"];
+function compare(m){let agree=0,disagree=0,shared=0,wa=0,ws=0;answered().forEach(p=>{const pos=m.positions[p.k];if(!pos||Math.abs(pos.s)<=.2)return;const w=wt(p.k);shared++;ws+=w;if(Math.sign(+ans[p.k])===Math.sign(pos.s)){agree++;wa+=w;}else{disagree++;wa-=w;}});return{agree,disagree,shared,score:ws?wa/ws:0};}
+function ranked(){const min=Math.min(2,answered().length);return M.map(m=>({m,...compare(m)})).filter(x=>x.shared>=min&&x.shared>0).sort((a,b)=>b.score-a.score||b.shared-a.shared);}
+const side=s=>s>.2?["yes","Supports"]:s<-.2?["no","Opposes"]:["none","Mixed"];
 
 // ---------- the panel ----------
 const CH=[["1","Support","y"],["-1","Oppose","n"],["0.5","Support, with conditions","y"],["u","Not sure / skip",""]];
+const IMP=[["0","Not much"],["1","Some"],["2","A lot"]];
+function coreQueue(){return SB.filter(S=>wt(S.k)>0).sort((a,b)=>wt(b.k)-wt(a.k)).flatMap(S=>S.proposals.filter(p=>p.core).map(p=>byK[p.k]));}
 function render(){const R=$("panel");
   if(view==="intro"){const n=answered().length;
-    R.innerHTML=`<p class="big">Answer ${P.length} questions MPs actually argue about. You'll appear on the map among ${M.length} MPs, placed the same way they are.</p>
-    <p class="meta">Every MP on the map is placed only by what they said in debates, read by an AI model and checked against hand labels, real votes and Wikipedia. As you answer, watch which MPs took each side and where you move.</p>
-    <p class="meta">${SB.map(S=>esc(S.title)).join(" · ")}</p>
-    <div class="row"><button class="btn" data-go="quiz">${n?"Carry on":"Start"}</button>${n?`<button class="link" data-go="results">See where I am (${n} answered)</button>`:`<span class="meta">About 3 minutes. Skip anything.</span>`}</div>`;}
-  else if(view==="quiz"){const p=P[qi],S=p.s,inS=S.proposals.findIndex(x=>x.k===p.k);const ms=M.filter(m=>m.positions[p.k]),y=ms.filter(m=>m.positions[p.k].s>0.2).length,no=ms.filter(m=>m.positions[p.k].s<-0.2).length;
-    R.innerHTML=`<div class="row"><span class="chip">${esc(S.title)} · ${inS+1} of ${S.proposals.length}</span><span class="meta">${qi+1} of ${P.length}</span></div><div class="prog"><i style="width:${(qi+1)/P.length*100}%"></i></div>
+    R.innerHTML=`<p class="big">See where you sit among ${M.length} MPs, judged by what they actually said in Parliament.</p>
+    <p class="meta">Tell us which issues matter to you, answer a few questions, and you'll appear on the map. As you answer, watch which MPs took each side and where you move.</p>
+    <div class="row"><button class="btn" data-go="matter">${n?"Carry on":"Start"}</button>${n?`<button class="link" data-go="results">See where I am</button>`:`<span class="meta">About a minute.</span>`}</div>`;}
+  else if(view==="matter"){const n=coreQueue().length;
+    R.innerHTML=`<p class="big">Which of these matter to you?</p><p class="meta">We'll only ask about the ones that do, and the ones that matter a lot count for more.</p>
+    <div class="mat">${SB.map(S=>`<span>${esc(S.title)}</span><div class="seg" role="group" aria-label="${esc(S.title)}">${IMP.map(([v,l])=>`<button data-imp="${S.k}" data-v="${v}" aria-pressed="${String(wt(S.k))===v}">${l}</button>`).join("")}</div>`).join("")}</div>
+    <div class="row"><button class="btn" data-go="core" ${n?"":"disabled"}>${n?`Continue: ${n} question${n>1?"s":""}`:"Pick at least one"}</button></div>`;}
+  else if(view==="quiz"){const p=Q[qi],S=p.s,ms=M.filter(m=>m.positions[p.k]),y=ms.filter(m=>m.positions[p.k].s>.2).length,no=ms.filter(m=>m.positions[p.k].s<-.2).length;
+    R.innerHTML=`<div class="row"><span class="chip">${esc(S.title)}</span><span class="meta">${qi+1} of ${Q.length}</span></div><div class="prog"><i style="width:${(qi+1)/Q.length*100}%"></i></div>
     <p class="big">${esc(p.label)}</p>
     <div class="choices" role="group" aria-label="Your answer">${CH.map(([v,l,c])=>`<button class="ch ${c}" data-a="${v}" aria-pressed="${ans[p.k]===v}">${l}</button>`).join("")}</div>
-    <div><div class="split"><i style="width:${y/(y+no||1)*100}%;background:var(--yes)"></i><i style="width:${no/(y+no||1)*100}%;background:var(--no)"></i></div><p class="meta" style="margin-top:4px">${y} MPs said they support it, ${no} said they oppose it. Lit up on the map.</p></div>
-    <div class="row"><span>${qi?`<button class="link" data-go="prev">← Back</button>`:""}</span><span>${inS<S.proposals.length-1?`<button class="link" data-go="skipsub">Skip ${esc(S.title)}</button> · `:""}<button class="link" data-go="results">See where I am${answered().length?` (${answered().length})`:""}</button></span></div>`;}
-  else if(sel!=null){const m=M.find(x=>x.i===sel);const cmp=compare(m);
-    R.innerHTML=`<p><button class="link" data-go="results">← Back to your results</button></p><div><h2>${esc(m.n)}</h2><p class="meta">${esc(m.pn)}${m.k?", "+esc(m.k):""}</p></div>
-      ${answered().length?`<p class="meta">Where you both have a position: agree on ${cmp.agree}, disagree on ${cmp.disagree}. No evidence isn't the same as neutral.</p>`:""}
-      ${SB.filter(S=>S.proposals.some(p=>m.positions[p.k])).map(S=>`<h3 style="margin-top:4px">${esc(S.title)}</h3>`+S.proposals.filter(p=>m.positions[p.k]).map(p=>{const pos=m.positions[p.k];const [cls,word]=side(pos.s);const mine=ans[p.k];
-        return `<div><p style="font-weight:600">${esc(p.label)}</p><p><span class="tag ${cls}">${word}</span><span class="meta">${pos.n} passage${pos.n>1?"s":""}, ${pos.debates} debate${pos.debates>1?"s":""}${pos.minister?", some as a minister":""}${mine&&mine!=="u"?` · you ${+mine>0?"support":"oppose"} it`:""}</span></p>${pos.ev.slice(0,2).map(e=>`<div class="ev ${e.side>0?"yes":"no"}"><p style="font-size:14px">${esc(e.t)}</p><p class="meta">${esc(e.d)}</p></div>`).join("")}</div>`;}).join("")).join("")}`;}
+    <div><div class="split"><i style="width:${y/(y+no||1)*100}%;background:var(--yes)"></i><i style="width:${no/(y+no||1)*100}%;background:var(--no)"></i></div><p class="meta" style="margin-top:4px">${y} MPs said they support it, ${no} said they oppose it.</p></div>
+    <div class="row"><span>${qi?`<button class="link" data-go="prev">← Back</button>`:`<button class="link" data-go="matter">← Change what matters</button>`}</span><button class="link" data-go="results">See where I am</button></div>`;}
+  else if(sel!=null){const m=M.find(x=>x.i===sel),cmp=compare(m);
+    R.innerHTML=`<p><button class="link" data-go="results">← Back</button></p><div><h2>${esc(m.n)}</h2><p class="meta">${esc(m.pn)}${m.k?", "+esc(m.k):""}</p></div>
+      ${answered().length?`<p class="meta">Where you both have a position: agree on ${cmp.agree}, disagree on ${cmp.disagree}. Not speaking on something isn't the same as being neutral.</p>`:""}
+      ${SB.filter(S=>S.proposals.some(p=>m.positions[p.k])).map(S=>`<h3 style="margin-top:4px">${esc(S.title)}</h3>`+S.proposals.filter(p=>m.positions[p.k]).map(p=>{const pos=m.positions[p.k],[cls,word]=side(pos.s),mine=ans[p.k];
+        return `<div><p style="font-weight:600">${esc(p.label)}</p><p><span class="tag ${cls}">${word}</span><span class="meta">${pos.debates} debate${pos.debates>1?"s":""}${pos.minister?", some as a minister":""}${mine&&mine!=="u"?` · you ${+mine>0?"support":"oppose"} it`:""}</span></p>${pos.ev.slice(0,2).map(e=>`<div class="ev ${e.side>0?"yes":"no"}"><p style="font-size:14px">${esc(e.t)}</p><p class="meta">${esc(e.d)}</p></div>`).join("")}</div>`;}).join("")).join("")}`;}
   else{const done=answered();
-    if(!done.length){R.innerHTML=`<p class="big">You haven't taken a side yet, so you're sitting in the middle.</p><div class="row"><button class="btn" data-go="quiz">Start the questions</button></div>`;paint();return;}
+    if(!done.length){R.innerHTML=`<p class="big">You haven't taken a side yet, so you're sitting in the middle.</p><div class="row"><button class="btn" data-go="matter">Start</button></div>`;paint();return;}
     const rk=ranked(),z=placeYou(),full=a=>(M.find(m=>m.p===a)||{}).pn||a;
-    const near=SP.parties.filter(p=>p.n>=4&&p.p!=="Ind").map(p=>({...p,d:Math.hypot(p.x-z[0],p.y-z[1])})).sort((a,b)=>a.d-b.d);
+    const near=SP.parties.filter(p=>p.n>=4&&p.p!=="Ind").map(p=>({...p,d:Math.hypot(p.x-z[0],p.y-z[1],p.z-z[2])})).sort((a,b)=>a.d-b.d);
     const parties={};M.forEach(m=>{const c=compare(m);if(!c.shared||!m.p)return;const o=parties[m.p]=parties[m.p]||{a:0,s:0,c:m.c};o.a+=c.agree;o.s+=c.shared;});
     const plist=Object.entries(parties).filter(([p,o])=>o.s>=8).sort((a,b)=>b[1].a/b[1].s-a[1].a/a[1].s);
+    const extra=SB.filter(S=>wt(S.k)>0&&S.proposals.some(p=>ans[p.k]==null));
     const row=x=>`<button class="mp" data-mp="${x.m.i}"><i style="background:${x.m.c}"></i><span class="nm">${esc(x.m.n)} <span class="meta">${esc(x.m.p)}</span></span><b>${x.agree} of ${x.shared}</b><small>agree on ${x.agree}, disagree on ${x.disagree}</small></button>`;
-    R.innerHTML=`<p class="big">On the map you sit closest to ${esc(full(near[0].p))} MPs${near[1]&&near[1].d<near[0].d*1.3?`, with ${esc(full(near[1].p))} not far off`:""}.</p>
-    <p class="meta">From ${done.length} answer${done.length>1?"s":""}. ${done.length<8?"The dashed circle is how unsure your spot still is; more answers shrink it. ":""}The lists below compare you directly with what each MP said, not by distance on the map.</p>
-    <div><h3>Parties, by share of positions that match yours</h3>${plist.map(([p,o])=>`<div class="party"><span>${esc(p)}</span><div class="bar"><i style="width:${Math.round(o.a/o.s*100)}%;background:${o.c}"></i></div><span class="meta num">${o.a} of ${o.s}</span></div>`).join("")}</div>
+    R.innerHTML=`<p class="big">You sit closest to ${esc(full(near[0].p))} MPs${near[1]&&near[1].d<near[0].d*1.3?`, with ${esc(full(near[1].p))} not far off`:""}.</p>
+    <p class="meta">From ${done.length} answer${done.length>1?"s":""}. The dashed circle shows how sure that is; more answers shrink it.</p>
+    ${extra.length?`<div><h3>Sharpen it: more questions on</h3><div class="more">${extra.map(S=>`<button data-more="${S.k}">${esc(S.title)} (${S.proposals.filter(p=>ans[p.k]==null).length})</button>`).join("")}</div></div>`:""}
     <div><h3>MPs who most often said what you'd say</h3>${rk.slice(0,6).map(row).join("")}</div>
+    <div><h3>Parties, by share of positions that match yours</h3>${plist.map(([p,o])=>`<div class="party"><span>${esc(p)}</span><div class="bar"><i style="width:${Math.round(o.a/o.s*100)}%;background:${o.c}"></i></div><span class="meta num">${o.a} of ${o.s}</span></div>`).join("")}</div>
     <div><h3>MPs who most often said the opposite</h3>${rk.slice(-4).reverse().map(row).join("")}</div>
-    <div><h3>Your answers</h3>${P.filter(p=>ans[p.k]!=null).map(p=>`<button class="ans" data-q="${P.indexOf(p)}"><span>${esc(p.label)}</span><span class="meta">${({"1":"Support","-1":"Oppose","0.5":"With conditions","u":"Skipped"})[ans[p.k]]}</span></button>`).join("")}</div>
-    <div class="row"><button class="link" data-go="quiz">Go back through the questions</button><button class="link" data-go="reset">Start again</button></div>`;}
+    <details><summary class="meta" style="cursor:pointer">Your answers</summary>${P.filter(p=>ans[p.k]!=null).map(p=>`<button class="ans" data-q="${p.k}"><span>${esc(p.label)}</span><span class="meta">${({"1":"Support","-1":"Oppose","0.5":"With conditions","u":"Skipped"})[ans[p.k]]}</span></button>`).join("")}</details>
+    <div class="row"><button class="link" data-go="matter">Change what matters</button><button class="link" data-go="reset">Start again</button></div>`;}
   paint();}
-function next(){qi++;if(qi>=P.length){qi=P.length-1;view="results";}render();}
-document.addEventListener("click",e=>{const b=e.target.closest("button,.dot");if(!b)return;const g=b.dataset.go;
-  if(b.dataset.a!=null){const k=P[qi].k;ans[k]=b.dataset.a;save();paint();setTimeout(next,450);document.querySelectorAll(".ch").forEach(x=>x.setAttribute("aria-pressed",x===b));}
+function next(){qi++;if(qi>=Q.length){view="results";qi=Q.length-1;}render();}
+document.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;const g=b.dataset.go;
+  if(b.dataset.dim){setDim(+b.dataset.dim);}
+  else if(b.dataset.a!=null){ans[Q[qi].k]=b.dataset.a;save();document.querySelectorAll(".ch").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));paint();setTimeout(next,450);}
+  else if(b.dataset.imp){imp[b.dataset.imp]=b.dataset.v;save();render();}
   else if(b.dataset.mp){sel=+b.dataset.mp;view="results";render();if(innerWidth<=860)$("panel").scrollIntoView({behavior:"smooth"});}
-  else if(b.dataset.q!=null){qi=+b.dataset.q;view="quiz";sel=null;render();}
-  else if(g==="quiz"){const f=P.findIndex(p=>ans[p.k]==null);qi=f<0?0:f;view="quiz";sel=null;render();}
+  else if(b.dataset.q){Q=[byK[b.dataset.q]];qi=0;view="quiz";sel=null;render();}
+  else if(b.dataset.more){Q=P.filter(p=>p.s.k===b.dataset.more&&ans[p.k]==null);qi=0;view="quiz";render();}
+  else if(g==="matter"){view="matter";sel=null;render();}
+  else if(g==="core"){Q=coreQueue();const f=Q.findIndex(p=>ans[p.k]==null);qi=f<0?0:f;view="quiz";render();}
   else if(g==="prev"){qi=Math.max(0,qi-1);render();}
-  else if(g==="skipsub"){const S=P[qi].s;qi=P.findIndex(p=>p.s===S)+S.proposals.length-1;next();}
   else if(g==="results"){view="results";sel=null;render();}
-  else if(g==="reset"){ans={};save();qi=0;view="intro";sel=null;render();}
-  else if(g==="checks"||g==="how")$(g==="how"?"how":"checks").scrollIntoView({behavior:"smooth"});});
-document.addEventListener("keydown",e=>{if(view!=="quiz"||e.target.closest("input,textarea"))return;const m={"1":0,"2":1,"3":2,"4":3}[e.key];if(m!=null)document.querySelectorAll(".ch")[m].click();});
+  else if(g==="reset"){ans={};imp={};save();view="intro";sel=null;render();}
+  else if(g==="checks")$("checks").scrollIntoView({behavior:"smooth"});});
+document.addEventListener("keydown",e=>{if(view!=="quiz")return;const m={"1":0,"2":1,"3":2,"4":3}[e.key];if(m!=null)document.querySelectorAll(".ch")[m].click();});
 
-// ---------- the checks ----------
-const pct=v=>v==null?"–":v+"%";
-const end=(ks,w)=>ks.map(k=>esc(short(k).replace(/\s*\(.*?\)/,""))).join("; ");
-$("checks").innerHTML=`<h2>Does it actually work?</h2>
-<p class="meta">Every subject was checked the same way before anything was shown. Hand labels were made on held-out passages before the model scored them. Votes and Wikipedia were never used to place anyone; they are only used here as outside checks.</p>
-<div class="scroll"><table><thead><tr><th>Subject</th><th class="num">Hand labels</th><th class="num">Agree with hand label</th><th class="num">Wrong way round</th><th class="num">Missed a clear position</th><th class="num">Invented a position</th><th class="num">Flip when one debate removed</th><th class="num">MPs placed</th></tr></thead><tbody>
-${SB.map(S=>{const K=S.checks;return `<tr><td>${esc(S.title)}</td><td class="num">${K.labels}</td><td class="num">${pct(K.exact)}</td><td class="num">${pct(K.wrong)}</td><td class="num">${pct(K.missed)}</td><td class="num">${pct(K.invented)}</td><td class="num">${pct(K.flip)}</td><td class="num">${K.mps}</td></tr>`;}).join("")}
+// ---------- research build only: the checks, kept out of the public app ----------
+if(D.research){const pct=v=>v==null?"–":v+"%",K=$("checks");K.hidden=false;$("hdr").innerHTML=`Research build · <button class="link" data-go="checks">Checks</button>`;
+K.innerHTML=`<h2>Checks (research build only)</h2>
+<div class="scroll"><table><thead><tr><th>Subject</th><th class="num">Hand labels</th><th class="num">Agree with hand label</th><th class="num">Wrong way round</th><th class="num">Missed</th><th class="num">Invented</th><th class="num">Flip when one debate removed</th><th class="num">MPs placed</th><th class="num">Wikipedia</th></tr></thead><tbody>
+${SB.map(S=>{const C=S.checks;return `<tr><td>${esc(S.title)}</td><td class="num">${C.labels}</td><td class="num">${pct(C.exact)}</td><td class="num">${pct(C.wrong)}</td><td class="num">${pct(C.missed)}</td><td class="num">${pct(C.invented)}</td><td class="num">${pct(C.flip)}</td><td class="num">${C.mps}</td><td class="num">${C.wiki_n?C.wiki+"% of "+C.wiki_n:"–"}</td></tr>`;}).join("")}
 </tbody></table></div>
-<h3 style="margin-top:6px">Speeches against real votes</h3>
-<p class="meta">Most votes follow the party whip, so guessing each MP's party line is a hard baseline to beat. The column that matters most is the last one: MPs who voted against their own party, and whether their speeches had already said so.</p>
-<div class="scroll"><table><thead><tr><th>Proposal</th><th>Division</th><th class="num">MPs with both</th><th class="num">Speech matches vote</th><th class="num">Guessing the majority</th><th class="num">Guessing party line</th><th class="num">Voted against party: speech predicted it</th></tr></thead><tbody>
-${SB.flatMap(S=>(S.checks.votes||[]).map(v=>`<tr><td>${esc(short(S.k+"."+v.proposal))}</td><td>${esc(v.title)} <span class="meta">${esc(v.date)}</span></td><td class="num">${v.n}</td><td class="num">${v.match}%</td><td class="num">${v.base}%</td><td class="num">${v.party}%</td><td class="num">${v.rebels?`${v.rebels_match} of ${v.rebels}`:"none voted against party"}</td></tr>`)).join("")}
+<h3>Speeches against real votes</h3>
+<div class="scroll"><table><thead><tr><th>Proposal</th><th>Division</th><th class="num">MPs</th><th class="num">Speech = vote</th><th class="num">Majority guess</th><th class="num">Party-line guess</th><th class="num">Rebels predicted</th></tr></thead><tbody>
+${SB.flatMap(S=>(S.checks.votes||[]).map(v=>`<tr><td>${esc(byK[S.k+"."+v.proposal].short)}</td><td>${esc(v.title)} <span class="meta">${esc(v.date)}</span></td><td class="num">${v.n}</td><td class="num">${v.match}%</td><td class="num">${v.base}%</td><td class="num">${v.party}%</td><td class="num">${v.rebels?`${v.rebels_match} of ${v.rebels}`:"–"}</td></tr>`)).join("")}
 </tbody></table></div>
-${SB.some(S=>S.checks.wiki_n)?`<h3 style="margin-top:6px">Positions against Wikipedia, where an MP's article states one</h3><div class="check">${SB.filter(S=>S.checks.wiki_n).map(S=>`<span>${esc(S.title)} (${S.checks.wiki_n} comparisons)</span><b>${S.checks.wiki}%</b>`).join("")}</div>`:""}
-<h3 style="margin-top:6px" id="how">How the map is made</h3>
-<p class="meta">Each MP's positions on the ${P.length} proposals form a row. Most MPs only spoke on a few, so the gaps are first filled from their party, and two axes are fitted that capture ${Math.round(SP.share*100)}% of the variation in the filled-in table. Then every MP, and you, is placed by the same rule from the positions actually stated: with little evidence you stay near the starting point (your party's centre for an MP, the middle for you), and each clear position pulls you along the axes. So MPs who said little sit close to their party, and the map leans on party for them.</p>
-<p class="meta">Right of the map leans toward supporting: ${end(SP.x.pos)}. Left leans toward: ${end(SP.x.neg)}.<br>Top leans toward: ${end(SP.y.pos)}. Bottom leans toward: ${end(SP.y.neg)}.</p>
-<p class="meta">How positions were read: proposals were chosen by a person, then passages discussing each were found by search, cut to the sentences around the match, and read by a small AI model (TypeSafe's Jev) that answers whether the speaker supports or opposes it. Many positions rest on a single debate, and a minister's words may reflect government policy rather than their own view.</p>`;
-drawMap();render();
+<h3>The map</h3>
+<p class="meta">Three axes fitted to party-filled positions, ${Math.round(SP.share*100)}% of variation; residual noise ${SP.s2}. MPs placed from their own positions with their party's centre as the prior; you with the population centre as the prior, each answer weighted by how much its subject matters (0, 1, 2).</p>
+<p class="meta">x+ ${endLab("x","pos")} · x− ${endLab("x","neg")}<br>y+ ${endLab("y","pos")} · y− ${endLab("y","neg")}<br>z+ ${endLab("z","pos")} · z− ${endLab("z","neg")}</p>
+<p class="meta">Core questions: ${P.filter(p=>p.core).map(p=>esc(p.short)).join(", ")}.</p>`;}
+
+addEventListener("resize",size);size();setDim(2);render();requestAnimationFrame(tick);
 </script>
 </body>
 </html>
