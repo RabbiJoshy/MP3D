@@ -53,6 +53,14 @@ th{color:var(--dim);font-weight:600}
 .tab[aria-selected=true]{background:var(--ink);color:var(--bench);border-color:var(--ink)}
 .tab small{font-weight:400;opacity:.75;margin-left:4px}
 .scroll{overflow-x:auto}
+.tabs{position:sticky;top:0;z-index:2;background:var(--bench);padding:8px 0}
+.subj{display:flex;flex-direction:column;padding:14px 0 6px;border-top:2px solid var(--brass);scroll-margin-top:60px}
+.subj:first-child{border-top:0;padding-top:0}
+.sh{font-size:21px;color:var(--brass);margin-bottom:4px}
+details summary{cursor:pointer;color:var(--dim);font-size:14px;padding:6px 0}
+#results{position:sticky;top:56px;max-height:calc(100vh - 70px);overflow:auto}
+.mtab{display:none}
+@media (max-width:860px){#results{position:static;max-height:none;scroll-margin-top:60px}.tabs{flex-wrap:nowrap;overflow-x:auto;margin:0 -16px;padding:8px 16px}.tab{white-space:nowrap;flex:none}.mtab{display:inline-block;background:var(--brass);color:#14241e;border-color:var(--brass)}}
 @media (max-width:860px){.grid{grid-template-columns:1fr}h1{font-size:24px}}
 </style>
 </head>
@@ -64,8 +72,8 @@ th{color:var(--dim);font-weight:600}
   <div class="grid">
     <section class="card" aria-labelledby="yh">
       <h2 id="yh">Your positions</h2>
+      <p class="meta">Seven subjects, answer as many or as few as you like. Matches update across everything you answer.</p>
       <div id="qs"></div>
-      <div><h3>How much each concern matters to you</h3><p class="meta" style="margin-bottom:8px">These aren't sides. You can care about several at once. They're used to show which MPs raise the same concerns, not to judge agreement.</p><div id="imps" class="imp"></div></div>
     </section>
     <section class="card" aria-live="polite" id="results"></section>
   </div>
@@ -75,17 +83,17 @@ th{color:var(--dim);font-weight:600}
 const D=__DATA__;const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const SB=D.subjects,M=D.mps,P=SB.flatMap(x=>x.proposals),C=SB.flatMap(x=>x.concerns);
-const ans={},imp={};let sel=null,cur=SB[0].k;
+const ans={},imp={};let sel=null;
 const OPTS=[["1","Support"],["0.5","Support with conditions"],["-1","Oppose"],["u","Unsure"]];
 const subOf=k=>k.split(".")[0];
-function drawLeft(){const S=SB.find(x=>x.k===cur);
-  $("tabs").innerHTML=SB.map(x=>{const n=x.proposals.filter(p=>ans[p.k]&&ans[p.k]!=="u").length;return `<button class="tab" role="tab" data-s="${x.k}" aria-selected="${x.k===cur}">${esc(x.title)}${n?`<small>${n} answered</small>`:""}</button>`;}).join("");
-  $("qs").innerHTML=S.proposals.map(p=>`<div class="q"><p>${esc(p.label)}</p><div class="opts" role="group" aria-label="${esc(p.label)}">${OPTS.map(([v,l])=>`<button class="opt" data-p="${p.k}" data-v="${v}" aria-pressed="${ans[p.k]===v}">${l}</button>`).join("")}</div></div>`).join("");
-  $("imps").innerHTML=S.concerns.map(c=>`<span>${esc(c.label.charAt(0).toUpperCase()+c.label.slice(1))}</span><div class="opts">${[["0","Not much"],["1","Some"],["2","A lot"]].map(([v,l])=>`<button class="opt" data-c="${c.k}" data-v="${v}" aria-pressed="${imp[c.k]===v}">${l}</button>`).join("")}</div>`).join("");}
+function drawTabs(){$("tabs").innerHTML=`<span class="meta" style="align-self:center;white-space:nowrap">Jump to:</span>`+SB.map(x=>{const n=x.proposals.filter(p=>ans[p.k]&&ans[p.k]!=="u").length;return `<button class="tab" data-s="${x.k}">${esc(x.title)}${n?`<small>${n} answered</small>`:""}</button>`;}).join("")+`<button class="tab mtab" data-s="results">Your matches ↓</button>`;}
+function drawLeft(){drawTabs();
+  $("qs").innerHTML=SB.map(S=>`<div class="subj" id="s-${S.k}"><h2 class="sh">${esc(S.title)}</h2>${S.proposals.map(p=>`<div class="q"><p>${esc(p.label)}</p><div class="opts" role="group" aria-label="${esc(p.label)}">${OPTS.map(([v,l])=>`<button class="opt" data-p="${p.k}" data-v="${v}" aria-pressed="${ans[p.k]===v}">${l}</button>`).join("")}</div></div>`).join("")}
+    <details${S.concerns.some(c=>imp[c.k]!==undefined)?" open":""}><summary>What matters to you on ${esc(S.title.replace(/^[A-Z][a-z]/,c=>c.toLowerCase()))}? <span class="meta">(optional)</span></summary><div class="imp" style="margin-top:8px">${S.concerns.map(c=>`<span>${esc(c.label.charAt(0).toUpperCase()+c.label.slice(1))}</span><div class="opts">${[["0","Not much"],["1","Some"],["2","A lot"]].map(([v,l])=>`<button class="opt" data-c="${c.k}" data-v="${v}" aria-pressed="${imp[c.k]===v}">${l}</button>`).join("")}</div>`).join("")}</div></details></div>`).join("");}
 document.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;
-  if(b.dataset.s){cur=b.dataset.s;sel=null;drawLeft();render();}
-  else if(b.dataset.p){const k=b.dataset.p;ans[k]=ans[k]===b.dataset.v?undefined:b.dataset.v;sel=null;drawLeft();render();}
-  else if(b.dataset.c){const k=b.dataset.c;imp[k]=imp[k]===b.dataset.v?undefined:b.dataset.v;drawLeft();render();}
+  if(b.dataset.s){const el=b.dataset.s==="results"?$("results"):$("s-"+b.dataset.s);el.scrollIntoView({behavior:"smooth",block:"start"});}
+  else if(b.dataset.p){const k=b.dataset.p;ans[k]=ans[k]===b.dataset.v?undefined:b.dataset.v;document.querySelectorAll(`[data-p="${k}"]`).forEach(x=>x.setAttribute("aria-pressed",x.dataset.v===ans[k]));sel=null;drawTabs();render();}
+  else if(b.dataset.c){const k=b.dataset.c;imp[k]=imp[k]===b.dataset.v?undefined:b.dataset.v;document.querySelectorAll(`[data-c="${k}"]`).forEach(x=>x.setAttribute("aria-pressed",x.dataset.v===imp[k]));render();}
   else if(b.dataset.mp){sel=+b.dataset.mp;render();}else if(b.id==="back"){sel=null;render();}});
 const answered=()=>P.filter(p=>ans[p.k]&&ans[p.k]!=="u");
 function compare(m){let agree=0,disagree=0,shared=0,partial=0;const rows=[];answered().forEach(p=>{const mine=+ans[p.k],pos=m.positions[p.k];if(!pos)return;shared++;const theirs=pos.s;
@@ -99,9 +107,9 @@ function render(){const R=$("results");const done=answered();
     R.innerHTML=`<p><button class="link" id="back">Back to your matches</button></p><div><h2>${esc(m.n)}</h2><p class="meta">${esc(m.pn)}${m.k?", "+esc(m.k):""}</p></div>
       ${done.length?`<p class="meta">On the ${cmp.shared} proposals you both have a position on: agree on ${cmp.agree}, disagree on ${cmp.disagree}${cmp.partial?`, mixed on ${cmp.partial}`:""}. No evidence isn't the same as neutral.</p>`:""}
       ${SB.filter(S=>S.proposals.some(p=>m.positions[p.k])).map(S=>`<h2 style="margin-top:6px">${esc(S.title)}</h2>`+S.proposals.map(p=>{const pos=m.positions[p.k];if(!pos)return `<div><h3>${esc(p.label)}</h3><p class="meta">No clear position found in their speeches.</p></div>`;const [cls,word]=side(pos.s);const mine=ans[p.k];
-        return `<div><h3>${esc(p.label)}</h3><p><span class="tag ${cls}">${word}</span><span class="meta">from ${pos.n} passage${pos.n>1?"s":""} in ${pos.debates} debate${pos.debates>1?"s":""}${pos.minister?", some spoken as a minister":""}${mine&&mine!=="u"?` · you ${+mine>0?"support":"oppose"} this`:""}</span></p>${pos.ev.map(e=>`<div class="ev ${e.side>0?"yes":"no"}"><p style="font-size:14px">${esc(e.t)}</p><p class="meta">${esc(e.d)}</p></div>`).join("")}</div>`;}).join("")+(m.passages[S.k]?`<div><h3>Concerns they raise on ${esc(S.title.toLowerCase())}</h3>${S.concerns.map(c=>`<div class="party"><span style="grid-column:1/3">${esc(c.label)}</span><span class="num meta">${Math.round((m.concerns[c.k]||0)*100)}%</span></div>`).join("")}<p class="meta" style="margin-top:4px">Share of their ${m.passages[S.k]} passages on these proposals that raise each concern. Their role shapes what they say in debates.</p></div>`:"")).join("")}`;return;}
+        return `<div><h3>${esc(p.label)}</h3><p><span class="tag ${cls}">${word}</span><span class="meta">from ${pos.n} passage${pos.n>1?"s":""} in ${pos.debates} debate${pos.debates>1?"s":""}${pos.minister?", some spoken as a minister":""}${mine&&mine!=="u"?` · you ${+mine>0?"support":"oppose"} this`:""}</span></p>${pos.ev.map(e=>`<div class="ev ${e.side>0?"yes":"no"}"><p style="font-size:14px">${esc(e.t)}</p><p class="meta">${esc(e.d)}</p></div>`).join("")}</div>`;}).join("")+(m.passages[S.k]?`<div><h3>Concerns they raise: ${esc(S.title)}</h3>${S.concerns.map(c=>`<div class="party"><span style="grid-column:1/3">${esc(c.label)}</span><span class="num meta">${Math.round((m.concerns[c.k]||0)*100)}%</span></div>`).join("")}<p class="meta" style="margin-top:4px">Share of their ${m.passages[S.k]} passages on these proposals that raise each concern. Their role shapes what they say in debates.</p></div>`:"")).join("")}`;return;}
   if(!done.length){R.innerHTML=`<h2>Your matches</h2><p class="meta">Take a side on at least one proposal to see which MPs said the same in Parliament. Every match links to the passages it's based on.</p>
-    <div><h3>How MPs split on ${esc(SB.find(x=>x.k===cur).title.toLowerCase())}</h3>${SB.find(x=>x.k===cur).proposals.map(p=>{const ms=M.filter(m=>m.positions[p.k]);const y=ms.filter(m=>m.positions[p.k].s>0.2).length,n=ms.filter(m=>m.positions[p.k].s<-0.2).length;return `<div class="party" style="grid-template-columns:minmax(0,1fr) 140px"><span>${esc(p.label)}</span><span class="meta num">${y} support · ${n} oppose</span></div>`;}).join("")}</div>`;return;}
+    ${SB.map(S=>`<div><h3>How MPs split: ${esc(S.title)}</h3>${S.proposals.map(p=>{const ms=M.filter(m=>m.positions[p.k]);const y=ms.filter(m=>m.positions[p.k].s>0.2).length,n=ms.filter(m=>m.positions[p.k].s<-0.2).length;return `<div class="party" style="grid-template-columns:minmax(0,1fr) 140px"><span>${esc(p.label)}</span><span class="meta num">${y} support · ${n} oppose</span></div>`;}).join("")}</div>`).join("")}`;return;}
   const scored=M.map(m=>({m,...compare(m),cm:concernMatch(m)})).filter(x=>x.shared>0);
   const minShared=Math.min(2,done.length);
   const ranked=scored.filter(x=>x.shared>=minShared).sort((a,b)=>(b.agree-b.disagree)/b.shared-(a.agree-a.disagree)/a.shared||b.shared-a.shared||(b.cm||0)-(a.cm||0));
