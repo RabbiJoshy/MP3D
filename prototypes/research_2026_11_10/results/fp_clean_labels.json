@@ -1,0 +1,760 @@
+{
+ "model": "Qwen/Qwen3.5-4B",
+ "tokens": [
+  61141,
+  4464
+ ],
+ "usd": 0.0025,
+ "labels": [
+  {
+   "fight_id": 0,
+   "topic": "Agriculture",
+   "old": "Impose a tax on family farms",
+   "new": "Impose a tax on family farms",
+   "description": "The proposal introduces a specific tax targeting family farms to address inheritance tax avoidance loopholes.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 1,
+   "topic": "Agriculture",
+   "old": "Abolish (or reverse) the agricultural property relief and business property relief changes",
+   "new": "Raise agricultural property relief and business property relief thresholds from \u00a31 million to \u00a32.5 million",
+   "description": "The proposal increases the tax-free inheritance threshold for agricultural and business assets from \u00a31 million to \u00a32.5 million.",
+   "old_label_clear": false,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 2,
+   "topic": "Agriculture",
+   "old": "Introduce new police powers to address dog attacks on livestock",
+   "new": "Amend the Dogs (Protection of Livestock) Act 1953 to strengthen legislation against livestock worrying",
+   "description": "The proposal seeks to update the 1953 Act to better protect farmed animals from dog attacks and expand the scope of offences.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 83,
+   "topic": "Civil rights",
+   "old": "Pass legislation to legalise assisted dying",
+   "new": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "description": "The proposal seeks to enact legislation allowing terminally ill adults to request assistance in ending their lives.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 127,
+   "topic": "Culture",
+   "old": "Introduce an independent football regulator",
+   "new": "Pass the Football Governance Bill to establish an independent football regulator",
+   "description": "The proposal seeks to create a new independent body to oversee governance and regulation of English football clubs.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 129,
+   "topic": "Culture",
+   "old": "Introduce a new ownership test and licensing regime for football clubs",
+   "new": "Establish an independent football regulator with new ownership tests and licensing rules",
+   "description": "The proposal creates a new independent regulator to enforce financial rules and test club ownership.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 190,
+   "topic": "Defence",
+   "old": "Increase investment in defence spending",
+   "new": "Increase defence spending to \u00a32.6 billion in-year cuts",
+   "description": "The proposal seeks to reverse planned \u00a32.6 billion cuts to the Ministry of Defence's operating budget this year.",
+   "old_label_clear": false,
+   "same_direction": false,
+   "failed": false
+  },
+  {
+   "fight_id": 196,
+   "topic": "Defence",
+   "old": "Extend the armed forces covenant to every area of Government",
+   "new": "Enshrine the armed forces covenant into law across all areas of Government",
+   "description": "This proposal legally binds all government departments to consider the unique needs of service personnel and their families.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 270,
+   "topic": "Domestic commerce",
+   "old": "Reform the business rates system",
+   "new": "Reform the non-domestic rating system in England",
+   "description": "The proposal seeks to change how businesses in England are taxed on their properties.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 351,
+   "topic": "Education",
+   "old": "Deliver a core guarantee of high standards with space for innovation in every child's education",
+   "new": "Introduce the Children's Wellbeing and Schools Bill",
+   "description": "The proposal is to pass the Children's Wellbeing and Schools Bill to establish a core educational offer for every child.",
+   "old_label_clear": false,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 353,
+   "topic": "Education",
+   "old": "Impose fines on parents for school absence",
+   "new": "Impose fines on parents for term-time school holidays",
+   "description": "The proposal requires parents to pay penalties if they remove their children from school during approved holiday periods.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 354,
+   "topic": "Education",
+   "old": "Expand school-based nurseries",
+   "new": "Establish school-based nurseries in existing school classrooms",
+   "description": "The proposal involves converting unused space in schools into new nursery facilities to increase childcare capacity.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 360,
+   "topic": "Education",
+   "old": "Increase funding for further education colleges",
+   "new": "Increase 16-to-19 funding rates and provide additional capital for further education colleges",
+   "description": "The proposal seeks to raise per-student funding rates for 16-to-19 year olds and allocate extra capital to upgrade college infrastructure.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 361,
+   "topic": "Education",
+   "old": "Expand and strengthen apprenticeships",
+   "new": "Expand apprenticeships and technical education",
+   "description": "The proposal aims to increase the number and quality of apprenticeships and technical education programs.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 362,
+   "topic": "Education",
+   "old": "Require home-educated children to be registered with local authorities",
+   "new": "Require home-educated children to be registered with local authorities",
+   "description": "The proposal mandates that parents of home-educated children must register them with their local authority.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 364,
+   "topic": "Education",
+   "old": "Reform the Special Educational Needs and Disabilities (SEND) system",
+   "new": "Reform the Special Educational Needs and Disabilities (SEND) system",
+   "description": "The proposal seeks to overhaul the existing framework for assessing and supporting children with special educational needs and disabilities.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 367,
+   "topic": "Education",
+   "old": "Require academies to follow the national curriculum",
+   "new": "Require academies to follow the national curriculum",
+   "description": "The proposal mandates that all academies must adhere to the national curriculum requirements.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 371,
+   "topic": "Education",
+   "old": "Increase investment in mainstream and special educational needs schools",
+   "new": "Increase investment in mainstream and special educational needs schools",
+   "description": "The proposal seeks to raise funding for both mainstream and special educational needs schools to address resource shortages.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 372,
+   "topic": "Education",
+   "old": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+   "new": "Abolish the narrow knowledge-rich curriculum in favour of a holistic approach",
+   "description": "The proposal seeks to replace the current knowledge-rich curriculum with a broader, holistic educational model.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 375,
+   "topic": "Education",
+   "old": "Establish Skills England",
+   "new": "Establish Skills England as an independent executive agency",
+   "description": "The proposal creates a new independent executive agency named Skills England to oversee technical education and apprenticeships.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 382,
+   "topic": "Education",
+   "old": "Cut funding for the International Baccalaureate (IB)",
+   "new": "Cut funding for the International Baccalaureate in state schools",
+   "description": "The proposal seeks to reduce government financial support for state schools offering the International Baccalaureate qualification.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 389,
+   "topic": "Education",
+   "old": "Abolish the EBacc",
+   "new": "Abolish the English Baccalaureate (EBacc) performance measure",
+   "description": "The proposal seeks to remove the EBacc metric used to assess secondary school performance in England.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 393,
+   "topic": "Education",
+   "old": "Implement effective relationship and sex education in schools",
+   "new": "Implement the Review of Relationship, Sex and Health Education guidance",
+   "description": "The proposal seeks to update the national guidance for relationship, sex, and health education in schools.",
+   "old_label_clear": false,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 394,
+   "topic": "Education",
+   "old": "Impose VAT on independent school fees",
+   "new": "Remove tax exemption on independent school fees",
+   "description": "The proposal removes the zero-rating status for independent school fees to generate revenue for the state education system.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 395,
+   "topic": "Education",
+   "old": "Expand access to affordable childcare and early years education",
+   "new": "Expand funded childcare entitlement from 15 to 30 hours per week",
+   "description": "The proposal increases the weekly hours of government-funded childcare available to working parents from 15 to 30.",
+   "old_label_clear": false,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 409,
+   "topic": "Education",
+   "old": "Recruit an additional 6,500 teachers",
+   "new": "Recruit 6,500 additional teachers",
+   "description": "The proposal is to hire 6,500 new teachers to improve school standards and support inclusive education.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 416,
+   "topic": "Education",
+   "old": "Expand technical and vocational pathways and qualifications to all children",
+   "new": "Expand technical and vocational pathways and qualifications to all children",
+   "description": "The proposal aims to broaden access to technical and vocational education for every child in the UK.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 420,
+   "topic": "Education",
+   "old": "Require teachers to have qualified status",
+   "new": "Require all teachers in academies to hold qualified teacher status",
+   "description": "The proposal mandates that every teacher employed by academy schools must possess Qualified Teacher Status.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 425,
+   "topic": "Education",
+   "old": "Require local authorities to review and potentially consent to home education for vulnerable children (including those in child protection plans or special schools)",
+   "new": "Require local authority consent for home education of vulnerable children",
+   "description": "The proposal mandates that local authorities must approve home education arrangements for children in child protection plans or attending special schools.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 452,
+   "topic": "Education",
+   "old": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+   "new": "Cap branded school uniform items to three per year with a fourth allowed for ties",
+   "description": "The proposal limits secondary school pupils to wearing no more than three different branded uniform items annually, or four if a tie is included.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 457,
+   "topic": "Education",
+   "old": "Implement a four-day school week",
+   "new": "Implement a four-day school week",
+   "description": "The proposal seeks to reduce the standard school week from five days to four days.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 469,
+   "topic": "Education",
+   "old": "Make it harder to turn failing schools into academies",
+   "new": "Remove automatic requirement for schools requiring improvement to become academies",
+   "description": "The proposal seeks to end the rule that forces schools needing improvement to immediately convert to academy status.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 485,
+   "topic": "Education",
+   "old": "Subsume the functions of IfATE into Skills England",
+   "new": "Transfer functions of the Institute for Apprenticeships and Technical Education to Skills England",
+   "description": "The proposal moves the statutory duties of IfATE to a new government body called Skills England.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 508,
+   "topic": "Education",
+   "old": "Integrate play into the key stage 1 curriculum",
+   "new": "Integrate play into the key stage 1 curriculum",
+   "description": "The proposal requires adding play-based learning activities to the mandatory curriculum for children aged 5 to 7.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 511,
+   "topic": "Education",
+   "old": "Require compulsory SEND training for teachers and teaching staff",
+   "new": "Require compulsory Special Educational Needs and Disabilities training for all teachers and staff",
+   "description": "The proposal mandates that every teacher and teaching staff member must complete specialized training in Special Educational Needs and Disabilities.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 526,
+   "topic": "Education",
+   "old": "Raise tuition fees",
+   "new": "Raise university tuition fees",
+   "description": "The proposal seeks to increase the amount students must pay for higher education.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 528,
+   "topic": "Education",
+   "old": "Abolish academies",
+   "new": "Abolish all existing academies and replace them with state-run schools",
+   "description": "The proposal seeks to end the academy system entirely and return all schools to direct state control.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 539,
+   "topic": "Education",
+   "old": "Pass the Children's Wellbeing and Schools Bill",
+   "new": "Pass the Children's Wellbeing and Schools Bill",
+   "description": "The proposal is to enact legislation aimed at improving child protection and standardizing school performance measures.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 578,
+   "topic": "Education",
+   "old": "Ban mobile phone use in schools",
+   "new": "Ban mobile phone use in schools",
+   "description": "The proposal requires all schools to prohibit students from using mobile phones during the entire school day.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 612,
+   "topic": "Education",
+   "old": "Abolish level 7 apprenticeships",
+   "new": "Abolish level 7 apprenticeships",
+   "description": "The proposal seeks to end the government scheme allowing postgraduate-level apprenticeships.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 616,
+   "topic": "Education",
+   "old": "Include financial education in the school curriculum",
+   "new": "Include financial education in the school curriculum",
+   "description": "The proposal mandates the inclusion of financial education as a subject within the national school curriculum.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 647,
+   "topic": "Education",
+   "old": "Abolish or restrict the right to Education, Health and Care Plans (EHCPs)",
+   "new": "Abolish or restrict the right to Education, Health and Care Plans",
+   "description": "The proposal seeks to end or limit the legal entitlement for children with special needs to receive an Education, Health and Care Plan.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 709,
+   "topic": "Education",
+   "old": "Introduce breakfast clubs for schools",
+   "new": "Introduce free breakfast clubs in primary schools",
+   "description": "The proposal establishes free breakfast clubs for all primary school pupils to improve attendance and reduce hunger.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 751,
+   "topic": "Education",
+   "old": "Provide free school meals to children",
+   "new": "Expand free school meals to lift 100,000 children out of poverty",
+   "description": "The proposal extends free school meal eligibility to an additional 100,000 children to reduce child poverty.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 1363,
+   "topic": "Employment",
+   "old": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+   "new": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+   "description": "The proposal seeks to prohibit zero-hours contracts that do not reflect regular hours and stop employers from firing staff to rehire them at lower pay.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 1368,
+   "topic": "Employment",
+   "old": "Introduce day one rights for workers",
+   "new": "Introduce day one employment rights and guaranteed hours for workers",
+   "description": "The proposal establishes unfair dismissal protections and guaranteed hours from the first day of employment for all workers.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 1439,
+   "topic": "Energy",
+   "old": "Require solar panels on new houses",
+   "new": "Mandatory solar panel installation on all new homes",
+   "description": "The proposal requires every newly constructed house to be fitted with solar panels.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 1442,
+   "topic": "Energy",
+   "old": "Establish Great British Energy",
+   "new": "Establish Great British Energy",
+   "description": "The proposal creates a new publicly owned energy company to generate clean electricity and support community energy schemes.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 1515,
+   "topic": "Environment",
+   "old": "Introduce tougher penalties, ban bonuses for water company executives, and require water companies to cover enforcement costs",
+   "new": "Introduce the Water (Special Measures) Bill to ban executive bonuses and impose unlimited penalties on water companies",
+   "description": "The proposal establishes stricter regulations for water companies by prohibiting executive bonuses and allowing unlimited financial penalties for failures.",
+   "old_label_clear": false,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 1521,
+   "topic": "Environment",
+   "old": "Ban unjustifiable and undeserved bonuses for water company executives",
+   "new": "Grant Ofwat power to ban undeserved bonuses for water company executives",
+   "description": "The proposal gives the water regulator Ofwat the authority to prohibit performance-related bonuses for executives of water companies.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 1522,
+   "topic": "Environment",
+   "old": "Hold water companies to account for sewage pollution",
+   "new": "Enact the Water (Special Measures) Bill to hold water companies accountable for sewage pollution",
+   "description": "This proposal introduces a specific Act to place failing water companies into special measures and enforce stricter accountability for sewage spills.",
+   "old_label_clear": false,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 1672,
+   "topic": "Government operations",
+   "old": "Transfer planning powers from local councils to mayors",
+   "new": "Grant mayors new planning powers to intervene in major strategic planning applications",
+   "description": "The proposal allows mayors to override local councils on specific large-scale development projects.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 1674,
+   "topic": "Government operations",
+   "old": "Abolish the two-tier council structure in Lancashire (implement a unitary structure)",
+   "new": "Abolish the two-tier council structure in Lancashire to implement a unitary structure",
+   "description": "The proposal seeks to replace the existing two-tier local government system in Lancashire with a single unitary authority.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 1675,
+   "topic": "Government operations",
+   "old": "Devolve power to local authorities and communities",
+   "new": "Pass the English Devolution and Community Empowerment Bill",
+   "description": "The proposal is to enact legislation that devolves powers to local authorities and communities while creating new strategic bodies.",
+   "old_label_clear": false,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 1763,
+   "topic": "Health",
+   "old": "Abolish NHS England",
+   "new": "Abolish NHS England",
+   "description": "The proposal seeks to dissolve NHS England to streamline health services and reduce duplication.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 1767,
+   "topic": "Health",
+   "old": "Implement a single patient record",
+   "new": "Create a single digital patient record for the NHS",
+   "description": "The proposal establishes one unified digital record to track patient information across all NHS services.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 1776,
+   "topic": "Health",
+   "old": "Pass the Assisted Dying Bill",
+   "new": "Pass the Terminally Ill Adults (End of Life) Bill",
+   "description": "The proposal allows terminally ill adults with six months to live to request assisted dying.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 1853,
+   "topic": "Housing",
+   "old": "Introduce rent controls",
+   "new": "Introduce rent caps on annual increases and rents in advance",
+   "description": "The proposal seeks to limit how much landlords can raise rents each year and restrict upfront rent payments to one month.",
+   "old_label_clear": false,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 1867,
+   "topic": "Housing",
+   "old": "Abolish section 21 no-fault evictions",
+   "new": "Abolish section 21 no-fault evictions in the Renters' Rights Bill",
+   "description": "The proposal seeks to end the legal mechanism allowing landlords to evict tenants without providing a specific reason.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 1938,
+   "topic": "Immigration",
+   "old": "Abolish the current asylum system (or: Implement the measures in the Bill)",
+   "new": "Enact the Illegal Migration Act to curb illegal migration and strengthen border security",
+   "description": "The proposal seeks to pass legislation that removes the duty to remove illegal entrants and strengthens border controls.",
+   "old_label_clear": false,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 1952,
+   "topic": "Immigration",
+   "old": "Repeal sections of the Illegal Migration Act 2023 and the Safety of Rwanda (Asylum and Immigration) Act 2024",
+   "new": "Repeal sections 59, 29, and 12 of the Illegal Migration Act 2023",
+   "description": "The proposal seeks to remove specific clauses that restrict asylum claims and weaken judicial oversight of immigration detention.",
+   "old_label_clear": false,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 1960,
+   "topic": "Immigration",
+   "old": "Repeal the Rwanda scheme",
+   "new": "Repeal the Safety of Rwanda (Asylum and Immigration) Act 2024",
+   "description": "The proposal seeks to annul the 2024 legislation that established the legal framework for sending asylum seekers to Rwanda.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 2085,
+   "topic": "Law and crime",
+   "old": "Introduce new respect orders for persistent offenders",
+   "new": "Introduce new civil respect orders for persistent antisocial behaviour offenders",
+   "description": "The proposal creates new civil orders allowing courts to ban adults from specific antisocial activities, with breaches treated as criminal offences.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 2159,
+   "topic": "Macroeconomics",
+   "old": "Impose income tax and increase rates on dividends, savings, and property",
+   "new": "Introduce income tax on dividends, savings, and property income in the Finance Bill",
+   "description": "The proposal introduces a new income tax charge specifically targeting dividends, savings, and property income within the Finance Bill.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 2188,
+   "topic": "Macroeconomics",
+   "old": "Charge VAT on private school fees",
+   "new": "Remove VAT exemption on private school fees",
+   "description": "The proposal removes the current exemption from Value Added Tax on fees charged by independent schools.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 2248,
+   "topic": "Public lands",
+   "old": "Surrender the Chagos islands to Mauritius",
+   "new": "Approve the British Indian Ocean Territory Bill to transfer sovereignty of the Chagos Islands to Mauritius",
+   "description": "The proposal seeks to enact legislation transferring sovereignty of the Chagos Islands from the UK to Mauritius.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 2252,
+   "topic": "Public lands",
+   "old": "Ratify the treaty",
+   "new": "Ratify the British Indian Ocean Territory Bill to establish the Chagos Marine Protected Area",
+   "description": "The proposal seeks to pass legislation that formally ratifies an international treaty creating a marine protected area in the Chagos archipelago.",
+   "old_label_clear": false,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 2349,
+   "topic": "Social welfare",
+   "old": "Abolish or significantly reduce Personal Independence Payment (PIP)",
+   "new": "Restrict eligibility for Personal Independence Payment and cut its health element",
+   "description": "The proposal seeks to limit who can receive Personal Independence Payment benefits and remove the health component from Universal Credit.",
+   "old_label_clear": false,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 2350,
+   "topic": "Social welfare",
+   "old": "Lift the two-child benefit limit",
+   "new": "Remove the two-child benefit cap in the Universal Credit system",
+   "description": "The proposal seeks to eliminate the restriction that limits income support to the first two children of a family.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 2358,
+   "topic": "Social welfare",
+   "old": "Pass the Bill",
+   "new": "Pass the Universal Credit and Personal Independence Payment Bill",
+   "description": "The proposal seeks to pass legislation that raises universal credit allowances and alters personal independence payment eligibility criteria.",
+   "old_label_clear": false,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 2407,
+   "topic": "Technology",
+   "old": "Ban smartphones in schools",
+   "new": "Ban mobile phones in schools during the school day",
+   "description": "The proposal requires schools to prohibit students from using mobile phones while school is in session.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 2441,
+   "topic": "Technology",
+   "old": "Require AI companies to provide transparency regarding the use of creative content in their models",
+   "new": "Require AI companies to disclose copyrighted works used to train their models",
+   "description": "The proposal mandates that artificial intelligence developers must reveal which copyrighted materials were used in their training datasets.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 2486,
+   "topic": "Transport",
+   "old": "Create Great British Railways",
+   "new": "Create Great British Railways",
+   "description": "Establish a new public body to manage and oversee the United Kingdom's railway network.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 2495,
+   "topic": "Transport",
+   "old": "Take railways back into public ownership",
+   "new": "Nationalisation of the railways under the Railways Bill",
+   "description": "The proposal is to transfer railway ownership and operations from private companies to public control.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  },
+  {
+   "fight_id": 2498,
+   "topic": "Transport",
+   "old": "Require the railway to have a target for passenger growth",
+   "new": "Require the railway to have a target for passenger growth",
+   "description": "The proposal mandates that the railway operator must set a specific goal to increase the number of passengers.",
+   "old_label_clear": true,
+   "same_direction": true,
+   "failed": false
+  }
+ ]
+}

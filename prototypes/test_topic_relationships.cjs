@@ -1,0 +1,16 @@
+const assert=require('node:assert/strict'),R=require('./topic_relationships.js');
+const topics=[0,1,2,3].map(k=>({k,title:String(k),has_claim:true}));
+const mps=Array.from({length:40},(_,i)=>({st:[[0,i%2?1:-1],[1,i%2?-1:1],[2,1],...(i<29?[[3,i%2?1:-1]]:[])]}));
+const d=R.calculate(mps,topics),p=d.pairs.find(p=>p.a===1&&p.b===0);
+assert.equal(p.r,-1);assert.equal(p.strength,1);assert.equal(p.n,40);
+assert(!d.pairs.some(p=>p.a===3||p.b===3),'Fewer than 30 shared scores cannot create links');
+assert(!d.pairs.some(p=>p.a===2||p.b===2),'Constant scores cannot create spurious correlations');
+assert.equal(d.nodes[0].divisive,1);assert.equal(d.nodes[2].divisive,0);assert.equal(d.nodes[2].distinguishing,null);
+const reversed=R.calculate(mps.map(m=>({st:m.st.map(([k,v])=>[k,k===0?-v:v])})),topics);
+assert.equal(reversed.pairs[0].strength,p.strength,'Pole direction cannot change link strength');
+console.log('Passed topic links: observed overlap, constant scores, sign reversal and divisiveness.');
+const sl=R.stanceLinks(mps,topics,0,1);assert.equal(sl.length,1);assert.equal(sl[0].side,-1);assert.equal(sl[0].together,20);assert.equal(sl[0].cohort,20);assert.equal(sl[0].strength,1);
+const opposite=R.stanceLinks(mps,topics,0,-1);assert.equal(opposite[0].side,1);assert.equal(opposite[0].together,20);
+assert(!sl.some(x=>x.k===0),'No self-opposition links');
+const sparse=Array.from({length:40},(_,i)=>({st:[[0,i<4?1:-1],[1,i<4?1:-1]]}));assert.equal(R.stanceLinks(sparse,topics,0,1).length,0,'Rare sides need minimum support');
+console.log('Passed stance direction, opposite side, cohort counts and sparse-side suppression.');

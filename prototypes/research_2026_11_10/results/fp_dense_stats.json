@@ -1,0 +1,1771 @@
+{
+ "stats": [
+  {
+   "fight": 1,
+   "label": "Abolish (or reverse) the agricultural property relief and business property relief changes",
+   "topic": "Agriculture",
+   "before_for": 2,
+   "before_against": 5,
+   "before": 7,
+   "after_for": 5,
+   "after_against": 4,
+   "after_mixed": 0,
+   "after": 9,
+   "flipped": 1,
+   "added": 4,
+   "lost": 2,
+   "status": "fight"
+  },
+  {
+   "fight": 83,
+   "label": "Pass legislation to legalise assisted dying",
+   "topic": "Civil rights",
+   "before_for": 28,
+   "before_against": 11,
+   "before": 39,
+   "after_for": 51,
+   "after_against": 15,
+   "after_mixed": 3,
+   "after": 66,
+   "flipped": 1,
+   "added": 30,
+   "lost": 1,
+   "status": "fight"
+  },
+  {
+   "fight": 127,
+   "label": "Introduce an independent football regulator",
+   "topic": "Culture",
+   "before_for": 31,
+   "before_against": 6,
+   "before": 37,
+   "after_for": 36,
+   "after_against": 5,
+   "after_mixed": 0,
+   "after": 41,
+   "flipped": 1,
+   "added": 7,
+   "lost": 3,
+   "status": "fight"
+  },
+  {
+   "fight": 367,
+   "label": "Require academies to follow the national curriculum",
+   "topic": "Education",
+   "before_for": 6,
+   "before_against": 6,
+   "before": 12,
+   "after_for": 8,
+   "after_against": 10,
+   "after_mixed": 0,
+   "after": 18,
+   "flipped": 2,
+   "added": 4,
+   "lost": 0,
+   "status": "fight"
+  },
+  {
+   "fight": 394,
+   "label": "Impose VAT on independent school fees",
+   "topic": "Education",
+   "before_for": 21,
+   "before_against": 32,
+   "before": 53,
+   "after_for": 22,
+   "after_against": 34,
+   "after_mixed": 0,
+   "after": 56,
+   "flipped": 0,
+   "added": 5,
+   "lost": 3,
+   "status": "fight"
+  },
+  {
+   "fight": 526,
+   "label": "Raise tuition fees",
+   "topic": "Education",
+   "before_for": 3,
+   "before_against": 2,
+   "before": 5,
+   "after_for": 3,
+   "after_against": 2,
+   "after_mixed": 0,
+   "after": 5,
+   "flipped": 0,
+   "added": 0,
+   "lost": 0,
+   "status": "fight"
+  },
+  {
+   "fight": 1672,
+   "label": "Transfer planning powers from local councils to mayors",
+   "topic": "Government operations",
+   "before_for": 4,
+   "before_against": 3,
+   "before": 7,
+   "after_for": 13,
+   "after_against": 15,
+   "after_mixed": 1,
+   "after": 28,
+   "flipped": 1,
+   "added": 22,
+   "lost": 0,
+   "status": "fight"
+  },
+  {
+   "fight": 1776,
+   "label": "Pass the Assisted Dying Bill",
+   "topic": "Health",
+   "before_for": 4,
+   "before_against": 3,
+   "before": 7,
+   "after_for": 21,
+   "after_against": 14,
+   "after_mixed": 0,
+   "after": 35,
+   "flipped": 0,
+   "added": 28,
+   "lost": 0,
+   "status": "fight"
+  },
+  {
+   "fight": 1938,
+   "label": "Abolish the current asylum system (or: Implement the measures in the Bill)",
+   "topic": "Immigration",
+   "before_for": 8,
+   "before_against": 4,
+   "before": 12,
+   "after_for": 33,
+   "after_against": 20,
+   "after_mixed": 2,
+   "after": 53,
+   "flipped": 3,
+   "added": 42,
+   "lost": 1,
+   "status": "fight"
+  },
+  {
+   "fight": 1952,
+   "label": "Repeal sections of the Illegal Migration Act 2023 and the Safety of Rwanda (Asylum and Immigration) Act 2024",
+   "topic": "Immigration",
+   "before_for": 4,
+   "before_against": 6,
+   "before": 10,
+   "after_for": 8,
+   "after_against": 22,
+   "after_mixed": 2,
+   "after": 30,
+   "flipped": 1,
+   "added": 22,
+   "lost": 0,
+   "status": "fight"
+  },
+  {
+   "fight": 1960,
+   "label": "Repeal the Rwanda scheme",
+   "topic": "Immigration",
+   "before_for": 5,
+   "before_against": 4,
+   "before": 9,
+   "after_for": 13,
+   "after_against": 15,
+   "after_mixed": 0,
+   "after": 28,
+   "flipped": 0,
+   "added": 19,
+   "lost": 0,
+   "status": "fight"
+  },
+  {
+   "fight": 2159,
+   "label": "Impose income tax and increase rates on dividends, savings, and property",
+   "topic": "Macroeconomics",
+   "before_for": 3,
+   "before_against": 4,
+   "before": 7,
+   "after_for": 2,
+   "after_against": 4,
+   "after_mixed": 0,
+   "after": 6,
+   "flipped": 0,
+   "added": 1,
+   "lost": 2,
+   "status": "fight"
+  },
+  {
+   "fight": 2188,
+   "label": "Charge VAT on private school fees",
+   "topic": "Macroeconomics",
+   "before_for": 2,
+   "before_against": 3,
+   "before": 5,
+   "after_for": 7,
+   "after_against": 6,
+   "after_mixed": 0,
+   "after": 13,
+   "flipped": 0,
+   "added": 8,
+   "lost": 0,
+   "status": "fight"
+  },
+  {
+   "fight": 2252,
+   "label": "Ratify the treaty",
+   "topic": "Public lands",
+   "before_for": 6,
+   "before_against": 3,
+   "before": 9,
+   "after_for": 7,
+   "after_against": 14,
+   "after_mixed": 0,
+   "after": 21,
+   "flipped": 2,
+   "added": 13,
+   "lost": 1,
+   "status": "fight"
+  },
+  {
+   "fight": 2350,
+   "label": "Lift the two-child benefit limit",
+   "topic": "Social welfare",
+   "before_for": 27,
+   "before_against": 2,
+   "before": 29,
+   "after_for": 33,
+   "after_against": 6,
+   "after_mixed": 0,
+   "after": 39,
+   "flipped": 0,
+   "added": 10,
+   "lost": 0,
+   "status": "fight"
+  }
+ ],
+ "flips": [
+  [
+   1,
+   5125,
+   "AGAINST",
+   "FOR"
+  ],
+  [
+   83,
+   172,
+   "AGAINST",
+   "mixed"
+  ],
+  [
+   127,
+   4032,
+   "AGAINST",
+   "FOR"
+  ],
+  [
+   367,
+   3969,
+   "mixed",
+   "AGAINST"
+  ],
+  [
+   367,
+   4780,
+   "mixed",
+   "AGAINST"
+  ],
+  [
+   1672,
+   5255,
+   "FOR",
+   "mixed"
+  ],
+  [
+   1938,
+   4503,
+   "mixed",
+   "FOR"
+  ],
+  [
+   1938,
+   4844,
+   "mixed",
+   "FOR"
+  ],
+  [
+   1938,
+   5351,
+   "FOR",
+   "AGAINST"
+  ],
+  [
+   1952,
+   5341,
+   "FOR",
+   "mixed"
+  ],
+  [
+   2252,
+   4358,
+   "FOR",
+   "AGAINST"
+  ],
+  [
+   2252,
+   5100,
+   "FOR",
+   "AGAINST"
+  ]
+ ],
+ "splits": [
+  [
+   1,
+   "Abolish (or reverse) the agricultural property relief and business property relief changes",
+   "LD",
+   [
+    "Charlie Maynard"
+   ],
+   [
+    "Mr Alistair Carmichael",
+    "Daisy Cooper",
+    "Sarah Dyke"
+   ]
+  ],
+  [
+   83,
+   "Pass legislation to legalise assisted dying",
+   "Con",
+   [
+    "Sir Andrew Mitchell",
+    "Sir Jeremy Wright",
+    "Mark Garnier",
+    "Sir James Cleverly",
+    "Kit Malthouse",
+    "Dr Luke Evans",
+    "Alicia Kearns",
+    "Dr Kieran Mullan",
+    "Dr Neil Shastri-Hurst",
+    "Mr Peter Bedford"
+   ],
+   [
+    "Sir Julian Lewis",
+    "Sir Edward Leigh",
+    "Tom Tugendhat"
+   ]
+  ],
+  [
+   83,
+   "Pass legislation to legalise assisted dying",
+   "Lab",
+   [
+    "Andy Slaughter",
+    "Mr Toby Perkins",
+    "Richard Burgon",
+    "Tonia Antoniazzi",
+    "Paula Barker",
+    "Rachel Hopkins",
+    "Kim Leadbeater",
+    "Dr Simon Opher",
+    "Kevin Bonavia",
+    "Tony Vaughan",
+    "Jake Richards",
+    "Dr Marie Tidball",
+    "David Burton-Sampson",
+    "Dr Peter Prinsley",
+    "Daniel Francis",
+    "Lloyd Hatton",
+    "Steve Witherden",
+    "Tom Rutland",
+    "Lizzi Collinge",
+    "Alison Hume",
+    "Dr Jeevun Sandher",
+    "Anna Dixon",
+    "Catherine Fookes",
+    "Cat Eccles",
+    "Kevin McKenna",
+    "Dr Beccy Cooper",
+    "Rosie Wrighting"
+   ],
+   [
+    "Rachael Maskell",
+    "Vicky Foxcroft",
+    "Mr James Frith",
+    "Marsha De Cordova",
+    "Ruth Jones",
+    "Florence Eshalomi",
+    "Paulette Hamilton",
+    "Jen Craft",
+    "Blair McDougall",
+    "David Smith"
+   ]
+  ],
+  [
+   83,
+   "Pass legislation to legalise assisted dying",
+   "LD",
+   [
+    "Sarah Olney",
+    "Christine Jardine",
+    "Layla Moran",
+    "Tom Gordon",
+    "Liz Jarvis",
+    "Pippa Heylings",
+    "Josh Babarinde",
+    "Luke Taylor",
+    "Caroline Voaden",
+    "Mr Lee Dillon"
+   ],
+   [
+    "Tim Farron"
+   ]
+  ],
+  [
+   83,
+   "Pass legislation to legalise assisted dying",
+   "RUK",
+   [
+    "Richard Tice"
+   ],
+   [
+    "Danny Kruger"
+   ]
+  ],
+  [
+   127,
+   "Introduce an independent football regulator",
+   "Con",
+   [
+    "Dame Caroline Dinenage",
+    "Stuart Andrew"
+   ],
+   [
+    "Mr Louie French",
+    "Nick Timothy",
+    "Sir Ashley Fox",
+    "Charlie Dewhirst"
+   ]
+  ],
+  [
+   367,
+   "Require academies to follow the national curriculum",
+   "Lab",
+   [
+    "Bridget Phillipson",
+    "Catherine McKinnell",
+    "David Baines",
+    "Andrew Cooper",
+    "Tom Hayes",
+    "Jonathan Davies",
+    "Darren Paffey",
+    "Amanda Martin"
+   ],
+   [
+    "Dame Siobhain McDonagh"
+   ]
+  ],
+  [
+   1672,
+   "Transfer planning powers from local councils to mayors",
+   "Lab",
+   [
+    "Angela Rayner",
+    "Dr Rupa Huq",
+    "Jim McMahon",
+    "Emma Foody",
+    "Miatta Fahnbulleh",
+    "Euan Stainbank",
+    "Andy MacNae",
+    "Andrew Cooper",
+    "Mike Reader",
+    "Dr Allison Gardner",
+    "Danny Beales"
+   ],
+   [
+    "Mr Jonathan Brash"
+   ]
+  ],
+  [
+   1672,
+   "Transfer planning powers from local councils to mayors",
+   "Con",
+   [
+    "Paul Holmes"
+   ],
+   [
+    "Wendy Morton",
+    "Sir James Cleverly",
+    "Robbie Moore",
+    "Lewis Cocking",
+    "Nick Timothy",
+    "Peter Fortune"
+   ]
+  ],
+  [
+   1672,
+   "Transfer planning powers from local councils to mayors",
+   "Ind",
+   [
+    "Perran Moon"
+   ],
+   [
+    "Iqbal Mohamed"
+   ]
+  ],
+  [
+   1776,
+   "Pass the Assisted Dying Bill",
+   "Con",
+   [
+    "Sir Andrew Mitchell",
+    "Kit Malthouse",
+    "Alicia Kearns",
+    "Dr Kieran Mullan",
+    "Joe Robertson",
+    "Mr Peter Bedford"
+   ],
+   [
+    "Sir Edward Leigh",
+    "Sir John Hayes",
+    "Saqib Bhatti"
+   ]
+  ],
+  [
+   1776,
+   "Pass the Assisted Dying Bill",
+   "Lab",
+   [
+    "Andy Slaughter",
+    "Tonia Antoniazzi",
+    "Paula Barker",
+    "Kim Leadbeater",
+    "Dr Simon Opher",
+    "Dr Marie Tidball",
+    "Dr Peter Prinsley",
+    "Lizzi Collinge",
+    "Catherine Fookes",
+    "Rosie Wrighting"
+   ],
+   [
+    "Dame Meg Hillier",
+    "Rachael Maskell",
+    "Mr James Frith",
+    "Ruth Jones",
+    "Paulette Hamilton",
+    "Blair McDougall"
+   ]
+  ],
+  [
+   1776,
+   "Pass the Assisted Dying Bill",
+   "LD",
+   [
+    "Christine Jardine",
+    "Layla Moran",
+    "Vikki Slade"
+   ],
+   [
+    "Tim Farron"
+   ]
+  ],
+  [
+   1938,
+   "Abolish the current asylum system (or: Implement the measures in the Bill)",
+   "Con",
+   [
+    "Sir Edward Leigh",
+    "Chris Philp",
+    "Matt Vickers"
+   ],
+   [
+    "Wendy Morton",
+    "Ben Obese-Jecty",
+    "Sir Ashley Fox",
+    "Rebecca Smith",
+    "Gregory Stafford",
+    "Sarah Bool"
+   ]
+  ],
+  [
+   1938,
+   "Abolish the current asylum system (or: Implement the measures in the Bill)",
+   "Lab",
+   [
+    "Yvette Cooper",
+    "Dame Angela Eagle",
+    "Shabana Mahmood",
+    "Preet Kaur Gill",
+    "Alex Norris",
+    "Alex Sobel",
+    "Kim Johnson",
+    "Olivia Blake",
+    "Lewis Atkinson",
+    "Shaun Davies",
+    "Mr Jonathan Brash",
+    "Josh Simons",
+    "Rachel Taylor",
+    "Tony Vaughan",
+    "Jo White",
+    "Euan Stainbank",
+    "Jon Pearce",
+    "John Slinger",
+    "Peter Swallow",
+    "Dan Aldridge",
+    "Becky Gittins",
+    "Steve Yemm",
+    "Kenneth Stevenson",
+    "David Smith",
+    "Chris Murray",
+    "Mike Tapp",
+    "Margaret Mullane",
+    "Leigh Ingham",
+    "Olivia Bailey",
+    "Laura Kyrke-Smith"
+   ],
+   [
+    "Ms Diane Abbott",
+    "Ms Stella Creasy",
+    "Imran Hussain",
+    "Bell Ribeiro-Addy",
+    "Nadia Whittome"
+   ]
+  ],
+  [
+   1952,
+   "Repeal sections of the Illegal Migration Act 2023 and the Safety of Rwanda (Asylum and Immigration) Act 2024",
+   "Lab",
+   [
+    "Dame Angela Eagle",
+    "Ian Byrne",
+    "Olivia Blake",
+    "Nadia Whittome",
+    "Tony Vaughan"
+   ],
+   [
+    "Yvette Cooper",
+    "Preet Kaur Gill",
+    "Shaun Davies",
+    "Mr Jonathan Brash",
+    "Josh Simons",
+    "Jon Pearce",
+    "Peter Swallow",
+    "Dan Aldridge",
+    "Becky Gittins",
+    "Kenneth Stevenson",
+    "Chris Murray",
+    "Leigh Ingham"
+   ]
+  ],
+  [
+   1960,
+   "Repeal the Rwanda scheme",
+   "Lab",
+   [
+    "Bell Ribeiro-Addy",
+    "Ian Byrne",
+    "Olivia Blake",
+    "Nadia Whittome",
+    "Tony Vaughan",
+    "Steve Yemm",
+    "Olivia Bailey",
+    "Laura Kyrke-Smith"
+   ],
+   [
+    "Yvette Cooper",
+    "Josh Simons",
+    "Becky Gittins",
+    "Leigh Ingham"
+   ]
+  ],
+  [
+   2252,
+   "Ratify the treaty",
+   "Lab",
+   [
+    "Stephen Doughty",
+    "Luke Pollard",
+    "Lillian Jones",
+    "Mr Calvin Bailey",
+    "Phil Brickell",
+    "Tim Roca"
+   ],
+   [
+    "Peter Lamb"
+   ]
+  ]
+ ],
+ "newpos": [
+  [
+   1,
+   4494,
+   "FOR"
+  ],
+  [
+   1,
+   4769,
+   "AGAINST"
+  ],
+  [
+   1,
+   4995,
+   "AGAINST"
+  ],
+  [
+   1,
+   5325,
+   "FOR"
+  ],
+  [
+   83,
+   54,
+   "AGAINST"
+  ],
+  [
+   83,
+   345,
+   "AGAINST"
+  ],
+  [
+   83,
+   350,
+   "mixed"
+  ],
+  [
+   83,
+   1560,
+   "FOR"
+  ],
+  [
+   83,
+   4074,
+   "FOR"
+  ],
+  [
+   83,
+   4366,
+   "FOR"
+  ],
+  [
+   83,
+   4462,
+   "AGAINST"
+  ],
+  [
+   83,
+   4491,
+   "AGAINST"
+  ],
+  [
+   83,
+   4493,
+   "FOR"
+  ],
+  [
+   83,
+   4521,
+   "FOR"
+  ],
+  [
+   83,
+   4591,
+   "FOR"
+  ],
+  [
+   83,
+   4656,
+   "FOR"
+  ],
+  [
+   83,
+   4860,
+   "FOR"
+  ],
+  [
+   83,
+   5032,
+   "FOR"
+  ],
+  [
+   83,
+   5040,
+   "FOR"
+  ],
+  [
+   83,
+   5051,
+   "FOR"
+  ],
+  [
+   83,
+   5067,
+   "FOR"
+  ],
+  [
+   83,
+   5076,
+   "AGAINST"
+  ],
+  [
+   83,
+   5078,
+   "FOR"
+  ],
+  [
+   83,
+   5086,
+   "FOR"
+  ],
+  [
+   83,
+   5098,
+   "FOR"
+  ],
+  [
+   83,
+   5103,
+   "FOR"
+  ],
+  [
+   83,
+   5161,
+   "FOR"
+  ],
+  [
+   83,
+   5184,
+   "FOR"
+  ],
+  [
+   83,
+   5217,
+   "FOR"
+  ],
+  [
+   83,
+   5222,
+   "FOR"
+  ],
+  [
+   83,
+   5254,
+   "FOR"
+  ],
+  [
+   83,
+   5281,
+   "FOR"
+  ],
+  [
+   83,
+   5300,
+   "FOR"
+  ],
+  [
+   83,
+   5307,
+   "FOR"
+  ],
+  [
+   127,
+   165,
+   "FOR"
+  ],
+  [
+   127,
+   4008,
+   "FOR"
+  ],
+  [
+   127,
+   4139,
+   "FOR"
+  ],
+  [
+   127,
+   4571,
+   "FOR"
+  ],
+  [
+   127,
+   5040,
+   "FOR"
+  ],
+  [
+   127,
+   5045,
+   "FOR"
+  ],
+  [
+   127,
+   5094,
+   "FOR"
+  ],
+  [
+   367,
+   1482,
+   "AGAINST"
+  ],
+  [
+   367,
+   5092,
+   "FOR"
+  ],
+  [
+   367,
+   5209,
+   "AGAINST"
+  ],
+  [
+   367,
+   5270,
+   "FOR"
+  ],
+  [
+   394,
+   4513,
+   "AGAINST"
+  ],
+  [
+   394,
+   4592,
+   "AGAINST"
+  ],
+  [
+   394,
+   5230,
+   "FOR"
+  ],
+  [
+   394,
+   5295,
+   "FOR"
+  ],
+  [
+   394,
+   5308,
+   "FOR"
+  ],
+  [
+   1672,
+   1447,
+   "AGAINST"
+  ],
+  [
+   1672,
+   4511,
+   "FOR"
+  ],
+  [
+   1672,
+   4569,
+   "FOR"
+  ],
+  [
+   1672,
+   4602,
+   "AGAINST"
+  ],
+  [
+   1672,
+   4612,
+   "AGAINST"
+  ],
+  [
+   1672,
+   4861,
+   "AGAINST"
+  ],
+  [
+   1672,
+   5029,
+   "FOR"
+  ],
+  [
+   1672,
+   5045,
+   "AGAINST"
+  ],
+  [
+   1672,
+   5050,
+   "AGAINST"
+  ],
+  [
+   1672,
+   5062,
+   "AGAINST"
+  ],
+  [
+   1672,
+   5110,
+   "FOR"
+  ],
+  [
+   1672,
+   5122,
+   "AGAINST"
+  ],
+  [
+   1672,
+   5134,
+   "FOR"
+  ],
+  [
+   1672,
+   5182,
+   "AGAINST"
+  ],
+  [
+   1672,
+   5195,
+   "FOR"
+  ],
+  [
+   1672,
+   5208,
+   "FOR"
+  ],
+  [
+   1672,
+   5209,
+   "AGAINST"
+  ],
+  [
+   1672,
+   5268,
+   "AGAINST"
+  ],
+  [
+   1672,
+   5313,
+   "AGAINST"
+  ],
+  [
+   1672,
+   5316,
+   "FOR"
+  ],
+  [
+   1672,
+   5334,
+   "FOR"
+  ],
+  [
+   1672,
+   5339,
+   "FOR"
+  ],
+  [
+   1776,
+   345,
+   "AGAINST"
+  ],
+  [
+   1776,
+   350,
+   "AGAINST"
+  ],
+  [
+   1776,
+   1211,
+   "FOR"
+  ],
+  [
+   1776,
+   1516,
+   "FOR"
+  ],
+  [
+   1776,
+   1524,
+   "AGAINST"
+  ],
+  [
+   1776,
+   1591,
+   "AGAINST"
+  ],
+  [
+   1776,
+   4521,
+   "FOR"
+  ],
+  [
+   1776,
+   4623,
+   "FOR"
+  ],
+  [
+   1776,
+   4634,
+   "FOR"
+  ],
+  [
+   1776,
+   4637,
+   "AGAINST"
+  ],
+  [
+   1776,
+   4656,
+   "FOR"
+  ],
+  [
+   1776,
+   4716,
+   "AGAINST"
+  ],
+  [
+   1776,
+   4818,
+   "AGAINST"
+  ],
+  [
+   1776,
+   4828,
+   "FOR"
+  ],
+  [
+   1776,
+   4857,
+   "AGAINST"
+  ],
+  [
+   1776,
+   4860,
+   "FOR"
+  ],
+  [
+   1776,
+   4938,
+   "AGAINST"
+  ],
+  [
+   1776,
+   5030,
+   "FOR"
+  ],
+  [
+   1776,
+   5076,
+   "AGAINST"
+  ],
+  [
+   1776,
+   5098,
+   "FOR"
+  ],
+  [
+   1776,
+   5163,
+   "FOR"
+  ],
+  [
+   1776,
+   5225,
+   "FOR"
+  ],
+  [
+   1776,
+   5255,
+   "FOR"
+  ],
+  [
+   1776,
+   5314,
+   "FOR"
+  ],
+  [
+   1776,
+   5327,
+   "FOR"
+  ],
+  [
+   1776,
+   5330,
+   "FOR"
+  ],
+  [
+   1776,
+   5331,
+   "FOR"
+  ],
+  [
+   1776,
+   5356,
+   "AGAINST"
+  ],
+  [
+   1938,
+   185,
+   "AGAINST"
+  ],
+  [
+   1938,
+   345,
+   "FOR"
+  ],
+  [
+   1938,
+   420,
+   "FOR"
+  ],
+  [
+   1938,
+   1440,
+   "AGAINST"
+  ],
+  [
+   1938,
+   1591,
+   "AGAINST"
+  ],
+  [
+   1938,
+   3914,
+   "FOR"
+  ],
+  [
+   1938,
+   4088,
+   "AGAINST"
+  ],
+  [
+   1938,
+   4358,
+   "AGAINST"
+  ],
+  [
+   1938,
+   4394,
+   "AGAINST"
+  ],
+  [
+   1938,
+   4475,
+   "AGAINST"
+  ],
+  [
+   1938,
+   4521,
+   "AGAINST"
+  ],
+  [
+   1938,
+   4603,
+   "FOR"
+  ],
+  [
+   1938,
+   4641,
+   "FOR"
+  ],
+  [
+   1938,
+   4658,
+   "FOR"
+  ],
+  [
+   1938,
+   4764,
+   "AGAINST"
+  ],
+  [
+   1938,
+   4786,
+   "AGAINST"
+  ],
+  [
+   1938,
+   4824,
+   "FOR"
+  ],
+  [
+   1938,
+   4864,
+   "FOR"
+  ],
+  [
+   1938,
+   5028,
+   "FOR"
+  ],
+  [
+   1938,
+   5041,
+   "FOR"
+  ],
+  [
+   1938,
+   5045,
+   "FOR"
+  ],
+  [
+   1938,
+   5055,
+   "AGAINST"
+  ],
+  [
+   1938,
+   5060,
+   "FOR"
+  ],
+  [
+   1938,
+   5062,
+   "mixed"
+  ],
+  [
+   1938,
+   5065,
+   "FOR"
+  ],
+  [
+   1938,
+   5067,
+   "FOR"
+  ],
+  [
+   1938,
+   5070,
+   "AGAINST"
+  ],
+  [
+   1938,
+   5101,
+   "AGAINST"
+  ],
+  [
+   1938,
+   5102,
+   "mixed"
+  ],
+  [
+   1938,
+   5105,
+   "FOR"
+  ],
+  [
+   1938,
+   5115,
+   "FOR"
+  ],
+  [
+   1938,
+   5165,
+   "FOR"
+  ],
+  [
+   1938,
+   5172,
+   "FOR"
+  ],
+  [
+   1938,
+   5194,
+   "FOR"
+  ],
+  [
+   1938,
+   5200,
+   "FOR"
+  ],
+  [
+   1938,
+   5266,
+   "FOR"
+  ],
+  [
+   1938,
+   5272,
+   "FOR"
+  ],
+  [
+   1938,
+   5301,
+   "AGAINST"
+  ],
+  [
+   1938,
+   5314,
+   "AGAINST"
+  ],
+  [
+   1938,
+   5337,
+   "FOR"
+  ],
+  [
+   1938,
+   5341,
+   "FOR"
+  ],
+  [
+   1938,
+   5355,
+   "AGAINST"
+  ],
+  [
+   1952,
+   345,
+   "AGAINST"
+  ],
+  [
+   1952,
+   420,
+   "AGAINST"
+  ],
+  [
+   1952,
+   491,
+   "FOR"
+  ],
+  [
+   1952,
+   4503,
+   "AGAINST"
+  ],
+  [
+   1952,
+   4603,
+   "AGAINST"
+  ],
+  [
+   1952,
+   4831,
+   "FOR"
+  ],
+  [
+   1952,
+   4869,
+   "FOR"
+  ],
+  [
+   1952,
+   5041,
+   "AGAINST"
+  ],
+  [
+   1952,
+   5045,
+   "AGAINST"
+  ],
+  [
+   1952,
+   5060,
+   "AGAINST"
+  ],
+  [
+   1952,
+   5062,
+   "AGAINST"
+  ],
+  [
+   1952,
+   5067,
+   "FOR"
+  ],
+  [
+   1952,
+   5102,
+   "FOR"
+  ],
+  [
+   1952,
+   5115,
+   "AGAINST"
+  ],
+  [
+   1952,
+   5165,
+   "AGAINST"
+  ],
+  [
+   1952,
+   5172,
+   "AGAINST"
+  ],
+  [
+   1952,
+   5181,
+   "AGAINST"
+  ],
+  [
+   1952,
+   5200,
+   "AGAINST"
+  ],
+  [
+   1952,
+   5245,
+   "AGAINST"
+  ],
+  [
+   1952,
+   5290,
+   "AGAINST"
+  ],
+  [
+   1952,
+   5337,
+   "mixed"
+  ],
+  [
+   1952,
+   5351,
+   "AGAINST"
+  ],
+  [
+   1960,
+   420,
+   "AGAINST"
+  ],
+  [
+   1960,
+   4503,
+   "AGAINST"
+  ],
+  [
+   1960,
+   4592,
+   "AGAINST"
+  ],
+  [
+   1960,
+   4786,
+   "FOR"
+  ],
+  [
+   1960,
+   4844,
+   "AGAINST"
+  ],
+  [
+   1960,
+   4864,
+   "FOR"
+  ],
+  [
+   1960,
+   5050,
+   "AGAINST"
+  ],
+  [
+   1960,
+   5060,
+   "AGAINST"
+  ],
+  [
+   1960,
+   5062,
+   "AGAINST"
+  ],
+  [
+   1960,
+   5067,
+   "FOR"
+  ],
+  [
+   1960,
+   5070,
+   "FOR"
+  ],
+  [
+   1960,
+   5102,
+   "FOR"
+  ],
+  [
+   1960,
+   5120,
+   "FOR"
+  ],
+  [
+   1960,
+   5181,
+   "AGAINST"
+  ],
+  [
+   1960,
+   5194,
+   "FOR"
+  ],
+  [
+   1960,
+   5290,
+   "AGAINST"
+  ],
+  [
+   1960,
+   5301,
+   "AGAINST"
+  ],
+  [
+   1960,
+   5341,
+   "FOR"
+  ],
+  [
+   1960,
+   5355,
+   "AGAINST"
+  ],
+  [
+   2159,
+   3935,
+   "AGAINST"
+  ],
+  [
+   2188,
+   4850,
+   "AGAINST"
+  ],
+  [
+   2188,
+   4860,
+   "AGAINST"
+  ],
+  [
+   2188,
+   5050,
+   "AGAINST"
+  ],
+  [
+   2188,
+   5069,
+   "FOR"
+  ],
+  [
+   2188,
+   5110,
+   "FOR"
+  ],
+  [
+   2188,
+   5127,
+   "FOR"
+  ],
+  [
+   2188,
+   5199,
+   "FOR"
+  ],
+  [
+   2188,
+   5259,
+   "FOR"
+  ],
+  [
+   2252,
+   185,
+   "FOR"
+  ],
+  [
+   2252,
+   4131,
+   "AGAINST"
+  ],
+  [
+   2252,
+   4462,
+   "AGAINST"
+  ],
+  [
+   2252,
+   4592,
+   "AGAINST"
+  ],
+  [
+   2252,
+   4803,
+   "AGAINST"
+  ],
+  [
+   2252,
+   4858,
+   "AGAINST"
+  ],
+  [
+   2252,
+   5054,
+   "FOR"
+  ],
+  [
+   2252,
+   5128,
+   "FOR"
+  ],
+  [
+   2252,
+   5186,
+   "AGAINST"
+  ],
+  [
+   2252,
+   5287,
+   "FOR"
+  ],
+  [
+   2252,
+   5345,
+   "AGAINST"
+  ],
+  [
+   2252,
+   5346,
+   "AGAINST"
+  ],
+  [
+   2252,
+   5356,
+   "AGAINST"
+  ],
+  [
+   2350,
+   1587,
+   "FOR"
+  ],
+  [
+   2350,
+   4131,
+   "FOR"
+  ],
+  [
+   2350,
+   4595,
+   "FOR"
+  ],
+  [
+   2350,
+   4781,
+   "AGAINST"
+  ],
+  [
+   2350,
+   5101,
+   "AGAINST"
+  ],
+  [
+   2350,
+   5144,
+   "FOR"
+  ],
+  [
+   2350,
+   5225,
+   "FOR"
+  ],
+  [
+   2350,
+   5301,
+   "AGAINST"
+  ],
+  [
+   2350,
+   5314,
+   "FOR"
+  ],
+  [
+   2350,
+   5403,
+   "AGAINST"
+  ]
+ ]
+}

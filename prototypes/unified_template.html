@@ -1,0 +1,2024 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MP3D — Find your common ground</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600;700&display=swap">
+<style>
+:root{--bench:#0e1117;--bench2:#161b24;--bench3:#1f2633;--ink:#eef1f5;--dim:#9aa4b2;--brass:#d9b45f;--line:#273142;--yes:#8fd694;--no:#e58e7a;--display:"Bricolage Grotesque","Trebuchet MS",sans-serif;--body:"Source Sans 3","Segoe UI",sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:var(--bench);color:var(--ink);font:14px/1.4 var(--body)}
+.app{display:grid;grid-template-columns:300px minmax(0,1fr) 380px;height:100vh;overflow:hidden;transition:grid-template-columns .18s ease}
+.app.hide-left{grid-template-columns:0px minmax(0,1fr) 380px}
+.app.hide-right{grid-template-columns:300px minmax(0,1fr) 0px}
+.app.hide-left.hide-right{grid-template-columns:0px minmax(0,1fr) 0px}
+.app.hide-left #left,.app.hide-right #right{padding:0;border:0;overflow:hidden;opacity:0;pointer-events:none}
+aside,main{min-width:0;min-height:0;display:flex;flex-direction:column}
+#left{border-right:1px solid var(--line);padding:10px 10px 0;gap:7px;background:#0e1117;transition:opacity .15s}
+#right{border-left:1px solid var(--line);padding:12px;gap:10px;overflow-y:auto;background:#0e1117;transition:opacity .15s}
+main{padding:10px 12px;gap:8px;overflow-y:auto}
+h1{font:700 18.5px/1.1 var(--display);margin:0}
+h2{font:700 16.5px/1.15 var(--display);margin:0}
+h3{font:700 13px var(--body);color:var(--brass);margin:0 0 6px}
+p{margin:0}
+.meta{color:var(--dim);font-size:12px}
+input[type=search]{width:100%;background:var(--bench2);border:1px solid var(--line);color:var(--ink);padding:5px 9px;border-radius:6px;font:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--bench2)}
+.seg button{background:none;border:0;color:var(--ink);padding:4px 9px;font:600 11.5px var(--body);white-space:nowrap}
+.seg button[aria-pressed=true]{background:var(--brass);color:#0e1117}
+.tbtn-pill{background:var(--bench);border:1px solid var(--line);border-radius:999px;padding:3px 9px;font:600 11.5px var(--body);display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
+.tbtn-pill:hover{border-color:var(--brass)}
+.tbtn-pill[aria-pressed=true]{background:rgba(217,180,95,.18);border-color:var(--brass);color:var(--brass)}
+#topics,#quizList{overflow-y:auto;flex:1;display:flex;flex-direction:column;gap:3px;padding-bottom:14px}
+.sec-hdr{font:700 10.5px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--brass);padding:7px 5px 2px}
+.tbtn{display:grid;grid-template-columns:9px minmax(0,1fr) auto;gap:7px;align-items:center;background:none;border:0;text-align:left;padding:5px 6px;border-radius:6px;font-size:12.5px}
+.tbtn:hover{background:var(--bench2)}
+.tbtn[aria-current=true]{background:var(--bench3);color:var(--brass);font-weight:600}
+.tbtn small{display:block;color:var(--dim);font-size:11px;font-weight:400;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+.dot.stance{background:var(--yes)}.dot.contrast{background:var(--brass)}.dot.focus{border:1.5px solid var(--dim)}
+.topbar{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:space-between;background:var(--bench2);border:1px solid var(--line);border-radius:10px;padding:6px 10px}
+.polebanner{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;background:#161b24;border:1px solid var(--line);border-radius:10px;padding:7px 12px}
+.polebanner.hidden{display:none}
+.polebanner .side-lo{color:var(--no);font-weight:700;font-size:13.5px}
+.polebanner .side-hi{color:var(--yes);font-weight:700;font-size:13.5px;text-align:right}
+.polebanner .qmid{text-align:center;font-size:12.5px;color:var(--ink)}
+.dual{display:grid;grid-template-columns:1.22fr 1fr;gap:10px;flex:1;min-height:420px}
+.dual.fullcomb{grid-template-columns:1fr}
+.dual.fullcomb #indCard{display:none}
+.card{background:var(--bench2);border:1px solid var(--line);border-radius:10px;padding:9px;display:flex;flex-direction:column;gap:6px;min-width:0;position:relative}
+.card.fullscreen{position:fixed!important;inset:0!important;z-index:100!important;border-radius:0!important;padding:14px 18px!important;background:var(--bench)!important}
+.cardhead{display:flex;justify-content:space-between;align-items:center;gap:6px;flex-wrap:wrap}
+.layerbar{display:flex;justify-content:space-between;align-items:center;gap:6px;flex-wrap:wrap;padding:4px 8px;background:rgba(14,17,23,.6);border:1px solid rgba(39,49,66,.6);border-radius:8px}
+.cvwrap{position:relative;flex:1;min-height:340px;background:#0e1117;border-radius:8px;overflow:hidden;border:1px solid rgba(39,49,66,.5)}
+canvas{display:block;position:absolute;inset:0;width:100%;height:100%}
+.pbar{display:flex;flex-wrap:wrap;gap:3px}
+.pchip{background:var(--bench);border:1px solid var(--line);border-radius:999px;padding:2px 7px;font:600 11px var(--body);display:inline-flex;align-items:center;gap:4px}
+.pchip[aria-pressed=true]{border-color:var(--brass);color:var(--brass);background:rgba(217,180,95,.15)}
+.pchip i{width:7px;height:7px;border-radius:50%;display:inline-block}
+.statgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:5px}
+.stat{background:var(--bench2);border:1px solid var(--line);border-radius:7px;padding:5px 7px}
+.stat b{display:block;font:700 14px var(--display);color:var(--ink)}
+.stat span{font-size:10.5px;color:var(--dim)}
+.poles{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.pole{background:var(--bench2);border:1px solid var(--line);border-radius:8px;padding:7px;font-size:12px}
+.pole h4{margin:0 0 4px;font:700 11.5px var(--body)}
+.quote{border-left:2.5px solid var(--line);padding-left:8px;margin-top:5px;font-size:12px}
+.quote.lo{border-color:var(--no)}.quote.hi{border-color:var(--yes)}
+.corrlist{display:flex;flex-direction:column;gap:4px}
+.corr{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:6px;align-items:center;background:var(--bench2);border:1px solid var(--line);border-radius:6px;padding:4px 7px;text-align:left;font-size:12px}
+.corr:hover{border-color:var(--brass);background:var(--bench3)}
+.corr .r{font-weight:700;font-variant-numeric:tabular-nums}
+.corr .r.pos{color:var(--yes)}.corr .r.neg{color:var(--no)}
+.badge{font-size:10.5px;padding:1px 6px;border-radius:999px;background:var(--bench);border:1px solid var(--line);color:var(--dim)}
+.axbox{background:var(--bench2);border:1px solid var(--line);border-radius:8px;padding:7px;font-size:11.5px;display:flex;flex-direction:column;gap:3px;margin-bottom:5px}
+.mpchip{background:var(--bench);border:1px solid var(--line);border-radius:5px;padding:1px 5px;font-size:11px;display:inline-block;margin:1px 2px}
+.mpchip:hover{border-color:var(--brass);color:var(--brass)}
+.qcard{background:var(--bench2);border:1px solid var(--line);border-radius:8px;padding:7px 8px;display:flex;flex-direction:column;gap:5px}
+.qcard.active{border-color:var(--brass)}
+.qbtns{display:grid;grid-template-columns:1fr auto 1fr;gap:4px}
+.qbtn{background:var(--bench);border:1px solid var(--line);border-radius:6px;padding:4px 6px;font-size:11px;line-height:1.2;text-align:center}
+.qbtn:hover{border-color:var(--brass)}
+.qbtn.sel-lo{background:rgba(229,142,122,.22);border-color:var(--no);color:var(--no);font-weight:700}
+.qbtn.sel-neu{background:rgba(217,180,95,.22);border-color:var(--brass);color:var(--brass);font-weight:700}
+.qbtn.sel-hi{background:rgba(143,214,148,.22);border-color:var(--yes);color:var(--yes);font-weight:700}
+#tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--bench);padding:6px 10px;border-radius:6px;font-size:12px;z-index:200;display:none;max-width:310px;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+.link{background:none;border:0;padding:0;color:var(--brass);text-decoration:underline;font-size:12px}
+@media (max-width:1100px){.app{grid-template-columns:250px 1fr 320px}.dual{grid-template-columns:1fr}}
+
+.display-menu{position:relative}.display-menu summary{font-size:12px;padding:7px 10px;border:1px solid var(--line);border-radius:20px;white-space:nowrap;color:var(--ink)}.display-menu[open]>div{position:absolute;z-index:30;top:100%;margin-top:8px;left:0;padding:12px;background:#161b24;border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 25px #0006;min-width:220px;display:flex;gap:8px;flex-wrap:wrap}.display-menu .seg button{border-radius:8px}.extra-layers{width:240px}
+/* Visitor experience: a spacious map, focused dialogs, and progressive disclosure. */
+:root{--bench:#0e1117;--bench2:#161b24;--line:#273142}
+.mobile-close{display:none}.masthead{height:76px;padding:0 28px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;background:#0e1117}
+.brand{font:700 26px var(--display);color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:20px}.brand span,.eyebrow{font:600 10px var(--body);letter-spacing:.18em;color:var(--brass)}
+.masthead nav{display:flex;gap:18px;align-items:center}.primary{background:var(--brass);color:#0e1117;border:0;border-radius:9px;padding:12px 19px;font-weight:700}.quiet{background:transparent;border:1px solid var(--line);border-radius:8px;padding:9px 12px;color:var(--ink)}
+button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.app,.app.hide-right{height:calc(100dvh - 76px);grid-template-columns:250px minmax(0,1fr)}.app.hide-left,.app.hide-left.hide-right{grid-template-columns:0 minmax(0,1fr)}
+#left{padding:24px 15px 0;gap:20px}#leftmode,#leftQuizPane,#diamfit,#polebanner{display:none!important}#leftTopicsPane>p{line-height:1.6;margin-bottom:10px}#leftTopicsPane>div:has(#tsort){display:none!important}#topics{gap:5px;margin-top:10px}.tbtn{padding:10px 7px}.tbtn small{display:none}.sec-hdr{padding:18px 5px 8px;line-height:1.5}
+main{grid-column:2;padding:20px;gap:14px}.topbar{background:none;border:0;padding:0;gap:12px}.seg button,.tbtn-pill{padding:7px 10px;font-size:12px}.pbar{gap:4px}.pchip{padding:5px 8px}#mpsearch{min-width:180px;height:34px}#layoutmode{margin-left:3px}
+.dual{min-height:530px}.card{padding:17px;border-radius:16px;gap:14px;background:#131821}.cardhead h2{font-size:22px;margin-bottom:6px}.cvwrap{background:#0e1117;min-height:350px;border:0}.layerbar{background:none;border:0;padding:0}.layerbar>div:last-child{display:none!important}.meta{line-height:1.5}.cardhead .seg button{font-size:11px}.card.fullscreen{z-index:100}
+dialog{color:var(--ink);background:#131821;border:1px solid var(--line);border-radius:18px;padding:0;width:min(740px,94vw);max-height:92dvh;box-shadow:0 30px 100px #0008}dialog::backdrop{background:#07090db8;backdrop-filter:blur(5px)}.dialog-top{padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px;border-bottom:1px solid var(--line)}.dialog-top h2{font-size:25px;margin-top:5px}.about-copy{padding:24px;font-size:15px;line-height:1.7}.about-copy p{margin-bottom:18px}summary{cursor:pointer;color:var(--brass);padding:15px 0}
+.drawer{margin:0 0 0 auto;height:100dvh;max-height:100dvh;width:min(520px,100vw);border-radius:18px 0 0 18px}.drawer #right{display:block;padding:25px;border:0;background:transparent}.drawer h3{margin:25px 0 12px}.drawer h2{font-size:25px}.profile-head{display:flex;gap:16px;align-items:center}.portrait{width:65px;height:76px;object-fit:cover;border-radius:10px;background:var(--bench3)}blockquote{margin:15px 0;padding:16px 18px;background:#1a202b;border-left:2px solid var(--brass);font-size:14px;line-height:1.7;border-radius:0 8px 8px 0}blockquote footer{margin-top:12px;font-size:12px;color:var(--dim)}.evidence-topic{display:block;width:100%;text-align:left;border:1px solid var(--line);background:var(--bench2);border-radius:8px;padding:12px;margin:8px 0}.evidence-topic span{display:block;color:var(--dim);font-size:12px;margin-top:5px}.low{color:var(--no)}.high{color:var(--yes)}.shift-note{color:var(--brass);margin-top:16px}
+#quizDialog{width:min(1390px,96vw)}.quiz-stage{display:grid;grid-template-columns:minmax(340px,0.9fr) minmax(0,1.1fr);min-height:620px}#quizContent{padding:28px;max-height:76dvh;overflow:auto}#quizContent h2{font-size:30px;line-height:1.2;margin:14px 0}#quizContent p{line-height:1.6}.quiz-question{font-size:17px;margin-bottom:18px}.quiz-progress{height:4px;background:var(--line);border-radius:5px;margin:14px 0 24px}.quiz-progress i{display:block;height:100%;background:var(--brass)}.answer-options{display:grid;grid-template-columns:1fr 1fr;gap:12px}.answer-option{border:1px solid var(--line);border-radius:12px;padding:16px;background:var(--bench2);text-align:left;line-height:1.5}.answer-option[aria-pressed=true]{border-color:var(--brass);box-shadow:inset 0 0 0 1px var(--brass)}.answer-option b{display:block;font-size:16px}.answer-option blockquote{font-size:12px;padding:10px;margin:14px 0 0;background:transparent}.answer-option .side-label{display:block;font-size:10px;letter-spacing:.12em;margin-bottom:8px}.quiz-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:18px 0}.quiz-actions .primary{margin-left:auto}.priority-label{display:flex;gap:10px;margin:20px 0;color:var(--brass)}input[type=checkbox]{accent-color:var(--brass);width:18px;height:18px}.priority-grid{display:flex;flex-wrap:wrap;gap:8px;margin:25px 0}.priority-grid button{white-space:normal;text-align:left}.match-card{padding:16px;border:1px solid var(--line);border-radius:12px;margin:12px 0;background:var(--bench2)}.match-card .profile-head{margin-bottom:12px}.match-card h3{font-size:15px;text-transform:none;letter-spacing:0;margin:0 0 5px}.match-card p{font-size:13px;margin:7px 0}.match-card .quiet{margin-top:10px}.live-caption{padding:18px;color:var(--brass);font-weight:700}.live-caption span{display:block;color:var(--dim);font-size:12px;font-weight:400;margin-top:5px}#quizMap{border-left:1px solid var(--line);display:flex;flex-direction:column;min-width:0}#quizMap .card{min-height:0;flex:1;border:0;border-radius:0;background:transparent}#quizMap .cardhead,#quizMap .layerbar,#quizMap .card>.meta{display:none!important}#quizMap .cvwrap{min-height:380px}.quiz-map-controls{display:flex;gap:8px;padding:0 18px}.empty-results{padding:30px 0}
+@media(min-width:1500px){.dual{grid-template-columns:1.15fr 1fr}.dual.fullcomb{grid-template-columns:1fr}}
+@media(max-width:1000px){.app,.app.hide-right{grid-template-columns:210px minmax(0,1fr)}.dual{grid-template-columns:1fr}.masthead{padding:0 18px}.brand span{display:none}.quiz-stage{grid-template-columns:1fr 1fr}#quizContent{padding:20px}.answer-options{grid-template-columns:1fr}.answer-option blockquote{display:block}.answer-option .side-label{margin-bottom:3px}}
+@media(max-width:700px){.cardhead .meta{display:none}.cardhead h2{font-size:18px!important}.layerbar .meta{display:none}.layerbar .tbtn-pill{font-size:11px;padding:6px}.display-menu summary{font-size:11px;padding:6px}.mobile-close{display:block}.masthead{height:68px;padding:0 12px}.masthead nav{gap:6px}.masthead .quiet{font-size:11px;padding:8px}.primary{padding:10px 12px}.brand{font-size:21px}.app,.app.hide-right{height:calc(100dvh - 68px);grid-template-columns:0 minmax(0,1fr)}#left{display:none}.app.mobile-topics #left{display:flex;position:fixed;inset:68px 0 0 0;z-index:20;background:var(--bench);padding:20px}.app.mobile-topics main{visibility:hidden}.app.mobile-topics #left:before{content:'Select a topic to return to the map';color:var(--dim);font-size:12px}main{padding:12px}.dual{min-height:600px}.card{padding:12px}.cardhead h2{font-size:20px}.cardhead .seg{max-width:100%;flex-wrap:wrap}.topbar>div{gap:6px!important}.pbar{max-width:100%}.quiz-stage{display:flex;flex-direction:column-reverse;min-height:0}#quizMap{height:240px;flex:none;border:0;border-bottom:1px solid var(--line)}#quizMap .cvwrap{min-height:150px}#quizMap .card{padding:0}#quizMap .live-caption{padding:10px 16px}#quizMap .live-caption span{display:none}.quiz-map-controls{position:absolute;right:15px;margin-top:7px;z-index:1}#quizContent{max-height:none;overflow:visible;padding:20px}#quizDialog{max-height:96dvh;width:96vw}.dialog-top{padding:14px 18px}.dialog-top h2{font-size:20px}.dialog-top .quiet{font-size:11px}.answer-options{grid-template-columns:1fr 1fr}.answer-option{padding:12px}.answer-option b{font-size:14px}.answer-option blockquote{display:block;font-size:11px;padding:0}.answer-option blockquote footer{font-size:10px}.brand span{display:none}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+
+@media(max-width:700px){
+#quizDialog[open]{display:flex;flex-direction:column;height:94dvh;overflow:hidden}#quizDialog .dialog-top{flex:none;padding:12px}#quizDialog .eyebrow{font-size:8px}#quizDialog .dialog-top h2{font-size:18px}.quiz-stage{flex:1;min-height:0;overflow:hidden}#quizMap{height:170px}#quizMap .cvwrap{min-height:115px}#quizMap .live-caption{font-size:11px;padding:6px 12px}.quiz-map-controls{margin-top:2px}#quizContent{flex:1;min-height:0;overflow-y:auto;padding:16px}#quizContent h2{font-size:24px}.answer-options{gap:8px}.answer-option .quote-text{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;line-height:1.5}.answer-option blockquote footer{display:block;font-size:10px;line-height:1.3}.quiz-question{font-size:15px}.quiz-progress{margin:10px 0 14px}
+}
+
+/* Map-first shell: overlays never reserve space beside or above the canvas. */
+.app,.app.hide-left,.app.hide-right,.app.hide-left.hide-right{display:block;width:100%;height:100dvh;overflow:hidden}.app main{display:flex;padding:0;gap:0;height:100%;overflow:hidden;visibility:visible!important}.topbar{display:none!important}.dual,.dual.fullcomb{height:100%;min-height:0;gap:1px;background:var(--line);grid-template-columns:1.15fr 1fr}.dual.fullcomb{grid-template-columns:1fr}.dual>.card{padding:0;border:0;border-radius:0;gap:0;min-height:0;overflow:hidden;background:var(--bench)}.dual>.card>.cvwrap{border:0;border-radius:0;min-height:0;flex:1}.dual>.card>.cardhead,.dual>.card>.layerbar,.dual>.card>.meta{display:none!important}.card.fullscreen{padding:0!important}.canvas-expand{position:absolute;right:18px;bottom:18px;z-index:3;background:#161b24e8!important;border:1px solid var(--line)!important}.canvas-heading{position:absolute;left:20px;top:80px;z-index:2;max-width:85%;font-size:13px;color:var(--dim);pointer-events:none}.dual.fullcomb .canvas-heading{display:none}#indCard .canvas-heading{top:82px}.card.fullscreen .canvas-heading{top:18px}
+#left,.app.hide-left #left,.app.mobile-topics #left{display:flex;position:fixed;inset:0 auto 0 0;width:300px;max-width:calc(100vw - 48px);height:100dvh;z-index:50;padding:22px 16px 0;background:#131821f7;backdrop-filter:blur(16px);border-right:1px solid var(--line);opacity:1;transform:translateX(-101%);transition:transform .18s ease;pointer-events:none;box-shadow:20px 0 60px #0003;overflow:hidden}.app.topics-open #left{transform:translateX(0);pointer-events:auto}.app.mobile-topics #left:before{display:none}#left h1{font-size:18px}#left .mobile-close{display:flex}#leftTopicsPane>p{display:none}#leftmode,#leftQuizPane{display:none!important}#topics{margin-top:0}.topic-handle{position:fixed!important;left:0;top:46%;z-index:45;width:36px;height:64px;border:1px solid var(--line)!important;border-left:0!important;border-radius:0 12px 12px 0!important;background:#161b24f0!important;color:var(--brass)!important}
+.settings-body{padding:24px;display:flex;flex-direction:column;gap:22px}.settings-group{display:flex;flex-direction:column;gap:10px}.settings-group h3{font-size:12px;margin:0;text-transform:none;letter-spacing:0;color:var(--dim)}.settings-group .seg{align-self:flex-start;flex-wrap:wrap;border-radius:12px}.settings-group .seg button{padding:10px 13px;white-space:normal;font-size:13px}.settings-row{display:flex;flex-wrap:wrap;gap:8px}.settings-row .tbtn-pill,.settings-group .pchip{padding:9px 13px;font-size:13px}.settings-group .pbar{gap:8px}#settingsDialog{width:min(560px,94vw)}#searchDialog{width:min(520px,94vw)}#searchBody #mpsearch{width:100%!important;font-size:16px!important;padding:12px!important;height:48px}#searchBody p{order:2}#settingsDialog .dialog-top h2,#searchDialog .dialog-top h2{font-size:22px}
+#quizMap .canvas-expand,#quizMap .canvas-heading{display:none!important}#quizMap .cvwrap{min-height:0}#quizMap .card{overflow:hidden}#tip{max-width:min(310px,85vw)}
+
+
+.neighbour-panel{margin:24px 0;padding-top:16px;border-top:1px solid var(--line)}
+#compareSelect{width:100%;padding:10px;margin:8px 0 16px;background:var(--bench);color:var(--ink);border:1px solid var(--line);border-radius:8px}
+.comparison-evidence{padding:12px 0;border-bottom:1px solid var(--line)}
+.comparison-evidence summary{cursor:pointer;font-weight:600}
+.comparison-evidence h4{margin:16px 0 4px}
+
+.journey-entry{position:fixed;bottom:18px;left:18px;z-index:25;box-shadow:0 6px 22px #0004}
+.topic-areas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:20px 0}
+.topic-areas details{border:1px solid var(--line);border-radius:12px;padding:12px;background:var(--bench2)}
+.topic-areas summary{cursor:pointer;font-weight:600;list-style:none}.topic-areas summary span{display:block;color:var(--dim);font-size:11px;font-weight:400;margin-top:4px}
+.topic-areas details[open]{grid-column:1/-1}.area-topics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-top:10px}
+.suggested-start{white-space:normal;text-align:left;max-width:100%}.selection-note{font-size:12px;color:var(--dim);margin-bottom:14px}
+@media(max-width:600px){.area-topics{grid-template-columns:1fr}.topic-areas{gap:6px}.topic-areas details{padding:10px}}
+
+.answer-options .answer-option{width:100%;height:100%;min-height:85px}.answer-options>div{display:flex;flex-direction:column}.answer-options{align-items:start}.answer-options .answer-option{height:auto;flex:none}.quiz-source{font-size:12px;line-height:1.5;margin-top:10px}.quiz-source summary{cursor:pointer;color:var(--brass)}.quiz-source small{overflow-wrap:anywhere}.quiz-source .quote-text{display:block!important;-webkit-line-clamp:unset!important}
+
+#relationshipPanel{position:fixed;inset:120px 16px 16px;z-index:32;overflow:auto;background:#0e1117f5;padding:20px;border:1px solid var(--line);border-radius:16px}#relationshipPanel[hidden]{display:none}.relationship-toolbar{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center}.relationship-toolbar label{font-size:12px}.relationship-toolbar select{max-width:260px;background:var(--bench);color:var(--ink);padding:8px;border:1px solid var(--line);border-radius:8px}.relationship-grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px;margin-top:16px}#relationshipPlot{width:100%;max-height:calc(100dvh - 260px);min-height:340px}#relationshipPlot text{fill:#9aa4b2;font:12px sans-serif}#relationshipPlot [role=button]{cursor:pointer}#relationshipPlot [role=button]:focus circle{stroke:white;stroke-width:4}.relationship-detail h2{font-size:21px}.relationship-neighbour{display:block;width:100%;text-align:left;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--ink);padding:10px 0;cursor:pointer}.relationship-neighbour span,.relationship-neighbour small{display:block}.relationship-neighbour small{color:var(--dim)}.relationship-neighbour meter{width:100%;height:5px}.relationship-detail details{font-size:12px;margin-top:20px}.relationship-detail .primary{margin-top:20px}body[data-module=relationships] #mapTools{display:none}
+
+.quiz-context{font-size:12px;margin:0 0 12px;color:var(--dim)}.quiz-context summary{cursor:pointer}#quizDialog .side-label{color:var(--dim)!important}
+
+body[data-module=relationships] #left,body[data-module=relationships] .topic-handle,body[data-module=quiz] #left,body[data-module=quiz] .topic-handle{display:none!important}#relationshipPanel{background:#0e1117}body[data-module=relationships] .app{visibility:hidden}
+
+
+.stance-switch{display:flex;gap:8px;margin:16px 0;flex-wrap:wrap}.stance-switch button{flex:1;min-width:180px;text-align:left;padding:12px 15px;border:1px solid var(--line);border-radius:10px;background:var(--bench2);color:var(--ink);cursor:pointer}.stance-switch button[aria-pressed=true]{border-color:var(--brass);color:var(--brass)}.relationship-toolbar .seg{flex-wrap:wrap}.relationship-detail h2{overflow-wrap:anywhere}
+
+/* ===== MP3D layout layer =====
+   Rules: edge-attached surfaces (top bar, drawers) are square; floating things are radius 8.
+   Every control is 32px tall. Every floating element sits 16px from the canvas edge. */
+:root{--bench:#0e1117;--bench2:#161b24;--bench3:#1f2633;--line:#273142;--ink:#eef1f5;--dim:#9aa4b2;--muted:#6b7584;
+  --brass:#d9b45f;--surface:#161b24;--r:8px;--h:32px;--gap:16px;--top:48px}
+html,body{background:var(--bench);overflow:hidden}
+/* top bar */
+.masthead{position:relative;inset:auto;z-index:50;height:var(--top);padding:0 var(--gap);display:flex;align-items:center;
+  justify-content:space-between;background:var(--bench);border-bottom:1px solid var(--line);pointer-events:auto}
+.brand{font:700 17px var(--display);gap:10px;color:var(--ink)}
+.brand .brand-sub{display:inline;font:600 10px var(--body);letter-spacing:.16em;color:var(--brass)}
+.mode-tabs{position:absolute;left:50%;transform:translateX(-50%);display:flex;gap:2px;padding:2px;height:var(--h);
+  background:var(--bench2);border:1px solid var(--line);border-radius:var(--r)}
+.mode-tabs .tab-btn{height:100%;padding:0 14px;border:0;border-radius:6px;background:transparent;color:var(--dim);font:600 13px var(--body)}
+.mode-tabs .tab-btn:hover{color:var(--ink)}
+.mode-tabs .tab-btn[aria-pressed=true]{background:var(--bench3);color:var(--ink)}
+.masthead-actions{display:flex;gap:4px}
+.nav-action-btn{display:inline-flex;align-items:center;gap:6px;height:var(--h);padding:0 10px;border:0;border-radius:var(--r);
+  background:transparent;color:var(--dim);font:600 13px var(--body);text-decoration:none}
+.nav-action-btn:hover{background:var(--bench2);color:var(--ink)}
+/* shell */
+.app,.app.hide-left,.app.hide-right,.app.hide-left.hide-right{display:block;height:calc(100dvh - var(--top));position:relative;overflow:hidden}
+.app main{height:100%;padding:0;gap:0}
+.dual,.dual.fullcomb{height:100%;display:block;background:none}
+#combCard{height:100%;padding:0;border:0;border-radius:0;background:var(--bench);display:flex;flex-direction:column;position:relative}
+#combCard>.cvwrap{flex:1;min-height:0;border:0;border-radius:0;background:var(--bench)}
+.dual.fullcomb #indCard{display:none!important}
+.dual:not(.fullcomb){display:grid;grid-template-columns:1.15fr 1fr;gap:1px;background:var(--line)}
+#indCard{height:100%;padding:0;border:0;border-radius:0;background:var(--bench);display:flex;flex-direction:column;position:relative}
+#indCard>.cvwrap{flex:1;min-height:0;border:0;border-radius:0;background:var(--bench)}
+#indCard>.meta{display:flex;justify-content:space-between;padding:8px 16px;font-size:12px;border-top:1px solid var(--line)}
+/* floating map controls */
+.canvas-topic-bar{position:absolute;top:var(--gap);left:var(--gap);z-index:5;display:flex;align-items:flex-start;gap:8px;max-width:calc(100% - 2*var(--gap))}
+.topic-trigger-btn,.dim-toggle,.zoom-toast,.active-topic-chip{background:var(--bench2);border:1px solid var(--line);border-radius:var(--r);box-shadow:none}
+.topic-trigger-btn{display:inline-flex;align-items:center;gap:8px;height:var(--h);padding:0 12px;color:var(--ink);font:600 13px var(--body);flex:none}
+.topic-trigger-btn:hover{border-color:var(--muted)}
+.topic-trigger-btn .count-tag{font:600 11px var(--body);color:var(--dim);background:none;border:0;padding:0}
+.active-topic-chip{display:none;align-items:flex-start;gap:12px;padding:6px 8px 7px 12px;max-width:460px;min-height:var(--h)}
+.active-topic-chip .chip-text{display:flex;flex-direction:column;gap:2px;min-width:0;padding-top:1px}
+.active-topic-chip #activeTopicChipTitle{font:600 13px/1.35 var(--body);color:var(--ink)}
+.active-topic-chip #activeTopicChipQ{font:400 12px/1.4 var(--body);color:var(--dim);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.active-topic-chip #activeTopicChipQ:empty{display:none}
+.active-topic-chip button{flex:none;width:20px;height:20px;border:0;border-radius:4px;background:none;color:var(--dim);font-size:13px;line-height:1;padding:0}
+.active-topic-chip button:hover{background:var(--bench3);color:var(--ink)}
+.canvas-bottom-right{position:absolute;right:var(--gap);bottom:var(--gap);z-index:5;display:flex;align-items:center;gap:8px}
+.dim-toggle{display:flex;height:var(--h);padding:2px;gap:2px}
+.dim-toggle button{height:100%;padding:0 10px;border:0;border-radius:6px;background:none;color:var(--dim);font:600 12px var(--body)}
+.dim-toggle button[aria-pressed=true]{background:var(--bench3);color:var(--ink);border:0}
+.zoom-toast{height:var(--h);display:flex;align-items:center;padding:0 10px;color:var(--ink);font:600 12px var(--body);font-variant-numeric:tabular-nums;
+  opacity:0;pointer-events:none;transition:opacity .2s;cursor:pointer}
+.zoom-toast.visible{opacity:1;pointer-events:auto}
+.canvas-hint{position:absolute;left:var(--gap);bottom:var(--gap);z-index:4;height:var(--h);display:flex;align-items:center;color:var(--muted);font-size:12px;pointer-events:none}
+/* topics drawer (edge-attached, square) */
+#left,.app.hide-left #left,.app.mobile-topics #left{position:fixed;top:var(--top);bottom:0;left:0;height:auto;width:320px;max-width:calc(100vw - 48px);
+  z-index:45;padding:var(--gap);gap:12px;background:var(--bench2);backdrop-filter:none;border-right:1px solid var(--line);border-radius:0;
+  box-shadow:16px 0 40px rgba(0,0,0,.35);display:flex;transform:translateX(-101%);transition:transform .18s ease;pointer-events:none}
+.app.topics-open #left{transform:none;pointer-events:auto}
+#left h1{font:700 16px var(--display)}
+#left .mobile-close{display:flex;align-items:center;justify-content:center;width:var(--h);height:var(--h);padding:0;border:0;border-radius:var(--r);color:var(--dim)}
+#left .mobile-close:hover{background:var(--bench3);color:var(--ink)}
+#tsearch{height:var(--h);border-radius:var(--r);background:var(--bench);border:1px solid var(--line);padding:0 10px}
+#topics{margin-top:4px}.tbtn{border-radius:6px;padding:8px}
+/* shared controls */
+.seg{border-radius:var(--r);background:var(--bench);border:1px solid var(--line);padding:2px;gap:2px}
+.seg button{border-radius:6px;padding:6px 10px;color:var(--dim)}
+.seg button[aria-pressed=true]{background:var(--bench3);color:var(--ink)}
+.tbtn-pill,.pchip,.quiet{border-radius:var(--r)}
+.tbtn-pill{height:var(--h);padding:0 12px;background:var(--bench2);border:1px solid var(--line);color:var(--ink)}
+.tbtn-pill[aria-pressed=true]{background:var(--bench3);border-color:var(--brass);color:var(--ink)}
+.primary{border-radius:var(--r);color:#0e1117}
+.quiet{border-color:var(--line)}
+.badge{border-radius:4px}
+/* dialogs: one radius, one header */
+dialog{background:var(--bench2);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 24px 64px rgba(0,0,0,.5)}
+dialog::backdrop{background:rgba(7,9,13,.72);backdrop-filter:none}
+.dialog-top{padding:14px 20px}
+.dialog-top h2{font-size:18px;margin:0}
+.dialog-top .quiet{border:0;width:auto;min-width:var(--h);height:var(--h);padding:0 10px;white-space:nowrap;color:var(--dim)}
+.dialog-top .quiet:hover{background:var(--bench3);color:var(--ink)}
+.drawer{margin:var(--top) 0 0 auto;height:calc(100dvh - var(--top));max-height:none;border-radius:0;border-width:0 0 0 1px;box-shadow:-16px 0 40px rgba(0,0,0,.35)}
+.drawer::backdrop{background:rgba(7,9,13,.35)}
+.drawer .dialog-top{position:sticky;top:0;background:var(--bench2);z-index:1}
+blockquote{border-radius:0 var(--r) var(--r) 0;background:var(--bench3)}
+.evidence-topic,.match-card,.answer-option{border-radius:var(--r)}
+/* Find my place: a page under the persistent top bar */
+#quizDialog,#quizDialog[open]{position:fixed;inset:var(--top) 0 0 0;width:100%;max-width:none;height:auto;max-height:none;margin:0;padding:0;
+  border:0;border-radius:0;box-shadow:none;background:var(--bench);z-index:40;overflow:hidden}
+#quizDialog[open]{display:flex;flex-direction:column}
+#quizDialog>.dialog-top{display:none}
+#quizDialog .quiz-stage{flex:1;min-height:0;display:grid;grid-template-columns:minmax(360px,460px) minmax(0,1fr);overflow:hidden}
+#quizContent{padding:32px 32px 40px;max-height:none;overflow-y:auto;border-right:1px solid var(--line)}
+#quizContent>.eyebrow{display:block;margin-bottom:4px}
+#quizContent h2{font-size:26px;line-height:1.2;margin:4px 0 12px}
+#quizContent .topic-areas{display:flex;flex-direction:column;margin-top:16px;border-top:1px solid var(--line)}
+#quizContent .topic-areas details{border-bottom:1px solid var(--line)}
+#quizContent .topic-areas summary{display:flex;justify-content:space-between;gap:12px;padding:12px 0;color:var(--ink);font-weight:600;list-style:none}
+#quizContent .topic-areas summary::-webkit-details-marker{display:none}
+#quizContent .topic-areas summary span{color:var(--dim);font-weight:400;font-size:12px}
+#quizContent .area-topics{display:flex;flex-direction:column;gap:6px;padding:0 0 12px}
+#quizContent .suggested-start{margin:8px 0 4px}
+#quizContent .selection-note{margin-top:12px;font-size:12px}
+#quizMap{position:relative;display:flex;flex-direction:column;min-width:0;border:0;background:var(--bench)}
+@keyframes captionPulse{0%,100%{opacity:1}50%{opacity:.4}}
+#quizMap .live-caption{position:absolute;top:var(--gap);left:var(--gap);z-index:3;padding:0;font-size:15px;font-weight:700;color:var(--brass);max-width:calc(100% - 260px)}
+#quizMap .live-caption span{display:block;color:var(--ink);font-size:15px;font-weight:600;margin-top:3px}
+#quizMap .live-caption.unplaced span{font-size:19px;line-height:1.25;animation:captionPulse 1.6s ease-in-out infinite}
+#quizMap .live-caption.flash{animation:captionPulse .45s ease-in-out 2}
+#quizMap .quiz-map-controls{position:absolute;top:var(--gap);right:var(--gap);z-index:3;display:flex;gap:8px;padding:0;margin:0}
+#quizMap #combCard{flex:1;height:auto;min-height:0}
+#quizMap #canvasTopicBar,#quizMap .canvas-hint,#quizMap .canvas-bottom-right{display:none!important}
+/* Topic relationships: a page under the persistent top bar */
+#relationshipPanel{position:fixed;inset:var(--top) 0 0 0;z-index:40;padding:24px 32px;border:0;border-radius:0;background:var(--bench);overflow:auto}
+#relationshipPanel>*{max-width:1280px;margin-left:auto;margin-right:auto}
+.relationship-toolbar select{height:var(--h);border-radius:var(--r);background:var(--bench2)}
+.stance-switch button{border-radius:var(--r)}
+body[data-module=relationships] #left,body[data-module=quiz] #left{display:none!important}
+/* settings */
+.settings-group .seg{border-radius:var(--r)}
+#settingsBody .tbtn-pill,#settingsBody .pchip{height:var(--h);padding:0 12px}
+#searchBody #mpsearch{height:40px;border-radius:var(--r)}
+
+/* flat lists, uniform buttons */
+#quizContent .topic-areas details{border:0;border-bottom:1px solid var(--line);border-radius:0;padding:0;background:none;margin:0}
+#quizContent .topic-areas summary{padding:12px 0;min-height:0}
+#quizContent .area-topics .evidence-topic{margin:0;padding:8px 12px;background:var(--bench2)}
+#quizContent .quiet,#quizContent .primary{height:var(--h);padding:0 14px;font-size:13px;display:inline-flex;align-items:center;gap:6px}
+.quiz-question-list{display:grid;gap:6px;margin-top:8px}.match-question{border-top:1px solid var(--line);margin-top:12px;padding-top:8px}
+#quizContent input[type=checkbox]{width:16px;height:16px;accent-color:var(--brass)}
+#relationshipPlot text{font:12px var(--body);fill:var(--dim)}
+.relationship-toolbar select,.relationship-toolbar label{font:13px var(--body);color:var(--dim)}
+.relationship-toolbar select{color:var(--ink);padding:0 10px}
+@media(max-width:860px){
+  .brand .brand-sub{display:none}
+  .mode-tabs{position:static;transform:none}
+  .mode-tabs .tab-btn{padding:0 8px;font-size:12px}
+  .nav-action-btn span{display:none}
+  #aboutOpen{display:none}
+  #quizDialog .quiz-stage{display:flex;flex-direction:column-reverse}
+  #quizMap{height:38dvh;flex:none;border-bottom:1px solid var(--line)}
+  #quizContent{border-right:0;padding:20px}
+  .canvas-hint{display:none}
+}
+@media(max-width:560px){.masthead{gap:6px;padding:0 8px}.brand{font-size:15px}.mode-tabs .tab-btn{padding:0 6px;font-size:11px}}
+.axis-context{font-weight:650;margin:0 0 8px}
+.axis-body{padding:16px 20px 20px}
+.axis-charts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:18px}
+#axesDialog{width:min(1040px,94vw)}
+#axesDialog .dialog-top{position:sticky;top:0;z-index:1;background:var(--bench2)}
+.axis-chart{min-width:0;border:1px solid var(--line);border-radius:var(--r);padding:12px}
+.axis-chart h3{margin:0 0 8px}
+.axis-ticks,.axis-row-label{display:flex;justify-content:space-between;gap:8px;font-variant-numeric:tabular-nums}
+.axis-ticks{color:var(--dim);font-size:11px;padding:0 4px}
+.axis-row{display:block;width:100%;padding:8px 4px;border:0;border-radius:4px;background:none;text-align:left}
+.axis-row:hover,.axis-row:focus-visible{background:var(--bench3)}
+.axis-row-label strong{font-weight:600}
+.axis-pole{display:block;margin:2px 0 5px;color:var(--dim);font-size:11px}
+.axis-track{display:block;position:relative;height:8px;background:var(--bench);border-radius:2px}
+.axis-track::after{content:"";position:absolute;left:50%;height:100%;border-left:1px solid var(--muted)}
+.axis-track i{position:absolute;height:100%;border-radius:2px;background:var(--brass)}
+.axis-track .negative{background:#82a9d9}
+.debate-position{border-bottom:1px solid var(--line);padding:10px 0}
+.debate-position>summary,.position-speech>summary{cursor:pointer}
+.debate-position>summary strong{display:block;margin-top:4px}
+.debate-position>summary small{display:block;color:var(--dim)}
+.position-side{font-size:12px;font-weight:700}
+.position-side.for{color:var(--yes)}.position-side.against{color:var(--no)}.position-side.both{color:var(--brass)}
+.position-speech{margin:8px 0;padding:8px 10px;background:var(--bench);border-radius:var(--r)}
+.position-speech ul{padding-left:18px;color:var(--dim);font-size:12px}
+.position-text{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.55}
+@media(max-width:780px){.axis-charts{grid-template-columns:1fr}}
+@media(max-width:560px){.canvas-topic-bar{flex-wrap:wrap}.active-topic-chip{max-width:100%}}
+
+#appRoot #left{inset:var(--top) 0 0 auto;width:min(540px,100vw);max-width:100%;border-right:0;border-left:1px solid var(--line);transform:translateX(101%);box-shadow:-16px 0 40px #0004}
+#appRoot.topics-open #left{transform:none}
+#topicPicker{flex:none}
+#topicPicker summary{cursor:pointer;padding:8px 0;color:var(--brass)}
+#topicPicker #topics{max-height:28dvh;overflow:auto}
+#left #indCard{flex:1;min-height:0;height:auto}
+#left #indCard .cardhead{padding:8px 4px;display:flex;flex-wrap:wrap}
+#left #indCard .cardhead .meta{display:block}
+#left #indCard .cvwrap{min-height:0}
+#indCard #indlo,#indCard #indhi{max-width:48%;overflow-wrap:anywhere}
+#quizContent .question-secondary{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+#quizContent .question-secondary button{min-height:44px;height:auto;padding:8px}
+#quizContent .answer-options{grid-template-columns:1fr}
+#quizContent .question-context{margin:12px 0}
+#quizContent .question-context summary{cursor:pointer;color:var(--brass)}
+#quizContent .priority-list label{display:flex;gap:8px;align-items:center;padding:6px 0}
+
+#quizDialog[data-step="questions"] #quizMap .live-caption{display:none}
+@media(max-width:720px){
+  #quizDialog[data-step="questions"] #quizMap{height:34dvh}
+  #quizDialog[data-step="questions"] #quizContent{padding:12px 16px}
+  #quizDialog[data-step="questions"] #quizContent h2{font-size:20px;margin:8px 0}
+  #quizContent .question-context{margin:8px 0 12px}
+  #quizDialog[data-step="questions"] #quizContent .answer-option{padding:8px 12px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-left">
+    <a class="brand" href="app.html">MP3D</a>
+  </div>
+  <nav class="mode-tabs" id="modeNav" aria-label="Explore MP3D">
+    <button data-module="explore" class="tab-btn active" aria-pressed="true">Explore</button>
+    <button data-module="quiz" class="tab-btn" id="quizOpen" aria-pressed="false">Find my place</button>
+    <button data-module="relationships" class="tab-btn" aria-pressed="false">Topic relationships</button>
+  </nav>
+  <div class="masthead-actions">
+    <button class="nav-action-btn" id="searchOpen" title="Find an MP">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>
+      <span>Find MP</span>
+    </button>
+    <button class="nav-action-btn" id="settingsOpen" title="Map display settings">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/><circle cx="9" cy="6" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="8" cy="18" r="2"/></svg>
+      <span>View</span>
+    </button>
+    <button class="nav-action-btn" id="aboutOpen">How it works</button>
+  </div>
+</header>
+
+<div class="app" id="appRoot">
+  <aside id="left">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:6px">
+      <h1>Explore topics</h1><button class="quiet mobile-close" id="closeTopics" aria-label="Close topics">✕</button>
+      <div class="seg" id="leftmode" style="display:none">
+        <button data-lmode="quiz" aria-pressed="false">★ Your Beliefs</button>
+        <button data-lmode="topics" aria-pressed="true">Topics (72)</button>
+      </div>
+    </div>
+
+    <details id="topicPicker" open><summary>Choose a topic</summary>
+    <div id="leftTopicsPane" style="display:flex;flex-direction:column;gap:6px;flex:1;min-height:0">
+      <p class="meta">Choose an issue. See what brings MPs together — and what sets them apart.</p>
+      <input id="tsearch" type="search" aria-label="Search topics" placeholder="Search topic or belief…" autocomplete="off">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <span class="meta" style="font-size:11px">Sort:</span>
+        <div class="seg" id="tsort">
+          <button data-sort="default" aria-pressed="true">Split</button>
+          <button data-sort="nonparty" aria-pressed="false">Cross-Party</button>
+          <button data-sort="val" aria-pressed="false">Validated</button>
+        </div>
+      </div>
+      <div id="topics"></div>
+    </div>
+
+    </details>
+      <div class="card" id="indCard">
+        <div class="cardhead">
+          <div>
+            <h2 id="indtitle">Individual Topic Space</h2>
+            <p class="meta" id="indsub">Position across · Attention to this topic upwards · Arrows show 2024 → 2026 changes</p>
+          </div>
+          <div style="display:flex;align-items:center;gap:5px;flex-wrap:wrap">
+            <div class="seg" id="indview">
+              <button data-iv="mps" aria-pressed="true" title="Plot MPs on this topic's Position (X) vs Focus (Y)">MP Scatter</button>
+              <button data-iv="poles" aria-pressed="false" title="Plot all 20 Topic Poles as a clean constellation on the unit disk">Topic Constellation</button>
+            </div>
+            <span class="badge" id="indcount"></span>
+            <button class="tbtn-pill" id="btnFullInd" aria-pressed="false" title="Expand Individual Topic Space to Fullscreen (Esc to exit)">⛶ Fullscreen</button>
+          </div>
+        </div>
+        <div class="cvwrap"><canvas id="cvInd" role="img" aria-label="MP positions and speech focus on the selected topic"></canvas></div>
+        <div class="meta" style="display:flex;justify-content:space-between;font-size:11.5px">
+          <span id="indlo" style="color:var(--no);font-weight:600">← Pole −</span>
+          <span id="indhi" style="color:var(--yes);font-weight:600">Pole + →</span>
+        </div>
+      </div>
+    <div id="leftQuizPane" style="display:none;flex-direction:column;gap:6px;flex:1;min-height:0">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <span class="meta" id="quizCount">0 / 20 beliefs chosen</span>
+        <div style="display:flex;gap:6px">
+          <button class="link" id="presetLeft" title="Sample progressive/public-ownership beliefs">Demo A</button>
+          <button class="link" id="presetRight" title="Sample market/deterrence beliefs">Demo B</button>
+          <button class="link" id="clearQuiz">Reset</button>
+        </div>
+      </div>
+      <p class="meta" style="font-size:11.5px">Pick your core beliefs below to place <b>★ YOU</b> inside the 3D Commons Sphere and find your closest MPs & Parties.</p>
+      <div id="quizList"></div>
+    </div>
+  </aside>
+
+  <main>
+    <div class="topbar" style="display:none">
+      <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+        <button class="tbtn-pill" id="btnHideLeft" aria-pressed="false" title="Show/hide the left topic & quiz sidebar">◀ Hide Topics</button>
+        <div class="seg" id="histmode">
+          <button data-hm="cur" aria-pressed="true" title="Base the entire map & matches on the current 2024–2026 Parliament">This Parliament (2024–26)</button>
+          <button data-hm="all" aria-pressed="false" title="Include 2022–2024 Parliament speeches for returning MPs & ministers">All History (2022–26)</button>
+        </div>
+        <div class="seg" id="spacemode">
+          <button data-sm="bal" aria-pressed="true" title="Party-balanced & spherically whitened: shows overall Commons ideological & conscience space">All Commons</button>
+          <button data-sm="within" aria-pressed="false" title="Every MP minus their party average: shows cross-cutting beliefs & rebels independent of party">Party Removed</button>
+        </div>
+        <div class="seg" id="dimmode">
+          <button data-dm="2" aria-pressed="true">2D Circle</button>
+          <button data-dm="3" aria-pressed="false">3D Sphere</button>
+        </div>
+        <div class="seg" id="layoutmode">
+          <button data-lm="dual" aria-pressed="false">Topic panel</button>
+          <button data-lm="full" aria-pressed="true">Map only</button>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+        <input id="mpsearch" type="search" aria-label="Find an MP by name" list="mpNames" placeholder="Find MP (e.g. Haigh, Corbyn)…" style="width:160px;padding:3px 8px;font-size:12px" autocomplete="off">
+        <details class="display-menu"><summary>Filter parties</summary><div class="pbar" id="pbar"></div></details>
+        <button class="tbtn-pill" id="btnHideRight" aria-pressed="false" title="Show/hide the right evidence & details sidebar">Hide Evidence ▶</button>
+      </div>
+    </div>
+
+    <div class="polebanner" id="polebanner"></div>
+
+    <div class="dual" id="dualWrap">
+      <div class="card" id="combCard">
+        <div class="canvas-topic-bar" id="canvasTopicBar">
+          <button id="openTopicsBtn" class="topic-trigger-btn" aria-label="Explore topics" title="Open topics list">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <span>Topics</span>
+            <span class="count-tag" id="topicsBadgeCount">72</span>
+          </button>
+          <button id="mapAxesBtn" type="button" class="topic-trigger-btn" aria-haspopup="dialog">Map axes</button>
+          <div id="activeTopicChip" class="active-topic-chip" style="display:none">
+            <span class="chip-text"><span id="activeTopicChipTitle"></span><span id="activeTopicChipQ"></span></span>
+            <button id="clearTopicChipBtn" title="Back to All Topics" aria-label="Clear active topic">✕</button>
+          </div>
+        </div>
+
+        <div class="canvas-bottom-right">
+          <div id="zoomToast" class="zoom-toast" role="status" aria-live="polite" title="Click to reset zoom to 100%">100%</div>
+          <div class="dim-toggle" id="dimToggleWrap">
+            <button data-dm="2" aria-pressed="true" title="2D Circle view">2D</button>
+            <button data-dm="3" aria-pressed="false" title="3D Sphere view">3D</button>
+          </div>
+        </div>
+
+        <div class="canvas-hint" id="canvasHint">
+          <span>Click any MP dot, Party Average, or rim topic to inspect evidence</span>
+        </div>
+
+        <div class="cardhead" style="display:none">
+          <div>
+            <h2>The Commons, connected</h2>
+            <p class="meta" id="combSub">A map of beliefs, drawn from MPs’ own words.</p>
+          </div>
+          <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+            <details class="display-menu"><summary>Map colouring</summary><div class="seg" id="combview">
+              <button data-cv="rim" aria-pressed="true" title="Clean sphere: topics shown as clickable compass ticks around the outer rim">Rim Compass</button>
+              <button data-cv="topic" aria-pressed="false" title="Colour MPs by their stance on the active topic">Active Topic</button>
+              <button data-cv="align" aria-pressed="false" title="Rotate the Combined Space so the active topic's Pole − ↔ Pole + is horizontal Left ↔ Right">Align Horizontal</button>
+            </div>
+            </details><button class="tbtn-pill" id="btnFullComb" aria-pressed="false" title="Expand 3D/2D Sphere to Fullscreen (Esc to exit)">⛶ Fullscreen</button>
+          </div>
+        </div>
+
+        <div class="layerbar" style="display:none">
+          <div style="display:flex;align-items:center;gap:4px;flex-wrap:wrap">
+            <span class="meta" style="font-size:11px;margin-right:2px">Show:</span>
+            <button class="tbtn-pill" id="togParties" aria-pressed="true" title="Show Party Average centroids (Lab, Con, LD, RUK, Green, SNP, PC, DUP)">Party averages</button>
+            <button class="tbtn-pill" id="togPartiesOnly" aria-pressed="false" title="Hide individual MP dots and show ONLY Party Averages (and ★ YOU)">Parties Only</button>
+            <details class="display-menu"><summary>More layers</summary><div class="extra-layers"><button class="tbtn-pill" id="togMPs" aria-pressed="true" title="Show/hide individual MP dots">MP Dots</button>
+            <button class="tbtn-pill" id="togNames" aria-pressed="true" title="Show/hide MP surname labels">Names</button>
+            <button class="tbtn-pill" id="togRim" aria-pressed="true" title="Show/hide topic rim labels and interior diameter line">Rim &amp; Axis</button></div></details>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <label class="meta" style="display:inline-flex;align-items:center;gap:4px;cursor:pointer;font-size:11px" title="Pull MPs toward their stance on the active topic">
+              <input type="range" id="pull" min="0" max="100" value="0" style="width:55px;accent-color:var(--brass)">
+              <span>Topic Pull</span>
+            </label>
+            <span class="badge" id="diamfit"></span>
+          </div>
+        </div>
+
+        <div class="cvwrap"><canvas id="cvComb" role="img" aria-label="Interactive Commons map. Drag to rotate, scroll or pinch to zoom."></canvas></div>
+        <div class="meta" style="display:none">
+          <span id="combFootL">● Click any rim topic, Party Average, or MP dot to inspect</span>
+          <span id="combFootR">2D Circle · Switch to 3D Sphere to rotate freely</span>
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+</div>
+
+<dialog id="evidenceDialog" class="drawer" aria-label="MP profiles and speech evidence"><div class="dialog-top"><h2>Speech evidence</h2><button class="quiet" data-close="evidenceDialog" aria-label="Close evidence">✕ Close</button></div><aside id="right"></aside></dialog>
+<dialog id="aboutDialog" aria-labelledby="aboutTitle"><div class="dialog-top"><h2 id="aboutTitle">A map made from words</h2><button class="quiet" data-close="aboutDialog">✕ Close</button></div><div class="about-copy"><p>MP3D maps patterns in MPs’ expressed positions and speech topics. Proximity is a compressed view of those patterns, not a guarantee of agreement; select an MP to compare the evidence behind nearby neighbours. Choose a topic to follow the divide through the centre of the sphere.</p><p><b>All Commons</b> shows the shared political space. <b>Party Removed</b> subtracts each MP’s party average to reveal differences within parties.</p><p>Twenty belief scales use real speech excerpts. Other topics show what MPs talk about. In the topic chart, position runs horizontally and attention to the issue runs vertically. Arrows connect earlier and recent positions where evidence is available.</p><p>Your star combines the answers you give, with extra weight for your priorities. MP matches require at least three shared directional answers and are ranked by recorded agreement; map distance only breaks ties. The star is a provisional projection, not a validated estimate of your political identity. Parties are ordered by distance to their average. These are exploratory comparisons, not voting recommendations or percentages of agreement. Neutral answers centre your star; skipped questions do not count.</p><p>Speeches only capture part of a person’s views. Missing evidence is not disagreement. Your answers stay in this page and reset when you reload.</p><button class="topic-trigger-btn" id="aboutAxesBtn" aria-haspopup="dialog">See what the map axes pick up</button></div></dialog>
+<dialog id="axesDialog" aria-labelledby="axesTitle"><div class="dialog-top"><h2 id="axesTitle">What the map axes pick up</h2><button class="quiet" data-close="axesDialog">✕ Close</button></div><div class="axis-body" id="axesBody"></div></dialog>
+<dialog id="quizDialog" aria-labelledby="quizTitle">
+  <div class="dialog-top">
+    <button class="nav-action-btn" data-close="quizDialog" id="quizBackBtn">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      <span>← Back to Map</span>
+    </button>
+    <div><h2 id="quizTitle">Where do you stand?</h2></div>
+    <button class="quiet text-btn" data-close="quizDialog" aria-label="Close">✕</button>
+  </div>
+  <div class="quiz-stage">
+    <section id="quizContent" aria-live="polite"></section>
+    <section id="quizMap">
+      <div class="live-caption">★ Your provisional position <span>Choose Option A or B to place your star</span></div>
+    </section>
+  </div>
+</dialog>
+<datalist id="mpNames"></datalist>
+<dialog id="settingsDialog" aria-labelledby="settingsTitle"><div class="dialog-top"><h2 id="settingsTitle">Map settings</h2><button class="quiet" data-close="settingsDialog" aria-label="Close settings">✕</button></div><div class="settings-body" id="settingsBody"></div></dialog>
+<dialog id="searchDialog" aria-labelledby="searchTitle"><div class="dialog-top"><h2 id="searchTitle">Find an MP</h2><button class="quiet" data-close="searchDialog" aria-label="Close search">✕</button></div><div class="settings-body" id="searchBody"><p class="meta">Type a name and choose an MP.</p></div></dialog>
+<div id="tip"></div>
+<script>
+__TOPIC_SELECTION__
+__VISITOR_PLACEMENT__
+__TOPIC_RELATIONSHIPS__
+__MAP_EVIDENCE__
+const D=__DATA__;
+const M=D.mps, P=D.parties, T=D.topics;
+const debateEvidence = D.debate_evidence || {};
+const debatePositions = MP3DMapEvidence.indexPositions(debateEvidence.fights);
+const DEFAULT_LEFT_MODE = "topics";
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+// Suggested debates have distinct answer poles and speech examples on both sides.
+const extraQuizQuestions = new Map([
+  ["Two-Child Benefit Cap", "Should the two-child benefit cap be kept or scrapped?"],
+  ["Asylum & Border Control", "Which approach to asylum policy would you prioritise?"],
+  ["North Sea extraction future", "Which direction should North Sea oil and gas policy take?"],
+  ["Post-Brexit EU Trade", "Which trade priority should the UK emphasise?"],
+  ["Jury Trial Restrictions", "Should magistrates be allowed to hear some cases that would otherwise go to a jury?"],
+  ["Electoral System (PR vs FPTP)", "Which voting system should the UK use for general elections?"],
+  ["Private School Tax Status", "Which position on tax exemptions for independent schools is closer to yours?"],
+]);
+const openingDebates = new Set(["Two-Child Benefit Cap","Asylum & Border Control","Planning Reform vs Green Belt","Post-Brexit EU Trade","North Sea extraction future"]);
+function quizQuestion(topic){
+  if(topic.quiz_review)return topic.quiz_review;
+  const question=extraQuizQuestions.get(topic.title);
+  if(!question || !topic.ex_lo?.length || !topic.ex_hi?.length)return null;
+  return {question,lo:topic.pole_lo,hi:topic.pole_hi,lo_source:topic.ex_lo[0],hi_source:topic.ex_hi[0]};
+}
+function createQuizSelection(){
+  return MP3DSelection.create(M,T.filter(t=>quizQuestion(t)).map(t=>({...t,quiz_review:quizQuestion(t)})));
+}
+function rankQuiz(answers={},past=[]){
+  const covered=new Set(Object.keys(answers).map(k=>MP3DSelection.areaFor(Number(k),T)));
+  const score=({k,score})=>{
+    const newArea=!covered.has(MP3DSelection.areaFor(k,T));
+    const opening=past.length===0&&openingDebates.has(T[k].title);
+    return score*(newArea?1.6:1)*(opening?1.5:1);
+  };
+  return selectionModel.rank(answers,past).sort((a,b)=>score(b)-score(a)||a.k-b.k);
+}
+
+let selectionModel=createQuizSelection();
+let selectionRanking=rankQuiz();
+function chooseRimTopics(){
+  const areas=new Set(), chosen=[];
+  for(const r of selectionRanking){const area=MP3DSelection.areaFor(r.k,T);if(!areas.has(area)){areas.add(area);chosen.push(r.k);}}
+  return chosen.slice(0,8);
+}
+let rimTopicKeys=chooseRimTopics();
+let topicActive=false, mapZoom=1, activeModule="explore";
+let curK = selectionRanking[0]?.k ?? 0;
+let cmpK = null, cmpKind = "stance";
+let selMP = null, soloParty = null;
+let leftMode = DEFAULT_LEFT_MODE;
+let spaceMode = "bal", histMode = "cur", dimMode = 3, sortMode = "default", combView = "rim", indView = "mps", layoutMode = "full";
+let showParties = true, partiesOnly = false, showMPs = true, showNames = false, showRim = true;
+let hideLeft = false, hideRight = false, fullCard = null;
+let pullVal = 0;
+let cam = {yaw:-0.55, pitch:0.3}, goal = {yaw:-0.55, pitch:0.3}, drag = null;
+
+// Preserve initial 2024-26 Parliament snapshot on each MP, Party, and Topic so we can toggle 2024-26 vs All History (2022-26) instantaneously
+M.forEach(m=>{ m.b_cur = m.b; m.w_cur = m.w; m.st_cur = m.st; });
+P.forEach(p=>{ p.b_cur = p.b; p.w_cur = p.w; });
+T.forEach(t=>{
+  t.pts_cur = t.pts; t.quotes_cur = t.quotes;
+  t.diam_bal_cur = t.diam_bal; t.diam_win_cur = t.diam_win;
+  t.n_lo_cur = t.stats.n_lo; t.n_hi_cur = t.stats.n_hi;
+});
+
+function setHistMode(hm){
+  histMode = hm;
+  const all = hm === "all";
+  M.forEach(m=>{
+    m.b = (all && m.b_all) ? m.b_all : m.b_cur;
+    m.w = (all && m.w_all) ? m.w_all : m.w_cur;
+    m.st = (all && m.st_all) ? m.st_all : m.st_cur;
+  });
+  P.forEach(p=>{
+    p.b = (all && p.b_all) ? p.b_all : p.b_cur;
+    p.w = (all && p.w_all) ? p.w_all : p.w_cur;
+  });
+  T.forEach(t=>{
+    t.pts = (all && t.pts_all) ? t.pts_all : t.pts_cur;
+    t.quotes = (all && t.quotes_all) ? t.quotes_all : t.quotes_cur;
+    t.diam_bal = (all && t.diam_bal_all) ? t.diam_bal_all : t.diam_bal_cur;
+    t.diam_win = (all && t.diam_win_all) ? t.diam_win_all : t.diam_win_cur;
+    t.stats.n_lo = (all && t.n_lo_all != null) ? t.n_lo_all : t.n_lo_cur;
+    t.stats.n_hi = (all && t.n_hi_all != null) ? t.n_hi_all : t.n_hi_cur;
+  });
+  if($("histmode")){
+    $("histmode").querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed", String(x.dataset.hm===hm)));
+  }
+  selectionModel=createQuizSelection();selectionRanking=rankQuiz();rimTopicKeys=chooseRimTopics();
+  renderTopicList();
+  if(leftMode==="quiz") renderQuizList();
+  if($("quizDialog") && $("quizDialog").open) renderGuidedQuiz();
+  refresh();
+  if(activeModule==='relationships')setModule('relationships');
+}
+
+// Visitor core-belief answers: { [topic_col_k]: -1 | 0 | 1 } and priority stars: Set of topic_col_k
+const userAns = {};
+const userStar = new Set();
+
+const LANDMARKS = new Set([
+  "Sir Keir Starmer","Rachel Reeves","Louise Haigh","Angela Rayner","Yvette Cooper","Wes Streeting","Ed Miliband",
+  "Jeremy Corbyn","John McDonnell","Ms Diane Abbott","Zarah Sultana","Bell Ribeiro-Addy","Clive Lewis","Ian Byrne","Richard Burgon",
+  "Mrs Kemi Badenoch","Robert Jenrick","Suella Braverman","Sir James Cleverly","Danny Kruger","Sir Edward Leigh","Sir John Hayes",
+  "Nigel Farage","Richard Tice","Rupert Lowe","Sir Ed Davey","Carla Denyer","Adrian Ramsay","Stephen Flynn","Jim Allister","Kim Leadbeater"
+]);
+
+function setLeftMode(m){
+  leftMode = m;
+  $("leftmode").querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed", String(b.dataset.lmode===m)));
+  $("leftTopicsPane").style.display = m==="topics" ? "flex" : "none";
+  $("leftQuizPane").style.display = m==="quiz" ? "flex" : "none";
+  if(m==="quiz") renderQuizList();
+  else renderTopicList();
+  refresh();
+}
+
+function computeUserPoint(){
+  return MP3DPlacement.compute(userAns,userStar,M,P,T,spaceMode);
+}
+
+function renderTopicList(){
+  const q = $("tsearch").value.trim().toLowerCase();
+  const matches = T.map((_,i)=>i).filter(i=>{
+    if(!q) return true;
+    const t=T[i];
+    return t.title.toLowerCase().includes(q) || t.pole_lo.toLowerCase().includes(q) || t.pole_hi.toLowerCase().includes(q) || t.words.some(w=>w.includes(q));
+  });
+  const claimT = matches.filter(i=>T[i].has_claim);
+  const focusT = matches.filter(i=>!T[i].has_claim);
+
+  claimT.sort((a,b)=>{
+    if(sortMode==="nonparty") return T[a].stats.party_r2 - T[b].stats.party_r2;
+    if(sortMode==="val") return ((T[b].stats.vote_auc||T[b].stats.jev_r_all||0) - (T[a].stats.vote_auc||T[a].stats.jev_r_all||0));
+    return T[b].stats.split_balance - T[a].stats.split_balance;
+  });
+
+  const row = i => {
+    const t = T[i];
+    const dotCls = !t.has_claim ? "focus" : (t.kind==="opposing_stances" ? "stance" : "contrast");
+    const sub = t.has_claim ? `${t.pole_lo} ↔ ${t.pole_hi}` : t.words.slice(0,4).join(", ");
+    const tag = t.has_claim ? "" : "focus";
+    return `<button class="tbtn" data-k="${i}" aria-current="${topicActive&&i===curK}">
+      <i class="dot ${dotCls}"></i>
+      <div><span>${esc(t.title)}</span><small>${esc(sub)}</small></div>
+      <span class="meta" style="font-size:10.5px">${tag}</span>
+    </button>`;
+  };
+
+  $("topics").innerHTML =
+    (claimT.length ? `<div class="sec-hdr">Beliefs that divide the Commons</div>` + claimT.map(row).join("") : "") +
+    (focusT.length ? `<div class="sec-hdr">What MPs talk about</div>` + focusT.map(row).join("") : "");
+}
+
+function renderQuizList(){
+  const claimT = T.filter(t=>t.has_claim);
+  const nAns = Object.keys(userAns).length;
+  $("quizCount").textContent = `${nAns} / ${claimT.length} beliefs chosen`;
+  $("quizList").innerHTML = claimT.map(t=>{
+    const ans = userAns[t.k];
+    const starred = userStar.has(t.k);
+    return `<div class="qcard ${t.k===curK?'active':''}" data-qk="${t.k}">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:4px">
+        <button class="link" data-viewk="${t.k}" style="text-align:left;font-weight:700;text-decoration:none;color:var(--ink)">${esc(t.title)}</button>
+        <button class="tbtn-pill" data-stark="${t.k}" aria-pressed="${starred}" style="padding:1px 6px;font-size:10.5px" title="Mark as high-priority belief">★ Priority</button>
+      </div>
+      <div class="meta" style="font-size:11.5px">${esc(t.question)}</div>
+      <div class="qbtns">
+        <button class="qbtn ${ans===-1?'sel-lo':''}" data-ak="${t.k}" data-av="-1" title="${esc(t.pole_lo)}">← ${esc(t.pole_lo.slice(0,30))}</button>
+        <button class="qbtn ${ans===0?'sel-neu':''}" data-ak="${t.k}" data-av="0">Neutral</button>
+        <button class="qbtn ${ans===1?'sel-hi':''}" data-ak="${t.k}" data-av="1" title="${esc(t.pole_hi)}">${esc(t.pole_hi.slice(0,30))} →</button>
+      </div>
+    </div>`;
+  }).join("");
+}
+
+function renderPartyBar(){
+  $("pbar").innerHTML = P.map(p=>`<button class="pchip" data-p="${esc(p.p)}" aria-pressed="${soloParty===p.p}" title="Filter / highlight ${esc(p.p)} (${p.n} MPs)"><i style="background:${p.c}"></i>${esc(p.p)}</button>`).join("");
+}
+
+const mixCol = v => {
+  const a = v < 0 ? [229,142,122] : [143,214,148], m = [135,152,144];
+  const u = Math.min(1, Math.abs(v)*1.25);
+  return `rgb(${m.map((c,i)=>Math.round(c+(a[i]-c)*u)).join(",")})`;
+};
+
+function alignVec(pt, u){
+  if((combView !== "align" && !$("quizDialog").open) || !topicActive || !u) return pt;
+  const norm = Math.hypot(u[0], u[1], u[2]) || 1;
+  const ex = [u[0]/norm, u[1]/norm, u[2]/norm];
+  let ref = Math.abs(ex[1]) < 0.85 ? [0,1,0] : [0,0,1];
+  const dot = ref[0]*ex[0] + ref[1]*ex[1] + ref[2]*ex[2];
+  let ey = [ref[0]-dot*ex[0], ref[1]-dot*ex[1], ref[2]-dot*ex[2]];
+  const ny = Math.hypot(ey[0], ey[1], ey[2]) || 1;
+  ey = [ey[0]/ny, ey[1]/ny, ey[2]/ny];
+  const ez = [ex[1]*ey[2]-ex[2]*ey[1], ex[2]*ey[0]-ex[0]*ey[2], ex[0]*ey[1]-ex[1]*ey[0]];
+  return [
+    pt[0]*ex[0] + pt[1]*ex[1] + pt[2]*ex[2],
+    pt[0]*ey[0] + pt[1]*ey[1] + pt[2]*ey[2],
+    pt[0]*ez[0] + pt[1]*ez[1] + pt[2]*ez[2],
+  ];
+}
+
+function mapFrame(W,H){
+  return {x: W/2, y: H/2, rad: ($("quizDialog").open && quizStep==="questions" ? Math.min(W*.28,H*.28)*Math.min(mapZoom,1) : Math.min(W,H)*.38*mapZoom)};
+}
+let zoomToastTimer = null;
+function showZoomToast(){
+  const zt = $('zoomToast');
+  if(!zt) return;
+  zt.textContent = Math.round(mapZoom*100) + '%';
+  zt.classList.add('visible');
+  clearTimeout(zoomToastTimer);
+  zoomToastTimer = setTimeout(() => { zt.classList.remove('visible'); }, 1000);
+}
+function setZoom(value){
+  mapZoom = Math.max(0.55, Math.min(2.5, value));
+  showZoomToast();
+  drawCombined();
+  drawIndividual();
+}
+function proj3(pt, W, H, uAlign=null){
+  const [x,y,z] = uAlign ? alignVec(pt, uAlign) : pt;
+  const cy=Math.cos(cam.yaw), sy=Math.sin(cam.yaw), cp=Math.cos(cam.pitch), sp=Math.sin(cam.pitch);
+  const x1 = x*cy + z*sy, z1 = -x*sy + z*cy;
+  const y1 = y*cp - z1*sp, z2 = y*sp + z1*cp;
+  const {x:centerX,y:centerY,rad}=mapFrame(W,H);
+  const f = dimMode===3 ? 3.0/(3.0 - z2) : 1.0;
+  return [centerX + x1*rad*f, centerY - y1*rad*f, z2, f];
+}
+
+function drawCombined(){
+  const cv = $("cvComb"), cx = cv.getContext("2d");
+  const r = cv.getBoundingClientRect(), dpr = devicePixelRatio||1;
+  const W = r.width, H = r.height;
+  if(W < 10 || H < 10) return;
+  if(cv.width !== Math.round(W*dpr) || cv.height !== Math.round(H*dpr)){
+    cv.width = Math.round(W*dpr); cv.height = Math.round(H*dpr);
+  }
+  cx.setTransform(dpr,0,0,dpr,0,0);
+  cx.clearRect(0,0,W,H);
+
+  const t = T[curK];
+  if($("allTopics"))$("allTopics").setAttribute("aria-pressed",String(!topicActive));
+  if($("mapTopic")) $("mapTopic").textContent=topicActive?t.title:"All topics";
+  updateActiveTopicChip();
+  $("combSub").textContent = t.title + " · Select a dot to read the speeches behind it.";
+  const dm = spaceMode==="within" ? t.diam_win : t.diam_bal;
+  const inQuiz = $("quizDialog").open;
+  const uAct = topicActive?dm.div:[1,0,0];
+  const alignment = inQuiz ? null : uAct;
+  $("diamfit").textContent = `3D r=${dm.r_div.toFixed(2)}`;
+  $("combFootR").textContent = dimMode===3 ? "3D Sphere · Drag anywhere on sphere to rotate" : "2D Circle · Click '3D Sphere' above to rotate in 3D";
+
+  // Pole banner at top
+  const userAnsCur = userAns[curK];
+  $("polebanner").innerHTML = `
+    <div class="side-lo" style="cursor:pointer" data-pick="-1" title="Click to choose Pole − as your belief">← Pole − (${t.stats.n_lo} MPs)${userAnsCur===-1?' ★':''}:<br>${esc(t.pole_lo)}</div>
+    <div class="qmid"><span class="badge">${t.has_claim?(t.kind==="opposing_stances"?"Core Policy Divide":"Priority Divide"):"Focus Topic"}</span><div style="margin-top:2px"><b>${esc(t.question)}</b></div></div>
+    <div class="side-hi" style="cursor:pointer" data-pick="1" title="Click to choose Pole + as your belief">Pole + (${t.stats.n_hi} MPs)${userAnsCur===1?' ★':''} →<br>${esc(t.pole_hi)}</div>
+  `;
+
+  const {x:centerX,y:centerY,rad}=mapFrame(W,H);
+
+  // Outer sphere ring + latitude/longitude wireframe in 3D mode
+  cx.strokeStyle = "rgba(148, 161, 178, 0.25)";
+  cx.lineWidth = 1.2;
+  cx.beginPath(); cx.arc(centerX, centerY, rad, 0, Math.PI*2); cx.stroke();
+  if(dimMode === 3){
+    cx.strokeStyle = "rgba(148, 161, 178, 0.10)";
+    cx.lineWidth = 1.0;
+    for(const plane of [[1,0,0,0,1,0],[1,0,0,0,0,1],[0,1,0,0,0,1]]){
+      cx.beginPath();
+      for(let s=0;s<=48;s++){
+        const th = (s/48)*Math.PI*2;
+        const c = Math.cos(th), sn = Math.sin(th);
+        const pt = [plane[0]*c+plane[3]*sn, plane[1]*c+plane[4]*sn, plane[2]*c+plane[5]*sn];
+        const [px, py] = proj3(pt, W, H, alignment);
+        if(s===0) cx.moveTo(px, py); else cx.lineTo(px, py);
+      }
+      cx.stroke();
+    }
+  } else {
+    cx.strokeStyle = "rgba(148, 161, 178, 0.12)";
+    cx.beginPath();
+    cx.moveTo(centerX - rad, centerY); cx.lineTo(centerX + rad, centerY);
+    cx.moveTo(centerX, centerY - rad); cx.lineTo(centerX, centerY + rad);
+    cx.stroke();
+  }
+
+  const ptMap = new Map(topicActive?t.pts.map(p=>[p[0], p]):[]);
+  const maxSp = Math.max(1, ...t.pts.map(p=>p[3]));
+  const pull = topicActive&&!inQuiz?pullVal / 100:0;
+
+  const list = M.map(m=>{
+    const base = spaceMode==="within" ? m.w : m.b;
+    const tp = ptMap.get(m.i);
+    let pos = base.slice();
+    if(pull > 0){
+      const score = tp ? Math.max(-1.05, Math.min(1.05, tp[1]*0.88)) : (base[0]*uAct[0]+base[1]*uAct[1]+base[2]*uAct[2])*0.25;
+      const target = [uAct[0]*score, uAct[1]*score, uAct[2]*score];
+      pos = pos.map((v,i)=>v*(1-pull) + target[i]*pull);
+    }
+    return {m, tp, r: proj3(pos, W, H, alignment)};
+  }).sort((a,b)=>a.r[2]-b.r[2]);
+
+  // 1. Draw Individual MP Dots (unless Parties Only or MP Dots hidden)
+  if(showMPs && !partiesOnly){
+    list.forEach(o=>{
+      const {m, tp, r:[px,py,pz,pf]} = o;
+      const hideParty = soloParty && m.p !== soloParty;
+      let col = m.c, alpha = 0.76, sz = 3.5;
+      if(combView === "rim" || !topicActive){
+        alpha = hideParty ? 0.06 : (m.st && m.st.length >= 2 ? 0.85 : 0.42);
+        sz = 3.2 + Math.min(2.4, (m.st ? m.st.length : 0)*0.22);
+      } else {
+        alpha = 0.16; sz = 2.6;
+        if(tp){
+          col = mixCol(tp[1]);
+          alpha = hideParty ? 0.08 : 0.94;
+          sz = 3.8 + Math.sqrt(tp[3]/maxSp)*4.8;
+        } else if(hideParty){
+          alpha = 0.04;
+        }
+      }
+      if(selMP === m.i){ sz = 8.4; alpha = 1; }
+      cx.globalAlpha = alpha;
+      cx.fillStyle = col;
+      cx.beginPath(); cx.arc(px, py, sz*pf, 0, Math.PI*2); cx.fill();
+      if(selMP === m.i || (combView !== "rim" && tp && !hideParty)){
+        cx.strokeStyle = selMP === m.i ? "#eef1f5" : "#0e1117";
+        cx.lineWidth = selMP === m.i ? 2.4 : 0.8;
+        cx.stroke();
+      } else if(combView === "rim" && tp && !hideParty){
+        cx.strokeStyle = mixCol(tp[1]);
+        cx.lineWidth = 1.4;
+        cx.stroke();
+      }
+    });
+    cx.globalAlpha = 1;
+  }
+
+  function drawSingleAxis(vec, loText, hiText, colLo, colHi, dashed, width, alpha=1){
+    const a=proj3(vec.map(v=>-v),W,H,alignment),b=proj3(vec,W,H,alignment);
+    const length=Math.hypot(b[0]-a[0],b[1]-a[1]);if(length<2)return;
+    const dx=(b[0]-a[0])/length,dy=(b[1]-a[1])/length;
+    const isQuestion=$("quizDialog").open && !dashed && width===2.8;
+    const extent=isQuestion?rad:Math.min(rad*1.28,(W/2-35)/Math.max(Math.abs(dx),.01),(H/2-45)/Math.max(Math.abs(dy),.01));
+    const A=[centerX-dx*extent,centerY-dy*extent],B=[centerX+dx*extent,centerY+dy*extent];
+    cx.save();cx.globalAlpha=alpha;cx.strokeStyle='#e7dfca';cx.lineWidth=width;if(dashed)cx.setLineDash([5,5]);
+    cx.beginPath();cx.moveTo(...A);cx.lineTo(...B);cx.stroke();cx.setLineDash([]);
+    for(const [point,text] of [[A,loText],[B,hiText]]){
+      if(!text)continue;
+      cx.font="600 12px 'Source Sans 3',sans-serif";
+      const max=isQuestion?Math.min(155,W*.18):Math.min(230,W*.34),words=text.split(' '),lines=[];let line='';
+      for(const word of words){if(cx.measureText(line+' '+word).width>max&&line){lines.push(line);line=word;}else line+=(line?' ':'')+word;}if(line)lines.push(line);
+      const width=Math.min(max,Math.max(...lines.map(l=>cx.measureText(l).width)))+16,height=lines.length*15+12;
+      const sign=point===A?-1:1;
+      const gap=isQuestion?Math.abs(dx)*width/2+Math.abs(dy)*height/2+8:0;
+      const side=sign*(dx<0?-1:1);
+      const targetX=isQuestion?centerX+side*(rad+width/2+9):point[0]+sign*dx*gap;
+      const targetY=isQuestion?centerY+sign*dy*Math.min(18,rad*.35):point[1]+sign*dy*gap;
+      const x=Math.max(width/2+5,Math.min(W-width/2-5,targetX));
+      const y=Math.max(height/2+5,Math.min(H-height/2-5,targetY));
+      if(isQuestion){
+        cx.strokeStyle="#e7dfca";cx.lineWidth=1;
+        cx.beginPath();cx.moveTo(...point);cx.lineTo(x-side*width/2,y);cx.stroke();
+      }
+      cx.fillStyle='rgba(14,17,23,.94)';cx.fillRect(x-width/2,y-height/2,width,height);cx.fillStyle='#eee8d8';cx.textAlign='center';cx.textBaseline='middle';
+      lines.forEach((l,i)=>cx.fillText(l,x,y+(i-(lines.length-1)/2)*15));
+    }cx.restore();
+  }
+
+  // 2. Rim Compass Pills & Active Topic Diameter (when showRim is ON)
+  const rimHits = [];
+  if($("quizDialog").open ? quizStep==='questions' : showRim){
+    if(combView === "rim" || !topicActive){
+      const rimTopics = $("quizDialog").open?[]:rimTopicKeys.map(k=>T[k]);
+      const usedAngles = [];
+      rimTopics.forEach(st=>{
+        if(topicActive && st.k === curK) return;
+        const dms = spaceMode==="within" ? st.diam_win : st.diam_bal;
+        if(dms.r_div < 0.42) return;
+        const P_hi = proj3(dms.div, W, H, alignment);
+        const ang = Math.atan2(P_hi[1] - centerY, P_hi[0] - centerX);
+        if(usedAngles.some(a => Math.abs(Math.atan2(Math.sin(ang-a), Math.cos(ang-a))) < 0.19)) return;
+        usedAngles.push(ang);
+        const rTick0 = rad * 1.00, rTick1 = rad * 1.05, rLbl = rad * 1.08;
+        const tx0 = centerX + Math.cos(ang)*rTick0, ty0 = centerY + Math.sin(ang)*rTick0;
+        const tx1 = centerX + Math.cos(ang)*rTick1, ty1 = centerY + Math.sin(ang)*rTick1;
+        const lx = centerX + Math.cos(ang)*rLbl, ly = centerY + Math.sin(ang)*rLbl;
+        cx.save();
+        cx.strokeStyle = "rgba(217,180,95,0.65)"; cx.lineWidth = 1.8;
+        cx.beginPath(); cx.moveTo(tx0, ty0); cx.lineTo(tx1, ty1); cx.stroke();
+        cx.fillStyle = "#d9b45f";
+        cx.beginPath(); cx.arc(tx1, ty1, 3, 0, Math.PI*2); cx.fill();
+        cx.font = "600 10.5px 'Source Sans 3',sans-serif";
+        cx.fillStyle = "rgba(239,236,224,0.85)";
+        cx.textAlign = Math.cos(ang) > 0.2 ? "left" : Math.cos(ang) < -0.2 ? "right" : "center";
+        cx.textBaseline = "middle";
+        const labelTxt = st.title.length > 20 ? st.title.slice(0,19)+"…" : st.title;
+        cx.fillText(labelTxt, lx, ly);
+        cx.restore();
+        rimHits.push({k: st.k, x: tx1, y: ty1, lx, ly, title: st.title, pole: st.pole_hi});
+      });
+    } else if(topicActive && combView === "topic"){
+      drawSingleAxis(dm.foc, `Low focus: ${t.title}`, `High focus: ${t.title}`, "rgba(217,180,95,0.45)", "#d9b45f", true, 1.5, 0.75);
+    }
+
+    if(topicActive && t.has_claim){
+      drawSingleAxis(dm.div, `A · ${quizQuestion(t)?.lo||t.pole_lo}`, `B · ${quizQuestion(t)?.hi||t.pole_hi}`, "#e58e7a", "#8fd694", false, 2.8, 0.95);
+    }
+
+    if(!$("quizDialog").open && topicActive && cmpK != null && cmpK !== curK){
+      const tc = T[cmpK], dmc = spaceMode==="within" ? tc.diam_win : tc.diam_bal;
+      const v = cmpKind==="focus" ? dmc.foc : dmc.div;
+      const l0 = cmpKind==="focus" ? `Low: ${tc.title}` : `− ${tc.pole_lo.slice(0,24)}`;
+      const l1 = cmpKind==="focus" ? `High: ${tc.title}` : `+ ${tc.pole_hi.slice(0,24)}`;
+      drawSingleAxis(v, l0, l1, "#7cc6fe", "#7cc6fe", false, 2.2, 0.92);
+    }
+  }
+
+  // 3. Draw Party Average Centroids (drawn on top of dots so they are always easy to spot & click!)
+  const partyHits = [];
+  if(showParties || partiesOnly){
+    P.forEach(p=>{
+      if(soloParty && soloParty !== p.p) return;
+      // Compute party position (with pull if active)
+      let pPos = (spaceMode==="within" ? p.w : p.b).slice();
+      if(pull > 0){
+        const pMps = t.pts.filter(pt=>M[pt[0]].p === p.p);
+        if(pMps.length >= 2){
+          const meanSc = pMps.reduce((s,x)=>s+x[1],0)/pMps.length;
+          const target = uAct.map(v=>v*meanSc*0.88);
+          pPos = pPos.map((v,i)=>v*(1-pull) + target[i]*pull);
+        }
+      }
+      const [px, py, pz, pf] = proj3(pPos, W, H, alignment);
+      const radP = (partiesOnly ? 18 : 13.5) * pf;
+      cx.save();
+      cx.fillStyle = p.c;
+      cx.globalAlpha = partiesOnly ? 0.88 : 0.35;
+      cx.beginPath(); cx.arc(px, py, radP, 0, Math.PI*2); cx.fill();
+      cx.globalAlpha = 0.95;
+      cx.strokeStyle = soloParty===p.p ? "#d9b45f" : "#eef1f5";
+      cx.lineWidth = partiesOnly ? 2.2 : 1.5;
+      cx.stroke();
+      cx.font = `700 ${partiesOnly?12.5:10.5}px 'Source Sans 3',sans-serif`;
+      cx.fillStyle = "#eef1f5";
+      cx.textAlign = "center";
+      cx.textBaseline = "middle";
+      cx.strokeStyle = "#0e1117"; cx.lineWidth = 3;
+      cx.strokeText(p.p, px, py);
+      cx.fillText(p.p, px, py);
+      cx.restore();
+      partyHits.push({p: p.p, n: p.n, x: px, y: py, r: radP + 4});
+    });
+  }
+
+  // 4. Draw Landmark MP Labels (when showNames is ON and not in Parties Only mode)
+  if(showNames && showMPs && !partiesOnly){
+    const placedBoxes = [];
+    const candidates = list.filter(o=>{
+      if(soloParty && o.m.p !== soloParty) return false;
+      if(selMP === o.m.i) return true;
+      if(combView === "rim") return LANDMARKS.has(o.m.n) && o.m.st && o.m.st.length >= 2;
+      return o.tp && Math.abs(o.tp[1]) >= 0.76;
+    }).sort((a,b)=>(selMP===b.m.i?10:0)-(selMP===a.m.i?10:0) || (b.m.st?b.m.st.length:0)-(a.m.st?a.m.st.length:0));
+
+    cx.save();
+    cx.font = "600 11px 'Source Sans 3',sans-serif";
+    candidates.forEach(o=>{
+      const [px, py] = o.r;
+      if(px < 20 || px > W-20 || py < 20 || py > H-20) return;
+      const surname = o.m.n.replace(/^(Sir|Dame|Dr|Mr|Mrs|Ms)\s+/,"").split(" ").slice(-1)[0];
+      const tw = cx.measureText(surname).width;
+      const bx = px + 6, by = py - 4;
+      if(selMP !== o.m.i && placedBoxes.some(b=>Math.abs(b.x - bx) < (b.w + tw)/2 + 8 && Math.abs(b.y - by) < 13)) return;
+      placedBoxes.push({x: bx + tw/2, y: by, w: tw});
+      cx.strokeStyle = "#0e1117"; cx.lineWidth = 3;
+      cx.fillStyle = selMP === o.m.i ? "#d9b45f" : "#eef1f5";
+      cx.textAlign = "left";
+      cx.strokeText(surname, bx, by);
+      cx.fillText(surname, bx, by);
+    });
+    cx.restore();
+  }
+
+  const uPt = hasDirectionalAnswer() ? MP3DPlacement.position(userAns,userStar,T) : null;
+  const uVec = uPt ? (spaceMode==="within" ? uPt.w : uPt.b) : [0,0,0];
+  const [ux, uy] = proj3(uVec, W, H, alignment);
+  if($('quizDialog').open && quizStep==='questions' && topicActive){
+    const key=spaceMode==="within"?"w":"b";
+    const ends=[-1,1].map(answer=>{
+      const point=MP3DPlacement.position({...userAns,[curK]:answer},userStar,T);
+      return proj3(point[key],W,H,alignment);
+    });
+    cx.save();
+    cx.strokeStyle="#f8d882";cx.fillStyle="#f8d882";cx.lineWidth=2.5;
+    cx.setLineDash([5,5]);cx.beginPath();cx.moveTo(ends[0][0],ends[0][1]);
+    if(uPt)cx.lineTo(ux,uy);
+    cx.lineTo(ends[1][0],ends[1][1]);cx.stroke();cx.setLineDash([]);
+    const dx=ends[1][0]-ends[0][0], dy=ends[1][1]-ends[0][1];
+    const length=Math.hypot(dx,dy);
+    const labelDx=length>1?dx/length:1, labelDy=length>1?dy/length:0;
+    cx.font="700 15px sans-serif";cx.textAlign="center";cx.textBaseline="middle";
+    ends.forEach(([x,y],i)=>{
+      cx.fillStyle="#f8d882";cx.strokeStyle="#10141b";cx.lineWidth=2;
+      cx.beginPath();cx.arc(x,y,4,0,Math.PI*2);cx.fill();cx.stroke();
+      const offset=i===0?-19:19;
+      const labelX=Math.max(13,Math.min(W-13,x+labelDx*offset));
+      const labelY=Math.max(13,Math.min(H-13,y+labelDy*offset));
+      cx.fillStyle="#10141b";cx.strokeStyle="#f8d882";
+      cx.beginPath();cx.arc(labelX,labelY,11,0,Math.PI*2);cx.fill();cx.stroke();
+      cx.fillStyle="#fff1ce";cx.fillText(i===0?"A":"B",labelX,labelY);
+    });
+    cx.restore();
+  }
+  if(uPt){
+    cx.save();
+    if($('quizDialog').open || youFlashUntil > performance.now()){
+      const tPulse = (performance.now() % 1400) / 1400;
+      cx.strokeStyle = `rgba(217,180,95,${(0.8 * (1 - tPulse)).toFixed(2)})`;
+      cx.lineWidth = 2.2;
+      cx.beginPath(); cx.arc(ux, uy, 9 + tPulse * 22, 0, Math.PI*2); cx.stroke();
+    }
+    cx.fillStyle = "rgba(217,180,95,0.28)";
+    cx.beginPath(); cx.arc(ux, uy, 16, 0, Math.PI*2); cx.fill();
+    cx.fillStyle = "#d9b45f";
+    cx.strokeStyle = "#0e1117"; cx.lineWidth = 3;
+    cx.beginPath(); cx.arc(ux, uy, 10, 0, Math.PI*2); cx.fill(); cx.stroke();
+    cx.font = "800 14px sans-serif";
+    const youX=Math.max(26,Math.min(W-26,ux)), youY=Math.max(12,uy-24);
+    cx.fillStyle="#f8d882";cx.fillRect(youX-23,youY-10,46,20);
+    cx.fillStyle="#10141b";cx.textAlign="center";cx.textBaseline="middle";
+    cx.fillText("YOU",youX,youY);
+    cx.restore();
+  }
+
+  cv._hitList = (showMPs && !partiesOnly) ? list : [];
+  cv._rimHits = rimHits;
+  cv._partyHits = partyHits;
+}
+
+function drawIndividual(){
+  const cv = $("cvInd");
+  if(!cv || !$("appRoot").classList.contains("topics-open")) return;
+  const cx = cv.getContext("2d");
+  const r = cv.getBoundingClientRect(), dpr = devicePixelRatio||1;
+  const W = r.width, H = r.height;
+  if(W < 10 || H < 10) return;
+  if(cv.width !== Math.round(W*dpr) || cv.height !== Math.round(H*dpr)){
+    cv.width = Math.round(W*dpr); cv.height = Math.round(H*dpr);
+  }
+  cx.setTransform(dpr,0,0,dpr,0,0);
+  cx.clearRect(0,0,W,H);
+
+  const t = T[curK];
+  if(!topicActive&&indView!=="poles"){$("indtitle").textContent="All topics";cx.fillStyle="#9aa4b2";cx.font="16px sans-serif";cx.textAlign="center";cx.fillText("Choose a topic to see its positions",W/2,H/2);cv._indList=[];cv._poleNodes=[];return;}
+
+  if(indView === "poles"){
+    $("indtitle").textContent = "How beliefs connect";
+    $("indsub").textContent = "Each node is a Core Policy Belief (− or +) on the Combined Sphere · Click any belief to inspect";
+    $("indcount").textContent = "20 belief axes";
+    $("indlo").textContent = "A · Pole −";
+    $("indhi").textContent = "B · Pole +";
+
+    const {rad}=mapFrame(W,H);
+    cx.strokeStyle = "rgba(154,164,178,0.22)"; cx.lineWidth = 1.2;
+    cx.beginPath(); cx.arc(W/2, H/2, rad, 0, Math.PI*2); cx.stroke();
+    cx.beginPath();
+    cx.moveTo(W/2 - rad, H/2); cx.lineTo(W/2 + rad, H/2);
+    cx.moveTo(W/2, H/2 - rad); cx.lineTo(W/2, H/2 + rad);
+    cx.stroke();
+
+    const poleNodes = [];
+    const placed = [];
+    T.filter(x=>x.has_claim).forEach(st=>{
+      const dms = spaceMode==="within" ? st.diam_win : st.diam_bal;
+      const rFit = Math.max(0.38, Math.min(0.96, dms.r_div));
+      const isCur = topicActive && st.k === curK;
+      [[-1, st.pole_lo, "#d9d2bd"], [1, st.pole_hi, "#d9d2bd"]].forEach(([sgn, ptxt, col])=>{
+        const vec = dms.div.map(v=>v * sgn * rFit);
+        const [px, py] = proj3(vec, W, H);
+        if(isCur && sgn === 1){
+          const [ax, ay] = proj3(dms.div.map(v=>-v*rFit), W, H);
+          cx.save();
+          cx.strokeStyle = "rgba(217,180,95,0.65)"; cx.lineWidth = 2.2;
+          cx.beginPath(); cx.moveTo(ax, ay); cx.lineTo(px, py); cx.stroke();
+          cx.restore();
+        }
+        cx.fillStyle = col;
+        cx.globalAlpha = isCur ? 1.0 : 0.82;
+        cx.beginPath(); cx.arc(px, py, isCur ? 6.5 : 4.5, 0, Math.PI*2); cx.fill();
+        if(isCur){
+          cx.strokeStyle = "#eef1f5"; cx.lineWidth = 2; cx.stroke();
+        }
+        cx.font = `${isCur?700:600} ${isCur?11.5:10.5}px 'Source Sans 3',sans-serif`;
+        const shortTxt = `${st.title.split(" ")[0]}: ${ptxt.slice(0,22)}`;
+        const tw = cx.measureText(shortTxt).width;
+        const lx = px + (px > W/2 ? -7 : 7), ly = py - 5;
+        if(isCur || !placed.some(b=>Math.abs(b.x - px) < (b.w + tw)/2 + 6 && Math.abs(b.y - ly) < 12)){
+          placed.push({x: px, y: ly, w: tw});
+          cx.textAlign = px > W/2 ? "right" : "left";
+          cx.strokeStyle = "#0e1117"; cx.lineWidth = 3;
+          cx.fillStyle = isCur ? "#d9b45f" : "#eef1f5";
+          cx.strokeText(shortTxt, lx, ly);
+          cx.fillText(shortTxt, lx, ly);
+        }
+        poleNodes.push({k: st.k, px, py, title: st.title, pole: ptxt, sgn});
+      });
+    });
+    cx.globalAlpha = 1;
+    cv._poleNodes = poleNodes;
+    cv._indList = [];
+    return;
+  }
+
+  cv._poleNodes = [];
+  $("indtitle").textContent = `${t.title}: MPs’ positions`;
+  $("indsub").textContent = histMode==="all"
+    ? "Position across · Attention upwards · Arrows show 2022–24 → 2024–26 changes"
+    : "Position across · Attention to this topic upwards · Arrows show 2024 → 2026 changes";
+  $("indcount").textContent = `${t.pts.length} MPs placed`;
+  $("indlo").textContent = `← ${t.pole_lo}`;
+  $("indhi").textContent = `${t.pole_hi} →`;
+
+  const padX = 52, padY = 30;
+  const X = v => padX + (Math.max(-1.2, Math.min(1.2, v)) + 1.2)/2.4 * (W - 2*padX);
+  const fVals = t.pts.map(p=>M[p[0]].f[curK]);
+  const maxF = Math.max(1.5, ...fVals);
+  const minF = Math.min(-0.4, ...fVals);
+  const Y = p => {
+    const f = M[p[0]].f[curK];
+    const u = (f - minF) / (maxF - minF + 1e-6);
+    return H - padY - Math.max(0, Math.min(1, u)) * (H - 2*padY);
+  };
+
+  cx.strokeStyle = "#273142"; cx.lineWidth = 1.2;
+  cx.beginPath(); cx.moveTo(X(0), padY); cx.lineTo(X(0), H - padY); cx.stroke();
+
+  cx.save();
+  cx.strokeStyle="#687383";
+  cx.beginPath();cx.moveTo(padX,padY);cx.lineTo(padX,H-padY);cx.lineTo(W-padX,H-padY);cx.stroke();
+  cx.fillStyle="#bac3d0";cx.font="12px sans-serif";cx.textAlign="center";
+  cx.fillText("Position on this issue →",W/2,H-8);
+  cx.translate(17,H/2);cx.rotate(-Math.PI/2);
+  cx.fillText("More speech attention →",0,0);
+  cx.restore();
+
+  const maxSp = Math.max(1, ...t.pts.map(p=>p[3]));
+  const list = t.pts.map(p=>({m: M[p[0]], p, px: X(p[1]), py: Y(p)}));
+
+  if(showMPs && !partiesOnly){
+    list.forEach(o=>{
+      const {m, p, px, py} = o;
+      const hide = soloParty && m.p !== soloParty;
+      const q = t.quotes[m.i];
+      if(q && q.shift && !hide){
+        const x0 = X(q.shift.s0);
+        cx.save();
+        cx.strokeStyle = "#d9b45f"; cx.lineWidth = 1.6; cx.setLineDash([3, 3]);
+        cx.beginPath(); cx.moveTo(x0, py); cx.lineTo(px, py); cx.stroke();
+        cx.setLineDash([]);
+        cx.fillStyle = "rgba(217,180,95,0.45)";
+        cx.beginPath(); cx.arc(x0, py, 3.2, 0, Math.PI*2); cx.fill();
+        cx.restore();
+      }
+      const sz = selMP===m.i ? 8.2 : 3.8 + Math.sqrt(p[3]/maxSp)*4.5;
+      cx.globalAlpha = hide ? 0.1 : 0.92;
+      cx.fillStyle = m.c;
+      cx.beginPath(); cx.arc(px, py, sz, 0, Math.PI*2); cx.fill();
+      cx.strokeStyle = selMP===m.i ? "#eef1f5" : (q && q.shift ? "#d9b45f" : mixCol(p[1]));
+      cx.lineWidth = selMP===m.i ? 2.5 : (q && q.shift ? 2.0 : 1.5);
+      cx.stroke();
+    });
+    cx.globalAlpha = 1;
+  }
+
+  // Party averages in this topic
+  if(showParties || partiesOnly){
+    const pGroups = {};
+    list.forEach(o=>{
+      const pa = o.m.p;
+      if(soloParty && pa !== soloParty) return;
+      if(!pGroups[pa]) pGroups[pa] = {x:0, y:0, n:0, c:o.m.c};
+      pGroups[pa].x += o.px; pGroups[pa].y += o.py; pGroups[pa].n++;
+    });
+    Object.entries(pGroups).forEach(([pa, g])=>{
+      if(g.n < 2 || pa === "Ind") return;
+      const gx = g.x/g.n, gy = g.y/g.n;
+      const rP = partiesOnly ? 16 : 11.5;
+      cx.save();
+      cx.fillStyle = g.c; cx.globalAlpha = partiesOnly ? 0.88 : 0.35;
+      cx.beginPath(); cx.arc(gx, gy, rP, 0, Math.PI*2); cx.fill();
+      cx.globalAlpha = 0.95; cx.strokeStyle = "#eef1f5"; cx.lineWidth = 1.4; cx.stroke();
+      cx.font = "700 11px 'Source Sans 3',sans-serif";
+      cx.fillStyle = "#eef1f5"; cx.textAlign = "center"; cx.textBaseline = "middle";
+      cx.strokeStyle = "#0e1117"; cx.lineWidth = 2.5;
+      cx.strokeText(pa, gx, gy);
+      cx.fillText(pa, gx, gy);
+      cx.restore();
+    });
+  }
+
+  if(showNames && showMPs && !partiesOnly){
+    const sortedX = list.slice().sort((a,b)=>a.p[1]-b.p[1]);
+    cx.font = "600 11.5px 'Source Sans 3',sans-serif";
+    [...sortedX.slice(0,3), ...sortedX.slice(-3)].forEach(o=>{
+      cx.fillStyle = "#eef1f5";
+      cx.textAlign = o.p[1] > 0 ? "right" : "left";
+      cx.fillText(o.m.n.split(" ").slice(-1)[0], o.px + (o.p[1]>0?-7:7), o.py - 6);
+    });
+  }
+
+  // Draw ★ YOU on Individual Topic if visitor answered this topic
+  if(userAns[curK] !== undefined){
+    const ux = X(userAns[curK] * 0.82), uy = userStar.has(curK) ? padY + 28 : H * 0.45;
+    cx.save();
+    cx.fillStyle = "#d9b45f"; cx.strokeStyle = "#0e1117"; cx.lineWidth = 2.2;
+    cx.beginPath(); cx.arc(ux, uy, 7.5, 0, Math.PI*2); cx.fill(); cx.stroke();
+    cx.font = "700 11.5px 'Bricolage Grotesque',sans-serif";
+    cx.fillStyle = "#d9b45f"; cx.textAlign = "center";
+    cx.fillText("★ YOU", ux, uy - 11);
+    cx.restore();
+  }
+
+  cv._indList = (showMPs && !partiesOnly) ? list : [];
+}
+
+function portrait(m){
+  return `<img class="portrait" src="${m.photo || `https://members-api.parliament.uk/api/Members/${Number(m.id)}/Portrait?cropType=ThreeTwo`}" alt="" loading="lazy" onerror="this.hidden=true">`;
+}
+function speech(e){
+  if(!e) return '<p class="meta">No excerpt available for this side.</p>';
+  const m=M.find(x=>x.id===e.m);
+  return `<blockquote><span class="quote-text">“${esc(e.t)}”</span><footer>${m?esc(m.n)+' · '+esc(m.p):'Commons speech'} · ${esc(e.d||'')}<br>${esc(e.h||'')}</footer></blockquote>`;
+}
+let compareMP = null, compareAnchor = null;
+function sharedPositions(a,b){
+  const other=new Map(b.st||[]);
+  return (a.st||[]).filter(([k,v])=>T[k].has_claim && Number.isFinite(v) && Number.isFinite(other.get(k))).map(([k,a])=>({k,a,b:other.get(k),gap:Math.abs(a-other.get(k))}));
+}
+function neighbourPanel(m){
+  if(compareAnchor!==m.i){compareAnchor=m.i;compareMP=null;}
+  const position=x=>spaceMode==='within'?x.w:x.b;
+  const origin=position(m);
+  const neighbours=M.filter(x=>x.i!==m.i && position(x)?.every(Number.isFinite) && (x.st||[]).length>=2).map(x=>({m:x,d:Math.hypot(...position(x).map((v,i)=>v-origin[i]))})).sort((a,b)=>a.d-b.d);
+  const cross=neighbours.find(x=>x.m.p!==m.p);
+  const picks=neighbours.slice(0,3);
+  if(cross&&!picks.includes(cross))picks.push(cross);
+  let h=`<section class="neighbour-panel"><h3>Who sits nearby?</h3><p class="meta">Neighbours in the underlying 3D map, before rotation or topic pull. Nearby dots are a starting point, not proof of agreement.${spaceMode==='within'?' This view subtracts party averages; comparisons below show expressed positions.':''}</p>`;
+  h+=picks.map(({m:x})=>`<button class="evidence-topic" data-compare="${x.i}"><b>${esc(x.n)}</b><span>${esc(x.pn)} · ${sharedPositions(m,x).length} shared scales${cross?.m.i===x.i?' · nearest across parties':''}</span></button>`).join('');
+  h+=`<label class="meta" for="compareSelect">Or compare with any MP</label><select id="compareSelect"><option value="">Choose an MP…</option>${M.filter(x=>x.i!==m.i).slice().sort((a,b)=>a.n.localeCompare(b.n)).map(x=>`<option value="${x.i}" ${compareMP===x.i?'selected':''}>${esc(x.n)}</option>`).join('')}</select>`;
+  if(compareMP!==null){
+    const b=M[compareMP], shared=sharedPositions(m,b);
+    const same=shared.filter(x=>x.a*x.b>0).sort((a,b)=>a.gap-b.gap);
+    const different=shared.filter(x=>x.a*x.b<0).sort((a,b)=>b.gap-a.gap);
+    const neutral=shared.filter(x=>x.a*x.b===0);
+    const total=T.filter(x=>x.has_claim).length;
+    const excerpt=(mp,k)=>{const q=T[k].quotes?.[mp.i];return q?speech({...((q.ex||[])[0]||{t:q.t,d:q.d,h:q.h}),m:mp.id}):'<p class="meta">No excerpt available for this scored position.</p>';};
+    const rows=(items)=>items.map(x=>`<details class="comparison-evidence"><summary>${esc(T[x.k].title)}</summary>${[m,b].map((mp,i)=>`<h4>${esc(mp.n)}</h4><p class="meta">${esc((i?x.b:x.a)<0?T[x.k].pole_lo:(i?x.b:x.a)>0?T[x.k].pole_hi:'Mixed or neutral position')}</p>${excerpt(mp,x.k)}`).join('')}</details>`).join('');
+    h+=`<div id="pairEvidence"><h3>${esc(m.n)} &amp; ${esc(b.n)}</h3><p class="meta">${shared.length} of ${total} belief scales scored for both · ${total-shared.length} not comparable. Missing evidence is not a neutral position.</p><h4>Same side · ${same.length}</h4>${same.length?rows(same):'<p class="meta">No shared scales place them on the same side.</p>'}<h4>Opposite sides · ${different.length}</h4>${different.length?rows(different):'<p class="meta">No opposing positions in the shared scores.</p>'}${neutral.length?`<h4>Mixed or neutral · ${neutral.length}</h4>${rows(neutral)}`:''}<p class="meta">These are speech-derived scores, not private beliefs. Same-side scores can still hide differences in emphasis; open a topic to read both excerpts. This comparison checks shared evidence, rather than attributing the map distance to particular topics.</p></div>`;
+  }
+  return h+'</section>';
+}
+function renderRightPanel(){
+  const t=T[curK], r=$("right"), m=selMP==null?null:M[selMP];
+  let h=``;
+  if(m){
+    const q=topicActive?t.quotes[m.i]:null;
+    h+=`<div class="profile-head">${portrait(m)}<div><h2>${esc(m.n)}</h2><p class="meta">${esc(m.pn)} · ${esc(m.k)}</p></div></div>`;
+    h+=MP3DMapEvidence.renderPositions(debatePositions.get(m.id), debateEvidence.P, debateEvidence.period);
+    if(topicActive)h+=`<h3 id="mpTopicEvidence">Map scale · ${esc(t.title)}</h3>`;
+    if(topicActive)h+=q?`<p>${esc(q.c||'')}</p>${q.shift?`<p class="shift-note">${esc((q.shift.d0||'2024').slice(0,4))} → ${esc((q.shift.d1||'2026').slice(0,4))}: ${esc(q.shift.note)}</p>`:''}${(q.ex||[{t:q.t,d:q.d,h:q.h}]).map(e=>speech({...e,m:m.id})).join('')}`:'<p class="meta">There is not enough speech evidence to place this MP on this topic.</p>';
+    h+=neighbourPanel(m);
+    h+=`<h3>Explore their map scales</h3>${(m.st||[]).map(([k,v])=>`<button class="evidence-topic" data-jumpk="${k}"><b>${esc(T[k].title)}</b><span>${esc(v<0?T[k].pole_lo:T[k].pole_hi)}</span></button>`).join('')}`;
+  }else{
+    if(!topicActive){r.innerHTML='<h2>All topics</h2><p>Select an MP or a topic to explore its evidence.</p>';return;}
+    h+=`<h2>${esc(t.title)}</h2><p>${esc(t.question)}</p>`;
+    if(t.has_claim) h+=`<h3 class="low">${esc(t.pole_lo)}</h3>${(t.ex_lo||[]).slice(0,2).map(speech).join('')}<h3 class="high">${esc(t.pole_hi)}</h3>${(t.ex_hi||[]).slice(0,2).map(speech).join('')}`;
+    else h+='<p class="meta">This is a speech focus topic. It shows attention to an issue, rather than a validated belief scale.</p>';
+    h+=`<details><summary>Related beliefs</summary>${t.div_corrs.map(c=>`<button class="evidence-topic" data-jumpk="${c.k}">${esc(c.name)}<span>${esc(c.pole)}</span></button>`).join('')}</details>`;
+  }
+  r.innerHTML=h;
+  r.querySelectorAll('[data-compare]').forEach(b=>b.onclick=()=>{compareMP=+b.dataset.compare;renderRightPanel();$('pairEvidence')?.scrollIntoView({block:'nearest',behavior:'smooth'});});
+  if($('compareSelect'))$('compareSelect').onchange=e=>{compareMP=e.target.value===''?null:+e.target.value;renderRightPanel();$('pairEvidence')?.scrollIntoView({block:'nearest',behavior:'smooth'});};
+  r.querySelectorAll('[data-jumpk]').forEach(b=>b.onclick=()=>{curK=+b.dataset.jumpk;topicActive=true;renderTopicList();refresh();});
+}
+
+function toggleFullscreenCard(cardId){
+  const next = fullCard === cardId ? null : cardId;
+  fullCard = next;
+  ["combCard","indCard"].forEach(id=>{
+    $(id).classList.toggle("fullscreen", fullCard === id);
+  });
+  $("btnFullComb").setAttribute("aria-pressed", String(fullCard==="combCard"));
+  $("btnFullComb").setAttribute("aria-label",fullCard==="combCard"?"Exit fullscreen":"Fullscreen map");
+  $("btnFullInd").setAttribute("aria-pressed", String(fullCard==="indCard"));
+  $("btnFullInd").setAttribute("aria-label",fullCard==="indCard"?"Exit fullscreen":"Fullscreen topic chart");
+  setTimeout(()=>{ drawCombined(); drawIndividual(); }, 30);
+}
+
+function refresh(){
+  drawCombined();
+  drawIndividual();
+  renderRightPanel();
+  if(selMP!==null && !$("quizDialog").open && !$("evidenceDialog").open) $("evidenceDialog").showModal();
+}
+
+// Sidebar & Fullscreen & Declutter event listeners
+$("leftmode").onclick = e => {
+  const b = e.target.closest("[data-lmode]");
+  if(b) setLeftMode(b.dataset.lmode);
+};
+$("btnHideLeft").onclick = () => {
+  hideLeft = !hideLeft;
+  $("appRoot").classList.toggle("hide-left", hideLeft);
+  $("btnHideLeft").setAttribute("aria-pressed", String(hideLeft));
+  $("btnHideLeft").textContent = hideLeft ? "▶ Show Topics" : "◀ Hide Topics";
+  setTimeout(()=>{ drawCombined(); drawIndividual(); }, 200);
+};
+$("btnHideRight").onclick = () => { selMP=null;renderRightPanel();$("evidenceDialog").showModal(); };
+
+$("btnFullComb").onclick = () => toggleFullscreenCard("combCard");
+$("btnFullInd").onclick = () => toggleFullscreenCard("indCard");
+window.addEventListener("keydown", e=>{
+  if(e.key==="Escape") $('appRoot').classList.remove('mobile-topics');
+  if(e.key === "Escape" && fullCard) toggleFullscreenCard(null);
+});
+
+$("togParties").onclick = () => {
+  showParties = !showParties;
+  if(!showParties && partiesOnly){ partiesOnly = false; $("togPartiesOnly").setAttribute("aria-pressed","false"); }
+  $("togParties").setAttribute("aria-pressed", String(showParties));
+  drawCombined(); drawIndividual();
+};
+$("togPartiesOnly").onclick = () => {
+  partiesOnly = !partiesOnly;
+  if(partiesOnly){ showParties = true; $("togParties").setAttribute("aria-pressed","true"); }
+  $("togPartiesOnly").setAttribute("aria-pressed", String(partiesOnly));
+  drawCombined(); drawIndividual();
+};
+$("togMPs").onclick = () => {
+  showMPs = !showMPs;
+  if(showMPs && partiesOnly){ partiesOnly = false; $("togPartiesOnly").setAttribute("aria-pressed","false"); }
+  $("togMPs").setAttribute("aria-pressed", String(showMPs));
+  drawCombined(); drawIndividual();
+};
+$("togNames").onclick = () => {
+  showNames = !showNames;
+  $("togNames").setAttribute("aria-pressed", String(showNames));
+  drawCombined(); drawIndividual();
+};
+$("togRim").onclick = () => {
+  showRim = !showRim;
+  $("togRim").setAttribute("aria-pressed", String(showRim));
+  drawCombined();
+};
+
+$("polebanner").onclick = e => {
+  const p = e.target.closest("[data-pick]");
+  if(!p || !T[curK].has_claim) return;
+  const v = +p.dataset.pick;
+  if(userAns[curK] === v) delete userAns[curK]; else userAns[curK] = v;
+  if(leftMode==="quiz") renderQuizList();
+  refresh();
+};
+
+$("quizList").onclick = e => {
+  const vk = e.target.closest("[data-viewk]");
+  if(vk){ curK = +vk.dataset.viewk;topicActive=true; renderQuizList(); refresh(); return; }
+  const sk = e.target.closest("[data-stark]");
+  if(sk){
+    const k = +sk.dataset.stark;
+    if(userStar.has(k)) userStar.delete(k); else userStar.add(k);
+    renderQuizList(); refresh(); return;
+  }
+  const ak = e.target.closest("[data-ak]");
+  if(ak){
+    const k = +ak.dataset.ak, v = +ak.dataset.av;
+    curK = k;topicActive=true;
+    if(userAns[k] === v) delete userAns[k]; else userAns[k] = v;
+    renderQuizList(); refresh();
+  }
+};
+$("clearQuiz").onclick = () => {
+  Object.keys(userAns).forEach(k=>delete userAns[k]);
+  userStar.clear();
+  renderQuizList(); refresh();
+};
+$("presetLeft").onclick = () => {
+  Object.keys(userAns).forEach(k=>delete userAns[k]);
+  // Public ownership, scrap 2-child cap, keep universal winter fuel, PR, assisted dying
+  T.filter(t=>t.has_claim).slice(0,8).forEach(t=>{
+    const hi = t.pole_hi.toLowerCase();
+    userAns[t.k] = (hi.includes("public ownership") || hi.includes("remove") || hi.includes("universal") || hi.includes("proportional") || hi.includes("legalize") || hi.includes("closer alignment")) ? 1 : -1;
+  });
+  renderQuizList(); refresh();
+};
+$("presetRight").onclick = () => {
+  Object.keys(userAns).forEach(k=>delete userAns[k]);
+  T.filter(t=>t.has_claim).slice(0,8).forEach(t=>{
+    const hi = t.pole_hi.toLowerCase();
+    userAns[t.k] = (hi.includes("public ownership") || hi.includes("remove") || hi.includes("universal") || hi.includes("proportional") || hi.includes("legalize") || hi.includes("closer alignment")) ? -1 : 1;
+  });
+  renderQuizList(); refresh();
+};
+
+$("tsearch").oninput = renderTopicList;
+$("mpsearch").oninput = e => {
+  const q = e.target.value.trim().toLowerCase();
+  if(q.length < 2) return;
+  const found = M.find(m=>m.n.toLowerCase()===q);
+  if(found){ if($("searchDialog").open) $("searchDialog").close(); selMP = found.i; refresh(); }
+};
+$("topics").onclick = e => {
+  const b = e.target.closest("[data-k]");
+  if(b){ curK = +b.dataset.k;topicActive=true; cmpK = null; renderTopicList(); refresh(); }
+};
+$("tsort").onclick = e => {
+  const b = e.target.closest("[data-sort]");
+  if(!b) return;
+  sortMode = b.dataset.sort;
+  $("tsort").querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed", String(x===b)));
+  renderTopicList();
+};
+$("spacemode").onclick = e => {
+  const b = e.target.closest("[data-sm]");
+  if(!b) return;
+  spaceMode = b.dataset.sm;
+  $("spacemode").querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed", String(x===b)));
+  refresh();
+};
+if($("histmode")){
+  $("histmode").onclick = e => {
+    const b = e.target.closest("[data-hm]");
+    if(!b) return;
+    setHistMode(b.dataset.hm);
+  };
+}
+$("dimmode").onclick = e => {
+  const b = e.target.closest("[data-dm]");
+  if(!b) return;
+  dimMode = +b.dataset.dm;
+  goal = dimMode===3 ? {yaw:-0.55, pitch:0.3} : {yaw:0, pitch:0};
+  $("dimmode").querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed", String(x===b)));
+  drawCombined();
+};
+$("layoutmode").onclick = e => {
+  const b = e.target.closest("[data-lm]");
+  if(!b) return;
+  if(b.dataset.lm==="dual")openTopics();
+  else closeTopics();
+  $("settingsDialog").close();
+};
+$("combview").onclick = e => {
+  const b = e.target.closest("[data-cv]");
+  if(!b) return;
+  combView = b.dataset.cv;
+  $("combview").querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed", String(x===b)));
+  drawCombined();
+};
+$("indview").onclick = e => {
+  const b = e.target.closest("[data-iv]");
+  if(!b) return;
+  indView = b.dataset.iv;
+  $("indview").querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed", String(x===b)));
+  drawIndividual();
+};
+$("pull").oninput = e => { pullVal = +e.target.value; drawCombined(); };
+$("pbar").onclick = e => {
+  const b = e.target.closest("[data-p]");
+  if(!b) return;
+  soloParty = soloParty === b.dataset.p ? null : b.dataset.p;
+  renderPartyBar(); drawCombined(); drawIndividual();
+};
+
+const cvC = $("cvComb"), cvI = $("cvInd"), tip = $("tip");
+cvC.addEventListener("pointerdown", e=>{
+  cvC.setPointerCapture(e.pointerId);
+  drag = {x:e.clientX, y:e.clientY, yaw:goal.yaw, pitch:goal.pitch, moved:0};
+});
+cvC.addEventListener("pointermove", e=>{
+  if(drag && dimMode===3 && touchPoints.size<2){
+    const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+    drag.moved = Math.max(drag.moved, Math.abs(dx)+Math.abs(dy));
+    if(drag.moved > 4){
+      goal.yaw = cam.yaw = drag.yaw + dx*0.008;
+      goal.pitch = cam.pitch = Math.max(-1.3, Math.min(1.3, drag.pitch - dy*0.008));
+      drawCombined(); drawIndividual(); return;
+    }
+  }
+  const r = cvC.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top;
+  // 1. Check rim compass ticks
+  let bestRim = null, brd = 380;
+  (cvC._rimHits||[]).forEach(rh=>{
+    const d = Math.min((rh.x-x)**2 + (rh.y-y)**2, (rh.lx-x)**2 + (rh.ly-y)**2);
+    if(d < brd){ brd = d; bestRim = rh; }
+  });
+  if(bestRim){
+    if(cmpK !== bestRim.k){ cmpK = bestRim.k; cmpKind = "stance"; drawCombined(); }
+    tip.innerHTML = `<b>Topic Rim: ${esc(bestRim.title)}</b><br>Pole + : ${esc(bestRim.pole)}<br><i>Click to switch to this topic</i>`;
+    tip.style.display = "block";
+    tip.style.left = (e.clientX + 12) + "px"; tip.style.top = (e.clientY + 12) + "px";
+    return;
+  } else if(cmpK != null){
+    cmpK = null; drawCombined();
+  }
+  // 2. Check Party Average circles (when Parties Only or hovered directly)
+  let bestP = null, bpd = partiesOnly ? 400 : 180;
+  (cvC._partyHits||[]).forEach(ph=>{
+    const d = (ph.x-x)**2 + (ph.y-y)**2;
+    if(d < bpd){ bpd = d; bestP = ph; }
+  });
+  if(bestP && (partiesOnly || bpd < 140)){
+    tip.innerHTML = `<b>${esc(bestP.p)} Party Average</b> (${bestP.n} MPs)<br><i>Click to filter/highlight ${esc(bestP.p)}</i>`;
+    tip.style.display = "block";
+    tip.style.left = (e.clientX + 12) + "px"; tip.style.top = (e.clientY + 12) + "px";
+    return;
+  }
+  // 3. Check MP dots
+  let best = null, bd = 120;
+  (cvC._hitList||[]).forEach(o=>{
+    const d = (o.r[0]-x)**2 + (o.r[1]-y)**2;
+    if(d < bd){ bd = d; best = o; }
+  });
+  if(!best){ tip.style.display="none"; return; }
+  const q = topicActive?T[curK].quotes[best.m.i]:null;
+  tip.innerHTML = `<b>${esc(best.m.n)}</b> (${esc(best.m.p)} · ${esc(best.m.k)})${q ? `<br>${esc(q.c)}` : `<br>${best.m.st?best.m.st.length:0} scored topics`}`;
+  tip.style.display = "block";
+  tip.style.left = (e.clientX + 12) + "px"; tip.style.top = (e.clientY + 12) + "px";
+});
+cvC.addEventListener("pointerup", e=>{
+  const was = drag; drag = null;
+  if((was && was.moved > 4)||pinchGesture||pinchDistance!==null||touchPoints.size>1)return;
+  const r = cvC.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top;
+  let bestRim = null, brd = 380;
+  (cvC._rimHits||[]).forEach(rh=>{
+    const d = Math.min((rh.x-x)**2 + (rh.y-y)**2, (rh.lx-x)**2 + (rh.ly-y)**2);
+    if(d < brd){ brd = d; bestRim = rh; }
+  });
+  if(bestRim){
+    curK = bestRim.k;topicActive=true; cmpK = null; renderTopicList(); if(leftMode==="quiz") renderQuizList(); refresh(); return;
+  }
+  let best = null, bd = 120;
+  (cvC._hitList||[]).forEach(o=>{
+    const d = (o.r[0]-x)**2 + (o.r[1]-y)**2;
+    if(d < bd){ bd = d; best = o; }
+  });
+  if(best){ selMP = best.m.i; refresh(); return; }
+  let bestP = null, bpd = 320;
+  (cvC._partyHits||[]).forEach(ph=>{
+    const d = (ph.x-x)**2 + (ph.y-y)**2;
+    if(d < bpd){ bpd = d; bestP = ph; }
+  });
+  if(bestP){
+    soloParty = soloParty === bestP.p ? null : bestP.p;
+    renderPartyBar(); drawCombined(); drawIndividual();
+  }
+});
+cvC.addEventListener("pointerleave", ()=>{ tip.style.display="none"; if(cmpK!=null){ cmpK=null; drawCombined(); } });
+
+cvI.addEventListener("pointermove", e=>{
+  const r = cvI.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top;
+  if(indView === "poles"){
+    let bestP = null, bpd = 250;
+    (cvI._poleNodes||[]).forEach(pn=>{
+      const d = (pn.px-x)**2 + (pn.py-y)**2;
+      if(d < bpd){ bpd = d; bestP = pn; }
+    });
+    if(!bestP){ tip.style.display="none"; return; }
+    tip.innerHTML = `<b>${esc(bestP.title)} (${bestP.sgn>0?'Pole +':'Pole −'})</b><br>${esc(bestP.pole)}<br><i>Click to select topic</i>`;
+    tip.style.display = "block";
+    tip.style.left = (e.clientX + 12) + "px"; tip.style.top = (e.clientY + 12) + "px";
+    return;
+  }
+  let best = null, bd = 120;
+  (cvI._indList||[]).forEach(o=>{
+    const d = (o.px-x)**2 + (o.py-y)**2;
+    if(d < bd){ bd = d; best = o; }
+  });
+  if(!best){ tip.style.display="none"; return; }
+  const q = topicActive?T[curK].quotes[best.m.i]:null;
+  tip.innerHTML = `<b>${esc(best.m.n)}</b> (${esc(best.m.p)})<br>${q ? esc(q.c) : `Score: ${best.p[1].toFixed(2)}`}`;
+  tip.style.display = "block";
+  tip.style.left = (e.clientX + 12) + "px"; tip.style.top = (e.clientY + 12) + "px";
+});
+cvI.addEventListener("pointerup", e=>{
+  const r = cvI.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top;
+  if(indView === "poles"){
+    let bestP = null, bpd = 250;
+    (cvI._poleNodes||[]).forEach(pn=>{
+      const d = (pn.px-x)**2 + (pn.py-y)**2;
+      if(d < bpd){ bpd = d; bestP = pn; }
+    });
+    if(bestP){ curK = bestP.k;topicActive=true; renderTopicList(); if(leftMode==="quiz") renderQuizList(); refresh(); }
+    return;
+  }
+  let best = null, bd = 120;
+  (cvI._indList||[]).forEach(o=>{
+    const d = (o.px-x)**2 + (o.py-y)**2;
+    if(d < bd){ bd = d; best = o; }
+  });
+  if(best){ selMP = best.m.i; refresh(); }
+});
+cvI.addEventListener("pointerleave", ()=>{ tip.style.display="none"; });
+
+function loop(){
+  let mov = false;
+  ["yaw","pitch"].forEach(k=>{
+    const d = goal[k] - cam[k];
+    if(Math.abs(d) > 0.001){ cam[k] += d*0.14; mov = true; }
+    else cam[k] = goal[k];
+  });
+  if(mov || $('quizDialog').open || youFlashUntil > performance.now()){ drawCombined(); if(indView==="poles") drawIndividual(); }
+  requestAnimationFrame(loop);
+}
+
+window.addEventListener("resize", ()=>{ drawCombined(); drawIndividual(); });
+// Guided visitor journey. The original canvas moves into the dialog so its geometry stays identical.
+let coverageCheckpoint=false;
+let quizStep='priorities', quizIndex=0, quizOrder=selectionRanking.map(r=>r.k), youFlashUntil=0;
+const mapHome=document.createComment('Commons map home');
+$('combCard').before(mapHome);
+function hasDirectionalAnswer(){
+  return Object.values(userAns).some(v=>v===-1 || v===1);
+}
+function updateQuizMapCaption(){
+  const cap=$('quizMap').querySelector('.live-caption');
+  const placed=hasDirectionalAnswer(), answered=Object.keys(userAns).length;
+  cap.classList.toggle('unplaced', !placed);
+  cap.querySelector('span').textContent=placed?`${answered} ${answered===1?'answer':'answers'} · ${histMode==='all'?'All History (2022–26)':'2024–26 Parliament'} · ${spaceMode==='within'?'Party Removed':'All Commons'} · ${dimMode}D`:'Choose Option A or B to place your star';
+}
+function flashYou(){
+  youFlashUntil=performance.now()+1800;
+  const cap=$('quizMap')?.querySelector('.live-caption');
+  if(cap){cap.classList.remove('flash');void cap.offsetWidth;cap.classList.add('flash');}
+}
+function openQuiz(){
+  if(fullCard) toggleFullscreenCard(null);
+  if($('evidenceDialog').open) $('evidenceDialog').close();
+  setModule('quiz');
+  $('quizMap').append($('combCard'));
+  $('quizDialog').show();
+  renderGuidedQuiz();
+  requestAnimationFrame(drawCombined);
+}
+function renderGuidedQuiz(){
+  const el=$('quizContent'), answered=Object.keys(userAns).length;
+  $('quizDialog').dataset.step=quizStep;
+  if(quizStep==='priorities'){
+    el.innerHTML=`<h2>Find my place</h2><button class="primary" data-start>Start with a suggested question →</button>${answered?'<button class="quiet" data-results>View my results</button>':''}`;
+  }else if(quizStep==='questions'){
+    const t=T[quizOrder[quizIndex]], a=userAns[t.k], q=quizQuestion(t);curK=t.k;topicActive=true;
+    el.innerHTML=`<div class="quiz-actions"><button class="quiet" data-back>← Back</button><span class="meta">Question ${quizIndex+1}</span><button class="quiet" data-results>Results</button></div>
+      <h2 class="quiz-question" tabindex="-1">${esc(q.question)}</h2>
+      <details class="question-context"><summary>More context and speeches</summary>${q.note?`<p class="meta">${esc(q.note)}</p>`:''}
+      ${[-1,1].map(v=>{const src=v<0?q.lo_source:q.hi_source;return `<details><summary>${esc(v<0?q.lo:q.hi)}</summary>${speech(src)}${src.source_text?`<details><summary>Full cached passage</summary><p>${esc(src.source_text)}</p></details>`:''}</details>`;}).join('')}</details>
+      <div class="answer-options">${[-1,1].map(v=>`<button class="answer-option" data-answer="${v}" aria-pressed="${a===v}"><span class="side-label ${v<0?'low':'high'}">${v<0?'A':'B'}</span><b>${esc(v<0?q.lo:q.hi)}</b></button>`).join('')}</div>
+      <div class="question-secondary"><button class="tbtn-pill" data-answer="0" aria-pressed="${a===0}">Somewhere between</button><button class="tbtn-pill" data-skip>Skip · no view</button></div>`;
+  }else{
+    const directional=Object.values(userAns).filter(v=>v===-1 || v===1).length;
+    const guidedAnswered=quizOrder.filter(k=>userAns[k]!==undefined).length;
+    const covered=new Set(quizOrder.filter(k=>userAns[k]!==undefined).map(k=>MP3DSelection.areaFor(k,T)));
+    const available=new Set(selectionRanking.map(({k})=>MP3DSelection.areaFor(k,T)));
+    const matches=directional>=3 ? computeUserPoint().topMPs : [];
+    el.innerHTML=`<h2 tabindex="-1">Your results</h2><p class="meta">${guidedAnswered} answered · ${covered.size} of ${available.size} available policy areas</p>${directional?`<details class="priority-list"><summary>Which issues matter most to you?</summary><p class="meta">Give an answer more weight in your placement.</p>${quizOrder.filter(k=>userAns[k]===-1||userAns[k]===1).map(k=>`<label><input type="checkbox" data-priority="${k}" ${userStar.has(k)?'checked':''}> ${esc(T[k].title)}</label>`).join('')}</details>`:''}${directional>=3?`<p class="meta">Your star shows your approximate map position.</p><h3>MPs with at least three comparable answers</h3>${matches.slice(0,4).map(({m,shared,nShared})=>{
+      const agreements=shared.filter(x=>x.match).length;
+      return `<article class="match-card"><div class="profile-head">${portrait(m)}<div><h3>${esc(m.n)}</h3><span class="meta">${esc(m.p)} · ${esc(m.k)}<br>${agreements} of ${nShared} in agreement · ${nShared-agreements} different</span></div></div>${shared.map(({k,sc})=>{
+        const t=T[k], q=t.quiz_review;
+        const side=v=>v<0?(q?.lo||t.pole_lo):(q?.hi||t.pole_hi);
+        return `<div class="match-question"><p><b>${esc(q?.question||t.question||t.title)}</b></p><p>You chose ${esc(side(userAns[k]))}<br>${esc(m.n)}’s recorded side: ${esc(side(sc))}</p><button class="quiet" data-match="${m.i}" data-match-topic="${k}" aria-label="Read ${esc(m.n)}’s evidence on ${esc(t.title)}">Read evidence ↗</button></div>`;
+      }).join('')}</article>`;
+    }).join('')||'<p class="empty-results">No MPs have three comparable directional answers yet.</p>'}`:''}<div class="quiz-actions">${quizIndex<quizOrder.length?'<button class="primary" data-continue>Continue questions →</button>':''}<button class="quiet" data-review>Review answers</button><button class="primary" data-explore>Explore the map →</button></div><button class="link" data-reset>Reset my answers and priorities</button>`;
+  }
+  const on=(q,fn)=>{const b=el.querySelector(q);if(b)b.onclick=fn;};
+  on('[data-topics]',()=>{quizStep='priorities';renderGuidedQuiz();el.scrollTop=0;});
+  on('[data-continue]',()=>{quizStep='questions';renderGuidedQuiz();el.scrollTop=0;});
+  on('[data-start]',()=>{
+    quizOrder=rankQuiz().map(r=>r.k);
+    quizIndex=0;
+    quizStep='questions';
+    renderGuidedQuiz();
+    el.scrollTop=0;
+  });
+  const next=()=>{
+    const past=quizOrder.slice(0,quizIndex+1);
+    const covered=new Set(past.filter(k=>userAns[k]!==undefined).map(k=>MP3DSelection.areaFor(k,T)));
+    const available=new Set(selectionRanking.map(({k})=>MP3DSelection.areaFor(k,T)));
+    const remaining=rankQuiz(userAns,past).map(r=>r.k);
+    // When reviewing earlier answers, retain questions already answered later.
+    const laterAnswers=quizOrder.slice(quizIndex+1).filter(k=>userAns[k]!==undefined);
+    quizOrder=[...past,...laterAnswers,...remaining];
+    quizIndex++;
+    const complete=!coverageCheckpoint && covered.size===available.size;
+    if(complete)coverageCheckpoint=true;
+    if(complete || quizIndex>=quizOrder.length)quizStep='results';
+    renderGuidedQuiz();
+    el.scrollTop=0;
+    el.querySelector('h2')?.focus();
+  };
+  el.querySelectorAll('[data-answer]').forEach(button=>button.onclick=()=>{
+    const k=quizOrder[quizIndex];
+    userAns[k]=Number(button.dataset.answer);
+    if(userAns[k]===0)userStar.delete(k);
+    if(hasDirectionalAnswer())flashYou();
+    next();
+  });
+  el.querySelectorAll('[data-priority]').forEach(input=>input.onchange=()=>{
+    const k=Number(input.dataset.priority);
+    if(input.checked)userStar.add(k);else userStar.delete(k);
+    renderGuidedQuiz();
+    const list=el.querySelector('.priority-list');
+    list.open=true;
+    list.querySelector(`[data-priority="${k}"]`).focus();
+  });
+  on('[data-skip]',()=>{delete userAns[quizOrder[quizIndex]];userStar.delete(quizOrder[quizIndex]);next();});
+  on('[data-back]',()=>{if(quizIndex)quizIndex--;else quizStep='priorities';renderGuidedQuiz();});
+  on('[data-results]',()=>{quizStep='results';renderGuidedQuiz();el.scrollTop=0;});
+  on('[data-review]',()=>{quizStep='questions';quizIndex=0;renderGuidedQuiz();el.scrollTop=0;});
+  on('[data-explore]',()=>$('quizDialog').close());
+  on('[data-reset]',()=>{Object.keys(userAns).forEach(k=>delete userAns[k]);userStar.clear();coverageCheckpoint=false;quizIndex=0;quizStep='priorities';renderGuidedQuiz();});
+  el.querySelectorAll('[data-match]').forEach(b=>b.onclick=()=>{
+    selMP=+b.dataset.match;
+    curK=+b.dataset.matchTopic;
+    topicActive=true;
+    const dialog=$('quizDialog');
+    dialog.addEventListener('close',()=>$('mpTopicEvidence')?.scrollIntoView({block:'start'}),{once:true});
+    dialog.close();
+  });
+  updateQuizMapCaption();
+  drawCombined();
+}
+if($('quizOpen')) $('quizOpen').onclick=openQuiz;
+
+function openMapAxes(){
+  const period = histMode === 'all' ? 'All History (2022–26)' : '2024–26 Parliament';
+  $('axesBody').innerHTML = MP3DMapEvidence.renderAxes(
+    T, spaceMode === 'within' ? 'diam_win' : 'diam_bal', period, topicActive ? curK : null
+  );
+  $('axesDialog').showModal();
+}
+$('mapAxesBtn').onclick=openMapAxes;
+$('aboutOpen').onclick=()=>$('aboutDialog').showModal();
+$('aboutAxesBtn').onclick=()=>{
+  $('aboutDialog').close();
+  openMapAxes();
+};
+$('axesBody').onclick=e=>{
+  const button=e.target.closest('[data-axis-topic]');
+  if(!button)return;
+  $('axesDialog').close();
+  selMP=null;
+  curK=Number(button.dataset.axisTopic);
+  topicActive=true;
+  cmpK=null;
+  renderTopicList();
+  refresh();
+};
+document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>$(b.dataset.close).close());
+$('quizDialog').addEventListener('close',()=>{mapHome.after($('combCard'));if(activeModule==='quiz')setModule('explore');renderTopicList();refresh();});
+$('evidenceDialog').addEventListener('close',()=>{selMP=null;drawCombined();drawIndividual();});
+for(const d of document.querySelectorAll('dialog'))d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}});
+const quizControls=document.createElement('div');quizControls.className='quiz-map-controls';quizControls.innerHTML='<button class="tbtn-pill" id="quizDimension">Switch to 2D</button><button class="tbtn-pill" id="quizHist" aria-pressed="false" title="Toggle between This Parliament (2024–26) and All History (2022–26)">Include 2022–24 History</button>';$('quizMap').querySelector('.live-caption').after(quizControls);
+if($('quizOpen')) $('quizOpen').addEventListener('click',()=>{$('quizDimension').textContent=`Switch to ${dimMode===3?2:3}D`;$('quizHist').setAttribute('aria-pressed',String(histMode==='all'));});
+$('quizDimension').onclick=()=>{dimMode=dimMode===3?2:3;goal=dimMode===3?{yaw:-.55,pitch:.3}:{yaw:0,pitch:0};$('quizDimension').textContent=`Switch to ${dimMode===3?2:3}D`;document.querySelectorAll('[data-dm]').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.dm===dimMode)));updateQuizMapCaption();drawCombined();};
+$('quizHist').onclick=()=>{setHistMode(histMode==='all'?'cur':'all');$('quizHist').setAttribute('aria-pressed',String(histMode==='all'));};
+$('mpNames').innerHTML=M.map(m=>`<option value="${esc(m.n)}">${esc(m.p)} · ${esc(m.k)}</option>`).join('');
+if($('btnHideRight')){ $('btnHideRight').textContent='Read speech evidence ↗'; $('btnHideRight').title='Open quotes and topic details'; }
+if($('closeTopics')) $('closeTopics').onclick=()=>$('appRoot').classList.remove('mobile-topics');
+if($('btnHideLeft')){
+  $('btnHideLeft').textContent='Topics';
+  $('btnHideLeft').onclick=()=>{if(matchMedia('(max-width:700px)').matches){$('appRoot').classList.toggle('mobile-topics');}else{hideLeft=!hideLeft;$('appRoot').classList.toggle('hide-left',hideLeft);$('btnHideLeft').setAttribute('aria-pressed',String(hideLeft));requestAnimationFrame(refresh);}};
+}
+$('topics').addEventListener('click',e=>{if(e.target.closest('[data-k]')){$('appRoot').classList.remove('mobile-topics');requestAnimationFrame(refresh);}});
+$('dualWrap').classList.add('fullcomb');
+document.querySelectorAll('[data-lm]').forEach(b=>{b.setAttribute('aria-pressed',String(b.dataset.lm==='full'));b.textContent=b.dataset.lm==='full'?'Commons map':'Topic panel';});
+document.querySelectorAll('[data-dm]').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.dm===dimMode)));
+$('togNames').setAttribute('aria-pressed','false');
+const chartResize=new ResizeObserver(()=>{drawCombined();drawIndividual();});chartResize.observe($('dualWrap'));chartResize.observe($('quizMap'));chartResize.observe($('cvInd').parentElement);
+
+
+// Settings dialog setup
+function settingsGroup(title,ids){
+  const g=document.createElement('section');g.className='settings-group';
+  const h=document.createElement('h3');h.textContent=title;g.append(h);
+  const row=document.createElement('div');row.className='settings-row';
+  ids.forEach(id=>{if($(id))row.append($(id));});
+  g.append(row);$('settingsBody').append(g);
+}
+settingsGroup('View',['layoutmode','indview']);
+settingsGroup('Dimensions',['dimmode']);
+settingsGroup('Compare',['spacemode']);
+settingsGroup('Speech period',['histmode']);
+settingsGroup('Map colouring',['combview']);
+settingsGroup('Show on the map',['togParties','togPartiesOnly','togMPs','togNames','togRim']);
+settingsGroup('Filter by party',['pbar']);
+$('searchBody').prepend($('mpsearch'));
+
+// Header action triggers
+$('settingsOpen').onclick=()=>{closeTopics();$('settingsDialog').showModal();};
+$('searchOpen').onclick=()=>{closeTopics();$('searchDialog').showModal();$('mpsearch').focus();};
+$('settingsDialog').addEventListener('close',()=>{refresh();});
+
+// Topics Drawer controls
+function openTopics(){
+  $('left').inert=false;
+  $('appRoot').classList.add('topics-open');
+  $('openTopicsBtn').setAttribute('aria-expanded','true');
+  $('topicPicker').open=!topicActive;
+  $('topicPicker').querySelector('summary').textContent=topicActive?'Change topic':'Choose a topic';
+  if(topicActive)$('topicPicker').querySelector('summary').focus();
+  else $('tsearch').focus();
+  $('layoutmode').querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lm==='dual')));
+  requestAnimationFrame(drawIndividual);
+}
+function closeTopics(){
+  $('left').inert=true;
+  $('appRoot').classList.remove('topics-open','mobile-topics');
+  $('openTopicsBtn').setAttribute('aria-expanded','false');
+  $('layoutmode').querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lm==='full')));
+}
+$('openTopicsBtn').onclick=()=>{
+  $('appRoot').classList.contains('topics-open')?closeTopics():openTopics();
+};
+$('closeTopics').onclick=closeTopics;
+document.addEventListener('pointerdown',e=>{
+  if($('appRoot').classList.contains('topics-open')&&!$('left').contains(e.target)&&!$('openTopicsBtn').contains(e.target)){
+    closeTopics();
+  }
+});
+window.addEventListener('keydown',e=>{
+  if(e.key==='Escape'&&$('appRoot').classList.contains('topics-open'))closeTopics();
+});
+$('topics').onclick=e=>{
+  const b=e.target.closest('[data-k]');
+  if(!b)return;
+  if($('quizDialog').open)setModule('explore');
+  curK=+b.dataset.k;topicActive=true;cmpK=null;
+  $('topicPicker').open=false;
+  $('topicPicker').querySelector('summary').textContent='Change topic';
+  $('topicPicker').querySelector('summary').focus();
+  renderTopicList();refresh();
+};
+
+// Active Topic Chip management
+function updateActiveTopicChip(){
+  const chip=$('activeTopicChip');
+  const titleEl=$('activeTopicChipTitle');
+  if(!chip||!titleEl)return;
+  if(topicActive&&T[curK]){
+    titleEl.textContent=T[curK].title;
+    if($('activeTopicChipQ'))$('activeTopicChipQ').textContent=T[curK].question||'';
+    chip.style.display='inline-flex';
+  } else {
+    chip.style.display='none';
+  }
+}
+if($('quizBackBtn')) $('quizBackBtn').onclick = () => $('quizDialog').close();
+if($('clearTopicChipBtn')){
+  $('clearTopicChipBtn').onclick=()=>{
+    if($('quizDialog').open)setModule('explore');
+    topicActive=false;cmpK=null;pullVal=0;
+    if($('pull'))$('pull').value=0;
+    renderTopicList();refresh();
+  };
+}
+
+// Mode navigation
+const modeNav=$('modeNav');
+const relationPanel=document.createElement('section');
+relationPanel.id='relationshipPanel';
+relationPanel.hidden=true;
+document.body.append(relationPanel);
+
+function setModule(mode){
+  closeTopics();
+  activeModule=mode;
+  document.body.dataset.module=mode;
+  modeNav.querySelectorAll('button').forEach(b=>{
+    const isActive=b.dataset.module===mode;
+    b.setAttribute('aria-pressed',String(isActive));
+    b.classList.toggle('active',isActive);
+  });
+  if(mode!=='quiz'&&$('quizDialog').open)$('quizDialog').close();
+  relationPanel.hidden=mode!=='relationships';
+  if(mode==='relationships'){
+    MP3DRelationships.mount(relationPanel,M,T,k=>{
+      curK=k;topicActive=true;setModule('explore');renderTopicList();refresh();
+    });
+  }
+  drawCombined();
+}
+modeNav.onclick=e=>{
+  const b=e.target.closest('[data-module]');
+  if(!b)return;
+  b.dataset.module==='quiz'?openQuiz():setModule(b.dataset.module);
+};
+
+// Floating dimension toggle (2D / 3D)
+const dimFloating=$('dimToggleWrap');
+if(dimFloating){
+  dimFloating.onclick=e=>{
+    const b=e.target.closest('[data-dm]');
+    if(!b)return;
+    dimMode=+b.dataset.dm;
+    goal=dimMode===3?{yaw:-0.55,pitch:0.3}:{yaw:0,pitch:0};
+    document.querySelectorAll('[data-dm]').forEach(x=>x.setAttribute('aria-pressed',String(+x.dataset.dm===dimMode)));
+    drawCombined();
+  };
+}
+
+// Trackpad-first Zoom HUD
+if($('zoomToast')){
+  $('zoomToast').onclick=()=>setZoom(1);
+}
+cvC.addEventListener('dblclick',()=>setZoom(1));
+window.addEventListener('keydown',e=>{
+  if(e.key==='0'&&!['INPUT','TEXTAREA'].includes(document.activeElement?.tagName)){
+    setZoom(1);
+  }
+});
+cvC.addEventListener('wheel',e=>{
+  e.preventDefault();
+  setZoom(mapZoom*Math.exp(-e.deltaY*0.0012));
+},{passive:false});
+
+const touchPoints=new Map();let pinchDistance=null,pinchGesture=false;
+cvC.addEventListener('pointerdown',e=>{
+  if(e.pointerType!=='touch')return;
+  touchPoints.set(e.pointerId,[e.clientX,e.clientY]);
+  cvC.setPointerCapture(e.pointerId);
+  if(touchPoints.size===2){
+    pinchGesture=true;
+    const p=[...touchPoints.values()];
+    pinchDistance=Math.hypot(p[0][0]-p[1][0],p[0][1]-p[1][1]);
+    drag=null;
+  }
+});
+cvC.addEventListener('pointermove',e=>{
+  if(!touchPoints.has(e.pointerId))return;
+  touchPoints.set(e.pointerId,[e.clientX,e.clientY]);
+  if(touchPoints.size===2){
+    pinchGesture=true;
+    const p=[...touchPoints.values()],dist=Math.hypot(p[0][0]-p[1][0],p[0][1]-p[1][1]);
+    if(pinchDistance)setZoom(mapZoom*dist/pinchDistance);
+    pinchDistance=dist;
+  }
+});
+for(const event of ['pointerup','pointercancel'])cvC.addEventListener(event,e=>{
+  touchPoints.delete(e.pointerId);
+  if(touchPoints.size<2)pinchDistance=null;
+  if(touchPoints.size===0)pinchGesture=false;
+  if(event==='pointercancel')drag=null;
+});
+window.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('quizDialog').open)$('quizDialog').close();});
+
+renderPartyBar();
+setLeftMode(DEFAULT_LEFT_MODE);
+requestAnimationFrame(loop);
+</script>
+</body>
+</html>

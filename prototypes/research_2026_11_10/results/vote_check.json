@@ -1,0 +1,3629 @@
+{
+ "duplicate_vote_rows_dropped": 115,
+ "fights_file": "/Users/joshuathomasamar/PycharmProjects/MP3D/prototypes/research_2026_11_10/results/fp_fights_final3.json",
+ "jaccard_threshold": 0.5,
+ "n_fights": 59,
+ "n_fights_linked": 41,
+ "n_links": 281,
+ "unlinked_fights": [
+  {
+   "fight_id": 2,
+   "label": "Amend the Dogs (Protection of Livestock) Act 1953 to strengthen legislation against livestock worrying",
+   "majors": [
+    "Dogs (Protection of Livestock) (Amendment) Bill"
+   ]
+  },
+  {
+   "fight_id": 196,
+   "label": "Enshrine the armed forces covenant into law across all areas of Government",
+   "majors": [
+    "Armed Forces Bill"
+   ]
+  },
+  {
+   "fight_id": 353,
+   "label": "Impose fines on parents for term-time school holidays",
+   "majors": [
+    ""
+   ]
+  },
+  {
+   "fight_id": 360,
+   "label": "Increase 16-to-19 funding rates and provide additional capital for further education colleges",
+   "majors": [
+    "",
+    "Access to Further Education",
+    "Debate on the Address"
+   ]
+  },
+  {
+   "fight_id": 382,
+   "label": "Cut funding for the International Baccalaureate in state schools",
+   "majors": [
+    "",
+    "Backbench Business",
+    "Curriculum and Assessment Review"
+   ]
+  },
+  {
+   "fight_id": 389,
+   "label": "Abolish the English Baccalaureate (EBacc) performance measure",
+   "majors": [
+    "",
+    "Curriculum and Assessment Review"
+   ]
+  },
+  {
+   "fight_id": 393,
+   "label": "Implement the Review of Relationship, Sex and Health Education guidance",
+   "majors": [
+    "",
+    "Education",
+    "Environment, Food and Rural Affairs Committee"
+   ]
+  },
+  {
+   "fight_id": 395,
+   "label": "Expand funded childcare entitlement from 15 to 30 hours per week",
+   "majors": [
+    "",
+    "Department for Education",
+    "Early Education and Childcare"
+   ]
+  },
+  {
+   "fight_id": 457,
+   "label": "Implement a four-day school week",
+   "majors": [
+    ""
+   ]
+  },
+  {
+   "fight_id": 508,
+   "label": "Integrate play into the key stage 1 curriculum",
+   "majors": [
+    "",
+    "Curriculum and Assessment Review",
+    "Education"
+   ]
+  },
+  {
+   "fight_id": 511,
+   "label": "Require compulsory Special Educational Needs and Disabilities training for all teachers and staff",
+   "majors": [
+    "",
+    "Education",
+    "SEND Funding"
+   ]
+  },
+  {
+   "fight_id": 526,
+   "label": "Raise university tuition fees",
+   "majors": [
+    "",
+    "Department for Education",
+    "Higher Education Reform"
+   ]
+  },
+  {
+   "fight_id": 616,
+   "label": "Include financial education in the school curriculum",
+   "majors": [
+    "",
+    "Curriculum and Assessment Review",
+    "Education"
+   ]
+  },
+  {
+   "fight_id": 647,
+   "label": "Abolish or restrict the right to Education, Health and Care Plans",
+   "majors": [
+    ""
+   ]
+  },
+  {
+   "fight_id": 1439,
+   "label": "Mandatory solar panel installation on all new homes",
+   "majors": [
+    "New Homes (Solar Generation) Bill"
+   ]
+  },
+  {
+   "fight_id": 1763,
+   "label": "Abolish NHS England",
+   "majors": [
+    "Health Bill"
+   ]
+  },
+  {
+   "fight_id": 1767,
+   "label": "Create a single digital patient record for the NHS",
+   "majors": [
+    "Health Bill"
+   ]
+  },
+  {
+   "fight_id": 2085,
+   "label": "Introduce new civil respect orders for persistent antisocial behaviour offenders",
+   "majors": [
+    "Crime and Policing Bill"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "fight_id": 0,
+   "label": "Impose a tax on family farms",
+   "division_id": 2227,
+   "title": "Finance (No. 2) Bill Committee: New Clause 12",
+   "date": "2026-01-12",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 0,
+   "label": "Impose a tax on family farms",
+   "division_id": 2230,
+   "title": "Finance (No. 2) Bill Committee: Amendment 3",
+   "date": "2026-01-12",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 0,
+   "label": "Impose a tax on family farms",
+   "division_id": 2231,
+   "title": "Finance (No. 2) Bill Committee: New Clause 7",
+   "date": "2026-01-12",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 0,
+   "label": "Impose a tax on family farms",
+   "division_id": 2233,
+   "title": "Finance (No. 2) Bill Committee: New Clause 24",
+   "date": "2026-01-13",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 0,
+   "label": "Impose a tax on family farms",
+   "division_id": 2234,
+   "title": "Finance (No. 2) Bill Committee: New Clause 25",
+   "date": "2026-01-13",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 0,
+   "label": "Impose a tax on family farms",
+   "division_id": 2236,
+   "title": "Finance (No. 2) Bill Committee: New Clause 9",
+   "date": "2026-01-13",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 0,
+   "label": "Impose a tax on family farms",
+   "division_id": 2237,
+   "title": "Finance (No. 2) Bill Committee: New Clause 26",
+   "date": "2026-01-13",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 0,
+   "label": "Impose a tax on family farms",
+   "division_id": 2222,
+   "title": "Finance (No. 2) Bill: Reasoned Amendment to Second Reading (Opposition)",
+   "date": "2025-12-16",
+   "score": 0.5,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 0,
+   "label": "Impose a tax on family farms",
+   "division_id": 2223,
+   "title": "Finance (No. 2) Bill: Second Reading",
+   "date": "2025-12-16",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 83,
+   "label": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "division_id": 2051,
+   "title": "Terminally Ill Adults (End of Life) Bill: Amendment (b) to New Clause 14",
+   "date": "2025-06-13",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 83,
+   "label": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "division_id": 2052,
+   "title": "Terminally Ill Adults (End of Life) Bill: New Clause 1",
+   "date": "2025-06-13",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 83,
+   "label": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "division_id": 2053,
+   "title": "Terminally Ill Adults (End of Life) Bill: New Clause 2",
+   "date": "2025-06-13",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 83,
+   "label": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "division_id": 1877,
+   "title": "Terminally Ill Adults (End of Life) Bill: Second Reading",
+   "date": "2024-11-29",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 83,
+   "label": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "division_id": 2066,
+   "title": "Terminally Ill Adults (End of Life) Bill: New Clause 16",
+   "date": "2025-06-20",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 83,
+   "label": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "division_id": 2067,
+   "title": "Terminally Ill Adults (End of Life) Bill: Amendment 24",
+   "date": "2025-06-20",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 83,
+   "label": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "division_id": 2068,
+   "title": "Terminally Ill Adults (End of Life) Bill: Amendment 12",
+   "date": "2025-06-20",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 83,
+   "label": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "division_id": 2069,
+   "title": "Terminally Ill Adults (End of Life) Bill: Amendment 77",
+   "date": "2025-06-20",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 83,
+   "label": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "division_id": 2070,
+   "title": "Terminally Ill Adults (End of Life) Bill: Amendment 94",
+   "date": "2025-06-20",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 83,
+   "label": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "division_id": 2071,
+   "title": "Terminally Ill Adults (End of Life) Bill: Third Reading",
+   "date": "2025-06-20",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 83,
+   "label": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "division_id": 2029,
+   "title": "Terminally Ill Adults (End of Life) Bill Report Stage: Amendment (a) to New Clause 10",
+   "date": "2025-05-16",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 127,
+   "label": "Pass the Football Governance Bill to establish an independent football regulator",
+   "division_id": 2004,
+   "title": "Football Governance Bills [Lords]: Reasoned Amendment to Second Reading",
+   "date": "2025-04-28",
+   "score": 0.667,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 127,
+   "label": "Pass the Football Governance Bill to establish an independent football regulator",
+   "division_id": 2005,
+   "title": "Football Governance Bills [Lords]: Second Reading",
+   "date": "2025-04-28",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 127,
+   "label": "Pass the Football Governance Bill to establish an independent football regulator",
+   "division_id": 2080,
+   "title": "Football Governance Bill [HL] Report Stage: New Clause 1",
+   "date": "2025-07-08",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 127,
+   "label": "Pass the Football Governance Bill to establish an independent football regulator",
+   "division_id": 2081,
+   "title": "Football Governance Bill [HL] Report Stage: New Clause 3",
+   "date": "2025-07-08",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 127,
+   "label": "Pass the Football Governance Bill to establish an independent football regulator",
+   "division_id": 2082,
+   "title": "Football Governance Bill [HL] Report Stage: Amendment 18",
+   "date": "2025-07-08",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 127,
+   "label": "Pass the Football Governance Bill to establish an independent football regulator",
+   "division_id": 2083,
+   "title": "Football Governance Bill [HL]: Third Reading",
+   "date": "2025-07-08",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 539,
+   "label": "Pass the Children's Wellbeing and Schools Bill",
+   "division_id": 1900,
+   "title": "Reasoned amendment on Children's Wellbeing and Schools Bill",
+   "date": "2025-01-08",
+   "score": 0.75,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 539,
+   "label": "Pass the Children's Wellbeing and Schools Bill",
+   "division_id": 1953,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: New Clause 7",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 539,
+   "label": "Pass the Children's Wellbeing and Schools Bill",
+   "division_id": 1954,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: New Clause 34",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 539,
+   "label": "Pass the Children's Wellbeing and Schools Bill",
+   "division_id": 1955,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: Amendment 209",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 539,
+   "label": "Pass the Children's Wellbeing and Schools Bill",
+   "division_id": 1956,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: Amendment 210",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 539,
+   "label": "Pass the Children's Wellbeing and Schools Bill",
+   "division_id": 1957,
+   "title": "Children's Wellbeing and Schools Bill: Third Reading",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 539,
+   "label": "Pass the Children's Wellbeing and Schools Bill",
+   "division_id": 2253,
+   "title": "Universal Credit (Removal of Two Child Limit) Bill: Second Reading",
+   "date": "2026-02-03",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 539,
+   "label": "Pass the Children's Wellbeing and Schools Bill",
+   "division_id": 1845,
+   "title": "House of Lords (Hereditary Peers) Bill: Reasoned Amendment to Second Reading",
+   "date": "2024-10-15",
+   "score": 0.5,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 361,
+   "label": "Expand apprenticeships and technical education",
+   "division_id": 1931,
+   "title": "Institute for Apprenticeships and Technical Education (Transfer of Functions etc) Bill: Reasoned Amendment on Second Reading",
+   "date": "2025-02-25",
+   "score": 0.8,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 361,
+   "label": "Expand apprenticeships and technical education",
+   "division_id": 1932,
+   "title": "Institute for Apprenticeships and Technical Education (Transfer of Functions etc) Bill: Second Reading",
+   "date": "2025-02-25",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 361,
+   "label": "Expand apprenticeships and technical education",
+   "division_id": 2285,
+   "title": "Opposition day: Student loans",
+   "date": "2026-03-18",
+   "score": 1.0,
+   "type": "other"
+  },
+  {
+   "fight_id": 361,
+   "label": "Expand apprenticeships and technical education",
+   "division_id": 2464,
+   "title": "Budget Resolution No. 3: Income tax (default, property and savings rates)",
+   "date": "2026-11-03",
+   "score": 0.6,
+   "type": "other"
+  },
+  {
+   "fight_id": 375,
+   "label": "Establish Skills England as an independent executive agency",
+   "division_id": 1931,
+   "title": "Institute for Apprenticeships and Technical Education (Transfer of Functions etc) Bill: Reasoned Amendment on Second Reading",
+   "date": "2025-02-25",
+   "score": 0.8,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 375,
+   "label": "Establish Skills England as an independent executive agency",
+   "division_id": 1932,
+   "title": "Institute for Apprenticeships and Technical Education (Transfer of Functions etc) Bill: Second Reading",
+   "date": "2025-02-25",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 375,
+   "label": "Establish Skills England as an independent executive agency",
+   "division_id": 1987,
+   "title": "Institute for Apprenticeships and Technical Education (Transfer of Functions etc) Bill [Lords] Report Stage: New Clause 1",
+   "date": "2025-03-31",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 375,
+   "label": "Establish Skills England as an independent executive agency",
+   "division_id": 1988,
+   "title": "Institute for Apprenticeships and Technical Education (Transfer of Functions etc) Bill [Lords] Report Stage: New Clause 4",
+   "date": "2025-03-31",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 375,
+   "label": "Establish Skills England as an independent executive agency",
+   "division_id": 1989,
+   "title": "Institute for Apprenticeships and Technical Education (Transfer of Functions etc) Bill [Lords] Report Stage: Amendment 6",
+   "date": "2025-03-31",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 375,
+   "label": "Establish Skills England as an independent executive agency",
+   "division_id": 1990,
+   "title": "Institute for Apprenticeships and Technical Education (Transfer of Functions etc) Bill [Lords]: Third Reading",
+   "date": "2025-03-31",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 394,
+   "label": "Remove tax exemption on independent school fees",
+   "division_id": 1970,
+   "title": "Non-Domestic Rating (Multipliers and Private Schools) Bill: Motion to disagree with Lords Amendment 1",
+   "date": "2025-03-25",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 394,
+   "label": "Remove tax exemption on independent school fees",
+   "division_id": 1971,
+   "title": "Non-Domestic Rating (Multipliers and Private Schools) Bill: Motion to disagree with Lords Amendment 2",
+   "date": "2025-03-25",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 394,
+   "label": "Remove tax exemption on independent school fees",
+   "division_id": 1972,
+   "title": "Non Domestic Rating (Multipliers and Private Schools) Bill: Motion to disagree with Lords Amendment 3",
+   "date": "2025-03-25",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 394,
+   "label": "Remove tax exemption on independent school fees",
+   "division_id": 1973,
+   "title": "Non-Domestic Rating (Multipliers and Private Schools) Bill: Motion to disagree with Lords Amendment 13",
+   "date": "2025-03-25",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 394,
+   "label": "Remove tax exemption on independent school fees",
+   "division_id": 1974,
+   "title": "Non Domestic Rating (Multipliers and Private Schools) Bill: Motion to disagree with Lords Amendment 14",
+   "date": "2025-03-25",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 394,
+   "label": "Remove tax exemption on independent school fees",
+   "division_id": 1975,
+   "title": "Non Domestic Rating (Multipliers and Private Schools) Bill: Motion to disagree with Lords Amendment 15",
+   "date": "2025-03-25",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 394,
+   "label": "Remove tax exemption on independent school fees",
+   "division_id": 1875,
+   "title": "Finance Bill: Reasoned Amendment to Second Reading",
+   "date": "2024-11-27",
+   "score": 0.5,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 394,
+   "label": "Remove tax exemption on independent school fees",
+   "division_id": 1876,
+   "title": "Finance Bill: Second Reading",
+   "date": "2024-11-27",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 394,
+   "label": "Remove tax exemption on independent school fees",
+   "division_id": 1935,
+   "title": "Finance Bill Report Stage: New Clause 2",
+   "date": "2025-03-03",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 394,
+   "label": "Remove tax exemption on independent school fees",
+   "division_id": 1936,
+   "title": "Finance Bill Report Stage: New Clause 8",
+   "date": "2025-03-03",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 394,
+   "label": "Remove tax exemption on independent school fees",
+   "division_id": 1937,
+   "title": "Finance Bill Report Stage: Amendment 67",
+   "date": "2025-03-03",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 394,
+   "label": "Remove tax exemption on independent school fees",
+   "division_id": 1938,
+   "title": "Finance Bill: Third Reading",
+   "date": "2025-03-03",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 394,
+   "label": "Remove tax exemption on independent school fees",
+   "division_id": 1842,
+   "title": "Opposition Day: VAT on independent schools",
+   "date": "2024-10-08",
+   "score": 1.0,
+   "type": "other"
+  },
+  {
+   "fight_id": 394,
+   "label": "Remove tax exemption on independent school fees",
+   "division_id": 1892,
+   "title": "Finance Bill Committee: New Clause 8",
+   "date": "2024-12-11",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 394,
+   "label": "Remove tax exemption on independent school fees",
+   "division_id": 1893,
+   "title": "Finance Bill Committee: New Clause 6",
+   "date": "2024-12-11",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 394,
+   "label": "Remove tax exemption on independent school fees",
+   "division_id": 1894,
+   "title": "Finance Bill Committee: New Clause 7",
+   "date": "2024-12-11",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 394,
+   "label": "Remove tax exemption on independent school fees",
+   "division_id": 1872,
+   "title": "Non-Domestic Rating (Multipliers and Private Schools) Bill: Reasoned Amendment to Second Reading",
+   "date": "2024-11-25",
+   "score": 0.75,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 394,
+   "label": "Remove tax exemption on independent school fees",
+   "division_id": 1873,
+   "title": "Non-Domestic Rating (Multipliers and Private Schools) Bill: Second Reading",
+   "date": "2024-11-25",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 394,
+   "label": "Remove tax exemption on independent school fees",
+   "division_id": 1895,
+   "title": "National Insurance Contributions (Secondary Class 1 Contributions) Bill Committee: Amendment 1",
+   "date": "2024-12-17",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 394,
+   "label": "Remove tax exemption on independent school fees",
+   "division_id": 1896,
+   "title": "National Insurance Contributions (Secondary Class 1 Contributions) Bill Committee: Amendment 13",
+   "date": "2024-12-17",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 394,
+   "label": "Remove tax exemption on independent school fees",
+   "division_id": 1897,
+   "title": "National Insurance Contributions (Secondary Class 1 Contributions) Bill Committee: Amendment 23",
+   "date": "2024-12-17",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 394,
+   "label": "Remove tax exemption on independent school fees",
+   "division_id": 1898,
+   "title": "National Insurance Contributions (Secondary Class 1 Contributions) Bill Committee: New Clause 1",
+   "date": "2024-12-17",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 394,
+   "label": "Remove tax exemption on independent school fees",
+   "division_id": 1899,
+   "title": "National Insurance Contributions (Secondary Class 1 Contributions) Bill: Third Reading",
+   "date": "2024-12-17",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 394,
+   "label": "Remove tax exemption on independent school fees",
+   "division_id": 1909,
+   "title": "Non-Domestic Rating (Multipliers and Private Schools) Bill Report Stage: New Clause 1",
+   "date": "2025-01-15",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 394,
+   "label": "Remove tax exemption on independent school fees",
+   "division_id": 1910,
+   "title": "Non-Domestic Rating (Multipliers and Private Schools) Bill Report Stage: New Clause 2",
+   "date": "2025-01-15",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 394,
+   "label": "Remove tax exemption on independent school fees",
+   "division_id": 1911,
+   "title": "Non-Domestic Rating (Multipliers and Private Schools) Bill Report Stage: Amendment 7",
+   "date": "2025-01-15",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 394,
+   "label": "Remove tax exemption on independent school fees",
+   "division_id": 1912,
+   "title": "Non-Domestic Rating (Multipliers and Private Schools) Bill Report Stage: Third Reading",
+   "date": "2025-01-15",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 394,
+   "label": "Remove tax exemption on independent school fees",
+   "division_id": 1900,
+   "title": "Reasoned amendment on Children's Wellbeing and Schools Bill",
+   "date": "2025-01-08",
+   "score": 0.75,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 578,
+   "label": "Ban mobile phone use in schools",
+   "division_id": 2320,
+   "title": "Children's Wellbeing and Schools Bill: Amendments (a) to (f) in lieu of Lords Amendment 38",
+   "date": "2026-04-15",
+   "score": 0.75,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 578,
+   "label": "Ban mobile phone use in schools",
+   "division_id": 2321,
+   "title": "Children's Wellbeing and Schools Bill: motion to disagree with Lords Amendment 41B",
+   "date": "2026-04-15",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 578,
+   "label": "Ban mobile phone use in schools",
+   "division_id": 2322,
+   "title": "Children's Wellbeing and Schools Bill: Amendments (a) to (e) in lieu of Lords Amendment 102",
+   "date": "2026-04-15",
+   "score": 0.75,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 578,
+   "label": "Ban mobile phone use in schools",
+   "division_id": 2323,
+   "title": "Children's Wellbeing and Schools Bill: Amendments (a) to (c) in lieu of Lords Amendment 106",
+   "date": "2026-04-15",
+   "score": 0.75,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 578,
+   "label": "Ban mobile phone use in schools",
+   "division_id": 2268,
+   "title": "Children's Wellbeing and Schools Bill: motion to disagree with Lords Amendment 16",
+   "date": "2026-03-09",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 578,
+   "label": "Ban mobile phone use in schools",
+   "division_id": 2269,
+   "title": "Children's Wellbeing and Schools Bill: motion to disagree with Lords Amendment 17",
+   "date": "2026-03-09",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 578,
+   "label": "Ban mobile phone use in schools",
+   "division_id": 2270,
+   "title": "Children's Wellbeing and Schools Bill: motion to disagree with Lords Amendment 37",
+   "date": "2026-03-09",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 578,
+   "label": "Ban mobile phone use in schools",
+   "division_id": 2271,
+   "title": "Children's Wellbeing and Schools Bill: motion to disagree with Lords Amendment 38",
+   "date": "2026-03-09",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 578,
+   "label": "Ban mobile phone use in schools",
+   "division_id": 2272,
+   "title": "Children's Wellbeing and Schools Bill: motion to disagree with Lords Amendment 41",
+   "date": "2026-03-09",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 578,
+   "label": "Ban mobile phone use in schools",
+   "division_id": 2273,
+   "title": "Children's Wellbeing and Schools Bill: motion to disagree with Lords Amendment 44",
+   "date": "2026-03-09",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 578,
+   "label": "Ban mobile phone use in schools",
+   "division_id": 2274,
+   "title": "Children's Wellbeing and Schools Bill: motion to disagree with Lords Amendment 102",
+   "date": "2026-03-09",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 578,
+   "label": "Ban mobile phone use in schools",
+   "division_id": 2275,
+   "title": "Children's Wellbeing and Schools Bill: motion to disagree with Lords Amendment 106",
+   "date": "2026-03-09",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 578,
+   "label": "Ban mobile phone use in schools",
+   "division_id": 1950,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: New Clause 36 ",
+   "date": "2025-03-17",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 578,
+   "label": "Ban mobile phone use in schools",
+   "division_id": 1951,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: Amendment 188",
+   "date": "2025-03-17",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 578,
+   "label": "Ban mobile phone use in schools",
+   "division_id": 1952,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: Amendment 171",
+   "date": "2025-03-17",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 578,
+   "label": "Ban mobile phone use in schools",
+   "division_id": 1953,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: New Clause 7",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 578,
+   "label": "Ban mobile phone use in schools",
+   "division_id": 1954,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: New Clause 34",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 578,
+   "label": "Ban mobile phone use in schools",
+   "division_id": 1955,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: Amendment 209",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 578,
+   "label": "Ban mobile phone use in schools",
+   "division_id": 1956,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: Amendment 210",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 578,
+   "label": "Ban mobile phone use in schools",
+   "division_id": 1957,
+   "title": "Children's Wellbeing and Schools Bill: Third Reading",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 578,
+   "label": "Ban mobile phone use in schools",
+   "division_id": 2338,
+   "title": "Children's Wellbeing and Schools Bill: motion to insist on Amendment 38J and disagree with Lords Amendments 38V to 38X",
+   "date": "2026-04-22",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 1363,
+   "label": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+   "division_id": 1848,
+   "title": "Employment Rights Bill: Reasoned Amendment to Second Reading",
+   "date": "2024-10-21",
+   "score": 0.667,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 1363,
+   "label": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+   "division_id": 1849,
+   "title": "Employment Rights Bill: Second Reading",
+   "date": "2024-10-21",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 1522,
+   "label": "Enact the Water (Special Measures) Bill to hold water companies accountable for sewage pollution",
+   "division_id": 1919,
+   "title": "Water (Special Measures) Bill Report Stage: New Clause 16",
+   "date": "2025-01-28",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 1522,
+   "label": "Enact the Water (Special Measures) Bill to hold water companies accountable for sewage pollution",
+   "division_id": 1920,
+   "title": "Water (Special Measures) Bill Report Stage: New Clause 19",
+   "date": "2025-01-28",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 1522,
+   "label": "Enact the Water (Special Measures) Bill to hold water companies accountable for sewage pollution",
+   "division_id": 1921,
+   "title": "Water (Special Measures) Bill Report Stage: Amendment 9",
+   "date": "2025-01-28",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 1938,
+   "label": "Enact the Illegal Migration Act to curb illegal migration and strengthen border security",
+   "division_id": 2405,
+   "title": "Immigration and Asylum Bill: Reasoned Amendment to Second Reading",
+   "date": "2026-07-13",
+   "score": 0.667,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 1938,
+   "label": "Enact the Illegal Migration Act to curb illegal migration and strengthen border security",
+   "division_id": 2406,
+   "title": "Immigration and Asylum Bill: Second Reading",
+   "date": "2026-07-13",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 1938,
+   "label": "Enact the Illegal Migration Act to curb illegal migration and strengthen border security",
+   "division_id": 1923,
+   "title": "Border Security, Asylum and Immigration Bill: Reasoned Amendment on Second Reading",
+   "date": "2025-02-10",
+   "score": 0.8,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 1938,
+   "label": "Enact the Illegal Migration Act to curb illegal migration and strengthen border security",
+   "division_id": 1924,
+   "title": "Border Security, Asylum and Immigration Bill: Second Reading",
+   "date": "2025-02-10",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 2358,
+   "label": "Pass the Universal Credit and Personal Independence Payment Bill",
+   "division_id": 2073,
+   "title": "Universal Credit and Personal Independent Payment Bill: Reasoned Amendment at Second Reading",
+   "date": "2025-07-01",
+   "score": 0.571,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 2358,
+   "label": "Pass the Universal Credit and Personal Independence Payment Bill",
+   "division_id": 2074,
+   "title": "Universal Credit and Personal Independent Payment Bill: Second Reading",
+   "date": "2025-07-01",
+   "score": 0.667,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 2486,
+   "label": "Create Great British Railways",
+   "division_id": 2372,
+   "title": "Railways Bill: Third Reading",
+   "date": "2026-06-10",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 2486,
+   "label": "Create Great British Railways",
+   "division_id": 2216,
+   "title": "Railways Bill: Opposition Reasoned Amendment",
+   "date": "2025-12-09",
+   "score": 0.5,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 2486,
+   "label": "Create Great British Railways",
+   "division_id": 2217,
+   "title": "Railways Bill: Second Reading",
+   "date": "2025-12-09",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 270,
+   "label": "Reform the non-domestic rating system in England",
+   "division_id": 1909,
+   "title": "Non-Domestic Rating (Multipliers and Private Schools) Bill Report Stage: New Clause 1",
+   "date": "2025-01-15",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 270,
+   "label": "Reform the non-domestic rating system in England",
+   "division_id": 1910,
+   "title": "Non-Domestic Rating (Multipliers and Private Schools) Bill Report Stage: New Clause 2",
+   "date": "2025-01-15",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 270,
+   "label": "Reform the non-domestic rating system in England",
+   "division_id": 1911,
+   "title": "Non-Domestic Rating (Multipliers and Private Schools) Bill Report Stage: Amendment 7",
+   "date": "2025-01-15",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 270,
+   "label": "Reform the non-domestic rating system in England",
+   "division_id": 1912,
+   "title": "Non-Domestic Rating (Multipliers and Private Schools) Bill Report Stage: Third Reading",
+   "date": "2025-01-15",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 270,
+   "label": "Reform the non-domestic rating system in England",
+   "division_id": 1872,
+   "title": "Non-Domestic Rating (Multipliers and Private Schools) Bill: Reasoned Amendment to Second Reading",
+   "date": "2024-11-25",
+   "score": 0.75,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 270,
+   "label": "Reform the non-domestic rating system in England",
+   "division_id": 1873,
+   "title": "Non-Domestic Rating (Multipliers and Private Schools) Bill: Second Reading",
+   "date": "2024-11-25",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 354,
+   "label": "Establish school-based nurseries in existing school classrooms",
+   "division_id": 1879,
+   "title": "National Insurance Contributions (Secondary Class 1 Contributions) Bill: Reasoned Amendment to Second Reading",
+   "date": "2024-12-03",
+   "score": 0.75,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 354,
+   "label": "Establish school-based nurseries in existing school classrooms",
+   "division_id": 1880,
+   "title": "National Insurance Contributions (Secondary Class 1 Contributions) Bill: Second Reading",
+   "date": "2024-12-03",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 354,
+   "label": "Establish school-based nurseries in existing school classrooms",
+   "division_id": 1882,
+   "title": "Opposition Day: Increase in employers' National Insurance Contributions",
+   "date": "2024-12-04",
+   "score": 0.6,
+   "type": "other"
+  },
+  {
+   "fight_id": 362,
+   "label": "Require home-educated children to be registered with local authorities",
+   "division_id": 1900,
+   "title": "Reasoned amendment on Children's Wellbeing and Schools Bill",
+   "date": "2025-01-08",
+   "score": 0.75,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 362,
+   "label": "Require home-educated children to be registered with local authorities",
+   "division_id": 1953,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: New Clause 7",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 362,
+   "label": "Require home-educated children to be registered with local authorities",
+   "division_id": 1954,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: New Clause 34",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 362,
+   "label": "Require home-educated children to be registered with local authorities",
+   "division_id": 1955,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: Amendment 209",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 362,
+   "label": "Require home-educated children to be registered with local authorities",
+   "division_id": 1956,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: Amendment 210",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 362,
+   "label": "Require home-educated children to be registered with local authorities",
+   "division_id": 1957,
+   "title": "Children's Wellbeing and Schools Bill: Third Reading",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 364,
+   "label": "Reform the Special Educational Needs and Disabilities (SEND) system",
+   "division_id": 1842,
+   "title": "Opposition Day: VAT on independent schools",
+   "date": "2024-10-08",
+   "score": 1.0,
+   "type": "other"
+  },
+  {
+   "fight_id": 364,
+   "label": "Reform the Special Educational Needs and Disabilities (SEND) system",
+   "division_id": 1953,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: New Clause 7",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 364,
+   "label": "Reform the Special Educational Needs and Disabilities (SEND) system",
+   "division_id": 1954,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: New Clause 34",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 364,
+   "label": "Reform the Special Educational Needs and Disabilities (SEND) system",
+   "division_id": 1955,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: Amendment 209",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 364,
+   "label": "Reform the Special Educational Needs and Disabilities (SEND) system",
+   "division_id": 1956,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: Amendment 210",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 364,
+   "label": "Reform the Special Educational Needs and Disabilities (SEND) system",
+   "division_id": 1957,
+   "title": "Children's Wellbeing and Schools Bill: Third Reading",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 364,
+   "label": "Reform the Special Educational Needs and Disabilities (SEND) system",
+   "division_id": 1900,
+   "title": "Reasoned amendment on Children's Wellbeing and Schools Bill",
+   "date": "2025-01-08",
+   "score": 0.75,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 367,
+   "label": "Require academies to follow the national curriculum",
+   "division_id": 1900,
+   "title": "Reasoned amendment on Children's Wellbeing and Schools Bill",
+   "date": "2025-01-08",
+   "score": 0.75,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 367,
+   "label": "Require academies to follow the national curriculum",
+   "division_id": 1953,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: New Clause 7",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 367,
+   "label": "Require academies to follow the national curriculum",
+   "division_id": 1954,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: New Clause 34",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 367,
+   "label": "Require academies to follow the national curriculum",
+   "division_id": 1955,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: Amendment 209",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 367,
+   "label": "Require academies to follow the national curriculum",
+   "division_id": 1956,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: Amendment 210",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 367,
+   "label": "Require academies to follow the national curriculum",
+   "division_id": 1957,
+   "title": "Children's Wellbeing and Schools Bill: Third Reading",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 371,
+   "label": "Increase investment in mainstream and special educational needs schools",
+   "division_id": 1842,
+   "title": "Opposition Day: VAT on independent schools",
+   "date": "2024-10-08",
+   "score": 1.0,
+   "type": "other"
+  },
+  {
+   "fight_id": 371,
+   "label": "Increase investment in mainstream and special educational needs schools",
+   "division_id": 1872,
+   "title": "Non-Domestic Rating (Multipliers and Private Schools) Bill: Reasoned Amendment to Second Reading",
+   "date": "2024-11-25",
+   "score": 0.75,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 371,
+   "label": "Increase investment in mainstream and special educational needs schools",
+   "division_id": 1873,
+   "title": "Non-Domestic Rating (Multipliers and Private Schools) Bill: Second Reading",
+   "date": "2024-11-25",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 371,
+   "label": "Increase investment in mainstream and special educational needs schools",
+   "division_id": 1909,
+   "title": "Non-Domestic Rating (Multipliers and Private Schools) Bill Report Stage: New Clause 1",
+   "date": "2025-01-15",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 371,
+   "label": "Increase investment in mainstream and special educational needs schools",
+   "division_id": 1910,
+   "title": "Non-Domestic Rating (Multipliers and Private Schools) Bill Report Stage: New Clause 2",
+   "date": "2025-01-15",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 371,
+   "label": "Increase investment in mainstream and special educational needs schools",
+   "division_id": 1911,
+   "title": "Non-Domestic Rating (Multipliers and Private Schools) Bill Report Stage: Amendment 7",
+   "date": "2025-01-15",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 371,
+   "label": "Increase investment in mainstream and special educational needs schools",
+   "division_id": 1912,
+   "title": "Non-Domestic Rating (Multipliers and Private Schools) Bill Report Stage: Third Reading",
+   "date": "2025-01-15",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 371,
+   "label": "Increase investment in mainstream and special educational needs schools",
+   "division_id": 1875,
+   "title": "Finance Bill: Reasoned Amendment to Second Reading",
+   "date": "2024-11-27",
+   "score": 0.5,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 371,
+   "label": "Increase investment in mainstream and special educational needs schools",
+   "division_id": 1876,
+   "title": "Finance Bill: Second Reading",
+   "date": "2024-11-27",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 372,
+   "label": "Abolish the narrow knowledge-rich curriculum in favour of a holistic approach",
+   "division_id": 1953,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: New Clause 7",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 372,
+   "label": "Abolish the narrow knowledge-rich curriculum in favour of a holistic approach",
+   "division_id": 1954,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: New Clause 34",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 372,
+   "label": "Abolish the narrow knowledge-rich curriculum in favour of a holistic approach",
+   "division_id": 1955,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: Amendment 209",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 372,
+   "label": "Abolish the narrow knowledge-rich curriculum in favour of a holistic approach",
+   "division_id": 1956,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: Amendment 210",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 372,
+   "label": "Abolish the narrow knowledge-rich curriculum in favour of a holistic approach",
+   "division_id": 1957,
+   "title": "Children's Wellbeing and Schools Bill: Third Reading",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 409,
+   "label": "Recruit 6,500 additional teachers",
+   "division_id": 1909,
+   "title": "Non-Domestic Rating (Multipliers and Private Schools) Bill Report Stage: New Clause 1",
+   "date": "2025-01-15",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 409,
+   "label": "Recruit 6,500 additional teachers",
+   "division_id": 1910,
+   "title": "Non-Domestic Rating (Multipliers and Private Schools) Bill Report Stage: New Clause 2",
+   "date": "2025-01-15",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 409,
+   "label": "Recruit 6,500 additional teachers",
+   "division_id": 1911,
+   "title": "Non-Domestic Rating (Multipliers and Private Schools) Bill Report Stage: Amendment 7",
+   "date": "2025-01-15",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 409,
+   "label": "Recruit 6,500 additional teachers",
+   "division_id": 1912,
+   "title": "Non-Domestic Rating (Multipliers and Private Schools) Bill Report Stage: Third Reading",
+   "date": "2025-01-15",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 420,
+   "label": "Require all teachers in academies to hold qualified teacher status",
+   "division_id": 1953,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: New Clause 7",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 420,
+   "label": "Require all teachers in academies to hold qualified teacher status",
+   "division_id": 1954,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: New Clause 34",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 420,
+   "label": "Require all teachers in academies to hold qualified teacher status",
+   "division_id": 1955,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: Amendment 209",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 420,
+   "label": "Require all teachers in academies to hold qualified teacher status",
+   "division_id": 1956,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: Amendment 210",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 420,
+   "label": "Require all teachers in academies to hold qualified teacher status",
+   "division_id": 1957,
+   "title": "Children's Wellbeing and Schools Bill: Third Reading",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 420,
+   "label": "Require all teachers in academies to hold qualified teacher status",
+   "division_id": 1900,
+   "title": "Reasoned amendment on Children's Wellbeing and Schools Bill",
+   "date": "2025-01-08",
+   "score": 0.75,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 452,
+   "label": "Cap branded school uniform items to three per year with a fourth allowed for ties",
+   "division_id": 1950,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: New Clause 36 ",
+   "date": "2025-03-17",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 452,
+   "label": "Cap branded school uniform items to three per year with a fourth allowed for ties",
+   "division_id": 1951,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: Amendment 188",
+   "date": "2025-03-17",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 452,
+   "label": "Cap branded school uniform items to three per year with a fourth allowed for ties",
+   "division_id": 1952,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: Amendment 171",
+   "date": "2025-03-17",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 452,
+   "label": "Cap branded school uniform items to three per year with a fourth allowed for ties",
+   "division_id": 1953,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: New Clause 7",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 452,
+   "label": "Cap branded school uniform items to three per year with a fourth allowed for ties",
+   "division_id": 1954,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: New Clause 34",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 452,
+   "label": "Cap branded school uniform items to three per year with a fourth allowed for ties",
+   "division_id": 1955,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: Amendment 209",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 452,
+   "label": "Cap branded school uniform items to three per year with a fourth allowed for ties",
+   "division_id": 1956,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: Amendment 210",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 452,
+   "label": "Cap branded school uniform items to three per year with a fourth allowed for ties",
+   "division_id": 1957,
+   "title": "Children's Wellbeing and Schools Bill: Third Reading",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 452,
+   "label": "Cap branded school uniform items to three per year with a fourth allowed for ties",
+   "division_id": 1900,
+   "title": "Reasoned amendment on Children's Wellbeing and Schools Bill",
+   "date": "2025-01-08",
+   "score": 0.75,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 469,
+   "label": "Remove automatic requirement for schools requiring improvement to become academies",
+   "division_id": 1953,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: New Clause 7",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 469,
+   "label": "Remove automatic requirement for schools requiring improvement to become academies",
+   "division_id": 1954,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: New Clause 34",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 469,
+   "label": "Remove automatic requirement for schools requiring improvement to become academies",
+   "division_id": 1955,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: Amendment 209",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 469,
+   "label": "Remove automatic requirement for schools requiring improvement to become academies",
+   "division_id": 1956,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: Amendment 210",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 469,
+   "label": "Remove automatic requirement for schools requiring improvement to become academies",
+   "division_id": 1957,
+   "title": "Children's Wellbeing and Schools Bill: Third Reading",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 469,
+   "label": "Remove automatic requirement for schools requiring improvement to become academies",
+   "division_id": 1900,
+   "title": "Reasoned amendment on Children's Wellbeing and Schools Bill",
+   "date": "2025-01-08",
+   "score": 0.75,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 469,
+   "label": "Remove automatic requirement for schools requiring improvement to become academies",
+   "division_id": 2338,
+   "title": "Children's Wellbeing and Schools Bill: motion to insist on Amendment 38J and disagree with Lords Amendments 38V to 38X",
+   "date": "2026-04-22",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 528,
+   "label": "Abolish all existing academies and replace them with state-run schools",
+   "division_id": 1900,
+   "title": "Reasoned amendment on Children's Wellbeing and Schools Bill",
+   "date": "2025-01-08",
+   "score": 0.75,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 528,
+   "label": "Abolish all existing academies and replace them with state-run schools",
+   "division_id": 1953,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: New Clause 7",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 528,
+   "label": "Abolish all existing academies and replace them with state-run schools",
+   "division_id": 1954,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: New Clause 34",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 528,
+   "label": "Abolish all existing academies and replace them with state-run schools",
+   "division_id": 1955,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: Amendment 209",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 528,
+   "label": "Abolish all existing academies and replace them with state-run schools",
+   "division_id": 1956,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: Amendment 210",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 528,
+   "label": "Abolish all existing academies and replace them with state-run schools",
+   "division_id": 1957,
+   "title": "Children's Wellbeing and Schools Bill: Third Reading",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 528,
+   "label": "Abolish all existing academies and replace them with state-run schools",
+   "division_id": 2268,
+   "title": "Children's Wellbeing and Schools Bill: motion to disagree with Lords Amendment 16",
+   "date": "2026-03-09",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 528,
+   "label": "Abolish all existing academies and replace them with state-run schools",
+   "division_id": 2269,
+   "title": "Children's Wellbeing and Schools Bill: motion to disagree with Lords Amendment 17",
+   "date": "2026-03-09",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 528,
+   "label": "Abolish all existing academies and replace them with state-run schools",
+   "division_id": 2270,
+   "title": "Children's Wellbeing and Schools Bill: motion to disagree with Lords Amendment 37",
+   "date": "2026-03-09",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 528,
+   "label": "Abolish all existing academies and replace them with state-run schools",
+   "division_id": 2271,
+   "title": "Children's Wellbeing and Schools Bill: motion to disagree with Lords Amendment 38",
+   "date": "2026-03-09",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 528,
+   "label": "Abolish all existing academies and replace them with state-run schools",
+   "division_id": 2272,
+   "title": "Children's Wellbeing and Schools Bill: motion to disagree with Lords Amendment 41",
+   "date": "2026-03-09",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 528,
+   "label": "Abolish all existing academies and replace them with state-run schools",
+   "division_id": 2273,
+   "title": "Children's Wellbeing and Schools Bill: motion to disagree with Lords Amendment 44",
+   "date": "2026-03-09",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 528,
+   "label": "Abolish all existing academies and replace them with state-run schools",
+   "division_id": 2274,
+   "title": "Children's Wellbeing and Schools Bill: motion to disagree with Lords Amendment 102",
+   "date": "2026-03-09",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 528,
+   "label": "Abolish all existing academies and replace them with state-run schools",
+   "division_id": 2275,
+   "title": "Children's Wellbeing and Schools Bill: motion to disagree with Lords Amendment 106",
+   "date": "2026-03-09",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 612,
+   "label": "Abolish level 7 apprenticeships",
+   "division_id": 1987,
+   "title": "Institute for Apprenticeships and Technical Education (Transfer of Functions etc) Bill [Lords] Report Stage: New Clause 1",
+   "date": "2025-03-31",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 612,
+   "label": "Abolish level 7 apprenticeships",
+   "division_id": 1988,
+   "title": "Institute for Apprenticeships and Technical Education (Transfer of Functions etc) Bill [Lords] Report Stage: New Clause 4",
+   "date": "2025-03-31",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 612,
+   "label": "Abolish level 7 apprenticeships",
+   "division_id": 1989,
+   "title": "Institute for Apprenticeships and Technical Education (Transfer of Functions etc) Bill [Lords] Report Stage: Amendment 6",
+   "date": "2025-03-31",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 612,
+   "label": "Abolish level 7 apprenticeships",
+   "division_id": 1990,
+   "title": "Institute for Apprenticeships and Technical Education (Transfer of Functions etc) Bill [Lords]: Third Reading",
+   "date": "2025-03-31",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 709,
+   "label": "Introduce free breakfast clubs in primary schools",
+   "division_id": 1900,
+   "title": "Reasoned amendment on Children's Wellbeing and Schools Bill",
+   "date": "2025-01-08",
+   "score": 0.75,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 709,
+   "label": "Introduce free breakfast clubs in primary schools",
+   "division_id": 1953,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: New Clause 7",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 709,
+   "label": "Introduce free breakfast clubs in primary schools",
+   "division_id": 1954,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: New Clause 34",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 709,
+   "label": "Introduce free breakfast clubs in primary schools",
+   "division_id": 1955,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: Amendment 209",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 709,
+   "label": "Introduce free breakfast clubs in primary schools",
+   "division_id": 1956,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: Amendment 210",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 709,
+   "label": "Introduce free breakfast clubs in primary schools",
+   "division_id": 1957,
+   "title": "Children's Wellbeing and Schools Bill: Third Reading",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 709,
+   "label": "Introduce free breakfast clubs in primary schools",
+   "division_id": 2320,
+   "title": "Children's Wellbeing and Schools Bill: Amendments (a) to (f) in lieu of Lords Amendment 38",
+   "date": "2026-04-15",
+   "score": 0.75,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 709,
+   "label": "Introduce free breakfast clubs in primary schools",
+   "division_id": 2321,
+   "title": "Children's Wellbeing and Schools Bill: motion to disagree with Lords Amendment 41B",
+   "date": "2026-04-15",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 709,
+   "label": "Introduce free breakfast clubs in primary schools",
+   "division_id": 2322,
+   "title": "Children's Wellbeing and Schools Bill: Amendments (a) to (e) in lieu of Lords Amendment 102",
+   "date": "2026-04-15",
+   "score": 0.75,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 709,
+   "label": "Introduce free breakfast clubs in primary schools",
+   "division_id": 2323,
+   "title": "Children's Wellbeing and Schools Bill: Amendments (a) to (c) in lieu of Lords Amendment 106",
+   "date": "2026-04-15",
+   "score": 0.75,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 751,
+   "label": "Expand free school meals to lift 100,000 children out of poverty",
+   "division_id": 1953,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: New Clause 7",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 751,
+   "label": "Expand free school meals to lift 100,000 children out of poverty",
+   "division_id": 1954,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: New Clause 34",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 751,
+   "label": "Expand free school meals to lift 100,000 children out of poverty",
+   "division_id": 1955,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: Amendment 209",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 751,
+   "label": "Expand free school meals to lift 100,000 children out of poverty",
+   "division_id": 1956,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: Amendment 210",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 751,
+   "label": "Expand free school meals to lift 100,000 children out of poverty",
+   "division_id": 1957,
+   "title": "Children's Wellbeing and Schools Bill: Third Reading",
+   "date": "2025-03-18",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 1442,
+   "label": "Establish Great British Energy",
+   "division_id": 1838,
+   "title": "Great British Energy Bill: Reasoned Amendment to Second Reading",
+   "date": "2024-09-05",
+   "score": 0.75,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 1442,
+   "label": "Establish Great British Energy",
+   "division_id": 1839,
+   "title": "Great British Energy Bill: Second Reading",
+   "date": "2024-09-05",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 1672,
+   "label": "Grant mayors new planning powers to intervene in major strategic planning applications",
+   "division_id": 2191,
+   "title": "English Devolution and Community Empowerment Bill Report Stage: New Clause 2",
+   "date": "2025-11-24",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 1672,
+   "label": "Grant mayors new planning powers to intervene in major strategic planning applications",
+   "division_id": 2192,
+   "title": "English Devolution and Community Empowerment Bill Report Stage: New Clause 29",
+   "date": "2025-11-24",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 1672,
+   "label": "Grant mayors new planning powers to intervene in major strategic planning applications",
+   "division_id": 2193,
+   "title": "English Devolution and Community Empowerment Bill Report Stage: Amendment 85",
+   "date": "2025-11-24",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 1672,
+   "label": "Grant mayors new planning powers to intervene in major strategic planning applications",
+   "division_id": 2194,
+   "title": "English Devolution and Community Empowerment Bill Report Stage: Amendment 25",
+   "date": "2025-11-24",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 1672,
+   "label": "Grant mayors new planning powers to intervene in major strategic planning applications",
+   "division_id": 2195,
+   "title": "English Devolution and Community Empowerment Bill Report Stage: New Clause 17",
+   "date": "2025-11-25",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 1672,
+   "label": "Grant mayors new planning powers to intervene in major strategic planning applications",
+   "division_id": 2196,
+   "title": "English Devolution and Community Empowerment Bill Report Stage: New Clause 69",
+   "date": "2025-11-25",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 1672,
+   "label": "Grant mayors new planning powers to intervene in major strategic planning applications",
+   "division_id": 2197,
+   "title": "English Devolution and Community Empowerment Bill Report Stage: New Clause 80",
+   "date": "2025-11-25",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 1672,
+   "label": "Grant mayors new planning powers to intervene in major strategic planning applications",
+   "division_id": 2198,
+   "title": "English Devolution and Community Empowerment Bill: Third Reading",
+   "date": "2025-11-25",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 1672,
+   "label": "Grant mayors new planning powers to intervene in major strategic planning applications",
+   "division_id": 2098,
+   "title": "English Devolution and Community Empowerment Bill: Reasoned Amendment",
+   "date": "2025-09-02",
+   "score": 0.8,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 1672,
+   "label": "Grant mayors new planning powers to intervene in major strategic planning applications",
+   "division_id": 2099,
+   "title": "English Devolution and Community Empowerment Bill: Second Reading",
+   "date": "2025-09-02",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 1674,
+   "label": "Abolish the two-tier council structure in Lancashire to implement a unitary structure",
+   "division_id": 2098,
+   "title": "English Devolution and Community Empowerment Bill: Reasoned Amendment",
+   "date": "2025-09-02",
+   "score": 0.8,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 1674,
+   "label": "Abolish the two-tier council structure in Lancashire to implement a unitary structure",
+   "division_id": 2099,
+   "title": "English Devolution and Community Empowerment Bill: Second Reading",
+   "date": "2025-09-02",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 1674,
+   "label": "Abolish the two-tier council structure in Lancashire to implement a unitary structure",
+   "division_id": 2191,
+   "title": "English Devolution and Community Empowerment Bill Report Stage: New Clause 2",
+   "date": "2025-11-24",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 1674,
+   "label": "Abolish the two-tier council structure in Lancashire to implement a unitary structure",
+   "division_id": 2192,
+   "title": "English Devolution and Community Empowerment Bill Report Stage: New Clause 29",
+   "date": "2025-11-24",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 1674,
+   "label": "Abolish the two-tier council structure in Lancashire to implement a unitary structure",
+   "division_id": 2193,
+   "title": "English Devolution and Community Empowerment Bill Report Stage: Amendment 85",
+   "date": "2025-11-24",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 1674,
+   "label": "Abolish the two-tier council structure in Lancashire to implement a unitary structure",
+   "division_id": 2194,
+   "title": "English Devolution and Community Empowerment Bill Report Stage: Amendment 25",
+   "date": "2025-11-24",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 1674,
+   "label": "Abolish the two-tier council structure in Lancashire to implement a unitary structure",
+   "division_id": 2195,
+   "title": "English Devolution and Community Empowerment Bill Report Stage: New Clause 17",
+   "date": "2025-11-25",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 1674,
+   "label": "Abolish the two-tier council structure in Lancashire to implement a unitary structure",
+   "division_id": 2196,
+   "title": "English Devolution and Community Empowerment Bill Report Stage: New Clause 69",
+   "date": "2025-11-25",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 1674,
+   "label": "Abolish the two-tier council structure in Lancashire to implement a unitary structure",
+   "division_id": 2197,
+   "title": "English Devolution and Community Empowerment Bill Report Stage: New Clause 80",
+   "date": "2025-11-25",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 1674,
+   "label": "Abolish the two-tier council structure in Lancashire to implement a unitary structure",
+   "division_id": 2198,
+   "title": "English Devolution and Community Empowerment Bill: Third Reading",
+   "date": "2025-11-25",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 1675,
+   "label": "Pass the English Devolution and Community Empowerment Bill",
+   "division_id": 2098,
+   "title": "English Devolution and Community Empowerment Bill: Reasoned Amendment",
+   "date": "2025-09-02",
+   "score": 0.8,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 1675,
+   "label": "Pass the English Devolution and Community Empowerment Bill",
+   "division_id": 2099,
+   "title": "English Devolution and Community Empowerment Bill: Second Reading",
+   "date": "2025-09-02",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 1675,
+   "label": "Pass the English Devolution and Community Empowerment Bill",
+   "division_id": 2191,
+   "title": "English Devolution and Community Empowerment Bill Report Stage: New Clause 2",
+   "date": "2025-11-24",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 1675,
+   "label": "Pass the English Devolution and Community Empowerment Bill",
+   "division_id": 2192,
+   "title": "English Devolution and Community Empowerment Bill Report Stage: New Clause 29",
+   "date": "2025-11-24",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 1675,
+   "label": "Pass the English Devolution and Community Empowerment Bill",
+   "division_id": 2193,
+   "title": "English Devolution and Community Empowerment Bill Report Stage: Amendment 85",
+   "date": "2025-11-24",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 1675,
+   "label": "Pass the English Devolution and Community Empowerment Bill",
+   "division_id": 2194,
+   "title": "English Devolution and Community Empowerment Bill Report Stage: Amendment 25",
+   "date": "2025-11-24",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 1675,
+   "label": "Pass the English Devolution and Community Empowerment Bill",
+   "division_id": 2195,
+   "title": "English Devolution and Community Empowerment Bill Report Stage: New Clause 17",
+   "date": "2025-11-25",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 1675,
+   "label": "Pass the English Devolution and Community Empowerment Bill",
+   "division_id": 2196,
+   "title": "English Devolution and Community Empowerment Bill Report Stage: New Clause 69",
+   "date": "2025-11-25",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 1675,
+   "label": "Pass the English Devolution and Community Empowerment Bill",
+   "division_id": 2197,
+   "title": "English Devolution and Community Empowerment Bill Report Stage: New Clause 80",
+   "date": "2025-11-25",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 1675,
+   "label": "Pass the English Devolution and Community Empowerment Bill",
+   "division_id": 2198,
+   "title": "English Devolution and Community Empowerment Bill: Third Reading",
+   "date": "2025-11-25",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 1853,
+   "label": "Introduce rent caps on annual increases and rents in advance",
+   "division_id": 1844,
+   "title": "Renters' Rights Bill: Reasoned Amendment to Second Reading",
+   "date": "2024-10-09",
+   "score": 0.667,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 1867,
+   "label": "Abolish section 21 no-fault evictions in the Renters' Rights Bill",
+   "division_id": 1844,
+   "title": "Renters' Rights Bill: Reasoned Amendment to Second Reading",
+   "date": "2024-10-09",
+   "score": 0.667,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 1867,
+   "label": "Abolish section 21 no-fault evictions in the Renters' Rights Bill",
+   "division_id": 1965,
+   "title": "Planning and Infrastructure Bill: Second Reading",
+   "date": "2025-03-24",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 1960,
+   "label": "Repeal the Safety of Rwanda (Asylum and Immigration) Act 2024",
+   "division_id": 1923,
+   "title": "Border Security, Asylum and Immigration Bill: Reasoned Amendment on Second Reading",
+   "date": "2025-02-10",
+   "score": 0.8,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 1960,
+   "label": "Repeal the Safety of Rwanda (Asylum and Immigration) Act 2024",
+   "division_id": 1924,
+   "title": "Border Security, Asylum and Immigration Bill: Second Reading",
+   "date": "2025-02-10",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 2159,
+   "label": "Introduce income tax on dividends, savings, and property income in the Finance Bill",
+   "division_id": 2227,
+   "title": "Finance (No. 2) Bill Committee: New Clause 12",
+   "date": "2026-01-12",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 2159,
+   "label": "Introduce income tax on dividends, savings, and property income in the Finance Bill",
+   "division_id": 2230,
+   "title": "Finance (No. 2) Bill Committee: Amendment 3",
+   "date": "2026-01-12",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 2159,
+   "label": "Introduce income tax on dividends, savings, and property income in the Finance Bill",
+   "division_id": 2231,
+   "title": "Finance (No. 2) Bill Committee: New Clause 7",
+   "date": "2026-01-12",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 2159,
+   "label": "Introduce income tax on dividends, savings, and property income in the Finance Bill",
+   "division_id": 2233,
+   "title": "Finance (No. 2) Bill Committee: New Clause 24",
+   "date": "2026-01-13",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 2159,
+   "label": "Introduce income tax on dividends, savings, and property income in the Finance Bill",
+   "division_id": 2234,
+   "title": "Finance (No. 2) Bill Committee: New Clause 25",
+   "date": "2026-01-13",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 2159,
+   "label": "Introduce income tax on dividends, savings, and property income in the Finance Bill",
+   "division_id": 2236,
+   "title": "Finance (No. 2) Bill Committee: New Clause 9",
+   "date": "2026-01-13",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 2159,
+   "label": "Introduce income tax on dividends, savings, and property income in the Finance Bill",
+   "division_id": 2237,
+   "title": "Finance (No. 2) Bill Committee: New Clause 26",
+   "date": "2026-01-13",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 2159,
+   "label": "Introduce income tax on dividends, savings, and property income in the Finance Bill",
+   "division_id": 2222,
+   "title": "Finance (No. 2) Bill: Reasoned Amendment to Second Reading (Opposition)",
+   "date": "2025-12-16",
+   "score": 0.5,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 2159,
+   "label": "Introduce income tax on dividends, savings, and property income in the Finance Bill",
+   "division_id": 2223,
+   "title": "Finance (No. 2) Bill: Second Reading",
+   "date": "2025-12-16",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 2159,
+   "label": "Introduce income tax on dividends, savings, and property income in the Finance Bill",
+   "division_id": 1895,
+   "title": "National Insurance Contributions (Secondary Class 1 Contributions) Bill Committee: Amendment 1",
+   "date": "2024-12-17",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 2159,
+   "label": "Introduce income tax on dividends, savings, and property income in the Finance Bill",
+   "division_id": 1896,
+   "title": "National Insurance Contributions (Secondary Class 1 Contributions) Bill Committee: Amendment 13",
+   "date": "2024-12-17",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 2159,
+   "label": "Introduce income tax on dividends, savings, and property income in the Finance Bill",
+   "division_id": 1897,
+   "title": "National Insurance Contributions (Secondary Class 1 Contributions) Bill Committee: Amendment 23",
+   "date": "2024-12-17",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 2159,
+   "label": "Introduce income tax on dividends, savings, and property income in the Finance Bill",
+   "division_id": 1898,
+   "title": "National Insurance Contributions (Secondary Class 1 Contributions) Bill Committee: New Clause 1",
+   "date": "2024-12-17",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 2159,
+   "label": "Introduce income tax on dividends, savings, and property income in the Finance Bill",
+   "division_id": 1899,
+   "title": "National Insurance Contributions (Secondary Class 1 Contributions) Bill: Third Reading",
+   "date": "2024-12-17",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 2248,
+   "label": "Approve the British Indian Ocean Territory Bill to transfer sovereignty of the Chagos Islands to Mauritius",
+   "division_id": 2142,
+   "title": "Diego Garcia Military Base and British Indian Ocean Territory Bill Committee: Amendment 7",
+   "date": "2025-10-20",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 2248,
+   "label": "Approve the British Indian Ocean Territory Bill to transfer sovereignty of the Chagos Islands to Mauritius",
+   "division_id": 2143,
+   "title": "Diego Garcia Military Base and British Indian Ocean Territory Bill Committee: Amendment 9",
+   "date": "2025-10-20",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 2248,
+   "label": "Approve the British Indian Ocean Territory Bill to transfer sovereignty of the Chagos Islands to Mauritius",
+   "division_id": 2144,
+   "title": "Diego Garcia Military Base and British Indian Ocean Territory Bill Committee: Clause 2 stand part",
+   "date": "2025-10-20",
+   "score": 0.8,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 2248,
+   "label": "Approve the British Indian Ocean Territory Bill to transfer sovereignty of the Chagos Islands to Mauritius",
+   "division_id": 2145,
+   "title": "Diego Garcia Military Base and British Indian Ocean Territory Bill Committee: New Clause 1",
+   "date": "2025-10-20",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 2248,
+   "label": "Approve the British Indian Ocean Territory Bill to transfer sovereignty of the Chagos Islands to Mauritius",
+   "division_id": 2146,
+   "title": "Diego Garcia Military Base and British Indian Ocean Territory Bill: Third Reading",
+   "date": "2025-10-20",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 2248,
+   "label": "Approve the British Indian Ocean Territory Bill to transfer sovereignty of the Chagos Islands to Mauritius",
+   "division_id": 2112,
+   "title": "Diego Garcia Military Base and British Indian Ocean Territory Bill: Reasoned Amendment",
+   "date": "2025-09-09",
+   "score": 0.889,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 2248,
+   "label": "Approve the British Indian Ocean Territory Bill to transfer sovereignty of the Chagos Islands to Mauritius",
+   "division_id": 2113,
+   "title": "Diego Garcia Military Base and British Indian Ocean Territory Bill: Second Reading",
+   "date": "2025-09-09",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 2252,
+   "label": "Ratify the British Indian Ocean Territory Bill to establish the Chagos Marine Protected Area",
+   "division_id": 2112,
+   "title": "Diego Garcia Military Base and British Indian Ocean Territory Bill: Reasoned Amendment",
+   "date": "2025-09-09",
+   "score": 0.889,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 2252,
+   "label": "Ratify the British Indian Ocean Territory Bill to establish the Chagos Marine Protected Area",
+   "division_id": 2113,
+   "title": "Diego Garcia Military Base and British Indian Ocean Territory Bill: Second Reading",
+   "date": "2025-09-09",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 2252,
+   "label": "Ratify the British Indian Ocean Territory Bill to establish the Chagos Marine Protected Area",
+   "division_id": 2142,
+   "title": "Diego Garcia Military Base and British Indian Ocean Territory Bill Committee: Amendment 7",
+   "date": "2025-10-20",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 2252,
+   "label": "Ratify the British Indian Ocean Territory Bill to establish the Chagos Marine Protected Area",
+   "division_id": 2143,
+   "title": "Diego Garcia Military Base and British Indian Ocean Territory Bill Committee: Amendment 9",
+   "date": "2025-10-20",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 2252,
+   "label": "Ratify the British Indian Ocean Territory Bill to establish the Chagos Marine Protected Area",
+   "division_id": 2144,
+   "title": "Diego Garcia Military Base and British Indian Ocean Territory Bill Committee: Clause 2 stand part",
+   "date": "2025-10-20",
+   "score": 0.8,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 2252,
+   "label": "Ratify the British Indian Ocean Territory Bill to establish the Chagos Marine Protected Area",
+   "division_id": 2145,
+   "title": "Diego Garcia Military Base and British Indian Ocean Territory Bill Committee: New Clause 1",
+   "date": "2025-10-20",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 2252,
+   "label": "Ratify the British Indian Ocean Territory Bill to establish the Chagos Marine Protected Area",
+   "division_id": 2146,
+   "title": "Diego Garcia Military Base and British Indian Ocean Territory Bill: Third Reading",
+   "date": "2025-10-20",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 2350,
+   "label": "Remove the two-child benefit cap in the Universal Credit system",
+   "division_id": 2253,
+   "title": "Universal Credit (Removal of Two Child Limit) Bill: Second Reading",
+   "date": "2026-02-03",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 2441,
+   "label": "Require AI companies to disclose copyrighted works used to train their models",
+   "division_id": 2013,
+   "title": "Data (Use and Access) Bill Report Stage: New Clause 1 ",
+   "date": "2025-05-07",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 2441,
+   "label": "Require AI companies to disclose copyrighted works used to train their models",
+   "division_id": 2014,
+   "title": "Data (Use and Access) Bill Report Stage: New Clause 2",
+   "date": "2025-05-07",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 2441,
+   "label": "Require AI companies to disclose copyrighted works used to train their models",
+   "division_id": 2015,
+   "title": "Data (Use and Access) Bill Report Stage: New Clause 19",
+   "date": "2025-05-07",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 2441,
+   "label": "Require AI companies to disclose copyrighted works used to train their models",
+   "division_id": 2016,
+   "title": "Data (Use and Access) Bill Report Stage: New Clause 21",
+   "date": "2025-05-07",
+   "score": 1.0,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 2498,
+   "label": "Require the railway to have a target for passenger growth",
+   "division_id": 2216,
+   "title": "Railways Bill: Opposition Reasoned Amendment",
+   "date": "2025-12-09",
+   "score": 0.5,
+   "type": "amendment/clause"
+  },
+  {
+   "fight_id": 2498,
+   "label": "Require the railway to have a target for passenger growth",
+   "division_id": 2217,
+   "title": "Railways Bill: Second Reading",
+   "date": "2025-12-09",
+   "score": 1.0,
+   "type": "second/third reading"
+  },
+  {
+   "fight_id": 2498,
+   "label": "Require the railway to have a target for passenger growth",
+   "division_id": 2372,
+   "title": "Railways Bill: Third Reading",
+   "date": "2026-06-10",
+   "score": 1.0,
+   "type": "second/third reading"
+  }
+ ],
+ "n_triples": 6628,
+ "n_fight_division_pairs": 281,
+ "agreement_a_upper": {
+  "pct": 86.7,
+  "n": 6628
+ },
+ "agreement_b_heldout": {
+  "pct": 85.0,
+  "n": 6367,
+  "n_pairs": 233
+ },
+ "agreement_a_on_b_triples": {
+  "pct": 86.6,
+  "n": 6367
+ },
+ "by_type_a": {
+  "amendment/clause": {
+   "pct": 86.3,
+   "n": 4317
+  },
+  "other": {
+   "pct": 78.6,
+   "n": 243
+  },
+  "second/third reading": {
+   "pct": 88.5,
+   "n": 2068
+  }
+ },
+ "by_type_b": {
+  "amendment/clause": {
+   "pct": 84.1,
+   "n": 4108
+  },
+  "other": {
+   "pct": 77.1,
+   "n": 243
+  },
+  "second/third reading": {
+   "pct": 87.8,
+   "n": 2016
+  }
+ },
+ "by_focus_a": {
+  "1 speech": {
+   "pct": 85.2,
+   "n": 3498
+  },
+  "2+ speeches": {
+   "pct": 88.5,
+   "n": 3130
+  }
+ },
+ "by_focus_b": {
+  "1 speech": {
+   "pct": 83.4,
+   "n": 3325
+  },
+  "2+ speeches": {
+   "pct": 86.7,
+   "n": 3042
+  }
+ },
+ "by_stance_a": {
+  "exactly \u00b11": {
+   "pct": 86.9,
+   "n": 6557
+  },
+  "mixed": {
+   "pct": 73.2,
+   "n": 71
+  }
+ },
+ "by_stance_b": {
+  "exactly \u00b11": {
+   "pct": 85.2,
+   "n": 6296
+  },
+  "mixed": {
+   "pct": 67.1,
+   "n": 71
+  }
+ },
+ "per_fight": [
+  {
+   "fight_id": 0,
+   "label": "Impose a tax on family farms",
+   "n": 91,
+   "agree_a": 100.0,
+   "agree_b": 100.0,
+   "n_b": 85
+  },
+  {
+   "fight_id": 612,
+   "label": "Abolish level 7 apprenticeships",
+   "n": 13,
+   "agree_a": 100.0,
+   "agree_b": null,
+   "n_b": 0
+  },
+  {
+   "fight_id": 1363,
+   "label": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+   "n": 80,
+   "agree_a": 100.0,
+   "agree_b": 100.0,
+   "n_b": 80
+  },
+  {
+   "fight_id": 1442,
+   "label": "Establish Great British Energy",
+   "n": 26,
+   "agree_a": 100.0,
+   "agree_b": 100.0,
+   "n_b": 26
+  },
+  {
+   "fight_id": 2159,
+   "label": "Introduce income tax on dividends, savings, and property income in the Finance Bill",
+   "n": 73,
+   "agree_a": 100.0,
+   "agree_b": null,
+   "n_b": 0
+  },
+  {
+   "fight_id": 2350,
+   "label": "Remove the two-child benefit cap in the Universal Credit system",
+   "n": 39,
+   "agree_a": 100.0,
+   "agree_b": 100.0,
+   "n_b": 39
+  },
+  {
+   "fight_id": 2358,
+   "label": "Pass the Universal Credit and Personal Independence Payment Bill",
+   "n": 51,
+   "agree_a": 100.0,
+   "agree_b": 100.0,
+   "n_b": 51
+  },
+  {
+   "fight_id": 394,
+   "label": "Remove tax exemption on independent school fees",
+   "n": 1400,
+   "agree_a": 99.9,
+   "agree_b": 99.9,
+   "n_b": 1400
+  },
+  {
+   "fight_id": 1674,
+   "label": "Abolish the two-tier council structure in Lancashire to implement a unitary structure",
+   "n": 78,
+   "agree_a": 98.7,
+   "agree_b": 100.0,
+   "n_b": 45
+  },
+  {
+   "fight_id": 709,
+   "label": "Introduce free breakfast clubs in primary schools",
+   "n": 264,
+   "agree_a": 96.6,
+   "agree_b": 96.6,
+   "n_b": 264
+  },
+  {
+   "fight_id": 83,
+   "label": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "n": 722,
+   "agree_a": 95.7,
+   "agree_b": 95.7,
+   "n_b": 722
+  },
+  {
+   "fight_id": 2252,
+   "label": "Ratify the British Indian Ocean Territory Bill to establish the Chagos Marine Protected Area",
+   "n": 110,
+   "agree_a": 95.5,
+   "agree_b": 95.5,
+   "n_b": 110
+  },
+  {
+   "fight_id": 367,
+   "label": "Require academies to follow the national curriculum",
+   "n": 82,
+   "agree_a": 95.1,
+   "agree_b": 95.1,
+   "n_b": 82
+  },
+  {
+   "fight_id": 1867,
+   "label": "Abolish section 21 no-fault evictions in the Renters' Rights Bill",
+   "n": 47,
+   "agree_a": 93.6,
+   "agree_b": 93.6,
+   "n_b": 47
+  },
+  {
+   "fight_id": 420,
+   "label": "Require all teachers in academies to hold qualified teacher status",
+   "n": 61,
+   "agree_a": 93.4,
+   "agree_b": 93.4,
+   "n_b": 61
+  },
+  {
+   "fight_id": 362,
+   "label": "Require home-educated children to be registered with local authorities",
+   "n": 89,
+   "agree_a": 92.1,
+   "agree_b": 92.1,
+   "n_b": 89
+  },
+  {
+   "fight_id": 1672,
+   "label": "Grant mayors new planning powers to intervene in major strategic planning applications",
+   "n": 229,
+   "agree_a": 90.0,
+   "agree_b": 90.0,
+   "n_b": 229
+  },
+  {
+   "fight_id": 539,
+   "label": "Pass the Children's Wellbeing and Schools Bill",
+   "n": 242,
+   "agree_a": 89.3,
+   "agree_b": 89.3,
+   "n_b": 242
+  },
+  {
+   "fight_id": 127,
+   "label": "Pass the Football Governance Bill to establish an independent football regulator",
+   "n": 281,
+   "agree_a": 87.5,
+   "agree_b": 87.5,
+   "n_b": 281
+  },
+  {
+   "fight_id": 1853,
+   "label": "Introduce rent caps on annual increases and rents in advance",
+   "n": 16,
+   "agree_a": 87.5,
+   "agree_b": 87.5,
+   "n_b": 16
+  },
+  {
+   "fight_id": 452,
+   "label": "Cap branded school uniform items to three per year with a fourth allowed for ties",
+   "n": 47,
+   "agree_a": 87.2,
+   "agree_b": null,
+   "n_b": 0
+  },
+  {
+   "fight_id": 409,
+   "label": "Recruit 6,500 additional teachers",
+   "n": 28,
+   "agree_a": 85.7,
+   "agree_b": null,
+   "n_b": 0
+  },
+  {
+   "fight_id": 375,
+   "label": "Establish Skills England as an independent executive agency",
+   "n": 75,
+   "agree_a": 84.0,
+   "agree_b": 81.8,
+   "n_b": 75
+  },
+  {
+   "fight_id": 1675,
+   "label": "Pass the English Devolution and Community Empowerment Bill",
+   "n": 337,
+   "agree_a": 83.1,
+   "agree_b": 83.1,
+   "n_b": 337
+  },
+  {
+   "fight_id": 1960,
+   "label": "Repeal the Safety of Rwanda (Asylum and Immigration) Act 2024",
+   "n": 46,
+   "agree_a": 82.6,
+   "agree_b": 82.6,
+   "n_b": 46
+  },
+  {
+   "fight_id": 354,
+   "label": "Establish school-based nurseries in existing school classrooms",
+   "n": 49,
+   "agree_a": 81.6,
+   "agree_b": 81.6,
+   "n_b": 49
+  },
+  {
+   "fight_id": 361,
+   "label": "Expand apprenticeships and technical education",
+   "n": 206,
+   "agree_a": 81.6,
+   "agree_b": 81.6,
+   "n_b": 206
+  },
+  {
+   "fight_id": 469,
+   "label": "Remove automatic requirement for schools requiring improvement to become academies",
+   "n": 43,
+   "agree_a": 79.1,
+   "agree_b": 66.3,
+   "n_b": 16
+  },
+  {
+   "fight_id": 372,
+   "label": "Abolish the narrow knowledge-rich curriculum in favour of a holistic approach",
+   "n": 83,
+   "agree_a": 77.1,
+   "agree_b": 75.3,
+   "n_b": 83
+  },
+  {
+   "fight_id": 2486,
+   "label": "Create Great British Railways",
+   "n": 121,
+   "agree_a": 76.0,
+   "agree_b": 76.0,
+   "n_b": 121
+  },
+  {
+   "fight_id": 371,
+   "label": "Increase investment in mainstream and special educational needs schools",
+   "n": 245,
+   "agree_a": 73.5,
+   "agree_b": 72.1,
+   "n_b": 245
+  },
+  {
+   "fight_id": 364,
+   "label": "Reform the Special Educational Needs and Disabilities (SEND) system",
+   "n": 207,
+   "agree_a": 72.9,
+   "agree_b": 69.6,
+   "n_b": 207
+  },
+  {
+   "fight_id": 751,
+   "label": "Expand free school meals to lift 100,000 children out of poverty",
+   "n": 45,
+   "agree_a": 68.9,
+   "agree_b": 51.2,
+   "n_b": 38
+  },
+  {
+   "fight_id": 1522,
+   "label": "Enact the Water (Special Measures) Bill to hold water companies accountable for sewage pollution",
+   "n": 146,
+   "agree_a": 67.8,
+   "agree_b": 66.5,
+   "n_b": 146
+  },
+  {
+   "fight_id": 1938,
+   "label": "Enact the Illegal Migration Act to curb illegal migration and strengthen border security",
+   "n": 148,
+   "agree_a": 67.6,
+   "agree_b": 63.2,
+   "n_b": 148
+  },
+  {
+   "fight_id": 2248,
+   "label": "Approve the British Indian Ocean Territory Bill to transfer sovereignty of the Chagos Islands to Mauritius",
+   "n": 144,
+   "agree_a": 67.4,
+   "agree_b": 61.6,
+   "n_b": 144
+  },
+  {
+   "fight_id": 528,
+   "label": "Abolish all existing academies and replace them with state-run schools",
+   "n": 146,
+   "agree_a": 65.8,
+   "agree_b": 51.8,
+   "n_b": 134
+  },
+  {
+   "fight_id": 2441,
+   "label": "Require AI companies to disclose copyrighted works used to train their models",
+   "n": 52,
+   "agree_a": 63.5,
+   "agree_b": 55.8,
+   "n_b": 52
+  },
+  {
+   "fight_id": 578,
+   "label": "Ban mobile phone use in schools",
+   "n": 356,
+   "agree_a": 61.2,
+   "agree_b": 52.0,
+   "n_b": 356
+  },
+  {
+   "fight_id": 2498,
+   "label": "Require the railway to have a target for passenger growth",
+   "n": 15,
+   "agree_a": 60.0,
+   "agree_b": null,
+   "n_b": 0
+  },
+  {
+   "fight_id": 270,
+   "label": "Reform the non-domestic rating system in England",
+   "n": 95,
+   "agree_a": 50.5,
+   "agree_b": 40.5,
+   "n_b": 95
+  }
+ ],
+ "party_line": {
+  "vote_with_party_majority": {
+   "pct": 96.0,
+   "n": 6628
+  },
+  "speech_agrees_when_votes_with_party_a": {
+   "pct": 86.4,
+   "n": 6363
+  },
+  "speech_agrees_rebel_or_free_a": {
+   "pct": 95.2,
+   "n": 629
+  },
+  "speech_agrees_pure_rebel_a": {
+   "pct": 94.0,
+   "n": 265
+  },
+  "speech_agrees_rebel_or_free_b": {
+   "pct": 95.0,
+   "n": 629
+  },
+  "speech_agrees_all_b_same_filter": {
+   "pct": 85.0,
+   "n": 6367
+  },
+  "speech_against_party_speech_majority__vote_also_against_party": {
+   "pct": 47.5,
+   "n": 278
+  },
+  "speech_agrees_rebel_or_free_a_excluding_largest_fight": {
+   "fight_excluded": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "pct": 81.3,
+   "n": 91,
+   "n_pure_rebel": 42,
+   "pct_pure_rebel": 83.3
+  },
+  "rebel_triples_by_fight": {
+   "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying": 538,
+   "Pass the Universal Credit and Personal Independence Payment Bill": 22,
+   "Remove tax exemption on independent school fees": 20,
+   "Reform the Special Educational Needs and Disabilities (SEND) system": 6,
+   "Grant mayors new planning powers to intervene in major strategic planning applications": 6,
+   "Pass the English Devolution and Community Empowerment Bill": 6,
+   "Approve the British Indian Ocean Territory Bill to transfer sovereignty of the Chagos Islands to Mauritius": 6,
+   "Ratify the British Indian Ocean Territory Bill to establish the Chagos Marine Protected Area": 6
+  }
+ },
+ "rebel_examples": [
+  {
+   "name": "Kim Leadbeater",
+   "party": "Lab",
+   "fight": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "speech": "FOR",
+   "vote": "Aye",
+   "division": 1877,
+   "correct": true,
+   "pure_rebel": false
+  },
+  {
+   "name": "Kim Leadbeater",
+   "party": "Lab",
+   "fight": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "speech": "FOR",
+   "vote": "Aye",
+   "division": 2069,
+   "correct": true,
+   "pure_rebel": false
+  },
+  {
+   "name": "Kim Leadbeater",
+   "party": "Lab",
+   "fight": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "speech": "FOR",
+   "vote": "Aye",
+   "division": 2070,
+   "correct": true,
+   "pure_rebel": false
+  },
+  {
+   "name": "Kim Leadbeater",
+   "party": "Lab",
+   "fight": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "speech": "FOR",
+   "vote": "No",
+   "division": 2067,
+   "correct": true,
+   "pure_rebel": false
+  },
+  {
+   "name": "Kim Leadbeater",
+   "party": "Lab",
+   "fight": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "speech": "FOR",
+   "vote": "No",
+   "division": 2053,
+   "correct": true,
+   "pure_rebel": false
+  },
+  {
+   "name": "Kim Leadbeater",
+   "party": "Lab",
+   "fight": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "speech": "FOR",
+   "vote": "No",
+   "division": 2066,
+   "correct": true,
+   "pure_rebel": false
+  },
+  {
+   "name": "Kim Leadbeater",
+   "party": "Lab",
+   "fight": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "speech": "FOR",
+   "vote": "Aye",
+   "division": 2071,
+   "correct": true,
+   "pure_rebel": false
+  },
+  {
+   "name": "Kim Leadbeater",
+   "party": "Lab",
+   "fight": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "speech": "FOR",
+   "vote": "No",
+   "division": 2068,
+   "correct": true,
+   "pure_rebel": false
+  },
+  {
+   "name": "Kim Leadbeater",
+   "party": "Lab",
+   "fight": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "speech": "FOR",
+   "vote": "No",
+   "division": 2051,
+   "correct": true,
+   "pure_rebel": false
+  },
+  {
+   "name": "Kim Leadbeater",
+   "party": "Lab",
+   "fight": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "speech": "FOR",
+   "vote": "No",
+   "division": 2052,
+   "correct": true,
+   "pure_rebel": false
+  },
+  {
+   "name": "Kim Leadbeater",
+   "party": "Lab",
+   "fight": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "speech": "FOR",
+   "vote": "No",
+   "division": 2029,
+   "correct": true,
+   "pure_rebel": false
+  },
+  {
+   "name": "Kit Malthouse",
+   "party": "Con",
+   "fight": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "speech": "FOR",
+   "vote": "No",
+   "division": 2052,
+   "correct": true,
+   "pure_rebel": true
+  },
+  {
+   "name": "Kit Malthouse",
+   "party": "Con",
+   "fight": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "speech": "FOR",
+   "vote": "No",
+   "division": 2029,
+   "correct": true,
+   "pure_rebel": true
+  },
+  {
+   "name": "Kit Malthouse",
+   "party": "Con",
+   "fight": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "speech": "FOR",
+   "vote": "No",
+   "division": 2067,
+   "correct": true,
+   "pure_rebel": true
+  },
+  {
+   "name": "Kit Malthouse",
+   "party": "Con",
+   "fight": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "speech": "FOR",
+   "vote": "Aye",
+   "division": 1877,
+   "correct": true,
+   "pure_rebel": true
+  }
+ ],
+ "top_disagreements": [
+  {
+   "name": "Shabana Mahmood",
+   "party": "Lab",
+   "fight": "Enact the Illegal Migration Act to curb illegal migration and strengthen border security",
+   "focus": 13,
+   "stance": 1.0,
+   "speech": "FOR",
+   "vote": "No",
+   "division": 2405,
+   "title": "Immigration and Asylum Bill: Reasoned Amendment to Second Reading",
+   "oriented_aye_means": "FOR",
+   "passages": [
+    "uk.org.publicwhip/debate/2026-07-13c.670.0#0",
+    "uk.org.publicwhip/debate/2026-07-13c.670.0#1",
+    "uk.org.publicwhip/debate/2026-07-13c.670.0#2",
+    "uk.org.publicwhip/debate/2026-07-13c.671.4#0",
+    "uk.org.publicwhip/debate/2026-07-13c.672.9#0",
+    "uk.org.publicwhip/debate/2026-07-13c.672.9#1",
+    "uk.org.publicwhip/debate/2026-07-13c.672.9#2",
+    "uk.org.publicwhip/debate/2026-07-13c.674.4#1",
+    "uk.org.publicwhip/debate/2026-07-13c.674.4#3",
+    "uk.org.publicwhip/debate/2026-07-13c.677.2#0",
+    "uk.org.publicwhip/debate/2026-07-13c.677.2#2",
+    "uk.org.publicwhip/debate/2026-07-13c.677.2#3",
+    "uk.org.publicwhip/debate/2026-07-13c.668.5#1"
+   ]
+  },
+  {
+   "name": "Caroline Voaden",
+   "party": "LD",
+   "fight": "Abolish the narrow knowledge-rich curriculum in favour of a holistic approach",
+   "focus": 9,
+   "stance": 1.0,
+   "speech": "FOR",
+   "vote": "Aye",
+   "division": 1953,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: New Clause 7",
+   "oriented_aye_means": "AGAINST",
+   "passages": [
+    "uk.org.publicwhip/westminhall/2025-10-15b.166.0#1",
+    "uk.org.publicwhip/westminhall/2025-10-15b.166.0#6",
+    "uk.org.publicwhip/westminhall/2026-01-26a.279.0#0",
+    "uk.org.publicwhip/westminhall/2026-01-26a.279.0#6",
+    "uk.org.publicwhip/westminhall/2026-01-26a.279.0#5",
+    "uk.org.publicwhip/westminhall/2025-10-15b.166.0#2",
+    "uk.org.publicwhip/westminhall/2026-01-26a.279.0#2",
+    "uk.org.publicwhip/westminhall/2025-10-15b.166.0#7",
+    "uk.org.publicwhip/westminhall/2025-10-15b.166.0#0"
+   ]
+  },
+  {
+   "name": "Caroline Voaden",
+   "party": "LD",
+   "fight": "Abolish the narrow knowledge-rich curriculum in favour of a holistic approach",
+   "focus": 9,
+   "stance": 1.0,
+   "speech": "FOR",
+   "vote": "Aye",
+   "division": 1954,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: New Clause 34",
+   "oriented_aye_means": "AGAINST",
+   "passages": [
+    "uk.org.publicwhip/westminhall/2025-10-15b.166.0#1",
+    "uk.org.publicwhip/westminhall/2025-10-15b.166.0#6",
+    "uk.org.publicwhip/westminhall/2026-01-26a.279.0#0",
+    "uk.org.publicwhip/westminhall/2026-01-26a.279.0#6",
+    "uk.org.publicwhip/westminhall/2026-01-26a.279.0#5",
+    "uk.org.publicwhip/westminhall/2025-10-15b.166.0#2",
+    "uk.org.publicwhip/westminhall/2026-01-26a.279.0#2",
+    "uk.org.publicwhip/westminhall/2025-10-15b.166.0#7",
+    "uk.org.publicwhip/westminhall/2025-10-15b.166.0#0"
+   ]
+  },
+  {
+   "name": "Caroline Voaden",
+   "party": "LD",
+   "fight": "Abolish the narrow knowledge-rich curriculum in favour of a holistic approach",
+   "focus": 9,
+   "stance": 1.0,
+   "speech": "FOR",
+   "vote": "Aye",
+   "division": 1956,
+   "title": "Children's Wellbeing and Schools Bill Report Stage: Amendment 210",
+   "oriented_aye_means": "AGAINST",
+   "passages": [
+    "uk.org.publicwhip/westminhall/2025-10-15b.166.0#1",
+    "uk.org.publicwhip/westminhall/2025-10-15b.166.0#6",
+    "uk.org.publicwhip/westminhall/2026-01-26a.279.0#0",
+    "uk.org.publicwhip/westminhall/2026-01-26a.279.0#6",
+    "uk.org.publicwhip/westminhall/2026-01-26a.279.0#5",
+    "uk.org.publicwhip/westminhall/2025-10-15b.166.0#2",
+    "uk.org.publicwhip/westminhall/2026-01-26a.279.0#2",
+    "uk.org.publicwhip/westminhall/2025-10-15b.166.0#7",
+    "uk.org.publicwhip/westminhall/2025-10-15b.166.0#0"
+   ]
+  },
+  {
+   "name": "Neil O'Brien",
+   "party": "Con",
+   "fight": "Ban mobile phone use in schools",
+   "focus": 8,
+   "stance": 1.0,
+   "speech": "FOR",
+   "vote": "No",
+   "division": 2270,
+   "title": "Children's Wellbeing and Schools Bill: motion to disagree with Lords Amendment 37",
+   "oriented_aye_means": "FOR",
+   "passages": [
+    "uk.org.publicwhip/debate/2025-03-17c.66.2#2",
+    "uk.org.publicwhip/debate/2025-03-17c.66.2#4",
+    "uk.org.publicwhip/standing/standing5376_CHILDREN'S_14-0_2025-02-11a.552.1#1",
+    "uk.org.publicwhip/standing/standing5376_CHILDREN'S_14-0_2025-02-11a.552.1#3",
+    "uk.org.publicwhip/standing/standing5376_CHILDREN'S_14-0_2025-02-11a.555.0#0",
+    "uk.org.publicwhip/standing/standing5376_CHILDREN'S_14-0_2025-02-11a.557.2#0",
+    "uk.org.publicwhip/standing/standing5376_CHILDREN'S_14-0_2025-02-11a.563.0#0",
+    "uk.org.publicwhip/standing/standing5376_CHILDREN'S_14-0_2025-02-11a.552.1#2"
+   ]
+  },
+  {
+   "name": "Neil O'Brien",
+   "party": "Con",
+   "fight": "Ban mobile phone use in schools",
+   "focus": 8,
+   "stance": 1.0,
+   "speech": "FOR",
+   "vote": "No",
+   "division": 2273,
+   "title": "Children's Wellbeing and Schools Bill: motion to disagree with Lords Amendment 44",
+   "oriented_aye_means": "FOR",
+   "passages": [
+    "uk.org.publicwhip/debate/2025-03-17c.66.2#2",
+    "uk.org.publicwhip/debate/2025-03-17c.66.2#4",
+    "uk.org.publicwhip/standing/standing5376_CHILDREN'S_14-0_2025-02-11a.552.1#1",
+    "uk.org.publicwhip/standing/standing5376_CHILDREN'S_14-0_2025-02-11a.552.1#3",
+    "uk.org.publicwhip/standing/standing5376_CHILDREN'S_14-0_2025-02-11a.555.0#0",
+    "uk.org.publicwhip/standing/standing5376_CHILDREN'S_14-0_2025-02-11a.557.2#0",
+    "uk.org.publicwhip/standing/standing5376_CHILDREN'S_14-0_2025-02-11a.563.0#0",
+    "uk.org.publicwhip/standing/standing5376_CHILDREN'S_14-0_2025-02-11a.552.1#2"
+   ]
+  },
+  {
+   "name": "Neil O'Brien",
+   "party": "Con",
+   "fight": "Ban mobile phone use in schools",
+   "focus": 8,
+   "stance": 1.0,
+   "speech": "FOR",
+   "vote": "No",
+   "division": 1957,
+   "title": "Children's Wellbeing and Schools Bill: Third Reading",
+   "oriented_aye_means": "FOR",
+   "passages": [
+    "uk.org.publicwhip/debate/2025-03-17c.66.2#2",
+    "uk.org.publicwhip/debate/2025-03-17c.66.2#4",
+    "uk.org.publicwhip/standing/standing5376_CHILDREN'S_14-0_2025-02-11a.552.1#1",
+    "uk.org.publicwhip/standing/standing5376_CHILDREN'S_14-0_2025-02-11a.552.1#3",
+    "uk.org.publicwhip/standing/standing5376_CHILDREN'S_14-0_2025-02-11a.555.0#0",
+    "uk.org.publicwhip/standing/standing5376_CHILDREN'S_14-0_2025-02-11a.557.2#0",
+    "uk.org.publicwhip/standing/standing5376_CHILDREN'S_14-0_2025-02-11a.563.0#0",
+    "uk.org.publicwhip/standing/standing5376_CHILDREN'S_14-0_2025-02-11a.552.1#2"
+   ]
+  },
+  {
+   "name": "Matt Vickers",
+   "party": "Con",
+   "fight": "Enact the Illegal Migration Act to curb illegal migration and strengthen border security",
+   "focus": 8,
+   "stance": 1.0,
+   "speech": "FOR",
+   "vote": "Aye",
+   "division": 1923,
+   "title": "Border Security, Asylum and Immigration Bill: Reasoned Amendment on Second Reading",
+   "oriented_aye_means": "AGAINST",
+   "passages": [
+    "uk.org.publicwhip/debate/2025-02-10e.127.1#0",
+    "uk.org.publicwhip/debate/2025-02-10e.127.1#1",
+    "uk.org.publicwhip/debate/2025-02-10e.127.3#0",
+    "uk.org.publicwhip/debate/2025-02-10e.127.3#1",
+    "uk.org.publicwhip/debate/2025-02-10e.127.3#2",
+    "uk.org.publicwhip/debate/2025-02-10e.127.3#4",
+    "uk.org.publicwhip/debate/2026-07-13c.718.2#2",
+    "uk.org.publicwhip/debate/2026-07-13c.718.2#4"
+   ]
+  },
+  {
+   "name": "Matt Vickers",
+   "party": "Con",
+   "fight": "Enact the Illegal Migration Act to curb illegal migration and strengthen border security",
+   "focus": 8,
+   "stance": 1.0,
+   "speech": "FOR",
+   "vote": "No",
+   "division": 1924,
+   "title": "Border Security, Asylum and Immigration Bill: Second Reading",
+   "oriented_aye_means": "FOR",
+   "passages": [
+    "uk.org.publicwhip/debate/2025-02-10e.127.1#0",
+    "uk.org.publicwhip/debate/2025-02-10e.127.1#1",
+    "uk.org.publicwhip/debate/2025-02-10e.127.3#0",
+    "uk.org.publicwhip/debate/2025-02-10e.127.3#1",
+    "uk.org.publicwhip/debate/2025-02-10e.127.3#2",
+    "uk.org.publicwhip/debate/2025-02-10e.127.3#4",
+    "uk.org.publicwhip/debate/2026-07-13c.718.2#2",
+    "uk.org.publicwhip/debate/2026-07-13c.718.2#4"
+   ]
+  },
+  {
+   "name": "Tim Farron",
+   "party": "LD",
+   "fight": "Enact the Water (Special Measures) Bill to hold water companies accountable for sewage pollution",
+   "focus": 7,
+   "stance": 1.0,
+   "speech": "FOR",
+   "vote": "Aye",
+   "division": 1919,
+   "title": "Water (Special Measures) Bill Report Stage: New Clause 16",
+   "oriented_aye_means": "AGAINST",
+   "passages": [
+    "uk.org.publicwhip/debate/2024-12-16d.89.1#0",
+    "uk.org.publicwhip/debate/2024-12-16d.92.0#0",
+    "uk.org.publicwhip/debate/2024-12-16d.92.0#2",
+    "uk.org.publicwhip/debate/2024-12-16d.92.0#4",
+    "uk.org.publicwhip/debate/2025-01-28b.242.3#1",
+    "uk.org.publicwhip/debate/2025-01-28b.242.3#3",
+    "uk.org.publicwhip/debate/2024-12-16d.92.0#3"
+   ]
+  },
+  {
+   "name": "Tim Farron",
+   "party": "LD",
+   "fight": "Enact the Water (Special Measures) Bill to hold water companies accountable for sewage pollution",
+   "focus": 7,
+   "stance": 1.0,
+   "speech": "FOR",
+   "vote": "Aye",
+   "division": 1920,
+   "title": "Water (Special Measures) Bill Report Stage: New Clause 19",
+   "oriented_aye_means": "AGAINST",
+   "passages": [
+    "uk.org.publicwhip/debate/2024-12-16d.89.1#0",
+    "uk.org.publicwhip/debate/2024-12-16d.92.0#0",
+    "uk.org.publicwhip/debate/2024-12-16d.92.0#2",
+    "uk.org.publicwhip/debate/2024-12-16d.92.0#4",
+    "uk.org.publicwhip/debate/2025-01-28b.242.3#1",
+    "uk.org.publicwhip/debate/2025-01-28b.242.3#3",
+    "uk.org.publicwhip/debate/2024-12-16d.92.0#3"
+   ]
+  },
+  {
+   "name": "Tim Farron",
+   "party": "LD",
+   "fight": "Enact the Water (Special Measures) Bill to hold water companies accountable for sewage pollution",
+   "focus": 7,
+   "stance": 1.0,
+   "speech": "FOR",
+   "vote": "Aye",
+   "division": 1921,
+   "title": "Water (Special Measures) Bill Report Stage: Amendment 9",
+   "oriented_aye_means": "AGAINST",
+   "passages": [
+    "uk.org.publicwhip/debate/2024-12-16d.89.1#0",
+    "uk.org.publicwhip/debate/2024-12-16d.92.0#0",
+    "uk.org.publicwhip/debate/2024-12-16d.92.0#2",
+    "uk.org.publicwhip/debate/2024-12-16d.92.0#4",
+    "uk.org.publicwhip/debate/2025-01-28b.242.3#1",
+    "uk.org.publicwhip/debate/2025-01-28b.242.3#3",
+    "uk.org.publicwhip/debate/2024-12-16d.92.0#3"
+   ]
+  },
+  {
+   "name": "Chris Philp",
+   "party": "Con",
+   "fight": "Enact the Illegal Migration Act to curb illegal migration and strengthen border security",
+   "focus": 7,
+   "stance": 1.0,
+   "speech": "FOR",
+   "vote": "Aye",
+   "division": 1923,
+   "title": "Border Security, Asylum and Immigration Bill: Reasoned Amendment on Second Reading",
+   "oriented_aye_means": "AGAINST",
+   "passages": [
+    "uk.org.publicwhip/debate/2025-02-10e.68.2#0",
+    "uk.org.publicwhip/debate/2025-02-10e.69.7#2",
+    "uk.org.publicwhip/debate/2025-02-10e.71.0#0",
+    "uk.org.publicwhip/debate/2026-07-13c.682.1#1",
+    "uk.org.publicwhip/debate/2026-07-13c.684.1#0",
+    "uk.org.publicwhip/debate/2026-07-13c.679.1#1",
+    "uk.org.publicwhip/debate/2025-02-10e.68.4#0"
+   ]
+  },
+  {
+   "name": "Chris Philp",
+   "party": "Con",
+   "fight": "Enact the Illegal Migration Act to curb illegal migration and strengthen border security",
+   "focus": 7,
+   "stance": 1.0,
+   "speech": "FOR",
+   "vote": "No",
+   "division": 1924,
+   "title": "Border Security, Asylum and Immigration Bill: Second Reading",
+   "oriented_aye_means": "FOR",
+   "passages": [
+    "uk.org.publicwhip/debate/2025-02-10e.68.2#0",
+    "uk.org.publicwhip/debate/2025-02-10e.69.7#2",
+    "uk.org.publicwhip/debate/2025-02-10e.71.0#0",
+    "uk.org.publicwhip/debate/2026-07-13c.682.1#1",
+    "uk.org.publicwhip/debate/2026-07-13c.684.1#0",
+    "uk.org.publicwhip/debate/2026-07-13c.679.1#1",
+    "uk.org.publicwhip/debate/2025-02-10e.68.4#0"
+   ]
+  },
+  {
+   "name": "Sir John Hayes",
+   "party": "Con",
+   "fight": "Expand apprenticeships and technical education",
+   "focus": 6,
+   "stance": 1.0,
+   "speech": "FOR",
+   "vote": "Aye",
+   "division": 2285,
+   "title": "Opposition day: Student loans",
+   "oriented_aye_means": "AGAINST",
+   "passages": [
+    "uk.org.publicwhip/debate/2025-02-25c.701.0#0",
+    "uk.org.publicwhip/debate/2025-02-25c.701.0#1",
+    "uk.org.publicwhip/debate/2025-02-25c.701.0#2",
+    "uk.org.publicwhip/debate/2025-07-10c.1188.2#0",
+    "uk.org.publicwhip/debate/2026-05-19b.455.1#1",
+    "uk.org.publicwhip/debate/2026-11-03a.799.0#0"
+   ]
+  }
+ ]
+}

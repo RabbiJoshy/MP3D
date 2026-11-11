@@ -179,6 +179,51 @@ SUBJECTS = {
         "safety": "public safety or reoffending",
         "liberty": "civil liberties or a fair trial",
         "capacity": "prisons being full"}},
+
+    # Found by the agenda pilot (agenda_pilot.py): topics discovered from speeches, proposals with MPs on both sides
+    "tax": {"title": "Tax and borrowing", "proposals": {
+        "vat": {"label": "Charge VAT on private school fees", "ask": "charging VAT on private school fees",
+                 "pattern": r"VAT[^.]{0,60}(private|independent) schools?|(private|independent) school\w*[^.]{0,40}VAT|tax breaks?[^.]{0,30}private schools?", "votes": [(1860, 1), (1842, -1)]},
+        "farms": {"label": "Charge inheritance tax on farms worth over £1 million", "ask": "charging inheritance tax on farms (the changes to agricultural property relief)",
+                 "pattern": r"(farm\w*|agricultur\w+)[^.]{0,80}inheritance tax|inheritance tax[^.]{0,80}(farm|agricultur)|family farm tax|agricultural property relief", "votes": [(2203, 1), (1881, -1)]},
+        "borrow": {"label": "Borrow more to fund public spending", "ask": "the government borrowing more to fund spending",
+                 "pattern": r"borrow(ing)? more|more borrowing|increas\w+ borrowing|borrowing to (fund|pay)"},
+    }, "concerns": {
+        "growth": "economic growth or investment",
+        "families": "the cost to families or households",
+        "business": "the burden on businesses, farmers or employers",
+        "public": "funding public services"}},
+
+    "work": {"title": "Work and renting", "proposals": {
+        "dismissal": {"label": "Protect workers from unfair dismissal from their first day", "ask": "giving employees protection from unfair dismissal from day one of employment",
+                 "pattern": r"unfair dismissal[^.]{0,80}(day one|first day|qualifying period)|(day one|day-one)[^.]{0,40}(rights|unfair dismissal|protection)|qualifying period[^.]{0,40}(dismissal|employment)", "votes": [(1849, 1)]},
+        "minwage": {"label": "Keep raising the minimum wage faster than inflation", "ask": "raising the national minimum or living wage substantially",
+                 "pattern": r"(minimum|living) wage[^.]{0,60}(increase|rise|uplift|rais)|(increase|rise|uplift|rais)\w*[^.]{0,40}(minimum|living) wage"},
+        "rentcap": {"label": "Cap how much rents can rise during a tenancy", "ask": "capping or controlling rent increases (rent controls)",
+                 "pattern": r"rent controls?|cap(ping)? (on )?rents?\b|rent (increase|rise)s?[^.]{0,20}cap|limit\w*[^.]{0,20}rent increases"},
+    }, "concerns": {
+        "workers": "workers' pay, rights or security",
+        "business": "costs for employers or small businesses",
+        "jobs": "jobs being lost or hiring",
+        "renters": "renters or housing costs"}},
+
+    "ownership": {"title": "Public ownership", "proposals": {
+        "rail": {"label": "Bring passenger railways back into public ownership", "ask": "bringing passenger railways into public ownership",
+                 "pattern": r"(rail\w*|train operat\w+)[^.]{0,60}(public ownership|nationalis\w+)|(public ownership|nationalis\w+)[^.]{0,60}(rail\w*|train)", "votes": [(1832, 1)]},
+        "water": {"label": "Bring water companies into public ownership", "ask": "bringing water companies into public ownership",
+                 "pattern": r"(water compan\w+|Thames Water|water industry)[^.]{0,80}(public ownership|nationalis\w+|special administration)|(public ownership|nationalis\w+)[^.]{0,60}water"},
+    }, "concerns": {
+        "bills": "fares or bills for customers",
+        "profit": "private profits or shareholder payouts",
+        "cost": "the cost to taxpayers",
+        "service": "poor service or performance"}},
+
+    "elections": {"title": "How we vote", "proposals": {
+        "pr": {"label": "Replace first past the post with proportional representation", "ask": "replacing first past the post with proportional representation",
+                 "pattern": r"proportional representation|first past the post", "votes": [(1878, 1)]},
+    }, "concerns": {
+        "fair": "fairness or votes being wasted",
+        "stable": "stable government or a strong constituency link"}},
 }
 
 
@@ -347,8 +392,9 @@ if __name__ == "__main__":
         t["label"] = [lab.get(k, {}).get(sh) for k, sh in zip(t.proposal, t.short)]
         t = t[t.label.notna()].astype({"label": int})
         clear, none = t[t.label != 0], t[t.label == 0]
-        ck.update(labels=len(t), exact=round(100 * (t.side == t.label).mean()), wrong=round(100 * (clear.side == -clear.label).mean()),
-                  missed=round(100 * (clear.side == 0).mean()), invented=round(100 * (none.side != 0).mean()))
+        pc = lambda x: round(100 * x.mean()) if len(x) else None  # None until a sample is hand-labelled
+        ck.update(labels=len(t), exact=pc(t.side == t.label), wrong=pc(clear.side == -clear.label),
+                  missed=pc(clear.side == 0), invented=pc(none.side != 0))
         print(f"hand labels {len(t)}: exact {ck['exact']}% | clear positions {len(clear)}: wrong side {ck['wrong']}%, missed {ck['missed']}% | no position {len(none)}: invented {ck['invented']}%")
         ck["per"] = {}
         for k, g in t.groupby("proposal"):

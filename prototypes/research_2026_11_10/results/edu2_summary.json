@@ -1,0 +1,128 @@
+{
+ "funnel": {
+  "Passages": 5226,
+  "Claims naming a measure": 3391,
+  "Measure groups": 1140,
+  "Groups with 2+ MPs each side (extractor)": 50,
+  "Still 2+ MPs each side (strict judge)": 3
+ },
+ "smaller_side": {
+  "0": 39,
+  "1": 8,
+  "2": 0,
+  "3+": 3
+ },
+ "one_mp_short": [
+  {
+   "label": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+   "strict_for": 1,
+   "strict_against": 3,
+   "parties_for": [
+    "LD"
+   ],
+   "parties_against": [
+    "Con"
+   ]
+  },
+  {
+   "label": "Abolish the EBacc",
+   "strict_for": 1,
+   "strict_against": 3,
+   "parties_for": [
+    "Lab"
+   ],
+   "parties_against": [
+    "Con",
+    "LD"
+   ]
+  },
+  {
+   "label": "Change visa rules to allow dependants to accompany academics and students and reduce visa costs and NHS surcharges",
+   "strict_for": 1,
+   "strict_against": 1,
+   "parties_for": [
+    "Lab"
+   ],
+   "parties_against": [
+    "Con"
+   ]
+  },
+  {
+   "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+   "strict_for": 3,
+   "strict_against": 1,
+   "parties_for": [
+    "Con",
+    "Lab"
+   ],
+   "parties_against": [
+    "Con"
+   ]
+  },
+  {
+   "label": "Implement a four-day school week",
+   "strict_for": 1,
+   "strict_against": 3,
+   "parties_for": [
+    "Lab"
+   ],
+   "parties_against": [
+    "Con",
+    "LD",
+    "Lab"
+   ]
+  },
+  {
+   "label": "Establish Skills England",
+   "strict_for": 14,
+   "strict_against": 1,
+   "parties_for": [
+    "LD",
+    "Lab"
+   ],
+   "parties_against": [
+    "Con"
+   ]
+  },
+  {
+   "label": "Raise tuition fees",
+   "strict_for": 3,
+   "strict_against": 1,
+   "parties_for": [
+    "Lab"
+   ],
+   "parties_against": [
+    "Con"
+   ]
+  },
+  {
+   "label": "Abolish faith selection in state-funded schools",
+   "strict_for": 1,
+   "strict_against": 1,
+   "parties_for": [
+    "Lab"
+   ],
+   "parties_against": [
+    "DUP"
+   ]
+  }
+ ],
+ "party_vs_party_single_party_each_side": 4,
+ "party_vs_party_disjoint_party_sets": 7,
+ "party_vs_party_labels": [
+  "Abolish a narrow approach to the curriculum in favour of a holistic one",
+  "Change visa rules to allow dependants to accompany academics and students and reduce visa costs and NHS surcharges",
+  "Raise tuition fees",
+  "Abolish faith selection in state-funded schools"
+ ],
+ "disjoint_labels": [
+  "Abolish a narrow approach to the curriculum in favour of a holistic one",
+  "Abolish the EBacc",
+  "Remove tax breaks for private schools",
+  "Change visa rules to allow dependants to accompany academics and students and reduce visa costs and NHS surcharges",
+  "Establish Skills England",
+  "Raise tuition fees",
+  "Abolish faith selection in state-funded schools"
+ ],
+ "mps_on_both_sides_groups": 3
+}

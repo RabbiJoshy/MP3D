@@ -1,0 +1,3055 @@
+{
+ "var": [
+  0.028626136468324483,
+  0.024113219518803485,
+  0.023320050524626726
+ ],
+ "positions": [
+  {
+   "pos": 0,
+   "x": -0.075,
+   "y": 0.053,
+   "z": -0.892,
+   "label": "Supports building strong communities via localism and supporting local authorities",
+   "n": 9
+  },
+  {
+   "pos": 1,
+   "x": -0.247,
+   "y": -0.66,
+   "z": -0.161,
+   "label": "Supports building new council housing",
+   "n": 49
+  },
+  {
+   "pos": 2,
+   "x": -0.126,
+   "y": -0.294,
+   "z": -0.404,
+   "label": "Supports extending preferential borrowing rates for council house building",
+   "n": 9
+  },
+  {
+   "pos": 3,
+   "x": -0.422,
+   "y": 0.29,
+   "z": -0.722,
+   "label": "Supports local growth plans for city regions and coalfield communities",
+   "n": 10
+  },
+  {
+   "pos": 4,
+   "x": 0.01,
+   "y": -0.209,
+   "z": 0.046,
+   "label": "Supports building more social housing and cutting waiting lists",
+   "n": 5
+  },
+  {
+   "pos": 5,
+   "x": 0.46,
+   "y": 0.038,
+   "z": -0.162,
+   "label": "Supports providing permanent social housing for domestic violence victims",
+   "n": 5
+  },
+  {
+   "pos": 6,
+   "x": 0.149,
+   "y": 0.066,
+   "z": 0.235,
+   "label": "Supports a two-year protected period for tenants in tenancy agreements",
+   "n": 9
+  },
+  {
+   "pos": 7,
+   "x": 0.198,
+   "y": -0.267,
+   "z": 0.321,
+   "label": "Supports building more social housing",
+   "n": 123
+  },
+  {
+   "pos": 8,
+   "x": -0.115,
+   "y": 0.054,
+   "z": -0.374,
+   "label": "Supports giving councils direct powers to rent out vacant properties",
+   "n": 5
+  },
+  {
+   "pos": 9,
+   "x": 0.098,
+   "y": 0.205,
+   "z": 0.236,
+   "label": "Supports rental insurance for tenants with poor credit history",
+   "n": 4
+  },
+  {
+   "pos": 10,
+   "x": -0.55,
+   "y": -0.429,
+   "z": -1.093,
+   "label": "Supports the new community right to buy scheme",
+   "n": 35
+  },
+  {
+   "pos": 11,
+   "x": 0.213,
+   "y": -0.073,
+   "z": -0.069,
+   "label": "Supports building 1.5 million homes",
+   "n": 90
+  },
+  {
+   "pos": 12,
+   "x": 0.265,
+   "y": -0.006,
+   "z": 0.007,
+   "label": "Supports improved transparency for leaseholders on service charges",
+   "n": 11
+  },
+  {
+   "pos": 13,
+   "x": 0.242,
+   "y": -0.173,
+   "z": 0.038,
+   "label": "Supports capping ground rent and reforming the leasehold system",
+   "n": 23
+  },
+  {
+   "pos": 14,
+   "x": -0.279,
+   "y": 0.464,
+   "z": 0.231,
+   "label": "Supports building new homes on brownfield sites",
+   "n": 36
+  },
+  {
+   "pos": 15,
+   "x": -0.214,
+   "y": -0.167,
+   "z": -0.43,
+   "label": "Supports capping ground rents for leaseholders",
+   "n": 11
+  },
+  {
+   "pos": 16,
+   "x": 0.275,
+   "y": 0.31,
+   "z": -0.324,
+   "label": "Supports building more affordable housing and ending homelessness",
+   "n": 7
+  },
+  {
+   "pos": 17,
+   "x": 0.24,
+   "y": 0.306,
+   "z": -0.009,
+   "label": "Supports implementing the Supported Housing (Regulatory Oversight) Act 2023",
+   "n": 26
+  },
+  {
+   "pos": 18,
+   "x": -0.032,
+   "y": 0.088,
+   "z": -0.127,
+   "label": "Supports making the national planning policy framework fit for purpose",
+   "n": 10
+  },
+  {
+   "pos": 19,
+   "x": -0.002,
+   "y": 0.178,
+   "z": 0.116,
+   "label": "Supports additional grounds for possession to enable landlords to access properties for maintenance",
+   "n": 7
+  },
+  {
+   "pos": 20,
+   "x": 0.044,
+   "y": 0.006,
+   "z": -0.47,
+   "label": "Supports fair funding review for local authorities",
+   "n": 7
+  },
+  {
+   "pos": 21,
+   "x": 0.072,
+   "y": 0.475,
+   "z": -0.015,
+   "label": "Supports building more homes to address the housing crisis",
+   "n": 24
+  },
+  {
+   "pos": 22,
+   "x": -0.036,
+   "y": 0.23,
+   "z": 0.098,
+   "label": "Supports releasing grey belt land with 50% affordable housing",
+   "n": 5
+  },
+  {
+   "pos": 23,
+   "x": 0.173,
+   "y": -0.023,
+   "z": 0.542,
+   "label": "Supports protecting tenants from eviction when they secure work",
+   "n": 11
+  },
+  {
+   "pos": 24,
+   "x": 0.005,
+   "y": 0.233,
+   "z": -0.098,
+   "label": "Supports estate regeneration and investment in existing social housing estates",
+   "n": 9
+  },
+  {
+   "pos": 25,
+   "x": -0.46,
+   "y": 0.291,
+   "z": -0.187,
+   "label": "Supports local councils championing towns as investment destinations",
+   "n": 8
+  },
+  {
+   "pos": 26,
+   "x": -0.152,
+   "y": 0.28,
+   "z": 0.057,
+   "label": "Supports building new towns and new homes",
+   "n": 32
+  },
+  {
+   "pos": 27,
+   "x": -0.183,
+   "y": -0.027,
+   "z": -0.314,
+   "label": "Supports streamlining planning application decisions to utilize trained planning officers",
+   "n": 7
+  },
+  {
+   "pos": 28,
+   "x": -0.047,
+   "y": -0.191,
+   "z": 0.098,
+   "label": "Supports restricting holiday lets to protect local housing",
+   "n": 4
+  },
+  {
+   "pos": 29,
+   "x": 0.397,
+   "y": 0.251,
+   "z": -0.415,
+   "label": "Supports an extra \u00a384 million investment to prevent and address homelessness.",
+   "n": 9
+  },
+  {
+   "pos": 30,
+   "x": -0.082,
+   "y": 0.461,
+   "z": 0.214,
+   "label": "Supports granting planning permission for development",
+   "n": 8
+  },
+  {
+   "pos": 31,
+   "x": 1.053,
+   "y": -0.132,
+   "z": 0.231,
+   "label": "Supports abolishing section 21 no-fault evictions",
+   "n": 70
+  },
+  {
+   "pos": 32,
+   "x": 0.089,
+   "y": -0.057,
+   "z": 0.229,
+   "label": "Supports Article 4 directions to remove permitted development rights for HMOs",
+   "n": 7
+  },
+  {
+   "pos": 33,
+   "x": 0.116,
+   "y": 0.082,
+   "z": -0.118,
+   "label": "Supports a \u00a3250 per year ground rent cap",
+   "n": 8
+  },
+  {
+   "pos": 34,
+   "x": 0.072,
+   "y": 0.177,
+   "z": -0.146,
+   "label": "Supports the continuation of the rough sleeping initiative",
+   "n": 10
+  },
+  {
+   "pos": 35,
+   "x": 0.426,
+   "y": 0.378,
+   "z": -0.183,
+   "label": "Supports the homelessness strategy",
+   "n": 12
+  },
+  {
+   "pos": 36,
+   "x": 0.054,
+   "y": 0.276,
+   "z": 0.009,
+   "label": "Supports Awaab's law requiring landlords to fix hazards within specified time limits",
+   "n": 6
+  },
+  {
+   "pos": 37,
+   "x": 0.814,
+   "y": 0.021,
+   "z": 0.232,
+   "label": "Supports rent regulation in the private rented sector",
+   "n": 39
+  },
+  {
+   "pos": 38,
+   "x": 0.693,
+   "y": 0.435,
+   "z": -0.319,
+   "label": "Supports increasing subsidy for temporary accommodation",
+   "n": 10
+  },
+  {
+   "pos": 39,
+   "x": -0.044,
+   "y": 0.037,
+   "z": -0.058,
+   "label": "Supports enforcing Section 106 agreements for social housing provision",
+   "n": 5
+  },
+  {
+   "pos": 40,
+   "x": 0.628,
+   "y": -0.034,
+   "z": 0.235,
+   "label": "Supports the Renters' Rights Bill",
+   "n": 33
+  },
+  {
+   "pos": 41,
+   "x": -0.439,
+   "y": -0.756,
+   "z": -0.331,
+   "label": "Supports installing solar panels on new social housing",
+   "n": 5
+  },
+  {
+   "pos": 42,
+   "x": -0.097,
+   "y": -0.047,
+   "z": 0.062,
+   "label": "Supports prohibiting planning consent for unauthorised development",
+   "n": 6
+  },
+  {
+   "pos": 43,
+   "x": -0.537,
+   "y": 0.454,
+   "z": 0.146,
+   "label": "Supports regulating section 106 funding to ensure it supports local authorities",
+   "n": 6
+  },
+  {
+   "pos": 44,
+   "x": -0.301,
+   "y": 0.069,
+   "z": -0.237,
+   "label": "Supports upgrading drainage infrastructure for new housing developments",
+   "n": 5
+  },
+  {
+   "pos": 45,
+   "x": 0.287,
+   "y": -0.152,
+   "z": 0.152,
+   "label": "Supports abolition of section 21 notices",
+   "n": 7
+  },
+  {
+   "pos": 46,
+   "x": 0.22,
+   "y": -0.022,
+   "z": 0.167,
+   "label": "Supports limiting advance rent payments to one month's rent",
+   "n": 9
+  },
+  {
+   "pos": 47,
+   "x": -0.606,
+   "y": 0.473,
+   "z": -0.065,
+   "label": "Supports reviewing the standard method for assessing local housing need",
+   "n": 14
+  },
+  {
+   "pos": 48,
+   "x": -0.4,
+   "y": -0.069,
+   "z": -0.743,
+   "label": "Supports bringing historical buildings back into community use",
+   "n": 5
+  },
+  {
+   "pos": 49,
+   "x": -0.195,
+   "y": 0.189,
+   "z": 0.119,
+   "label": "Supports up-to-date local plans for development",
+   "n": 23
+  },
+  {
+   "pos": 50,
+   "x": -0.122,
+   "y": 0.17,
+   "z": 0.057,
+   "label": "Supports the Bill's provision for council and social homes",
+   "n": 16
+  },
+  {
+   "pos": 51,
+   "x": -0.058,
+   "y": -0.291,
+   "z": 0.367,
+   "label": "Supports doubling council tax and increasing stamp duty on second homes",
+   "n": 14
+  },
+  {
+   "pos": 52,
+   "x": 0.205,
+   "y": 0.507,
+   "z": -0.063,
+   "label": "Supports the Housing First approach",
+   "n": 7
+  },
+  {
+   "pos": 53,
+   "x": 0.189,
+   "y": -0.09,
+   "z": -0.394,
+   "label": "Supports equal access to the building safety fund for housing associations",
+   "n": 8
+  },
+  {
+   "pos": 54,
+   "x": 0.009,
+   "y": 0.113,
+   "z": 0.001,
+   "label": "Supports regulatory inspection of housing associations by the Regulator of Social Housing",
+   "n": 6
+  },
+  {
+   "pos": 55,
+   "x": -0.192,
+   "y": 0.277,
+   "z": 0.332,
+   "label": "Supports building new housing",
+   "n": 14
+  },
+  {
+   "pos": 56,
+   "x": -0.66,
+   "y": 0.27,
+   "z": -0.245,
+   "label": "Supports neighbourhood plans and their funding",
+   "n": 43
+  },
+  {
+   "pos": 57,
+   "x": 0.119,
+   "y": 0.354,
+   "z": 0.035,
+   "label": "Supports faster planning processes for new housing development",
+   "n": 4
+  },
+  {
+   "pos": 58,
+   "x": -0.378,
+   "y": -0.902,
+   "z": 0.364,
+   "label": "Supports building more affordable housing in rural areas",
+   "n": 20
+  },
+  {
+   "pos": 59,
+   "x": -0.09,
+   "y": 0.229,
+   "z": 0.222,
+   "label": "Supports the Planning and Infrastructure Bill",
+   "n": 11
+  },
+  {
+   "pos": 60,
+   "x": -0.142,
+   "y": -0.083,
+   "z": -0.419,
+   "label": "Supports providing furniture and flooring for social rented properties",
+   "n": 5
+  },
+  {
+   "pos": 61,
+   "x": 0.055,
+   "y": 0.16,
+   "z": -0.066,
+   "label": "Supports speeding up remediation of unsafe cladding on high-rise buildings",
+   "n": 11
+  },
+  {
+   "pos": 62,
+   "x": 0.201,
+   "y": 0.085,
+   "z": -0.261,
+   "label": "Supports creating an independent regulator for property managing agents",
+   "n": 10
+  },
+  {
+   "pos": 63,
+   "x": -0.119,
+   "y": 0.147,
+   "z": 0.322,
+   "label": "Supports delivering infrastructure alongside new housing developments",
+   "n": 13
+  },
+  {
+   "pos": 64,
+   "x": -0.054,
+   "y": -0.359,
+   "z": -0.151,
+   "label": "Supports ending the leasehold system and introducing commonhold reform",
+   "n": 38
+  },
+  {
+   "pos": 65,
+   "x": -0.004,
+   "y": 0.333,
+   "z": 0.182,
+   "label": "Supports the \"use it or lose it\" principle for planning permissions",
+   "n": 5
+  },
+  {
+   "pos": 66,
+   "x": 0.5,
+   "y": 0.52,
+   "z": -0.189,
+   "label": "Supports additional \u00a31 billion funding to tackle rough sleeping",
+   "n": 8
+  },
+  {
+   "pos": 67,
+   "x": -0.252,
+   "y": 0.277,
+   "z": 0.066,
+   "label": "Supports setting targets for building social housing",
+   "n": 55
+  },
+  {
+   "pos": 68,
+   "x": 0.119,
+   "y": -0.038,
+   "z": -0.012,
+   "label": "Supports the biggest increase in social and affordable house building in a generation",
+   "n": 11
+  },
+  {
+   "pos": 69,
+   "x": -0.143,
+   "y": -0.195,
+   "z": 0.159,
+   "label": "Supports rural exception sites for affordable housing",
+   "n": 21
+  },
+  {
+   "pos": 70,
+   "x": 0.009,
+   "y": -0.079,
+   "z": 0.011,
+   "label": "Supports affordable housing for young people",
+   "n": 8
+  },
+  {
+   "pos": 71,
+   "x": 0.295,
+   "y": -0.289,
+   "z": 0.303,
+   "label": "Supports rent controls",
+   "n": 16
+  },
+  {
+   "pos": 72,
+   "x": -0.095,
+   "y": 0.103,
+   "z": -0.228,
+   "label": "Supports the Pride in Place programme and impact fund",
+   "n": 16
+  },
+  {
+   "pos": 73,
+   "x": -0.171,
+   "y": -0.029,
+   "z": -0.033,
+   "label": "Supports local areas developing plans based on set criteria",
+   "n": 9
+  },
+  {
+   "pos": 74,
+   "x": 0.688,
+   "y": 0.387,
+   "z": -0.468,
+   "label": "Supports including deprivation in the local government funding formula",
+   "n": 5
+  },
+  {
+   "pos": 75,
+   "x": 0.178,
+   "y": -0.152,
+   "z": 0.008,
+   "label": "Supports a mass building programme of social and particularly council housing",
+   "n": 5
+  },
+  {
+   "pos": 76,
+   "x": -0.168,
+   "y": -0.005,
+   "z": -0.203,
+   "label": "Supports eviction of tenants who breach tenancy conditions due to antisocial behaviour",
+   "n": 8
+  },
+  {
+   "pos": 77,
+   "x": -0.155,
+   "y": 0.013,
+   "z": 0.108,
+   "label": "Supports mandatory adoption of public amenities on new housing estates",
+   "n": 6
+  },
+  {
+   "pos": 78,
+   "x": -0.25,
+   "y": -0.661,
+   "z": 0.192,
+   "label": "Supports including deprivation as a metric alongside rurality",
+   "n": 5
+  },
+  {
+   "pos": 79,
+   "x": -0.449,
+   "y": 0.476,
+   "z": -0.141,
+   "label": "Supports revitalising high streets and supporting local businesses",
+   "n": 8
+  },
+  {
+   "pos": 80,
+   "x": 0.091,
+   "y": -0.177,
+   "z": 0.367,
+   "label": "Supports applying the decent homes standard to service accommodation",
+   "n": 23
+  },
+  {
+   "pos": 81,
+   "x": -0.157,
+   "y": -0.07,
+   "z": 0.069,
+   "label": "Supports building 150,000 social homes a year",
+   "n": 49
+  },
+  {
+   "pos": 82,
+   "x": -0.112,
+   "y": -0.248,
+   "z": 0.175,
+   "label": "Supports local planning decisions and council house construction",
+   "n": 7
+  },
+  {
+   "pos": 83,
+   "x": 0.068,
+   "y": 0.091,
+   "z": -0.114,
+   "label": "Supports mandatory professional qualifications for managing agents",
+   "n": 6
+  },
+  {
+   "pos": 84,
+   "x": 0.411,
+   "y": -0.152,
+   "z": -0.081,
+   "label": "Supports the \u00a339 billion social and affordable homes programme",
+   "n": 77
+  },
+  {
+   "pos": 85,
+   "x": 0.428,
+   "y": 0.301,
+   "z": -0.316,
+   "label": "Supports reducing out-of-area placements for homeless households",
+   "n": 6
+  },
+  {
+   "pos": 86,
+   "x": -0.152,
+   "y": -0.628,
+   "z": 0.333,
+   "label": "Supports regulating second homes and short-term lets",
+   "n": 21
+  },
+  {
+   "pos": 87,
+   "x": -0.012,
+   "y": -0.502,
+   "z": -0.078,
+   "label": "Supports a registration scheme for short-term lets to ensure quality and safety",
+   "n": 14
+  },
+  {
+   "pos": 88,
+   "x": -0.166,
+   "y": 0.142,
+   "z": -0.404,
+   "label": "Supports raising minimum energy efficiency standards in the private and social rented sectors to EPC C by 2030",
+   "n": 7
+  },
+  {
+   "pos": 89,
+   "x": 0.028,
+   "y": -0.166,
+   "z": 0.135,
+   "label": "Supports building new social homes in Cornwall",
+   "n": 6
+  },
+  {
+   "pos": 90,
+   "x": -0.097,
+   "y": 0.08,
+   "z": 0.062,
+   "label": "Supports the revised standard method to increase housing targets",
+   "n": 11
+  },
+  {
+   "pos": 91,
+   "x": -0.258,
+   "y": -0.23,
+   "z": 0.25,
+   "label": "Supports plan-led rural development with infrastructure and community support",
+   "n": 5
+  },
+  {
+   "pos": 92,
+   "x": -0.478,
+   "y": 0.094,
+   "z": -0.732,
+   "label": "Supports the Warm Homes Plan for park home residents",
+   "n": 7
+  },
+  {
+   "pos": 93,
+   "x": 0.444,
+   "y": 0.188,
+   "z": -0.135,
+   "label": "Supports the Bill to protect tenants and grant pet rights",
+   "n": 6
+  },
+  {
+   "pos": 94,
+   "x": -0.458,
+   "y": -0.146,
+   "z": -1.051,
+   "label": "Supports community ownership of assets",
+   "n": 12
+  },
+  {
+   "pos": 95,
+   "x": -0.287,
+   "y": -0.025,
+   "z": 0.175,
+   "label": "Supports reducing empty properties and vacant homes in local areas",
+   "n": 12
+  },
+  {
+   "pos": 96,
+   "x": 0.296,
+   "y": 0.543,
+   "z": -0.019,
+   "label": "Supports the Homelessness Reduction Act 2017",
+   "n": 7
+  },
+  {
+   "pos": 97,
+   "x": -0.134,
+   "y": -0.006,
+   "z": 0.144,
+   "label": "Supports community land trusts and co-housing communities for local housing needs",
+   "n": 7
+  },
+  {
+   "pos": 98,
+   "x": 0.201,
+   "y": 0.177,
+   "z": -0.096,
+   "label": "Supports building homes and ensuring families have enough money to pay rent",
+   "n": 5
+  },
+  {
+   "pos": 99,
+   "x": -0.263,
+   "y": 0.269,
+   "z": 0.048,
+   "label": "Supports unlocking densification of urban centres to build more homes",
+   "n": 6
+  },
+  {
+   "pos": 100,
+   "x": 0.219,
+   "y": 0.081,
+   "z": -0.062,
+   "label": "Supports reforming the planning system to increase housing supply",
+   "n": 19
+  },
+  {
+   "pos": 101,
+   "x": -0.097,
+   "y": -0.159,
+   "z": -0.267,
+   "label": "Supports addressing the housing crisis",
+   "n": 11
+  },
+  {
+   "pos": 102,
+   "x": 0.016,
+   "y": -0.043,
+   "z": 0.008,
+   "label": "Supports allowing councils to keep 100% of right-to-buy receipts and increasing social home protections",
+   "n": 7
+  },
+  {
+   "pos": 103,
+   "x": 0.924,
+   "y": 0.454,
+   "z": -0.578,
+   "label": "Supports tackling homelessness and reducing reliance on temporary accommodation",
+   "n": 20
+  },
+  {
+   "pos": 104,
+   "x": 0.987,
+   "y": 0.456,
+   "z": -0.194,
+   "label": "Supports uprating the local housing allowance",
+   "n": 16
+  },
+  {
+   "pos": 105,
+   "x": -0.228,
+   "y": -0.023,
+   "z": -0.178,
+   "label": "Supports housing associations working more closely with local authorities",
+   "n": 4
+  },
+  {
+   "pos": 106,
+   "x": 0.027,
+   "y": -0.105,
+   "z": 0.035,
+   "label": "Supports youth hubs providing employment, mental health, and housing skills support",
+   "n": 5
+  },
+  {
+   "pos": 107,
+   "x": 0.023,
+   "y": 0.049,
+   "z": 0.043,
+   "label": "Supports releasing green-belt land for housing",
+   "n": 17
+  },
+  {
+   "pos": 108,
+   "x": -0.098,
+   "y": 0.035,
+   "z": -0.032,
+   "label": "Supports collaboration among police, housing associations, and politicians to combat antisocial behaviour",
+   "n": 8
+  },
+  {
+   "pos": 109,
+   "x": 0.645,
+   "y": 0.302,
+   "z": -0.311,
+   "label": "Supports working with councils to bring forward local temporary accommodation",
+   "n": 7
+  },
+  {
+   "pos": 110,
+   "x": -0.229,
+   "y": 0.14,
+   "z": -0.02,
+   "label": "Supports building more appropriate affordable housing",
+   "n": 18
+  },
+  {
+   "pos": 111,
+   "x": -0.098,
+   "y": -0.211,
+   "z": -0.464,
+   "label": "Supports reforming the right to buy to protect existing social housing stock",
+   "n": 17
+  },
+  {
+   "pos": 112,
+   "x": -0.0,
+   "y": 0.022,
+   "z": -0.067,
+   "label": "Supports strengthening developer contributions for infrastructure",
+   "n": 8
+  },
+  {
+   "pos": 113,
+   "x": 0.175,
+   "y": 0.038,
+   "z": 0.006,
+   "label": "Supports regulating short-term lets to protect local housing",
+   "n": 12
+  },
+  {
+   "pos": 114,
+   "x": 0.138,
+   "y": 0.277,
+   "z": -0.241,
+   "label": "Supports the new cross-Government strategy to tackle homelessness",
+   "n": 9
+  },
+  {
+   "pos": 115,
+   "x": 0.385,
+   "y": 0.268,
+   "z": -0.254,
+   "label": "Supports introducing a duty to collaborate to prevent homelessness",
+   "n": 7
+  },
+  {
+   "pos": 116,
+   "x": 0.267,
+   "y": -0.001,
+   "z": -0.084,
+   "label": "Supports the Renters' Rights Act 2025",
+   "n": 10
+  },
+  {
+   "pos": 117,
+   "x": -0.138,
+   "y": -0.028,
+   "z": -0.356,
+   "label": "Supports exempting newly built social homes from the right to buy for 35 years",
+   "n": 7
+  },
+  {
+   "pos": 118,
+   "x": 0.537,
+   "y": -0.128,
+   "z": 0.31,
+   "label": "Supports capping in-tenancy rent increases at inflation or wage growth",
+   "n": 8
+  },
+  {
+   "pos": 119,
+   "x": -0.137,
+   "y": 0.247,
+   "z": 0.402,
+   "label": "Supports higher quality standards for new build homes",
+   "n": 6
+  },
+  {
+   "pos": 120,
+   "x": 0.214,
+   "y": 0.342,
+   "z": -0.134,
+   "label": "Supports addressing homelessness and rough sleeping",
+   "n": 13
+  },
+  {
+   "pos": 121,
+   "x": 0.432,
+   "y": -0.494,
+   "z": 0.273,
+   "label": "Supports applying decent homes standards and Awaab's law to the private rented sector",
+   "n": 23
+  },
+  {
+   "pos": 122,
+   "x": -0.255,
+   "y": -0.342,
+   "z": 0.34,
+   "label": "Supports adoption of shared areas in new developments by local authorities",
+   "n": 5
+  },
+  {
+   "pos": 123,
+   "x": -0.059,
+   "y": -0.132,
+   "z": 0.042,
+   "label": "Supports allowing local planning authorities to set their own planning fees",
+   "n": 6
+  },
+  {
+   "pos": 124,
+   "x": -0.305,
+   "y": -0.051,
+   "z": -0.037,
+   "label": "Supports making pubs assets of community value",
+   "n": 8
+  },
+  {
+   "pos": 125,
+   "x": -0.175,
+   "y": 0.088,
+   "z": -0.008,
+   "label": "Supports exploring additional protections for leaseholders against unaffordable service charge increases",
+   "n": 4
+  },
+  {
+   "pos": 126,
+   "x": -0.089,
+   "y": 0.192,
+   "z": -0.891,
+   "label": "Supports high street rental auctions for vacant units",
+   "n": 37
+  },
+  {
+   "pos": 127,
+   "x": -0.034,
+   "y": 0.041,
+   "z": -0.346,
+   "label": "Supports extending parish and town councils",
+   "n": 3
+  },
+  {
+   "pos": 128,
+   "x": 0.058,
+   "y": 0.186,
+   "z": 0.096,
+   "label": "Supports a plan to increase housing starts in London",
+   "n": 6
+  },
+  {
+   "pos": 129,
+   "x": 0.095,
+   "y": 0.075,
+   "z": -0.025,
+   "label": "Supports mandatory landlord ombudsman service for private tenants",
+   "n": 7
+  },
+  {
+   "pos": 130,
+   "x": 0.133,
+   "y": 0.028,
+   "z": -0.043,
+   "label": "Supports a 40% target for affordable homes in new towns.",
+   "n": 6
+  },
+  {
+   "pos": 131,
+   "x": -0.209,
+   "y": -0.005,
+   "z": -0.389,
+   "label": "Supports the \u00a31.5 billion neighbourhoods plan delivering \u00a320 million to 75 communities",
+   "n": 6
+  },
+  {
+   "pos": 132,
+   "x": -0.437,
+   "y": 0.218,
+   "z": 0.164,
+   "label": "Supports tying affordability definitions to local incomes",
+   "n": 7
+  },
+  {
+   "pos": 133,
+   "x": 0.394,
+   "y": 0.205,
+   "z": -0.095,
+   "label": "Supports the national plan to end homelessness",
+   "n": 4
+  },
+  {
+   "pos": 134,
+   "x": 0.068,
+   "y": -0.003,
+   "z": -0.028,
+   "label": "Supports co-operative housing tenure and law",
+   "n": 7
+  },
+  {
+   "pos": 135,
+   "x": 0.46,
+   "y": -0.343,
+   "z": 0.708,
+   "label": "Supports unfreezing local housing allowance and linking it to local rent",
+   "n": 12
+  },
+  {
+   "pos": 136,
+   "x": -0.03,
+   "y": 0.491,
+   "z": -0.238,
+   "label": "Supports the creation of the Building Safety Regulator",
+   "n": 13
+  },
+  {
+   "pos": 137,
+   "x": -0.031,
+   "y": -0.186,
+   "z": -0.251,
+   "label": "Supports social enterprises and community-owned organisations",
+   "n": 7
+  },
+  {
+   "pos": 138,
+   "x": -0.116,
+   "y": 0.229,
+   "z": 0.263,
+   "label": "Supports giving tenants the power to challenge excessive in-tenancy rent increases",
+   "n": 9
+  },
+  {
+   "pos": 139,
+   "x": 0.079,
+   "y": -0.109,
+   "z": 0.123,
+   "label": "Supports the Leasehold and Freehold Reform Act 2024",
+   "n": 32
+  },
+  {
+   "pos": 140,
+   "x": 0.038,
+   "y": -0.149,
+   "z": 0.089,
+   "label": "Supports providing pitches and places for Gypsy, Roma and Traveller communities",
+   "n": 7
+  },
+  {
+   "pos": 141,
+   "x": 0.037,
+   "y": 0.362,
+   "z": 0.243,
+   "label": "Supports improved licensing process for Houses in Multiple Occupation",
+   "n": 6
+  },
+  {
+   "pos": 142,
+   "x": 0.375,
+   "y": 0.284,
+   "z": 0.027,
+   "label": "Supports the licensing scheme for supported housing",
+   "n": 10
+  },
+  {
+   "pos": 143,
+   "x": 0.327,
+   "y": 0.295,
+   "z": -0.205,
+   "label": "Supports reducing the number of children in temporary accommodation",
+   "n": 6
+  },
+  {
+   "pos": 144,
+   "x": -0.294,
+   "y": 0.171,
+   "z": -0.205,
+   "label": "Opposes the abolition of neighbourhood planning",
+   "n": 8
+  },
+  {
+   "pos": 145,
+   "x": -0.032,
+   "y": 0.146,
+   "z": 0.206,
+   "label": "Opposes the new clause",
+   "n": 6
+  },
+  {
+   "pos": 146,
+   "x": -0.53,
+   "y": 0.764,
+   "z": 0.24,
+   "label": "Opposes removing local councillors' decision-making power on planning applications",
+   "n": 22
+  },
+  {
+   "pos": 147,
+   "x": -0.572,
+   "y": 0.412,
+   "z": -0.244,
+   "label": "Opposes the 1.5 million homes housing target",
+   "n": 9
+  },
+  {
+   "pos": 148,
+   "x": -0.495,
+   "y": 0.959,
+   "z": 0.855,
+   "label": "Opposes building homes on the green belt",
+   "n": 11
+  },
+  {
+   "pos": 149,
+   "x": 0.046,
+   "y": 0.133,
+   "z": -0.052,
+   "label": "Opposes restrictions on the right to buy scheme",
+   "n": 8
+  },
+  {
+   "pos": 150,
+   "x": -0.073,
+   "y": -0.279,
+   "z": 0.156,
+   "label": "Opposes the Social Housing Bill",
+   "n": 13
+  },
+  {
+   "pos": 151,
+   "x": -0.075,
+   "y": 0.091,
+   "z": 0.079,
+   "label": "Opposes the introduction of new use classes for short-term lets",
+   "n": 7
+  },
+  {
+   "pos": 152,
+   "x": -0.56,
+   "y": 0.523,
+   "z": 0.382,
+   "label": "Opposes the Planning and Infrastructure Bill",
+   "n": 9
+  },
+  {
+   "pos": 153,
+   "x": -0.173,
+   "y": 0.119,
+   "z": 0.021,
+   "label": "Opposes the Renters' Rights Bill",
+   "n": 9
+  },
+  {
+   "pos": 154,
+   "x": -0.289,
+   "y": 0.266,
+   "z": 0.172,
+   "label": "Opposes the standard method for setting local housing targets",
+   "n": 15
+  },
+  {
+   "pos": 155,
+   "x": 0.432,
+   "y": 0.241,
+   "z": 0.126,
+   "label": "Opposes freezing the local housing allowance",
+   "n": 9
+  },
+  {
+   "pos": 156,
+   "x": -0.009,
+   "y": 0.06,
+   "z": -0.016,
+   "label": "Opposes the introduction of rent controls in the private rented sector",
+   "n": 8
+  },
+  {
+   "pos": 157,
+   "x": -0.063,
+   "y": 0.555,
+   "z": -0.132,
+   "label": "Opposes reducing the target for affordable housing",
+   "n": 10
+  },
+  {
+   "pos": 158,
+   "x": -0.588,
+   "y": 0.44,
+   "z": 0.464,
+   "label": "Opposes abolishing housing targets",
+   "n": 30
+  },
+  {
+   "pos": 159,
+   "x": -0.301,
+   "y": -0.699,
+   "z": 0.013,
+   "label": "Opposes the sale of social housing stock by developers to the private sector",
+   "n": 8
+  },
+  {
+   "pos": 160,
+   "x": -0.63,
+   "y": 0.451,
+   "z": 0.112,
+   "label": "Opposes higher housing targets for rural areas",
+   "n": 17
+  },
+  {
+   "pos": 161,
+   "x": -0.458,
+   "y": 0.668,
+   "z": 0.648,
+   "label": "Opposes the implementation of the grey belt planning policy",
+   "n": 9
+  },
+  {
+   "pos": 162,
+   "x": 0.002,
+   "y": -0.008,
+   "z": 0.015,
+   "label": "Opposes the new clause on social housing allocation tests",
+   "n": 6
+  },
+  {
+   "pos": 163,
+   "x": -0.049,
+   "y": 0.162,
+   "z": 0.06,
+   "label": "Opposes the Government's plan to reduce private rented homes",
+   "n": 5
+  },
+  {
+   "pos": 164,
+   "x": -0.249,
+   "y": 0.144,
+   "z": 0.335,
+   "label": "Opposes housing developments without supporting infrastructure",
+   "n": 4
+  },
+  {
+   "pos": 165,
+   "x": -0.09,
+   "y": -0.378,
+   "z": 0.224,
+   "label": "Opposes selling off housing association properties to create capital assets",
+   "n": 7
+  },
+  {
+   "pos": 166,
+   "x": -0.036,
+   "y": 0.042,
+   "z": 0.086,
+   "label": "Opposes the Forest City development proposal",
+   "n": 6
+  },
+  {
+   "pos": 167,
+   "x": -0.394,
+   "y": 0.432,
+   "z": -0.027,
+   "label": "Opposes the creation of new unitary authorities",
+   "n": 8
+  },
+  {
+   "pos": 168,
+   "x": -0.197,
+   "y": 0.606,
+   "z": 0.323,
+   "label": "Opposes reducing the number of houses being built in London",
+   "n": 6
+  }
+ ],
+ "mps": [
+  {
+   "member_id": 163,
+   "x": 0.415,
+   "y": 0.175,
+   "z": -0.097,
+   "mp": "Sir Stephen Timms",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 177,
+   "x": -0.123,
+   "y": 0.041,
+   "z": -0.512,
+   "mp": "Gareth Thomas",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 178,
+   "x": 0.064,
+   "y": -0.188,
+   "z": 0.171,
+   "mp": "John McDonnell",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 185,
+   "x": 0.283,
+   "y": -0.406,
+   "z": 0.2,
+   "mp": "Jeremy Corbyn",
+   "party": "YP",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 193,
+   "x": 0.359,
+   "y": 0.01,
+   "z": -0.183,
+   "mp": "Dame Siobhain McDonagh",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 227,
+   "x": -0.169,
+   "y": -0.044,
+   "z": 0.3,
+   "mp": "Andrew George",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 394,
+   "x": 0.133,
+   "y": -0.058,
+   "z": -0.041,
+   "mp": "Mr Clive Betts",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 1427,
+   "x": 0.225,
+   "y": 0.305,
+   "z": -0.0,
+   "mp": "Andy Burnham",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 1444,
+   "x": -0.1,
+   "y": 0.008,
+   "z": 0.218,
+   "mp": "Mr Mark Francois",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 1510,
+   "x": -0.324,
+   "y": -0.208,
+   "z": -0.659,
+   "mp": "Ed Miliband",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 1524,
+   "x": -0.137,
+   "y": 0.284,
+   "z": -0.058,
+   "mp": "Dame Meg Hillier",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 1587,
+   "x": 0.031,
+   "y": -0.17,
+   "z": 0.046,
+   "mp": "Pat McFadden",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 3924,
+   "x": 0.047,
+   "y": -0.111,
+   "z": 0.066,
+   "mp": "Yasmin Qureshi",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 3957,
+   "x": -0.132,
+   "y": -0.137,
+   "z": 0.102,
+   "mp": "Martin Vickers",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 3969,
+   "x": -0.498,
+   "y": 0.431,
+   "z": 0.181,
+   "mp": "Damian Hinds",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4005,
+   "x": 0.398,
+   "y": 0.638,
+   "z": -0.06,
+   "mp": "Bob Blackman",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4031,
+   "x": 0.084,
+   "y": 0.017,
+   "z": 0.022,
+   "mp": "Rachel Reeves",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4046,
+   "x": 0.47,
+   "y": 0.103,
+   "z": -0.117,
+   "mp": "Bridget Phillipson",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4066,
+   "x": -0.147,
+   "y": 0.076,
+   "z": 0.109,
+   "mp": "Priti Patel",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4083,
+   "x": 0.981,
+   "y": 0.656,
+   "z": -0.602,
+   "mp": "Alison McGovern",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4125,
+   "x": 0.347,
+   "y": 0.084,
+   "z": -0.231,
+   "mp": "Catherine McKinnell",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4131,
+   "x": -0.156,
+   "y": -0.044,
+   "z": 0.027,
+   "mp": "Jim Shannon",
+   "party": "DUP",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4138,
+   "x": 0.374,
+   "y": 0.304,
+   "z": -0.235,
+   "mp": "Rushanara Ali",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4268,
+   "x": 0.247,
+   "y": 0.061,
+   "z": 0.002,
+   "mp": "Steve Reed",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4277,
+   "x": -0.087,
+   "y": 0.217,
+   "z": 0.228,
+   "mp": "Emma Lewell",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4356,
+   "x": 0.008,
+   "y": 0.132,
+   "z": 0.024,
+   "mp": "Angela Rayner",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4358,
+   "x": -0.67,
+   "y": 0.721,
+   "z": 0.404,
+   "mp": "Wendy Morton",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4366,
+   "x": -0.15,
+   "y": 0.339,
+   "z": 0.472,
+   "mp": "Sir James Cleverly",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4389,
+   "x": 0.005,
+   "y": 0.028,
+   "z": 0.018,
+   "mp": "Ruth Cadbury",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4396,
+   "x": 0.102,
+   "y": -0.262,
+   "z": 0.079,
+   "mp": "Rebecca Long Bailey",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4418,
+   "x": -0.013,
+   "y": -0.225,
+   "z": -0.087,
+   "mp": "Justin Madders",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4464,
+   "x": -0.618,
+   "y": 0.429,
+   "z": -0.145,
+   "mp": "Melanie Onn",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4471,
+   "x": 0.06,
+   "y": -0.273,
+   "z": -0.01,
+   "mp": "Rachael Maskell",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4474,
+   "x": -0.222,
+   "y": 0.177,
+   "z": 0.11,
+   "mp": "Kevin Hollinrake",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4495,
+   "x": -0.229,
+   "y": 0.089,
+   "z": 0.296,
+   "mp": "Kit Malthouse",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4510,
+   "x": 0.91,
+   "y": 0.363,
+   "z": -0.426,
+   "mp": "Helen Hayes",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4514,
+   "x": 0.308,
+   "y": -0.065,
+   "z": 0.053,
+   "mp": "Sir Keir Starmer",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4520,
+   "x": 0.015,
+   "y": -0.063,
+   "z": 0.121,
+   "mp": "Matthew Pennycook",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4523,
+   "x": 0.479,
+   "y": -0.073,
+   "z": 0.261,
+   "mp": "Catherine West",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4569,
+   "x": -0.435,
+   "y": -0.131,
+   "z": -1.172,
+   "mp": "Jim McMahon",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4591,
+   "x": 0.562,
+   "y": 0.317,
+   "z": -0.265,
+   "mp": "Sarah Olney",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4597,
+   "x": -0.281,
+   "y": 0.32,
+   "z": 0.127,
+   "mp": "Mrs Kemi Badenoch",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4603,
+   "x": 0.135,
+   "y": 0.125,
+   "z": 0.027,
+   "mp": "Preet Kaur Gill",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4607,
+   "x": -0.256,
+   "y": -0.16,
+   "z": -0.337,
+   "mp": "Stephanie Peacock",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4621,
+   "x": 0.085,
+   "y": -0.118,
+   "z": 0.045,
+   "mp": "Darren Jones",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4641,
+   "x": -0.369,
+   "y": 0.203,
+   "z": -0.787,
+   "mp": "Alex Norris",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4651,
+   "x": 0.224,
+   "y": -0.157,
+   "z": 0.185,
+   "mp": "Dan Carden",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4654,
+   "x": -0.218,
+   "y": -0.018,
+   "z": 0.066,
+   "mp": "Matt Rodda",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4657,
+   "x": -0.25,
+   "y": -0.198,
+   "z": -0.548,
+   "mp": "Anneliese Dodds",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4673,
+   "x": -0.134,
+   "y": -0.124,
+   "z": -0.468,
+   "mp": "Jo Platt",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4753,
+   "x": 0.092,
+   "y": -0.222,
+   "z": 0.117,
+   "mp": "Mary Kelly Foy",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4764,
+   "x": 0.422,
+   "y": -0.159,
+   "z": 0.279,
+   "mp": "Bell Ribeiro-Addy",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4769,
+   "x": -0.117,
+   "y": -0.257,
+   "z": 0.045,
+   "mp": "Daisy Cooper",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4776,
+   "x": -0.266,
+   "y": -0.135,
+   "z": -0.479,
+   "mp": "Munira Wilson",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4778,
+   "x": -0.315,
+   "y": 0.097,
+   "z": -0.014,
+   "mp": "Greg Smith",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4781,
+   "x": -0.25,
+   "y": 0.099,
+   "z": -0.065,
+   "mp": "Dr Luke Evans",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4788,
+   "x": -0.023,
+   "y": -0.002,
+   "z": -0.078,
+   "mp": "Fleur Anderson",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4790,
+   "x": 0.155,
+   "y": -0.009,
+   "z": -0.131,
+   "mp": "Apsana Begum",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4798,
+   "x": -0.073,
+   "y": 0.419,
+   "z": -0.177,
+   "mp": "Gareth Bacon",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4803,
+   "x": -0.768,
+   "y": 1.046,
+   "z": 0.1,
+   "mp": "Paul Holmes",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4811,
+   "x": 0.095,
+   "y": -0.122,
+   "z": 0.039,
+   "mp": "Navendu Mishra",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4813,
+   "x": -0.34,
+   "y": 0.585,
+   "z": 0.443,
+   "mp": "Mr Richard Holden",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4820,
+   "x": 0.024,
+   "y": -0.058,
+   "z": 0.224,
+   "mp": "Ms Abena Oppong-Asare",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4824,
+   "x": 0.422,
+   "y": 0.214,
+   "z": -0.176,
+   "mp": "Kim Johnson",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4828,
+   "x": 0.689,
+   "y": 0.209,
+   "z": 0.152,
+   "mp": "Paula Barker",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4861,
+   "x": -0.472,
+   "y": 0.252,
+   "z": 0.404,
+   "mp": "Robbie Moore",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4869,
+   "x": 0.309,
+   "y": -0.3,
+   "z": 0.203,
+   "mp": "Nadia Whittome",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4870,
+   "x": 0.712,
+   "y": 0.568,
+   "z": -0.254,
+   "mp": "Florence Eshalomi",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4872,
+   "x": -0.023,
+   "y": 1.089,
+   "z": 0.598,
+   "mp": "David Simmonds",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4873,
+   "x": 0.252,
+   "y": -0.22,
+   "z": 0.332,
+   "mp": "Rachel Hopkins",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4932,
+   "x": -0.135,
+   "y": 0.384,
+   "z": 0.135,
+   "mp": "Mr Louie French",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4934,
+   "x": -0.098,
+   "y": 0.181,
+   "z": 0.293,
+   "mp": "Helen Morgan",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4976,
+   "x": 0.071,
+   "y": -0.115,
+   "z": 0.144,
+   "mp": "Samantha Dixon",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4979,
+   "x": 0.052,
+   "y": -0.132,
+   "z": 0.051,
+   "mp": "Andrew Western",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4995,
+   "x": -0.199,
+   "y": -0.419,
+   "z": 0.199,
+   "mp": "Sarah Dyke",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5025,
+   "x": 0.033,
+   "y": -0.135,
+   "z": -0.027,
+   "mp": "Chris Webb",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5029,
+   "x": -0.167,
+   "y": -0.209,
+   "z": -0.196,
+   "mp": "Emma Foody",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5034,
+   "x": -0.278,
+   "y": -0.476,
+   "z": -0.43,
+   "mp": "Josh Newbury",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5037,
+   "x": 0.168,
+   "y": -0.018,
+   "z": 0.185,
+   "mp": "Lola McEvoy",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5044,
+   "x": 0.327,
+   "y": -0.225,
+   "z": 0.357,
+   "mp": "Adam Thompson",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5048,
+   "x": 0.339,
+   "y": -0.172,
+   "z": 0.197,
+   "mp": "Antonia Bance",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5050,
+   "x": -0.231,
+   "y": 0.006,
+   "z": 0.175,
+   "mp": "Lewis Cocking",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5051,
+   "x": -0.049,
+   "y": 0.021,
+   "z": 0.039,
+   "mp": "Kevin Bonavia",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5054,
+   "x": 0.228,
+   "y": 0.095,
+   "z": 0.002,
+   "mp": "Mr Calvin Bailey",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5061,
+   "x": 0.174,
+   "y": -0.049,
+   "z": 0.131,
+   "mp": "Andrew Lewin",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5062,
+   "x": -0.113,
+   "y": 0.121,
+   "z": 0.24,
+   "mp": "Nick Timothy",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5065,
+   "x": -0.123,
+   "y": 0.021,
+   "z": 0.409,
+   "mp": "Rachel Taylor",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5066,
+   "x": 0.024,
+   "y": -0.108,
+   "z": 0.085,
+   "mp": "Steve Darling",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5071,
+   "x": 0.324,
+   "y": 0.179,
+   "z": -0.125,
+   "mp": "Paul Waugh",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5075,
+   "x": 0.096,
+   "y": 0.106,
+   "z": 0.084,
+   "mp": "Deirdre Costigan",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5077,
+   "x": 0.283,
+   "y": -0.193,
+   "z": 0.15,
+   "mp": "Jacob Collier",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5081,
+   "x": -0.197,
+   "y": -0.425,
+   "z": 0.238,
+   "mp": "Joe Morris",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5086,
+   "x": 0.728,
+   "y": 0.417,
+   "z": -0.528,
+   "mp": "Josh Babarinde",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5099,
+   "x": -0.549,
+   "y": 0.026,
+   "z": -0.875,
+   "mp": "Miatta Fahnbulleh",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 5100,
+   "x": -0.161,
+   "y": 0.338,
+   "z": 0.329,
+   "mp": "Blake Stephenson",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5101,
+   "x": -0.176,
+   "y": 0.045,
+   "z": 0.1,
+   "mp": "Sir Ashley Fox",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5102,
+   "x": 0.458,
+   "y": -0.077,
+   "z": 0.447,
+   "mp": "Carla Denyer",
+   "party": "Green",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5103,
+   "x": 0.118,
+   "y": 0.166,
+   "z": -0.425,
+   "mp": "Luke Taylor",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5107,
+   "x": -0.34,
+   "y": -0.669,
+   "z": -0.307,
+   "mp": "Linsey Farnsworth",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5109,
+   "x": 0.137,
+   "y": 0.016,
+   "z": -0.062,
+   "mp": "Chris Bloore",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5111,
+   "x": -0.398,
+   "y": -0.229,
+   "z": -0.01,
+   "mp": "Martin Wrigley",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5118,
+   "x": 0.188,
+   "y": 0.175,
+   "z": -0.022,
+   "mp": "Chris Curtis",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5119,
+   "x": 0.543,
+   "y": 0.182,
+   "z": -0.228,
+   "mp": "Natasha Irons",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5120,
+   "x": 0.081,
+   "y": 0.054,
+   "z": 0.068,
+   "mp": "Shockat Adam",
+   "party": "Ind",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5122,
+   "x": -0.673,
+   "y": 0.131,
+   "z": -0.942,
+   "mp": "Manuela Perteghella",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5127,
+   "x": 0.027,
+   "y": -0.234,
+   "z": 0.139,
+   "mp": "John Slinger",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5129,
+   "x": -0.21,
+   "y": 0.021,
+   "z": -0.365,
+   "mp": "Martin McCluskey",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 5131,
+   "x": -0.127,
+   "y": -0.17,
+   "z": -0.507,
+   "mp": "Jack Abbott",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5132,
+   "x": 0.26,
+   "y": 0.03,
+   "z": -0.276,
+   "mp": "Liam Conlon",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5133,
+   "x": -0.003,
+   "y": -0.225,
+   "z": -0.02,
+   "mp": "Alice Macdonald",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5140,
+   "x": -0.409,
+   "y": 0.575,
+   "z": 0.603,
+   "mp": "Claire Young",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5142,
+   "x": 0.238,
+   "y": -0.218,
+   "z": -0.069,
+   "mp": "Abtisam Mohamed",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5143,
+   "x": 0.038,
+   "y": -0.036,
+   "z": -0.2,
+   "mp": "Catherine Atkinson",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5147,
+   "x": -0.194,
+   "y": -0.462,
+   "z": 0.254,
+   "mp": "Luke Myer",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5152,
+   "x": -0.147,
+   "y": 0.088,
+   "z": -0.008,
+   "mp": "Sureena Brackenridge",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5154,
+   "x": -0.114,
+   "y": -0.076,
+   "z": 0.009,
+   "mp": "Sarah Hall",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5155,
+   "x": -0.02,
+   "y": -0.298,
+   "z": -0.056,
+   "mp": "Chris Kane",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5157,
+   "x": -0.008,
+   "y": -0.086,
+   "z": 0.027,
+   "mp": "Susan Murray",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5163,
+   "x": -0.116,
+   "y": -0.288,
+   "z": 0.141,
+   "mp": "Dr Peter Prinsley",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5164,
+   "x": -0.201,
+   "y": -0.263,
+   "z": 0.162,
+   "mp": "Steff Aquarone",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5165,
+   "x": 0.483,
+   "y": -0.122,
+   "z": 0.082,
+   "mp": "Peter Swallow",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5180,
+   "x": -0.17,
+   "y": 0.271,
+   "z": -0.158,
+   "mp": "Nesil Caliskan",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5186,
+   "x": -0.417,
+   "y": 0.175,
+   "z": 0.086,
+   "mp": "Bradley Thomas",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5192,
+   "x": 0.151,
+   "y": -0.384,
+   "z": 0.202,
+   "mp": "Helena Dollimore",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5194,
+   "x": 0.12,
+   "y": -0.096,
+   "z": 0.069,
+   "mp": "Steve Yemm",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5195,
+   "x": 0.031,
+   "y": 0.068,
+   "z": -0.503,
+   "mp": "Andrew Cooper",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5201,
+   "x": -0.234,
+   "y": 0.356,
+   "z": 0.751,
+   "mp": "Victoria Collins",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5202,
+   "x": -0.279,
+   "y": 0.232,
+   "z": -0.434,
+   "mp": "Jessica Toale",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5208,
+   "x": -0.096,
+   "y": -0.236,
+   "z": -0.367,
+   "mp": "Perran Moon",
+   "party": "Ind",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5210,
+   "x": 0.239,
+   "y": 0.171,
+   "z": -0.294,
+   "mp": "Tom Hayes",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5215,
+   "x": 0.392,
+   "y": 0.102,
+   "z": 0.09,
+   "mp": "Naushabah Khan",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5216,
+   "x": -0.312,
+   "y": -1.182,
+   "z": 0.526,
+   "mp": "Caroline Voaden",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5218,
+   "x": 0.206,
+   "y": -0.11,
+   "z": 0.199,
+   "mp": "David Smith",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5221,
+   "x": 0.345,
+   "y": -0.131,
+   "z": 0.316,
+   "mp": "Steve Witherden",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5223,
+   "x": -0.094,
+   "y": -0.101,
+   "z": -0.065,
+   "mp": "Jim Dickson",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5225,
+   "x": -0.302,
+   "y": -0.461,
+   "z": -0.311,
+   "mp": "Lizzi Collinge",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5226,
+   "x": -0.138,
+   "y": -0.182,
+   "z": 0.258,
+   "mp": "Michelle Welsh",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5229,
+   "x": 0.25,
+   "y": -0.356,
+   "z": 0.026,
+   "mp": "Joe Powell",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5230,
+   "x": 0.182,
+   "y": -0.213,
+   "z": -0.029,
+   "mp": "Warinder Juss",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5233,
+   "x": 0.123,
+   "y": 0.339,
+   "z": -0.089,
+   "mp": "Lee Pitcher",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5237,
+   "x": 0.532,
+   "y": 0.517,
+   "z": -0.062,
+   "mp": "Chris Vince",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5242,
+   "x": 0.329,
+   "y": -0.079,
+   "z": 0.115,
+   "mp": "Michael Wheeler",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5243,
+   "x": -0.006,
+   "y": -0.037,
+   "z": -0.036,
+   "mp": "Andrew Pakes",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5244,
+   "x": -0.415,
+   "y": -0.38,
+   "z": 0.019,
+   "mp": "Chris Hinchliff",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5248,
+   "x": 0.022,
+   "y": -0.006,
+   "z": 0.063,
+   "mp": "Luke Murphy",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5249,
+   "x": -0.106,
+   "y": 0.161,
+   "z": 0.194,
+   "mp": "Dr Ellie Chowns",
+   "party": "Green",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5250,
+   "x": -0.128,
+   "y": 0.029,
+   "z": 0.188,
+   "mp": "Gideon Amos",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5252,
+   "x": -0.021,
+   "y": -0.399,
+   "z": 0.162,
+   "mp": "Rachel Gilmour",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5257,
+   "x": 0.523,
+   "y": 0.071,
+   "z": -0.1,
+   "mp": "Rachel Blake",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5267,
+   "x": 0.2,
+   "y": -0.115,
+   "z": 0.103,
+   "mp": "Yuan Yang",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5269,
+   "x": -0.181,
+   "y": -0.168,
+   "z": 0.086,
+   "mp": "Dr Lauren Sullivan",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5270,
+   "x": -0.041,
+   "y": -0.153,
+   "z": -0.25,
+   "mp": "Darren Paffey",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5271,
+   "x": 0.143,
+   "y": -0.08,
+   "z": -0.035,
+   "mp": "Satvir Kaur",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5279,
+   "x": 0.238,
+   "y": -0.292,
+   "z": 0.076,
+   "mp": "Jayne Kirkham",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5281,
+   "x": -0.118,
+   "y": -0.048,
+   "z": -0.004,
+   "mp": "Anna Dixon",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5282,
+   "x": 0.18,
+   "y": 0.077,
+   "z": -0.318,
+   "mp": "Dan Tomlinson",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5290,
+   "x": -0.213,
+   "y": 0.191,
+   "z": 0.071,
+   "mp": "Leigh Ingham",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5293,
+   "x": -0.16,
+   "y": -0.185,
+   "z": -0.024,
+   "mp": "Cat Eccles",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5294,
+   "x": 0.283,
+   "y": -0.21,
+   "z": 0.112,
+   "mp": "Amanda Martin",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5297,
+   "x": -0.238,
+   "y": 0.404,
+   "z": 0.401,
+   "mp": "Rebecca Paul",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5301,
+   "x": -0.094,
+   "y": -0.189,
+   "z": 0.132,
+   "mp": "Rebecca Smith",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5302,
+   "x": -0.02,
+   "y": -0.279,
+   "z": 0.171,
+   "mp": "Noah Law",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5308,
+   "x": 0.12,
+   "y": -0.201,
+   "z": -0.172,
+   "mp": "Sam Carling",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5309,
+   "x": -0.075,
+   "y": 0.053,
+   "z": 0.124,
+   "mp": "Katrina Murray",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5310,
+   "x": -0.033,
+   "y": -0.152,
+   "z": 0.03,
+   "mp": "Mr Lee Dillon",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5314,
+   "x": 0.099,
+   "y": -0.239,
+   "z": 0.079,
+   "mp": "Si\u00e2n Berry",
+   "party": "Green",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5316,
+   "x": 0.13,
+   "y": 0.047,
+   "z": 0.233,
+   "mp": "Mike Reader",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5318,
+   "x": -0.305,
+   "y": 0.429,
+   "z": 0.161,
+   "mp": "Olly Glover",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5322,
+   "x": 0.575,
+   "y": 0.273,
+   "z": -0.301,
+   "mp": "Mr Will Forster",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5324,
+   "x": -0.169,
+   "y": -0.068,
+   "z": -0.197,
+   "mp": "Sarah Russell",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5326,
+   "x": -0.28,
+   "y": -0.155,
+   "z": 0.101,
+   "mp": "Edward Morello",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5327,
+   "x": -0.698,
+   "y": 0.539,
+   "z": -0.486,
+   "mp": "Vikki Slade",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5329,
+   "x": -0.671,
+   "y": 0.525,
+   "z": 0.22,
+   "mp": "John Milne",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5334,
+   "x": -0.318,
+   "y": -0.089,
+   "z": -0.28,
+   "mp": "Dr Allison Gardner",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5335,
+   "x": -0.21,
+   "y": 0.209,
+   "z": 0.29,
+   "mp": "Jess Brown-Fuller",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5336,
+   "x": 0.001,
+   "y": -0.09,
+   "z": 0.233,
+   "mp": "Helen Maguire",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5337,
+   "x": -0.144,
+   "y": -0.495,
+   "z": 0.155,
+   "mp": "Olivia Bailey",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5339,
+   "x": -0.173,
+   "y": -0.207,
+   "z": -0.624,
+   "mp": "Danny Beales",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5342,
+   "x": -0.041,
+   "y": -0.318,
+   "z": 0.234,
+   "mp": "John Whitby",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5343,
+   "x": -0.028,
+   "y": -0.264,
+   "z": 0.159,
+   "mp": "Mr Joshua Reynolds",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5345,
+   "x": -0.165,
+   "y": 0.102,
+   "z": -0.07,
+   "mp": "Peter Lamb",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5346,
+   "x": -0.168,
+   "y": -0.208,
+   "z": 0.086,
+   "mp": "Calum Miller",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5351,
+   "x": -0.272,
+   "y": 0.152,
+   "z": 0.179,
+   "mp": "Gregory Stafford",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5352,
+   "x": -0.364,
+   "y": 0.003,
+   "z": 0.137,
+   "mp": "Dr Roz Savage",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5355,
+   "x": -0.097,
+   "y": -0.223,
+   "z": 0.048,
+   "mp": "Sarah Bool",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5357,
+   "x": 0.167,
+   "y": 0.044,
+   "z": 0.052,
+   "mp": "Ayoub Khan",
+   "party": "Ind",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5359,
+   "x": 0.378,
+   "y": -0.192,
+   "z": 0.312,
+   "mp": "Neil Duncan-Jordan",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5447,
+   "x": -0.105,
+   "y": -0.328,
+   "z": -0.316,
+   "mp": "Hannah Spencer",
+   "party": "Green",
+   "role": "backbench_or_opposition"
+  }
+ ]
+}

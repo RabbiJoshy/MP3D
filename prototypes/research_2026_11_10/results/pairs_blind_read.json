@@ -1,0 +1,302 @@
+[
+ {
+  "pair_id": 1,
+  "position_a": "Create a guaranteed core offer (qualified teachers, national curriculum framework) for every child via the Bill.",
+  "position_b": "Opposes ideological commitment to academies; wants every child in every school type to get an excellent education.",
+  "decision": "NONE",
+  "relation": "UNDETERMINED",
+  "confidence": "medium",
+  "quote_a": "Through this Bill and the other reforms we are looking to introduce",
+  "quote_b": "An ideological commitment to academies, based on a set of cherry-picked examples of individual schools, is unhelpful"
+ },
+ {
+  "pair_id": 2,
+  "position_a": "Embed essential skills (media, digital literacy, citizenship, oracy) in the curriculum, as the government has committed to.",
+  "position_b": "Integrate essential skills across the whole curriculum rather than leaving them to citizenship/PSHE.",
+  "decision": "Whether essential skills should be embedded in the school curriculum",
+  "relation": "EQUIVALENT",
+  "confidence": "medium",
+  "quote_a": "we have committed to embedding them",
+  "quote_b": "essential skills being integrated into the curriculum, rather than being just the preserve of citizenship"
+ },
+ {
+  "pair_id": 3,
+  "position_a": "Dyslexia diagnosis and support should come early and not depend on postcode.",
+  "position_b": "NONE",
+  "decision": "NONE",
+  "relation": "UNDETERMINED",
+  "confidence": "high",
+  "quote_a": "receiving a diagnosis and the associated help should not be down to a postcode lottery",
+  "quote_b": "Reading Ambition for All training programme for primary school teachers"
+ },
+ {
+  "pair_id": 4,
+  "position_a": "Keep the national curriculum applying to all children and schools as a common foundation (government clause).",
+  "position_b": "Academies should retain ability to deviate from the national curriculum as a safety valve against politicisation.",
+  "decision": "Whether academies should be required to follow the national curriculum",
+  "relation": "INCOMPATIBLE",
+  "confidence": "high",
+  "quote_a": "It provides a strong foundation, regardless of background or the school attended",
+  "quote_b": "to deviate somewhat from the national curriculum is a safety valve against politicisation"
+ },
+ {
+  "pair_id": 5,
+  "position_a": "Do not perpetuate inequality via private schooling as the answer to SEND; supports government approach.",
+  "position_b": "Fix SEND with both funding and system reform and accountability.",
+  "decision": "NONE",
+  "relation": "UNDETERMINED",
+  "confidence": "medium",
+  "quote_a": "perpetuating a system of inequality is not the solution for our broken SEND system",
+  "quote_b": "The answer lies in both funding and reform of the system"
+ },
+ {
+  "pair_id": 6,
+  "position_a": "Financial education should become a key, statutory part of the primary curriculum, with teacher support.",
+  "position_b": "Financial education best delivered not only in schools but in family and communities; timetable is overloaded.",
+  "decision": "How financial education should be delivered",
+  "relation": "UNDETERMINED",
+  "confidence": "medium",
+  "quote_a": "financial education needs to start early and must become a key part of the primary curriculum",
+  "quote_b": "best delivered not only in schools, but in the family setting, in communities"
+ },
+ {
+  "pair_id": 7,
+  "position_a": "Keep IB large programme uplift funding for state schools.",
+  "position_b": "Reverse the scrapping of IB large programme uplift funding.",
+  "decision": "Funding for the IB in state schools",
+  "relation": "EQUIVALENT",
+  "confidence": "high",
+  "quote_a": "The removal of the large programme uplift funding for the international baccalaureate programme",
+  "quote_b": "funding for the international baccalaureate has been scrapped"
+ },
+ {
+  "pair_id": 8,
+  "position_a": "Do not legislate to make play and continuous provision statutory in KS1; leave to teacher judgment.",
+  "position_b": "Government should give play in KS1 forefront consideration in guidance and the White Paper.",
+  "decision": "Play in the KS1 curriculum",
+  "relation": "UNDETERMINED",
+  "confidence": "low",
+  "quote_a": "it would not be right for us to legislate to make play and continuous provision statutory",
+  "quote_b": "the work of the petitioners on the topic of play in the key stage 1 curriculum will be at the forefront of their thinking"
+ },
+ {
+  "pair_id": 9,
+  "position_a": "Commit to universal screening for neurodivergence and more teacher training on it.",
+  "position_b": "NONE",
+  "decision": "NONE",
+  "relation": "UNDETERMINED",
+  "confidence": "high",
+  "quote_a": "will the Secretary of State commit to universal screening for neurodivergence",
+  "quote_b": "I welcome the proposed reduction by 10%"
+ },
+ {
+  "pair_id": 10,
+  "position_a": "Create a statutory universal open-access youth work system.",
+  "position_b": "Oppose VAT on private schools.",
+  "decision": "NONE",
+  "relation": "UNDETERMINED",
+  "confidence": "high",
+  "quote_a": "A fully equipped, statutory, universal and open-access youth work system will be vital",
+  "quote_b": "Those students will face VAT under the Government’s current plans"
+ },
+ {
+  "pair_id": 11,
+  "position_a": "Supports the Bill and apprenticeships as alternatives to academic routes.",
+  "position_b": "Apprenticeships should be valued as much as degrees; build more apprenticeship jobs.",
+  "decision": "Apprenticeship policy generally",
+  "relation": "UNDETERMINED",
+  "confidence": "medium",
+  "quote_a": "I welcome the Bill’s commitment to broadening educational opportunities and skills training",
+  "quote_b": "an apprenticeship holds every bit as much value as a degree"
+ },
+ {
+  "pair_id": 12,
+  "position_a": "Vote for the Bill, support breakfast clubs and uniform help.",
+  "position_b": "Amend breakfast club legislation to cover children with complex needs in special schools.",
+  "decision": "NONE",
+  "relation": "UNDETERMINED",
+  "confidence": "high",
+  "quote_a": "This Bill does a lot, and I will vote for it with enthusiasm",
+  "quote_b": "My amendments will do just that"
+ },
+ {
+  "pair_id": 13,
+  "position_a": "Oppose VAT on independent school fees.",
+  "position_b": "Oppose 20% VAT on independent school fees.",
+  "decision": "Whether to impose VAT on private school fees",
+  "relation": "EQUIVALENT",
+  "confidence": "high",
+  "quote_a": "There is a good reason why all previous Governments of all colours have avoided taxing education",
+  "quote_b": "Increasing VAT on independent school fees to 20% is not just a fiscal policy; it is a direct assault"
+ },
+ {
+  "pair_id": 14,
+  "position_a": "Support ending the VAT discount for private schools, with concern for small independent/faith schools.",
+  "position_b": "Support ending private school subsidies/VAT relief.",
+  "decision": "Whether to remove VAT relief on private schools",
+  "relation": "EQUIVALENT",
+  "confidence": "high",
+  "quote_a": "I fully understand and endorse the spirit of the decision to close the tax loophole on private schools",
+  "quote_b": "they just prop up inequality and drain resources from the schools that serve the vast majority of children"
+ },
+ {
+  "pair_id": 15,
+  "position_a": "NONE",
+  "position_b": "NONE",
+  "decision": "NONE",
+  "relation": "UNDETERMINED",
+  "confidence": "high",
+  "quote_a": "His argument, as somebody sympathetic to the creation of a body like Skills England",
+  "quote_b": "Government have agreed that public sector employers will receive support"
+ },
+ {
+  "pair_id": 16,
+  "position_a": "Supports breakfast club clause for all primary schools.",
+  "position_b": "Narrow the home education register amendment to exclude special schools (Amendment 33).",
+  "decision": "NONE",
+  "relation": "UNDETERMINED",
+  "confidence": "high",
+  "quote_a": "this clause will open up the benefits of breakfast clubs to all our children in primary schools",
+  "quote_b": "Amendment 33 would provide the narrowing to not include all those in special schools"
+ },
+ {
+  "pair_id": 17,
+  "position_a": "Use generative AI in schools to help teachers and SEN pupils, with safe-use framework.",
+  "position_b": "Use AI in schools for diversity of provision and admin, with clear code of practice.",
+  "decision": "Adoption of generative AI in schools with safeguards",
+  "relation": "EQUIVALENT",
+  "confidence": "low",
+  "quote_a": "holding companies to account",
+  "quote_b": "we need a clear code of practice"
+ },
+ {
+  "pair_id": 18,
+  "position_a": "Drop VAT on schools; failing that, extend exemptions (EHCP, SEN, low fee, faith schools).",
+  "position_b": "Supports ending VAT relief on private schools to fund teachers and breakfast clubs.",
+  "decision": "Whether to impose VAT on private school fees",
+  "relation": "INCOMPATIBLE",
+  "confidence": "high",
+  "quote_a": "the Opposition would prefer the Government to drop this measure altogether",
+  "quote_b": "The money generated by ending the VAT relief on private schools will be vital to recruit the 6,500 more teachers"
+ },
+ {
+  "pair_id": 19,
+  "position_a": "Keep the minimum 32.5 hour school week; do not shorten the school week.",
+  "position_b": "Do not shorten the school week.",
+  "decision": "Whether to shorten the school week",
+  "relation": "EQUIVALENT",
+  "confidence": "high",
+  "quote_a": "Shortening the school week would upset that balance",
+  "quote_b": "reducing the length of the school week would mean fewer opportunities to learn and improve"
+ },
+ {
+  "pair_id": 20,
+  "position_a": "Weave financial education through existing subjects rather than adding stand-alone subjects.",
+  "position_b": "Financial education must be a core part of the school curriculum.",
+  "decision": "Place of financial education in the curriculum",
+  "relation": "EQUIVALENT",
+  "confidence": "low",
+  "quote_a": "how financial education can be woven through existing relevant subjects such as maths",
+  "quote_b": "financial education must be a core part of the curriculum in our schools"
+ },
+ {
+  "pair_id": 21,
+  "position_a": "NONE",
+  "position_b": "Oppose a four-day school week; keep the 32.5 hour week.",
+  "decision": "Four-day school week",
+  "relation": "UNDETERMINED",
+  "confidence": "high",
+  "quote_a": "would we be able to right-size and right-shape the curriculum",
+  "quote_b": "The loss of a whole day would force many working parents to find alternative childcare"
+ },
+ {
+  "pair_id": 22,
+  "position_a": "Supports the Bill to improve standards and protections.",
+  "position_b": "Academies should be at the heart of the school system, with core standards.",
+  "decision": "NONE",
+  "relation": "UNDETERMINED",
+  "confidence": "medium",
+  "quote_a": "This Bill is the start of our journey to protect and uplift education",
+  "quote_b": "Academies were, are and will continue to be at the heart of that endeavour"
+ },
+ {
+  "pair_id": 23,
+  "position_a": "Age-appropriate relationships and sex education in school to drive culture change.",
+  "position_b": "Start sex and relationship education earlier, and support teachers to deliver it.",
+  "decision": "Relationship and sex education in schools",
+  "relation": "EQUIVALENT",
+  "confidence": "medium",
+  "quote_a": "Age-appropriate relationships and sex education at school has a crucial role to play",
+  "quote_b": "Sex and relationship education should start earlier than in secondary school"
+ },
+ {
+  "pair_id": 24,
+  "position_a": "Embed play as fundamental principle in the curriculum.",
+  "position_b": "Play-based education must be part of early years education and continue beyond age five.",
+  "decision": "Play-based learning in the early curriculum",
+  "relation": "EQUIVALENT",
+  "confidence": "high",
+  "quote_a": "It is really important that we embed play as a fundamental principle in the curriculum",
+  "quote_b": "Play-based education must be a part of that, and should not stop at five years old"
+ },
+ {
+  "pair_id": 25,
+  "position_a": "NONE",
+  "position_b": "Oppose the vocational pathway for 14-year-olds.",
+  "decision": "NONE",
+  "relation": "UNDETERMINED",
+  "confidence": "high",
+  "quote_a": "we should robustly act to address England’s weaknesses, particularly in reading and maths",
+  "quote_b": "14 is far too young to start closing down academic options"
+ },
+ {
+  "pair_id": 26,
+  "position_a": "Welcome the Bill abolishing IfATE and transferring functions to Skills England.",
+  "position_b": "Welcome the Bill abolishing IfATE and transferring functions to Skills England.",
+  "decision": "Abolishing IfATE and transferring to Skills England",
+  "relation": "EQUIVALENT",
+  "confidence": "high",
+  "quote_a": "The basic provisions of the Bill will abolish the Institute for Apprenticeships and Technical Education",
+  "quote_b": "It abolishes the outdated Institute for Apprenticeships and Technical Education and transfers its functions to Skills England"
+ },
+ {
+  "pair_id": 27,
+  "position_a": "Keep the exam-based assessment system as is; exams work well.",
+  "position_b": "Reduce intensity and number of exams, more coursework/continuous assessment.",
+  "decision": "Role and volume of exams in assessment",
+  "relation": "INCOMPATIBLE",
+  "confidence": "medium",
+  "quote_a": "exams offer students of all backgrounds the very best chance to succeed",
+  "quote_b": "reduce the intensity and number of exams and have more coursework or continuous assessments"
+ },
+ {
+  "pair_id": 28,
+  "position_a": "Adjust term dates to create an off-peak holiday week while heads stay strict on term-time absence.",
+  "position_b": "Give working families fairer flexibility on term-time holidays.",
+  "decision": "Term-time holiday policy",
+  "relation": "UNDETERMINED",
+  "confidence": "low",
+  "quote_a": "providing a clear, comprehensive week of holiday outside peak times",
+  "quote_b": "parents are faced with an impossible choice: break the rules or break the bank"
+ },
+ {
+  "pair_id": 29,
+  "position_a": "All young people should have the chance to study triple science.",
+  "position_b": "Make sure disadvantaged children keep exposure to languages; against scrapping the EBacc.",
+  "decision": "NONE",
+  "relation": "UNDETERMINED",
+  "confidence": "high",
+  "quote_a": "It is important that all young people have the chance to study triple science",
+  "quote_b": "scrapping the EBacc looks like a very funny way of doing it"
+ },
+ {
+  "pair_id": 30,
+  "position_a": "Oppose VAT on private school education.",
+  "position_b": "Oppose the VAT on independent (faith) schools.",
+  "decision": "Whether to tax private school education",
+  "relation": "EQUIVALENT",
+  "confidence": "high",
+  "quote_a": "the heart of this policy of bringing in taxation on education is stoking division",
+  "quote_b": "This education tax will make independent faith schooling unaffordable for many families"
+ }
+]

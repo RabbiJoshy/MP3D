@@ -1,0 +1,2347 @@
+{
+  "method": "Exploratory hierarchy of existing 90-cluster centres; 12 display groups is a presentation choice. Not a fresh validated discovery. Ranking = observed coverage \u00d7 binary side entropy \u00d7 (1 \u2212 largest squared correlation with previously selected questions); minimum overlap 30. Not predictive information gain or public importance.",
+  "groups": [
+    {
+      "label": "mental / mental health / health",
+      "speakers": 644,
+      "words": 12592204,
+      "topics": [
+        {
+          "examples": [
+            {
+              "text": "I join other in congratulating on securing the debate and on her lifetime of support for this cause. She makes such a valid point about changing the narrative and the stigma around suicide. This Government have made an incredible announcement of \u00a3343 million for walk-in mental health services. We are asking people to talk about how they are feeling and about how bad their mental health is, but they need those walk-in centres so that they can get treatment at the point that they feel suicidal. Will join me in calling on my local integrated care board to ensure that, which has the highest rate of poor mental health in Worcestershire, gets the mental health walk-in centre that it so deserves?",
+              "date": "2026-09-08",
+              "debate": "World Suicide Prevention Day",
+              "member": "5109"
+            },
+            {
+              "text": "My speaks very effectively about hoarding disorder. As she has explained, it is a mental health condition in its own right, although it is often confused with obsessive-compulsive disorder. One of my constituents spoke to me about her husband, who has completely filled the living room with items that he just cannot discard. Does agree that whether it is related to OCD or to another condition, hoarding not only disrupts the lives of the individual who goes through the anxiety and trauma of the condition, but affects others around that individual? During Prime Minister\u2019s questions this morning, we heard that one in four of us will suffer from a mental health condition. Does agree that we need to increase mental health support to make it easily accessible and enable it to provide effective treatment, and that such earlier intervention can avoid the deterioration of the condition?",
+              "date": "2025-10-22",
+              "debate": "",
+              "member": "5230"
+            }
+          ],
+          "id": 23,
+          "terms": [
+            "mental",
+            "mental health",
+            "health",
+            "health services",
+            "health act",
+            "suicide"
+          ],
+          "speakers": 506,
+          "words": 599432,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "I accept that the Government are clearly not the architect of the current unacceptable state of affairs. However, may I encourage the Secretary of State to reflect again on our exchange at the Health and Social Care Committee just a month ago, when he resisted the recommendation of the president of the Royal College of Emergency Medicine that we invest in more beds to accommodate additional admissions to hospital? That would ease a return to normality, reduce the need for corridor care, and ease the pressures in emergency departments.",
+              "date": "2025-01-15",
+              "debate": "",
+              "member": "227"
+            },
+            {
+              "text": "That is despite the fact that 24/7 telephone advice lines have been recommended as a minimum service requirement by the National Institute for Health and Care Excellence and the Department for more than two decades. The role of pharmacies is also critical, but they too need support to deliver. The Minister has committed to 100% coverage of telephone lines by 2027, but we push him further: the MSF must mandate ICBs to deliver not just telephone lines, but access to all services, including symptomatic medication and in-person care. Unfortunately, death does not wait until 8 am on a Monday morning. A further concern was the effects of the shift to the community. We worry that funding restraints and workforce and skill shortages will make that transition difficult. In the same breath as saying that they want this shift, the Government\u2019s forthcoming NHS reorganisation Bill is proposing to remove local authority representation from ICBs. Local authorities are responsible for social care, and social care workers are the backbone of end-of-life care, with 22% of deaths occurring in care homes.",
+              "date": "2026-03-26",
+              "debate": "",
+              "member": "4656"
+            }
+          ],
+          "id": 58,
+          "terms": [
+            "care",
+            "social care",
+            "social",
+            "health social",
+            "health",
+            "department health"
+          ],
+          "speakers": 513,
+          "words": 596192,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "Having seen the 40% fall in youth apprenticeships over the past decade and the long-term trend of increasing numbers of young people not in education, employment or training, I welcome the fact that this Labour Government are enabling more apprenticeships and opportunities for young people. Derby is a city of makers with a highly skilled workforce, but we need to train up the next generation, so can the Secretary of State tell us more about how this Government will work in partnership with businesses, including SMEs, to provide opportunities to young people, so that we can benefit from their talents?",
+              "date": "2026-03-17",
+              "debate": "",
+              "member": "5143"
+            },
+            {
+              "text": "My is a former schoolteacher, and I know how much he cares about this matter. I am delighted that we have announced the locations of 180 new youth hubs, which include; it means that more young people across the country will benefit from skills and training opportunities. This week, we have shown that this Labour Government are working to transform the lives of our young people. I thank for all his campaigning on behalf of his constituency\u2014and I know that a lot of the young people support Spurs.",
+              "date": "2026-06-17",
+              "debate": "Engagements",
+              "member": "206"
+            }
+          ],
+          "id": 27,
+          "terms": [
+            "young",
+            "youth",
+            "skills",
+            "education",
+            "apprenticeships",
+            "training"
+          ],
+          "speakers": 557,
+          "words": 593252,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "However, despite seven distinct professional groups making up the dental team, dentists remain overstretched because patients are funnelled to them for almost everything\u2014even cases that trained dental nurses, dental hygienists or dental therapists could safely handle. NHS data confirms that dental therapists and hygienists deliver just 5% of total service activity. That baseline has stagnated for years, trapping dentists under a mountain of work when the entire workforce, if utilised, could make systematic improvements to dental care. Just imagine the appointments that could be released if we just used the current workforce in a different way. The current situation is inefficient and expensive and is driving dentists out of the NHS, while 13 million people across the country are left with a completely unmet need for NHS dentistry. My constituency of already has the second lowest rate for units of dental activity in Leicester, Leicestershire and. There were 14 contract terminations between February 2021 and July 2024, and one practice was terminated in Ashby in my constituency. We do not have a lack of talent; we have a failure of deployment. Dental therapists can do over 70% of routine primary care.",
+              "date": "2026-06-15",
+              "debate": "",
+              "member": "5149"
+            },
+            {
+              "text": "One resident told me that their NHS dental appointment was cancelled at very short notice, with no alternative offered, because their highly skilled dentist from Poland left after Brexit and now there is no NHS dentist available at his local practice. Another constituent told me how his dental practice is struggling to keep appointments, and now has only one NHS dentist available, and that is on Saturdays only. Patients are being asked to sign forms agreeing to private treatment at NHS prices, without the protections that they would usually receive under NHS care. The previous Government pushed NHS dentistry to the brink of collapse. I hope the new Government will reverse that trend by increasing investment in dentistry, using unspent funds to increase the number of NHS dental appointments and removing VAT on children\u2019s toothbrushes and toothpaste to make oral health more affordable. As a local NHS dentist told me, the dental contract is not fit for purpose. His colleagues are leaving the NHS in droves. My constituents in would benefit from an emergency rescue plan for NHS dentistry.",
+              "date": "2024-10-16",
+              "debate": "",
+              "member": "5040"
+            }
+          ],
+          "id": 49,
+          "terms": [
+            "nhs",
+            "patients",
+            "nhs england",
+            "dental",
+            "care",
+            "waiting"
+          ],
+          "speakers": 496,
+          "words": 589857,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "It is a reasonable test that asks, \u201cWould an ordinary, reasonable person\u201d\u2014like you or me, Sir Desmond\u2014\u201cbeing in possession of the same facts as the investigator, agree that it was reasonable to suspect that fraud had occurred?\u201d This is a common standard to initiate an investigation. Finally, beyond the definitions, the clause clarifies references to \u201cgiving a notice or other document\u201d and sets out how court proceedings are considered to be finally determined. The clause is essential to ensure the correct understanding and interpretation of key terms used throughout part 1 of the Bill. Clause 71 states that all regulations under this part should be made using statutory instruments. This ensures a structured approach to the regulatory framework. The clause allows for the creation of different types of provisions, such as consequential, supplementary, incidental, transitional or saving measures. This flexibility helps to adapt regulations to various circumstances. The affirmative procedure requires that the regulations be approved by both Houses of Parliament, which ensures that there is oversight and accountability. The negative procedure allows regulations to be implemented promptly, but they can still be annulled by either House of Parliament if necessary.",
+              "date": "2025-03-06",
+              "debate": "",
+              "member": "5305"
+            },
+            {
+              "text": "Clause 9 is necessary to give full effect to the intent of the Bill. As Members will know, one of the central needs for the powers in the Bill is to keep our huge range of product regulations updated. That can extend from small changes to regulations to reflect new ingredients or components in a product, to more substantial changes to respond to new threats. The clause ensures that the powers in the Bill can be used to amend existing product regulations, if those regulations could have been made under the powers in clauses 1 and 5. Such regulations will be subject to the usual statutory instrument procedures, either affirmative or negative depending on which provisions of the Bill are invoked. Some of the regulations extend to many pages, covering a whole host of a factors that go into a product and the risk that it presents. Without the clause, key parts of the powers\u2014such as those to do with enforcement, standards, information sharing and cost recovery\u2014could be used only on a revoke and replace basis.",
+              "date": "2025-05-13",
+              "debate": "",
+              "member": "4418"
+            }
+          ],
+          "id": 31,
+          "terms": [
+            "regulations",
+            "products",
+            "tobacco",
+            "powers",
+            "vaping",
+            "nicotine"
+          ],
+          "speakers": 368,
+          "words": 526201,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "This year\u2019s commemorations of VE Day may well be the last where veterans who served their country during the second world war can be in attendance, and my generation will be among the last to have the experience of speaking directly to family members who fought for their country or contributed to the effort at home. It is up to all of us, here today and across the country, to keep their stories alive. Just as people took to the streets in 1945, it is with great pride that I can announce the measures this Government will take to mark the anniversary in 2025. All of us have memories of how national moments of celebration can bring us together, from the Olympic opening ceremony in London 2012 to the Queen\u2019s jubilee celebrations. These events unite us in our history, our story, and our common values. This year\u2019s anniversary will be no exception. Clement Attlee said in 1943 The events this year will be a timely opportunity to remember those communal values: pulling together, a fighting spirit in the face of adversity, and compassion for our neighbours.",
+              "date": "2025-03-13",
+              "debate": "",
+              "member": "4607"
+            },
+            {
+              "text": "That speaks to our nation\u2019s long-standing and complex history, which we all need to understand and learn about. This week we celebrated the 220th Trafalgar Day. Despite the horrendous and shameful role that Britain played in the Atlantic slave trade in the 18th century, the 19th century saw a turnabout, with the Royal Navy being used to hunt down slave ships. It is estimated that up to 150,000 Africans were liberated from slavery in America as a result of those direct actions, which we should rightly be proud of and all grow to understand. I am proud too that when the world faced an enemy of the utmost racism during the second world war, 16,000 Caribbean men and half a million Africans served Britain to fight back against the tyranny that faced them. Those stories are often airbrushed from our national memory and not fully understood, so challenging those omissions is part of Black History Month and something that we must all do. We must also confront the present. The racism and abuse in the Euro final in 2021 was a stark reminder of the work that is still needed, as the Minister said.",
+              "date": "2025-10-23",
+              "debate": "",
+              "member": "4513"
+            }
+          ],
+          "id": 21,
+          "terms": [
+            "world",
+            "war",
+            "world war",
+            "history",
+            "second world",
+            "day"
+          ],
+          "speakers": 580,
+          "words": 513708,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "I commend her for bringing as many local voices into the debate as possible, because if we are to deliver the system that children, young people and parents deserve, we must ensure that we listen to a wide range of voices. I was pleased to be reappointed as shadow Minister, not least because I can continue to stand up for SEND families, but I was also pleased that the Minister was reappointed to her position\u2014I genuinely mean that. I will work with her on any reforms around pica, given the nature of the condition, and around SEND reforms more broadly. As has been said, pica is a condition where people, usually children, routinely ingest non-edible items. It is often associated with autism spectrum disorder, and reportedly affects between 9% and 25% of children with developmental difficulties, including autism. Although children with pica may eat non-food items that are relatively harmless, others ingest much more potentially harmful substances, including soil, sand, hair, toothpaste and faeces. Non-food items can, on occasion, pass through the child harmlessly, but there are significant health risks\u2014risks that no parent is ever willing to take.",
+              "date": "2026-09-09",
+              "debate": "Pica Eating Disorder: SEND",
+              "member": "4818"
+            },
+            {
+              "text": "I have spoken to too many parents who have had to fight so hard just to get the support that their children need. The support should be available when children need it, which is why we are so determined to invest in early intervention and to back parents to get the support they need.",
+              "date": "2025-10-20",
+              "debate": "Children with SEND: Mainstream Schools",
+              "member": "5305"
+            }
+          ],
+          "id": 50,
+          "terms": [
+            "children",
+            "parents",
+            "child",
+            "families",
+            "children young",
+            "kinship"
+          ],
+          "speakers": 523,
+          "words": 507023,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "My is certainly right that over the years, there have been many brilliant, far-sighted people in the Labour party who have overlooked their political tradition and said, \u201cWe must just do what is best for the children.\u201d I do not think there has ever been a universally accepted consensus on academies; until very recently, there have been groups actively organising against schools becoming academies, with leading members of the Labour party involved in those movements. There has always been a strand, which turns out to be wider than we realised, of the Labour party that believes that unless there is control from the top, through councils, and unless schools are told what to do, the system is inconsistent. Some consistency in education is very important, but that is not the same as uniformity, and certainly not the same as top-down control. It turns out that Government Ministers do not want transparency and choice. They do not want diversity. In particular, they seem to want to curtail the improvement in school performance that has been made possible through academy trusts. The Government have already stopped new free schools.",
+              "date": "2025-03-18",
+              "debate": "New Clause 17 - Establishment of new schools: data protection",
+              "member": "3969"
+            },
+            {
+              "text": "Last week, I visited Lowther primary school in Barnes. As I was being shown round the school by Leo, Talia, Elia, Milla, Nick and Abdullah, they were keen to tell me about the swimming lessons they enjoyed at St Paul\u2019s school, a nearby boys\u2019 independent school. The schools link up for a range of activities, and I was very impressed to see the trophy that the children won in the recent Lego competition hosted by St Paul\u2019s. A majority of independent schools have already developed similar partnerships with local schools and the Liberal Democrats want to see that become the norm with every single school. In conclusion, the Liberal Democrats are opposed to the Government\u2019s plans to impose VAT on private school fees because we believe that it is wrong to tax education, however it is provided. Imposing this increase in fees will cause a precipitate increase in costs for families, resulting in many being forced to undertake a forced, disruptive change in schools.",
+              "date": "2024-10-08",
+              "debate": "Independent Schools: VAT and Business Rates Exemptions",
+              "member": "4591"
+            }
+          ],
+          "id": 5,
+          "terms": [
+            "school",
+            "schools",
+            "teachers",
+            "pupils",
+            "primary",
+            "education"
+          ],
+          "speakers": 483,
+          "words": 454642,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "It provides the framework to ensure a robust, high-quality offer for passengers to instil confidence in our railways and attract more people to use them, with a powerful passenger watchdog established by the Bill to advocate for passengers at every turn. GBR will take responsibility for the day-to-day operational running of the railways, from delivering services to setting timetables, managing access to the network and operating, maintaining and renewing infrastructure. This simplified railway will encourage more rail freight, with two statutory duties included in the Bill to ensure support for this, helping to reduce congestion on our roads and making rail a greener, more attractive choice. GBR will also support local growth, create jobs and improve connectivity. The mentioned the issue of connectivity for his constituents and the fact that there is currently no direct route from Camberley to London Waterloo via the south west main line. I understand that most passengers must therefore change at Ash Vale or Ascot. We absolutely recognise the strength of local campaigning to restore that connection.",
+              "date": "2026-10-16",
+              "debate": "",
+              "member": "4418"
+            },
+            {
+              "text": "One of the failings of HS2 has been to focus on the speed of the line and the four stations, when actually one of its major benefits is to free up capacity on the existing west coast main line between London and Birmingham to enable better regional services and to enable more freight to transfer from lorries on the road to the rail network. For too long the project has been about speed and not about seats and reliability. Through this reset, we are changing that. As I said earlier, we are determined to ensure that this will be the spine of the Great British Rail network that we will deliver as we renationalise the railways.",
+              "date": "2026-05-19",
+              "debate": "",
+              "member": "4038"
+            }
+          ],
+          "id": 67,
+          "terms": [
+            "rail",
+            "railway",
+            "passengers",
+            "railways",
+            "gbr",
+            "trains"
+          ],
+          "speakers": 390,
+          "words": 453183,
+          "scored": true
+        },
+        {
+          "examples": [
+            {
+              "text": "The evidence overwhelmingly shows that ensuring a child receives speech and language support, for example, would reduce behavioural issues in children with SEND, making a mainstream setting more successful for many children who might otherwise be excluded from school. SEND children are five times more likely to be excluded and have some of the widest attainment gaps of any demographic, impacting on earning potential and overall life chances. With more than 50% of students with an EHCP being in mainstream schools, the current system is letting down children who have special educational needs and disabilities. Schools are trying their best, but the truth is that teachers feel ill-equipped to provide support for children with SEND. One teacher in and told me about the four-hour training seminar on SEND that they attended, but that was their only training, followed by a \u201cget on with it\u201d attitude from the education sector. The lack of training means that well-meaning teachers inevitably create an exclusive education environment, resulting in nine out of 10 children with SEND being left behind. This is a two-tier education system, working against our children who have the greatest need.",
+              "date": "2025-07-08",
+              "debate": "",
+              "member": "5180"
+            },
+            {
+              "text": "It is clear that the special educational needs and disabilities system is overstretched, underfunded and increasingly out of step with the reality faced by children, parents and schools. I will share with colleagues two local examples from that illustrate the strife that the current system has caused parents. One mother, Jo, wrote to me after I visited her children\u2019s school in Lostock. Her children are both bright, engaged, full of potential and autistic, but they are all too often excluded from the very activities designed to inspire them. When the school organised a high-profile enrichment trip to London, her eldest was not chosen. It is not the fault of the school, which is operating under challenging financial constraints; rather, it is a symptom of a system that fails to see autistic children as leaders or participants in national life. After all, as Jo reminded me, representation is not just about being present, but about being expected. Another mother, Victoria, wrote to me distraught about the possibility that education, health and care plans may soon be restricted to children in specialist settings. Her 10-year-old son, who has complex needs, is in mainstream education.",
+              "date": "2025-06-12",
+              "debate": "",
+              "member": "5128"
+            }
+          ],
+          "id": 78,
+          "terms": [
+            "children",
+            "schools",
+            "education",
+            "send",
+            "educational",
+            "special educational"
+          ],
+          "speakers": 425,
+          "words": 414049,
+          "scored": true
+        },
+        {
+          "examples": [
+            {
+              "text": "In this age, Jo\u2019s statement that we have more in common than that which divides us is a more important reminder than ever. It is not a huge leap to say that loneliness is partly to blame for the division and anger we see today\u2014isolation triggers people. As the Jo Cox Foundation reminds us, loneliness is linked to lower trust, reduced civic participation and increased feelings of exclusion, and that weakens community cohesion and increases vulnerability and polarisation. How can we as communities look out for one another? How can we promote community cohesion? How can we tackle loneliness? Just on Saturday, I went to an inspirational event: in Whitwick\u2019s annual cheque-giving event. Social inclusion is the organisation\u2019s main focus, and it is run exclusively by volunteers focused on giving back to their community. Alongside hosting its main annual fundraiser \u2014a community music festival\u2014it holds events, including \u201cbingo buddies\u201d on the last Friday of every month, a free bingo session for older people, with a raffle, teas and cakes. For so many, sadly, it is the only time they get out of the house. It is such an important space in which to socialise.",
+              "date": "2026-06-11",
+              "debate": "",
+              "member": "5149"
+            },
+            {
+              "text": "I see volunteers who show up week after week for people they have never met before, and I see faith leaders willing to work together rather than retreat into silos. Community cohesion is not about pretending that we do not disagree; it is about how we disagree. It is about holding space for different views without dehumanising one another. It is about ensuring that our identity as a shared community is stronger than any single dividing line. My message today is simple. Community cohesion does not maintain itself; it must be nurtured, as has been said, and it must be defended and resourced. It must also be modelled by us. In, we are choosing to build, not to blame; to listen, not to shout; and to stand up for fairness and not allow prejudice to go unchallenged. I know what the alternative looks like\u2014I lived it. Division does not explode overnight; it is cultivated. I am determined that the communities that I represent will always be stronger together than they are apart.",
+              "date": "2026-03-03",
+              "debate": "Community Cohesion",
+              "member": "5290"
+            }
+          ],
+          "id": 10,
+          "terms": [
+            "community",
+            "jewish",
+            "jewish community",
+            "communities",
+            "community groups",
+            "groups"
+          ],
+          "speakers": 541,
+          "words": 410882,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "In Warwickshire, too, four of five district and borough councils proposed a South Warwickshire\u2014they wanted two unitary councils, rather than one huge, single unitary. That put them in collision with the county council proposal that was just voted through. Does agree that we need flexibility and the proposals should not be directed by the Secretary of State?",
+              "date": "2025-10-23",
+              "debate": "",
+              "member": "5122"
+            },
+            {
+              "text": "To be fair, I think there are pros and cons. Sometimes, my constituents can get confused about which councils are responsible for what. The district council collects their waste and recycling, but the county council processes it, and that can seem quite muddled to a lot of folk. But it is not just my constituents who get confused and frustrated; I confess that I, too, have been known to exclaim in the office that some trees are pruned by the district council and others by the county council. When I have an angry constituent frustrated by a tree on the end of the phone and am not clear which council is responsible, it is no wonder our constituents get frustrated too. The upper-tier local authority, Lancashire county council, often generously, shall we say, offers to relinquish its responsibilities to parish councils. I have seen that trend more and more.",
+              "date": "2024-11-27",
+              "debate": "Devolution: Lancashire",
+              "member": "4436"
+            }
+          ],
+          "id": 77,
+          "terms": [
+            "council",
+            "county council",
+            "county",
+            "councils",
+            "council tax",
+            "borough"
+          ],
+          "speakers": 489,
+          "words": 397788,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "It is important that for those key sites where a local authority wants to see a masterplan in place, they are incorporated into plans. They can also be produced as part of the development management process to support the delivery of larger site allocations. In the new national planning policy framework that we published on 17 August, we included new policy\u2014policy L1, for those who are interested\u2014which encourages the use of masterplans, where appropriate, to optimise the use of site allocations. We included this in response to consultation feedback. My made a number of specific points in the context of her concerns about the BL1 site about large-scale residential development and the importance of master planning to ensure the best outcomes for communities, and I very much agree with her about the benefits. Delivering at scale does provide opportunities for comprehensive development where homes, infrastructure, green space and community facilities can be planned together from the outset. National planning policy has long required local plans to take this joined-up approach, including by setting out the infrastructure needed to support growth and clear expectations for the quality of places to be created.",
+              "date": "2026-09-03",
+              "debate": "",
+              "member": "4520"
+            },
+            {
+              "text": "I will respond briefly to new clauses 16 and 29, but I am more than happy to expand on what I say in writing to and to the hon. New clause 16 relates to the refusal of planning permission for large-scale housing developments where they are close to large electricity pylons in the countryside. The new clause seeks to require local planning authorities to refuse applications for planning permission, or permission in principle, for large-scale residential development in the countryside that falls within specific distances of overhead electricity lines. It would also require any planning permission granted since 11 May 2022\u2014a specific date\u2014to be revoked where the development meets the criteria set out in the new clause. There is nothing in current planning legislation that prohibits development near to overhead electricity lines. However, there are mechanisms within the existing system that ensure decision makers are aware of and\u2014to the extent that they are material\u2014take into account potential safety or other issues of siting development near overhead lines.",
+              "date": "2025-05-22",
+              "debate": "",
+              "member": "4520"
+            }
+          ],
+          "id": 20,
+          "terms": [
+            "planning",
+            "development",
+            "planning policy",
+            "infrastructure",
+            "national planning",
+            "belt"
+          ],
+          "speakers": 361,
+          "words": 389864,
+          "scored": true
+        },
+        {
+          "examples": [
+            {
+              "text": "I am not used to my amendments being accepted. The is, of course, absolutely right. Dr Matthew Dor\u00e9, the palliative medicine consultant and honorary secretary of the Association for Palliative Medicine, said in written evidence \u201cAllowing patients to seek multiple opinions undermines procedural integrity. Furthermore, allowing the coordinating doctor to seek multiple opinions even further undermines the selection of doctors willing to provide AD\u201d\u2014 that is, assisted dying. \u201cThe lack of a centralised tracking system facilitates \u2018doctor shopping\u2019.\u201d Notwithstanding the fact that amendment 459 has now been accepted, there is still grave concern about the possibility of doctor shopping. We should take steps to avoid it. That is why I am speaking against clause 10 in its entirety. Under clause 8, the independent doctor has five matters to verify: that the person is terminally ill; that they have capacity; that they have a clear, settled and informed wish to end their own life; that they are acting voluntarily and without coercion or pressure; and they are over 18. The last requirement is unlikely ever to be in any form of doubt, so I will focus on the other four.",
+              "date": "2025-03-11",
+              "debate": "",
+              "member": "4591"
+            },
+            {
+              "text": "In the past I have voted against this type of measure, and for one overriding reason: namely, the impracticability of effective safeguards. Even if practical safeguards could be erected against external coercion, I have always felt that there was no prospect whatsoever of having effective safeguards against internal pressures on someone to request assisted dying or even euthanasia. I cannot conceive of any safeguard against self-sacrifice of that sort, whether for financial reasons or in order no longer to be a burden on one\u2019s nearest and dearest relatives and friends. However, there is an additional point that I wish to inject into the debate. In my opinion, the key to this dreadfully difficult conundrum\u2014about end of life care, pain and the possibility of assisted dying\u2014lies, or should lie, in the ability of medical personnel to administer effective pain relief even if it shortens the patient\u2019s remaining time. In my view, there should be no bar on the use of painkilling medication, if that is the only way to ease human suffering, even if it leads to a speedier death\u2014hence the frequent references to putting dying people \u201con an appropriate pathway.\u201d",
+              "date": "2024-11-29",
+              "debate": "",
+              "member": "54"
+            }
+          ],
+          "id": 48,
+          "terms": [
+            "assisted",
+            "dying",
+            "assisted dying",
+            "doctor",
+            "assisted death",
+            "death"
+          ],
+          "speakers": 208,
+          "words": 383302,
+          "scored": true
+        },
+        {
+          "examples": [
+            {
+              "text": "I have supported calls for a ban on under-16s accessing social media\u2014the volume of harmful content online makes unrestricted access a really serious concern\u2014but I have become increasingly unconvinced that a full ban is the right answer. That is because when I speak to young people in my constituency, they do not tell me that they want to be excluded from online spaces; they want those spaces to be safer for them, with the harmful content removed, the bullying tackled, and stronger protections against exploitation and manipulation. In short, they want the platforms to be responsible. Calls for a ban are a response to the failure of social media companies to act. Had they consistently prioritised safety and wellbeing over engagement, we would not be having this debate today. However, the burden to act should not fall solely on children and parents; it should fall on the companies that build and profit from these platforms. Ofcom is working hard to tackle online harms, but it faces an uphill struggle, and I wonder whether it has the tools to manage the task.",
+              "date": "2026-11-02",
+              "debate": "Social Media: Ban for Under-16s",
+              "member": "5293"
+            },
+            {
+              "text": "Hooking users in and keeping them engaged is at the very heart of almost every platform\u2019s business model. Algorithmic models cause harm through both overtly harmful content and content that is harmless on the face of it. There are attention deficit harms caused by passive screen watching and health harms associated with an increasingly sedentary lifestyle. Higher social media use has been directly linked to shorter sleep duration and difficulties with sleep onset. Gambling harm is often overlooked, but a recent Guardian investigation found that Meta AI was pointing vulnerable social media users to illegal online casinos and even suggesting ways to bypass UK gambling safeguards. Regulation is clearly not keeping pace with the evolving digital landscape. Often, it is the directly harmful, even illegal, content that is caught up in these algorithms. The shock, disgust and strong emotion inevitably caused by this content creates engagement: we watch for longer, we engage more, and the algorithm takes this as permission to show us even more of it to keep us hooked. Endless scrolling functionalities allow already vulnerable users to fall into a world where there is no escape from this cycle.",
+              "date": "2026-03-19",
+              "debate": "",
+              "member": "5096"
+            }
+          ],
+          "id": 29,
+          "terms": [
+            "social media",
+            "media",
+            "online",
+            "social",
+            "content",
+            "online safety"
+          ],
+          "speakers": 441,
+          "words": 377540,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "Those safeguards, which are extensive, include clearly restricting who the DWP can collect information on, and for what purpose; clearly restricting how the DWP can use the information gathered under these powers; tightly limiting the accounts in scope, including the sharing of data on UK accounts; limiting the type of information that can and cannot be requested, with clear provisions that certain data, such as information on transactions, cannot be shared; and showing that a human will always be involved in decisions that affect benefit entitlement. A code of practice must be produced, providing guidance for financial institutions on their obligations under this legislation. To protect the privacy of our customers and associated individuals, such as appointees, we must take steps to ensure that limited information is shared with the DWP\u2014the minimum to enable further inquiries, where necessary. That is why part 2 of proposed new schedule 3B outlines provision for a comprehensive penalties regime to prohibit banks or other financial institutions from sharing information that is not permitted to be shared under the measure, as outlined in paragraphs 1(4) and (5).",
+              "date": "2025-03-06",
+              "debate": "",
+              "member": "4979"
+            },
+            {
+              "text": "Our electoral registration system relies on public confidence, part of which is knowing how personal data is used and having genuine control over it. As we update voter registration processes and prepare to extend the franchise to younger citizens, it is essential that the protections around personal information keep pace. The open, or edited, register is not used for elections. It is available to be purchased and used for a wide range of purposes. The Bill introduces a clear and important safeguard. Electors will no longer be placed on the open register by default. Instead, they will be asked directly whether they wish to appear on it. That ensures that inclusion is an active decision rather than a presumption. An opt-in approach gives people stronger control, aligns with guidance from the Information Commissioner\u2019s Office, and reflects modern expectations of consent with regard to personal data. As we move towards more automated forms of registration, individuals might not always complete an application form themselves. In that context, it would no longer be fair or appropriate to assume inclusion on the open register.",
+              "date": "2026-03-26",
+              "debate": "",
+              "member": "4976"
+            }
+          ],
+          "id": 80,
+          "terms": [
+            "information",
+            "data",
+            "digital",
+            "data protection",
+            "report",
+            "provide"
+          ],
+          "speakers": 453,
+          "words": 377167,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "I thank and for (Andy MacNae) for securing the debate. It coincides with Baby Loss Awareness Week, a time when we pause to remember every baby who has been lost far too soon. The week provides us with a chance to take stock of this sensitive issue and to commit to supporting family members, including fathers and siblings, by improving services for all families affected by baby loss. In 2023, there were more than 4,000 baby deaths in the UK, behind each of which is a family whose lives will never be the same again. The pain that those families experience is the same as the pain of losing any child, and they deserve to be treated with the same sensitivity as with any other bereavement. Although we have made significant progress over the past few decades, the rate of baby deaths remains too high, and disproportionately so in African, Caribbean and Asian families and those from deprived backgrounds. That inequality is a challenge that our society, our NHS and our Government must address urgently.",
+              "date": "2025-10-13",
+              "debate": "",
+              "member": "5058"
+            },
+            {
+              "text": "Their experience echoes that of Ida\u2019s parents. The pain is compounded because the family had felt that she was in the right place to be cared for. They trusted the hospital to get it right. We know that no one goes to work in healthcare to do harm, but doctors and nurses are humans; they will make mistakes, and it is difficult for them to admit that they have harmed someone, so we need to create institutional cultures in which people feel able to speak up and raise concerns. Mistakes are often one-offs, but what is not is the institutional response to these tragedies. The institutional response of cover-up is part of a wider, long-standing pattern of poor culture and weak accountability. What harmed families tell me in the wake of these tragedies is that it is not necessarily the mistake itself that causes so much harm to them but the cover-up and the denial. Families, instead of grieving their loss, are forced to fight for the truth.",
+              "date": "2025-11-03",
+              "debate": "",
+              "member": "5225"
+            }
+          ],
+          "id": 53,
+          "terms": [
+            "families",
+            "family",
+            "loved",
+            "loved ones",
+            "baby",
+            "ones"
+          ],
+          "speakers": 542,
+          "words": 366791,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "The Minister knows, because we have discussed this before, that my constituency of is already getting on with the challenge of building new homes. Ebbsfleet garden city, the first garden city in a hundred years, aims to build 10,000 new homes over the next decade, with 50 new parks and open spaces, as well as a network of green corridors. I am delighted that the Minister has confirmed he will be visiting shortly. What more can we do to up the levels of affordable and social housing in new developments like Ebbsfleet so that everyone has the chance to live in them?",
+              "date": "2024-12-12",
+              "debate": "",
+              "member": "5223"
+            },
+            {
+              "text": "When new homes are delivered, they often enter the market at prices higher than the local median, as mentioned. That artificially inflates the affordability ratio, which then increases future housing targets, creating a vicious cycle that drives prices even further out of reach. It does nothing to address the real challenges that my constituents face in getting on the housing ladder. Instead, it leaves new developments affordable only to those who are moving into the area, not those already living there. At the same time, councils face an uphill battle in trying to ensure that developments, required by the same standard method, include adequate levels of social and affordable housing. At present, we have over 2,000 families on the wait list for social homes in. Any development of 11 homes or more is expected to provide at least 10% as affordable housing. Both and Arun district councils, which sit within my constituency, request 30% social and affordable housing in their local plans to address some of the unmet need locally, but those targets are continuously undermined by viability assessments submitted by the developers, because of the high land prices in our constituency.",
+              "date": "2025-05-13",
+              "debate": "Local Housing Need Assessment Reform",
+              "member": "5335"
+            }
+          ],
+          "id": 81,
+          "terms": [
+            "homes",
+            "housing",
+            "affordable",
+            "affordable homes",
+            "social housing",
+            "affordable housing"
+          ],
+          "speakers": 415,
+          "words": 347532,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "As I have said already, once we have fully allocated the funding, we will return to the House to outline how it has been prioritised.",
+              "date": "2025-04-29",
+              "debate": "",
+              "member": "5148"
+            },
+            {
+              "text": "I declare an interest: I am a Central Bedfordshire councillor. Central Bedfordshire will have to find \u00a317 million off the back of this so-called fairer funding formula. Does agree that that is nothing short of pork barrel politics?",
+              "date": "2026-02-11",
+              "debate": "",
+              "member": "5100"
+            }
+          ],
+          "id": 89,
+          "terms": [
+            "funding",
+            "million",
+            "formula",
+            "funding formula",
+            "million funding",
+            "settlement"
+          ],
+          "speakers": 511,
+          "words": 343912,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "We have even less idea of whether Metrolink or tram-trains will eventually reach into the towns and villages of my constituency. Many of my residents have to rely on buses to get where they want to go, and some of those buses are not operated by the Bee network because we are right on the edge of Greater Manchester. We need more frequent bus services that link to our rail services, but the ridiculous traffic levels on the roads in my constituency will prevent them from reaching their potential. Whether it is the A6 or Road, journeys that normally take 20 minutes can take over an hour in the morning and evening rush hours. Public transport is the obvious solution. We should make it easier for those who can take the tram or the train so that the roads are freed up for those who cannot. Trams and trains offer commuters the ability to bypass rush hour congestion in a way that buses cannot. Transport for Greater Manchester has an ambition to restore regular passenger rail services on the to line.",
+              "date": "2025-03-19",
+              "debate": "Transport Connectivity: North-west England",
+              "member": "5070"
+            },
+            {
+              "text": "Local bus services are fundamental to the lives of so many people, from providing access to work and leisure opportunities and social inclusion to cleaning up our air, reducing congestion and curtailing transport emissions. For many of our constituents, they make the difference between being able to seize opportunities and being denied them. Put simply, buses are too important to get wrong, so I wholly welcome the Bill and this Government\u2019s ambition to finally put things right after decades of fragmentation and under-investment. As the MP for in Greater Manchester, I have seen the far-reaching benefits of bringing local bus services back under local control. I am incredibly proud that Greater Manchester is the only place outside London to have re-regulated its bus network, as part of creating a fully integrated public transport network\u2014the Bee Network\u2014for the people of our city region. A recent report produced by IPPR North highlights just how much the city region has turned its bus network around. The IPPR says This Bill demonstrates that the Government have got on board.",
+              "date": "2025-06-02",
+              "debate": "",
+              "member": "5084"
+            }
+          ],
+          "id": 36,
+          "terms": [
+            "bus",
+            "transport",
+            "bus services",
+            "buses",
+            "public transport",
+            "services"
+          ],
+          "speakers": 398,
+          "words": 335021,
+          "scored": true
+        },
+        {
+          "examples": [
+            {
+              "text": "I have to speak to this group of amendments because only one party has consistency when it comes to a \u201cone vote, one election\u201d philosophy: the Conservative party. It is lovely to see the weird and wonderful array of views on electoral systems from parties that want to gerrymander political systems to try to suit their own ends. That is what we have seen this afternoon. At the mayoral elections, the first-past-the-post system worked because it clearly showed that when the people entitled to vote have one vote, the candidate who gets the most votes wins. We would always argue that that is the simplest and fairest system for the election of a single politician. I do not often compliment the Government, but they have always been consistent on this issue when it comes to mayoral elections. But we cannot keep asking the same person to be subject to two votes and claim that in the second round they have 71% and therefore an overwhelming mandate, when the turnouts under AV or SV are not markedly different from first past the post.",
+              "date": "2025-10-23",
+              "debate": "",
+              "member": "4803"
+            },
+            {
+              "text": "The Bill would introduce a system of proportional representation for parliamentary elections and local government elections in England. Liberal Democrats have been calling for the introduction of a single transferable vote system whereby candidates on a ballot paper are ranked according to the voter\u2019s preference. That system would protect the critical local link between MPs and their constituencies, which is valuable in connecting individual voters with the Parliament that makes decisions on their behalf. Constituency MPs understand the specific issues that voters in their seat are experiencing and can connect them to the broader issues facing the country. A system of STV would preserve that aspect of our current system, but would also ensure that MPs enjoyed the broad support of the majority of their electors. In the most recent general election, the number of MPs elected to this Chamber with more than 50% of the votes cast in their constituency was just 96\u2014a decrease from 421 in the 2019 election and 476 in the general election before that. Ten of our colleagues in this Parliament were elected with fewer than 30% of the vote of their constituents who turned out.",
+              "date": "2024-12-03",
+              "debate": "",
+              "member": "4591"
+            }
+          ],
+          "id": 41,
+          "terms": [
+            "vote",
+            "election",
+            "general election",
+            "elections",
+            "general",
+            "electoral"
+          ],
+          "speakers": 461,
+          "words": 332861,
+          "scored": true
+        },
+        {
+          "examples": [
+            {
+              "text": "I do join in asking the Minister to respond to that specific point in summing up. I know many MPs who represent rural communities have concerns about the fairer funding formula. In fact, it is not fair, particularly for rural communities. It would be helpful if the Minister were to reflect on that in his speech. I would like the Minister to give serious consideration to amending the Government\u2019s plans on neighbourhoods. Neighbourhoods in urban communities can likely afford to be larger. The relative impact of that in many urban communities will be minimal. However, in rural areas, we need neighbourhoods in the region of 10,000 not 50,000, so that people living in small rural towns such as Flitwick and Ampthill in my constituency do not have to leave their towns to access \u201cneighbourhood health services\u201d and so that people living in villages large and small only have to travel to the next village over and not to a big town many miles away. My concern over the Government\u2019s plans for healthcare in rural areas does not end there.",
+              "date": "2026-03-04",
+              "debate": "Healthcare in Rural Areas",
+              "member": "5100"
+            },
+            {
+              "text": "I am proud to represent the constituency, which has both urban and rural communities. It is plain to see that those living in the countryside do not enjoy the same quality of service as those living in town. One of the greatest differences is in broadband and mobile signals. In today\u2019s economy, access to fast, reliable internet is essential for any business, whether to receive orders or to complete VAT returns. When I questioned the Minister last month about funding for the shared rural network, he confirmed that the new Government will continue the plans of the Conservative Administration to extend access to rural communities. Since then, we have had disappointing news. Connecting Devon and Somerset, along with its partner Airband, is scaling back plans to provide fibre optic broadband to rural areas in my constituency and in others in Somerset. I have requested a meeting with the Minister on this matter, as it is of critical importance. If we are to ensure the prosperity of rural areas, investment in rural broadband and 5G must be a national priority. Another issue that disproportionately affects our rural communities is flooding, which particularly affects our farmers.",
+              "date": "2024-11-11",
+              "debate": "",
+              "member": "5101"
+            }
+          ],
+          "id": 6,
+          "terms": [
+            "rural",
+            "rural areas",
+            "areas",
+            "rural communities",
+            "urban",
+            "communities"
+          ],
+          "speakers": 419,
+          "words": 330504,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "First, we must move from hospital to community. Patients are losing their sight not because care does not exist, but because the pathway is broken and follow-up is delayed. Just recently, a patient of mine was referred to hospital and diagnosed with glaucoma\u2014fine, no problem there. The initial appointment happened without any problems, but the follow-up was postponed. Then the patient missed her appointment, and the one after that was postponed again. By the time I saw that patient again, just over a year later, they had lost two full lines on their visual acuity chart\u2014the chart used by the optician. That is two lines that this patient will never, ever get back. That is the difference between being able to read letters or not; between seeing a grandchild smile or only hearing them. One of the problems is that current waiting list data measures only first-time appointments, not the ongoing care vital to chronic conditions such as glaucoma. We need published data on follow-up waiting times, because that is where sight is being lost. That data would allow patients to make an informed choice about where they would like to receive treatment.",
+              "date": "2025-07-09",
+              "debate": "Glaucoma Awareness",
+              "member": "5120"
+            },
+            {
+              "text": "This is leading to a situation in which it is harder to recruit GPs, referrals take longer and patients fall through the cracks, because the two systems do not talk to each other. Treatment pathways can be confusing and fragmented, as we heard from my constituent\u2019s example. Patients are facing delays and disputes not because of medical need, but because of bureaucracy. The 2018 \u201cStatement of values and principles\u201d has no legal force; it is a voluntary agreement that leaves patients powerless when things go wrong. What we really need is proper accountability, shared data and transparent funding, so that the border does not become a barrier to care. It should not decide how long people wait, what care they get and whether their doctor can access their records. One of the communities hit hardest by these challenges is St Martin\u2019s\u2014the largest village in Shropshire and, of course, in. Its GP surgery was a branch of the medical practice over the border in Chirk and it was overseen by Betsi Cadwaladr university health board. In 2022 it was closed, despite strong opposition from me and the village residents.",
+              "date": "2025-11-04",
+              "debate": "Cross-border Healthcare",
+              "member": "4934"
+            }
+          ],
+          "id": 4,
+          "terms": [
+            "patients",
+            "patient",
+            "hospital",
+            "care",
+            "treatment",
+            "medical"
+          ],
+          "speakers": 394,
+          "words": 316232,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "I thank for raising that issue, as well as all the other who have brought to me local intelligence, which informs my own understanding of the issues across the postal service.",
+              "date": "2026-03-11",
+              "debate": "",
+              "member": "5076"
+            },
+            {
+              "text": "I am very grateful to and I entirely support his argument and his amendment. This is the difference between, in his estimation, accepting a request and promoting a service. Advertising is about the promotion of a service to doubtful, fearful and vulnerable people, and that is precisely what his amendment addresses.",
+              "date": "2025-06-13",
+              "debate": "New Clause 13 - Regulation of approved substances and devices for self-administration",
+              "member": "350"
+            }
+          ],
+          "id": 74,
+          "terms": [
+            "service",
+            "mail",
+            "royal mail",
+            "royal",
+            "civil service",
+            "service charges"
+          ],
+          "speakers": 525,
+          "words": 315964,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "I am well aware that this is a complex and multi-dimensional issue to which we cannot do justice in such a short debate, so rather than trying to address every aspect of road safety, I will instead focus on a couple of linked aspects that are of particular concern to my constituents\u2014specifically, speeding and issues related to large commercial vehicles. is a constituency of A roads running down valleys, with relatively few alternative routes, and most residential and commercial development extends along those lines. I live off Road in Bacup, and the lived experience of residents along that road serves to highlight most of the issues I want to raise today. Ask anyone who lives on Road and they will tell you that speeding is endemic. There have been serious injuries and fatalities, but more fundamentally, residents will cite numerous close calls and the fear they generate. For example, one house on a bend in the road has now been hit by speeding vehicles three times.",
+              "date": "2025-01-07",
+              "debate": "",
+              "member": "5134"
+            },
+            {
+              "text": "Road safety is one of the top issues that constituents write to me about. That is why I took the opportunity to hear from nearly 1,000 Forest residents on this issue over the summer, as I conducted my summer campaign on road safety. Those conversations and speaking with many incredible charities and organisations in Forest and beyond impressed on me the need for greater action on uninsured drivers. Those who drive uninsured are statistically more likely to be involved in road accidents, as well as to commit other risky offences on the road, including hit-and-run incidents and speeding. Uninsured driving was not the only issue raised with me by residents. Speeding is a concern for so many who use the roads responsibly. They see it happening, and they know that they and their loved ones are put at risk by this dangerous behaviour. In fact, more than 70% of respondents to my road safety survey agreed that people drive too quickly down residential and main roads in Forest.",
+              "date": "2026-02-05",
+              "debate": "",
+              "member": "5165"
+            }
+          ],
+          "id": 75,
+          "terms": [
+            "road",
+            "safety",
+            "road safety",
+            "roads",
+            "drivers",
+            "building safety"
+          ],
+          "speakers": 427,
+          "words": 295170,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "The Government have previously used wishful thinking in their assertions that sustainable aviation fuel will mitigate the additional pollution from the expansion of Heathrow, although they seem to have scaled back that argument more recently. Heathrow is already the biggest single source of carbon emissions in the UK, and expansion will add an extra 8 to 9 megatonnes of CO2 into our environment every year. The Climate Change Committee\u2019s recent conclusion that expansion is not compatible with the UK\u2019s climate commitments presents the Government with a clear choice: to pursue a third runway at Heathrow or to take the climate crisis facing us seriously. It seems an easy decision to me. Does the Minister agree with the Climate Change Committee\u2019s verdict that the current plans for a third runway are not compatible with the UK\u2019s climate change commitments? The Prime Minister\u2019s recent comments that distanced the Government\u2019s support from a third runway were a step in the right direction, but he needs to go further, back his own convictions and categorically oppose expansion. I anticipate that the Tory spokesman,, will reflect his party\u2019s recent conference commitment to expanding Heathrow.",
+              "date": "2026-10-20",
+              "debate": "Heathrow Airport Expansion",
+              "member": "4591"
+            },
+            {
+              "text": "Prior to our brief interruption, the Minister described a part of the world that is undergoing considerable change and turbulence, not least from climate change. Will he reflect on how UK procurement and military doctrine might have to go to a similar scale and rapidity of change in order to respond to, and reflect, the challenges of an increasingly liquified Arctic that is no longer in a frozen state?",
+              "date": "2026-01-13",
+              "debate": "Arctic and High North",
+              "member": "5288"
+            }
+          ],
+          "id": 11,
+          "terms": [
+            "climate",
+            "change",
+            "climate change",
+            "cop",
+            "emissions",
+            "carbon"
+          ],
+          "speakers": 497,
+          "words": 285083,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "It is a pleasure to see you in the Chair once again, and to see everybody on the Committee on this very sunny Thursday morning. I know everybody is delighted to be here, and I welcome the Minister too. The amendment would allow the Secretary of State to make regulations that would allow certain functions of single foundation strategic authorities to be exercised only by the mayor of that authority. Amendment 309 would create additional boundaries for regulations that may provide for a function of a strategic authority to be transferred to the authority\u2019s mayor. In essence, we believe that amendments 307 to 309\u2014we will come to amendment 308 in the next grouping\u2014would address the issue that single foundation strategic authorities such as Cornwall currently cannot access the highest level of devolution, because the Bill only allows for combined or county combined authorities with a mayor to exercise the functions that the Government are putting forward. Amendment 307 promotes fairness and flexibility by allowing foundation strategic authorities such as Cornwall to benefit from the same level of democratic leadership as combined authorities.",
+              "date": "2025-10-23",
+              "debate": "",
+              "member": "4803"
+            },
+            {
+              "text": "Under schedule 9, all combined authorities and combined county authorities will hold powers and duties over travel concessions. This includes the duty to provide concessionary fares for older and disabled people, as well as a power to provide concessionary fares beyond those that are mandatory. Government amendments 98, 103 and 104 provide for a transition period for all recently established authorities, during which time they will hold these powers and duties concurrently with constituent authorities. That transition period will extend until the end of the first full financial year following the establishment of the authority, at which point the combined authority or combined county authority will become the sole travel concession authority for the area. These are important amendments that mean that schedule 9 delivers on our aim to have a consistent framework of powers across all combined authorities and combined county authorities. That will streamline the management of travel concessions, making better use of local government resources. Having only one travel concession authority in an area means a uniform approach for passengers, who can rely on their concession passes working across their local area. I now move to Government amendments 101 and 102.",
+              "date": "2025-10-16",
+              "debate": "",
+              "member": "5099"
+            }
+          ],
+          "id": 32,
+          "terms": [
+            "authorities",
+            "authority",
+            "mayoral",
+            "strategic authorities",
+            "devolution",
+            "combined"
+          ],
+          "speakers": 364,
+          "words": 277542,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "Good housing is the foundation of a flourishing life. Decent, safe, secure and affordable homes provide a platform for families to live, grow and build a better life. They make for stronger, healthier and happier communities. Everyone\u2014and I mean everyone\u2014deserves to have one. Yet, as we all know, far too many families in need across the country are languishing on social housing waiting lists, struggling in the private rented sector or in expensive temporary accommodation as a result, and driving up rents and the housing benefit bill in the process. At the same time, the ability and willingness of councils to invest in the building of new social rented homes has been undermined by the steady and significant loss of existing stock through the right to buy scheme. It was for those reasons that the Government committed in our manifesto to delivering the biggest increase in social and affordable house building in a generation, prioritising the building of new social rented homes, enhancing protections for existing and new build social housing, and supporting councils and housing associations to make a greater contribution to affordable housing supply.",
+              "date": "2026-09-10",
+              "debate": "",
+              "member": "4520"
+            },
+            {
+              "text": "I know, but that is still not a sufficient amount. Some of those houses did not come through. There was an amount of housing that needed to be done and was not done. It was done in the \u201950s, \u201960s and \u201970s, which cannot be denied. We need to build more homes, including more affordable and social homes. This is an important debate because it asks Government and builders to look at how to assess local housing need. In Bolton, more than 20,000 individuals are on the social housing waiting list. Families face an 18-month wait for a three-bedroom house, with 800 to 900 applicants for each available home. Many are referred to the private sector, where of course the rents are very high, increasing the financial strain on already struggling households. The current methodology for assessing local housing need fails to capture the realities on the ground. It overlooks income disparities across our country, the availability of affordable housing and the specific needs of our communities. That disconnect results in inadequate housing provision, leaving many without suitable options.",
+              "date": "2025-05-13",
+              "debate": "Local Housing Need Assessment Reform",
+              "member": "3924"
+            }
+          ],
+          "id": 25,
+          "terms": [
+            "housing",
+            "social housing",
+            "accommodation",
+            "tenants",
+            "landlords",
+            "rented"
+          ],
+          "speakers": 334,
+          "words": 272029,
+          "scored": true
+        },
+        {
+          "examples": [
+            {
+              "text": "As the Prime Minister reiterated last week, we have inherited a broken NHS but it is not beyond repair. We know it needs to be fixed and there is not a single solution. To ensure that more people survive cancer, including lobular breast cancer, we have to take a multi-pronged approach\u2014catching it earlier so more treatments are available, raising awareness of its specific symptoms, and investing in equipment and research, as many have raised today. All those actions are part of our plan to put the NHS on the road to recovery. Also known as lobular carcinoma, it impacts the lives of many\u2014around 15 in every 100 breast cancers are invasive lobular. Treatments for lobular breast cancer are broadly similar to those for other breast cancers. Surgery and radiotherapy are effective for most patients with primary invasive types, meaning those which have not spread to other parts of the body. Systemic therapy such as chemotherapy, hormonal treatment, targeted therapy or immunotherapy are usually offered based on the stage at which the NHS catches that cancer.",
+              "date": "2024-12-10",
+              "debate": "Lobular Breast Cancer",
+              "member": "4444"
+            },
+            {
+              "text": "The ambition of the national cancer plan is clear: to combine the strengths of our NHS, our research community and our life sciences sector so that patients benefit from the very best cancer care. That includes people living with lobular breast cancer who deserve the same progress, hope and opportunity as every other cancer patient. The DHSC was pleased to discuss the issue of NHS breast cancer screening at the petitions debate opened by last month. The NHS breast screening programme offers all women in England between the ages of 50 and their 71st birthday the opportunity to be screened every three years for breast cancer, to help detect abnormalities and intervene early to reduce the number of lives lost to invasive breast cancer. In addition, some younger women at increased risk of breast cancer because of genetics or their family history are eligible for earlier, more frequent screening, sometimes using MRI rather than mammogram. We are also investing in research to improve the early diagnosis of breast cancer through the early detection using information technology in health, or EDITH, trial, which is backed by \u00a311 million in Government support via the NIHR.",
+              "date": "2026-07-09",
+              "debate": "Lobular Breast Cancer: Moon Shot Project",
+              "member": "4359"
+            }
+          ],
+          "id": 86,
+          "terms": [
+            "cancer",
+            "cancers",
+            "breast",
+            "breast cancer",
+            "diagnosis",
+            "treatment"
+          ],
+          "speakers": 289,
+          "words": 267482,
+          "scored": true
+        },
+        {
+          "examples": [
+            {
+              "text": "I certainly have oomph, yes, and I am working as fast as I can on this. I will not talk now about the wider support that we are offering people in our former coalfield communities, but a whole raft of Government interventions are there to support people.",
+              "date": "2025-06-11",
+              "debate": "",
+              "member": "4631"
+            },
+            {
+              "text": "In the spirit of co-operation, even if we did this test, could he explain the damage and disruption that would be caused to communities in the UK if we tried on the scale that the US has done, where there are vast amounts of empty country with no people disrupted by fracking? Can he explain how that compares and how disruptive it would be for our communities in the UK?",
+              "date": "2026-09-15",
+              "debate": "",
+              "member": "4602"
+            }
+          ],
+          "id": 69,
+          "terms": [
+            "communities",
+            "coastal communities",
+            "coastal",
+            "housing communities",
+            "community",
+            "ministry housing"
+          ],
+          "speakers": 488,
+          "words": 263997,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "There could be no greater cause for a Government than to lift children out of poverty, which is why I very much welcome the removal of the two-child limit. However, the Joseph Rowntree Foundation has reported that 141,000 children will not see the full benefit of the change and 50,000 children\u2014the poorest of our children\u2014will get no benefit whatsoever because of the benefit cap. We must therefore examine the impact of the benefit cap on these families and how it is holding those children back in poverty. We must strain every sinew to address poverty, looking at issues such as the sanctions in the welfare system; the spare room subsidy, which the Government championed in the bedroom tax campaign; and many more. We know that the impact of growing up in poverty, especially on disabled children, results in a greater cost to the state than were their poverty and destitution to be addressed. Poverty is a source of many adverse childhood experiences, causing multiple disadvantages to children and changing their life trajectories. My work looking into the intersection of child poverty and the 1,001 critical days shows the causal link.",
+              "date": "2026-02-23",
+              "debate": "Clause 1 - Removal of two child limit: GB",
+              "member": "4471"
+            },
+            {
+              "text": "I have been on the child poverty taskforce for over a year, championing the work done by the Government to really drill down into what can make the most difference\u2014and it is scrapping the two-child benefit cap. Children must be able to thrive no matter where they are born in the UK, and scrapping the cap will allow them to do so. The policy drove families into severe hardship, as I saw for myself in my constituency. Its removal is not only a moral imperative but an economic necessity. It makes sense in every way. The Trussell Trust\u2019s latest figures have exposed the scale of the crisis. In alone, 5,991 emergency food parcels were distributed between April last year and March this year. That is a 7% rise on the previous year, so there is real need to scrap the two-child cap. It will make a huge difference and will result in the largest expected reduction in child poverty over a Parliament since comparable records began in 1997. That kind of dramatic change in our country is the reason I became a politician\u2014this is what I want to see.",
+              "date": "2025-11-26",
+              "debate": "",
+              "member": "4788"
+            }
+          ],
+          "id": 61,
+          "terms": [
+            "poverty",
+            "child poverty",
+            "child",
+            "two-child",
+            "children poverty",
+            "children"
+          ],
+          "speakers": 390,
+          "words": 259711,
+          "scored": true
+        },
+        {
+          "examples": [
+            {
+              "text": "Among those affected is my constituent Rachel. In 2014, she was assured that a pelvic mesh implant was the best solution to her incontinence, but instead it led to years of unrelenting pain, infections and a diminished quality of life. Repeatedly dismissed by medical professionals, she was left self-catheterising and enduring ever-worsening symptoms. She eventually had to borrow \u00a312,000 for private surgery to remove the mesh, only to find that her pain and nerve damage persisted. Today, she is in debt, relies on strong pain medication, and struggles daily with the physical and emotional toll of her ordeal. Equally distressing is the experience of Suzi, the daughter of two of my constituents. After her initial surgery to relieve mild stress incontinence, she experienced severe complications, including debilitating pain and a hole in her urethra caused by the mesh. Over the years, she underwent multiple surgeries to remove it. Each time she was told that the problem had been resolved, but each time fragments of the mesh remained, prolonging her suffering and leading to permanent damage. Her pain was dismissed as psychological. Today, Suzi lives with chronic pain, relies on a wheelchair and battles PTSD.",
+              "date": "2024-12-05",
+              "debate": "Cumberlege Review: Pelvic Mesh",
+              "member": "5040"
+            },
+            {
+              "text": "She has used her personal experience and public platform to raise awareness of spinal muscular atrophy. We know that it is a rare neuromuscular genetic condition that causes muscle weakness, movement problems, and difficulties with breathing and swallowing, as well as tremors, and bone and joint problems. Although those symptoms are most often noticed in babies and toddlers, they can also start in teenagers and adults. This extremely cruel disease has touched many people across the country and beyond. That is evident, given the simple fact that the petition has nearly 150,000 signatures, including that of my constituent Nasser Iqbal. Nasser\u2019s daughter was diagnosed with SMA type 1, the most severe form, three months after birth. She is unable to walk or eat due to nerve damage caused by her condition being left undiagnosed and therefore untreated in the first few months of her life. We know that every year in the UK, 48 babies are born with spinal muscular atrophy, with 60% having SMA type 1. Once symptoms begin, damage to motor neurones cannot be undone.",
+              "date": "2026-06-22",
+              "debate": "Spinal Muscular Atrophy: Newborn Screening Test",
+              "member": "4861"
+            }
+          ],
+          "id": 54,
+          "terms": [
+            "life",
+            "diagnosis",
+            "diagnosed",
+            "condition",
+            "lives",
+            "death"
+          ],
+          "speakers": 424,
+          "words": 210091,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "That measure will provide for the automatic restriction of the exercise of parental responsibility of offenders sentenced to four or more years\u2019 imprisonment for serious child sexual abuse offences against a child for which they hold parental responsibility. The exercise of the offender\u2019s parental responsibility will be restricted to the point that they cannot take any meaningful action in relation to any of their children. Our measure, which is driven by the same motivations as the shadow Minister\u2019s, will provide workable protections for the children of those convicted of serious child sexual offences and will be fairly applied in all circumstances. The shadow Minister\u2019s new clause has a worthy aim; all of us have a huge amount of sympathy for the children who are in these awful situations, and we all want to do everything we can to protect them from harm, including that caused by parents who, despite being the people who should keep them safe, are the perpetrators of serious child sexual abuse offences.",
+              "date": "2025-05-13",
+              "debate": "",
+              "member": "4849"
+            },
+            {
+              "text": "I understand that ambition but would point to the significant programme of reform already under way. We are repealing the presumption of parental involvement from the Children Act 1989. As mentioned, that is testament to the brave fight of campaigners such as Claire Throssell, and many more. Through the Victims and Courts Act 2026 we are restricting the exercise of an offender\u2019s parental responsibility in cases of serious child sexual abuse and where a child is born of rape. My colleague Baroness Levitt has confirmed that we will implement Jade\u2019s law by the end of the year. Taken together, those measures will protect thousands of children each year. My also rightly raised the problem of unregulated parental alienation experts. Families facing family court proceedings are often navigating some of the most difficult parts of their lives. It is absolutely essential that experts are suitably qualified, properly regulated and held to appropriate professional standards. So-called experts on parental alienation are practising the kind of pseudoscience that we do not want to see in family proceedings. Every child who comes into contact with the family justice system is already navigating the most difficult circumstances.",
+              "date": "2026-06-10",
+              "debate": "Child Contact Arrangements",
+              "member": "5143"
+            }
+          ],
+          "id": 3,
+          "terms": [
+            "child",
+            "child sexual",
+            "sexual",
+            "abuse",
+            "sexual abuse",
+            "children"
+          ],
+          "speakers": 288,
+          "words": 188200,
+          "scored": false
+        }
+      ]
+    },
+    {
+      "label": "steel / industry / industrial",
+      "speakers": 640,
+      "words": 4689913,
+      "topics": [
+        {
+          "examples": [
+            {
+              "text": "This Government are not agnostic on the fate of British industry and British manufacturing. Given a fair business environment, our industry and workers can out-compete others. The industrial capability of Britain should not be subject to the whims of the international market or foreign Governments. Our industrial strategy, and the place of critical minerals within it, is a marked departure from the hands-off approach of the past. The UK Government is now working in close partnership with UK industry to support private sector investment and growth, just as other developed economies have done and continue to do. The new critical minerals strategy is another step forward in that ambition, and gives business investors confidence that the materials, industry and jobs for Britain\u2019s future are secured. Critical minerals are essential for building the modern world. Control and supply of these materials are the means by which nations will secure power and wealth in this century.",
+              "date": "2025-11-24",
+              "debate": "",
+              "member": "5116"
+            },
+            {
+              "text": "Steelmaking is of vital strategic importance to the UK. We rely on steel for essential parts of our national infrastructure, including in defence, transport, clean energy generation, and advanced manufacturing. Steelmaking creates tens of thousands of highly skilled jobs across the country, helping to power our economy and boost our local communities. However, for too long, our steel industry has been neglected. The last Conservative Government oversaw a string of near collapses and last-minute rescues. They scrapped the industrial strategy, which is so vital to our manufacturers, and erected new trade barriers, making it harder for our steel producers to do business with their biggest export market across the channel. We have a duty to stand by this vital sector, especially as it navigates unprecedented challenges, including President Trump\u2019s unfair steel tariffs, China\u2019s anti-competitive state aid practices, and the transition to environmentally sustainable production methods. If we are going to foster a thriving steel industry, we cannot allow more producers to collapse and more jobs to be lost, and we cannot risk our last blast furnaces going cold.",
+              "date": "2026-05-21",
+              "debate": "",
+              "member": "4591"
+            }
+          ],
+          "id": 72,
+          "terms": [
+            "steel",
+            "industry",
+            "industrial",
+            "industrial strategy",
+            "strategy",
+            "jobs"
+          ],
+          "speakers": 488,
+          "words": 413450,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "Our ambition is for the UK to remain a world-class destination, attracting 50 million international visitors annually by 2030. Crucially, we are encouraging those visitors to travel more widely, stay longer and contribute to local economies across the country. That ambition will be set out in our forthcoming visitor economy growth strategy, which will focus on unlocking investment, supporting jobs and ensuring that tourism growth is competitive, sustainable and inclusive. I turn to the regional picture. The east midlands is a strong example of how tourism is being placed at the heart of growth and regeneration. The visitor economy is recognised as a core growth sector within the east midlands local growth plan. This reflects robust regional evidence showing that the visitor economy has the potential to generate at least \u00a31 billion in additional economic growth. To drive delivery, partners across the region have established Visit East Midlands, providing strategic leadership and co-ordination across the local visitor economy partnerships and destination management organisations.",
+              "date": "2026-02-10",
+              "debate": "Sherwood Forest: Tourism",
+              "member": "4607"
+            },
+            {
+              "text": "The urgent need for, and the strategic imperative of, economic growth matters nowhere more than in. My constituency lies at the heart\u2014the engine room\u2014of the Oxford- growth corridor. If we get economic growth right, it will enable us to support high-growth businesses across my constituency and beyond, strengthening the local economies of Buckinghamshire and Milton Keyes and enabling the UK to develop a strategically important economic region. It will build a globally competitive, modern British economy, with higher wages and more opportunities for the families and communities I represent in Parliament. In addition to the measures that the Government introduced in the first parliamentary session, I established the investment taskforce, bringing together local leaders, employers and investors, as a vehicle to attract the businesses, investment, jobs and apprenticeships that communities in my constituency need. In, firms such as Pulsar Fusion and Carnot Engines are developing innovative technologies that are global leaders. On the other side of my constituency, the advanced engineering cluster surrounding Silverstone is home to a number of world-leading Formula 1 teams, again showing that when Britain invests in its people we can be global leaders.",
+              "date": "2026-05-18",
+              "debate": "Backing Business to Create Economic Growth",
+              "member": "5193"
+            }
+          ],
+          "id": 7,
+          "terms": [
+            "growth",
+            "economic",
+            "economic growth",
+            "economy",
+            "investment",
+            "jobs"
+          ],
+          "speakers": 526,
+          "words": 405802,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "That is why the Secretary of State relaunched the solar taskforce earlier this year. It is also the reason that the Under-Secretary of State for Energy Security and Net Zero,, who has this portfolio, cannot reply to the debate, because he is at a meeting of the solar taskforce. The taskforce brings together the industry and Government to discuss the actions needed to rapidly increase the deployment of solar panels on rooftops and in solar farms, and it will publish its recommendations in a solar road map very soon. We should never lose sight of the core motivation behind our clean energy mission. Clean power generated here in Britain will reduce our dependence on volatile imported fossil fuels. It will provide lower bills in the long term and create thousands of highly skilled future-proofed jobs across the country. Delivering those benefits for the British people requires the development of new infrastructure. We accept that a top priority should be the deployment of solar on rooftops. That is why we are bringing forward new standards to ensure that all newly built houses and commercial buildings are fit for a net zero future.",
+              "date": "2024-12-10",
+              "debate": "Cleve Hill Solar Park",
+              "member": "1491"
+            },
+            {
+              "text": "This discussion goes far beyond economic concerns; it is about the future of our energy security, our workforce and our commitment to achieving net zero emissions. The UK has been a pioneer in renewable energy and must continue to lead by example. That means ensuring that the transition to net zero is not just a slogan but a reality backed by practical policies that sustain and expand our low-carbon energy infrastructure. is a critical hub for the production of clean energy technologies, supporting local and overseas energy needs. I am proud to have GE Vernova\u2019s largest site based in, providing more than 1,700 jobs\u2014an incredible investment in my constituency. Last Friday, I met representatives of GE Vernova, whose skilled engineers and craftsmen are dedicated to building the infrastructure needed for a cleaner, more sustainable future. Their work directly supports our crucial transition to net zero, and the decisions we make determine whether companies such as that continue to thrive. That shift requires clear, stable policies from the Government to ensure that the technologies that companies develop\u2014whether wind, biomass or carbon capture\u2014have a long-term place in the UK energy mix.",
+              "date": "2025-03-05",
+              "debate": "Renewables Obligation Certificate Scheme",
+              "member": "5290"
+            }
+          ],
+          "id": 45,
+          "terms": [
+            "energy",
+            "net zero",
+            "zero",
+            "clean",
+            "energy security",
+            "net"
+          ],
+          "speakers": 430,
+          "words": 397470,
+          "scored": true
+        },
+        {
+          "examples": [
+            {
+              "text": "When those companies holding the\u2014arguably\u2014income revenues are disposed of, that is when capital gains tax comes into the picture. Of course, the rate of capital gains tax is much lower than the rate of income tax, and that is where the gap comes from that was illustrated by my retired constituent. it is important that the tax system is efficient in raising revenues, which is what our Budget sets out. The tax system must also be principled in ensuring that the tax purposes to which we have allocated certain measures raise the right taxes and are targeted towards the kinds of activities that are meant to be taxed. All of us in the Committee would probably agree that we should pay tax through a progressive system that distinguishes between different forms of revenue-raising activities, but that allocates people fairly and proportionately to those right and relevant activities. I am reminded of the announcements that came out during the last Government regarding the tax affairs of the former Prime Minister,, who paid 23% in average tax on his \u00a32.2 million in earnings.",
+              "date": "2024-12-10",
+              "debate": "Clause 7 - Main rates of CGT for gains other than carried interest gains",
+              "member": "5267"
+            },
+            {
+              "text": "The said that the tax system had become less fair over those 14 years. Does he oppose the increase in the tax burden paid by the higher paid? That is what happened over those 14 years. Does he not see it as fair that those on lower and average earnings saw their share of the tax take go down? Is he opposed to that? In what way precisely, from his deep understanding of the tax system, has he concluded that it has become less fair over the last 14 years?",
+              "date": "2025-03-03",
+              "debate": "New Clause 1 - Review of impact of section 1 on recipients of the full rate of the new state pension",
+              "member": "1482"
+            }
+          ],
+          "id": 63,
+          "terms": [
+            "tax",
+            "inheritance tax",
+            "inheritance",
+            "relief",
+            "income",
+            "income tax"
+          ],
+          "speakers": 379,
+          "words": 354855,
+          "scored": true
+        },
+        {
+          "examples": [
+            {
+              "text": "Last Thursday, the Prime Minister implied that the new wind energy project in Hull would result in lower energy bills for my constituents, but he refused to say by when. When can my constituents and others across the country expect to see the \u00a3300 reduction in their bills that the Labour party promised?",
+              "date": "2024-11-26",
+              "debate": "",
+              "member": "5301"
+            },
+            {
+              "text": "GB Energy will turbocharge renewables across the country. Once we have that, we will have more control over our energy systems and, as knows, we will have control over what happens with bills.",
+              "date": "2025-03-19",
+              "debate": "",
+              "member": "5258"
+            }
+          ],
+          "id": 84,
+          "terms": [
+            "energy",
+            "bills",
+            "energy bills",
+            "clean",
+            "electricity",
+            "prices"
+          ],
+          "speakers": 437,
+          "words": 327608,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "Small businesses are the backbone of our economy, yet research shows that the average small business cannot start its real work until 2.36 pm on a Wednesday because of the time lost to administrative tasks. My own experience is that business owners need to engage regularly with various departments and agencies for all manner of reasons, and proving their identity can be a time-consuming task, so will the Secretary of State consider introducing a unique business passport\u2014effectively, a unique digital ID for businesses\u2014to cut administrative burdens and free up small businesses to deliver growth?",
+              "date": "2026-05-21",
+              "debate": "Digital ID: Businesses",
+              "member": "5059"
+            },
+            {
+              "text": "I represent 3,455 small and medium-sized enterprises in my constituency. Those businesses provide essential jobs in the local economy. Last weekend, we celebrated Small Business Saturday, and I had the privilege of joining world-renowned author Lee Child as we visited fantastic local businesses, including Read bookshop, Nellie\u2019s Keepsake, the Huntsman Inn and many more. The previous Government turned their back on small businesses. Will the Minister outline what targeted programmes are available to boost local businesses in?",
+              "date": "2025-12-11",
+              "debate": "Economic Growth: Colne Valley",
+              "member": "5317"
+            }
+          ],
+          "id": 18,
+          "terms": [
+            "businesses",
+            "small",
+            "small businesses",
+            "business",
+            "medium-sized",
+            "small medium-sized"
+          ],
+          "speakers": 488,
+          "words": 327530,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "I was going to point out to the size of the sum involved but he went on to mention it himself. This is translating a theoretical loss into a real one guaranteed by the Treasury with taxpayers\u2019 money, so I think is definitely on to something.",
+              "date": "2025-05-21",
+              "debate": "",
+              "member": "4739"
+            },
+            {
+              "text": "My constituents expect the Government to treat taxpayer money with the utmost respect. However, during the pandemic the Conservatives handed out contracts to their friends and donors and failed to prevent fraud, using the crisis as a cover for their greed. Does the Chancellor agree with me that that money belongs to the taxpayer?",
+              "date": "2024-12-03",
+              "debate": "Management of Public Finances",
+              "member": "5056"
+            }
+          ],
+          "id": 40,
+          "terms": [
+            "money",
+            "value money",
+            "taxpayers",
+            "taxpayers money",
+            "value",
+            "money spent"
+          ],
+          "speakers": 516,
+          "words": 320288,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "Although we will not comment on market movements, the Chancellor outlined yesterday two new robust fiscal rules, which are the bedrock of stability on which this Budget is built. Those rules will put the public finances on a sustainable path and prioritise investment to support long-term growth. The current budget is in surplus by \u00a39.9 billion in 2029-30, with net financial debt falling in 2029-30 and with headroom of \u00a315.7 billion. When we went into the election in July, the first steps that we promised to the British people opened with these three words: \u201cDeliver economic stability\u201d. As the Chancellor confirmed yesterday, our first fiscal rule is the stability rule. That means we will bring the current budget into balance so that day-to-day spending is met with tax receipts. No more borrowing for day-to-day spending, no more living beyond our means, and no more papering over the cracks. Our tough new stability rule means that the British people, businesses and the markets can all see the fiscal responsibility that will underpin every decision we take in government. The Chancellor is clear that taking the tough decisions needed to deliver stability is not always easy.",
+              "date": "2024-10-31",
+              "debate": "",
+              "member": "4797"
+            },
+            {
+              "text": "The Budget confirms that borrowing will fall every year during the next period. Debt will start falling from 2028-29. The is right that we inherited a debt mountain. We inherited that as part of the consequence of the disastrous mini-Budget that he was part of in the Treasury team. It crashed the economy and it collapsed confidence in Britain\u2019s fiscal strength. We are fixing his failures. The chief investment strategist for L&G said this week that our Budget makes the UK The Conservatives have learned nothing. Their latest policies represent over \u00a330 billion in unfunded tax cuts, with the wealthiest benefiting most. With Labour, we have got support for families; under the Tories, it is a return to the\u2014",
+              "date": "2026-11-03",
+              "debate": "Topical Questions",
+              "member": "400"
+            }
+          ],
+          "id": 1,
+          "terms": [
+            "budget",
+            "fiscal",
+            "obr",
+            "budget responsibility",
+            "public finances",
+            "office budget"
+          ],
+          "speakers": 396,
+          "words": 280247,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "These policies threaten to be a huge\u2014maybe even the final\u2014nail in the coffin of many pubs that are really struggling. Analysis from UKHospitality has found that, by 2027-28, the average pub\u2019s business rates will be \u00a34,500 higher than they are today, rising to an astonishing \u00a312,900 within three years, even with the reduced multiplier and transitional relief. I asked one of my staff members how much they paid for a pint of beer in one of the pubs in my constituency, and they said a pint of lager came to \u00a37.50. That pub would have to sell an extra 1,720 pints just to offset the cost of those shocking tax increases. The Conservatives recognise the value of our pubs. We have pledged to scrap business rates for 250,000 retail, hospitality and leisure businesses because we recognise the importance of ensuring that businesses keep more of what they earn, allowing them to invest in the community rather than sending it back to central Government. I say to the Minister that Governments do not create growth or jobs; our businesses do.",
+              "date": "2026-06-17",
+              "debate": "Rural Pubs: Fiscal Support",
+              "member": "4818"
+            },
+            {
+              "text": "Charged \u00a37,448 in business rates by the last Conservative Government, that figure increased after the last Budget to \u00a324,309. While local authorities are yet to publish the charge for next year, after the three-yearly business rates revaluation and the abolition of retail, hospitality and leisure relief, the charge is likely to be around \u00a345,000 when transitional relief ends. That is a whopping tax increase of roughly 500% over the course of this Parliament before a single penny has been taken in sales. That is an absolute disgrace. It is an attack on our ambitious small business owners\u2014on our constituents who leap out of bed at the sound of their alarms, work hard, play by the rules and create jobs. Is it any wonder that many of them are now asking themselves, \u201cWhat\u2019s the point?\u201d Business rates for retail, hospitality and leisure businesses must be abolished, and that is exactly what a Conservative Government will do. Who is paying for the price for this Budget?",
+              "date": "2025-12-02",
+              "debate": "",
+              "member": "5100"
+            }
+          ],
+          "id": 24,
+          "terms": [
+            "business",
+            "business rates",
+            "rates",
+            "hospitality",
+            "businesses",
+            "pubs"
+          ],
+          "speakers": 398,
+          "words": 275671,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "I think another Select Committee then looked at this subject in 2022, and the Government at that stage said that they would implement a deposit return scheme. Does accept that over 200,000 people responded to the consultation that was then run, and 84% of respondents said that they agreed with implementing such a scheme?",
+              "date": "2025-01-21",
+              "debate": "",
+              "member": "146"
+            },
+            {
+              "text": "Some villages, including Ewelme in my constituency, successfully signed up to the previous voucher scheme but were then excluded from Project Gigabit as a result. The previous Government failed to deliver on the scheme, which meant that such villages were left with no internet at all or no fast broadband. Will the Minister commit to looking specifically at the village of Ewelme to see what he can do to include it in Project Gigabit?",
+              "date": "2025-01-22",
+              "debate": "",
+              "member": "5296"
+            }
+          ],
+          "id": 38,
+          "terms": [
+            "scheme",
+            "compensation",
+            "infected",
+            "compensation scheme",
+            "prison",
+            "infected blood"
+          ],
+          "speakers": 474,
+          "words": 257827,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "I agree, but I will leave it to the Minister to respond more fully. I will take interventions from a number of Members. I will try to get to them first, and I will do my best if others want to come in, but I am conscious that we do not have a huge amount of time. Because of the issues and trends that I have highlighted, \u2019s Festival Place shopping centre now contends with long-term vacancies. Some of the largest storefronts, such as the old Debenhams building, have sat empty for years. All too often, new businesses open their doors with optimism in the Top of the Town, but they find themselves shuttered within a matter of months. After 14 years of Conservative Government, Britain\u2019s high streets and town centres have been hollowed out. According to the Centre for Retail Research, more than 10,000 shops closed in 2023 alone. The high turnover of shopfronts leaves not just holes in the high street but a sense of instability that undermines confidence in the local economy, yet amid the challenges there is undeniably an opportunity to breathe new life into our high streets.",
+              "date": "2025-01-07",
+              "debate": "Town Centres",
+              "member": "5248"
+            },
+            {
+              "text": "residents really value their high street\u2014the 4,500 people who filled in my survey explaining what was important to them on the high street are testament to that. Unanimously, businesses said that taxes were too high and it was so hard to make a profit. Established businesses that have been operating for many years are struggling to make a profit under the current conditions. Residents also spoke about parking, accessibility and how they get to the high street\u2014a big issue\u2014but also about the state of the high street, from cleanliness to pop-up shops. On pop-up shops, which many Members have already mentioned, we have the Turkish barbers, who have the skill of Sweeney Todd and serve about two people a day, can be closed for months on end and then open, and the vape shops, which have neon signs and displays that are not in keeping with any town. From Ludlow over to Bridgnorth, we see them changing the shape of the high street. Residents do not like it, it is not appropriate and we need to call it out.",
+              "date": "2026-06-30",
+              "debate": "High Street Regeneration and Unlawful Storefronts",
+              "member": "4742"
+            }
+          ],
+          "id": 44,
+          "terms": [
+            "high streets",
+            "high",
+            "streets",
+            "high street",
+            "street",
+            "shops"
+          ],
+          "speakers": 431,
+          "words": 257141,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "My time is very limited, although I would like to hear more about the plane spoke about earlier. We have made the tough but necessary choices that this set of circumstances requires, which is why we have decided to raise employer national insurance contributions. The changes broadly return national insurance revenues as a proportion of GDP to the levels they were at before the previous Government\u2019s cuts to employee and self-employed NICs, but they do so in a way that does not result in higher taxes in people\u2019s payslips. They also do so in a way that increases protection for small businesses and charities, because we have decided to more than double the employment allowance to \u00a310,500 and remove the business size threshold. That means that from April 2025, all eligible organisations will be able to employ up to four people on the national living wage without paying a penny of employer\u2019s national insurance. Over half of all employers will pay the same or less national insurance than they did before, but we acknowledge that the decision will have an impact for other employers.",
+              "date": "2024-12-04",
+              "debate": "",
+              "member": "4797"
+            },
+            {
+              "text": "We have made responsible tax choices entirely in line with our manifesto. That is why the rates of employers\u2019 national insurance will increase by just 1.2 percentage points. The smallest businesses will be protected as the employment allowance will increase from \u00a35,000 to \u00a310,500, allowing Scottish firms to employ four national living wage employees full time without paying any employer national insurance on their wages.",
+              "date": "2025-01-07",
+              "debate": "Budget: Scotland",
+              "member": "5114"
+            }
+          ],
+          "id": 64,
+          "terms": [
+            "national insurance",
+            "insurance",
+            "insurance contributions",
+            "national",
+            "contributions",
+            "employer national"
+          ],
+          "speakers": 391,
+          "words": 250586,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "We are importing oil and gas from Norway from the very same seabed that we could exploit, while insisting that we are \u201ctoo good\u201d and \u201ctoo green\u201d to do that ourselves. British businesses and jobs could be benefiting from this industry, rather than being cut off. The policy does not even work on its own terms, because liquefied natural gas has four times the emissions of North sea oil and gas. As the hon mentioned, 120,000 jobs in the North sea are at risk. It does not make sense to shut down our own gas production when Norwegian oil and gas continues to be drilled from the North sea. That is why I am glad that the Leader of the Opposition,, announced that our party is committed to stopping the punishment of our domestic energy industry with damaging taxation. It is wrong for the energy profits levy to continue until 2030; we believe that it should be removed altogether, along with the ban on oil and gas exports. This change would actually increase revenue in the long run. It is not just the North sea that we should worry about.",
+              "date": "2025-06-18",
+              "debate": "Future of the Gas Grid",
+              "member": "5062"
+            },
+            {
+              "text": "We are in the absurd position of the Labour Chancellor thanking Canada and Norway for increasing their oil and gas production while her own Government are shutting down British production. It is so we can be more reliant on higher-emission gas from Qatar or the US and so we can send billions of pounds to Norway to import gas from the very same basin that we could be drilling ourselves. The Government are calling this energy independence. Have they lost their mind?",
+              "date": "2026-05-19",
+              "debate": "",
+              "member": "4806"
+            }
+          ],
+          "id": 15,
+          "terms": [
+            "oil",
+            "gas",
+            "oil gas",
+            "north sea",
+            "sea",
+            "north"
+          ],
+          "speakers": 285,
+          "words": 239606,
+          "scored": true
+        },
+        {
+          "examples": [
+            {
+              "text": "I am in massive agreement with putting more investment into the provision of advice. On Tuesday, we heard the terrible stats that only 9% of people actually get advice on their pension from a financial adviser. Yet this amendment is the wrong vehicle to achieve that, given that it is looking purely at DB surpluses. My understanding is that people who have DC pensions are much more likely to need advice than those who are on DB pensions, because that someone with a DC pension cannot tell how much they will get before they actually apply for the annuities when they retire. Their life circumstances may change between the age of 40 and hitting retirement. My understanding is that those on DB pensions have a pretty clear idea of what they are getting on a weekly, monthly or annual basis, in addition to a lump sum that they may be awarded as part of that DB pension scheme. Using the surplus created in DB schemes to fund advice for DC scheme participants would not be in the best interests of the scheme members.",
+              "date": "2025-09-04",
+              "debate": "",
+              "member": "4357"
+            },
+            {
+              "text": "I rise in support of the Government\u2019s new clauses, particularly those that relate to the pre-1997 pensionable service indexation where scheme rules allow. That will mean that pensioners whose pension schemes became insolvent through no fault of their own and that have failed to keep pace with inflation will have that rectified. As I mentioned yesterday in my speech on the Budget, that will benefit more than 250,000 Pension Protection Fund and financial assistance scheme members. I pay particular credit to the Pension Action Group, the PAG. It was formed in 2003 following the collapse of the Allied Steel and Wire pension scheme, which left thousands of workers without employment or their promised occupational pension. They are not covered by the Pension Protection Fund, which was introduced by the Pensions Act 2004 for members of defined benefit schemes whose employer went bust after 6 April 2005. The Pensions Action Group campaigned first for the financial assistance scheme to be set up for members of schemes that went bust, then for improvements to FAS benefits to bring them into line with those of PPF members.",
+              "date": "2025-12-03",
+              "debate": "New Clause 30 - Funding of the Ombudsman for the Board of the Pension Protection Fund",
+              "member": "4212"
+            }
+          ],
+          "id": 30,
+          "terms": [
+            "pension",
+            "pensions",
+            "pension scheme",
+            "pension schemes",
+            "schemes",
+            "scheme"
+          ],
+          "speakers": 282,
+          "words": 207517,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "There were things that the Conservative party covered up\u2014covered up from the Opposition, from this House and from the country. That is why today we are publishing a detailed audit of the real spending situation, a copy of which will be laid in the House of Commons Library. I take this opportunity to thank the Chief Secretary to the Treasury,, for his leadership, and Treasury officials for all their work in producing this document. Let me now explain what that document has uncovered. The previous Government published their plans for day-to-day spending in the spring Budget in March, but when I arrived at the Treasury, I was alerted by officials on the very first day that that was not how much the Government had expected to spend this year. It was not even close; in fact, the total pressure on those budgets across a range of areas was an additional \u00a335 billion. Once we account for the slippage in budgets that we usually see over a year and the reserve of \u00a39 billion designed to respond to genuinely unexpected events, that means that we have inherited a projected overspend of \u00a322 billion.",
+              "date": "2024-07-29",
+              "debate": "",
+              "member": "4031"
+            },
+            {
+              "text": "The UK spent \u00a362.2 billion on defence this year. The Government plan to raise that to \u00a373.5 billion by 2028-29. It is a significant sum. But let us be honest about what that actually shows because some of the detail deserves a great deal more explanation than the Government have so far provided. Take the day-to-day spending figures. Investment spending has increased by \u00a310.8 billion, a rise of nearly 23%. That sounds like a lot, but the single largest driver of that increase is a \u00a39 billion jump in depreciation and impairment costs, described only as a \u201cnon-routine accounting adjustment.\u201d That \u00a39 billion is the largest single movement in the MOD budget, and the Government have provided no detail whatever on what that really is. I am afraid that is not good enough. When the Minister responds, I hope that he will shed some light on what that adjustment actually represents, because the public, and this House, deserve to know. On capital spending, the increase is a more modest 0.3%, just \u00a363.7 million. Yet within that is a reduction in funding for single-use military equipment.",
+              "date": "2026-03-04",
+              "debate": "",
+              "member": "5265"
+            }
+          ],
+          "id": 39,
+          "terms": [
+            "billion",
+            "spending",
+            "billion billion",
+            "budget",
+            "million",
+            "investment"
+          ],
+          "speakers": 426,
+          "words": 193012,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "Let me make a little progress and then I will be delighted to take more interventions from colleagues. The Chancellor has previously argued that winter fuel payments should be means-tested and cut for the richest pensioners, but who here thinks that someone on an income of \u00a311,500 is rich? Age UK estimated that over 80% of pensioners living below or only just above the poverty line would lose their winter fuel payment. The issue is not just that low-income vulnerable pensioners miss out on help with their heating because they are just above the pension credit threshold\u2014the problem is worse than that. Last summer, the Government knew that over 800,000 people may be eligible for pension credit but did not claim it, meaning that they, too, would miss out on the winter fuel payment. The Pensions Minister at the time,, assured us that the Government would get on top of that. In fact, she told us that her target was to have 100% of those eligible for pension credit claiming it. But here we are many months later, and still around three quarters of a million eligible pensioners are not on pension credit.",
+              "date": "2025-03-19",
+              "debate": "",
+              "member": "4527"
+            },
+            {
+              "text": "I know that cares passionately for people living with dementia and their families, and he makes a very important point. It is another shameful decision by this Government not to support the most vulnerable in our society, and people should be shocked by it. Another constituent told me that they have stopped using their cooker and that they now find it difficult even to dry their washing. This Government promised that they would be on the side of pensioners. However, as a constituent recently summed it up for me, they feel They are right to feel like that. This Government have let my constituents\u2014indeed, all our pensioners\u2014down. They have balanced the books on the backs of people earning less than \u00a31,000 per month. Even if someone is still eligible for winter fuel payments, they will get them only if they have signed up for pension credit. The arbitrary barrier of the pension credit threshold will mean that many of our poorest pensioners\u2014Age UK estimates that around 1 million people have weekly incomes of less than \u00a350 above the poverty line\u2014will not receive their winter fuel payment this winter.",
+              "date": "2025-02-12",
+              "debate": "Support for Pensioners",
+              "member": "5100"
+            }
+          ],
+          "id": 73,
+          "terms": [
+            "pensioners",
+            "winter fuel",
+            "winter",
+            "fuel",
+            "pension credit",
+            "fuel payment"
+          ],
+          "speakers": 336,
+          "words": 181303,
+          "scored": true
+        }
+      ]
+    },
+    {
+      "label": "women / girls / women girls",
+      "speakers": 607,
+      "words": 1663776,
+      "topics": [
+        {
+          "examples": [
+            {
+              "text": "In the UK, I have supported initiatives to break down barriers to girls entering science, technology, engineering and maths, and I am proud to belong to a party that is working to close the gender pay gap and setting a national mission to halve violence against women and girls. Gender inequality, as we all know, has long been seen through the lens of women\u2019s struggles, and rightly so. Women have fought tirelessly for equality of opportunity and freedom from violence and discrimination, but when I meet and listen to my constituents, there are also undeniable challenges that specifically impact the health, wellbeing and life outcomes of boys and men. These are raised with me by women as well as men, because nobody fights for their sons more than mums. May I be clear at the outset of this debate that International Men\u2019s Day is not a call to diminish the importance of women\u2019s rights, nor to overshadow the progress made in gender equality for all? Rather, it is about recognising that gender inequality harms everyone\u2014men and boys as well as women and girls.",
+              "date": "2024-11-21",
+              "debate": "",
+              "member": "5108"
+            },
+            {
+              "text": "I express my profound gratitude for the work that it does to raise awareness of women and girls who have been so tragically killed by men. There is so much more that I could say, but the list continues to speak for itself. I will finish by saying only this: may these women get the justice that they deserved, and may we honour them by preventing others from suffering the same fate.",
+              "date": "2026-03-12",
+              "debate": "",
+              "member": "4370"
+            }
+          ],
+          "id": 87,
+          "terms": [
+            "women",
+            "girls",
+            "women girls",
+            "violence women",
+            "violence",
+            "men"
+          ],
+          "speakers": 511,
+          "words": 513496,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "I will speak about the Liberal Democrats\u2019 opposition to clause 1. The main reason why clause 1 should not be included in the Bill is that it fundamentally transforms the relationships that defendants have with the justice system. It is really important to make it clear that we are talking about defendants who have entered a not guilty plea, rather than the language that has been used this morning. In particular, clause 1 removes the defendant\u2019s ability to object to summary trial in the magistrates court\u2014a process that is streamlined for swift justice and should be reserved for less serious cases. In his independent review of the criminal courts, Sir Brian Leveson recommended removing the right to elect a Crown court trial for certain low-level either-way offences that carry a maximum sentence length of two years or less. The Bill would remove the right to elect Crown court trial for all either-way offences. Concerns have been raised publicly about that, including the quality of justice, the capacity of the magistrates court and the fairness of applying this retrospectively. Magistrates courts also face an increasing backlog, which is currently at 379,000 cases.",
+              "date": "2026-04-14",
+              "debate": "",
+              "member": "5335"
+            },
+            {
+              "text": "Well, I am not going to get into the whys and wherefores of this particular juncture of the debate. There is an easy fix for the scenario that I have described. My amendment 47 states that where a defendant has no previous convictions and the court decides that the case is suitable for summary trial, that defendant should be entitled to elect to have their trial in the Crown court. I do not think that the numbers will be very big. It is probably impossible for the Ministry of Justice to do modelling. In the 16 years that I have been a Member of this House and have been involved in debating criminal justice issues, I have rarely seen MOJ modelling that has been anywhere near accurate. However, even if it could do the modelling\u2014I suspect it cannot, because that data is not kept\u2014the numbers would be tiny. Because only 0.4% of all convictions in the magistrates court are appealed. However, in 41% of that 0.4% of cases\u2014it is a tiny number\u2014the conviction is overturned in the Crown court, because there has been a wrong decision.",
+              "date": "2026-10-13",
+              "debate": "New Clause 23 - Independent review",
+              "member": "4030"
+            }
+          ],
+          "id": 43,
+          "terms": [
+            "court",
+            "jury",
+            "crown court",
+            "magistrates",
+            "crown",
+            "courts"
+          ],
+          "speakers": 354,
+          "words": 449929,
+          "scored": true
+        },
+        {
+          "examples": [
+            {
+              "text": "I begin by thanking Members from across both Chambers for their work in getting this legislation to where it is today. A key cornerstone of our justice system must be the support and protection of victims and survivors, ensuring that those who have suffered at the hands of others can go on to live a life without fear and not be defined by the actions of those who harmed them. That will happen only by putting their voices at the heart of the justice system, ensuring that justice is served quickly, with properly funded support, protection from perpetrators and rehabilitation of offenders to reduce reoffending. There are countless examples of that failing to happen, which is why the Liberal Democrats have welcomed the intention of and many of the measures in the Bill. We are pleased with the Government\u2019s commitment to undertake a study into the use of AI transcription in criminal courts in order to explore whether that can reduce both the costs and time involved in the provision of transcripts to victims.",
+              "date": "2026-04-20",
+              "debate": "Clause 12 - Private prosecutions: regulations about costs payable out of central funds",
+              "member": "5335"
+            },
+            {
+              "text": "Eight years of legal action had failed to get to the truth by the time I was elected in 1997. There was no justice for those involved, and particularly for those who, as we now know, were unlawfully killed at. There was not a sniff of accountability for those whose gross failings had led to the disaster or those whose subsequent behaviour in blaming the victims and survivors led to so much anguish over so many years for so many families and survivors. That is despite the fact that every possible kind of legal action had been undertaken in that time\u2014none of them worked. Once the justice system gets it wrong, and appeals and judicial reviews do not succeed, it is almost impossible to get it right subsequently using the same system. It seemed like the truth did not matter to the justice system. The system was content to settle on a lie, with inquest verdicts of accidental death and no criminal or disciplinary proceedings for those at fault. It was content to allow the perpetrators to peddle the appalling falsehood that the disaster was caused by Liverpool fans being drunk, late and ticketless.",
+              "date": "2025-11-03",
+              "debate": "",
+              "member": "483"
+            }
+          ],
+          "id": 42,
+          "terms": [
+            "victims",
+            "justice",
+            "criminal justice",
+            "criminal",
+            "survivors",
+            "inquiry"
+          ],
+          "speakers": 464,
+          "words": 448454,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "It is a bold aim, but a vast undertaking. To achieve it, we must have cultural and legislative change. We have the opportunity in this House to create laws that not only protect women and girls, but effect significant cultural shifts. Passing the Domestic Abuse (Aggravated Offences) Bill, introduced by, would enable domestic abuse to be considered an aggravating factor in assault cases. That would distinguish it from other offences, and its severity and gravity could be understood more clearly. The Bill would exclude domestic violence perpetrators from schemes for early release from prison, and protect survivors of domestic abuse. In a survey conducted for a Crown Prosecution Service report on prosecution of rape and sexual offenses, 92% of CPS staff agreed that current court backlogs inhibit the prosecution of rape and serious sexual assault. The Government must address these backlogs, improve safety for women in the justice system, and fully support the staff who are working daily to support victims of trauma and abuse. Training of those who work with victims is of the utmost importance, but has not been prioritised.",
+              "date": "2025-01-09",
+              "debate": "",
+              "member": "5263"
+            },
+            {
+              "text": "As I have stated, this Government were elected with a landmark mission to halve violence against women and girls within a decade. To do so, we must improve the justice system\u2019s response to these crimes, including domestic abuse. We must relentlessly target the most prolific and harmful perpetrators, better support victims and survivors, and ensure timely and effective justice. We will put domestic abuse experts in 999 control rooms and strengthen the use of protection orders, and we will strengthen the tools available to manage domestic abuse offenders.",
+              "date": "2024-09-10",
+              "debate": "Topical Questions",
+              "member": "4849"
+            }
+          ],
+          "id": 17,
+          "terms": [
+            "abuse",
+            "domestic abuse",
+            "domestic",
+            "victims",
+            "violence",
+            "sexual"
+          ],
+          "speakers": 362,
+          "words": 251897,
+          "scored": false
+        }
+      ]
+    },
+    {
+      "label": "defence / defence spending / defence investment",
+      "speakers": 545,
+      "words": 1341532,
+      "topics": [
+        {
+          "examples": [
+            {
+              "text": "It is all very well spending 2.5% of GDP on defence, but we have to spend it on the right kit. Over the weekend I noted a story about our NATO allies being frustrated with Britain for not investing in appropriate missile defence systems. As the Secretary of State meets his 2.5% commitment, will he commit to investing in surface-to-air missiles, precision and hypersonic missile systems, DragonFire laser systems and counter-drone blocking technology to ensure that the British Army is the most advanced and able in the western world?",
+              "date": "2025-01-06",
+              "debate": "Defence Spending: 2.5% of GDP",
+              "member": "5303"
+            },
+            {
+              "text": "I thank my fellow Devon MP for that question. He will be able to read the joint statement by the UK, Italy, France, Germany and Poland when it is published on the Ministry of Defence website on the conference\u2019s conclusion. I made the point clearly in the press conference afterwards that the UK is calling on all NATO partners to increase their defence spending. We have a plan to increase our defence spending from 2.3% to 2.5%. Where any increased defence spending goes matters, because it needs not only to deter aggression, but to defeat it and\u2014perhaps most importantly and relevant to this debate\u2014to be interoperable with our allies. We need to ensure that any investment in defence has an increase in our deployability and our lethality as we fight together. It is the assumption of this Government, with a declared NATO-first policy, that we will be supporting our NATO allies in any defensive measures. That is the reason we have the British Army in Estonia with Operation Cabrit. It is the reason we have NATO air policing in a variety of states along NATO\u2019s eastern flank.",
+              "date": "2025-01-16",
+              "debate": "",
+              "member": "4682"
+            }
+          ],
+          "id": 16,
+          "terms": [
+            "defence",
+            "defence spending",
+            "defence investment",
+            "investment plan",
+            "spending",
+            "defence review"
+          ],
+          "speakers": 410,
+          "words": 474184,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "In contributing troops, drones and munitions, Russia\u2019s allies remain active participants in Russia\u2019s illegal war in Ukraine. Will the Prime Minister please assure the House that alongside our allies we are closely monitoring Russia\u2019s strategic partners during the ongoing peace efforts?",
+              "date": "2025-03-03",
+              "debate": "",
+              "member": "4277"
+            },
+            {
+              "text": "What we have seen from Russia\u2014in Georgia, Moldova, Romania, the Baltic states and now playing out in the western Balkans\u2014is nothing less than hybrid warfare. Democracies are working hard together to stand strong and support Ukraine, but does the Minister agree that we need to put more effort into working with our allies in support of eastern Europe and the western Balkans, which are very much on the frontline?",
+              "date": "2025-03-31",
+              "debate": "",
+              "member": "1536"
+            }
+          ],
+          "id": 22,
+          "terms": [
+            "ukraine",
+            "russia",
+            "putin",
+            "russian",
+            "ukrainian",
+            "war"
+          ],
+          "speakers": 361,
+          "words": 434346,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "I am pleased that the RFA is included in the Bill and that I have played a tiny part in shaping it. I am also pleased that those who keep our armed forces moving around will now be properly recognised and protected. As a Government, we promised to renew the nation\u2019s contract with those who serve, and we are delivering on that.",
+              "date": "2026-01-26",
+              "debate": "",
+              "member": "5279"
+            },
+            {
+              "text": "I want to speak in the debate today to recognise the contribution of all those who serve in our armed forces and those who stand beside them in support. It is Armed Forces Week, and I will be attending the Huntington Armed Forces Day on Saturday at Sapley playing fields. I pass on my appreciation to Anna Dutton for her efforts in organising the day from a standing start. For a region with strong links to the armed forces, it is wonderful that our armed forces personnel and families, both British and American, will have the opportunity to participate locally. I say that as an MP who is very proud to have military bases in his constituency, whether they are British with RAF Wyton, the home of UK defence intelligence, or RAF Molesworth and RAF Alconbury, which are both run by the US air force. We have an extraordinary number of US personnel in and around our villages, which always takes people by surprise when they hear those American accents.",
+              "date": "2025-06-26",
+              "debate": "",
+              "member": "5089"
+            }
+          ],
+          "id": 47,
+          "terms": [
+            "armed forces",
+            "armed",
+            "forces",
+            "veterans",
+            "personnel",
+            "covenant"
+          ],
+          "speakers": 412,
+          "words": 433002,
+          "scored": false
+        }
+      ]
+    },
+    {
+      "label": "gaza / israel / israeli",
+      "speakers": 561,
+      "words": 1192536,
+      "topics": [
+        {
+          "examples": [
+            {
+              "text": "The Liberal Democrats have long called for a two-state solution to the conflict in the middle east based on the 1967 borders. In the immediate term, the current ceasefire in Gaza must be maintained, and both sides must advance talks on phase 2. That must include the release of all remaining hostages, including the bodies of hostages killed in Hamas captivity, and it must ensure that aid can flood into Gaza to relieve the suffering of Palestinians after 18 months of devastation. The UK Government must also urgently engage with the Israeli Government to ensure they reopen aid routes and the supply of electricity, in line with Israel\u2019s obligations under international law. Their decision to blockade and stop electricity entering Gaza is wrong, and it will only exacerbate the suffering of the Palestinians in the strip. Beyond the immediate maintenance and progression of the ceasefire, a just, long-term peace must include the immediate recognition of the state of Palestine. My has introduced a Bill in each of the last three Sessions calling for the immediate recognition of a Palestinian state based on the 1967 borders. My noble Friend Baroness Northover has done the same.",
+              "date": "2025-03-11",
+              "debate": "Israeli-Palestinian Peace: International Fund",
+              "member": "5214"
+            },
+            {
+              "text": "Is it being used as a route for weapons that are being deployed in Gaza? How many US air force flights have flown from RAF Akrotiri to Israel since October 2023? Have Israel\u2019s F-35 jets been stored and repaired at RAF bases, whether Akrotiri or anywhere else? What video footage do the Government have of the war zone from RAF flights? Will they release that footage? What intelligence has been passed on to Israel? What legal advice have the Government received over an assessment of genocide? When will they publish that advice? I finish by reminding the House that in October 2023 many of us called for an immediate ceasefire, for the bombing to stop and for the release of all hostages. We condemned those attacks but expressed alarm over the wholly disproportionate nature of the response. We warned that we were witnessing the beginning of the total annihilation of Gaza and we pleaded with political leaders on both sides to call for peace. Today, some politicians have finally begun to backtrack a bit\u2014perhaps they are frightened of the consequences and of their own inhumanity.",
+              "date": "2025-06-04",
+              "debate": "",
+              "member": "185"
+            }
+          ],
+          "id": 34,
+          "terms": [
+            "gaza",
+            "israel",
+            "israeli",
+            "aid",
+            "palestinian",
+            "humanitarian"
+          ],
+          "speakers": 389,
+          "words": 557400,
+          "scored": true
+        },
+        {
+          "examples": [
+            {
+              "text": "We have a deafening silence and lack of action. One cannot choose between human rights abuses. In Kashmir, we continue to see human rights defenders, journalists and political leaders being targeted relentlessly. Political prisoners are denied the right to a fair trial and used as an example of what happens when Kashmiris dare to speak the truth. That is not the rule of law; it is state-sponsored persecution designed to break the will of an entire people.",
+              "date": "2025-12-10",
+              "debate": "Kashmir: Self-determination",
+              "member": "4394"
+            },
+            {
+              "text": "Many of those arrested over the weekend for simply holding placards were older and disabled citizens and human rights activists, who can hardly be described as terrorists. Considering that the UN human rights chief has warned that proscription dangerously conflates protest with terrorism, does the Minister accept that we at least run some risk of suppressing protest and dissent, through which we obtained many of the freedoms that we enjoy today?",
+              "date": "2025-09-08",
+              "debate": "",
+              "member": "5230"
+            }
+          ],
+          "id": 62,
+          "terms": [
+            "rights",
+            "human rights",
+            "human",
+            "european convention",
+            "convention",
+            "convention human"
+          ],
+          "speakers": 450,
+          "words": 396960,
+          "scored": true
+        },
+        {
+          "examples": [
+            {
+              "text": "As she alluded to, we have had many exchanges on events in Israel and Palestine. Let me start by setting out a little of the legal position in relation to the 1948 convention on genocide. The convention was clearly born out of the horrors of the second world war. It was a solemn commitment by the international community to say, \u201cNever again.\u201d Today, upholding the convention is of paramount importance to the Government. Complying with international law is a fundamental part of the Government\u2019s commitment to the rule of law. I can confirm that we continue to treat all our international legal and humanitarian obligations seriously. That is what our assessments are focused on, and we abide by all of them, including those under the genocide convention.",
+              "date": "2025-06-17",
+              "debate": "Genocide Convention: UK Compliance",
+              "member": "5148"
+            },
+            {
+              "text": "I have sought in all my remarks to remain grounded in the relevant principles of international law. It is absolutely clear that the strikes Iran has conducted this week in Omani waters or on the territory of our friends and partners are a breach of international law. That then provides, under the relevant framework, options for response. We are not party to that response, but we are party to seeking to shoot down these attacks when they threaten our friends and partners. I do not want to enter into an emotional discussion of these questions. We are absolutely clear that what is happening in the strait of Hormuz and the wider region is a threat to international law, which this Chamber and this country hold dear, and it must be upheld.",
+              "date": "2026-07-09",
+              "debate": "",
+              "member": "5148"
+            }
+          ],
+          "id": 66,
+          "terms": [
+            "international",
+            "law",
+            "international law",
+            "humanitarian law",
+            "international humanitarian",
+            "humanitarian"
+          ],
+          "speakers": 397,
+          "words": 238176,
+          "scored": false
+        }
+      ]
+    },
+    {
+      "label": "ireland / northern ireland / northern",
+      "speakers": 510,
+      "words": 1189625,
+      "topics": [
+        {
+          "examples": [
+            {
+              "text": "She will be aware of the charity Beyond the Battlefield in Portavogie, in my constituency, which looks after soldiers across Northern Ireland who fall between the cracks. May I extend an invitation to her? It would be lovely to see her in Portavogie and, and I know that the people there would be encouraged by a visit from her.",
+              "date": "2025-10-28",
+              "debate": "",
+              "member": "4131"
+            },
+            {
+              "text": "The Minister and her colleagues present voted in favour of that agreement. They recognised the recurring issues in Northern Ireland, and the harm that those issues were causing the people of Northern Ireland and consumers, no matter the constitutional outlook. If constitutional principles are not shared, it harms ordinary people in Northern Ireland. They voted for solutions on an interim basis\u2014a stepping-stone approach\u2014to move these issues forward. Where are we on that today? What is the Government\u2019s position on eradicating routine checks within the UK\u2019s internal market system? They voted for it in this House back in February, and they did so because they recognised the constitutional implications that checks were having and the practical frustrations they were causing consumers in Northern Ireland.",
+              "date": "2024-12-06",
+              "debate": "",
+              "member": "4360"
+            }
+          ],
+          "id": 71,
+          "terms": [
+            "ireland",
+            "northern ireland",
+            "northern",
+            "united kingdom",
+            "kingdom",
+            "great northern"
+          ],
+          "speakers": 380,
+          "words": 696304,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "Can I say gently to that Scotland has rightly had plenty of devolution, but that does not mean that the two decades of SNP Government have been successful?",
+              "date": "2026-09-07",
+              "debate": "",
+              "member": "4077"
+            },
+            {
+              "text": "I congratulate on bringing in the Bill. Does agree that the Bill demonstrates that Scotland\u2019s Labour MPs are ensuring that both of Scotland\u2019s Governments are working effectively for them?",
+              "date": "2025-01-17",
+              "debate": "",
+              "member": "5064"
+            }
+          ],
+          "id": 56,
+          "terms": [
+            "scotland",
+            "scottish",
+            "scottish parliament",
+            "devolved",
+            "glasgow",
+            "scottish national"
+          ],
+          "speakers": 257,
+          "words": 325447,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "Wales is, of course, footing the bill for HS2, a project based entirely in England now costing up to \u00a3103 billion. While Scotland and Northern Ireland have their fair share of Barnett consequentials, Wales has nothing. People in Wales have had enough of being treated as second-class citizens\u2014they recently elected a Senedd with a majority of Members within it committed to ending this injustice. Will the Secretary of State respect the wishes of the people of Wales and be open to talks with the Welsh Government on reclassifying HS2 so that Wales no longer pays for it, or at least gets its fair share of the Barnett consequentials?",
+              "date": "2026-05-19",
+              "debate": "",
+              "member": "5177"
+            },
+            {
+              "text": "I am sorry if this is my ignorance as a new legislator, but clauses 7, 8 and 9 applied to England and Wales. However, clauses 56, 57 and 58 apply the same measures to Scotland, and then we have the same for Northern Ireland. In previous clauses, we have also seen that replicated for Wales. Does that mean that clauses 7, 8 and 9 apply to both England and Wales, and how come that devolution is treated differently? Perhaps knows the answer to that, or maybe the Minister could clarify.",
+              "date": "2025-01-14",
+              "debate": "",
+              "member": "5340"
+            }
+          ],
+          "id": 9,
+          "terms": [
+            "wales",
+            "england wales",
+            "england",
+            "welsh",
+            "scotland",
+            "wales northern"
+          ],
+          "speakers": 316,
+          "words": 167874,
+          "scored": false
+        }
+      ]
+    },
+    {
+      "label": "farmers / farming / food",
+      "speakers": 585,
+      "words": 1172535,
+      "topics": [
+        {
+          "examples": [
+            {
+              "text": "However, progress has been slow, and the uncertainty surrounding the sustainable farming incentive risks undermining the confidence and stability that farmers need if they are to continue to invest in regenerative agriculture, local food networks and diversified protein crops, as proposed by the National Farmers Union. Improving soil health, supporting pollinators and keeping farm businesses viable makes business sense too. As Martin Lines\u2014the chief executive of the Nature Friendly Farming Network, who farms in Cambridgeshire\u2014says, nature-friendly farming plays a \u201cvital role\u201d in building resilience to weather extremes. We also call for a just transition in food and farming, as does World Animal Protection. At home, we must match words with action. The Liberal Democrats would accelerate the delivery of the long-promised land use framework, aligning food, farming and biodiversity policy. We would protect and strengthen the sustainable farming incentive and deliver it now. We would support a just transition for farmers and animals, reduce food waste across the supply chain and champion local, sustainable food production to boost rural economies and resilience.",
+              "date": "2025-10-14",
+              "debate": "COP30: Food System Transformation",
+              "member": "5078"
+            },
+            {
+              "text": "It is not the fault of farmers\u2014especially those in places such as my constituency in Kent, with its astronomical house prices\u2014that their land is so valuable in a way that does not at all reflect their farm\u2019s profitability.",
+              "date": "2024-12-04",
+              "debate": "",
+              "member": "5285"
+            }
+          ],
+          "id": 33,
+          "terms": [
+            "farmers",
+            "farming",
+            "food",
+            "farms",
+            "farm",
+            "food security"
+          ],
+          "speakers": 380,
+          "words": 418520,
+          "scored": true
+        },
+        {
+          "examples": [
+            {
+              "text": "The third reason is that, unless they met the requirements of the European Union, the trade deals that we have already entered into would have to be rewritten or scrapped. We are in the foothills of trying to maximise the benefits of those trade deals. They were never easy to deliver, but to start to unpick them now would show a degree of bad faith and certainly uncertainty in the collected and settled mind of the political class of this country. The fourth reason, which I would suggest is probably the most compelling to even the most ardent rejoiners in Parliament, is that the European Union does not want it. The European Union now sees us for what we are. Whether we like it or not, we are a third country. This motion is an enormous arrogance. I cannot speak for all of them, but I have had the lucky and favourable opportunity of talking to senior EU officials about this very proposal. There is neither interest in nor appetite for it. They want to engage with the UK Government, as they are doing, in the organic evolution of what we have.",
+              "date": "2025-12-09",
+              "debate": "",
+              "member": "4494"
+            },
+            {
+              "text": "We were not part of a simple trading arrangement: under the Maastricht treaty, which the Conservative Government of John Major signed us up to without a referendum, our sovereignty was handed away to a political union. When my parents voted to join a common market, or to stay in a common market, in the 1970s, that was about free trade; it was about co-operation and working together as neighbours. But over the years it became a political union, and our laws\u2014the laws that we are elected to make\u2014were overridden by a massive unelected bureaucracy in Brussels. Our trade has to be global\u2014",
+              "date": "2026-09-02",
+              "debate": "EU Membership Referendum: Impact on the UK",
+              "member": "1447"
+            }
+          ],
+          "id": 68,
+          "terms": [
+            "union",
+            "trade",
+            "european union",
+            "european",
+            "trade union",
+            "unions"
+          ],
+          "speakers": 446,
+          "words": 358570,
+          "scored": true
+        },
+        {
+          "examples": [
+            {
+              "text": "May I associate myself with the Minister\u2019s condemnation of Iran\u2019s attacks on its neighbours? Does he agree that at least part of the problem in the fragility of the deal is its very ambiguity? It is a deal that was negotiated in haste, at a distance and through third parties, and it inevitably does not reflect agreement, but rather fudges some of the deep differences between the parties. Does he agree that we need a sustainable deal that is thoroughly negotiated, has more detail and includes recognition that, inevitably, concessions are needed on both sides?",
+              "date": "2026-07-09",
+              "debate": "",
+              "member": "1536"
+            },
+            {
+              "text": "On a very serious note, the Opposition have been accused of being pro-Russia, pro-China and pro-Iran repeatedly by the Prime Minister, which the Minister has defended, because we dared to oppose the Chagos deal. If he wants unity, we need to see that on both sides of the House.",
+              "date": "2025-07-02",
+              "debate": "",
+              "member": "4519"
+            }
+          ],
+          "id": 55,
+          "terms": [
+            "deal",
+            "mauritius",
+            "garcia",
+            "diego garcia",
+            "diego",
+            "chagos"
+          ],
+          "speakers": 394,
+          "words": 218954,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "It is a pleasure to contribute with you in the Chair,. My introduced this important debate so well. As a nation of animal lovers, we rightly seek the highest welfare standards. We were the first country to create animal protection law, in 1822, and the first country to set up an animal welfare charity, in 1824. I was proud to be elected as the Member of Parliament for on a manifesto that pledged the most ambitious advancement of animal welfare in a generation. Today, I reaffirm my commitment to my constituents in, because the compassion that we show for animals represents who we are as a people. Animal welfare is extremely important. We know that cages and crates cause huge suffering for farm animals. We need action now to end the use of cages and crates for farmed animals because our constituents demand it. I know this issue is of significant interest and importance to my constituents because 190 of them signed the petition and my mailbox has been inundated by constituents getting in touch about this issue.",
+              "date": "2025-06-16",
+              "debate": "Farmed Animals: Cages and Crates",
+              "member": "5210"
+            },
+            {
+              "text": "Under the slogan, \u201cA hold on your heart\u201d, that welfare labelling scheme has seen knowledge of animal welfare conditions skyrocket among the populace and has led to a profound change in shopping habits for the better, for consumers and animals alike. Animal welfare is not a niche concern. According to a poll conducted by the Agriculture and Horticulture Development Board last year, 84% of shoppers think animal welfare is important, yet they are currently given little information about the standards involved in the products they buy. Labour has pledged to boost animal welfare in a generation. Let us make good on that promise while shoring up the competitiveness of our struggling farmers. By introducing animal welfare labelling, we can reward those who work hard to treat animals well. We can empower consumers to reject low-welfare imports and encourage countries that wish to access our large and lucrative market to rise to our standards\u2014a win for all.",
+              "date": "2025-06-03",
+              "debate": "Animal Welfare in Farming",
+              "member": "5312"
+            }
+          ],
+          "id": 83,
+          "terms": [
+            "animal",
+            "animal welfare",
+            "welfare",
+            "animals",
+            "dogs",
+            "welfare standards"
+          ],
+          "speakers": 246,
+          "words": 176491,
+          "scored": false
+        }
+      ]
+    },
+    {
+      "label": "police / policing / crime",
+      "speakers": 507,
+      "words": 599250,
+      "topics": [
+        {
+          "examples": [
+            {
+              "text": "One other statistic that I would like to share at this stage is that black people are four times more likely to be murdered as a result of knife crime. That might be some of the reason why there was so much support for stop and search among ethnic minority groups. However, these powers can only work if we have a clear police presence on our streets. Under the previous Conservative Government, I was proud that we achieved our manifesto commitment to recruit 20,000 new police officers. That allowed crime in the West Midlands to come down by 10% and led to reduced wait times after 999 calls. The new Government have a target to recruit more police officers, but I feel their numbers fall short when we properly assess their plans, because only 3,000 of them will be new officers\u2014most of the 13,000 are either reassigned or redeployed, or are part-time volunteers or police community support officers with no powers of arrest. Perhaps the Minister may comment on that.",
+              "date": "2025-03-12",
+              "debate": "Use of Stop and Search",
+              "member": "4818"
+            },
+            {
+              "text": "In December 2024 the Government announced their neighbourhood policing guarantee, pledging 13,000 more officers in neighbourhood policing roles. However, since that announcement the number of officers has actually fallen. By March this year we had 4,000 fewer frontline officers protecting our streets than the year before. If the Government are serious about this crisis, they need deliver, not promise, more officers on our streets. Crime reporting is processed primarily through helpline reporting. That has diminished the relationship between local police forces and the communities they serve. We call for a police front desk to be set up in every community to allow people to report crimes and to share information with the police face to face in accessible locations. I am proud to have helped to secure a police station for. More personal contact means that more crimes are properly investigated and more criminals are caught. Vehicle theft has become an epidemic in this country. It is organised and evolving, and it is being met with a system that has neither the resources nor the co-ordination to keep pace.",
+              "date": "2026-09-08",
+              "debate": "Vehicle Theft",
+              "member": "5040"
+            }
+          ],
+          "id": 59,
+          "terms": [
+            "police",
+            "policing",
+            "crime",
+            "officers",
+            "police officers",
+            "antisocial"
+          ],
+          "speakers": 507,
+          "words": 599250,
+          "scored": false
+        }
+      ]
+    },
+    {
+      "label": "security / national security / national",
+      "speakers": 488,
+      "words": 580635,
+      "topics": [
+        {
+          "examples": [
+            {
+              "text": "However, the deputy National Security Adviser provided evidence reflecting the threats posed by China as the CPS built its case. On the comments, referenced by, made by two former Cabinet Secretaries, I note that they have both remarked that the Official Secrets Act was not fit for purpose. Of course, if the Conservatives had been swift in replacing it, we would not be here today. Safeguarding our national security is the most fundamental responsibility of this Government. In 14 years of rule, the Conservative party was slow both to update our national security laws and to adapt to the national security realities that we face today. If we followed the Conservatives\u2019 approach\u2014to ignore and refuse to engage with China\u2014that would undermine our national security. On this side of the House, we will always defend our national interest.",
+              "date": "2025-10-13",
+              "debate": "",
+              "member": "4243"
+            },
+            {
+              "text": "I thank for those remarks, and I will convey that message to the Prime Minister. We have clearly seen that our Prime Minister is standing up for the UK national interest, our security and prosperity and British values. We know that our security and prosperity are strengthened by alliances and partnerships, not by pulling apart.",
+              "date": "2026-01-19",
+              "debate": "",
+              "member": "420"
+            }
+          ],
+          "id": 14,
+          "terms": [
+            "security",
+            "national security",
+            "national",
+            "china",
+            "threats",
+            "threat"
+          ],
+          "speakers": 458,
+          "words": 418076,
+          "scored": false
+        },
+        {
+          "examples": [
+            {
+              "text": "The truth is that my Committee did ask. We asked on the record, and we got a partial truth that could hardly be the whole truth. We are on record as asking the very questions that hecklers on the Opposition Benches say should have been asked. The answers are there, on the record; people can see what we got when we did ask. A month before Mandelson\u2019s appointment was announced, the then Cabinet Secretary advised that the necessary security clearance should be acquired before a political appointment was confirmed. That does not seem to have been the usual practice. I am glad that it has changed, because the process was clearly abused. Someone\u2014probably Peter Mandelson himself\u2014leaked his appointment as US ambassador to the press, which effectively bounced the Government into confirming it. When the confirmation of his appointment came forward, neither the offer letter to Peter Mandelson nor the Government\u2019s press release made it clear that the appointment was subject to vetting.",
+              "date": "2026-04-20",
+              "debate": "",
+              "member": "1536"
+            },
+            {
+              "text": "In November 2024, the Cabinet Secretary advised the Prime Minister to conduct security vetting on prospective candidates before appointing anybody to the ambassador\u2019s post in. In December 2024, the Prime Minister ignored that guidance and appointed Peter Mandelson anyway. In January 2025, the Prime Minister repeatedly insisted before the press and the public that Peter Mandelson had passed security vetting, despite the fact that that was not the case. When asked yesterday, he twice refused to confirm that he knew about Peter Mandelson\u2019s links to Sistema, despite the fact that the advice that he received in December 2024 explicitly pointed it out. The advice included the following quote Either the Prime Minister is still reluctant to share with us all the information that we deserve, or he did not read the advice he was given\u2014despite insisting repeatedly that his decision to appoint Mandelson was based on that advice. In light of this, can the Minister tell us definitively this afternoon whether the Prime Minister considered these facts about Peter Mandelson\u2019s role at Sistema when appointing him\u2014yes or no? If he did not, why did he not read his brief?",
+              "date": "2026-04-21",
+              "debate": "",
+              "member": "5285"
+            }
+          ],
+          "id": 65,
+          "terms": [
+            "mandelson",
+            "peter mandelson",
+            "peter",
+            "vetting",
+            "epstein",
+            "appointment"
+          ],
+          "speakers": 232,
+          "words": 162559,
+          "scored": false
+        }
+      ]
+    },
+    {
+      "label": "water / water companies / sewage",
+      "speakers": 398,
+      "words": 476627,
+      "topics": [
+        {
+          "examples": [
+            {
+              "text": "Seeing the quality of the river water is key, and that is one thing that bathing water status allows us to do. In tackling the need for improvement, many local groups face an uphill battle. Sewage pollution is a national disgrace. Time and again we see reports of raw sewage being discharged into our rivers, lakes and seas, turning what should be places of recreation into sites of contamination. In my constituency, further downstream on the Tone, examples of recent discharges of untreated effluent are commonplace. At Hook stream, which could otherwise be a charming stretch of the River Tone, there have been over 188 hours of discharge in the first eight weeks of 2025 alone. Residents are rightly appalled by the sewage releases; no one should have to fear that going too close to their local river could make them ill, especially as, all the while, water companies have paid out millions of pounds in dividends and bonuses. We need flow-rate monitoring, extra stormwater storage and resources for the Environment Agency to increase enforcement, but bathing water regulations are a key tool in reducing pollution.",
+              "date": "2025-03-04",
+              "debate": "Bathing Water Regulations",
+              "member": "5250"
+            },
+            {
+              "text": "The Environment Agency used to be responsible for monitoring sewage discharges, but for more than a decade now the water companies have had the responsibility for monitoring releases via storm overflows. In the previous Parliament, the Environmental Audit Committee heard that illegal spills may have been 10 times greater than that declared by the water companies. Will the new commission consider removing from water companies the monitoring of sewage discharges, or will it let them mark their own homework, as the previous Government did?",
+              "date": "2024-10-23",
+              "debate": "",
+              "member": "4942"
+            }
+          ],
+          "id": 46,
+          "terms": [
+            "water",
+            "water companies",
+            "sewage",
+            "companies",
+            "thames water",
+            "thames"
+          ],
+          "speakers": 398,
+          "words": 476627,
+          "scored": true
+        }
+      ]
+    },
+    {
+      "label": "asylum / immigration / asylum seekers",
+      "speakers": 351,
+      "words": 370775,
+      "topics": [
+        {
+          "examples": [
+            {
+              "text": "Members may imply that we should be cautious about tying illegal migration to the challenges facing our asylum system; however, they are clearly linked. Government statistics show that claims from small boat arrivals were at a record high in the latest year, with more than half of asylum seekers in the latest year having arrived in the UK through irregular routes, which typically means those who arrived in the UK in small boats. Another 38% of asylum seekers had previously entered the UK on a visa or with other leave with relevant documentation. Therefore, we as an Opposition agree that there is a case for significant reforms. When reforms were put to the House, my colleague the Leader of the Opposition said that the Home Secretary The current system and it is often not fair on the many people we are discussing today That is why the Opposition have promised our support to the Government to get elements of the proposals passed.",
+              "date": "2025-12-17",
+              "debate": "Asylum Reforms: Protected Characteristics",
+              "member": "4844"
+            },
+            {
+              "text": "If the Government plan to keep their promise to end hotel use, they must process the claims of the 90,000 asylum seekers in the backlog. The Liberal Democrats have a plan to do that within six months using Nightingale-style processing centres. Does the Home Secretary seriously believe that an overstretched Home Office that is yet to clear the existing backlog can also undertake reviews of every refugee\u2019s status every two-and-a-half years? The UK must continue to lead international efforts to manage large migratory flows. Because the flow of people comes from Europe, the Home Secretary will need to work with the EU on a solution. The Oxford Migration Observatory has identified a clear Brexit effect. That means that people refused asylum in the EU make a second attempt here\u2014a consequence of the Brexit delivered by the Conservatives and. The Minister for Border Security and Asylum refused earlier to answer whether Brexit has harmed our immigration and asylum system, so I will ask the Home Secretary now. Does she think that Brexit has made it easier or more difficult for this country to control its borders and asylum system?",
+              "date": "2025-11-17",
+              "debate": "",
+              "member": "5055"
+            }
+          ],
+          "id": 28,
+          "terms": [
+            "asylum",
+            "immigration",
+            "asylum seekers",
+            "seekers",
+            "hotels",
+            "migration"
+          ],
+          "speakers": 351,
+          "words": 370775,
+          "scored": true
+        }
+      ]
+    },
+    {
+      "label": "football / regulator / clubs",
+      "speakers": 288,
+      "words": 302693,
+      "topics": [
+        {
+          "examples": [
+            {
+              "text": "Having spoken to a great many football fans across the country and in my constituency, I can say with confidence that they would agree even more now that Labour is trying to directly interfere in English football. Does the Minister recognise that one particular area of concern stems from one of UEFA\u2019s fundamental requirements, which is that there should be no Government interference in the running of football? Those are not my words but those of UEFA. Reports also suggest that UEFA has made it clear that it has specific rules to guarantee the autonomy of sport and fairness of sporting competition, the ultimate sanction for which would be excluding any federation from UEFA and teams from competition. Are the Labour Government prepared to be the reason that English football clubs risk being banned from the champions league, the UEFA league, the conference league, the super cup or\u2014even worse\u2014national competitions? Moreover, UEFA, like the Conservative party, reportedly has concerns about scope creep from the Government\u2019s regulator. Our Bill intended that the regulator would oversee the long-term financial sustainability of clubs and help protect fans and heritage assets.",
+              "date": "2025-04-28",
+              "debate": "",
+              "member": "4932"
+            },
+            {
+              "text": "I will make some progress because I am conscious of the Chairman\u2019s time. The new clause would ensure that where a club proposes to adopt a political stance not directly related to football or the club\u2019s commercial interests, it must first engage with its supporters through an appropriate consultation mechanism. This is about strengthening the bond between club and community, not weakening it. New clause 16 would be a simple safeguard to protect the cultural neutrality of our national game, and to ensure that football remains a source of unity, not division. The cumulative effect of the Bill\u2019s provisions, as they stand, is that they give the Government\u2019s regulator enormous latitude to impose an ever-growing set of compliance obligations on clubs with little oversight or scrutiny from Parliament or fans. It is entirely possible, perhaps even likely, that clubs could find themselves constantly revising governance arrangements, redrafting financial documents and hiring compliance staff simply to keep up with the regulator\u2019s demands\u2014demands that are funded by the clubs.",
+              "date": "2025-06-10",
+              "debate": "",
+              "member": "4932"
+            }
+          ],
+          "id": 35,
+          "terms": [
+            "football",
+            "regulator",
+            "clubs",
+            "club",
+            "fans",
+            "league"
+          ],
+          "speakers": 288,
+          "words": 302693,
+          "scored": false
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "title": "Israel sanctions vs engagement",
+      "k": 1,
+      "coverage": 177,
+      "low": 103,
+      "high": 72,
+      "neutral": 2,
+      "balance_entropy": 0.977,
+      "base": 0.2690082102603715,
+      "question": "Should the UK impose sanctions and concrete punitive measures on Israel over its Gaza conduct, or instead support ceasefire diplomacy and a two-state solution without sanctioning Israel?",
+      "selection_score": 0.269
+    },
+    {
+      "title": "Inheritance Tax Policy",
+      "k": 16,
+      "coverage": 155,
+      "low": 86,
+      "high": 69,
+      "neutral": 0,
+      "balance_entropy": 0.991,
+      "base": 0.2389616273645921,
+      "question": "Should inheritance tax be cut or reformed to protect family farms and businesses, or should reliefs for the wealthiest be opposed in favor of fairer thresholds?",
+      "selection_score": 0.2388
+    },
+    {
+      "title": "Local Control of Bus Funding",
+      "k": 14,
+      "coverage": 150,
+      "low": 58,
+      "high": 92,
+      "neutral": 0,
+      "balance_entropy": 0.963,
+      "base": 0.22456019580052528,
+      "question": "Should decisions over transport funding and bus service control be devolved to local authorities, or retained and directed through national government investment?",
+      "selection_score": 0.209
+    },
+    {
+      "title": "Asylum & Border Control",
+      "k": 2,
+      "coverage": 162,
+      "low": 85,
+      "high": 77,
+      "neutral": 0,
+      "balance_entropy": 0.998,
+      "base": 0.2515006333780671,
+      "question": "Should asylum policy prioritise safe routes and fair processing, or strict deterrence and deportations?",
+      "selection_score": 0.2082
+    },
+    {
+      "title": "Winter Fuel Means-Testing",
+      "k": 3,
+      "coverage": 167,
+      "low": 48,
+      "high": 119,
+      "neutral": 0,
+      "balance_entropy": 0.865,
+      "base": 0.2247544369749704,
+      "question": "Should Winter Fuel Payments be means-tested by income, or remain universal for all pensioners?",
+      "selection_score": 0.2015
+    },
+    {
+      "title": "Planning Reform vs Green Belt",
+      "k": 13,
+      "coverage": 154,
+      "low": 84,
+      "high": 70,
+      "neutral": 0,
+      "balance_entropy": 0.994,
+      "base": 0.2380725545372493,
+      "question": "Should planning rules be reformed to accelerate housing growth and infrastructure delivery, even at the cost of green belt protection?",
+      "selection_score": 0.1952
+    },
+    {
+      "title": "North Sea extraction future",
+      "k": 5,
+      "coverage": 151,
+      "low": 76,
+      "high": 75,
+      "neutral": 0,
+      "balance_entropy": 1.0,
+      "base": 0.23482927345129603,
+      "question": "Should the UK continue extracting North Sea oil and gas while transitioning, or end oil and gas expansion?",
+      "selection_score": 0.1731
+    },
+    {
+      "title": "Prostate Cancer Screening",
+      "k": 15,
+      "coverage": 115,
+      "low": 55,
+      "high": 56,
+      "neutral": 4,
+      "balance_entropy": 1.0,
+      "base": 0.17883867355813346,
+      "question": "Should screening programmes be expanded to prostate cancer, or should priority remain on earlier breast cancer screening and treatment for younger women?",
+      "selection_score": 0.1721
+    },
+    {
+      "title": "Water Industry Ownership",
+      "k": 7,
+      "coverage": 154,
+      "low": 50,
+      "high": 104,
+      "neutral": 0,
+      "balance_entropy": 0.909,
+      "base": 0.2178018461766796,
+      "question": "Should water companies be brought into public ownership, or should the focus remain on stronger regulation of private companies?",
+      "selection_score": 0.1668
+    },
+    {
+      "title": "Social Housing Supply",
+      "k": 17,
+      "coverage": 138,
+      "low": 101,
+      "high": 37,
+      "neutral": 0,
+      "balance_entropy": 0.839,
+      "base": 0.18001126088520208,
+      "question": "Should the state prioritise mass building of social rented homes with rent controls and scrapping right to buy, or focus on increasing overall housing supply and affordable home building?",
+      "selection_score": 0.1658
+    },
+    {
+      "title": "Agricultural Inheritance Tax",
+      "k": 12,
+      "coverage": 143,
+      "low": 89,
+      "high": 54,
+      "neutral": 0,
+      "balance_entropy": 0.956,
+      "base": 0.21268647074101554,
+      "question": "Should family farms remain fully exempt from inheritance tax, or should farm estates over \u00a31m be taxed?",
+      "selection_score": 0.16
+    },
+    {
+      "title": "Two-Child Benefit Cap",
+      "k": 4,
+      "coverage": 173,
+      "low": 139,
+      "high": 34,
+      "neutral": 0,
+      "balance_entropy": 0.715,
+      "base": 0.19235480197523216,
+      "question": "Should the two-child benefit cap be scrapped to cut child poverty, or kept to control welfare spending?",
+      "selection_score": 0.1433
+    },
+    {
+      "title": "Jury Trial Restrictions",
+      "k": 9,
+      "coverage": 131,
+      "low": 87,
+      "high": 44,
+      "neutral": 0,
+      "balance_entropy": 0.921,
+      "base": 0.18760083645804906,
+      "question": "Should jury trial rights be preserved, or should magistrates/Crown court benches be allowed to hear some cases to cut backlogs?",
+      "selection_score": 0.1428
+    },
+    {
+      "title": "Assisted Dying Legalization",
+      "k": 0,
+      "coverage": 156,
+      "low": 63,
+      "high": 93,
+      "neutral": 0,
+      "balance_entropy": 0.973,
+      "base": 0.23610006458626606,
+      "question": "Should assisted dying be legalized for terminally ill adults with safeguards, or should it be opposed in favor of palliative care investment?",
+      "selection_score": 0.1264
+    },
+    {
+      "title": "Wind Farms on Peatland",
+      "k": 18,
+      "coverage": 132,
+      "low": 102,
+      "high": 29,
+      "neutral": 1,
+      "balance_entropy": 0.763,
+      "base": 0.1565664821261623,
+      "question": "Should wind farm development be permitted on protected peatland as part of expanding renewable energy?",
+      "selection_score": 0.1079
+    },
+    {
+      "title": "Electoral System (PR vs FPTP)",
+      "k": 11,
+      "coverage": 100,
+      "low": 45,
+      "high": 54,
+      "neutral": 1,
+      "balance_entropy": 0.994,
+      "base": 0.15459256788133072,
+      "question": "Should the UK replace First-Past-The-Post with Proportional Representation?",
+      "selection_score": 0.1027
+    },
+    {
+      "title": "ECHR and Human Rights Act",
+      "k": 10,
+      "coverage": 151,
+      "low": 28,
+      "high": 123,
+      "neutral": 0,
+      "balance_entropy": 0.692,
+      "base": 0.1624632871908981,
+      "question": "Should the UK leave the ECHR and repeal the Human Rights Act to restore parliamentary control over immigration?",
+      "selection_score": 0.0922
+    },
+    {
+      "title": "Rail Public Ownership",
+      "k": 6,
+      "coverage": 121,
+      "low": 40,
+      "high": 80,
+      "neutral": 1,
+      "balance_entropy": 0.918,
+      "base": 0.17280528136950737,
+      "question": "Should passenger railways be brought into public ownership, or run by private operators?",
+      "selection_score": 0.0887
+    },
+    {
+      "title": "Post-Brexit EU Trade",
+      "k": 8,
+      "coverage": 144,
+      "low": 39,
+      "high": 105,
+      "neutral": 0,
+      "balance_entropy": 0.843,
+      "base": 0.18871342817592912,
+      "question": "Should the UK pursue closer EU trade alignment to reduce Brexit friction, or instead exploit global trade opportunities outside EU alignment?",
+      "selection_score": 0.0823
+    },
+    {
+      "title": "Private School Tax Status",
+      "k": 19,
+      "coverage": 105,
+      "low": 48,
+      "high": 57,
+      "neutral": 0,
+      "balance_entropy": 0.995,
+      "base": 0.16243055756288818,
+      "question": "Should private schools lose tax exemptions (e.g., VAT and business rates relief) in order to fund state education?",
+      "selection_score": 0.071
+    }
+  ]
+}

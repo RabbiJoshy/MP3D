@@ -1,0 +1,272 @@
+[
+ {
+  "pair_id": 1,
+  "stratum": "near-diff",
+  "similarity": 0.7972016334533691,
+  "a_measure": "Introduce a national curriculum core framework",
+  "a_side": "FOR",
+  "b_measure": "Require academies to follow the national curriculum",
+  "b_side": "AGAINST"
+ },
+ {
+  "pair_id": 2,
+  "stratum": "near-same",
+  "similarity": 0.8288269639015198,
+  "a_measure": "Embed media literacy, digital literacy, citizenship, and oracy into the curriculum",
+  "a_side": "FOR",
+  "b_measure": "Integrate essential skills (such as media, financial literacy, and democratic education) into the core curriculum",
+  "b_side": "FOR"
+ },
+ {
+  "pair_id": 3,
+  "stratum": "random",
+  "similarity": 0.673534095287323,
+  "a_measure": "Provide early diagnosis and support for dyslexia to all children, regardless of location",
+  "a_side": "FOR",
+  "b_measure": "Launch a new Reading Ambition for All training programme for primary school teachers",
+  "b_side": "FOR"
+ },
+ {
+  "pair_id": 4,
+  "stratum": "near-diff",
+  "similarity": 0.7862494587898254,
+  "a_measure": "Abolish the national curriculum",
+  "a_side": "AGAINST",
+  "b_measure": "Require academies to follow the national curriculum",
+  "b_side": "AGAINST"
+ },
+ {
+  "pair_id": 5,
+  "stratum": "near-same",
+  "similarity": 0.7857360243797302,
+  "a_measure": "Fix the broken SEND system by ensuring suitable education placements for disabled children without forcing parents to rely on unaffordable private schools",
+  "a_side": "FOR",
+  "b_measure": "Reform the special educational needs and disabilities (SEND) support system (including funding, accountability for schools/local authorities, and transport providers)",
+  "b_side": "FOR"
+ },
+ {
+  "pair_id": 6,
+  "stratum": "near-diff",
+  "similarity": 0.8728229999542236,
+  "a_measure": "Require personal finance education in the primary school curriculum",
+  "a_side": "FOR",
+  "b_measure": "Require financial education to be delivered in schools",
+  "b_side": "AGAINST"
+ },
+ {
+  "pair_id": 7,
+  "stratum": "near-diff",
+  "similarity": 0.8744778633117676,
+  "a_measure": "Remove the large programme uplift funding for the international baccalaureate programme",
+  "a_side": "AGAINST",
+  "b_measure": "Scrap funding for the international baccalaureate (IB) programme",
+  "b_side": "AGAINST"
+ },
+ {
+  "pair_id": 8,
+  "stratum": "near-same",
+  "similarity": 0.8253142833709717,
+  "a_measure": "Legislate to make play and continuous provision statutory in the key stage 1 curriculum",
+  "a_side": "AGAINST",
+  "b_measure": "Include play in the key stage 1 curriculum",
+  "b_side": "FOR"
+ },
+ {
+  "pair_id": 9,
+  "stratum": "random",
+  "similarity": 0.6081771850585938,
+  "a_measure": "Require universal screening for neurodivergence and provide more teacher training on the subject for primary school-aged children",
+  "a_side": "FOR",
+  "b_measure": "Reduce the number of examinations by 10%",
+  "b_side": "FOR"
+ },
+ {
+  "pair_id": 10,
+  "stratum": "random",
+  "similarity": 0.49836504459381104,
+  "a_measure": "Establish a fully equipped, statutory, universal and open-access youth work system",
+  "a_side": "FOR",
+  "b_measure": "Charge VAT on independent school fees",
+  "b_side": "AGAINST"
+ },
+ {
+  "pair_id": 11,
+  "stratum": "near-same",
+  "similarity": 0.8312746286392212,
+  "a_measure": "Broaden educational opportunities and skills training (specifically through apprenticeships)",
+  "a_side": "FOR",
+  "b_measure": "Make apprenticeships as valuable as degrees and ensure they are the norm for young people's careers",
+  "b_side": "FOR"
+ },
+ {
+  "pair_id": 12,
+  "stratum": "near-same",
+  "similarity": 0.7826550006866455,
+  "a_measure": "Introduce breakfast clubs and provide support for uniform costs",
+  "a_side": "FOR",
+  "b_measure": "Introduce legislation for school breakfasts",
+  "b_side": "FOR"
+ },
+ {
+  "pair_id": 13,
+  "stratum": "near-same",
+  "similarity": 0.8462643623352051,
+  "a_measure": "Tax independent schools with VAT",
+  "a_side": "AGAINST",
+  "b_measure": "Increase VAT on independent school fees to 20%",
+  "b_side": "AGAINST"
+ },
+ {
+  "pair_id": 14,
+  "stratum": "random",
+  "similarity": 0.7604188919067383,
+  "a_measure": "Close the tax loophole on private schools (specifically the discount on education fees for the richest schools and parents)",
+  "a_side": "FOR",
+  "b_measure": "Redirect subsidies from private schools to state schools",
+  "b_side": "FOR"
+ },
+ {
+  "pair_id": 15,
+  "stratum": "random",
+  "similarity": 0.6070997714996338,
+  "a_measure": "Create Skills England as an independent body outside the Department for Education",
+  "a_side": "FOR",
+  "b_measure": "Provide £155 million for post-16 schools, academies and further education colleges",
+  "b_side": "FOR"
+ },
+ {
+  "pair_id": 16,
+  "stratum": "random",
+  "similarity": 0.5358338356018066,
+  "a_measure": "Require primary schools to provide breakfast clubs",
+  "a_side": "FOR",
+  "b_measure": "Amend Amendment 33 to exclude children in special schools from the scope of the proposed changes regarding elective home education and child protection investigations.",
+  "b_side": "AGAINST"
+ },
+ {
+  "pair_id": 17,
+  "stratum": "near-diff",
+  "similarity": 0.889534056186676,
+  "a_measure": "Adopt a practical framework for the safe and fair use of Generative AI in education",
+  "a_side": "FOR",
+  "b_measure": "Establish a clear code of practice for the use of generative AI in schools",
+  "b_side": "FOR"
+ },
+ {
+  "pair_id": 18,
+  "stratum": "near-diff",
+  "similarity": 0.8008559346199036,
+  "a_measure": "Tax private school fees",
+  "a_side": "AGAINST",
+  "b_measure": "End VAT relief on private schools",
+  "b_side": "FOR"
+ },
+ {
+  "pair_id": 19,
+  "stratum": "near-diff",
+  "similarity": 0.8603224158287048,
+  "a_measure": "Reduce the minimum school week below 32.5 hours",
+  "a_side": "AGAINST",
+  "b_measure": "Shorten the school week",
+  "b_side": "AGAINST"
+ },
+ {
+  "pair_id": 20,
+  "stratum": "near-diff",
+  "similarity": 0.7918779850006104,
+  "a_measure": "Weave financial education through existing subjects such as maths",
+  "a_side": "FOR",
+  "b_measure": "Make financial education a core part of the school curriculum",
+  "b_side": "FOR"
+ },
+ {
+  "pair_id": 21,
+  "stratum": "near-diff",
+  "similarity": 0.8411303162574768,
+  "a_measure": "Move to a four-day school week",
+  "a_side": "AGAINST",
+  "b_measure": "Extend the school week to a four-day schedule (by adding an extra hour to each school day)",
+  "b_side": "AGAINST"
+ },
+ {
+  "pair_id": 22,
+  "stratum": "near-same",
+  "similarity": 0.8668493032455444,
+  "a_measure": "Require academies to make provisions for improving behavioural standards",
+  "a_side": "FOR",
+  "b_measure": "Require academies to follow a core of standards",
+  "b_side": "FOR"
+ },
+ {
+  "pair_id": 23,
+  "stratum": "near-same",
+  "similarity": 0.8386620879173279,
+  "a_measure": "Introduce age-appropriate relationships and sex education in schools",
+  "a_side": "FOR",
+  "b_measure": "Require sex and relationship education to start earlier than in secondary school",
+  "b_side": "FOR"
+ },
+ {
+  "pair_id": 24,
+  "stratum": "near-diff",
+  "similarity": 0.7879974842071533,
+  "a_measure": "Embed play as a fundamental principle in the curriculum",
+  "a_side": "FOR",
+  "b_measure": "Integrate play-based education (including forest school and outdoor learning) into the mainstream early years education system",
+  "b_side": "FOR"
+ },
+ {
+  "pair_id": 25,
+  "stratum": "random",
+  "similarity": 0.5055755972862244,
+  "a_measure": "Robustly act to address England's weaknesses in reading and maths and improve the perception of school's value",
+  "a_side": "FOR",
+  "b_measure": "Introduce a vocational pathway for 14-year-olds",
+  "b_side": "AGAINST"
+ },
+ {
+  "pair_id": 26,
+  "stratum": "near-same",
+  "similarity": 0.9401438236236572,
+  "a_measure": "Abolish the Institute for Apprenticeships and Technical Education",
+  "a_side": "AGAINST",
+  "b_measure": "Abolish the Institute for Apprenticeships and Technical Education and transfer its functions to Skills England",
+  "b_side": "FOR"
+ },
+ {
+  "pair_id": 27,
+  "stratum": "random",
+  "similarity": 0.6972217559814453,
+  "a_measure": "Abolish or replace the current examination and assessment system (specifically GCSEs)",
+  "a_side": "AGAINST",
+  "b_measure": "Remove spelling, punctuation, and grammar marks from non-English exams",
+  "b_side": "FOR"
+ },
+ {
+  "pair_id": 28,
+  "stratum": "random",
+  "similarity": 0.6703562140464783,
+  "a_measure": "Change term dates to create off-peak holiday time",
+  "a_side": "FOR",
+  "b_measure": "Abolish term-time travel restrictions (or: Allow families to take children out of school during term time without penalty)",
+  "b_side": "FOR"
+ },
+ {
+  "pair_id": 29,
+  "stratum": "random",
+  "similarity": 0.46025723218917847,
+  "a_measure": "Provide a core enrichment offer that every school and college should aim to provide",
+  "a_side": "FOR",
+  "b_measure": "Scrap the EBacc",
+  "b_side": "AGAINST"
+ },
+ {
+  "pair_id": 30,
+  "stratum": "near-same",
+  "similarity": 0.8398743271827698,
+  "a_measure": "Introduce taxation on education",
+  "a_side": "AGAINST",
+  "b_measure": "Impose an education tax on independent faith schools",
+  "b_side": "AGAINST"
+ }
+]

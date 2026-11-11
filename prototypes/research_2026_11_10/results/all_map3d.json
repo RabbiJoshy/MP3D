@@ -1,0 +1,334 @@
+{
+ "axes": [
+  {
+   "var": 0.21248661306395575,
+   "neg": [
+    [
+     "Government operations | Local government should reorganise into unitary councils.",
+     -0.44
+    ],
+    [
+     "Housing | Central government should restore mandatory housing targets.",
+     -0.36
+    ],
+    [
+     "Civil rights | Assisted dying should be legalised with strict safeguards.",
+     -0.14
+    ],
+    [
+     "Social welfare | Child benefit should remove the two-child cap.",
+     -0.13
+    ]
+   ],
+   "pos": [
+    [
+     "Transport | Railways should remain publicly owned.",
+     0.66
+    ],
+    [
+     "Housing | Right to Buy should be extended to social housing residents.",
+     0.4
+    ],
+    [
+     "Public lands | Water services should remain under public ownership.",
+     0.17
+    ],
+    [
+     "Energy | Net zero goals should be met by all nations.",
+     0.05
+    ]
+   ]
+  },
+  {
+   "var": 0.14246989933516005,
+   "neg": [
+    [
+     "Public lands | Water services should remain under public ownership.",
+     -0.36
+    ],
+    [
+     "Social welfare | Child benefit should remove the two-child cap.",
+     -0.28
+    ],
+    [
+     "Agriculture | Agricultural property relief should remain at 100 percent.",
+     -0.28
+    ],
+    [
+     "Energy | Net zero goals should be met by all nations.",
+     -0.27
+    ]
+   ],
+   "pos": [
+    [
+     "Civil rights | Assisted dying should be legalised with strict safeguards.",
+     0.59
+    ],
+    [
+     "Transport | Railways should remain publicly owned.",
+     0.15
+    ],
+    [
+     "Housing | Central government should restore mandatory housing targets.",
+     0.06
+    ],
+    [
+     "Employment | Trade union powers should be expanded.",
+     0.01
+    ]
+   ]
+  },
+  {
+   "var": 0.12336954162621468,
+   "neg": [
+    [
+     "Social welfare | Child benefit should remove the two-child cap.",
+     -0.43
+    ],
+    [
+     "Housing | Right to Buy should be extended to social housing residents.",
+     -0.4
+    ],
+    [
+     "Employment | The cap on executive claims should be removed.",
+     -0.23
+    ],
+    [
+     "Energy | Government should oppose large-scale solar farm developments.",
+     -0.21
+    ]
+   ],
+   "pos": [
+    [
+     "Housing | Central government should restore mandatory housing targets.",
+     0.52
+    ],
+    [
+     "Public lands | Water services should remain under public ownership.",
+     0.32
+    ],
+    [
+     "Energy | Net zero goals should be met by all nations.",
+     0.19
+    ],
+    [
+     "Civil rights | Abortion should remain a criminal offence.",
+     0.17
+    ]
+   ]
+  }
+ ],
+ "n_debates": 19,
+ "mps": [
+  {
+   "member_id": 1510,
+   "x": 0.153,
+   "y": 0.318,
+   "z": 0.507,
+   "mp": "Ed Miliband",
+   "party": "Lab",
+   "role": "minister",
+   "n": 2
+  },
+  {
+   "member_id": 4038,
+   "x": 0.463,
+   "y": 0.16,
+   "z": 0.177,
+   "mp": "Heidi Alexander",
+   "party": "Lab",
+   "role": "minister",
+   "n": 2
+  },
+  {
+   "member_id": 4083,
+   "x": -0.56,
+   "y": -0.479,
+   "z": -0.505,
+   "mp": "Alison McGovern",
+   "party": "Lab",
+   "role": "minister",
+   "n": 2
+  },
+  {
+   "member_id": 4131,
+   "x": 0.317,
+   "y": -1.397,
+   "z": 0.768,
+   "mp": "Jim Shannon",
+   "party": "DUP",
+   "role": "backbench_or_opposition",
+   "n": 6
+  },
+  {
+   "member_id": 4356,
+   "x": -0.051,
+   "y": -0.186,
+   "z": -0.267,
+   "mp": "Angela Rayner",
+   "party": "Lab",
+   "role": "minister",
+   "n": 3
+  },
+  {
+   "member_id": 4358,
+   "x": 0.275,
+   "y": -0.06,
+   "z": -0.487,
+   "mp": "Wendy Morton",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n": 2
+  },
+  {
+   "member_id": 4495,
+   "x": -0.183,
+   "y": 0.651,
+   "z": -0.039,
+   "mp": "Kit Malthouse",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n": 2
+  },
+  {
+   "member_id": 4520,
+   "x": -0.629,
+   "y": 0.149,
+   "z": 0.697,
+   "mp": "Matthew Pennycook",
+   "party": "Lab",
+   "role": "minister",
+   "n": 2
+  },
+  {
+   "member_id": 4527,
+   "x": -0.684,
+   "y": -0.209,
+   "z": -0.274,
+   "mp": "Helen Whately",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n": 2
+  },
+  {
+   "member_id": 4739,
+   "x": -0.768,
+   "y": 0.172,
+   "z": -0.429,
+   "mp": "Jerome Mayhew",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n": 2
+  },
+  {
+   "member_id": 4778,
+   "x": -0.112,
+   "y": -0.078,
+   "z": -0.15,
+   "mp": "Greg Smith",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n": 2
+  },
+  {
+   "member_id": 4797,
+   "x": -0.027,
+   "y": -0.172,
+   "z": -0.149,
+   "mp": "James Murray",
+   "party": "Lab",
+   "role": "minister",
+   "n": 3
+  },
+  {
+   "member_id": 4798,
+   "x": 1.457,
+   "y": 0.129,
+   "z": -0.561,
+   "mp": "Gareth Bacon",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n": 4
+  },
+  {
+   "member_id": 4828,
+   "x": -0.466,
+   "y": 0.582,
+   "z": 0.134,
+   "mp": "Paula Barker",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n": 2
+  },
+  {
+   "member_id": 5186,
+   "x": -0.068,
+   "y": 0.274,
+   "z": 0.356,
+   "mp": "Bradley Thomas",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n": 3
+  },
+  {
+   "member_id": 5237,
+   "x": -0.222,
+   "y": -0.173,
+   "z": -0.194,
+   "mp": "Chris Vince",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n": 2
+  },
+  {
+   "member_id": 5241,
+   "x": -0.021,
+   "y": -0.193,
+   "z": 0.087,
+   "mp": "Aphra Brandreth",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n": 2
+  },
+  {
+   "member_id": 5301,
+   "x": 0.068,
+   "y": 0.341,
+   "z": 0.53,
+   "mp": "Rebecca Smith",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n": 2
+  },
+  {
+   "member_id": 5311,
+   "x": -0.058,
+   "y": 0.042,
+   "z": -0.082,
+   "mp": "Harriet Cross",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n": 2
+  },
+  {
+   "member_id": 5314,
+   "x": 0.922,
+   "y": 0.361,
+   "z": 0.236,
+   "mp": "Si\u00e2n Berry",
+   "party": "Green",
+   "role": "backbench_or_opposition",
+   "n": 2
+  },
+  {
+   "member_id": 5329,
+   "x": 0.193,
+   "y": -0.231,
+   "z": -0.354,
+   "mp": "John Milne",
+   "party": "LD",
+   "role": "backbench_or_opposition",
+   "n": 3
+  }
+ ]
+}

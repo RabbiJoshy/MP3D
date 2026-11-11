@@ -1,0 +1,775 @@
+[
+ {
+  "members": [
+   0,
+   1
+  ],
+  "lead": 0,
+  "merged": true,
+  "reason": "merged",
+  "unit": 0,
+  "label": "Impose a tax on family farms",
+  "description": "The proposal introduces a specific tax targeting family farms to address inheritance tax avoidance loopholes.",
+  "topic": "Agriculture",
+  "n_cands": 112,
+  "est_cents": 0.317
+ },
+ {
+  "members": [
+   83,
+   1776
+  ],
+  "lead": 83,
+  "merged": true,
+  "reason": "merged",
+  "unit": 1,
+  "label": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+  "description": "The proposal seeks to enact legislation allowing terminally ill adults to request assistance in ending their lives.",
+  "topic": "Civil rights",
+  "n_cands": 200,
+  "est_cents": 0.559
+ },
+ {
+  "members": [
+   127,
+   129
+  ],
+  "lead": 127,
+  "merged": true,
+  "reason": "merged",
+  "unit": 2,
+  "label": "Pass the Football Governance Bill to establish an independent football regulator",
+  "description": "The proposal seeks to create a new independent body to oversee governance and regulation of English football clubs.",
+  "topic": "Culture",
+  "n_cands": 200,
+  "est_cents": 0.592
+ },
+ {
+  "members": [
+   351,
+   425,
+   539
+  ],
+  "lead": 539,
+  "merged": true,
+  "reason": "merged",
+  "unit": 3,
+  "label": "Pass the Children's Wellbeing and Schools Bill",
+  "description": "The proposal is to enact legislation aimed at improving child protection and standardizing school performance measures.",
+  "topic": "Education",
+  "n_cands": 200,
+  "est_cents": 0.573
+ },
+ {
+  "members": [
+   361,
+   416
+  ],
+  "lead": 361,
+  "merged": true,
+  "reason": "merged",
+  "unit": 4,
+  "label": "Expand apprenticeships and technical education",
+  "description": "The proposal aims to increase the number and quality of apprenticeships and technical education programs.",
+  "topic": "Education",
+  "n_cands": 200,
+  "est_cents": 0.543
+ },
+ {
+  "members": [
+   375,
+   485
+  ],
+  "lead": 375,
+  "merged": true,
+  "reason": "merged",
+  "unit": 5,
+  "label": "Establish Skills England as an independent executive agency",
+  "description": "The proposal creates a new independent executive agency named Skills England to oversee technical education and apprenticeships.",
+  "topic": "Education",
+  "n_cands": 200,
+  "est_cents": 0.581
+ },
+ {
+  "members": [
+   394,
+   2188
+  ],
+  "lead": 394,
+  "merged": true,
+  "reason": "merged",
+  "unit": 6,
+  "label": "Remove tax exemption on independent school fees",
+  "description": "The proposal removes the zero-rating status for independent school fees to generate revenue for the state education system.",
+  "topic": "Education",
+  "n_cands": 200,
+  "est_cents": 0.563
+ },
+ {
+  "members": [
+   578,
+   2407
+  ],
+  "lead": 578,
+  "merged": true,
+  "reason": "merged",
+  "unit": 7,
+  "label": "Ban mobile phone use in schools",
+  "description": "The proposal requires all schools to prohibit students from using mobile phones during the entire school day.",
+  "topic": "Education",
+  "n_cands": 200,
+  "est_cents": 0.53
+ },
+ {
+  "members": [
+   1363,
+   1368
+  ],
+  "lead": 1363,
+  "merged": true,
+  "reason": "merged",
+  "unit": 8,
+  "label": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+  "description": "The proposal seeks to prohibit zero-hours contracts that do not reflect regular hours and stop employers from firing staff to rehire them at lower pay.",
+  "topic": "Employment",
+  "n_cands": 200,
+  "est_cents": 0.583
+ },
+ {
+  "members": [
+   1515,
+   1521,
+   1522
+  ],
+  "lead": 1522,
+  "merged": true,
+  "reason": "merged",
+  "unit": 9,
+  "label": "Enact the Water (Special Measures) Bill to hold water companies accountable for sewage pollution",
+  "description": "This proposal introduces a specific Act to place failing water companies into special measures and enforce stricter accountability for sewage spills.",
+  "topic": "Environment",
+  "n_cands": 200,
+  "est_cents": 0.6
+ },
+ {
+  "members": [
+   1938,
+   1952
+  ],
+  "lead": 1938,
+  "merged": true,
+  "reason": "merged",
+  "unit": 10,
+  "label": "Enact the Illegal Migration Act to curb illegal migration and strengthen border security",
+  "description": "The proposal seeks to pass legislation that removes the duty to remove illegal entrants and strengthens border controls.",
+  "topic": "Immigration",
+  "n_cands": 200,
+  "est_cents": 0.603
+ },
+ {
+  "members": [
+   2349,
+   2358
+  ],
+  "lead": 2358,
+  "merged": true,
+  "reason": "merged",
+  "unit": 11,
+  "label": "Pass the Universal Credit and Personal Independence Payment Bill",
+  "description": "The proposal seeks to pass legislation that raises universal credit allowances and alters personal independence payment eligibility criteria.",
+  "topic": "Social welfare",
+  "n_cands": 149,
+  "est_cents": 0.425
+ },
+ {
+  "members": [
+   2486,
+   2495
+  ],
+  "lead": 2486,
+  "merged": true,
+  "reason": "merged",
+  "unit": 12,
+  "label": "Create Great British Railways",
+  "description": "Establish a new public body to manage and oversee the United Kingdom's railway network.",
+  "topic": "Transport",
+  "n_cands": 200,
+  "est_cents": 0.591
+ },
+ {
+  "members": [
+   2
+  ],
+  "lead": 2,
+  "merged": false,
+  "reason": null,
+  "unit": 13,
+  "label": "Amend the Dogs (Protection of Livestock) Act 1953 to strengthen legislation against livestock worrying",
+  "description": "The proposal seeks to update the 1953 Act to better protect farmed animals from dog attacks and expand the scope of offences.",
+  "topic": "Agriculture"
+ },
+ {
+  "members": [
+   190
+  ],
+  "lead": 190,
+  "merged": false,
+  "reason": "unclear",
+  "unit": 14,
+  "label": "Increase defence spending to \u00a32.6 billion in-year cuts",
+  "description": "The proposal seeks to reverse planned \u00a32.6 billion cuts to the Ministry of Defence's operating budget this year.",
+  "topic": "Defence",
+  "n_cands": 200,
+  "est_cents": 0.567
+ },
+ {
+  "members": [
+   196
+  ],
+  "lead": 196,
+  "merged": false,
+  "reason": null,
+  "unit": 15,
+  "label": "Enshrine the armed forces covenant into law across all areas of Government",
+  "description": "This proposal legally binds all government departments to consider the unique needs of service personnel and their families.",
+  "topic": "Defence"
+ },
+ {
+  "members": [
+   270
+  ],
+  "lead": 270,
+  "merged": false,
+  "reason": null,
+  "unit": 16,
+  "label": "Reform the non-domestic rating system in England",
+  "description": "The proposal seeks to change how businesses in England are taxed on their properties.",
+  "topic": "Domestic commerce"
+ },
+ {
+  "members": [
+   353
+  ],
+  "lead": 353,
+  "merged": false,
+  "reason": null,
+  "unit": 17,
+  "label": "Impose fines on parents for term-time school holidays",
+  "description": "The proposal requires parents to pay penalties if they remove their children from school during approved holiday periods.",
+  "topic": "Education"
+ },
+ {
+  "members": [
+   354
+  ],
+  "lead": 354,
+  "merged": false,
+  "reason": null,
+  "unit": 18,
+  "label": "Establish school-based nurseries in existing school classrooms",
+  "description": "The proposal involves converting unused space in schools into new nursery facilities to increase childcare capacity.",
+  "topic": "Education"
+ },
+ {
+  "members": [
+   360
+  ],
+  "lead": 360,
+  "merged": false,
+  "reason": null,
+  "unit": 19,
+  "label": "Increase 16-to-19 funding rates and provide additional capital for further education colleges",
+  "description": "The proposal seeks to raise per-student funding rates for 16-to-19 year olds and allocate extra capital to upgrade college infrastructure.",
+  "topic": "Education"
+ },
+ {
+  "members": [
+   362
+  ],
+  "lead": 362,
+  "merged": false,
+  "reason": null,
+  "unit": 20,
+  "label": "Require home-educated children to be registered with local authorities",
+  "description": "The proposal mandates that parents of home-educated children must register them with their local authority.",
+  "topic": "Education"
+ },
+ {
+  "members": [
+   364
+  ],
+  "lead": 364,
+  "merged": false,
+  "reason": null,
+  "unit": 21,
+  "label": "Reform the Special Educational Needs and Disabilities (SEND) system",
+  "description": "The proposal seeks to overhaul the existing framework for assessing and supporting children with special educational needs and disabilities.",
+  "topic": "Education"
+ },
+ {
+  "members": [
+   367
+  ],
+  "lead": 367,
+  "merged": false,
+  "reason": null,
+  "unit": 22,
+  "label": "Require academies to follow the national curriculum",
+  "description": "The proposal mandates that all academies must adhere to the national curriculum requirements.",
+  "topic": "Education"
+ },
+ {
+  "members": [
+   371
+  ],
+  "lead": 371,
+  "merged": false,
+  "reason": null,
+  "unit": 23,
+  "label": "Increase investment in mainstream and special educational needs schools",
+  "description": "The proposal seeks to raise funding for both mainstream and special educational needs schools to address resource shortages.",
+  "topic": "Education"
+ },
+ {
+  "members": [
+   372
+  ],
+  "lead": 372,
+  "merged": false,
+  "reason": null,
+  "unit": 24,
+  "label": "Abolish the narrow knowledge-rich curriculum in favour of a holistic approach",
+  "description": "The proposal seeks to replace the current knowledge-rich curriculum with a broader, holistic educational model.",
+  "topic": "Education"
+ },
+ {
+  "members": [
+   382
+  ],
+  "lead": 382,
+  "merged": false,
+  "reason": null,
+  "unit": 25,
+  "label": "Cut funding for the International Baccalaureate in state schools",
+  "description": "The proposal seeks to reduce government financial support for state schools offering the International Baccalaureate qualification.",
+  "topic": "Education"
+ },
+ {
+  "members": [
+   389
+  ],
+  "lead": 389,
+  "merged": false,
+  "reason": null,
+  "unit": 26,
+  "label": "Abolish the English Baccalaureate (EBacc) performance measure",
+  "description": "The proposal seeks to remove the EBacc metric used to assess secondary school performance in England.",
+  "topic": "Education"
+ },
+ {
+  "members": [
+   393
+  ],
+  "lead": 393,
+  "merged": false,
+  "reason": "unclear",
+  "unit": 27,
+  "label": "Implement the Review of Relationship, Sex and Health Education guidance",
+  "description": "The proposal seeks to update the national guidance for relationship, sex, and health education in schools.",
+  "topic": "Education",
+  "n_cands": 72,
+  "est_cents": 0.192
+ },
+ {
+  "members": [
+   395
+  ],
+  "lead": 395,
+  "merged": false,
+  "reason": "unclear",
+  "unit": 28,
+  "label": "Expand funded childcare entitlement from 15 to 30 hours per week",
+  "description": "The proposal increases the weekly hours of government-funded childcare available to working parents from 15 to 30.",
+  "topic": "Education",
+  "n_cands": 200,
+  "est_cents": 0.542
+ },
+ {
+  "members": [
+   409
+  ],
+  "lead": 409,
+  "merged": false,
+  "reason": null,
+  "unit": 29,
+  "label": "Recruit 6,500 additional teachers",
+  "description": "The proposal is to hire 6,500 new teachers to improve school standards and support inclusive education.",
+  "topic": "Education"
+ },
+ {
+  "members": [
+   420
+  ],
+  "lead": 420,
+  "merged": false,
+  "reason": null,
+  "unit": 30,
+  "label": "Require all teachers in academies to hold qualified teacher status",
+  "description": "The proposal mandates that every teacher employed by academy schools must possess Qualified Teacher Status.",
+  "topic": "Education"
+ },
+ {
+  "members": [
+   452
+  ],
+  "lead": 452,
+  "merged": false,
+  "reason": null,
+  "unit": 31,
+  "label": "Cap branded school uniform items to three per year with a fourth allowed for ties",
+  "description": "The proposal limits secondary school pupils to wearing no more than three different branded uniform items annually, or four if a tie is included.",
+  "topic": "Education"
+ },
+ {
+  "members": [
+   457
+  ],
+  "lead": 457,
+  "merged": false,
+  "reason": null,
+  "unit": 32,
+  "label": "Implement a four-day school week",
+  "description": "The proposal seeks to reduce the standard school week from five days to four days.",
+  "topic": "Education"
+ },
+ {
+  "members": [
+   469
+  ],
+  "lead": 469,
+  "merged": false,
+  "reason": null,
+  "unit": 33,
+  "label": "Remove automatic requirement for schools requiring improvement to become academies",
+  "description": "The proposal seeks to end the rule that forces schools needing improvement to immediately convert to academy status.",
+  "topic": "Education"
+ },
+ {
+  "members": [
+   508
+  ],
+  "lead": 508,
+  "merged": false,
+  "reason": null,
+  "unit": 34,
+  "label": "Integrate play into the key stage 1 curriculum",
+  "description": "The proposal requires adding play-based learning activities to the mandatory curriculum for children aged 5 to 7.",
+  "topic": "Education"
+ },
+ {
+  "members": [
+   511
+  ],
+  "lead": 511,
+  "merged": false,
+  "reason": null,
+  "unit": 35,
+  "label": "Require compulsory Special Educational Needs and Disabilities training for all teachers and staff",
+  "description": "The proposal mandates that every teacher and teaching staff member must complete specialized training in Special Educational Needs and Disabilities.",
+  "topic": "Education"
+ },
+ {
+  "members": [
+   526
+  ],
+  "lead": 526,
+  "merged": false,
+  "reason": null,
+  "unit": 36,
+  "label": "Raise university tuition fees",
+  "description": "The proposal seeks to increase the amount students must pay for higher education.",
+  "topic": "Education"
+ },
+ {
+  "members": [
+   528
+  ],
+  "lead": 528,
+  "merged": false,
+  "reason": null,
+  "unit": 37,
+  "label": "Abolish all existing academies and replace them with state-run schools",
+  "description": "The proposal seeks to end the academy system entirely and return all schools to direct state control.",
+  "topic": "Education"
+ },
+ {
+  "members": [
+   612
+  ],
+  "lead": 612,
+  "merged": false,
+  "reason": null,
+  "unit": 38,
+  "label": "Abolish level 7 apprenticeships",
+  "description": "The proposal seeks to end the government scheme allowing postgraduate-level apprenticeships.",
+  "topic": "Education"
+ },
+ {
+  "members": [
+   616
+  ],
+  "lead": 616,
+  "merged": false,
+  "reason": null,
+  "unit": 39,
+  "label": "Include financial education in the school curriculum",
+  "description": "The proposal mandates the inclusion of financial education as a subject within the national school curriculum.",
+  "topic": "Education"
+ },
+ {
+  "members": [
+   647
+  ],
+  "lead": 647,
+  "merged": false,
+  "reason": null,
+  "unit": 40,
+  "label": "Abolish or restrict the right to Education, Health and Care Plans",
+  "description": "The proposal seeks to end or limit the legal entitlement for children with special needs to receive an Education, Health and Care Plan.",
+  "topic": "Education"
+ },
+ {
+  "members": [
+   709
+  ],
+  "lead": 709,
+  "merged": false,
+  "reason": null,
+  "unit": 41,
+  "label": "Introduce free breakfast clubs in primary schools",
+  "description": "The proposal establishes free breakfast clubs for all primary school pupils to improve attendance and reduce hunger.",
+  "topic": "Education"
+ },
+ {
+  "members": [
+   751
+  ],
+  "lead": 751,
+  "merged": false,
+  "reason": null,
+  "unit": 42,
+  "label": "Expand free school meals to lift 100,000 children out of poverty",
+  "description": "The proposal extends free school meal eligibility to an additional 100,000 children to reduce child poverty.",
+  "topic": "Education"
+ },
+ {
+  "members": [
+   1439
+  ],
+  "lead": 1439,
+  "merged": false,
+  "reason": null,
+  "unit": 43,
+  "label": "Mandatory solar panel installation on all new homes",
+  "description": "The proposal requires every newly constructed house to be fitted with solar panels.",
+  "topic": "Energy"
+ },
+ {
+  "members": [
+   1442
+  ],
+  "lead": 1442,
+  "merged": false,
+  "reason": null,
+  "unit": 44,
+  "label": "Establish Great British Energy",
+  "description": "The proposal creates a new publicly owned energy company to generate clean electricity and support community energy schemes.",
+  "topic": "Energy"
+ },
+ {
+  "members": [
+   1672
+  ],
+  "lead": 1672,
+  "merged": false,
+  "reason": null,
+  "unit": 45,
+  "label": "Grant mayors new planning powers to intervene in major strategic planning applications",
+  "description": "The proposal allows mayors to override local councils on specific large-scale development projects.",
+  "topic": "Government operations"
+ },
+ {
+  "members": [
+   1674
+  ],
+  "lead": 1674,
+  "merged": false,
+  "reason": null,
+  "unit": 46,
+  "label": "Abolish the two-tier council structure in Lancashire to implement a unitary structure",
+  "description": "The proposal seeks to replace the existing two-tier local government system in Lancashire with a single unitary authority.",
+  "topic": "Government operations"
+ },
+ {
+  "members": [
+   1675
+  ],
+  "lead": 1675,
+  "merged": false,
+  "reason": "unclear",
+  "unit": 47,
+  "label": "Pass the English Devolution and Community Empowerment Bill",
+  "description": "The proposal is to enact legislation that devolves powers to local authorities and communities while creating new strategic bodies.",
+  "topic": "Government operations",
+  "n_cands": 200,
+  "est_cents": 0.583
+ },
+ {
+  "members": [
+   1763
+  ],
+  "lead": 1763,
+  "merged": false,
+  "reason": null,
+  "unit": 48,
+  "label": "Abolish NHS England",
+  "description": "The proposal seeks to dissolve NHS England to streamline health services and reduce duplication.",
+  "topic": "Health"
+ },
+ {
+  "members": [
+   1767
+  ],
+  "lead": 1767,
+  "merged": false,
+  "reason": null,
+  "unit": 49,
+  "label": "Create a single digital patient record for the NHS",
+  "description": "The proposal establishes one unified digital record to track patient information across all NHS services.",
+  "topic": "Health"
+ },
+ {
+  "members": [
+   1853
+  ],
+  "lead": 1853,
+  "merged": false,
+  "reason": "unclear",
+  "unit": 50,
+  "label": "Introduce rent caps on annual increases and rents in advance",
+  "description": "The proposal seeks to limit how much landlords can raise rents each year and restrict upfront rent payments to one month.",
+  "topic": "Housing",
+  "n_cands": 173,
+  "est_cents": 0.51
+ },
+ {
+  "members": [
+   1867
+  ],
+  "lead": 1867,
+  "merged": false,
+  "reason": null,
+  "unit": 51,
+  "label": "Abolish section 21 no-fault evictions in the Renters' Rights Bill",
+  "description": "The proposal seeks to end the legal mechanism allowing landlords to evict tenants without providing a specific reason.",
+  "topic": "Housing"
+ },
+ {
+  "members": [
+   1960
+  ],
+  "lead": 1960,
+  "merged": false,
+  "reason": null,
+  "unit": 52,
+  "label": "Repeal the Safety of Rwanda (Asylum and Immigration) Act 2024",
+  "description": "The proposal seeks to annul the 2024 legislation that established the legal framework for sending asylum seekers to Rwanda.",
+  "topic": "Immigration"
+ },
+ {
+  "members": [
+   2085
+  ],
+  "lead": 2085,
+  "merged": false,
+  "reason": null,
+  "unit": 53,
+  "label": "Introduce new civil respect orders for persistent antisocial behaviour offenders",
+  "description": "The proposal creates new civil orders allowing courts to ban adults from specific antisocial activities, with breaches treated as criminal offences.",
+  "topic": "Law and crime"
+ },
+ {
+  "members": [
+   2159
+  ],
+  "lead": 2159,
+  "merged": false,
+  "reason": null,
+  "unit": 54,
+  "label": "Introduce income tax on dividends, savings, and property income in the Finance Bill",
+  "description": "The proposal introduces a new income tax charge specifically targeting dividends, savings, and property income within the Finance Bill.",
+  "topic": "Macroeconomics"
+ },
+ {
+  "members": [
+   2248
+  ],
+  "lead": 2248,
+  "merged": false,
+  "reason": null,
+  "unit": 55,
+  "label": "Approve the British Indian Ocean Territory Bill to transfer sovereignty of the Chagos Islands to Mauritius",
+  "description": "The proposal seeks to enact legislation transferring sovereignty of the Chagos Islands from the UK to Mauritius.",
+  "topic": "Public lands"
+ },
+ {
+  "members": [
+   2252
+  ],
+  "lead": 2252,
+  "merged": false,
+  "reason": "unclear",
+  "unit": 56,
+  "label": "Ratify the British Indian Ocean Territory Bill to establish the Chagos Marine Protected Area",
+  "description": "The proposal seeks to pass legislation that formally ratifies an international treaty creating a marine protected area in the Chagos archipelago.",
+  "topic": "Public lands",
+  "n_cands": 170,
+  "est_cents": 0.483
+ },
+ {
+  "members": [
+   2350
+  ],
+  "lead": 2350,
+  "merged": false,
+  "reason": null,
+  "unit": 57,
+  "label": "Remove the two-child benefit cap in the Universal Credit system",
+  "description": "The proposal seeks to eliminate the restriction that limits income support to the first two children of a family.",
+  "topic": "Social welfare"
+ },
+ {
+  "members": [
+   2441
+  ],
+  "lead": 2441,
+  "merged": false,
+  "reason": null,
+  "unit": 58,
+  "label": "Require AI companies to disclose copyrighted works used to train their models",
+  "description": "The proposal mandates that artificial intelligence developers must reveal which copyrighted materials were used in their training datasets.",
+  "topic": "Technology"
+ },
+ {
+  "members": [
+   2498
+  ],
+  "lead": 2498,
+  "merged": false,
+  "reason": null,
+  "unit": 59,
+  "label": "Require the railway to have a target for passenger growth",
+  "description": "The proposal mandates that the railway operator must set a specific goal to increase the number of passengers.",
+  "topic": "Transport"
+ }
+]

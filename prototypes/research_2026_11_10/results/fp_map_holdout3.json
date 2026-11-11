@@ -1,0 +1,77 @@
+{
+ "n": 1218,
+ "against_n": 108,
+ "n_mps_ge5_cells": 79,
+ "cells_ge5": 585,
+ "against_ge5_n": 46,
+ "chosen_R_counts": {
+  "1": 3,
+  "2": 1,
+  "3": 1
+ },
+ "chosen": [
+  [
+   1,
+   10.0
+  ],
+  [
+   2,
+   1.0
+  ],
+  [
+   3,
+   0.3
+  ],
+  [
+   1,
+   10.0
+  ],
+  [
+   1,
+   1.0
+  ]
+ ],
+ "old_map": {
+  "overall": 0.8440065681444991,
+  "against": 0.3333333333333333,
+  "ge5_cells": 0.8803418803418803,
+  "against_ge5": 0.41304347826086957
+ },
+ "party_majority": {
+  "overall": 0.9113300492610837,
+  "against": 0.0,
+  "ge5_cells": 0.9213675213675213,
+  "against_ge5": 0.0
+ },
+ "party_line_shrunk": {
+  "overall": 0.9105090311986864,
+  "against": 0.0,
+  "ge5_cells": 0.9196581196581196,
+  "against_ge5": 0.0
+ },
+ "party_line_plus_deviation": {
+  "overall": 0.9129720853858785,
+  "against": 0.06481481481481481,
+  "ge5_cells": 0.9230769230769231,
+  "against_ge5": 0.08695652173913043
+ },
+ "permutation": {
+  "overall_mean": 0.9110563765736179,
+  "against_mean": 0.06481481481481481,
+  "repeats": 3,
+  "gain_real_vs_c_overall": 0.0024630541871920597,
+  "gain_perm_vs_c_overall": 0.0005473453749315071,
+  "gain_real_vs_c_against": 0.06481481481481481,
+  "gain_perm_vs_c_against": 0.06481481481481481
+ },
+ "dense_only": {
+  "old_map": 0.8440065681444991,
+  "party_majority": 0.9113300492610837,
+  "party_line_shrunk": 0.9105090311986864,
+  "party_line_plus_deviation": 0.9129720853858785
+ },
+ "dense_n": 1218,
+ "n_mps": 312,
+ "n_fights": 59,
+ "n_cells": 1218
+}

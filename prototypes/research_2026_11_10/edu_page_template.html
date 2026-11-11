@@ -1,0 +1,93 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Education: who wants what</title>
+<style>
+:root{--bg:#f6f4ee;--card:#fff;--ink:#1b2230;--dim:#5f6b7a;--line:#dcd8cc;--brass:#9a7a1e;--warn:#fff3c9;--warnink:#5a4500;--r:8px;--ok:#2d7a3a;--bad:#b3402a;
+--display:"Bricolage Grotesque","Trebuchet MS",sans-serif;--body:"Source Sans 3","Segoe UI",system-ui,sans-serif;color-scheme:light}
+@media(prefers-color-scheme:dark){:root{--bg:#0e1117;--card:#161b24;--ink:#eef1f5;--dim:#9aa4b2;--line:#273142;--brass:#d9b45f;--warn:#3a3016;--warnink:#f1da8c;--ok:#8fd694;--bad:#e58e7a;color-scheme:dark}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 var(--body)}
+.w{max-width:960px;margin:0 auto;padding:0 16px 48px}
+h1{font:700 2rem/1.1 var(--display);margin:20px 0 8px}h2{font:700 1.2rem var(--display);margin:32px 0 4px}
+.wip{background:var(--warn);color:var(--warnink);border:1px solid var(--brass);border-radius:var(--r);padding:8px 12px;font-weight:600;margin-top:16px}
+.how{color:var(--dim);max-width:70ch}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:10px 12px}.stat b{display:block;font:700 1.8rem var(--display)}.stat span{color:var(--dim);font-size:.9rem}
+@media(max-width:560px){.stats{grid-template-columns:1fr}}
+.sub{color:var(--dim);margin:0 0 8px;font-size:.92rem}
+.legend{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:.85rem;color:var(--dim);margin:8px 0}
+.dot{display:inline-block;width:12px;height:12px;border-radius:50%;flex:none;border:1px solid rgba(0,0,0,.25)}
+details.m{background:var(--card);border:1px solid var(--line);border-radius:var(--r);margin:8px 0}
+details.m>summary{list-style:none;cursor:pointer;padding:10px 12px;display:grid;grid-template-columns:1fr minmax(260px,420px);gap:6px 16px;align-items:center}
+details.m>summary::-webkit-details-marker{display:none}
+summary:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid var(--brass);outline-offset:2px}
+.lab{font-weight:600}.lab:before{content:"▸ ";color:var(--dim)}details[open]>summary .lab:before{content:"▾ "}
+@media(max-width:700px){details.m>summary{grid-template-columns:1fr}}
+.strip{display:grid;grid-template-columns:1fr 2px 1fr;align-items:center;gap:6px}
+.half{display:flex;flex-wrap:wrap;gap:3px;min-height:14px}.half.a{justify-content:flex-end}
+.mid{background:var(--dim);height:22px}
+.cnt{display:flex;justify-content:space-between;font-size:.8rem;color:var(--dim);grid-column:1/-1}
+.body{padding:4px 12px 14px;border-top:1px solid var(--line)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:700px){.cols{grid-template-columns:1fr}}
+.cols h3{font:700 1rem var(--display);margin:12px 0 6px}
+.mp{margin:0 0 12px}.mpn{font-weight:600}.pt{font-size:.8rem;color:var(--dim)}
+.sp{border-left:3px solid var(--line);padding:2px 0 2px 10px;margin:6px 0;font-size:.93rem}
+.meta{font-size:.8rem;color:var(--dim)}.q{margin:2px 0}
+.badge{font-size:.72rem;border:1px solid var(--line);border-radius:10px;padding:0 7px;white-space:nowrap}
+.badge.correct{color:var(--ok);border-color:var(--ok)}.badge.wrong,.badge.different{color:var(--bad);border-color:var(--bad)}
+button.t{background:none;border:0;color:var(--brass);cursor:pointer;padding:0;font:inherit;font-size:.85rem;text-decoration:underline}
+.both{background:var(--warn);color:var(--warnink);border-radius:var(--r);padding:6px 10px;margin-top:12px;font-size:.9rem}
+details.d{margin-top:14px}details.d>summary{cursor:pointer;color:var(--dim);font-weight:600}
+.none{color:var(--dim);font-style:italic}
+footer{margin-top:40px;border-top:1px solid var(--line);padding-top:12px;color:var(--dim);font-size:.9rem}
+</style></head><body><div class="w">
+<h1>Education: who wants what</h1>
+<div class="wip">Work in progress — developmental method, Education only</div>
+<p class="how">An AI model reads Commons speeches on education and extracts the specific change each MP argues for or against. A second, stricter check then keeps only claims where the speech clearly takes that side; everything else is set aside, and is listed so you can see it.</p>
+<div class="stats" id="stats"></div>
+<div class="legend" id="legend" aria-label="Party colours"></div>
+<div id="out"></div>
+<footer><ul>
+<li>Developmental: the measure groups and the checks are experimental and will change. There is deliberately no map or axis yet; too few measures have two MPs on each side.</li>
+<li>Checked against 38 hand-read claims: the strict check agreed with the human-style reading on those (see the badges). The rest are not hand-checked.</li>
+<li>One topic only (Education, this Parliament). Counts are MPs with at least one accepted speech, not votes. Speech links go to TheyWorkForYou.</li>
+</ul></footer></div>
+<script id="d" type="application/json">__DATA__</script>
+<script>
+const D=JSON.parse(document.getElementById('d').textContent);
+const COL={Lab:'#E4003B',Con:'#0087DC',LD:'#FAA61A',Green:'#02A95B',SNP:'#FDF38E',DUP:'#D46A4C',Ind:'#888888',RUK:'#12B6CF','Plaid Cymru':'#005B54',SDLP:'#2AA82C',Sinn:'#326760',Alliance:'#F6CB2F'};
+const col=p=>COL[p]||'#6b7584';
+const E=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const S=D.stats;
+document.getElementById('stats').innerHTML=
+ `<div class="stat"><b>${S.n_measures}</b><span>measures found</span></div>
+  <div class="stat"><b>${S.real}</b><span>with at least two MPs on each side</span></div>
+  <div class="stat"><b>${S.n_claims}</b><span>claims checked; ${S.dropped_pct}% dropped as "no clear position"</span></div>`;
+const parties=[...new Set(D.measures.flatMap(m=>[...m.for,...m.against,...m.both].map(x=>x.party)))];
+document.getElementById('legend').innerHTML=parties.map(p=>`<span><i class="dot" style="background:${col(p)}"></i> ${E(p)}</span>`).join('');
+const dots=l=>l.map(x=>`<i class="dot" title="${E(x.mp)} (${E(x.party)})" style="background:${col(x.party)}"></i>`).join('');
+function claim(c,showReason){
+ const b=c.badge?`<span class="badge ${c.badge}">hand-checked: ${c.badge==='correct'?'correct':c.badge==='wrong'?'wrong side':'different measure'}</span>`:'';
+ const long=c.full.length>c.ex.length+5;
+ return `<div class="sp"><div class="meta">${E(c.date)} · ${E(c.debate)} ${b}${showReason?` <span class="badge">${E(c.reason)}</span>`:''}</div>
+ <p class="q" data-s="${E(c.ex)}">${c.badge?'“':''}${E(c.ex)}${c.badge?'”':''}</p>
+ ${long?`<button class="t" type="button" data-f="${E(c.full)}" aria-expanded="false">show full speech</button>`:''}
+ ${c.url?` <a class="meta" href="${E(c.url)}" target="_blank" rel="noopener">source ↗</a>`:''}</div>`}
+const person=(x,r)=>`<div class="mp"><span class="mpn">${E(x.mp)}</span> <span class="pt"><i class="dot" style="background:${col(x.party)}"></i> ${E(x.party)}</span>${x.claims.slice(0,r?9:3).map(c=>claim(c,r)).join('')}</div>`;
+const col2=(t,l)=>`<div><h3>${t} (${l.length})</h3>${l.length?l.map(x=>person(x)).join(''):'<p class="none">No MP yet</p>'}</div>`;
+function row(m,i){
+ const d=document.createElement('details');d.className='m';d.id='m'+i;
+ const dr=m.dropped.reduce((a,c)=>(a[c.mp+c.date+c.ex]=c,a),{});
+ d.innerHTML=`<summary><span class="lab">${E(m.label)}</span><div class="strip" aria-label="${m.against.length} against, ${m.for.length} for"><div class="half a">${dots(m.against)}</div><div class="mid"></div><div class="half">${dots(m.for)}</div><div class="cnt"><span>${m.against.length} against</span><span>${m.for.length} for</span></div></div></summary>
+ <div class="body"><div class="cols">${col2('Against',m.against)}${col2('For',m.for)}</div>
+ ${m.both.length?`<div class="both"><b>Both sides — unresolved:</b> ${m.both.map(x=>`${E(x.mp)} (${E(x.party)})`).join(', ')}. Not counted on either side.</div>`:''}
+ <details class="d"><summary>Not counted (${m.dropped.length}): no clear position, or the strict check read the other side</summary>${m.dropped.map(c=>person({mp:c.mp,party:c.party,claims:[c]},1)).join('')||'<p class="none">None</p>'}</details></div>`;
+ return d}
+const secs=[['Real fights','At least two MPs on each side under the strict check.'],['One MP short','MPs on both sides, but only one on at least one side.'],['One-sided so far','Only one side has an accepted MP.']];
+const out=document.getElementById('out');
+secs.forEach((s,k)=>{const ms=D.measures.map((m,i)=>[m,i]).filter(x=>x[0].sec===k);
+ const h=document.createElement('div');h.innerHTML=`<h2>${s[0]} (${ms.length})</h2><p class="sub">${s[1]}</p>`;out.appendChild(h);
+ ms.forEach(([m,i])=>out.appendChild(row(m,i)))});
+out.addEventListener('click',e=>{const b=e.target.closest('button.t');if(!b)return;const q=b.previousElementSibling,open=b.getAttribute('aria-expanded')==='true';
+ q.textContent=open?q.dataset.s:b.dataset.f;b.setAttribute('aria-expanded',!open);b.textContent=open?'show full speech':'hide full speech'});
+const o=new URLSearchParams(location.search).get('open');
+if(o!==null){const t=document.getElementById('m'+(document.querySelectorAll('details.m')[+o]||{id:''}).id.slice(1));if(t)t.open=true}
+</script></body></html>

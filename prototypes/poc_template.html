@@ -44,6 +44,28 @@ canvas.orbit{touch-action:none;cursor:grab}
 .btn[disabled]{opacity:.5;cursor:default}
 .link{background:none;border:0;padding:0;color:var(--brass);cursor:pointer;text-decoration:underline;text-underline-offset:2px;font:inherit}
 button:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+.mapcard .maptop{position:relative}
+.ibtn{background:var(--bench);border:1px solid var(--line);border-radius:999px;color:var(--ink);width:32px;height:32px;display:grid;place-items:center;cursor:pointer;padding:0}
+.ibtn[aria-expanded=true],.ibtn.on{border-color:var(--brass);color:var(--brass)}
+.fpop{position:absolute;right:10px;top:50px;z-index:4;background:#0f2c24;border:1px solid var(--line);border-radius:12px;padding:12px;width:min(300px,calc(100% - 20px));display:flex;flex-direction:column;gap:10px;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.tpop{width:min(380px,calc(100% - 20px));max-height:70vh;overflow:auto}
+.tsub{display:flex;flex-direction:column;gap:6px;padding:8px 0;border-top:1px solid var(--line)}.tsub:first-of-type{border-top:0;padding-top:0}
+.tsub>button{background:none;border:0;padding:0;color:var(--brass);font:700 15px var(--display);text-align:left;cursor:pointer;display:flex;align-items:center;gap:6px}
+.tsub>button small{font:600 11px var(--body);color:var(--dim);border:1px solid var(--line);border-radius:999px;padding:1px 7px}
+.chips button.on{border-color:var(--brass);color:var(--brass)}
+.tcap{position:absolute;left:8px;right:8px;bottom:8px;background:rgba(10,33,27,.92);border:1px solid var(--line);border-radius:10px;padding:10px 12px;display:grid;grid-template-columns:1fr auto 1fr;gap:6px 12px;align-items:start;font-size:13px;animation:up .4s ease}
+@keyframes up{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.tcap h4{margin:0 0 3px;font:600 11px var(--body);letter-spacing:.08em;text-transform:uppercase}
+.tcap .nm{background:none;border:0;padding:0;color:var(--ink);cursor:pointer;font:inherit;display:block;text-align:inherit}.tcap .nm:hover{color:var(--brass)}
+.tcap .mid{text-align:center;color:var(--dim);max-width:200px}.tcap .mid b{display:block;color:var(--ink);font:700 14px var(--display)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips button{background:var(--bench);border:1px solid var(--line);border-radius:999px;color:var(--ink);padding:4px 10px;font:600 13px var(--body);cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.chips button[aria-pressed=false]{opacity:.4;text-decoration:line-through}
+.chips i{width:9px;height:9px;border-radius:50%;display:inline-block}
+.near{display:grid;grid-template-columns:18px 10px minmax(0,1fr) 90px;gap:2px 8px;align-items:center;background:none;border:0;border-top:1px solid var(--line);color:var(--ink);text-align:left;padding:7px 0;cursor:pointer;font:inherit;width:100%}
+.near:hover .nm{color:var(--brass)}.near i{width:10px;height:10px;border-radius:50%;display:block}.near .k{color:var(--dim);font-size:13px;font-variant-numeric:tabular-nums}
+.modes{align-self:flex-start}.modes button{padding:7px 16px;font-size:14px}
+.pick{display:grid;gap:10px}.pick button{text-align:left;background:var(--bench);border:1px solid var(--line);border-radius:10px;color:var(--ink);padding:14px;cursor:pointer;font:inherit}.pick button:hover{border-color:var(--brass)}.pick b{display:block;font:700 18px var(--display);margin-bottom:3px}
 .mat{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 10px;align-items:center}
 .mat .seg button{padding:5px 10px;font-size:13px}
 .split{display:flex;height:8px;border-radius:4px;overflow:hidden;background:var(--line)}.split i{display:block;height:100%}
@@ -75,11 +97,13 @@ th{color:var(--dim);font-weight:600}
   <header><h1>Where do you stand?</h1><p class="meta" id="hdr"></p></header>
   <div class="app">
     <div class="mapcard">
-      <div class="maptop"><div class="seg" role="group" aria-label="Map view"><button data-dim="2" aria-pressed="true">2D</button><button data-dim="3" aria-pressed="false">3D</button></div><span class="meta" id="hint"></span></div>
-      <canvas id="map" role="img" aria-label="Map of MPs placed by what they said in Parliament"></canvas>
+      <div class="maptop"><div class="seg" role="group" aria-label="Map view"><button data-dim="2" aria-pressed="true">2D</button><button data-dim="3" aria-pressed="false">3D</button></div><span style="display:flex;gap:10px;align-items:center"><span class="meta" id="hint"></span><button class="ibtn" id="tbtn" aria-label="Show a topic's line or plane" aria-expanded="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 3 8l9 5 9-5-9-5z"/><path d="m3 13 9 5 9-5"/></svg></button><button class="ibtn" id="fbtn" aria-label="Filter the map" aria-expanded="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v2.2a2 2 0 0 1-.6 1.4L15 12v7l-6 2v-8.5L4.5 7.6A2 2 0 0 1 4 6.2z"/></svg></button></span></div>
+      <div class="fpop" id="fpop" hidden></div><div class="fpop tpop" id="tpop" hidden></div>
+      <div style="position:relative"><canvas id="map" role="img" aria-label="Map of MPs placed by what they said in Parliament"></canvas><div class="tcap" id="tcap" hidden></div></div>
       <div class="legend" id="legend"></div>
     </div>
-    <section class="panel" id="panel" aria-live="polite"></section>
+    <div style="display:flex;flex-direction:column;gap:10px;min-width:0"><div class="seg modes" role="group" aria-label="Mode" id="modes"><button data-mode="stand">Where I stand</button><button data-mode="care">What I care about</button></div>
+    <section class="panel" id="panel" aria-live="polite"></section></div>
   </div>
   <section class="card" id="checks" hidden></section>
 </div>
@@ -92,7 +116,20 @@ const byK=Object.fromEntries(P.map(p=>[p.k,p]));
 let ans={},imp={};try{const s=JSON.parse(localStorage.getItem("wdys2")||"{}");ans=s.ans||{};imp=s.imp||{};}catch(e){}
 const save=()=>{try{localStorage.setItem("wdys2",JSON.stringify({ans,imp}))}catch(e){}};
 let view="intro",Q=[],qi=0,sel=null;
-const wt=k=>{const v=imp[k.split(".")[0]];return v==null?1:+v;};   // how much a subject matters to you: 0, 1 or 2
+const wt=k=>1;   // placement treats every issue the same; what you care about is its own mode
+const care=k=>{const v=imp[k];return v==null?0:+v;};   // how much a subject matters to you: 0, 1 or 2
+let mode="stand";
+let FILT={mps:true,avg:true,arrows:true,names:true,hid:{}};try{Object.assign(FILT,JSON.parse(localStorage.getItem("wdysf")||"{}"))}catch(e){}
+const saveF=()=>{try{localStorage.setItem("wdysf",JSON.stringify(FILT))}catch(e){}};
+const shown=m=>FILT.mps&&!FILT.hid[m.p];
+const PCOL=Object.fromEntries(M.map(m=>[m.p,m.c]));
+// Nearest neighbours in the learned space: distance between you and each MP, with each axis scaled by how spread out MPs are along it
+const SD=[0,1,2].map(i=>Math.sqrt(SP.prior[i][i]));let YZ=SP.m0.slice();
+const dist=(a,b)=>Math.sqrt(a.reduce((s,v,i)=>s+((v-b[i])/SD[i])**2,0));
+function nearest(){return M.map(m=>({m,d:dist([m.x,m.y,m.z],YZ)})).sort((a,b)=>a.d-b.d);}
+// Who talks most about the subjects you care about: weighted share of everything they said, ignoring MPs who said little on them
+function talkers(){const ks=SB.map(S=>S.k).filter(k=>care(k)>0),W=ks.reduce((a,k)=>a+care(k),0);if(!W)return[];
+  return M.map(m=>{let sc=0,n=0;ks.forEach(k=>{const a=m.att[k];if(a){sc+=care(k)*a[1];n+=a[0];}});return{m,sc:sc/W,n};}).filter(x=>x.n>=8).sort((a,b)=>b.sc-a.sc);}
 const answered=()=>P.filter(p=>ans[p.k]!=null&&ans[p.k]!=="u"&&wt(p.k)>0);
 const cur=()=>view==="quiz"?Q[qi]:null;
 
@@ -102,6 +139,35 @@ const rng=a=>{const s=[...a].sort((x,y)=>x-y);return[s[Math.floor(s.length*.01)]
 const R3=["x","y","z"].map(a=>rng(M.map(m=>m[a])));
 const nrm=(v,i)=>((v-R3[i][0])/(R3[i][1]-R3[i][0]))*2-1;
 const pts=M.map(m=>({m,p:[nrm(m.x,0),nrm(m.y,1),nrm(m.z,2)]}));
+// Each proposal's direction: where supporting it moves you, in the map's units. Longest arrow reaches most of the way out.
+const ORIGIN=SP.m0.map((v,i)=>nrm(v,i));
+const ARR=(()=>{const r=SP.keys.map((k,j)=>({k,d:SP.W[j].map((w,i)=>w*2/(R3[i][1]-R3[i][0]))}));r.forEach(x=>x.n=Math.hypot(...x.d));const mx=Math.max(...r.map(x=>x.n));r.forEach(x=>x.d=x.d.map(v=>v*.8/mx));return r.sort((a,b)=>b.n-a.n);})();
+// For the overview, the strongest ideas pointing in clearly different directions (either end of an idea counts)
+// A topic as geometry in the shared space: one proposal is a line through the centre (for at one end, against at the other);
+// a subject is the plane spanned by its two strongest, most different proposal directions
+let TOPIC=null;
+const unit=v=>{const n=Math.hypot(...v);return v.map(x=>x/n);},dot3=(a,b)=>a[0]*b[0]+a[1]*b[1]+a[2]*b[2];
+const mixc=t=>{const a=t<0?[229,142,122]:[143,214,148],n=[120,140,132],u=Math.min(1,Math.abs(t));return`rgb(${n.map((v,i)=>Math.round(v+(a[i]-v)*u)).join(",")})`;};
+function setTopic(kind,k){if(!k||(TOPIC&&TOPIC.k===k)){TOPIC=null;$("tcap").hidden=true;dirty=true;drawTopics();return;}
+  const S=kind==="plane"?SB.find(x=>x.k===k):null,vs=(kind==="line"?[ARR.find(x=>x.k===k)]:S.proposals.map(p=>ARR.find(x=>x.k===p.k))).filter(Boolean).sort((a,b)=>b.n-a.n);
+  const e1=unit(vs[0].d);let e2=null,k2=null;
+  if(kind==="plane"){let bn=0;vs.slice(1).forEach(v=>{const o=v.d.map((x,i)=>x-dot3(v.d,e1)*e1[i]),n=Math.hypot(...o);if(n>bn){bn=n;e2=unit(o);k2=v.k;}});}
+  const keys=kind==="line"?[k]:S.proposals.map(p=>p.k),rel=new Set(M.filter(m=>keys.some(q=>m.positions[q]&&Math.abs(m.positions[q].s)>.2)).map(m=>m.i));
+  const pr=new Map(pts.map(o=>[o.m.i,dot3(o.p.map((v,i)=>v-ORIGIN[i]),e1)]));const vmax=Math.max(...[...pr.values()].map(Math.abs));
+  // ends: for one proposal, MPs who said they support it (or oppose it), furthest along the line; for a subject, furthest along its main direction
+  const said=(m,sg)=>kind!=="line"||(m.positions[k]&&Math.sign(m.positions[k].s)===sg);
+  const forEnd=M.filter(m=>rel.has(m.i)&&said(m,1)).sort((a,b)=>pr.get(b.i)-pr.get(a.i)).slice(0,3),agEnd=M.filter(m=>rel.has(m.i)&&said(m,-1)).sort((a,b)=>pr.get(a.i)-pr.get(b.i)).slice(0,3);
+  // how much each MP talked about it: passages on this proposal, or on any of the subject's proposals
+  const talk=new Map(M.map(m=>[m.i,kind==="line"?(m.ap[k]||0):((m.att[k]||[0])[0])]));const tmax=Math.max(1,...talk.values());
+  TOPIC={kind,k,e1,e2,k1:vs[0].k,k2,t0:performance.now(),rel,pr,vmax,talk,tmax};
+  const nm=m=>`<button class="nm" data-mp="${m.i}"><span style="color:${m.c}">●</span> ${esc(m.n)} <span class="meta">${esc(m.p)}</span></button>`;
+  $("tcap").innerHTML=`<div><h4 style="color:var(--no)">${kind==="line"?"Said against, furthest out":"Furthest toward against"}</h4>${agEnd.map(nm).join("")}</div>
+    <div class="mid"><b>${kind==="line"?esc(byK[k].short):esc(S.title)}</b>${kind==="line"?"a line through the space":"a plane through the space"} · bigger bubbles talked about it more<br><button class="link" data-topic="">Close</button></div>
+    <div style="text-align:right"><h4 style="color:var(--yes)">${kind==="line"?"Said for, furthest out":"Furthest toward for"}</h4>${forEnd.map(nm).join("")}</div>`;
+  $("tcap").hidden=false;if(kind==="plane"&&dim===2)setDim(3);dirty=true;drawTopics();}
+function drawTopics(){$("tpop").innerHTML=`<p class="meta" style="margin:0">A subject is a plane through the space; one proposal is a line. Pick one to see where it lies and who sits at each end.</p>`+SB.map(S=>`<div class="tsub"><button data-topic="${S.k}" data-kind="plane">${esc(S.title)} <small>plane</small></button><div class="chips">${S.proposals.map(p=>`<button data-topic="${p.k}" data-kind="line" class="${TOPIC&&TOPIC.k===p.k?"on":""}">${esc(p.short)}</button>`).join("")}</div></div>`).join("");
+  $("tbtn").classList.toggle("on",!!TOPIC);}
+const SPREAD=(()=>{const out=[];ARR.forEach(x=>[1,-1].forEach(sg=>{const an=Math.atan2(-sg*x.d[1],sg*x.d[0]);if(out.length<7&&out.every(o=>{const d=Math.abs(((o.an-an+3*Math.PI)%(2*Math.PI))-Math.PI);return d>.6;})&&!out.some(o=>o.k===x.k))out.push({...x,sg,an});}));return out;})();
 let cam={yaw:0,pitch:0},goal={yaw:0,pitch:0},dim=2,you=[0,0,0],youGoal=[0,0,0],halo=1,haloGoal=1,dirty=true,W0=0,H0=0;
 let drag=null,spunByUser=false;
 function size(){const r=cv.getBoundingClientRect(),d=devicePixelRatio||1;W0=r.width;H0=Math.min(r.width*.78,innerWidth<=860?innerHeight*.42:innerHeight*.72);cv.style.height=H0+"px";cv.width=W0*d;cv.height=H0*d;cx.setTransform(d,0,0,d,0,0);dirty=true;}
@@ -110,48 +176,87 @@ function proj(p){const[x,y,z]=p,cy=Math.cos(cam.yaw),sy=Math.sin(cam.yaw),cp=Mat
   return[W0/2+x1*s*f*(dim===3?1:W0*.44/s),H0/2-y1*s*f*(dim===3?1:H0*.42/s),z2,f];}
 const endLab=(a,sgn)=>SP[a][sgn].slice(0,2).map(k=>byK[k].short).join(", ");
 function outlined(t,x,y,col){cx.strokeText(t,x,y);cx.fillStyle=col;cx.fillText(t,x,y);}
-function draw(){cx.clearRect(0,0,W0,H0);const q=cur(),top=view==="results"&&sel==null?ranked().slice(0,5).map(x=>x.m.i):[];
-  // axes, each end labelled with the proposals that pull MPs that way
-  cx.lineWidth=1;cx.font="12px 'Source Sans 3',sans-serif";cx.lineJoin="round";
-  [["x",[1,0,0]],["y",[0,1,0]],["z",[0,0,1]]].forEach(([a,v])=>{const A=proj(v.map(t=>t*1.05)),B=proj(v.map(t=>-t*1.05));if(Math.hypot(A[0]-B[0],A[1]-B[1])<30)return;
-    cx.strokeStyle="#2c5145";cx.beginPath();cx.moveTo(A[0],A[1]);cx.lineTo(B[0],B[1]);cx.stroke();
-    const lab=(P0,t)=>{cx.textAlign=P0[0]>W0*.66?"right":P0[0]<W0*.34?"left":"center";const X=Math.max(4,Math.min(W0-4,P0[0])),Y=Math.max(13,Math.min(H0-5,P0[1]+(P0[1]>H0/2?13:-5)));cx.lineWidth=3;cx.strokeStyle="#143a30";outlined(t,X,Y,"#a7b8ae");};
-    lab(A,endLab(a,"pos"));lab(B,endLab(a,"neg"));});
+let CS=null,CSmax=1;
+function draw(){cx.clearRect(0,0,W0,H0);const q=cur(),T=mode==="care"?talkers():null;CS=T&&T.length?new Map(T.map(x=>[x.m.i,x.sc])):null;CSmax=T&&T.length?T[0].sc:1;
+  const top=mode==="care"?(T||[]).slice(0,5).map(x=>x.m.i):view==="results"&&sel==null&&answered().length?nearest().slice(0,5).map(x=>x.m.i):[];
+  // no axes: ideas are arrows from the centre, pointing toward the MPs who support them
+  const arrows=mode==="care"||!FILT.arrows||(TOPIC&&!q)?[]:q?[[q.k,1,"#8fd694","Supporters"],[q.k,-1,"#e58e7a","Opponents"]]
+    :view==="results"&&sel==null&&answered().length?answered().sort((a,b)=>ARR.find(x=>x.k===b.k).n-ARR.find(x=>x.k===a.k).n).slice(0,4).map(p=>[p.k,Math.sign(+ans[p.k]),"#d9b45f",(+ans[p.k]>0?"for ":"against ")+p.short])
+    :SPREAD.map(x=>[x.k,x.sg,"rgba(239,236,224,.55)",(x.sg<0?"against ":"")+byK[x.k].short]);
+  cx.lineJoin="round";cx.lineCap="round";
+  arrows.forEach(([k,sg,col,t])=>{const A=ARR.find(x=>x.k===k),O=proj(ORIGIN),T=proj(ORIGIN.map((v,i)=>v+sg*A.d[i]));
+    cx.strokeStyle=col;cx.lineWidth=q?2.5:1.6;cx.beginPath();cx.moveTo(O[0],O[1]);cx.lineTo(T[0],T[1]);cx.stroke();
+    const an=Math.atan2(T[1]-O[1],T[0]-O[0]);cx.beginPath();cx.moveTo(T[0],T[1]);cx.lineTo(T[0]-9*Math.cos(an-.45),T[1]-9*Math.sin(an-.45));cx.moveTo(T[0],T[1]);cx.lineTo(T[0]-9*Math.cos(an+.45),T[1]-9*Math.sin(an+.45));cx.stroke();
+    cx.font="600 12.5px 'Source Sans 3',sans-serif";cx.textAlign=Math.cos(an)>.3?"left":Math.cos(an)<-.3?"right":"center";cx.lineWidth=3.5;cx.strokeStyle="#143a30";
+    const X=Math.max(6,Math.min(W0-6,T[0]+Math.cos(an)*8)),Y=Math.max(14,Math.min(H0-6,T[1]+Math.sin(an)*12+4));outlined(t,X,Y,col.startsWith("rgba")?"#efece0":col);});
+  const tp=TOPIC?Math.min(1,(performance.now()-TOPIC.t0)/900):0,te=1-Math.pow(1-tp,3);
+  if(TOPIC&&TOPIC.kind==="plane"&&TOPIC.e2){const c=(a,b)=>proj(ORIGIN.map((v,i)=>v+(a*TOPIC.e1[i]+b*TOPIC.e2[i])*1.1*te));const Q4=[c(1,1),c(1,-1),c(-1,-1),c(-1,1)];
+    cx.fillStyle="rgba(217,180,95,.08)";cx.strokeStyle="rgba(217,180,95,.45)";cx.lineWidth=1;cx.beginPath();Q4.forEach((r,i)=>i?cx.lineTo(r[0],r[1]):cx.moveTo(r[0],r[1]));cx.closePath();cx.fill();cx.stroke();
+    cx.setLineDash([3,5]);for(let g=-.5;g<=.5;g+=.5){[[c(g,-1),c(g,1)],[c(-1,g),c(1,g)]].forEach(([A,B])=>{cx.beginPath();cx.moveTo(A[0],A[1]);cx.lineTo(B[0],B[1]);cx.stroke();});}cx.setLineDash([]);}
   // dots, far to near
   const L=pts.map(o=>({...o,r:proj(o.p)})).sort((a,b)=>a.r[2]-b.r[2]);
-  L.forEach(o=>{const m=o.m;let f=m.c,a=1,rad=3.4;
+  L.forEach(o=>{const m=o.m;if(!shown(m)&&sel!==m.i)return;let f=m.c,a=1,rad=3.4;
     if(q){const pos=m.positions[q.k];if(pos&&Math.abs(pos.s)>.2){f=pos.s>0?"#8fd694":"#e58e7a";rad=4.2;}else a=.12;}
+    else if(TOPIC){const n=TOPIC.talk.get(m.i)||0;if(TOPIC.rel.has(m.i)||n){f=TOPIC.kind==="line"&&m.positions[TOPIC.k]?mixc(m.positions[TOPIC.k].s*1.5):mixc(TOPIC.pr.get(m.i)/TOPIC.vmax*1.6);rad=2.5+Math.sqrt(n/TOPIC.tmax)*11*te+(1-te)*1.5;a=TOPIC.rel.has(m.i)?.9:.45;}else a=.08;}
+    else if(mode==="care"&&CS){const v=CS.get(m.i)||0;a=v?Math.min(1,.15+v/CSmax*.85):.08;rad=3+v/CSmax*7;}
     else if(top.length){a=top.includes(m.i)?1:.4;if(top.includes(m.i))rad=6;}
     if(sel===m.i){rad=7.5;a=1;}
     rad*=o.r[3];cx.globalAlpha=a*(dim===3?Math.max(.45,Math.min(1,.8+o.r[2]*.25)):1);cx.fillStyle=f;cx.beginPath();cx.arc(o.r[0],o.r[1],rad,0,7);cx.fill();
     if(top.includes(m.i)||sel===m.i){cx.strokeStyle="#efece0";cx.lineWidth=1.5;cx.stroke();}});
   cx.globalAlpha=1;
+  // the topic's line, with each MP who spoke on it pulled onto it
+  if(TOPIC){const e=TOPIC.e1,O=ORIGIN,end=s=>proj(O.map((v,i)=>v+s*e[i]*1.15*te));
+    cx.globalAlpha=1;const A=end(1),B=end(-1),g=cx.createLinearGradient(B[0],B[1],A[0],A[1]);g.addColorStop(0,"#e58e7a");g.addColorStop(.5,"#a7b8ae");g.addColorStop(1,"#8fd694");
+    cx.strokeStyle=g;cx.lineWidth=3;cx.lineCap="round";cx.beginPath();cx.moveTo(B[0],B[1]);cx.lineTo(A[0],A[1]);cx.stroke();
+    cx.font="700 13px 'Source Sans 3',sans-serif";cx.lineWidth=4;cx.strokeStyle="#143a30";cx.globalAlpha=te;
+    const lab=(P0,t,col)=>{cx.textAlign=P0[0]>W0*.6?"right":P0[0]<W0*.4?"left":"center";outlined(t,Math.max(6,Math.min(W0-6,P0[0])),Math.max(16,Math.min(H0-70,P0[1]-10)),col);};
+    lab(A,"for "+byK[TOPIC.k1].short,"#8fd694");lab(B,"against "+byK[TOPIC.k1].short,"#e58e7a");
+    if(TOPIC.kind==="plane"&&TOPIC.e2){const A2=proj(O.map((v,i)=>v+TOPIC.e2[i]*1.15*te));cx.strokeStyle="rgba(217,180,95,.7)";cx.lineWidth=1.5;cx.beginPath();cx.moveTo(proj(O)[0],proj(O)[1]);cx.lineTo(A2[0],A2[1]);cx.stroke();cx.lineWidth=4;cx.strokeStyle="#143a30";lab(A2,"for "+byK[TOPIC.k2].short,"#d9b45f");}
+    cx.globalAlpha=1;}
   // party names
   cx.font="700 15px 'Bricolage Grotesque',sans-serif";cx.textAlign="center";cx.lineWidth=4;cx.strokeStyle="#143a30";
-  SP.parties.filter(p=>p.n>=4&&p.p!=="Ind").forEach(p=>{const r=proj([nrm(p.x,0),nrm(p.y,1),nrm(p.z,2)]);cx.globalAlpha=q?.3:.8;outlined(p.p,r[0],r[1],"#efece0");});
+  if(FILT.avg)SP.parties.filter(p=>p.n>=4&&p.p!=="Ind"&&!FILT.hid[p.p]).forEach(p=>{const r=proj([nrm(p.x,0),nrm(p.y,1),nrm(p.z,2)]);cx.globalAlpha=q?.3:1;
+    cx.fillStyle=PCOL[p.p];cx.strokeStyle="#efece0";cx.lineWidth=2;cx.beginPath();cx.arc(r[0],r[1],FILT.mps?6:11,0,7);cx.fill();cx.stroke();cx.lineWidth=4;cx.strokeStyle="#143a30";outlined(p.p,r[0],r[1]-12,"#efece0");});
   cx.globalAlpha=1;
+  // lines to your nearest MPs
+  if(view==="results"&&sel==null&&top.length&&mode!=="care"){const Y0=proj(you);cx.strokeStyle="rgba(217,180,95,.7)";cx.lineWidth=1.2;top.forEach(i=>{const o=L.find(o=>o.m.i===i);if(!shown(o.m))return;cx.beginPath();cx.moveTo(Y0[0],Y0[1]);cx.lineTo(o.r[0],o.r[1]);cx.stroke();});}
   // you, with a dashed circle for how unsure your spot still is
   const Y=proj(you);cx.fillStyle="rgba(217,180,95,.13)";cx.strokeStyle="rgba(217,180,95,.55)";cx.setLineDash([4,4]);cx.lineWidth=1.2;cx.beginPath();cx.arc(Y[0],Y[1],Math.max(12,halo*Math.min(W0,H0)*.42*Y[3]),0,7);cx.fill();cx.stroke();cx.setLineDash([]);
   cx.fillStyle="#d9b45f";cx.strokeStyle="#0a211b";cx.lineWidth=3;cx.beginPath();cx.arc(Y[0],Y[1],8,0,7);cx.fill();cx.stroke();
   cx.font="700 16px 'Bricolage Grotesque',sans-serif";cx.lineWidth=4;cx.strokeStyle="#143a30";outlined("You",Y[0],Y[1]-14,"#d9b45f");
   // names of your closest matches, or the MP you opened
   cx.font="600 12.5px 'Source Sans 3',sans-serif";cx.textAlign="left";cx.lineWidth=3.5;
-  [...new Set([...top.slice(0,3),...(sel!=null?[sel]:[])])].forEach(i=>{const o=L.find(o=>o.m.i===i);outlined(o.m.n,o.r[0]+9,o.r[1]+4,"#efece0");});
+  [...new Set([...(FILT.names?top.slice(0,3):[]),...(sel!=null?[sel]:[])])].forEach(i=>{const o=L.find(o=>o.m.i===i);if(!shown(o.m)&&sel!==i)return;outlined(o.m.n,o.r[0]+9,o.r[1]+4,"#efece0");});
   cv._L=L;}
 function tick(){let moving=false;
   for(const a of["yaw","pitch"]){const d=goal[a]-cam[a];if(Math.abs(d)>.001){cam[a]+=d*.12;moving=true;}else cam[a]=goal[a];}
   for(let i=0;i<3;i++){const d=youGoal[i]-you[i];if(Math.abs(d)>.002){you[i]+=d*.12;moving=true;}else you[i]=youGoal[i];}
   if(Math.abs(haloGoal-halo)>.002){halo+=(haloGoal-halo)*.12;moving=true;}
   if(dim===3&&!drag&&!spunByUser){goal.yaw+=.003;moving=true;}
+  if(TOPIC&&performance.now()-TOPIC.t0<950)moving=true;
   if(moving||dirty){draw();dirty=false;}requestAnimationFrame(tick);}
 // in 3D, drag to turn the space; a click without dragging opens an MP
 cv.addEventListener("pointerdown",e=>{drag={x:e.clientX,y:e.clientY,yaw:goal.yaw,pitch:goal.pitch,moved:0};if(dim===3)cv.setPointerCapture(e.pointerId);});
 cv.addEventListener("pointermove",e=>{if(drag&&dim===3){const dx=e.clientX-drag.x,dy=e.clientY-drag.y;drag.moved=Math.max(drag.moved,Math.abs(dx)+Math.abs(dy));if(drag.moved>4){spunByUser=true;$("tip").style.display="none";goal.yaw=cam.yaw=drag.yaw+dx*.008;goal.pitch=cam.pitch=Math.max(-1.3,Math.min(1.3,drag.pitch-dy*.008));dirty=true;return;}}
   const o=hit(e),t=$("tip");if(!o){t.style.display="none";return;}const m=o.m,q=cur(),pos=q&&m.positions[q.k];
   t.innerHTML=`<b>${esc(m.n)}</b> · ${esc(m.p)}${pos?`<br>${pos.s>.2?"Said they support this":pos.s<-.2?"Said they oppose this":"Mixed on this"}`:""}`;t.style.display="block";t.style.left=Math.min(e.clientX+12,innerWidth-270)+"px";t.style.top=(e.clientY+14)+"px";});
-cv.addEventListener("pointerup",e=>{const was=drag;drag=null;if(!was||was.moved>4)return;const o=hit(e);if(o){sel=o.m.i;view="results";render();if(innerWidth<=860)$("panel").scrollIntoView({behavior:"smooth"});}});
+cv.addEventListener("pointerup",e=>{const was=drag;drag=null;if(!was||was.moved>4)return;const o=hit(e);if(o){sel=o.m.i;view="detail";render();if(innerWidth<=860)$("panel").scrollIntoView({behavior:"smooth"});}});
 cv.addEventListener("pointerleave",()=>{$("tip").style.display="none";});
-function hit(e){const r=cv.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;let b=null,bd=100;(cv._L||[]).forEach(o=>{if(cur()&&!o.m.positions[cur().k])return;const d=(o.r[0]-x)**2+(o.r[1]-y)**2;if(d<bd){bd=d;b=o;}});return b;}
+function hit(e){const r=cv.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;let b=null,bd=100;(cv._L||[]).forEach(o=>{if(!shown(o.m))return;if(cur()&&!o.m.positions[cur().k])return;const d=(o.r[0]-x)**2+(o.r[1]-y)**2;if(d<bd){bd=d;b=o;}});return b;}
+function drawFilters(){const ps=[...new Set(M.map(m=>m.p))].filter(Boolean).map(p=>[p,M.filter(m=>m.p===p).length]).sort((a,b)=>b[1]-a[1]);
+  $("fpop").innerHTML=`<div><h3>Show</h3><div class="chips">${[["mps","MPs"],["avg","Party averages"],["arrows","Idea arrows"],["names","Names"]].map(([k,l])=>`<button data-f="${k}" aria-pressed="${!!FILT[k]}">${l}</button>`).join("")}</div></div>
+  <div><h3>Parties</h3><div class="chips">${ps.map(([p,n])=>`<button data-fp="${esc(p)}" aria-pressed="${!FILT.hid[p]}"><i style="background:${PCOL[p]}"></i>${esc(p)} <span class="meta">${n}</span></button>`).join("")}</div></div>
+  <div class="row"><button class="link" data-f="only">Party averages only</button><button class="link" data-f="reset">Show everything</button></div>`;
+  $("fbtn").classList.toggle("on",!FILT.mps||!FILT.avg||!FILT.arrows||!FILT.names||Object.values(FILT.hid).some(Boolean));}
+document.addEventListener("click",e=>{const tb=e.target.closest("#tbtn"),tp=$("tpop"),tt=e.target.closest("[data-topic]");
+  if(tb){tp.hidden=!tp.hidden;tb.setAttribute("aria-expanded",String(!tp.hidden));$("fpop").hidden=true;drawTopics();return;}
+  if(tt){const inPop=!!tt.closest("#tpop");setTopic(tt.dataset.kind,tt.dataset.topic);if(inPop){tp.hidden=true;$("tbtn").setAttribute("aria-expanded","false");}return;}
+  if(!tp.hidden&&!e.target.closest("#tpop")){tp.hidden=true;$("tbtn").setAttribute("aria-expanded","false");}});
+document.addEventListener("click",e=>{const fb=e.target.closest("#fbtn"),pop=$("fpop");
+  if(fb){pop.hidden=!pop.hidden;fb.setAttribute("aria-expanded",String(!pop.hidden));drawFilters();return;}
+  const b=e.target.closest("[data-f],[data-fp]");
+  if(b){const f=b.dataset.f;if(b.dataset.fp!=null)FILT.hid[b.dataset.fp]=!FILT.hid[b.dataset.fp];else if(f==="reset")FILT={mps:true,avg:true,arrows:true,names:true,hid:{}};else if(f==="only")Object.assign(FILT,{mps:false,avg:true,arrows:false,names:false});else FILT[f]=!FILT[f];saveF();drawFilters();dirty=true;return;}
+  if(!pop.hidden&&!e.target.closest("#fpop")){pop.hidden=true;$("fbtn").setAttribute("aria-expanded","false");}});
 function setDim(d){dim=d;spunByUser=false;goal=d===3?{yaw:-.65,pitch:.32}:{yaw:0,pitch:0};cv.classList.toggle("orbit",d===3);document.querySelectorAll("[data-dim]").forEach(b=>b.setAttribute("aria-pressed",String(+b.dataset.dim===d)));
   $("hint").textContent=d===3?"Drag to turn it":"";dirty=true;}
 
@@ -161,11 +266,12 @@ function inv(A){const K=A.length,a=A.map(r=>r.slice()),I=a.map((r,i)=>r.map((_,j
     for(let r=0;r<K;r++)if(r!==c){const f=a[r][c];for(let j=0;j<K;j++){a[r][j]-=f*a[c][j];I[r][j]-=f*I[c][j];}}}return I;}
 function placeYou(){const K=3,Pi=inv(SP.prior),A=Pi.map(r=>r.slice()),b=Pi.map(r=>r.reduce((s,v,j)=>s+v*SP.m0[j],0));
   answered().forEach(p=>{const j=SP.keys.indexOf(p.k);if(j<0)return;const w=SP.W[j],c=wt(p.k)/SP.s2,r=(+ans[p.k]-SP.mu[j])*c;for(let a=0;a<K;a++){b[a]+=w[a]*r;for(let d=0;d<K;d++)A[a][d]+=w[a]*w[d]*c;}});
-  const C=inv(A),z=C.map(r=>r.reduce((s,v,j)=>s+v*b[j],0));
+  const C=inv(A),z=C.map(r=>r.reduce((s,v,j)=>s+v*b[j],0));YZ=z;
   youGoal=z.map((v,i)=>Math.max(-1.1,Math.min(1.1,nrm(v,i))));
   haloGoal=Math.sqrt((C[0][0]/((R3[0][1]-R3[0][0])/2)**2+C[1][1]/((R3[1][1]-R3[1][0])/2)**2)/2);return z;}
 function paint(){placeYou();dirty=true;const q=cur();
   $("legend").innerHTML=q?`<span><i style="background:var(--yes)"></i>Said they support</span><span><i style="background:var(--no)"></i>Said they oppose</span><span>${M.filter(m=>m.positions[q.k]&&Math.abs(m.positions[q.k].s)>.2).length} MPs took a side; the rest are faded</span>`
+    :mode==="care"?`<span>Bigger, brighter dots: MPs who spend more of their time on the issues you picked. Where they sit still shows what they said.</span>`
     :`<span>Each dot is an MP, placed by what they said in Parliament. MPs near each other said similar things. Click one to read their words.</span>`;}
 
 // ---------- matching ----------
@@ -176,75 +282,81 @@ const side=s=>s>.2?["yes","Supports"]:s<-.2?["no","Opposes"]:["none","Mixed"];
 // ---------- the panel ----------
 const CH=[["1","Support","y"],["-1","Oppose","n"],["0.5","Support, with conditions","y"],["u","Not sure / skip",""]];
 const IMP=[["0","Not much"],["1","Some"],["2","A lot"]];
-function coreQueue(){return SB.filter(S=>wt(S.k)>0).sort((a,b)=>wt(b.k)-wt(a.k)).flatMap(S=>S.proposals.filter(p=>p.core).map(p=>byK[p.k]));}
+const LEN=8;let TOTAL=0,adaptive=false;
+// The next question is the one whose answer would shrink your circle most, given what you've said so far and how much each subject matters to you
+function precision(){const Pi=inv(SP.prior),A=Pi.map(r=>r.slice());answered().forEach(p=>{const j=SP.keys.indexOf(p.k),w=SP.W[j],c=wt(p.k)/SP.s2;for(let a=0;a<3;a++)for(let d=0;d<3;d++)A[a][d]+=w[a]*w[d]*c;});return A;}
+const spread=C=>[0,1,2].reduce((s,i)=>s+C[i][i]/((R3[i][1]-R3[i][0])/2)**2,0);
+function pickNext(){const A=precision(),now=spread(inv(A));let best=null,bg=0;
+  P.forEach(p=>{if(wt(p.k)<=0||ans[p.k]!=null||Q.includes(p))return;const j=SP.keys.indexOf(p.k),w=SP.W[j],c=wt(p.k)/SP.s2,B=A.map((r,a)=>r.map((v,d)=>v+w[a]*w[d]*c)),g=now-spread(inv(B));if(g>bg){bg=g;best=p;}});return best;}
+function available(){return P.filter(p=>wt(p.k)>0&&ans[p.k]==null).length;}
 function render(){const R=$("panel");
-  if(view==="intro"){const n=answered().length;
-    R.innerHTML=`<p class="big">See where you sit among ${M.length} MPs, judged by what they actually said in Parliament.</p>
-    <p class="meta">Tell us which issues matter to you, answer a few questions, and you'll appear on the map. As you answer, watch which MPs took each side and where you move.</p>
-    <div class="row"><button class="btn" data-go="matter">${n?"Carry on":"Start"}</button>${n?`<button class="link" data-go="results">See where I am</button>`:`<span class="meta">About a minute.</span>`}</div>`;}
-  else if(view==="matter"){const n=coreQueue().length;
-    R.innerHTML=`<p class="big">Which of these matter to you?</p><p class="meta">We'll only ask about the ones that do, and the ones that matter a lot count for more.</p>
-    <div class="mat">${SB.map(S=>`<span>${esc(S.title)}</span><div class="seg" role="group" aria-label="${esc(S.title)}">${IMP.map(([v,l])=>`<button data-imp="${S.k}" data-v="${v}" aria-pressed="${String(wt(S.k))===v}">${l}</button>`).join("")}</div>`).join("")}</div>
-    <div class="row"><button class="btn" data-go="core" ${n?"":"disabled"}>${n?`Continue: ${n} question${n>1?"s":""}`:"Pick at least one"}</button></div>`;}
+  $("modes").hidden=view==="intro";document.querySelectorAll("[data-mode]").forEach(x=>x.setAttribute("aria-pressed",String(x.dataset.mode===mode)));
+  if(view==="intro"){
+    R.innerHTML=`<p class="big">${M.length} MPs, placed by what they actually said in Parliament. Two ways in:</p>
+    <div class="pick"><button data-go="stand"><b>Where do I stand?</b><span class="meta">${Math.min(LEN,available())} questions, each the one that best tells people apart. You appear on the map among the MPs who'd answer like you.</span></button>
+    <button data-go="care"><b>Who talks about what I care about?</b><span class="meta">Pick the issues that matter to you and see which MPs spend the most of their time on them.</span></button></div>`;}
+  else if(view==="care"){const T=talkers(),mx=T.length?T[0].sc:1;
+    const pa={};T.forEach(x=>{const o=pa[x.m.p]=pa[x.m.p]||{s:0,n:0,c:x.m.c};o.s+=x.sc;o.n++;});const pl=Object.entries(pa).filter(([p,o])=>p&&o.n>=4).map(([p,o])=>[p,o.s/o.n,o.c]).sort((a,b)=>b[1]-a[1]);const pm=pl.length?pl[0][1]:1;
+    R.innerHTML=`<p class="big">Which issues matter to you?</p>
+    <div class="mat">${SB.map(S=>`<span>${esc(S.title)}</span><div class="seg" role="group" aria-label="${esc(S.title)}">${IMP.map(([v,l])=>`<button data-imp="${S.k}" data-v="${v}" aria-pressed="${String(care(S.k))===v}">${l}</button>`).join("")}</div>`).join("")}</div>
+    ${T.length?`<div><h3>MPs who talk most about these</h3>${T.slice(0,8).map(x=>`<button class="mp" data-mp="${x.m.i}"><i style="background:${x.m.c}"></i><span class="nm">${esc(x.m.n)} <span class="meta">${esc(x.m.p)}</span></span><b>${(x.sc*100).toFixed(1)}%</b><small><span class="bar" style="display:block"><i style="width:${x.sc/mx*100}%;background:var(--brass)"></i></span></small></button>`).join("")}
+      <p class="meta" style="margin-top:6px">Share of everything each MP said in Parliament that raised these issues, weighted by how much each matters to you.</p></div>
+      <div><h3>Parties, on average</h3>${pl.map(([p,v,c])=>`<div class="party"><span>${esc(p)}</span><div class="bar"><i style="width:${v/pm*100}%;background:${c}"></i></div><span class="meta num">${(v*100).toFixed(1)}%</span></div>`).join("")}</div>`
+      :`<p class="meta">Pick at least one issue. The map lights up the MPs who talk about it most.</p>`}`;}
   else if(view==="quiz"){const p=Q[qi],S=p.s,ms=M.filter(m=>m.positions[p.k]),y=ms.filter(m=>m.positions[p.k].s>.2).length,no=ms.filter(m=>m.positions[p.k].s<-.2).length;
-    R.innerHTML=`<div class="row"><span class="chip">${esc(S.title)}</span><span class="meta">${qi+1} of ${Q.length}</span></div><div class="prog"><i style="width:${(qi+1)/Q.length*100}%"></i></div>
+    R.innerHTML=`<div class="row"><span class="chip">${esc(S.title)}</span><span class="meta">${qi+1} of ${TOTAL}</span></div><div class="prog"><i style="width:${(qi+1)/TOTAL*100}%"></i></div>
     <p class="big">${esc(p.label)}</p>
     <div class="choices" role="group" aria-label="Your answer">${CH.map(([v,l,c])=>`<button class="ch ${c}" data-a="${v}" aria-pressed="${ans[p.k]===v}">${l}</button>`).join("")}</div>
     <div><div class="split"><i style="width:${y/(y+no||1)*100}%;background:var(--yes)"></i><i style="width:${no/(y+no||1)*100}%;background:var(--no)"></i></div><p class="meta" style="margin-top:4px">${y} MPs said they support it, ${no} said they oppose it.</p></div>
-    <div class="row"><span>${qi?`<button class="link" data-go="prev">← Back</button>`:`<button class="link" data-go="matter">← Change what matters</button>`}</span><button class="link" data-go="results">See where I am</button></div>`;}
+    ${answered().length?`<p class="meta">Nearest MP so far: <b style="color:var(--ink)">${(()=>{placeYou();const n=nearest()[0];return esc(n.m.n)+" ("+esc(n.m.p)+")";})()}</b></p>`:""}
+    <div class="row"><span>${qi?`<button class="link" data-go="prev">← Back</button>`:""}</span><button class="link" data-go="results">See where I am</button></div>`;}
   else if(sel!=null){const m=M.find(x=>x.i===sel),cmp=compare(m);
-    R.innerHTML=`<p><button class="link" data-go="results">← Back</button></p><div><h2>${esc(m.n)}</h2><p class="meta">${esc(m.pn)}${m.k?", "+esc(m.k):""}</p></div>
+    R.innerHTML=`<p><button class="link" data-go="back">← Back</button></p><div><h2>${esc(m.n)}</h2><p class="meta">${esc(m.pn)}${m.k?", "+esc(m.k):""}</p></div>
+      ${Object.keys(m.att).length?`<p class="meta">Share of what they said, by issue: ${SB.filter(S=>m.att[S.k]).sort((a,b)=>m.att[b.k][1]-m.att[a.k][1]).map(S=>`${esc(S.title)} ${(m.att[S.k][1]*100).toFixed(1)}%`).join(" · ")}</p>`:""}
       ${answered().length?`<p class="meta">Where you both have a position: agree on ${cmp.agree}, disagree on ${cmp.disagree}. Not speaking on something isn't the same as being neutral.</p>`:""}
       ${SB.filter(S=>S.proposals.some(p=>m.positions[p.k])).map(S=>`<h3 style="margin-top:4px">${esc(S.title)}</h3>`+S.proposals.filter(p=>m.positions[p.k]).map(p=>{const pos=m.positions[p.k],[cls,word]=side(pos.s),mine=ans[p.k];
         return `<div><p style="font-weight:600">${esc(p.label)}</p><p><span class="tag ${cls}">${word}</span><span class="meta">${pos.debates} debate${pos.debates>1?"s":""}${pos.minister?", some as a minister":""}${mine&&mine!=="u"?` · you ${+mine>0?"support":"oppose"} it`:""}</span></p>${pos.ev.slice(0,2).map(e=>`<div class="ev ${e.side>0?"yes":"no"}"><p style="font-size:14px">${esc(e.t)}</p><p class="meta">${esc(e.d)}</p></div>`).join("")}</div>`;}).join("")).join("")}`;}
   else{const done=answered();
-    if(!done.length){R.innerHTML=`<p class="big">You haven't taken a side yet, so you're sitting in the middle.</p><div class="row"><button class="btn" data-go="matter">Start</button></div>`;paint();return;}
+    if(!done.length){R.innerHTML=`<p class="big">You haven't taken a side yet, so you're sitting in the middle.</p><div class="row"><button class="btn" data-go="stand">Start</button></div>`;paint();return;}
     const rk=ranked(),z=placeYou(),full=a=>(M.find(m=>m.p===a)||{}).pn||a;
     const near=SP.parties.filter(p=>p.n>=4&&p.p!=="Ind").map(p=>({...p,d:Math.hypot(p.x-z[0],p.y-z[1],p.z-z[2])})).sort((a,b)=>a.d-b.d);
     const parties={};M.forEach(m=>{const c=compare(m);if(!c.shared||!m.p)return;const o=parties[m.p]=parties[m.p]||{a:0,s:0,c:m.c};o.a+=c.agree;o.s+=c.shared;});
     const plist=Object.entries(parties).filter(([p,o])=>o.s>=8).sort((a,b)=>b[1].a/b[1].s-a[1].a/a[1].s);
     const extra=SB.filter(S=>wt(S.k)>0&&S.proposals.some(p=>ans[p.k]==null));
     const row=x=>`<button class="mp" data-mp="${x.m.i}"><i style="background:${x.m.c}"></i><span class="nm">${esc(x.m.n)} <span class="meta">${esc(x.m.p)}</span></span><b>${x.agree} of ${x.shared}</b><small>agree on ${x.agree}, disagree on ${x.disagree}</small></button>`;
-    R.innerHTML=`<p class="big">You sit closest to ${esc(full(near[0].p))} MPs${near[1]&&near[1].d<near[0].d*1.3?`, with ${esc(full(near[1].p))} not far off`:""}.</p>
-    <p class="meta">From ${done.length} answer${done.length>1?"s":""}. The dashed circle shows how sure that is; more answers shrink it.</p>
-    ${extra.length?`<div><h3>Sharpen it: more questions on</h3><div class="more">${extra.map(S=>`<button data-more="${S.k}">${esc(S.title)} (${S.proposals.filter(p=>ans[p.k]==null).length})</button>`).join("")}</div></div>`:""}
+    const NN=nearest(),dmax=NN[NN.length-1].d,pnear=SP.parties.filter(p=>p.n>=4&&p.p!=="Ind").map(p=>({...p,d:dist([p.x,p.y,p.z],z)})).sort((a,b)=>a.d-b.d);
+    R.innerHTML=`<p class="big">Your nearest MP is ${esc(NN[0].m.n)} <span style="color:${NN[0].m.c}">(${esc(NN[0].m.p)})</span>. The nearest party average is ${esc(full(pnear[0].p))}.</p>
+    <p class="meta">From ${done.length} answer${done.length>1?"s":""}, you're placed in the same learned space as every MP; these are your nearest neighbours in it. The dashed circle shows how sure your spot is; more answers shrink it.</p>
+    <div><h3>Closest to you in the space</h3>${NN.slice(0,8).map((x,i)=>`<button class="near" data-mp="${x.m.i}"><span class="k">${i+1}</span><i style="background:${x.m.c}"></i><span class="nm">${esc(x.m.n)} <span class="meta">${esc(x.m.p)}</span></span><span class="k" style="text-align:right">${x.d.toFixed(2)} away</span></button>`).join("")}</div>
+    <div><h3>Party averages, nearest first</h3>${pnear.map(p=>`<div class="party"><span>${esc(p.p)}</span><div class="bar"><i style="width:${Math.max(3,(1-p.d/dmax)*100)}%;background:${PCOL[p.p]}"></i></div><span class="meta num">${p.d.toFixed(2)}</span></div>`).join("")}</div>
+    ${available()?`<div class="row"><button class="btn" data-go="more8">Sharpen it: ${Math.min(LEN,available())} more questions</button></div>`:""}
+    ${extra.length?`<div><h3>Or pick a subject</h3><div class="more">${extra.map(S=>`<button data-more="${S.k}">${esc(S.title)} (${S.proposals.filter(p=>ans[p.k]==null).length})</button>`).join("")}</div></div>`:""}
+    <details><summary class="meta" style="cursor:pointer">Answer by answer: who agrees with you most often</summary><div style="display:flex;flex-direction:column;gap:12px;margin-top:8px">
     <div><h3>MPs who most often said what you'd say</h3>${rk.slice(0,6).map(row).join("")}</div>
     <div><h3>Parties, by share of positions that match yours</h3>${plist.map(([p,o])=>`<div class="party"><span>${esc(p)}</span><div class="bar"><i style="width:${Math.round(o.a/o.s*100)}%;background:${o.c}"></i></div><span class="meta num">${o.a} of ${o.s}</span></div>`).join("")}</div>
-    <div><h3>MPs who most often said the opposite</h3>${rk.slice(-4).reverse().map(row).join("")}</div>
+    <div><h3>MPs who most often said the opposite</h3>${rk.slice(-4).reverse().map(row).join("")}</div></div></details>
     <details><summary class="meta" style="cursor:pointer">Your answers</summary>${P.filter(p=>ans[p.k]!=null).map(p=>`<button class="ans" data-q="${p.k}"><span>${esc(p.label)}</span><span class="meta">${({"1":"Support","-1":"Oppose","0.5":"With conditions","u":"Skipped"})[ans[p.k]]}</span></button>`).join("")}</details>
-    <div class="row"><button class="link" data-go="matter">Change what matters</button><button class="link" data-go="reset">Start again</button></div>`;}
+    <div class="row"><button class="link" data-go="care">Who talks about what I care about?</button><button class="link" data-go="reset">Start again</button></div>`;}
   paint();}
-function next(){qi++;if(qi>=Q.length){view="results";qi=Q.length-1;}render();}
+function next(){if(qi<Q.length-1){qi++;}else{const p=adaptive&&Q.length<TOTAL&&pickNext();if(p){Q.push(p);qi++;}else{view="results";}}render();}
+function startAdaptive(){Q=[];adaptive=true;TOTAL=Math.min(LEN,available());const p=pickNext();if(!p){view="results";render();return;}Q=[p];qi=0;view="quiz";render();}
 document.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;const g=b.dataset.go;
   if(b.dataset.dim){setDim(+b.dataset.dim);}
   else if(b.dataset.a!=null){ans[Q[qi].k]=b.dataset.a;save();document.querySelectorAll(".ch").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));paint();setTimeout(next,450);}
   else if(b.dataset.imp){imp[b.dataset.imp]=b.dataset.v;save();render();}
-  else if(b.dataset.mp){sel=+b.dataset.mp;view="results";render();if(innerWidth<=860)$("panel").scrollIntoView({behavior:"smooth"});}
-  else if(b.dataset.q){Q=[byK[b.dataset.q]];qi=0;view="quiz";sel=null;render();}
-  else if(b.dataset.more){Q=P.filter(p=>p.s.k===b.dataset.more&&ans[p.k]==null);qi=0;view="quiz";render();}
-  else if(g==="matter"){view="matter";sel=null;render();}
-  else if(g==="core"){Q=coreQueue();const f=Q.findIndex(p=>ans[p.k]==null);qi=f<0?0:f;view="quiz";render();}
+  else if(b.dataset.mp){sel=+b.dataset.mp;view="detail";render();if(innerWidth<=860)$("panel").scrollIntoView({behavior:"smooth"});}
+  else if(b.dataset.q){Q=[byK[b.dataset.q]];adaptive=false;TOTAL=1;qi=0;view="quiz";sel=null;render();}
+  else if(b.dataset.more){Q=P.filter(p=>p.s.k===b.dataset.more&&ans[p.k]==null);adaptive=false;TOTAL=Q.length;qi=0;view="quiz";render();}
+  else if(g==="care"||b.dataset.mode==="care"){mode="care";view="care";sel=null;render();}
+  else if(g==="stand"||b.dataset.mode==="stand"){mode="stand";sel=null;if(answered().length&&g!=="stand"||!available())view="results",render();else startAdaptive();}
+  else if(g==="back"){sel=null;view=mode==="care"?"care":"results";render();}
+  else if(g==="core"||g==="more8"){startAdaptive();}
   else if(g==="prev"){qi=Math.max(0,qi-1);render();}
   else if(g==="results"){view="results";sel=null;render();}
   else if(g==="reset"){ans={};imp={};save();view="intro";sel=null;render();}
   else if(g==="checks")$("checks").scrollIntoView({behavior:"smooth"});});
 document.addEventListener("keydown",e=>{if(view!=="quiz")return;const m={"1":0,"2":1,"3":2,"4":3}[e.key];if(m!=null)document.querySelectorAll(".ch")[m].click();});
 
-// ---------- research build only: the checks, kept out of the public app ----------
-$("hdr").innerHTML=`<a href="faultlines.html" style="color:inherit">Commons Fault Lines</a>`;
-if(D.research){const pct=v=>v==null?"–":v+"%",K=$("checks");K.hidden=false;$("hdr").innerHTML=`Research build · <button class="link" data-go="checks">Checks</button>`;
-K.innerHTML=`<h2>Checks (research build only)</h2>
-<div class="scroll"><table><thead><tr><th>Subject</th><th class="num">Hand labels</th><th class="num">Agree with hand label</th><th class="num">Wrong way round</th><th class="num">Missed</th><th class="num">Invented</th><th class="num">Flip when one debate removed</th><th class="num">MPs placed</th><th class="num">Wikipedia</th></tr></thead><tbody>
-${SB.map(S=>{const C=S.checks;return `<tr><td>${esc(S.title)}</td><td class="num">${C.labels}</td><td class="num">${pct(C.exact)}</td><td class="num">${pct(C.wrong)}</td><td class="num">${pct(C.missed)}</td><td class="num">${pct(C.invented)}</td><td class="num">${pct(C.flip)}</td><td class="num">${C.mps}</td><td class="num">${C.wiki_n?C.wiki+"% of "+C.wiki_n:"–"}</td></tr>`;}).join("")}
-</tbody></table></div>
-<h3>Speeches against real votes</h3>
-<div class="scroll"><table><thead><tr><th>Proposal</th><th>Division</th><th class="num">MPs</th><th class="num">Speech = vote</th><th class="num">Majority guess</th><th class="num">Party-line guess</th><th class="num">Rebels predicted</th></tr></thead><tbody>
-${SB.flatMap(S=>(S.checks.votes||[]).map(v=>`<tr><td>${esc(byK[S.k+"."+v.proposal].short)}</td><td>${esc(v.title)} <span class="meta">${esc(v.date)}</span></td><td class="num">${v.n}</td><td class="num">${v.match}%</td><td class="num">${v.base}%</td><td class="num">${v.party}%</td><td class="num">${v.rebels?`${v.rebels_match} of ${v.rebels}`:"–"}</td></tr>`)).join("")}
-</tbody></table></div>
-<h3>The map</h3>
-<p class="meta">Three axes fitted to party-filled positions, ${Math.round(SP.share*100)}% of variation; residual noise ${SP.s2}. MPs placed from their own positions with their party's centre as the prior; you with the population centre as the prior, each answer weighted by how much its subject matters (0, 1, 2).</p>
-<p class="meta">x+ ${endLab("x","pos")} · x− ${endLab("x","neg")}<br>y+ ${endLab("y","pos")} · y− ${endLab("y","neg")}<br>z+ ${endLab("z","pos")} · z− ${endLab("z","neg")}</p>
-<p class="meta">Core questions: ${P.filter(p=>p.core).map(p=>esc(p.short)).join(", ")}.</p>`;}
 
 addEventListener("resize",size);size();setDim(2);render();requestAnimationFrame(tick);
 </script>

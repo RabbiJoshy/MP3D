@@ -1,0 +1,1555 @@
+{
+ "topic": "HousingFull",
+ "n_mps": 100,
+ "axes": [
+  {
+   "var": 0.23935590765640719,
+   "neg": [
+    "Renters\u2019 rights should be expanded with enforceable protections.",
+    "No-fault evictions should be banned to ensure tenant security.",
+    "Right to buy should end to boost social housing."
+   ],
+   "pos": [
+    "Housing should meet local need, not national quotas.",
+    "Green belt should be protected from housing development.",
+    "Rent should rise only with market rates."
+   ],
+   "load": {
+    "Renters\u2019 rights should be expanded with enforceable protections.": -0.691,
+    "No-fault evictions should be banned to ensure tenant security.": -0.598,
+    "Right to buy should end to boost social housing.": -0.08,
+    "Section 106 should be strengthened for affordable housing.": -0.064,
+    "Leasehold should be reformed to commonhold.": -0.044,
+    "Temporary housing should be reduced, not expanded.": -0.042,
+    "Social housing should be built at 150,000 annually.": -0.015,
+    "Housing should be built rapidly in London.": -0.008,
+    "Lifetime tenancies should be protected for housing stability": 0.018,
+    "Brownfield regeneration should drive urban densification.": 0.074,
+    "Neighbourhood planning should be protected and funded.": 0.074,
+    "Ground rents should not be capped.": 0.089,
+    "Rent should rise only with market rates.": 0.104,
+    "Green belt should be protected from housing development.": 0.177,
+    "Housing should meet local need, not national quotas.": 0.298
+   }
+  },
+  {
+   "var": 0.1255678995828691,
+   "neg": [
+    "Leasehold should be reformed to commonhold.",
+    "Brownfield regeneration should drive urban densification.",
+    "Social housing should be built at 150,000 annually."
+   ],
+   "pos": [
+    "Ground rents should not be capped.",
+    "Right to buy should end to boost social housing.",
+    "No-fault evictions should be banned to ensure tenant security."
+   ],
+   "load": {
+    "Leasehold should be reformed to commonhold.": -0.472,
+    "Brownfield regeneration should drive urban densification.": -0.212,
+    "Social housing should be built at 150,000 annually.": -0.099,
+    "Section 106 should be strengthened for affordable housing.": -0.095,
+    "Neighbourhood planning should be protected and funded.": -0.045,
+    "Housing should be built rapidly in London.": -0.029,
+    "Renters\u2019 rights should be expanded with enforceable protections.": -0.025,
+    "Lifetime tenancies should be protected for housing stability": 0.039,
+    "Temporary housing should be reduced, not expanded.": 0.062,
+    "Green belt should be protected from housing development.": 0.118,
+    "Housing should meet local need, not national quotas.": 0.196,
+    "Rent should rise only with market rates.": 0.203,
+    "No-fault evictions should be banned to ensure tenant security.": 0.218,
+    "Right to buy should end to boost social housing.": 0.53,
+    "Ground rents should not be capped.": 0.531
+   }
+  }
+ ],
+ "debates": [
+  {
+   "proposition": "Brownfield regeneration should drive urban densification.",
+   "agree": 20,
+   "disagree": 3,
+   "vec": [
+    0.074,
+    -0.212
+   ],
+   "receipts": {
+    "AGREE": [
+     {
+      "mp": "Wendy Morton",
+      "party": "Con",
+      "position": "Supports developing 1.2 million homes on brownfield sites to tackle urban sprawl",
+      "quote": "To put it more simply, the sense of urban sprawl is about the green belt not just between specific villages but between communities. We see that between Streetly and Pheasey in my constituency on the edge of Birmingham. Does he\u2026"
+     },
+     {
+      "mp": "Gareth Bacon",
+      "party": "Con",
+      "position": "Supports using brownfield land to build homes, opposing greenbelt encroachment",
+      "quote": "The CPRE reported that a large proportion of England\u2019s housing could be swiftly met using brownfield land that already has planning permission, without encroaching on undeveloped greenfield or green belt land. It estimates that\u2026"
+     }
+    ],
+    "DISAGREE": [
+     {
+      "mp": "Adam Jogee",
+      "party": "Lab",
+      "position": "Opposes brownfield-first approach, especially on agricultural land use",
+      "quote": "I listened to the Minister on the radio this morning and I listened to his statement, and I welcome his comprehensive steps to tackle the housing crisis. While I work with colleagues across the House\u2014Opposition Members know\u2026"
+     },
+     {
+      "mp": "Bradley Thomas",
+      "party": "Con",
+      "position": "Opposes brownfield-first approach; supports urban densification instead",
+      "quote": "I just heard the Secretary of State say that there should be a brownfield-first approach, but what is going on in, and in many other constituencies, is contradictory: an 85% increase in the housing target in a constituency that\u2026"
+     }
+    ]
+   }
+  },
+  {
+   "proposition": "Green belt should be protected from housing development.",
+   "agree": 22,
+   "disagree": 5,
+   "vec": [
+    0.177,
+    0.118
+   ],
+   "receipts": {
+    "AGREE": [
+     {
+      "mp": "Rachel Blake",
+      "party": "Lab",
+      "position": "Opposes developing green belt land for housing",
+      "quote": "Although we probably disagree on both the analysis and the solutions, I recognise his passion for his constituency and his concern about the issue in London. In, which I am proud to represent, we recognise the appalling cost of\u2026"
+     },
+     {
+      "mp": "Wendy Morton",
+      "party": "Con",
+      "position": "Opposes releasing green belt for development; supports brownfield-first approach to protect community integrity and prevent urban sprawl.",
+      "quote": "What we do not need to see is swathes of houses\u2014the wrong homes, in the wrong mix and in the wrong place, driven by top-down mandatory targets. That is not nimbyism, but common sense. That is why I have always advocated for a\u2026"
+     }
+    ],
+    "DISAGREE": [
+     {
+      "mp": "David Simmonds",
+      "party": "Con",
+      "position": "Supports expanding planning permissions to deliver needed homes",
+      "quote": "I will start where the hon finished. We know that the planning system has delivered consents for 1.5 million new homes in England, where the development sector has failed to step up. One of the things much debated among political\u2026"
+     },
+     {
+      "mp": "Nesil Caliskan",
+      "party": "Lab",
+      "position": "Supports building housing on appropriate green belt areas, especially where infrastructure exists and development is well-connected.",
+      "quote": "I do not expect him to have followed my very short career to date or my position on the green belt, but just for the record, my long-standing position has been to identify appropriate areas on the green belt, particularly in\u2026"
+     }
+    ]
+   }
+  },
+  {
+   "proposition": "Ground rents should not be capped.",
+   "agree": 3,
+   "disagree": 18,
+   "vec": [
+    0.089,
+    0.531
+   ],
+   "receipts": {
+    "AGREE": [
+     {
+      "mp": "Gareth Bacon",
+      "party": "Con",
+      "position": "Opposes capping ground rents, citing concerns over pension fund investment deterrence.",
+      "quote": "The Conservative party is pro-development, which is why we have announced both a plan to review the London plan to improve on Labour\u2019s failings in London and to ensure that national development is done on a brownfield-first\u2026"
+     },
+     {
+      "mp": "Sir John Hayes",
+      "party": "Con",
+      "position": "Supports raising ground rents by 100% in housing estates",
+      "quote": "I met residents of Georgian Court in Spalding a day or two ago. They live in a McCarthy & Stone home, and their freeholder has put up their ground rent by around 100%. That is exactly the kind of thing to which is drawing the\u2026"
+     }
+    ],
+    "DISAGREE": [
+     {
+      "mp": "Dame Nia Griffith",
+      "party": "Lab",
+      "position": "Supports capping ground rent to provide certainty and relief to leaseholders.",
+      "quote": "The capping of ground rent at \u00a3250 will give certainty and relief to leaseholders in, who face unpredictable and unjustifiable hikes in ground rent and for whom the reform simply cannot come soon enough. Will the Minister give us\u2026"
+     },
+     {
+      "mp": "Jack Abbott",
+      "party": "Lab",
+      "position": "Supports ending leasehold and capping ground rents for fair housing reform",
+      "quote": "It feels like a little while ago that he visited to talk to local people about the building safety crisis and leasehold. He was a shadow Minister and I was a parliamentary candidate at the time. Now we are capping ground rents,\u2026"
+     }
+    ]
+   }
+  },
+  {
+   "proposition": "Housing should be built rapidly in London.",
+   "agree": 14,
+   "disagree": 3,
+   "vec": [
+    -0.008,
+    -0.029
+   ],
+   "receipts": {
+    "AGREE": [
+     {
+      "mp": "Mr Louie French",
+      "party": "Con",
+      "position": "Opposes Labour's and Sadiq Khan's anti-growth housing policies",
+      "quote": "I thank all who enabled me to secure this important debate. It could not be more timely, as house building in London has collapsed. In the first nine months of 2025, construction began on only 3,248 homes. Molior London predicts\u2026"
+     },
+     {
+      "mp": "Katie Lam",
+      "party": "Con",
+      "position": "Criticises lack of housing starts and targets in London",
+      "quote": "The Secretary of State mentions a countrywide problem, but numbers of housing starts in London are particularly pitiful. There were only about 370 new starts for every month of last year, which is the lowest level for almost any\u2026"
+     }
+    ],
+    "DISAGREE": [
+     {
+      "mp": "Luke Taylor",
+      "party": "LD",
+      "position": "The speaker opposes the proposed housing and development changes.",
+      "quote": "I invite the Minister to confirm that no subsequent major changes with such a profound impact on the local authorities that everyone in this room works with on a daily basis and on our constituents will be made outside of this\u2026"
+     },
+     {
+      "mp": "Priti Patel",
+      "party": "Con",
+      "position": "Opposes doubling housing targets due to impact on green spaces and community planning",
+      "quote": "The Secretary of State has doubled housing targets for district, causing it to fall behind on its five-year supply; that is putting green spaces at risk in villages such as Tollesbury. These villages are building more homes but,\u2026"
+     }
+    ]
+   }
+  },
+  {
+   "proposition": "Housing should meet local need, not national quotas.",
+   "agree": 32,
+   "disagree": 6,
+   "vec": [
+    0.298,
+    0.196
+   ],
+   "receipts": {
+    "AGREE": [
+     {
+      "mp": "Andrew George",
+      "party": "LD",
+      "position": "Opposes house building targets; argues for need-based, local solutions over developer-driven targets",
+      "quote": "The Minister must accept that house building targets are a means to an end, not an end in themselves. House building targets are based on a naive delusion that private developers will collude with Government in driving down the\u2026"
+     },
+     {
+      "mp": "Gregory Stafford",
+      "party": "Con",
+      "position": "Opposes government housing targets that ignore local needs and rural contexts",
+      "quote": "Housing and planning are among the issues I hear about most from my constituents across,, Haslemere, Liphook and the surrounding villages. I do not hear about it in the abstract or as a theory, but in the very practical terms of\u2026"
+     }
+    ],
+    "DISAGREE": [
+     {
+      "mp": "Paul Holmes",
+      "party": "Con",
+      "position": "Supports mandatory housing targets to achieve a property-owning democracy",
+      "quote": "He is my former boss\u2014I was his special adviser\u2014and as you can tell from this afternoon, Ms Jardine, I was never allowed to write his speeches because he is so brilliant at orating in the Chamber. In December 2024, the Government\u2026"
+     },
+     {
+      "mp": "Mrs Kemi Badenoch",
+      "party": "Con",
+      "position": "Opposes cutting housing targets for local leaders",
+      "quote": "On the subject of the NPPF, I am grateful for the letter that sent to me on Saturday. I enjoyed reading it, especially her attempts to explain why she reduced Sadiq Khan\u2019s London targets and, even more, where she highlights that\u2026"
+     }
+    ]
+   }
+  },
+  {
+   "proposition": "Leasehold should be reformed to commonhold.",
+   "agree": 45,
+   "disagree": 3,
+   "vec": [
+    -0.044,
+    -0.472
+   ],
+   "receipts": {
+    "AGREE": [
+     {
+      "mp": "David Pinto-Duschinsky",
+      "party": "Lab",
+      "position": "Supports ending leasehold and introducing commonhold for leaseholders",
+      "quote": "The leasehold system is fundamentally broken. Thousands of leaseholders in are getting a raw deal, paying ever-rising service charges for ever-poorer service. That is why I welcome the Government\u2019s commitment to ending the feudal\u2026"
+     },
+     {
+      "mp": "Barry Gardiner",
+      "party": "Lab",
+      "position": "Supports capping ground rent and moving to commonhold for leaseholders",
+      "quote": "I congratulate on resisting the calls from those who have exploited leaseholders for far too long and on capping ground rent. I welcome the assurance that we are moving from the outdated feudal system of leasehold to a proper\u2026"
+     }
+    ],
+    "DISAGREE": [
+     {
+      "mp": "Rebecca Paul",
+      "party": "Con",
+      "position": "Commonhold fails to deliver and worsens resident conflicts",
+      "quote": "It would be difficult, I know, in this current financial environment and with the likely variability of estate quality, but it would certainly address much of the issue and allow my constituents to sell their properties and move\u2026"
+     },
+     {
+      "mp": "Rebecca Smith",
+      "party": "Con",
+      "position": "Opposes leasehold reform addressing service charges in new towns",
+      "quote": "I welcome the Government\u2019s commitment to continue our work to address issues with the current leasehold system. However, where we are building new towns, such as Sherford in my constituency, residents, like others in new builds,\u2026"
+     }
+    ]
+   }
+  },
+  {
+   "proposition": "Lifetime tenancies should be protected for housing stability",
+   "agree": 3,
+   "disagree": 5,
+   "vec": [
+    0.018,
+    0.039
+   ],
+   "receipts": {
+    "AGREE": [
+     {
+      "mp": "Gideon Amos",
+      "party": "LD",
+      "position": "Opposes the expansion of assured shorthold tenancies due to increased tenant insecurity and homelessness",
+      "quote": "We met a kind, gentle and creative man who taught sign language, loved dance and was a talented teacher and photographer. His charming sons Perez and Zakkai meant the absolute world to him, and he had become more of a friend to\u2026"
+     },
+     {
+      "mp": "James Naish",
+      "party": "Lab",
+      "position": "Supports secure tenancies and calls for better local authority resourcing",
+      "quote": "I therefore welcome this Bill and its many provisions to promote longer-term secure tenancies, but as a former council leader, I encourage Ministers to consider how local authorities can be best resourced to take on extra\u2026"
+     }
+    ],
+    "DISAGREE": [
+     {
+      "mp": "Gideon Amos",
+      "party": "LD",
+      "position": "Supports fixed-term tenancies to ensure housing security and investor confidence",
+      "quote": "We need a lot more council and social rented homes. I will return to that issue. In the spirit of ensuring that a plentiful supply of rented housing comes forward, we urge the Government to retain the option for landlords and\u2026"
+     },
+     {
+      "mp": "Gareth Bacon",
+      "party": "Con",
+      "position": "Supports regular review of social housing tenancies to ensure allocation to those in genuine need",
+      "quote": "In a system under severe financial strain and lacking in adequate supply, it is essential that social homes are allocated to those in genuine need who are at the most severe risk, not just those who once needed them but no longer\u2026"
+     }
+    ]
+   }
+  },
+  {
+   "proposition": "Neighbourhood planning should be protected and funded.",
+   "agree": 20,
+   "disagree": 3,
+   "vec": [
+    0.074,
+    -0.045
+   ],
+   "receipts": {
+    "AGREE": [
+     {
+      "mp": "Dr Luke Evans",
+      "party": "Con",
+      "position": "Opposes cutting funding for neighbourhood plans, as it undermines community input and housing delivery.",
+      "quote": "One of the biggest concerns I have is that the Government have taken away the funding for neighbourhood plans. We know that neighbourhood plans give villages their say in where planned housing goes, but more importantly they\u2026"
+     },
+     {
+      "mp": "Sir Ashley Fox",
+      "party": "Con",
+      "position": "Opposes ending funding for neighbourhood plans and centralising planning power",
+      "quote": "Neighbourhood plans are particularly important in my constituency, where Liberal Democrat-led Somerset council says it will take at least another four years to come up with a local plan that applies across the whole county. I\u2026"
+     }
+    ],
+    "DISAGREE": [
+     {
+      "mp": "Vikki Slade",
+      "party": "LD",
+      "position": "Opposes using precepts to fund neighbourhood plans for small councils",
+      "quote": "We would not have been able to secure a neighbourhood plan in any other way because we did not have a town council at the time, although we will have one by next year. Without a town council, where does the money come from to do\u2026"
+     },
+     {
+      "mp": "Sean Woodcock",
+      "party": "Lab",
+      "position": "Opposes funding neighbourhood plans without tax measures",
+      "quote": "The makes a point about the importance of neighbourhood plans, and I have had parish councils contact me about this. As the Minister just said, it is about priorities. If the Liberal Democrats are serious about the Government\u2026"
+     }
+    ]
+   }
+  },
+  {
+   "proposition": "No-fault evictions should be banned to ensure tenant security.",
+   "agree": 42,
+   "disagree": 4,
+   "vec": [
+    -0.598,
+    0.218
+   ],
+   "receipts": {
+    "AGREE": [
+     {
+      "mp": "Gideon Amos",
+      "party": "LD",
+      "position": "Supports the Bill to end no-fault evictions and end homelessness",
+      "quote": "My own experience is limited to being a tenant and landlord\u2014only ever a landlord of registered social housing; I am happy to declare that interest today. The Government face huge challenges, but we must not shrink from the\u2026"
+     },
+     {
+      "mp": "Michael Wheeler",
+      "party": "Lab",
+      "position": "Supports banning no-fault evictions to protect tenants.",
+      "quote": "The spread of this practice would have a devastating impact on the choices available to many tenants, so I warmly welcome new clauses 13 and 14 in the name of, which address the issue. Turning to section 21 evictions, one of the\u2026"
+     }
+    ],
+    "DISAGREE": [
+     {
+      "mp": "Rachel Blake",
+      "party": "Lab",
+      "position": "Opposes ending no-fault evictions, calling the Opposition's stance inconsistent and confusing",
+      "quote": "I was intrigued by \u2019s remarks about the success of the private rented sector. If the sector is so successful and is working so well, why have the Opposition consistently held the position\u2014both when they were in government and, I\u2026"
+     },
+     {
+      "mp": "Gideon Amos",
+      "party": "LD",
+      "position": "Opposes ending no-fault evictions, citing government inaction and rising evictions",
+      "quote": "In fact by repeatedly announcing that they would legislate but then failing to deliver on that legislation, the last Government prompted a massive 30% growth in Airbnb short-term lets, taking away more security of tenure from\u2026"
+     }
+    ]
+   }
+  },
+  {
+   "proposition": "Rent should rise only with market rates.",
+   "agree": 8,
+   "disagree": 14,
+   "vec": [
+    0.104,
+    0.203
+   ],
+   "receipts": {
+    "AGREE": [
+     {
+      "mp": "Chris Curtis",
+      "party": "Lab",
+      "position": "Opposes rent caps and mid-tenancy rent hikes; supports market-rate determination",
+      "quote": "Obviously, I agree with the Bill\u2019s approach in not introducing rent caps, which we know can create unintended consequences, but we must ensure that landlords are not able to exploit that by excessively raising rents mid-tenancy\u2026"
+     },
+     {
+      "mp": "Gareth Bacon",
+      "party": "Con",
+      "position": "Opposes rent controls in Greater London",
+      "quote": "Sadiq Khan, the Mayor of London, has consistently called for the power to impose rent controls across Greater London. He cannot do that unless the Government change the law. Whenever it has been tried around the world it has\u2026"
+     }
+    ],
+    "DISAGREE": [
+     {
+      "mp": "Navendu Mishra",
+      "party": "Lab",
+      "position": "Supports rent caps to ensure affordable, safe housing for families and young people",
+      "quote": "In my view, does not need any more developments for investors; it needs housing for families and young people so that they can get on the housing ladder and have the dignity and respect of safe housing. People are desperate for\u2026"
+     },
+     {
+      "mp": "Jeremy Corbyn",
+      "party": "YP",
+      "position": "Supports rent regulation and public housing to prevent social cleansing",
+      "quote": "We can see the results: several thousand people rough sleeping every night; tens of thousands of people living in grotesquely overcrowded conditions; and many people\u2014in my constituency, a third of them\u2014living in the private\u2026"
+     }
+    ]
+   }
+  },
+  {
+   "proposition": "Renters\u2019 rights should be expanded with enforceable protections.",
+   "agree": 46,
+   "disagree": 3,
+   "vec": [
+    -0.691,
+    -0.025
+   ],
+   "receipts": {
+    "AGREE": [
+     {
+      "mp": "Florence Eshalomi",
+      "party": "Lab",
+      "position": "Supports the Renters\u2019 Rights Bill to ensure safe, habitable homes and end housing stigma.",
+      "quote": "Many want to tackle the situation directly with their landlords, but they are afraid of being evicted into a housing market where they can barely find somewhere else to live and barely afford somewhere else. That is unacceptable\u2026"
+     },
+     {
+      "mp": "Rachel Blake",
+      "party": "Lab",
+      "position": "Supports the Renters\u2019 Rights Bill to protect private renters.",
+      "quote": "Some 27,000 people in the live in the private rented sector. After 14 years of neglect and delay, they face damp and mould in their homes, and risk no-fault evictions and out-of-the-blue rent hikes. Does the Deputy Prime Minister\u2026"
+     }
+    ],
+    "DISAGREE": [
+     {
+      "mp": "Gareth Bacon",
+      "party": "Con",
+      "position": "Opposes the Renters\u2019 Rights Bill, saying it reduces private housing and increases rent pressure",
+      "quote": "That means 42% fewer homes available for families, less choice and more pressure on rents. That is not theoretical; it is happening now, and the Renters\u2019 Rights Bill is accelerating that trend. Of equal concern is what effect an\u2026"
+     },
+     {
+      "mp": "Carla Denyer",
+      "party": "Green",
+      "position": "Opposes reforms due to reliance on tenants for reporting discrimination",
+      "quote": "I have considered the role of the ombudsman, but the point of amendment 78 is predominantly to incentivise tenants to engage with the enforcement of the local housing authority. Given the seriousness and scale of discrimination,\u2026"
+     }
+    ]
+   }
+  },
+  {
+   "proposition": "Right to buy should end to boost social housing.",
+   "agree": 23,
+   "disagree": 19,
+   "vec": [
+    -0.08,
+    0.53
+   ],
+   "receipts": {
+    "AGREE": [
+     {
+      "mp": "Gideon Amos",
+      "party": "LD",
+      "position": "Supports ending right to buy and building 150,000 social rent homes annually",
+      "quote": "A bath cannot be filled if the plug has been taken out. We need to end the current system of right to buy and allow councils the power to do so. As the University of Glasgow has shown, the building of private homes\u2014even at the\u2026"
+     },
+     {
+      "mp": "Josh Newbury",
+      "party": "Lab",
+      "position": "Opposes right to buy; wants to end it to protect council housing for long-term affordability",
+      "quote": "Again, I encourage district council to make full use of them, including for two semi-detached houses on Street in Norton Canes that have stood empty for many years. I am also interested to hear from the Minister about whether\u2026"
+     }
+    ],
+    "DISAGREE": [
+     {
+      "mp": "Patrick Spencer",
+      "party": "Con",
+      "position": "Opposes restricting right to buy, especially for young people and new professionals",
+      "quote": "I appreciate the Minister\u2019s point about recouping councils\u2019 investment, which is why there are elements of the Bill that change that deal for councils. What my residents and I do not understand\u2014and what people across this country\u2026"
+     },
+     {
+      "mp": "Gareth Bacon",
+      "party": "Con",
+      "position": "Supports right to buy for social housing residents to own homes",
+      "quote": "On new clause 57, clause 1 in its current form not only enables the injustice of preventing future hard-working residents from owning their own homes but prevents current tenants from doing so. The Opposition are completely\u2026"
+     }
+    ]
+   }
+  },
+  {
+   "proposition": "Section 106 should be strengthened for affordable housing.",
+   "agree": 7,
+   "disagree": 4,
+   "vec": [
+    -0.064,
+    -0.095
+   ],
+   "receipts": {
+    "AGREE": [
+     {
+      "mp": "Ben Goldsborough",
+      "party": "Lab",
+      "position": "Supports strengthening Section 106 to ensure accessible, inclusive housing infrastructure",
+      "quote": "Residents in Hethersett, Mulbarton and Loddon have sadly had their fingers burnt by the old planning policies that were in place under the previous Government. Can give me assurances that section 106 will be strengthened to\u2026"
+     },
+     {
+      "mp": "Melanie Onn",
+      "party": "Lab",
+      "position": "Supports regulating Section 106 funding to benefit local authorities and ensure social housing.",
+      "quote": "Many of these planning issues hark back to the Eric Pickles reforms, which will remember all too well. One issue that I find in is that when it comes to section 106 funding, the power lies with the developers: they have much more\u2026"
+     }
+    ],
+    "DISAGREE": [
+     {
+      "mp": "Mr Clive Betts",
+      "party": "Lab",
+      "position": "Opposes relying on section 106 agreements for social housing due to lack of resources in registered social landlords",
+      "quote": "I know that is committed to increasing the provision of social housing. In the past few years, most social housing has been provided through section 106 agreements. According to the National Housing Federation, thousands of\u2026"
+     },
+     {
+      "mp": "Paul Holmes",
+      "party": "Con",
+      "position": "Opposes centralising housing power and section 106 funding inefficiencies",
+      "quote": "That is not what the Minister for Housing and Planning said in the Chamber on Monday. He said that local authorities and councillors can make decisions about their area as long as the Minister is able to call applications in. It\u2026"
+     }
+    ]
+   }
+  },
+  {
+   "proposition": "Social housing should be built at 150,000 annually.",
+   "agree": 54,
+   "disagree": 10,
+   "vec": [
+    -0.015,
+    -0.099
+   ],
+   "receipts": {
+    "AGREE": [
+     {
+      "mp": "Liz Jarvis",
+      "party": "LD",
+      "position": "Supports building 150,000 social homes annually and fair housing reforms",
+      "quote": "As someone who grew up in rented accommodation, with everything that goes with it, I find it so incredibly disappointing that, at a time when we should be doing everything possible to make home ownership accessible, the system\u2026"
+     },
+     {
+      "mp": "Mr Lee Dillon",
+      "party": "LD",
+      "position": "Supports building 150,000 social homes annually for affordability and local needs.",
+      "quote": "My will know the needs of her constituency better than I do, but as someone who worked in social housing for 14 years, I will always advocate for the delivery of more social housing units. In my constituency of, the average house\u2026"
+     }
+    ],
+    "DISAGREE": [
+     {
+      "mp": "Dr Ellie Chowns",
+      "party": "Green",
+      "position": "The Government opposes setting a target for social housing provision.",
+      "quote": "Will the Deputy Prime Minister please explain why her Government will not set a target for the provision of social housing? While I welcome the investment in the social and affordable homes programme that she set out, the reality\u2026"
+     },
+     {
+      "mp": "Florence Eshalomi",
+      "party": "Lab",
+      "position": "Supports a realistic, sector-informed target of 90,000 social rent homes per year without undue financial strain.",
+      "quote": "I thank my fellow Committee member for making that point. As the shadow Minister outlined, a number of key sectors have made claims and are worried about the target that the Government have set. It is an ambitious target, and we\u2026"
+     }
+    ]
+   }
+  },
+  {
+   "proposition": "Temporary housing should be reduced, not expanded.",
+   "agree": 11,
+   "disagree": 13,
+   "vec": [
+    -0.042,
+    0.062
+   ],
+   "receipts": {
+    "AGREE": [
+     {
+      "mp": "Florence Eshalomi",
+      "party": "Lab",
+      "position": "Temporary accommodation should be reduced, not expanded",
+      "quote": "As the Chair of the Housing, Communities and Local Government Committee, I have heard a lot from our local authorities, which have borne the brunt of the failure to tackle the housing crisis. Councils have been forgotten, with\u2026"
+     },
+     {
+      "mp": "Chris Vince",
+      "party": "Lab",
+      "position": "Opposes the impact of councils losing housing stock and spending more on temporary accommodation",
+      "quote": "I agree with the majority of what has said so far; he may come on to things that I do not agree with later in his speech, but we will have to wait and see. Will he reflect on the fact that the impact of councils losing their\u2026"
+     }
+    ],
+    "DISAGREE": [
+     {
+      "mp": "Bob Blackman",
+      "party": "Con",
+      "position": "Supports more government funding for temporary accommodation to address homelessness crisis",
+      "quote": "They are the front door; they are dealing with this crisis 24/7, 365 days a year. The Government must provide them with more help with temporary accommodation costs. Last year alone, local authorities spent \u00a32.8 billion on\u2026"
+     },
+     {
+      "mp": "Florence Eshalomi",
+      "party": "Lab",
+      "position": "Supports increasing temporary accommodation subsidies to address rising housing costs and homelessness in London.",
+      "quote": "I thank, my constituency neighbour, for making such an impassioned and powerful speech. I declare an interest in that my constituency also covers both Lambeth and Southwark. She is talking about housing costs, which we know are\u2026"
+     }
+    ]
+   }
+  }
+ ],
+ "mps": [
+  {
+   "member_id": 178,
+   "x": 0.341,
+   "y": 0.112,
+   "mp": "John McDonnell",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 185,
+   "x": -0.901,
+   "y": -0.035,
+   "mp": "Jeremy Corbyn",
+   "party": "YP",
+   "role": "backbench_or_opposition",
+   "n_debates": 5
+  },
+  {
+   "member_id": 193,
+   "x": -0.229,
+   "y": 0.19,
+   "mp": "Dame Siobhain McDonagh",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 227,
+   "x": 0.542,
+   "y": 0.05,
+   "mp": "Andrew George",
+   "party": "LD",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 394,
+   "x": 0.403,
+   "y": 0.203,
+   "mp": "Mr Clive Betts",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 1444,
+   "x": 0.618,
+   "y": 0.315,
+   "mp": "Mr Mark Francois",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 1524,
+   "x": 0.219,
+   "y": -0.93,
+   "mp": "Dame Meg Hillier",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 4
+  },
+  {
+   "member_id": 3924,
+   "x": 0.48,
+   "y": 0.177,
+   "mp": "Yasmin Qureshi",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 4005,
+   "x": 0.325,
+   "y": 0.049,
+   "mp": "Bob Blackman",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 4083,
+   "x": -0.907,
+   "y": 0.288,
+   "mp": "Alison McGovern",
+   "party": "Lab",
+   "role": "minister",
+   "n_debates": 3
+  },
+  {
+   "member_id": 4131,
+   "x": 0.286,
+   "y": -0.628,
+   "mp": "Jim Shannon",
+   "party": "DUP",
+   "role": "backbench_or_opposition",
+   "n_debates": 4
+  },
+  {
+   "member_id": 4138,
+   "x": -0.739,
+   "y": -0.245,
+   "mp": "Rushanara Ali",
+   "party": "Lab",
+   "role": "minister",
+   "n_debates": 4
+  },
+  {
+   "member_id": 4268,
+   "x": -0.561,
+   "y": -0.366,
+   "mp": "Steve Reed",
+   "party": "Lab",
+   "role": "minister",
+   "n_debates": 5
+  },
+  {
+   "member_id": 4356,
+   "x": -1.135,
+   "y": -1.411,
+   "mp": "Angela Rayner",
+   "party": "Lab",
+   "role": "minister",
+   "n_debates": 13
+  },
+  {
+   "member_id": 4358,
+   "x": 0.775,
+   "y": 0.179,
+   "mp": "Wendy Morton",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n_debates": 4
+  },
+  {
+   "member_id": 4396,
+   "x": 0.277,
+   "y": 0.063,
+   "mp": "Rebecca Long Bailey",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 4418,
+   "x": 0.205,
+   "y": 0.345,
+   "mp": "Justin Madders",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 4471,
+   "x": 0.163,
+   "y": -0.824,
+   "mp": "Rachael Maskell",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 4474,
+   "x": 0.53,
+   "y": 0.219,
+   "mp": "Kevin Hollinrake",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 4510,
+   "x": -0.8,
+   "y": 0.528,
+   "mp": "Helen Hayes",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 4
+  },
+  {
+   "member_id": 4514,
+   "x": -1.005,
+   "y": -0.444,
+   "mp": "Sir Keir Starmer",
+   "party": "Lab",
+   "role": "minister",
+   "n_debates": 6
+  },
+  {
+   "member_id": 4520,
+   "x": -0.76,
+   "y": -0.453,
+   "mp": "Matthew Pennycook",
+   "party": "Lab",
+   "role": "minister",
+   "n_debates": 14
+  },
+  {
+   "member_id": 4569,
+   "x": 0.465,
+   "y": -0.019,
+   "mp": "Jim McMahon",
+   "party": "Lab",
+   "role": "minister",
+   "n_debates": 3
+  },
+  {
+   "member_id": 4597,
+   "x": -0.038,
+   "y": 0.209,
+   "mp": "Mrs Kemi Badenoch",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 4607,
+   "x": 0.39,
+   "y": -0.296,
+   "mp": "Stephanie Peacock",
+   "party": "Lab",
+   "role": "minister",
+   "n_debates": 2
+  },
+  {
+   "member_id": 4610,
+   "x": -0.857,
+   "y": 0.279,
+   "mp": "Bambos Charalambous",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 4641,
+   "x": 0.658,
+   "y": -0.508,
+   "mp": "Alex Norris",
+   "party": "Lab",
+   "role": "minister",
+   "n_debates": 6
+  },
+  {
+   "member_id": 4654,
+   "x": 0.289,
+   "y": -0.443,
+   "mp": "Matt Rodda",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 4658,
+   "x": -0.418,
+   "y": -0.061,
+   "mp": "Alex Sobel",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 4759,
+   "x": 0.38,
+   "y": 0.146,
+   "mp": "Joy Morrissey",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 4764,
+   "x": -0.873,
+   "y": 0.274,
+   "mp": "Bell Ribeiro-Addy",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 4769,
+   "x": 0.037,
+   "y": 0.426,
+   "mp": "Daisy Cooper",
+   "party": "LD",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 4790,
+   "x": 0.192,
+   "y": -0.119,
+   "mp": "Apsana Begum",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 4798,
+   "x": 1.29,
+   "y": 0.359,
+   "mp": "Gareth Bacon",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n_debates": 11
+  },
+  {
+   "member_id": 4803,
+   "x": 0.728,
+   "y": 0.317,
+   "mp": "Paul Holmes",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n_debates": 6
+  },
+  {
+   "member_id": 4811,
+   "x": 0.188,
+   "y": -0.13,
+   "mp": "Navendu Mishra",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 4813,
+   "x": 0.377,
+   "y": 0.11,
+   "mp": "Mr Richard Holden",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 4828,
+   "x": -0.836,
+   "y": 0.301,
+   "mp": "Paula Barker",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 4861,
+   "x": 0.308,
+   "y": -0.092,
+   "mp": "Robbie Moore",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 4869,
+   "x": -0.436,
+   "y": 0.592,
+   "mp": "Nadia Whittome",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 4870,
+   "x": -0.776,
+   "y": -1.209,
+   "mp": "Florence Eshalomi",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 8
+  },
+  {
+   "member_id": 4872,
+   "x": -0.651,
+   "y": 0.097,
+   "mp": "David Simmonds",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n_debates": 6
+  },
+  {
+   "member_id": 4873,
+   "x": -0.309,
+   "y": 0.475,
+   "mp": "Rachel Hopkins",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 4932,
+   "x": 0.495,
+   "y": 0.064,
+   "mp": "Mr Louie French",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 5040,
+   "x": -0.337,
+   "y": -0.021,
+   "mp": "Liz Jarvis",
+   "party": "LD",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5044,
+   "x": -0.904,
+   "y": 0.242,
+   "mp": "Adam Thompson",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 5047,
+   "x": 0.283,
+   "y": -0.009,
+   "mp": "James Naish",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5048,
+   "x": -0.863,
+   "y": 0.257,
+   "mp": "Antonia Bance",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 5050,
+   "x": 0.726,
+   "y": -0.745,
+   "mp": "Lewis Cocking",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n_debates": 7
+  },
+  {
+   "member_id": 5054,
+   "x": 0.275,
+   "y": 0.041,
+   "mp": "Mr Calvin Bailey",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5061,
+   "x": -0.273,
+   "y": 0.246,
+   "mp": "Andrew Lewin",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5069,
+   "x": -0.301,
+   "y": 0.052,
+   "mp": "Torsten Bell",
+   "party": "Lab",
+   "role": "minister",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5071,
+   "x": -0.266,
+   "y": 0.256,
+   "mp": "Paul Waugh",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 5075,
+   "x": -0.374,
+   "y": 0.378,
+   "mp": "Deirdre Costigan",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 5083,
+   "x": 0.228,
+   "y": 0.289,
+   "mp": "Bobby Dean",
+   "party": "LD",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5086,
+   "x": 0.316,
+   "y": 0.008,
+   "mp": "Josh Babarinde",
+   "party": "LD",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5099,
+   "x": 0.446,
+   "y": -0.545,
+   "mp": "Miatta Fahnbulleh",
+   "party": "Lab",
+   "role": "minister",
+   "n_debates": 4
+  },
+  {
+   "member_id": 5100,
+   "x": 0.452,
+   "y": 0.205,
+   "mp": "Blake Stephenson",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5102,
+   "x": 0.639,
+   "y": -0.439,
+   "mp": "Carla Denyer",
+   "party": "Green",
+   "role": "backbench_or_opposition",
+   "n_debates": 4
+  },
+  {
+   "member_id": 5103,
+   "x": 0.252,
+   "y": -0.241,
+   "mp": "Luke Taylor",
+   "party": "LD",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 5111,
+   "x": 0.464,
+   "y": 0.195,
+   "mp": "Martin Wrigley",
+   "party": "LD",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5119,
+   "x": -0.223,
+   "y": 0.691,
+   "mp": "Natasha Irons",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5127,
+   "x": -0.782,
+   "y": 0.21,
+   "mp": "John Slinger",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 4
+  },
+  {
+   "member_id": 5140,
+   "x": 0.345,
+   "y": 0.026,
+   "mp": "Claire Young",
+   "party": "LD",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5142,
+   "x": 0.201,
+   "y": -0.48,
+   "mp": "Abtisam Mohamed",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5143,
+   "x": -0.413,
+   "y": -0.077,
+   "mp": "Catherine Atkinson",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5165,
+   "x": -0.176,
+   "y": 0.042,
+   "mp": "Peter Swallow",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5180,
+   "x": 0.275,
+   "y": 0.167,
+   "mp": "Nesil Caliskan",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 5192,
+   "x": -0.152,
+   "y": 0.382,
+   "mp": "Helena Dollimore",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5195,
+   "x": 0.268,
+   "y": -0.872,
+   "mp": "Andrew Cooper",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 5
+  },
+  {
+   "member_id": 5201,
+   "x": 0.542,
+   "y": 0.265,
+   "mp": "Victoria Collins",
+   "party": "LD",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5209,
+   "x": 0.4,
+   "y": 0.155,
+   "mp": "Peter Fortune",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5215,
+   "x": -0.856,
+   "y": 0.255,
+   "mp": "Naushabah Khan",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 5218,
+   "x": -0.263,
+   "y": -0.145,
+   "mp": "David Smith",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5223,
+   "x": 0.257,
+   "y": -0.414,
+   "mp": "Jim Dickson",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5229,
+   "x": -0.345,
+   "y": 0.068,
+   "mp": "Joe Powell",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 5237,
+   "x": -0.27,
+   "y": 0.316,
+   "mp": "Chris Vince",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5244,
+   "x": 0.411,
+   "y": -0.272,
+   "mp": "Chris Hinchliff",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 4
+  },
+  {
+   "member_id": 5249,
+   "x": 0.505,
+   "y": 0.232,
+   "mp": "Dr Ellie Chowns",
+   "party": "Green",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5250,
+   "x": -0.488,
+   "y": 0.242,
+   "mp": "Gideon Amos",
+   "party": "LD",
+   "role": "backbench_or_opposition",
+   "n_debates": 10
+  },
+  {
+   "member_id": 5257,
+   "x": -0.286,
+   "y": 0.121,
+   "mp": "Rachel Blake",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 5
+  },
+  {
+   "member_id": 5263,
+   "x": 0.512,
+   "y": 0.207,
+   "mp": "Alex Brewer",
+   "party": "LD",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5270,
+   "x": 0.185,
+   "y": -0.321,
+   "mp": "Darren Paffey",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 5271,
+   "x": -0.83,
+   "y": 0.28,
+   "mp": "Satvir Kaur",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5278,
+   "x": -0.301,
+   "y": 0.008,
+   "mp": "Uma Kumaran",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5290,
+   "x": 0.428,
+   "y": 0.065,
+   "mp": "Leigh Ingham",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5294,
+   "x": -0.891,
+   "y": 0.237,
+   "mp": "Amanda Martin",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 5297,
+   "x": 0.356,
+   "y": 0.183,
+   "mp": "Rebecca Paul",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5303,
+   "x": 0.357,
+   "y": -0.362,
+   "mp": "Patrick Spencer",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5308,
+   "x": -0.926,
+   "y": -0.128,
+   "mp": "Sam Carling",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 5314,
+   "x": -0.312,
+   "y": -0.526,
+   "mp": "Si\u00e2n Berry",
+   "party": "Green",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 5322,
+   "x": 0.405,
+   "y": 0.06,
+   "mp": "Mr Will Forster",
+   "party": "LD",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5327,
+   "x": 0.478,
+   "y": 0.257,
+   "mp": "Vikki Slade",
+   "party": "LD",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 5329,
+   "x": 0.526,
+   "y": 0.165,
+   "mp": "John Milne",
+   "party": "LD",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 5335,
+   "x": 0.478,
+   "y": 0.2,
+   "mp": "Jess Brown-Fuller",
+   "party": "LD",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5339,
+   "x": 0.216,
+   "y": 0.299,
+   "mp": "Danny Beales",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5344,
+   "x": 0.327,
+   "y": -0.377,
+   "mp": "Ben Coleman",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5355,
+   "x": 0.215,
+   "y": 0.499,
+   "mp": "Sarah Bool",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5359,
+   "x": 0.125,
+   "y": -0.504,
+   "mp": "Neil Duncan-Jordan",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5447,
+   "x": 0.209,
+   "y": 0.524,
+   "mp": "Hannah Spencer",
+   "party": "Green",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  }
+ ]
+}

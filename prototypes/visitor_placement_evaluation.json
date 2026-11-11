@@ -1,0 +1,1103 @@
+{
+  "scope": "Actual UI placement code, with only available non-neutral answers on the five excerpt-reviewed questions. Target MP excluded from neighbour candidates, but upstream geometry used all MPs: reconstruction diagnostic, NOT held-out validation or visitor accuracy. All scores remain unaudited beyond the ten illustrative excerpts.",
+  "reviewed_topics": [
+    "Assisted Dying Legalization",
+    "Winter Fuel Means-Testing",
+    "Rail Public Ownership",
+    "Water Industry Ownership",
+    "Planning Reform vs Green Belt"
+  ],
+  "eligible_mps": 83,
+  "excluded_for_fewer_than_three": 560,
+  "with_all_five": 4,
+  "mean_star_distance": 0.5074347587117194,
+  "mean_origin_distance": 0.5578763704120324,
+  "fraction_better_than_origin": 0.4819277108433735,
+  "combinations_tested": 32,
+  "min_shared_in_shown_matches": 3,
+  "finite_bounded_stars": true,
+  "examples": [
+    {
+      "mp": "Sir Roger Gale",
+      "answers": 3,
+      "error": 0.5365242159223478,
+      "origin_error": 0.647260380372536,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "John McDonnell",
+      "answers": 3,
+      "error": 0.1995677388249616,
+      "origin_error": 0.4871857961804716,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Sir Edward Leigh",
+      "answers": 3,
+      "error": 0.6941349228985277,
+      "origin_error": 0.9510467916984947,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Sir John Hayes",
+      "answers": 3,
+      "error": 0.278991477830669,
+      "origin_error": 0.43990226187188447,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Dame Meg Hillier",
+      "answers": 3,
+      "error": 0.9283236143496189,
+      "origin_error": 0.8273874545821928,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Tim Farron",
+      "answers": 4,
+      "error": 0.34821630257994135,
+      "origin_error": 0.25861361139738953,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Martin Vickers",
+      "answers": 3,
+      "error": 0.4320030569316977,
+      "origin_error": 0.8795243032457943,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Damian Hinds",
+      "answers": 3,
+      "error": 0.3256044778289451,
+      "origin_error": 0.6421689808765292,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Emma Reynolds",
+      "answers": 3,
+      "error": 0.5654084112824461,
+      "origin_error": 1.352766424775541,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Steve Barclay",
+      "answers": 3,
+      "error": 0.44855544400609254,
+      "origin_error": 0.45138675213169466,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Mary Glindon",
+      "answers": 3,
+      "error": 0.5581962547258486,
+      "origin_error": 0.3445243097373537,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Jim Shannon",
+      "answers": 5,
+      "error": 0.7276138428403192,
+      "origin_error": 0.45145320909259246,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Wendy Morton",
+      "answers": 3,
+      "error": 0.8144017078437261,
+      "origin_error": 0.622582524650347,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Edward Argar",
+      "answers": 3,
+      "error": 0.5911691574570418,
+      "origin_error": 0.42439839773495847,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Mike Wood",
+      "answers": 3,
+      "error": 0.7170888357258794,
+      "origin_error": 0.26534128966295467,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Ruth Cadbury",
+      "answers": 3,
+      "error": 0.4171059027148684,
+      "origin_error": 0.8929736838227653,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Tom Tugendhat",
+      "answers": 3,
+      "error": 0.4046151839871882,
+      "origin_error": 0.5249514263243791,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Rachael Maskell",
+      "answers": 4,
+      "error": 0.5810265693682087,
+      "origin_error": 0.5202364846874928,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Mims Davies",
+      "answers": 3,
+      "error": 0.4397547996601778,
+      "origin_error": 0.5442324870861717,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Sir Keir Starmer",
+      "answers": 4,
+      "error": 0.4545659044388446,
+      "origin_error": 1.2257887256782876,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Helen Whately",
+      "answers": 4,
+      "error": 0.5036668170008896,
+      "origin_error": 0.6484527739164974,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Sarah Olney",
+      "answers": 3,
+      "error": 0.7694236529184146,
+      "origin_error": 0.6288600798269836,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "John Lamont",
+      "answers": 3,
+      "error": 0.1973038888350069,
+      "origin_error": 0.7894175067731903,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Rosie Duffield",
+      "answers": 3,
+      "error": 0.5454582559289739,
+      "origin_error": 0.16986465200270479,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Jerome Mayhew",
+      "answers": 4,
+      "error": 0.5371256491152905,
+      "origin_error": 0.4676975518430688,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Joy Morrissey",
+      "answers": 4,
+      "error": 0.8219932698586349,
+      "origin_error": 0.3791595970036892,
+      "matches": 8,
+      "top_shared": 4
+    },
+    {
+      "mp": "Daisy Cooper",
+      "answers": 3,
+      "error": 0.5422294303082023,
+      "origin_error": 0.5937701575525668,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Munira Wilson",
+      "answers": 4,
+      "error": 0.810296642153822,
+      "origin_error": 0.2036025540114858,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Greg Smith",
+      "answers": 3,
+      "error": 0.24875103975772228,
+      "origin_error": 0.9866696508963879,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Dr Luke Evans",
+      "answers": 3,
+      "error": 0.4580889403083915,
+      "origin_error": 0.39948466804121535,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "James Murray",
+      "answers": 3,
+      "error": 0.5662819644458889,
+      "origin_error": 1.4179033817577276,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Gareth Bacon",
+      "answers": 3,
+      "error": 0.3038277314160921,
+      "origin_error": 0.2390606617576384,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Paul Holmes",
+      "answers": 3,
+      "error": 0.1777823197772434,
+      "origin_error": 0.3609058048854299,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Mr Richard Holden",
+      "answers": 3,
+      "error": 0.17399194694266404,
+      "origin_error": 0.8244834746676248,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Dr Neil Hudson",
+      "answers": 4,
+      "error": 0.14650541497148653,
+      "origin_error": 0.8488774941061873,
+      "matches": 8,
+      "top_shared": 4
+    },
+    {
+      "mp": "Dr Kieran Mullan",
+      "answers": 4,
+      "error": 0.7729880282284023,
+      "origin_error": 0.45379070065394683,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Robbie Moore",
+      "answers": 3,
+      "error": 0.2671968549039824,
+      "origin_error": 0.7530710457851904,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Sarah Green",
+      "answers": 3,
+      "error": 0.21321568317645478,
+      "origin_error": 0.2862830766915851,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Helen Morgan",
+      "answers": 4,
+      "error": 0.6878882156136211,
+      "origin_error": 0.22401785643113364,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Richard Foord",
+      "answers": 4,
+      "error": 0.6818607162253317,
+      "origin_error": 0.5163370991900543,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Sarah Dyke",
+      "answers": 4,
+      "error": 0.6078864777838041,
+      "origin_error": 0.3805022995988329,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Mark Ferguson",
+      "answers": 3,
+      "error": 0.33734899474965613,
+      "origin_error": 0.8446206248961718,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Tom Gordon",
+      "answers": 4,
+      "error": 0.3185135408801374,
+      "origin_error": 0.5380232336990662,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Liz Jarvis",
+      "answers": 3,
+      "error": 0.336536803469834,
+      "origin_error": 0.252122985862059,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Rachel Taylor",
+      "answers": 3,
+      "error": 0.5134295544949401,
+      "origin_error": 0.9358237013455045,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Pippa Heylings",
+      "answers": 3,
+      "error": 0.4092974613408866,
+      "origin_error": 0.2651678713569953,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Ms Julie Minns",
+      "answers": 3,
+      "error": 0.14904767353715262,
+      "origin_error": 0.4767598976424087,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Miatta Fahnbulleh",
+      "answers": 3,
+      "error": 0.4122687382208964,
+      "origin_error": 0.7936479068201466,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Blake Stephenson",
+      "answers": 4,
+      "error": 0.38763565466139244,
+      "origin_error": 0.07379024325749306,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Sir Ashley Fox",
+      "answers": 3,
+      "error": 0.8775151658204767,
+      "origin_error": 0.6715489557731439,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Luke Taylor",
+      "answers": 4,
+      "error": 0.3670315510793412,
+      "origin_error": 0.44702237080486257,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Martin Wrigley",
+      "answers": 3,
+      "error": 0.656940488198137,
+      "origin_error": 0.6231259904706271,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Claire Young",
+      "answers": 3,
+      "error": 0.36698372595114653,
+      "origin_error": 0.7811049865415021,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Dr Peter Prinsley",
+      "answers": 3,
+      "error": 0.5901350027409463,
+      "origin_error": 0.3957600282999788,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Peter Swallow",
+      "answers": 3,
+      "error": 0.2252599905343304,
+      "origin_error": 0.8135066072257802,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Daniel Francis",
+      "answers": 3,
+      "error": 0.3623879465144772,
+      "origin_error": 0.2772976739895234,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Victoria Collins",
+      "answers": 3,
+      "error": 0.29612113099170745,
+      "origin_error": 0.2713669102893719,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Alison Griffiths",
+      "answers": 3,
+      "error": 0.5074834630787939,
+      "origin_error": 0.4183598929151789,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Clive Jones",
+      "answers": 3,
+      "error": 0.9477077605740558,
+      "origin_error": 0.6244557630449094,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Brian Mathew",
+      "answers": 3,
+      "error": 0.48111914925442095,
+      "origin_error": 0.5840796178604422,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Jim Dickson",
+      "answers": 3,
+      "error": 0.24257735784321646,
+      "origin_error": 0.5648229811188635,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Chris Vince",
+      "answers": 3,
+      "error": 0.6784501912710381,
+      "origin_error": 0.543231994639491,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Sojan Joseph",
+      "answers": 3,
+      "error": 0.2978896141870644,
+      "origin_error": 0.2686279955626368,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Dr Ellie Chowns",
+      "answers": 4,
+      "error": 0.47221635254354494,
+      "origin_error": 0.7641557432879765,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Alison Hume",
+      "answers": 3,
+      "error": 0.2563128614486857,
+      "origin_error": 0.6418301956125155,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Jayne Kirkham",
+      "answers": 3,
+      "error": 0.3725884887148439,
+      "origin_error": 0.9469123507484735,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Anna Dixon",
+      "answers": 3,
+      "error": 0.3848476034997494,
+      "origin_error": 0.5025504949753805,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Rebecca Paul",
+      "answers": 3,
+      "error": 0.5969896878127374,
+      "origin_error": 0.6708807643687513,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Monica Harding",
+      "answers": 5,
+      "error": 0.8074583487579915,
+      "origin_error": 0.9903660939268872,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Rebecca Smith",
+      "answers": 4,
+      "error": 0.990119792835218,
+      "origin_error": 0.6064206460865263,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Dr Danny Chambers",
+      "answers": 3,
+      "error": 0.6331225681449142,
+      "origin_error": 0.15772761330851362,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Siân Berry",
+      "answers": 3,
+      "error": 0.9089801114354005,
+      "origin_error": 0.37567139896457385,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Olly Glover",
+      "answers": 3,
+      "error": 0.7903055198091179,
+      "origin_error": 0.2692656680678025,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Mr Will Forster",
+      "answers": 3,
+      "error": 0.6876062121540452,
+      "origin_error": 0.2899810338625614,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Vikki Slade",
+      "answers": 4,
+      "error": 0.3214873810115778,
+      "origin_error": 0.47095435022940385,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "John Milne",
+      "answers": 3,
+      "error": 0.5974907325642687,
+      "origin_error": 0.38208114321437014,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Mr Peter Bedford",
+      "answers": 3,
+      "error": 0.576834439565429,
+      "origin_error": 0.2691802370160187,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Dr Allison Gardner",
+      "answers": 4,
+      "error": 0.5942519444444282,
+      "origin_error": 0.5331838332132737,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Jess Brown-Fuller",
+      "answers": 4,
+      "error": 0.4723425295873904,
+      "origin_error": 0.2954606572794422,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Calum Miller",
+      "answers": 5,
+      "error": 0.8817554575664465,
+      "origin_error": 0.580552323223325,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Gregory Stafford",
+      "answers": 5,
+      "error": 0.3133558095503932,
+      "origin_error": 0.6993961681336266,
+      "matches": 8,
+      "top_shared": 3
+    },
+    {
+      "mp": "Sarah Bool",
+      "answers": 4,
+      "error": 0.49500323433345655,
+      "origin_error": 0.4414985843691913,
+      "matches": 8,
+      "top_shared": 4
+    },
+    {
+      "mp": "Neil Duncan-Jordan",
+      "answers": 3,
+      "error": 0.705704177011346,
+      "origin_error": 0.62546382789095,
+      "matches": 8,
+      "top_shared": 3
+    }
+  ],
+  "combinations": [
+    {
+      "answers": {
+        "0": -1,
+        "3": -1,
+        "6": -1,
+        "7": -1,
+        "13": -1
+      },
+      "radius": 0.16427212885530443,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.5375
+    },
+    {
+      "answers": {
+        "0": 1,
+        "3": -1,
+        "6": -1,
+        "7": -1,
+        "13": -1
+      },
+      "radius": 0.32805801697123577,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.5575
+    },
+    {
+      "answers": {
+        "0": -1,
+        "3": 1,
+        "6": -1,
+        "7": -1,
+        "13": -1
+      },
+      "radius": 0.6057008549434181,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.6975
+    },
+    {
+      "answers": {
+        "0": 1,
+        "3": 1,
+        "6": -1,
+        "7": -1,
+        "13": -1
+      },
+      "radius": 0.8072359545152132,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.6975
+    },
+    {
+      "answers": {
+        "0": -1,
+        "3": -1,
+        "6": 1,
+        "7": -1,
+        "13": -1
+      },
+      "radius": 0.590809860591919,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.585
+    },
+    {
+      "answers": {
+        "0": 1,
+        "3": -1,
+        "6": 1,
+        "7": -1,
+        "13": -1
+      },
+      "radius": 0.24563462012137816,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.5825
+    },
+    {
+      "answers": {
+        "0": -1,
+        "3": 1,
+        "6": 1,
+        "7": -1,
+        "13": -1
+      },
+      "radius": 0.6382780433472339,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.6325000000000001
+    },
+    {
+      "answers": {
+        "0": 1,
+        "3": 1,
+        "6": 1,
+        "7": -1,
+        "13": -1
+      },
+      "radius": 0.5681536466935315,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.5825
+    },
+    {
+      "answers": {
+        "0": -1,
+        "3": -1,
+        "6": -1,
+        "7": 1,
+        "13": -1
+      },
+      "radius": 0.31927599724083133,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.604
+    },
+    {
+      "answers": {
+        "0": 1,
+        "3": -1,
+        "6": -1,
+        "7": 1,
+        "13": -1
+      },
+      "radius": 0.6618473464857045,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.66
+    },
+    {
+      "answers": {
+        "0": -1,
+        "3": 1,
+        "6": -1,
+        "7": 1,
+        "13": -1
+      },
+      "radius": 0.5703142574882147,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.6975
+    },
+    {
+      "answers": {
+        "0": 1,
+        "3": 1,
+        "6": -1,
+        "7": 1,
+        "13": -1
+      },
+      "radius": 0.9303132431245019,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.6975
+    },
+    {
+      "answers": {
+        "0": -1,
+        "3": -1,
+        "6": 1,
+        "7": 1,
+        "13": -1
+      },
+      "radius": 0.3976769467669351,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.604
+    },
+    {
+      "answers": {
+        "0": 1,
+        "3": -1,
+        "6": 1,
+        "7": 1,
+        "13": -1
+      },
+      "radius": 0.3534049330088608,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.66
+    },
+    {
+      "answers": {
+        "0": -1,
+        "3": 1,
+        "6": 1,
+        "7": 1,
+        "13": -1
+      },
+      "radius": 0.3161052352557211,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.6325000000000001
+    },
+    {
+      "answers": {
+        "0": 1,
+        "3": 1,
+        "6": 1,
+        "7": 1,
+        "13": -1
+      },
+      "radius": 0.5203750982163293,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.694
+    },
+    {
+      "answers": {
+        "0": -1,
+        "3": -1,
+        "6": -1,
+        "7": -1,
+        "13": 1
+      },
+      "radius": 0.5203750982163293,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.5625
+    },
+    {
+      "answers": {
+        "0": 1,
+        "3": -1,
+        "6": -1,
+        "7": -1,
+        "13": 1
+      },
+      "radius": 0.3161052352557211,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.39249999999999996
+    },
+    {
+      "answers": {
+        "0": -1,
+        "3": 1,
+        "6": -1,
+        "7": -1,
+        "13": 1
+      },
+      "radius": 0.3534049330088608,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.595
+    },
+    {
+      "answers": {
+        "0": 1,
+        "3": 1,
+        "6": -1,
+        "7": -1,
+        "13": 1
+      },
+      "radius": 0.3976769467669351,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.5375
+    },
+    {
+      "answers": {
+        "0": -1,
+        "3": -1,
+        "6": 1,
+        "7": -1,
+        "13": 1
+      },
+      "radius": 0.9303132431245019,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.6625
+    },
+    {
+      "answers": {
+        "0": 1,
+        "3": -1,
+        "6": 1,
+        "7": -1,
+        "13": 1
+      },
+      "radius": 0.5703142574882147,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.6525
+    },
+    {
+      "answers": {
+        "0": -1,
+        "3": 1,
+        "6": 1,
+        "7": -1,
+        "13": 1
+      },
+      "radius": 0.6618473464857045,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.6625
+    },
+    {
+      "answers": {
+        "0": 1,
+        "3": 1,
+        "6": 1,
+        "7": -1,
+        "13": 1
+      },
+      "radius": 0.31927599724083133,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.5825
+    },
+    {
+      "answers": {
+        "0": -1,
+        "3": -1,
+        "6": -1,
+        "7": 1,
+        "13": 1
+      },
+      "radius": 0.5681536466935315,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.6425
+    },
+    {
+      "answers": {
+        "0": 1,
+        "3": -1,
+        "6": -1,
+        "7": 1,
+        "13": 1
+      },
+      "radius": 0.6382780433472339,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.66
+    },
+    {
+      "answers": {
+        "0": -1,
+        "3": 1,
+        "6": -1,
+        "7": 1,
+        "13": 1
+      },
+      "radius": 0.24563462012137816,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.6174999999999999
+    },
+    {
+      "answers": {
+        "0": 1,
+        "3": 1,
+        "6": -1,
+        "7": 1,
+        "13": 1
+      },
+      "radius": 0.590809860591919,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.6174999999999999
+    },
+    {
+      "answers": {
+        "0": -1,
+        "3": -1,
+        "6": 1,
+        "7": 1,
+        "13": 1
+      },
+      "radius": 0.8072359545152132,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.6625
+    },
+    {
+      "answers": {
+        "0": 1,
+        "3": -1,
+        "6": 1,
+        "7": 1,
+        "13": 1
+      },
+      "radius": 0.6057008549434181,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.66
+    },
+    {
+      "answers": {
+        "0": -1,
+        "3": 1,
+        "6": 1,
+        "7": 1,
+        "13": 1
+      },
+      "radius": 0.32805801697123577,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.6625
+    },
+    {
+      "answers": {
+        "0": 1,
+        "3": 1,
+        "6": 1,
+        "7": 1,
+        "13": 1
+      },
+      "radius": 0.16427212885530443,
+      "matches": 8,
+      "min_shared": 3,
+      "best_score": 0.5725
+    }
+  ]
+}

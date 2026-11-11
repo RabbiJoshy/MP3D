@@ -1,0 +1,422 @@
+[
+ {
+  "topic": "Defence",
+  "label": "Supports increase in defence spending",
+  "n_mps": 11
+ },
+ {
+  "topic": "Defence",
+  "label": "Supports the establishment of the Armed Forces Commissioner role",
+  "n_mps": 4
+ },
+ {
+  "topic": "Defence",
+  "label": "Supports a defence industrial strategy to reindustrialise the defence industrial base",
+  "n_mps": 4
+ },
+ {
+  "topic": "Defence",
+  "label": "Supports the forthcoming defence investment plan",
+  "n_mps": 4
+ },
+ {
+  "topic": "Defence",
+  "label": "Supports enhancing NATO capabilities and defence investment for national security.",
+  "n_mps": 3
+ },
+ {
+  "topic": "Defence",
+  "label": "Supports the government's plan but urges continued pressure for better outcomes.",
+  "n_mps": 3
+ },
+ {
+  "topic": "Defence",
+  "label": "Supports putting the armed forces covenant fully into law",
+  "n_mps": 3
+ },
+ {
+  "topic": "Defence",
+  "label": "Opposes the increase in defence spending",
+  "n_mps": 3
+ },
+ {
+  "topic": "Civil rights",
+  "label": "Supports assisted dying to ensure equitable access and dignity.",
+  "n_mps": 4
+ },
+ {
+  "topic": "Civil rights",
+  "label": "Opposes the Bill legalising assisted dying",
+  "n_mps": 3
+ },
+ {
+  "topic": "Civil rights",
+  "label": "Supports requiring doctors to inform patients they can stop assisted dying at the final moment",
+  "n_mps": 3
+ },
+ {
+  "topic": "Public lands",
+  "label": "Supports public ownership of the water industry",
+  "n_mps": 5
+ },
+ {
+  "topic": "Public lands",
+  "label": "Supports placing Thames Water into a special administrative regime",
+  "n_mps": 3
+ },
+ {
+  "topic": "Government operations",
+  "label": "Supports local decision-making on spending allocations",
+  "n_mps": 3
+ },
+ {
+  "topic": "Government operations",
+  "label": "Supports bringing the ministerial code under the auspices of Parliament.",
+  "n_mps": 3
+ },
+ {
+  "topic": "Government operations",
+  "label": "Supports investment in highways, strategic schemes, and sustainable transport packages.",
+  "n_mps": 3
+ },
+ {
+  "topic": "Government operations",
+  "label": "Supports stricter penalties for foreign political donations",
+  "n_mps": 3
+ },
+ {
+  "topic": "Government operations",
+  "label": "Supports increased funding for Special Educational Needs and Disabilities services in schools",
+  "n_mps": 3
+ },
+ {
+  "topic": "Environment",
+  "label": "Supports the forthcoming water Bill",
+  "n_mps": 3
+ },
+ {
+  "topic": "Environment",
+  "label": "Supports water industry reforms to protect customers and the environment.",
+  "n_mps": 3
+ },
+ {
+  "topic": "Employment",
+  "label": "Opposes raising employer national insurance contributions",
+  "n_mps": 5
+ },
+ {
+  "topic": "Employment",
+  "label": "Opposes the Employment Rights Bill",
+  "n_mps": 4
+ },
+ {
+  "topic": "Employment",
+  "label": "Supports banning zero-hours contracts and fire and rehire practices",
+  "n_mps": 4
+ },
+ {
+  "topic": "Employment",
+  "label": "Supports the triple lock on pensions and the warm homes plan",
+  "n_mps": 3
+ },
+ {
+  "topic": "Employment",
+  "label": "Supports workplace adjustments and guidance for endometriosis sufferers",
+  "n_mps": 3
+ },
+ {
+  "topic": "Employment",
+  "label": "Supports increasing the rate of apprenticeship starts across industry",
+  "n_mps": 3
+ },
+ {
+  "topic": "Employment",
+  "label": "Supports allowing pensions to be paid to the relevant group",
+  "n_mps": 3
+ },
+ {
+  "topic": "Employment",
+  "label": "Supports protecting south Wales steel jobs and supporting sovereign steel expansion.",
+  "n_mps": 3
+ },
+ {
+  "topic": "Employment",
+  "label": "Supports the Bill to protect workers' rights, including sick pay and parental leave.",
+  "n_mps": 3
+ },
+ {
+  "topic": "Health",
+  "label": "Supports expanding access to NHS dental appointments and reducing waiting lists",
+  "n_mps": 6
+ },
+ {
+  "topic": "Health",
+  "label": "Supports rural infrastructure improvements including transport, healthcare, roads, housing, and broadband.",
+  "n_mps": 5
+ },
+ {
+  "topic": "Health",
+  "label": "Supports neighbourhood health centres",
+  "n_mps": 4
+ },
+ {
+  "topic": "Health",
+  "label": "Supports transferring NHS funding to hospices",
+  "n_mps": 4
+ },
+ {
+  "topic": "Health",
+  "label": "Supports increasing NHS mental health funding and retaining dementia targets",
+  "n_mps": 4
+ },
+ {
+  "topic": "Health",
+  "label": "Supports removing VAT on orphan drugs and rare disease treatments",
+  "n_mps": 3
+ },
+ {
+  "topic": "Health",
+  "label": "Supports the Government's new NHS workforce plan",
+  "n_mps": 3
+ },
+ {
+  "topic": "Health",
+  "label": "Supports passing the assisted dying Bill",
+  "n_mps": 3
+ },
+ {
+  "topic": "Health",
+  "label": "Supports enhancing mental health support for children nationwide",
+  "n_mps": 3
+ },
+ {
+  "topic": "Health",
+  "label": "Supports reducing the average diagnosis time for endometriosis patients",
+  "n_mps": 3
+ },
+ {
+  "topic": "Health",
+  "label": "Supports a ban on online content harmful to children",
+  "n_mps": 3
+ },
+ {
+  "topic": "Social welfare",
+  "label": "Supports ending the two-child benefit cap",
+  "n_mps": 8
+ },
+ {
+  "topic": "Social welfare",
+  "label": "Supports Government support for unpaid carers",
+  "n_mps": 3
+ },
+ {
+  "topic": "Social welfare",
+  "label": "Supports expanding and improving special educational needs support",
+  "n_mps": 3
+ },
+ {
+  "topic": "Social welfare",
+  "label": "Supports measures to reduce the need for food banks",
+  "n_mps": 3
+ },
+ {
+  "topic": "Social welfare",
+  "label": "Opposes cuts to personal independence payments and disability benefits",
+  "n_mps": 3
+ },
+ {
+  "topic": "Social welfare",
+  "label": "Supports investing \u00a3740 million to support schools to provide more specialist places",
+  "n_mps": 3
+ },
+ {
+  "topic": "Housing",
+  "label": "Supports community-led housing and greater local authority powers.",
+  "n_mps": 5
+ },
+ {
+  "topic": "Housing",
+  "label": "Supports building more social housing",
+  "n_mps": 4
+ },
+ {
+  "topic": "Housing",
+  "label": "Supports regulating short-term lets to address safety and housing affordability",
+  "n_mps": 3
+ },
+ {
+  "topic": "Housing",
+  "label": "Supports reforms to right-to-buy to ensure sustainable social housing supply.",
+  "n_mps": 3
+ },
+ {
+  "topic": "Housing",
+  "label": "Supports adding more homes to the market",
+  "n_mps": 3
+ },
+ {
+  "topic": "Law and crime",
+  "label": "Opposes curtailing jury trials to address court backlogs",
+  "n_mps": 4
+ },
+ {
+  "topic": "Law and crime",
+  "label": "Supports reducing the Crown court backlog and speeding up trials",
+  "n_mps": 4
+ },
+ {
+  "topic": "Law and crime",
+  "label": "Supports providing redress and compensation to victims",
+  "n_mps": 4
+ },
+ {
+  "topic": "Law and crime",
+  "label": "Supports stricter enforcement of existing fireworks rules and increased police powers",
+  "n_mps": 3
+ },
+ {
+  "topic": "Law and crime",
+  "label": "Supports halving violence against women and girls within the next decade",
+  "n_mps": 3
+ },
+ {
+  "topic": "International affairs",
+  "label": "Supports a ban on arms sales to Israel",
+  "n_mps": 4
+ },
+ {
+  "topic": "International affairs",
+  "label": "Supports unlocking frozen Russian assets in the UK to aid Ukraine",
+  "n_mps": 3
+ },
+ {
+  "topic": "International affairs",
+  "label": "Supports recognising the state of Palestine",
+  "n_mps": 3
+ },
+ {
+  "topic": "Immigration",
+  "label": "Opposes scrapping the Rwanda scheme",
+  "n_mps": 4
+ },
+ {
+  "topic": "Immigration",
+  "label": "Supports stopping illegal immigration",
+  "n_mps": 4
+ },
+ {
+  "topic": "Immigration",
+  "label": "Supports lifting the ban on UNRWA to allow aid into Gaza",
+  "n_mps": 3
+ },
+ {
+  "topic": "Immigration",
+  "label": "Supports the new deal to stop small boat crossings.",
+  "n_mps": 3
+ },
+ {
+  "topic": "Immigration",
+  "label": "Supports the Border Security, Asylum and Immigration Bill",
+  "n_mps": 3
+ },
+ {
+  "topic": "Energy",
+  "label": "Supports small modular reactors for low-carbon energy",
+  "n_mps": 4
+ },
+ {
+  "topic": "Energy",
+  "label": "Supports community energy projects",
+  "n_mps": 4
+ },
+ {
+  "topic": "Energy",
+  "label": "Supports launching strategic energy plans to meet future demand.",
+  "n_mps": 3
+ },
+ {
+  "topic": "Energy",
+  "label": "Supports drilling for oil and gas in the North Sea",
+  "n_mps": 3
+ },
+ {
+  "topic": "Energy",
+  "label": "Supports additional support for small businesses to meet rising energy costs",
+  "n_mps": 3
+ },
+ {
+  "topic": "Energy",
+  "label": "Supports decoupling electricity and gas prices",
+  "n_mps": 3
+ },
+ {
+  "topic": "Energy",
+  "label": "Supports improved home insulation and energy efficiency",
+  "n_mps": 3
+ },
+ {
+  "topic": "Energy",
+  "label": "Opposes net zero targets and the carbon budget order",
+  "n_mps": 3
+ },
+ {
+  "topic": "Macroeconomics",
+  "label": "Opposes higher taxation measures",
+  "n_mps": 3
+ },
+ {
+  "topic": "Macroeconomics",
+  "label": "Supports freezing, reducing, or cutting business rates for retail, hospitality, and leisure properties.",
+  "n_mps": 3
+ },
+ {
+  "topic": "Transport",
+  "label": "Supports the creation of a publicly owned Great British Railways",
+  "n_mps": 7
+ },
+ {
+  "topic": "Technology",
+  "label": "Supports regulating social media to protect young people from harm.",
+  "n_mps": 6
+ },
+ {
+  "topic": "Technology",
+  "label": "Supports AI use in law while preserving human oversight.",
+  "n_mps": 5
+ },
+ {
+  "topic": "Technology",
+  "label": "Supports expanding high-speed broadband to rural areas",
+  "n_mps": 4
+ },
+ {
+  "topic": "Culture",
+  "label": "Supports action to tackle ticket touts and price gouging",
+  "n_mps": 4
+ },
+ {
+  "topic": "Education",
+  "label": "Supports removing VAT on fees for independent schools providing SEND education",
+  "n_mps": 3
+ },
+ {
+  "topic": "Education",
+  "label": "Supports diverse educational pathways including university and apprenticeships.",
+  "n_mps": 3
+ },
+ {
+  "topic": "Education",
+  "label": "Supports funding free breakfast clubs for primary school children",
+  "n_mps": 3
+ },
+ {
+  "topic": "Agriculture",
+  "label": "Opposes the family farm tax",
+  "n_mps": 11
+ },
+ {
+  "topic": "Agriculture",
+  "label": "Supports introduction of inheritance tax",
+  "n_mps": 3
+ }
+]

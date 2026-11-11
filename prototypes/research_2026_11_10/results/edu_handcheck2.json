@@ -1,0 +1,804 @@
+{
+ "rows": [
+  {
+   "row_id": 1,
+   "exact_measure": "Regulate or shut down illegal/unregistered schools",
+   "position": "FOR",
+   "relation_to_label": "DIFFERENT",
+   "position_on_label": "NONE",
+   "quote": "If they are unwilling to be regulated and offer a proper education, they must be shut down.",
+   "note": "Only describes constituents' concerns on home-ed regulation; no view on abolishing home schooling."
+  },
+  {
+   "row_id": 2,
+   "exact_measure": "Make all academies follow the national curriculum",
+   "position": "AGAINST",
+   "relation_to_label": "SAME",
+   "position_on_label": "AGAINST",
+   "quote": "This is the first time in our whole history that every single school will have to follow it."
+  },
+  {
+   "row_id": 3,
+   "exact_measure": null,
+   "position": "NONE",
+   "relation_to_label": "NONE",
+   "position_on_label": "NONE",
+   "quote": "she would like the Bill to go further and say that local authorities should set all admissions policies.",
+   "note": "Relays a witness."
+  },
+  {
+   "row_id": 4,
+   "exact_measure": "Make all schools follow the national curriculum",
+   "position": "AGAINST",
+   "relation_to_label": "SAME",
+   "position_on_label": "AGAINST",
+   "quote": "Why are the Government making all schools follow the national curriculum? Where is the evidence that there is a problem?"
+  },
+  {
+   "row_id": 5,
+   "exact_measure": null,
+   "position": "NONE",
+   "relation_to_label": "NONE",
+   "position_on_label": "NONE",
+   "quote": "why are they exempting the settings that have more non-QTS teachers?",
+   "note": "Label reads inverted (means: require QTS). Sarcastic jab at exemptions; opposition to QTS mandate implicit (next passage). Counted as no explicit position."
+  },
+  {
+   "row_id": 6,
+   "exact_measure": null,
+   "position": "NONE",
+   "relation_to_label": "NONE",
+   "position_on_label": "NONE",
+   "quote": "a rigid national curriculum that dictates adherence to a robotic, turgid and monotonous programme of learning",
+   "note": "Pure quotation of Birbalsingh's letter; speaker's own view stated in adjacent passages (AGAINST)."
+  },
+  {
+   "row_id": 7,
+   "exact_measure": "Make the national curriculum compulsory for academies",
+   "position": "AGAINST",
+   "relation_to_label": "SAME",
+   "position_on_label": "AGAINST",
+   "quote": "the proposal to make it compulsory for academies to teach the national curriculum",
+   "note": "Labour MP against."
+  },
+  {
+   "row_id": 8,
+   "exact_measure": "Require academies to follow the national curriculum like maintained schools",
+   "position": "FOR",
+   "relation_to_label": "SAME",
+   "position_on_label": "FOR",
+   "quote": "the clause will introduce a requirement for academies to follow the national curriculum in the same way as maintained schools.",
+   "note": "Minister."
+  },
+  {
+   "row_id": 9,
+   "exact_measure": "Require schools and local authorities to co-operate on admissions and place planning",
+   "position": "FOR",
+   "relation_to_label": "DIFFERENT",
+   "position_on_label": "NONE",
+   "quote": "we are legislating to require all schools and local authorities to co-operate on admissions and place planning.",
+   "note": "Minister; label measure (LAs invite proposals) only in next passage."
+  },
+  {
+   "row_id": 10,
+   "exact_measure": "Make the national curriculum compulsory for all academies (clause 42)",
+   "position": "AGAINST",
+   "relation_to_label": "SAME",
+   "position_on_label": "AGAINST",
+   "quote": "clause 42, which makes the national curriculum compulsory for all academies"
+  },
+  {
+   "row_id": 11,
+   "exact_measure": "Require academies to follow 100% of the national curriculum before the curriculum review reports",
+   "position": "AGAINST",
+   "relation_to_label": "SAME",
+   "position_on_label": "AGAINST",
+   "quote": "there are three problems with insisting on 100% adherence to the national curriculum."
+  },
+  {
+   "row_id": 12,
+   "exact_measure": "Charge VAT and business rates on private school fees",
+   "position": "AGAINST",
+   "relation_to_label": "SAME",
+   "position_on_label": "AGAINST",
+   "quote": "every single kid in my constituency will have to pay for the VAT in some way."
+  },
+  {
+   "row_id": 13,
+   "exact_measure": "Allow academies some flexibility to deviate from the national curriculum",
+   "position": "FOR",
+   "relation_to_label": "PART",
+   "position_on_label": "CONDITIONAL",
+   "quote": "some of them may innovate and deviate. They may need to do something different to support children",
+   "note": "Hinds."
+  },
+  {
+   "row_id": 14,
+   "exact_measure": "Exempt UTC/industry specialists from the QTS requirement",
+   "position": "FOR",
+   "relation_to_label": "PART",
+   "position_on_label": "AGAINST",
+   "quote": "prohibiting the people who know about those matters from doing their work unless they have qualified teacher status"
+  },
+  {
+   "row_id": 15,
+   "exact_measure": "Make academies follow the national curriculum",
+   "position": "AGAINST",
+   "relation_to_label": "SAME",
+   "position_on_label": "AGAINST",
+   "quote": "Ministers have never explained what they are trying to solve with this change, but the unions like it, so into the Bill it goes."
+  },
+  {
+   "row_id": 16,
+   "exact_measure": "Put a statutory ban on mobile phones in schools (new clause 48)",
+   "position": "AGAINST",
+   "relation_to_label": "SAME",
+   "position_on_label": "AGAINST",
+   "quote": "We trust headteachers to develop a mobile phone policy that works for their own schools and for the school community.",
+   "note": "Minister; prefers head-teacher policies."
+  },
+  {
+   "row_id": 17,
+   "exact_measure": "Make academies teach the national curriculum",
+   "position": "FOR",
+   "relation_to_label": "SAME",
+   "position_on_label": "FOR",
+   "quote": "some are gaming the system by not teaching a full, holistic programme of subjects.",
+   "note": "Labour MP, supportive of Bill's measures."
+  },
+  {
+   "row_id": 18,
+   "exact_measure": "Remove the requirement for academies to follow the national curriculum (amendment 206)",
+   "position": "FOR",
+   "relation_to_label": "SAME",
+   "position_on_label": "AGAINST",
+   "quote": "The Bill seeks to stifle innovation, which is a dangerous and regressive move.",
+   "note": "Position FOR the amendment = AGAINST the label."
+  },
+  {
+   "row_id": 19,
+   "exact_measure": null,
+   "position": "NONE",
+   "relation_to_label": "PART",
+   "position_on_label": "NONE",
+   "quote": "supporting teachers and headteachers who are looking at banning smartphones and social media in schools?",
+   "note": "Question to minister only."
+  },
+  {
+   "row_id": 20,
+   "exact_measure": "Let academies innovate somewhat within the national curriculum framework",
+   "position": "FOR",
+   "relation_to_label": "PART",
+   "position_on_label": "AGAINST",
+   "quote": "there is nothing wrong with having a little bit of innovation within that.",
+   "note": "Hinds; label view inferred from context."
+  },
+  {
+   "row_id": 21,
+   "exact_measure": null,
+   "position": "NONE",
+   "relation_to_label": "NONE",
+   "position_on_label": "NONE",
+   "quote": "the academisation approach has not made an impact and has not turned around the life chances of children",
+   "note": "Criticises academy trusts' record via an intervention; no abolition proposal."
+  },
+  {
+   "row_id": 22,
+   "exact_measure": "End academies' freedom to vary from the national curriculum",
+   "position": "AGAINST",
+   "relation_to_label": "SAME",
+   "position_on_label": "AGAINST",
+   "quote": "The bill also ends academies' freedom to vary from the national curriculum. This freedom promotes genuine diversity in our schools"
+  },
+  {
+   "row_id": 23,
+   "exact_measure": "Provide free breakfast clubs in primary schools",
+   "position": "FOR",
+   "relation_to_label": "DIFFERENT",
+   "position_on_label": "NONE",
+   "quote": "I do not think that anybody could disagree with the intent of ensuring that children are well fed and ready to learn",
+   "note": "Conditional on delivery; this is breakfast clubs not free school meals."
+  },
+  {
+   "row_id": 24,
+   "exact_measure": "Delay compulsory national curriculum for academies until the curriculum review outcome is known",
+   "position": "FOR",
+   "relation_to_label": "PART",
+   "position_on_label": "AGAINST",
+   "quote": "This Bill says that schools must follow the national curriculum, before the new national curriculum is set out. It pre-empts the review.",
+   "note": "Hinds."
+  },
+  {
+   "row_id": 25,
+   "exact_measure": "Limit the children-not-in-school register to those providing more than six hours a week of education (amendment 221)",
+   "position": "FOR",
+   "relation_to_label": "PART",
+   "position_on_label": "CONDITIONAL",
+   "quote": "My amendment 221 proposes a more practical solution of requiring only those who provide more than six hours per week",
+   "note": "LD."
+  },
+  {
+   "row_id": 26,
+   "exact_measure": "Charge VAT on independent school fees",
+   "position": "AGAINST",
+   "relation_to_label": "SAME",
+   "position_on_label": "AGAINST",
+   "quote": "Bringing in VAT for independent schools will create huge pressure. I believe that the measure is rushed."
+  },
+  {
+   "row_id": 27,
+   "exact_measure": "Let academies deviate somewhat from the national curriculum as a safety valve against politicisation",
+   "position": "FOR",
+   "relation_to_label": "PART",
+   "position_on_label": "AGAINST",
+   "quote": "the ability of academies... to deviate somewhat from the national curriculum is a safety valve against politicisation.",
+   "note": "Hinds."
+  },
+  {
+   "row_id": 28,
+   "exact_measure": "Keep the 50% faith cap for the VA-schools tranche while still allowing new voluntary-aided faith schools to open",
+   "position": "FOR",
+   "relation_to_label": "PART",
+   "position_on_label": "CONDITIONAL",
+   "quote": "I contend that it is a good system that we have the cap for that tranche of schools",
+   "note": "Hinds; cap defended only for VA tranche, not free schools."
+  },
+  {
+   "row_id": 29,
+   "exact_measure": "Allow flexibility to depart from the national curriculum as a school-improvement tool",
+   "position": "FOR",
+   "relation_to_label": "PART",
+   "position_on_label": "AGAINST",
+   "quote": "the flexibility can be an instrument for school improvement",
+   "note": "Hinds; also warns a more rigid curriculum harms attendance (next)."
+  },
+  {
+   "row_id": 30,
+   "exact_measure": null,
+   "position": "NONE",
+   "relation_to_label": "NONE",
+   "position_on_label": "NONE",
+   "quote": "Under these proposals, it will apply to all primary and secondary state-funded schools in England.",
+   "note": "Minister only describes scope; label 'Require teachers to have qualified status' is SAME topic but she states no view here."
+  },
+  {
+   "row_id": 31,
+   "exact_measure": "Keep the ability of academies to deviate somewhat from the national curriculum",
+   "position": "FOR",
+   "relation_to_label": "PART",
+   "position_on_label": "AGAINST",
+   "quote": "especially if this Bill removes the safety valve of schools being able to deviate somewhat.",
+   "note": "Hinds."
+  },
+  {
+   "row_id": 32,
+   "exact_measure": "Create a compulsory register of children not in school in every area",
+   "position": "FOR",
+   "relation_to_label": "SAME",
+   "position_on_label": "FOR",
+   "quote": "a new compulsory register of children not in school in every area of England",
+   "note": "Secretary of State."
+  },
+  {
+   "row_id": 33,
+   "exact_measure": null,
+   "position": "NONE",
+   "relation_to_label": "NONE",
+   "position_on_label": "NONE",
+   "quote": "Where once Labour promised us 'education, education, education,' it now promises us bureaucracy, bureaucracy, bureaucracy.",
+   "note": "Generic attack on whole Bill; no concrete measure."
+  },
+  {
+   "row_id": 34,
+   "exact_measure": "End level 7 apprenticeships",
+   "position": "AGAINST",
+   "relation_to_label": "SAME",
+   "position_on_label": "AGAINST",
+   "quote": "ending level 7 apprenticeships. When I speak to people in higher education, they are extremely worried about that.",
+   "note": "Opposition implicit but clear."
+  },
+  {
+   "row_id": 35,
+   "exact_measure": "Charge VAT on private school fees",
+   "position": "AGAINST",
+   "relation_to_label": "SAME",
+   "position_on_label": "AGAINST",
+   "quote": "The idea that schoolchildren in mainstream education are going without directly because we did not have VAT on private schools... is a deeply unpleasant"
+  },
+  {
+   "row_id": 36,
+   "exact_measure": "Let academies keep curriculum freedom where Ofsted judges the curriculum broad and balanced (new clause 54)",
+   "position": "FOR",
+   "relation_to_label": "PART",
+   "position_on_label": "AGAINST",
+   "quote": "New clause 53 would allow ongoing curriculum freedom in academies where it is needed in the interests of improving standards.",
+   "note": "Describes own amendments; adjacent text criticises removing freedoms."
+  },
+  {
+   "row_id": 37,
+   "exact_measure": "Require independent schools to show contribution to local community through inspection",
+   "position": "FOR",
+   "relation_to_label": "PART",
+   "position_on_label": "CONDITIONAL",
+   "quote": "We want to see that best practice become universal, with investment proportional to school size and fees",
+   "note": "LD; asks government to look at negative impact of VAT."
+  },
+  {
+   "row_id": 38,
+   "exact_measure": "Require academies to follow the national curriculum",
+   "position": "AGAINST",
+   "relation_to_label": "SAME",
+   "position_on_label": "AGAINST",
+   "quote": "I am left wondering what the problem the Government are trying to solve is.",
+   "note": "Hinds."
+  },
+  {
+   "row_id": 39,
+   "exact_measure": "Bring all schools under the national curriculum",
+   "position": "AGAINST",
+   "relation_to_label": "SAME",
+   "position_on_label": "AGAINST",
+   "quote": "My concern is that the Government are bringing all schools under the same framework"
+  },
+  {
+   "row_id": 40,
+   "exact_measure": "Require parliamentary approval of the reformed curriculum / add a flexible core (new clauses 65 and 66)",
+   "position": "FOR",
+   "relation_to_label": "PART",
+   "position_on_label": "CONDITIONAL",
+   "quote": "I have nothing against the national curriculum\u2014it is a very good thing.",
+   "note": "LD."
+  },
+  {
+   "row_id": 41,
+   "exact_measure": "Require all schools including academies to follow a national curriculum core framework",
+   "position": "FOR",
+   "relation_to_label": "SAME",
+   "position_on_label": "FOR",
+   "quote": "we are trying to create a core offer for every child in this country.",
+   "note": "Minister."
+  },
+  {
+   "row_id": 42,
+   "exact_measure": "Require academies to follow the national curriculum",
+   "position": "FOR",
+   "relation_to_label": "SAME",
+   "position_on_label": "FOR",
+   "quote": "it is not necessarily the case that deviation from the national curriculum is the major contributor to that success.",
+   "note": "Implicit: rebuts evidence for academy deviation; framed as question."
+  },
+  {
+   "row_id": 43,
+   "exact_measure": "Require academies to follow the detail of the national curriculum in its entirety",
+   "position": "AGAINST",
+   "relation_to_label": "SAME",
+   "position_on_label": "AGAINST",
+   "quote": "a requirement in primary legislation to slavishly follow the detail of the national curriculum in its entirety",
+   "note": "Hinds."
+  },
+  {
+   "row_id": 44,
+   "exact_measure": "Exempt shortage subjects from the QTS requirement",
+   "position": "FOR",
+   "relation_to_label": "PART",
+   "position_on_label": "CONDITIONAL",
+   "quote": "I am just trying to make the same point about shortage subjects.",
+   "note": "O'Brien; label reads inverted (means: require QTS)."
+  },
+  {
+   "row_id": 45,
+   "exact_measure": null,
+   "position": "NONE",
+   "relation_to_label": "NONE",
+   "position_on_label": "NONE",
+   "quote": "It is not really a floor or a ceiling at the moment; it is a very loose framework",
+   "note": "Hinds describing the curriculum."
+  },
+  {
+   "row_id": 46,
+   "exact_measure": null,
+   "position": "NONE",
+   "relation_to_label": "NONE",
+   "position_on_label": "NONE",
+   "quote": "Before the Education Secretary imposes her union-backed policies on English schoolchildren",
+   "note": "Generic attack on Bill via Wales comparison; no measure."
+  },
+  {
+   "row_id": 47,
+   "exact_measure": "Preserve academies' curriculum freedoms and flexibilities",
+   "position": "FOR",
+   "relation_to_label": "SAME",
+   "position_on_label": "AGAINST",
+   "quote": "These freedoms and flexibilities are there for a reason.",
+   "note": "O'Brien; mostly quotes witnesses."
+  },
+  {
+   "row_id": 48,
+   "exact_measure": "Allow academies to deviate somewhat from the national curriculum while staying broad and balanced",
+   "position": "FOR",
+   "relation_to_label": "PART",
+   "position_on_label": "AGAINST",
+   "quote": "there are schools that want to innovate and to deviate somewhat from the national curriculum. We see no harm in that",
+   "note": "Hinds."
+  },
+  {
+   "row_id": 49,
+   "exact_measure": null,
+   "position": "NONE",
+   "relation_to_label": "NONE",
+   "position_on_label": "NONE",
+   "quote": "It is not widely understood that the national curriculum has always been a relatively loose framework",
+   "note": "Hinds describes tradition; no change argued."
+  },
+  {
+   "row_id": 50,
+   "exact_measure": "Require local authority consent to withdraw from school a child who has/had a child protection plan or is in need (Barran amendment)",
+   "position": "FOR",
+   "relation_to_label": "DIFFERENT",
+   "position_on_label": "NONE",
+   "quote": "I draw the Minister's attention to the amendment tabled by Baroness Barran in the other place",
+   "note": "Also AGAINST the three-item school uniform cap (other measure)."
+  },
+  {
+   "row_id": 51,
+   "exact_measure": null,
+   "position": "NONE",
+   "relation_to_label": "NONE",
+   "position_on_label": "NONE",
+   "quote": "The Bill also reaches into the world of home education, with measures such as a national register of children not in school",
+   "note": "Describes only."
+  },
+  {
+   "row_id": 52,
+   "exact_measure": "Require academies to follow 100% of the national curriculum",
+   "position": "AGAINST",
+   "relation_to_label": "SAME",
+   "position_on_label": "AGAINST",
+   "quote": "Like others, I am left asking Ministers, what problem are we trying to solve?",
+   "note": "Hinds."
+  },
+  {
+   "row_id": 53,
+   "exact_measure": "Pass clause 24: safeguarding control on withdrawing children to home-educate",
+   "position": "FOR",
+   "relation_to_label": "PART",
+   "position_on_label": "NONE",
+   "quote": "Clause 24 is an important safeguarding mechanism in that respect.",
+   "note": "Minister; sentence is in following passage; this passage argues the evidence of harm."
+  },
+  {
+   "row_id": 54,
+   "exact_measure": "Drop the QTS requirement for academy teachers (let heads hire non-QTS staff)",
+   "position": "FOR",
+   "relation_to_label": "DIFFERENT",
+   "position_on_label": "AGAINST",
+   "quote": "a headteacher who is trying to do the best for his or her school might have a reason to bring in somebody from a profession.",
+   "note": "Hinds; clear on QTS, curriculum view only weakly evidenced in this passage."
+  },
+  {
+   "row_id": 55,
+   "exact_measure": "Make the national curriculum more rigid",
+   "position": "AGAINST",
+   "relation_to_label": "PART",
+   "position_on_label": "NONE",
+   "quote": "if we make the national curriculum more rigid, we actually run into more problems, rather than solve them.",
+   "note": "Hinds."
+  },
+  {
+   "row_id": 56,
+   "exact_measure": null,
+   "position": "NONE",
+   "relation_to_label": "NONE",
+   "position_on_label": "NONE",
+   "quote": "some schools may struggle to find the teachers that they need",
+   "note": "Relays witnesses and the impact assessment; own view only in next passage."
+  },
+  {
+   "row_id": 57,
+   "exact_measure": "Compel all academies to follow the national curriculum given the risk of future prescriptiveness",
+   "position": "AGAINST",
+   "relation_to_label": "SAME",
+   "position_on_label": "AGAINST",
+   "quote": "we cannot guarantee that self-restraint into the future.",
+   "note": "Hinds."
+  },
+  {
+   "row_id": 58,
+   "exact_measure": "Allow some deviation from the national curriculum",
+   "position": "FOR",
+   "relation_to_label": "PART",
+   "position_on_label": "CONDITIONAL",
+   "quote": "I spent the first three minutes explaining why the national curriculum is the core standard and why it is central to our school system.",
+   "note": "Hinds accepts NC as core standard but wants deviation."
+  }
+ ],
+ "summary": {
+  "sample_sizes": {
+   "A_judge_NEITHER": 30,
+   "B_accepted_curriculum": 16,
+   "Hinds_in_curriculum_group_total": 17,
+   "blind_rows_total": 58,
+   "note": "Hinds rows overlap A/B: 12 extra rows came from the Hinds stratum"
+  },
+  "stratum_A": {
+   "counts": {
+    "i_no_position": 10,
+    "ii_finer_part": 7,
+    "iii_different_measure": 5,
+    "iv_label_matches_extractor_dropped_by_judge": 7,
+    "v_label_opposite_to_extractor": 1
+   },
+   "row_ids": {
+    "v_label_opposite_to_extractor": [
+     16
+    ],
+    "iv_label_matches_extractor_dropped_by_judge": [
+     12,
+     26,
+     32,
+     34,
+     35,
+     42,
+     52
+    ],
+    "ii_finer_part": [
+     14,
+     25,
+     28,
+     37,
+     40,
+     44,
+     53
+    ],
+    "iii_different_measure": [
+     1,
+     9,
+     23,
+     50,
+     54
+    ],
+    "i_no_position": [
+     3,
+     5,
+     19,
+     21,
+     30,
+     33,
+     46,
+     49,
+     51,
+     56
+    ]
+   },
+   "note": "Classified by relation of exact_measure: SAME->iv/v, PART->ii, DIFFERENT->iii. Row 16 (Morgan): extractor FOR 'require schools to develop phone policies' vs his AGAINST statutory ban. Row 14,40,44 also have clear label stance via exemption. All finer-measure positions are one-sided (FOR exemption/flexibility)."
+  },
+  "stratum_B": {
+   "really_for_against_label_as_accepted": 12,
+   "row_ids": [
+    2,
+    4,
+    7,
+    8,
+    10,
+    15,
+    17,
+    18,
+    22,
+    39,
+    41,
+    47
+   ],
+   "about_finer_measure": {
+    "row_ids": [
+     31,
+     36,
+     58
+    ],
+    "measures": {
+     "31": "Keep academies' ability to deviate somewhat from NC (safety valve) [Hinds, AGAINST label]",
+     "36": "Let academies keep curriculum freedom where Ofsted judges it broad and balanced (new clause 54) [O'Brien, AGAINST label]",
+     "58": "Allow some deviation from NC while accepting NC as core standard [Hinds, CONDITIONAL on label, extractor FOR]"
+    }
+   },
+   "no_position": [
+    6
+   ],
+   "note": "Row 6 is a pure quotation (speaker's own view AGAINST in adjacent passages)."
+  },
+  "hinds": {
+   "rows": [
+    {
+     "row_id": 11,
+     "passage_id": "uk.org.publicwhip/standing/standing5376_CHILDREN'S_10-0_2025-02-04a.371.12#1",
+     "exact_measure": "Require academies to follow 100% of the national curriculum before the curriculum review reports",
+     "position": "AGAINST",
+     "position_on_label": "AGAINST",
+     "extractor_side": "AGAINST",
+     "judge": "NEITHER"
+    },
+    {
+     "row_id": 13,
+     "passage_id": "uk.org.publicwhip/standing/standing5376_CHILDREN'S_10-0_2025-02-04a.371.6#0",
+     "exact_measure": "Allow academies some flexibility to deviate from the national curriculum",
+     "position": "FOR",
+     "position_on_label": "CONDITIONAL",
+     "extractor_side": "AGAINST",
+     "judge": "FOR"
+    },
+    {
+     "row_id": 20,
+     "passage_id": "uk.org.publicwhip/standing/standing5376_CHILDREN'S_10-0_2025-02-04a.371.12#0",
+     "exact_measure": "Let academies innovate somewhat within the national curriculum framework",
+     "position": "FOR",
+     "position_on_label": "AGAINST",
+     "extractor_side": "AGAINST",
+     "judge": "NEITHER"
+    },
+    {
+     "row_id": 24,
+     "passage_id": "uk.org.publicwhip/debate/2025-01-08b.880.1#1",
+     "exact_measure": "Delay compulsory national curriculum for academies until the curriculum review outcome is known",
+     "position": "FOR",
+     "position_on_label": "AGAINST",
+     "extractor_side": "AGAINST",
+     "judge": "NEITHER"
+    },
+    {
+     "row_id": 27,
+     "passage_id": "uk.org.publicwhip/standing/standing5376_CHILDREN'S_10-0_2025-02-04a.368.1#0",
+     "exact_measure": "Let academies deviate somewhat from the national curriculum as a safety valve against politicisation",
+     "position": "FOR",
+     "position_on_label": "AGAINST",
+     "extractor_side": "AGAINST",
+     "judge": "AGAINST"
+    },
+    {
+     "row_id": 29,
+     "passage_id": "uk.org.publicwhip/standing/standing5376_CHILDREN'S_10-0_2025-02-04a.369.5#0",
+     "exact_measure": "Allow flexibility to depart from the national curriculum as a school-improvement tool",
+     "position": "FOR",
+     "position_on_label": "AGAINST",
+     "extractor_side": "AGAINST",
+     "judge": "NEITHER"
+    },
+    {
+     "row_id": 31,
+     "passage_id": "uk.org.publicwhip/debate/2025-01-08b.880.1#2",
+     "exact_measure": "Keep the ability of academies to deviate somewhat from the national curriculum",
+     "position": "FOR",
+     "position_on_label": "AGAINST",
+     "extractor_side": "AGAINST",
+     "judge": "AGAINST"
+    },
+    {
+     "row_id": 38,
+     "passage_id": "uk.org.publicwhip/standing/standing5376_CHILDREN'S_10-0_2025-02-04a.369.5#1",
+     "exact_measure": "Require academies to follow the national curriculum",
+     "position": "AGAINST",
+     "position_on_label": "AGAINST",
+     "extractor_side": "AGAINST",
+     "judge": "NEITHER"
+    },
+    {
+     "row_id": 43,
+     "passage_id": "uk.org.publicwhip/westminhall/2025-12-01a.260.0#4",
+     "exact_measure": "Require academies to follow the detail of the national curriculum in its entirety",
+     "position": "AGAINST",
+     "position_on_label": "AGAINST",
+     "extractor_side": "AGAINST",
+     "judge": "AGAINST"
+    },
+    {
+     "row_id": 45,
+     "passage_id": "uk.org.publicwhip/standing/standing5376_CHILDREN'S_10-0_2025-02-04a.371.8#0",
+     "exact_measure": null,
+     "position": "NONE",
+     "position_on_label": "NONE",
+     "extractor_side": "AGAINST",
+     "judge": "NEITHER"
+    },
+    {
+     "row_id": 48,
+     "passage_id": "uk.org.publicwhip/debate/2025-03-18d.264.1#2",
+     "exact_measure": "Allow academies to deviate somewhat from the national curriculum while staying broad and balanced",
+     "position": "FOR",
+     "position_on_label": "AGAINST",
+     "extractor_side": "AGAINST",
+     "judge": "NEITHER"
+    },
+    {
+     "row_id": 49,
+     "passage_id": "uk.org.publicwhip/standing/standing5376_CHILDREN'S_10-0_2025-02-04a.366.4#0",
+     "exact_measure": null,
+     "position": "NONE",
+     "position_on_label": "NONE",
+     "extractor_side": "AGAINST",
+     "judge": "NEITHER"
+    },
+    {
+     "row_id": 52,
+     "passage_id": "uk.org.publicwhip/standing/standing5376_CHILDREN'S_10-0_2025-02-04a.371.12#2",
+     "exact_measure": "Require academies to follow 100% of the national curriculum",
+     "position": "AGAINST",
+     "position_on_label": "AGAINST",
+     "extractor_side": "AGAINST",
+     "judge": "NEITHER"
+    },
+    {
+     "row_id": 54,
+     "passage_id": "uk.org.publicwhip/debate/2025-03-18d.264.1#1",
+     "exact_measure": "Drop the QTS requirement for academy teachers (let heads hire non-QTS staff)",
+     "position": "FOR",
+     "position_on_label": "AGAINST",
+     "extractor_side": "AGAINST",
+     "judge": "NEITHER"
+    },
+    {
+     "row_id": 55,
+     "passage_id": "uk.org.publicwhip/standing/standing5376_CHILDREN'S_10-0_2025-02-04a.369.1#0",
+     "exact_measure": "Make the national curriculum more rigid",
+     "position": "AGAINST",
+     "position_on_label": "NONE",
+     "extractor_side": "AGAINST",
+     "judge": "NEITHER"
+    },
+    {
+     "row_id": 57,
+     "passage_id": "uk.org.publicwhip/standing/standing5376_CHILDREN'S_10-0_2025-02-04a.366.4#5",
+     "exact_measure": "Compel all academies to follow the national curriculum given the risk of future prescriptiveness",
+     "position": "AGAINST",
+     "position_on_label": "AGAINST",
+     "extractor_side": "AGAINST",
+     "judge": "NEITHER"
+    },
+    {
+     "row_id": 58,
+     "passage_id": "uk.org.publicwhip/standing/standing5376_CHILDREN'S_10-0_2025-02-04a.370.3#0",
+     "exact_measure": "Allow some deviation from the national curriculum",
+     "position": "FOR",
+     "position_on_label": "CONDITIONAL",
+     "extractor_side": "FOR",
+     "judge": "FOR"
+    }
+   ],
+   "explanation": "Hinds is AGAINST compelling academies to follow the NC (and against 'more rigid' NC) but FOR a finer, mirror measure, allowing some deviation/flexibility; the extractor writes the same stance as AGAINST 'require/make rigid' in most passages and FOR 'allow deviation' in one, and in row 58 he also concedes NC is the core standard, so the label records him on both sides although his view on the label is consistently opposed/conditional."
+  },
+  "finer_measures": [
+   {
+    "measure": "Allow academies some deviation/flexibility from the NC (safety valve, Ofsted-checked)",
+    "FOR": [
+     "Damian Hinds (Con)",
+     "Neil O'Brien (Con)",
+     "Munira Wilson (LD, conditional)"
+    ],
+    "AGAINST": [],
+    "both_sides": false,
+    "same_party_opposite": false
+   },
+   {
+    "measure": "Exempt shortage subjects / UTC specialists / non-QTS hires from QTS requirement",
+    "FOR": [
+     "David Simmonds (Con)",
+     "Neil O'Brien (Con)",
+     "Damian Hinds (Con)"
+    ],
+    "AGAINST": [],
+    "both_sides": false,
+    "same_party_opposite": false
+   },
+   {
+    "measure": "Safeguarding control on home education (LA consent for children with child protection plan; register of children not in school)",
+    "FOR": [
+     "Bridget Phillipson (Lab)",
+     "Stephen Morgan (Lab)",
+     "Saqib Bhatti (Con)"
+    ],
+    "AGAINST": [],
+    "both_sides": false,
+    "same_party_opposite": false
+   }
+  ],
+  "label_level_note": "On the label itself (compulsory NC) FOR: McKinnell, Davies, Hayes (all Lab); AGAINST: O'Brien, Trott, Timothy, Spencer, Stafford, Hinds (Con) and Siobhain McDonagh (Lab) - a same-party split (Lab) exists on the label, not on a finer measure.",
+  "answer": "Mostly neither scarcity nor hidden finer-measure fights: of 30 NEITHER claims 10 (33%) have no position, 12 (40%) are on finer/different measures but those are one-sided, 8 (27%) are clear on-label positions the judge dropped (7 matching extractor, 1 opposite). Representation loss exists but is mainly judge misses on-label and grouping noise."
+ }
+}

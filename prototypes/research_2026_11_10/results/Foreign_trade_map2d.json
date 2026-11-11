@@ -1,0 +1,900 @@
+{
+ "topic": "Foreign_trade",
+ "n_mps": 50,
+ "axes": [
+  {
+   "var": 0.24243085857866387,
+   "neg": [
+    "UK should rejoin EU customs union to boost trade and growth.",
+    "Trade should revert to pre-Brexit levels.",
+    "Trade should ban illegal Israeli settlements."
+   ],
+   "pos": [
+    "UK-India trade deal should be ratified.",
+    "Steel tariffs should be abolished to protect jobs and supply.",
+    "UK should renew trade deal with China."
+   ],
+   "load": {
+    "UK should rejoin EU customs union to boost trade and growth.": -0.826,
+    "Trade should revert to pre-Brexit levels.": -0.333,
+    "Trade should ban illegal Israeli settlements.": -0.205,
+    "Tariffs should be imposed to shield UK steel and national security.": -0.09,
+    "Mutual enforcement should be rejected due to sovereignty fears.": -0.083,
+    "Trade should prioritize sovereignty over market access.": -0.081,
+    "Border checks should be eliminated between GB and NI.": -0.024,
+    "UK should renew trade deal with China.": -0.009,
+    "Steel tariffs should be abolished to protect jobs and supply.": 0.103,
+    "UK-India trade deal should be ratified.": 0.362
+   }
+  },
+  {
+   "var": 0.17569280273481822,
+   "neg": [
+    "Steel tariffs should be abolished to protect jobs and supply.",
+    "Trade should prioritize sovereignty over market access.",
+    "Border checks should be eliminated between GB and NI."
+   ],
+   "pos": [
+    "UK-India trade deal should be ratified.",
+    "Tariffs should be imposed to shield UK steel and national security.",
+    "Trade should revert to pre-Brexit levels."
+   ],
+   "load": {
+    "Steel tariffs should be abolished to protect jobs and supply.": -0.715,
+    "Trade should prioritize sovereignty over market access.": -0.364,
+    "Border checks should be eliminated between GB and NI.": -0.136,
+    "UK should renew trade deal with China.": -0.067,
+    "Trade should ban illegal Israeli settlements.": -0.005,
+    "Mutual enforcement should be rejected due to sovereignty fears.": 0.042,
+    "UK should rejoin EU customs union to boost trade and growth.": 0.072,
+    "Trade should revert to pre-Brexit levels.": 0.183,
+    "Tariffs should be imposed to shield UK steel and national security.": 0.205,
+    "UK-India trade deal should be ratified.": 0.501
+   }
+  }
+ ],
+ "debates": [
+  {
+   "proposition": "Border checks should be eliminated between GB and NI.",
+   "agree": 4,
+   "disagree": 4,
+   "vec": [
+    -0.024,
+    -0.136
+   ],
+   "receipts": {
+    "AGREE": [
+     {
+      "mp": "Jim Allister",
+      "party": "TUV",
+      "position": "Supports ending customs checks to boost manufacturing in Northern Ireland",
+      "quote": "So, in just those four years there has been a dramatic fall in the number of manufacturers supplying goods to Northern Ireland. It has nearly halved in four years. The ONS data for 2024 tells us more: 11.7% of companies tell us\u2026"
+     },
+     {
+      "mp": "Ms Stella Creasy",
+      "party": "Lab",
+      "position": "Opposes the current border rules that create division and burdens for businesses",
+      "quote": "I will, if I may, continue with my speech, but I shall take an intervention a bit later. Our colleagues in Northern Ireland know the practical consequences of divergence\u2014the obsession with the concept that somehow we have always\u2026"
+     }
+    ],
+    "DISAGREE": [
+     {
+      "mp": "Sammy Wilson",
+      "party": "DUP",
+      "position": "Supports increased border checks and EU control posts",
+      "quote": "The talks about that trade being infinitesimal\u20140.4% of EU trade crosses that border, yet it accounts for 20% of checks. Does he agree that that will not be the story of the future? In my constituency, we are already building a\u2026"
+     },
+     {
+      "mp": "Richard Tice",
+      "party": "RUK",
+      "position": "Opposes government using Article 16 to drop border checks",
+      "quote": "The said that it is up to a sovereign nation to look after its own borders and determine its own checks. Does he accept that there has been trade diversion within the United Kingdom? If so, does he accept that it is within the\u2026"
+     }
+    ]
+   }
+  },
+  {
+   "proposition": "Mutual enforcement should be rejected due to sovereignty fears.",
+   "agree": 3,
+   "disagree": 4,
+   "vec": [
+    -0.083,
+    0.042
+   ],
+   "receipts": {
+    "AGREE": [
+     {
+      "mp": "Ms Stella Creasy",
+      "party": "Lab",
+      "position": "Opposes mutual rule enforcement in EU trade deal, fearing lack of oversight and colonial overreach",
+      "quote": "I wish I could understand\u2014perhaps can help me out with this. If, on the one hand, the European Union is a source of colonisation that has this disrespect towards the United Kingdom and Northern Ireland, but, on the other hand, as\u2026"
+     },
+     {
+      "mp": "Jim Allister",
+      "party": "TUV",
+      "position": "Opposes surrendering UK sovereignty to EU for trade standards",
+      "quote": "No, it most certainly would not. In modern times, there is abundant opportunity to develop a scheme, with the assistance of modern technology, that would allow for mutual enforcement when it comes to something as fundamental as\u2026"
+     }
+    ],
+    "DISAGREE": [
+     {
+      "mp": "Sir Iain Duncan Smith",
+      "party": "Con",
+      "position": "Supports mutual enforcement to improve UK-US trade relations and secure Northern Ireland's place in the UK",
+      "quote": "That will cause a problem\u2014it is not my place to say whether it is insurmountable, but these are unnecessary difficulties. However, if we had mutual enforcement, that would not be the case. It would be very clear at that point\u2026"
+     },
+     {
+      "mp": "Jim Allister",
+      "party": "TUV",
+      "position": "Supports mutual enforcement to end unjust Northern Ireland border issues",
+      "quote": "If we do that, we do not need the Irish sea border, or a border on the island of Ireland. It should be backed up with criminal sanction so that, if someone does trade in breach of the requirements of the recipient country, they\u2026"
+     }
+    ]
+   }
+  },
+  {
+   "proposition": "Steel tariffs should be abolished to protect jobs and supply.",
+   "agree": 29,
+   "disagree": 23,
+   "vec": [
+    0.103,
+    -0.715
+   ],
+   "receipts": {
+    "AGREE": [
+     {
+      "mp": "James Wild",
+      "party": "Con",
+      "position": "Opposes steel tariffs as they threaten jobs and supply shortages",
+      "quote": "Next week, those swingeing 50% tariffs on steel imports will hit manufacturing businesses across the country, putting thousands of jobs at risk. While they are intended to protect domestic production, industry is warning that\u2026"
+     },
+     {
+      "mp": "Stuart Anderson",
+      "party": "Con",
+      "position": "Opposes tariffs as they harm UK jobs and businesses",
+      "quote": "He needs to sit down with the largest British business in this industry and have a serious conversation. The big issue that Amodil faces is the tariffs on the stainless steel products it brings in that cannot be made in the UK in\u2026"
+     }
+    ],
+    "DISAGREE": [
+     {
+      "mp": "Sir Edward Leigh",
+      "party": "Con",
+      "position": "Supports tariffs and direct government action to secure domestic steel production",
+      "quote": "neighbours my constituency, and many of my constituents who work there will be desperately worried today. This is a vital national interest\u2014a crisis. For the past 150 years, wars have been won by states that can make virgin\u2026"
+     },
+     {
+      "mp": "Leigh Ingham",
+      "party": "Lab",
+      "position": "Supports tariffs to protect British steel and full supply chain integrity",
+      "quote": "In my constituency, Xtreme Stainless builds exhaust systems and would always want to buy British steel. The company believes it is better made, and wants to back British jobs and manufacturing, but the owner is watching firms get\u2026"
+     }
+    ]
+   }
+  },
+  {
+   "proposition": "Tariffs should be imposed to shield UK steel and national security.",
+   "agree": 4,
+   "disagree": 14,
+   "vec": [
+    -0.09,
+    0.205
+   ],
+   "receipts": {
+    "AGREE": [
+     {
+      "mp": "Mark Garnier",
+      "party": "Con",
+      "position": "Supports tariffs as defensive trade measures, not for trade war",
+      "quote": "However, I urge the Minister to talk to all his colleagues about this matter, and to reassure the Committee that these measures are not about having our own version of that policy, and about increasing tariffs in order to have a\u2026"
+     },
+     {
+      "mp": "Dan Tomlinson",
+      "party": "Lab",
+      "position": "Supports using tariffs to protect UK steel and national security interests",
+      "quote": "The clauses will help to ensure that we can best protect UK interests, including in critical sectors such as steel, which are vital to our national security and critical infrastructure. The changes made by the clause will put\u2026"
+     }
+    ],
+    "DISAGREE": [
+     {
+      "mp": "Andrew Griffith",
+      "party": "Con",
+      "position": "Opposes tariffs as they harm the economy and increase costs",
+      "quote": "Businesses, workers and their families woke up this morning with greater fear and more uncertainty about their future. Tariffs make us all poorer by pushing up costs, suppressing demand and making the pound in our pocket buy less\u2026"
+     },
+     {
+      "mp": "Saqib Bhatti",
+      "party": "Con",
+      "position": "The tariff approach is illogical and harmful to domestic businesses.",
+      "quote": "Specifically on tariffs, does he agree that the approach is illogical? Reducing quotas will decrease the supply, and increasing the tariffs will increase the cost. I listened to the Secretary of State very closely. He talked\u2026"
+     }
+    ]
+   }
+  },
+  {
+   "proposition": "Trade should ban illegal Israeli settlements.",
+   "agree": 46,
+   "disagree": 8,
+   "vec": [
+    -0.205,
+    -0.005
+   ],
+   "receipts": {
+    "AGREE": [
+     {
+      "mp": "Caroline Voaden",
+      "party": "LD",
+      "position": "Supports a full ban on trade with illegal West Bank settlements to advance a two-state solution",
+      "quote": "Last year, the Israeli Government issued nearly 10,000 units of settlement housing tenders, which was more than the combined total of tenders over the previous six years. The extremists in Netanyahu\u2019s Cabinet clearly have the\u2026"
+     },
+     {
+      "mp": "Jeff Smith",
+      "party": "Lab",
+      "position": "Supports banning trade with illegal Israeli settlements to align with international law and UK values.",
+      "quote": "They are condemned as illegal by the ICJ, the UN Security Council and the vast majority of member states, including the UK. If we accept that settlements are illegal, we cannot just stop there. Many of my constituents in have\u2026"
+     }
+    ],
+    "DISAGREE": [
+     {
+      "mp": "Lincoln Jopp",
+      "party": "Con",
+      "position": "The speaker opposes a trade ban on Israeli settlements, calling it impractical and potentially harmful to essential medicines and UK-Israel relations.",
+      "quote": "It was revealed last week that the Prime Minister had not yet spoken to Prime Minister Netanyahu since taking office. If we are not even talking to the Israelis at the most senior level, how are we supposed to influence Israeli\u2026"
+     },
+     {
+      "mp": "Gareth Davies",
+      "party": "Con",
+      "position": "Opposes trade ban, defends UK-Israel economic relationship",
+      "quote": "Not right now, and I have already taken an intervention from. Finally, and more broadly, we worry that the campaigners ultimately want this ban to become a gateway to a wider ban on trade with Israel. If that is the case, they\u2026"
+     }
+    ]
+   }
+  },
+  {
+   "proposition": "Trade should prioritize sovereignty over market access.",
+   "agree": 11,
+   "disagree": 5,
+   "vec": [
+    -0.081,
+    -0.364
+   ],
+   "receipts": {
+    "AGREE": [
+     {
+      "mp": "Mike Wood",
+      "party": "Con",
+      "position": "Opposes the deal due to loss of sovereignty and fishing rights",
+      "quote": "We support efforts to reduce unnecessary trade barriers that clearly damage both sides and to reach an agreement based on mutual recognition between partners that respect each other and their sovereignty, and that work together\u2026"
+     },
+     {
+      "mp": "Charlie Dewhirst",
+      "party": "Con",
+      "position": "Opposes the trade deal, criticising the sale of fishing interests",
+      "quote": "The Chancellor of the Duchy of has just come to the Dispatch Box and said that we have done a new trade deal with the European Union, which I think is news to both the Prime Minister and Brussels. The only thing this Government\u2026"
+     }
+    ],
+    "DISAGREE": [
+     {
+      "mp": "Gareth Thomas",
+      "party": "Lab",
+      "position": "Supports full renegotiation for greater single market access and business mobility",
+      "quote": "The priority, with the next UK-EU summit coming up, should be to reach agreement for a full renegotiation of the trade and co-operation agreement and to secure greater access to the single market, which would be far more\u2026"
+     },
+     {
+      "mp": "Dr Scott Arthur",
+      "party": "Lab",
+      "position": "Supports the trade deal and criticizes SNP/Conservative isolationism",
+      "quote": "I absolutely welcome this deal, which puts us on the map as an outward-looking nation again. Above all, the benefits that it brings young people in are absolutely worth noting. We know that the deal will bring lower bills for\u2026"
+     }
+    ]
+   }
+  },
+  {
+   "proposition": "Trade should revert to pre-Brexit levels.",
+   "agree": 15,
+   "disagree": 8,
+   "vec": [
+    -0.333,
+    0.183
+   ],
+   "receipts": {
+    "AGREE": [
+     {
+      "mp": "Lewis Atkinson",
+      "party": "Lab",
+      "position": "Supports reversing Brexit to boost jobs in motor and music industries",
+      "quote": "Sunderland is proud to be a city of makers, from cars to music. Without reversing Brexit, those makers need access to Europe, whether that is exporters such as Nissan, which need the certainty to export, or musicians, who need\u2026"
+     },
+     {
+      "mp": "Andrew Lewin",
+      "party": "Lab",
+      "position": "The UK should not have left the EU; trade barriers have harmed the economy.",
+      "quote": "I declare an interest as the chair of the UK Trade and Business Commission. It has never been so timely to talk trade, but before we look forward, we need to look back at how we arrived here. It has been 4,744 days since Prime\u2026"
+     }
+    ],
+    "DISAGREE": [
+     {
+      "mp": "Ms Stella Creasy",
+      "party": "Lab",
+      "position": "Opposes the idea of returning to the status quo; advocates learning from Europe's developments instead.",
+      "quote": "The second blind belief, however, is that it would be simple just to go back. We have to be honest. The British problem is that we too often think that the difficult bit is us deciding what our future relationship with Europe\u2026"
+     },
+     {
+      "mp": "Sir Bernard Jenkin",
+      "party": "Con",
+      "position": "Supports Brexit-driven trade growth and challenges the idea that trade equals the whole economy",
+      "quote": "Services exports to the EU have rocketed, because there is no single market in services and we export a huge amount to the EU, as we do to the rest of the world. Overall, our trade has boomed since Brexit; our trade with the EU\u2026"
+     }
+    ]
+   }
+  },
+  {
+   "proposition": "UK should rejoin EU customs union to boost trade and growth.",
+   "agree": 26,
+   "disagree": 19,
+   "vec": [
+    -0.826,
+    0.072
+   ],
+   "receipts": {
+    "AGREE": [
+     {
+      "mp": "Mr Joshua Reynolds",
+      "party": "LD",
+      "position": "Supports a new UK-EU customs union to reduce trade barriers and boost GDP and tax revenues.",
+      "quote": "More than half of former exporters surveyed gave up because of the barriers to trade with Europe. We are not talking about businesses that have failed to break into distant markets; we are talking about established exporters\u2026"
+     },
+     {
+      "mp": "Sarah Olney",
+      "party": "LD",
+      "position": "Supports a new UK-EU customs union to boost growth and fix relations with the EU",
+      "quote": "The wholly inadequate deal with the EU negotiated by the previous Conservative Government has done enormous damage to British businesses, which have seen soaring import costs, increased workforce shortages, and reams of red tape\u2026"
+     }
+    ],
+    "DISAGREE": [
+     {
+      "mp": "Mike Wood",
+      "party": "Con",
+      "position": "Opposes rejoining the EU, calling it a surrender of independence and a threat to trade agreements",
+      "quote": "Is that parliamentary language,? I do not know how long it takes for the cogs to turn, but it has been a while. What sort of economic club are the petitioners urging us to re-enter? Thirty years ago, the European Union accounted\u2026"
+     },
+     {
+      "mp": "Mr Peter Bedford",
+      "party": "Con",
+      "position": "Opposes rejoining the EU customs union; supports the special relationship with the US",
+      "quote": "Rejoining the EU customs union would not only be undemocratic, but would damage our special relationship with American businesses and prevent us from fostering our own independent trade deals. As recognised, President Trump is an\u2026"
+     }
+    ]
+   }
+  },
+  {
+   "proposition": "UK should renew trade deal with China.",
+   "agree": 5,
+   "disagree": 12,
+   "vec": [
+    -0.009,
+    -0.067
+   ],
+   "receipts": {
+    "AGREE": [
+     {
+      "mp": "Tom Hayes",
+      "party": "Lab",
+      "position": "Supports a strategic approach to UK-China ties due to interdependence and economic realities",
+      "quote": "The has slightly taken forward the point that I was going to make. I take the point that we live in a more insecure time, and that this country has to respond to that. He has given the example of Germany; it is able to do what it\u2026"
+     },
+     {
+      "mp": "Sir Keir Starmer",
+      "party": "Lab",
+      "position": "Supports relaunching UK-China FTA negotiations",
+      "quote": "The G20 represents 85% of global GDP, so we have a shared interest in driving up growth and investment. I held productive bilateral meetings with many G20 leaders to that end: Brazil, Japan, Italy, South Africa, the Republic of\u2026"
+     }
+    ],
+    "DISAGREE": [
+     {
+      "mp": "Tom Hayes",
+      "party": "Lab",
+      "position": "Opposes engagement with China and favours economic decoupling",
+      "quote": "When I hear speak, I listen to what he is saying\u2014I think he could be a very good replacement for the shadow Minister on the Front Bench. The question I want to ask, though, is this: what is his view on the relationship of the UK\u2026"
+     },
+     {
+      "mp": "Ms Marie Rimmer",
+      "party": "Lab",
+      "position": "Opposes UK trade with China due to human rights concerns",
+      "quote": "We should ensure that UK trade engagement does not proceed as though forced labour, religious persecution, cultural erasure and ideological criminalisation are somehow separate from the overall character of the state with which\u2026"
+     }
+    ]
+   }
+  },
+  {
+   "proposition": "UK-India trade deal should be ratified.",
+   "agree": 34,
+   "disagree": 9,
+   "vec": [
+    0.362,
+    0.501
+   ],
+   "receipts": {
+    "AGREE": [
+     {
+      "mp": "Mr Tanmanjeet Singh Dhesi",
+      "party": "Lab",
+      "position": "Supports the UK-India FTA, calling it a landmark deal that will boost trade, GDP, wages, and jobs.",
+      "quote": "Amid much fanfare as usual, the former Prime Minister, Boris Johnson, announced that he would have a UK-India trade deal signed \u201cby Diwali\u201d\u2014but very cunningly, he never mentioned which Diwali, so we were left waiting for years.\u2026"
+     },
+     {
+      "mp": "Andrew Griffith",
+      "party": "Con",
+      "position": "Supports India trade deal as a boost to UK growth and sovereignty",
+      "quote": "It is why it was the Conservative Government who laid the foundations for this free trade agreement with India. And let us be absolutely clear: this agreement is a tangible benefit of the decision the British people made in 2016\u2026"
+     }
+    ],
+    "DISAGREE": [
+     {
+      "mp": "Gareth Snell",
+      "party": "Lab",
+      "position": "Opposes the trade deal due to social and labour abuses and lack of efficacy.",
+      "quote": "The rightly points out the Indian trade deal. He is right about the environmental and economic impact, but there is also the social impact. Too many factories making those bricks over in India and Pakistan are using what we would\u2026"
+     },
+     {
+      "mp": "Alan Gemmell",
+      "party": "Lab",
+      "position": "Opposes the India trade deal, criticising its failure and calling it a \"miserable\" outcome",
+      "quote": "It is called \u201c30th State\u201d. May I congratulate the Secretary of State and former colleagues on this deal, which is great for whisky distilleries such as Lochlea in my constituency. When I was trade commissioner, Conservative\u2026"
+     }
+    ]
+   }
+  }
+ ],
+ "mps": [
+  {
+   "member_id": 40,
+   "x": 0.916,
+   "y": -0.292,
+   "mp": "Sir Bernard Jenkin",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 152,
+   "x": 0.212,
+   "y": 0.163,
+   "mp": "Sir Iain Duncan Smith",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n_debates": 4
+  },
+  {
+   "member_id": 177,
+   "x": 0.065,
+   "y": 0.536,
+   "mp": "Gareth Thomas",
+   "party": "Lab",
+   "role": "minister",
+   "n_debates": 3
+  },
+  {
+   "member_id": 188,
+   "x": -0.136,
+   "y": -0.27,
+   "mp": "Ed Davey",
+   "party": "LD",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 206,
+   "x": 0.068,
+   "y": 0.847,
+   "mp": "Mr David Lammy",
+   "party": "Lab",
+   "role": "minister",
+   "n_debates": 3
+  },
+  {
+   "member_id": 345,
+   "x": -0.179,
+   "y": 0.62,
+   "mp": "Sir Edward Leigh",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 420,
+   "x": -0.154,
+   "y": -0.125,
+   "mp": "Yvette Cooper",
+   "party": "Lab",
+   "role": "minister",
+   "n_debates": 2
+  },
+  {
+   "member_id": 632,
+   "x": 0.225,
+   "y": 0.078,
+   "mp": "Mr Douglas Alexander",
+   "party": "Lab",
+   "role": "minister",
+   "n_debates": 4
+  },
+  {
+   "member_id": 1171,
+   "x": 0.872,
+   "y": -0.342,
+   "mp": "Liam Byrne",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 4
+  },
+  {
+   "member_id": 1444,
+   "x": 0.754,
+   "y": -0.271,
+   "mp": "Mr Mark Francois",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 1446,
+   "x": 0.093,
+   "y": 0.688,
+   "mp": "Chris Bryant",
+   "party": "Lab",
+   "role": "minister",
+   "n_debates": 6
+  },
+  {
+   "member_id": 1593,
+   "x": -0.068,
+   "y": -0.037,
+   "mp": "Sammy Wilson",
+   "party": "DUP",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 3957,
+   "x": -0.123,
+   "y": 0.389,
+   "mp": "Martin Vickers",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 4031,
+   "x": 0.124,
+   "y": 0.117,
+   "mp": "Rachel Reeves",
+   "party": "Lab",
+   "role": "minister",
+   "n_debates": 4
+  },
+  {
+   "member_id": 4088,
+   "x": -0.104,
+   "y": -0.293,
+   "mp": "Ms Stella Creasy",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 4
+  },
+  {
+   "member_id": 4107,
+   "x": 0.991,
+   "y": -0.651,
+   "mp": "Dame Harriett Baldwin",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n_debates": 5
+  },
+  {
+   "member_id": 4119,
+   "x": 0.867,
+   "y": 0.479,
+   "mp": "Jonathan Reynolds",
+   "party": "Lab",
+   "role": "minister",
+   "n_debates": 7
+  },
+  {
+   "member_id": 4131,
+   "x": 0.331,
+   "y": -0.065,
+   "mp": "Jim Shannon",
+   "party": "DUP",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 4264,
+   "x": 0.523,
+   "y": -0.15,
+   "mp": "Stephen Doughty",
+   "party": "Lab",
+   "role": "minister",
+   "n_debates": 2
+  },
+  {
+   "member_id": 4384,
+   "x": 0.763,
+   "y": -0.499,
+   "mp": "Mike Wood",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n_debates": 4
+  },
+  {
+   "member_id": 4394,
+   "x": -0.527,
+   "y": -0.485,
+   "mp": "Imran Hussain",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 4403,
+   "x": -1.04,
+   "y": 0.075,
+   "mp": "Chris Law",
+   "party": "SNP",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 4479,
+   "x": 0.718,
+   "y": 0.068,
+   "mp": "Nick Thomas-Symonds",
+   "party": "Lab",
+   "role": "minister",
+   "n_debates": 3
+  },
+  {
+   "member_id": 4495,
+   "x": -0.03,
+   "y": -0.654,
+   "mp": "Kit Malthouse",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 4514,
+   "x": 0.645,
+   "y": -0.236,
+   "mp": "Sir Keir Starmer",
+   "party": "Lab",
+   "role": "minister",
+   "n_debates": 7
+  },
+  {
+   "member_id": 4521,
+   "x": -0.05,
+   "y": -0.438,
+   "mp": "Liz Saville Roberts",
+   "party": "PC",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 4591,
+   "x": -0.61,
+   "y": -0.069,
+   "mp": "Sarah Olney",
+   "party": "LD",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 4597,
+   "x": 0.863,
+   "y": 0.245,
+   "mp": "Mrs Kemi Badenoch",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 4631,
+   "x": 0.101,
+   "y": 0.918,
+   "mp": "Sarah Jones",
+   "party": "Lab",
+   "role": "minister",
+   "n_debates": 2
+  },
+  {
+   "member_id": 4769,
+   "x": -0.487,
+   "y": -0.125,
+   "mp": "Daisy Cooper",
+   "party": "LD",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 4861,
+   "x": -0.067,
+   "y": -0.763,
+   "mp": "Robbie Moore",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 4874,
+   "x": -0.088,
+   "y": -0.894,
+   "mp": "Andrew Griffith",
+   "party": "Con",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 4995,
+   "x": -0.322,
+   "y": -0.276,
+   "mp": "Sarah Dyke",
+   "party": "LD",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5028,
+   "x": -0.44,
+   "y": 0.049,
+   "mp": "Lewis Atkinson",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5057,
+   "x": 0.065,
+   "y": 0.322,
+   "mp": "Douglas McAllister",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5061,
+   "x": 0.05,
+   "y": 0.414,
+   "mp": "Andrew Lewin",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5116,
+   "x": -0.004,
+   "y": 0.809,
+   "mp": "Chris McDonald",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 5157,
+   "x": -0.634,
+   "y": 0.04,
+   "mp": "Susan Murray",
+   "party": "LD",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5161,
+   "x": -0.161,
+   "y": 0.606,
+   "mp": "Richard Tice",
+   "party": "RUK",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5207,
+   "x": -0.277,
+   "y": -0.234,
+   "mp": "Clive Jones",
+   "party": "LD",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 5210,
+   "x": 0.169,
+   "y": 0.296,
+   "mp": "Tom Hayes",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5212,
+   "x": 0.708,
+   "y": 0.117,
+   "mp": "Dr Scott Arthur",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5216,
+   "x": -1.066,
+   "y": 0.073,
+   "mp": "Caroline Voaden",
+   "party": "LD",
+   "role": "backbench_or_opposition",
+   "n_debates": 3
+  },
+  {
+   "member_id": 5238,
+   "x": -0.187,
+   "y": -0.456,
+   "mp": "Alex Ballinger",
+   "party": "Lab",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5249,
+   "x": -0.264,
+   "y": -0.288,
+   "mp": "Dr Ellie Chowns",
+   "party": "Green",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5265,
+   "x": -0.793,
+   "y": 0.076,
+   "mp": "James MacCleary",
+   "party": "LD",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5282,
+   "x": -0.209,
+   "y": 0.999,
+   "mp": "Dan Tomlinson",
+   "party": "Lab",
+   "role": "minister",
+   "n_debates": 3
+  },
+  {
+   "member_id": 5325,
+   "x": -0.984,
+   "y": -0.462,
+   "mp": "Charlie Maynard",
+   "party": "LD",
+   "role": "backbench_or_opposition",
+   "n_debates": 2
+  },
+  {
+   "member_id": 5346,
+   "x": -0.873,
+   "y": -0.106,
+   "mp": "Calum Miller",
+   "party": "LD",
+   "role": "backbench_or_opposition",
+   "n_debates": 4
+  },
+  {
+   "member_id": 5356,
+   "x": -0.248,
+   "y": -0.538,
+   "mp": "Jim Allister",
+   "party": "TUV",
+   "role": "backbench_or_opposition",
+   "n_debates": 4
+  }
+ ]
+}

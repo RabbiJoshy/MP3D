@@ -1,0 +1,1127 @@
+[
+ {
+  "proposition": "Social rent homes should be expanded with longer build periods.",
+  "agree": 18,
+  "disagree": 48,
+  "split": 0.27,
+  "agree_parties": {
+   "Lab": 13,
+   "LD": 2,
+   "Green": 2,
+   "Con": 1
+  },
+  "disagree_parties": {
+   "Lab": 28,
+   "Con": 10,
+   "LD": 9,
+   "DUP": 1
+  },
+  "agree_receipts": [
+   {
+    "mp": "Hannah Spencer",
+    "party": "Green",
+    "position": "Support building social homes and buying back council housing stock",
+    "quote": "After the second world war, councils built more than 120,000 social homes a year on average. We need that ambition again, because today, councils in England are building an average of just 1,320 social rent homes a year, and by my maths, that is an average of\u2026"
+   },
+   {
+    "mp": "Yasmin Qureshi",
+    "party": "Lab",
+    "position": "Supports major expansion of social housing",
+    "quote": "I offer my condolences to the families of the four people who died in the road traffic accident that occurred over the weekend in my constituency. Families in are already benefiting from this Labour Government\u2019s actions\u2014free school meals, free breakfast\u2026"
+   },
+   {
+    "mp": "Lee Pitcher",
+    "party": "Lab",
+    "position": "Supports Housing First with guaranteed funding and priority for high-need areas",
+    "quote": "What do we need to do now? First, I urge Ministers to commit to a national Housing First strategy, making it the default offer for people who are repeatedly homeless or have more complex needs, and not a small pilot on the margins. That strategy should\u2026"
+   }
+  ],
+  "disagree_receipts": [
+   {
+    "mp": "Edward Morello",
+    "party": "LD",
+    "position": "Opposes the current definition of affordable housing as unrealistic and misleading",
+    "quote": "On affordability, I was at an open event for a development plan\u2014a large development, as it happens\u2014north of Dorchester, which will fundamentally change the natural characteristics of the town. On the display presented by the developers, the phrase \u201caffordable\u2026"
+   },
+   {
+    "mp": "Jayne Kirkham",
+    "party": "Lab",
+    "position": "Supports the affordable housing grant to address homelessness and housing shortages in Cornwall.",
+    "quote": "I am finding that families are moving into emergency accommodation, and that the single people who were becoming homeless when I was first a councillor in Cornwall are now living in their cars. The situation has become really dire. Businesses are now finding\u2026"
+   },
+   {
+    "mp": "Sir Ashley Fox",
+    "party": "Con",
+    "position": "Supports local engagement and quality housing with proper infrastructure",
+    "quote": "No doubt the Minister will disagree with me, but I wonder whether he will reflect on why Somerset has had a 41% increase in its house building target while Bristol has had an 11% reduction. I am not against development. We need houses so that our children can\u2026"
+   }
+  ]
+ },
+ {
+  "proposition": "Rent controls should be ended in favor of affordable housing growth.",
+  "agree": 12,
+  "disagree": 20,
+  "split": 0.38,
+  "agree_parties": {
+   "Lab": 6,
+   "Con": 2,
+   "YP": 1,
+   "RUK": 1,
+   "LD": 1,
+   "Ind": 1
+  },
+  "disagree_parties": {
+   "Lab": 16,
+   "Con": 1,
+   "Green": 1,
+   "Ind": 1,
+   "LD": 1
+  },
+  "agree_receipts": [
+   {
+    "mp": "David Simmonds",
+    "party": "Con",
+    "position": "Supports private rental growth to free up family homes and meet care needs",
+    "quote": "We are in a world where people do not typically leave school or university and spend 40 years working in the same business and living in the same town. People moving around and moving home to adapt to changing needs is a key issue that we need to address.\u2026"
+   },
+   {
+    "mp": "Mr Mark Francois",
+    "party": "Con",
+    "position": "Supports a market-oriented approach for social housing",
+    "quote": "Yes, and in the immortal words of Mandy Rice-Davies, they would say that, wouldn\u2019t they? We were proposing a slightly more market-oriented solution. Registered social landlords are somewhere between the public and private sector. They are not entirely private\u2026"
+   },
+   {
+    "mp": "Richard Tice",
+    "party": "RUK",
+    "position": "Supports increasing rental supply to meet growing demand and prevent rent rises.",
+    "quote": "It is a really good question, and I am happy to answer it. If the landlord pulls a property available to rent out of the market, it will go into the ownership sector and that property will not be available to rent. We know that there is significant demand to\u2026"
+   }
+  ],
+  "disagree_receipts": [
+   {
+    "mp": "Tom Rutland",
+    "party": "Lab",
+    "position": "Supports new homes and renter reforms to end exploitation and ensure affordability",
+    "quote": "The new homes that the Government will build cannot come soon enough to ensure that local families are not priced out of their communities, and people\u2019s children and grandchildren do not have to move away to get on in life. Indeed, that was a huge factor in\u2026"
+   },
+   {
+    "mp": "Carla Denyer",
+    "party": "Green",
+    "position": "Supports rent controls to reduce housing cost burdens on low-income renters",
+    "quote": "Landlords could still hike rents to kick people out, so we really need a cap on rent increases within tenancies, set at the lowest of either average wage growth or inflation. Rents in advance should be capped to one month\u2014as a Labour Member suggested\u2014to stop\u2026"
+   },
+   {
+    "mp": "Dame Chi Onwurah",
+    "party": "Lab",
+    "position": "Supports tenant protection from unfair evictions and rent hikes",
+    "quote": "My constituent Tracy was recently issued with a section 21 notice to quit and, at the same time, a section 13 rent increase that she cannot afford. She fears being made homeless with her children, so she got in touch with Newcastle city council for a council\u2026"
+   }
+  ]
+ },
+ {
+  "proposition": "Leasehold reform should introduce commonhold as standard ownership.",
+  "agree": 14,
+  "disagree": 10,
+  "split": 0.42,
+  "agree_parties": {
+   "Lab": 11,
+   "YP": 1,
+   "Ind": 1,
+   "Con": 1
+  },
+  "disagree_parties": {
+   "Lab": 8,
+   "Con": 1,
+   "LD": 1
+  },
+  "agree_receipts": [
+   {
+    "mp": "Rachael Maskell",
+    "party": "Lab",
+    "position": "Supports transferring leasehold to commonhold to overcome delays from absent landlords and Airbnb owners.",
+    "quote": "Today\u2019s announcement is life-changing for many of my constituents, and this is why we elect Labour Governments. I want to ask the Minister about residents in leasehold complexes, where decisions are often delayed because of absent landlords and Airbnb owners.\u2026"
+   },
+   {
+    "mp": "Ben Coleman",
+    "party": "Lab",
+    "position": "Supports Labour's leasehold reform and 1.5 million new homes to fix housing legacy",
+    "quote": "I welcome to his new position, which is hugely well deserved. This motion gives the impression that the Conservatives care about homeowners and renters, but does he agree that it is Labour who are giving homeowners greater powers and protections through\u2026"
+   },
+   {
+    "mp": "Ruth Cadbury",
+    "party": "Lab",
+    "position": "Supports leasehold reform and cladding safety measures",
+    "quote": "Finally, on the commonhold and leasehold reform Bill, although it would be virtually impossible to scrap leasehold entirely overnight, the ban on new leaseholds for flats, the cap on ground rent, and the new process for converting to commonhold are all\u2026"
+   }
+  ],
+  "disagree_receipts": [
+   {
+    "mp": "Uma Kumaran",
+    "party": "Lab",
+    "position": "Supports reform for existing leaseholders and calls for concrete action",
+    "quote": "At nearly every single one of my advice surgeries, leaseholders in have told me appalling stories of disrepair, high service charges and no accountability from management agents, after years of broken promises of reform by the Conservative Government. I am\u2026"
+   },
+   {
+    "mp": "Cat Eccles",
+    "party": "Lab",
+    "position": "Supports adopting and transparently managing mixed leasehold estates",
+    "quote": "Even before coming to this place, as a local councillor I dealt with so many issues relating to leasehold property management and unadopted estates. A notable example is the Doulton Brook estate in my constituency, a mixed freehold and leasehold estate with\u2026"
+   },
+   {
+    "mp": "Lewis Cocking",
+    "party": "Con",
+    "position": "Opposes poor property management company performance and current system",
+    "quote": "I commend for securing this important debate, and for her continued strong and effective leadership of the Housing, Communities and Local Government Committee. I have spoken several times in this House about the problems with the current leasehold and\u2026"
+   }
+  ]
+ },
+ {
+  "proposition": "Right to buy should be expanded to increase social housing stock.",
+  "agree": 6,
+  "disagree": 6,
+  "split": 0.5,
+  "agree_parties": {
+   "Lab": 5,
+   "Con": 1
+  },
+  "disagree_parties": {
+   "Lab": 6
+  },
+  "agree_receipts": [
+   {
+    "mp": "Ben Coleman",
+    "party": "Lab",
+    "position": "Supports community right to buy to protect local spaces",
+    "quote": "It is indeed, and I am grateful for the opportunity to recognise Farnley Community Centre, which is being innovative in encouraging people not only to get their egg, but to take part in a community discussion about how to spend the money that this Government\u2026"
+   },
+   {
+    "mp": "Gareth Bacon",
+    "party": "Con",
+    "position": "Opposes government power to define rural areas and restrict right to buy",
+    "quote": "It is a pleasure, Mr Vickers, to speak to amendment 90, which stands in my name. Since 2024, when the Government have raised rural issues, they have often found themselves in trouble. The Opposition were therefore surprised to see the elements of clause 7\u2026"
+   },
+   {
+    "mp": "Joe Powell",
+    "party": "Lab",
+    "position": "Supports extending eligibility to 10 years to improve council housing and buy-backs",
+    "quote": "That is partly because of estate regeneration costs and concerns about service charges and quality, and because unlike other private leaseholders, those leaseholders may not necessarily benefit to the full extent from the easier path to commonhold and\u2026"
+   }
+  ],
+  "disagree_receipts": [
+   {
+    "mp": "Jayne Kirkham",
+    "party": "Lab",
+    "position": "Supports right to buy with rural exemptions and enforcement of covenants",
+    "quote": "I welcome the measures in the Bill on right to buy, including those on exempting properties in designated rural areas and council homes for market rent from the scheme. I welcome Baroness Taylor\u2019s commitment to look at introducing a power for those rural\u2026"
+   },
+   {
+    "mp": "Paula Barker",
+    "party": "Lab",
+    "position": "Supports rapid review of right to buy discounts to prevent private landlords from exploiting housing supply",
+    "quote": "I congratulate on making a superb statement. She knows that she will have strong support on the Labour Benches for building the homes that we need in Liverpool to tackle homelessness, rising costs and the huge waiting list for social housing, but councils\u2026"
+   },
+   {
+    "mp": "Linsey Farnsworth",
+    "party": "Lab",
+    "position": "Supports right to buy to protect local community assets",
+    "quote": "Communities can also act to protect the places that matter to them through the assets of community value regime, which ensures that valued local institutions receive proper consideration before they are lost. Many aspects of this Bill build upon that existing\u2026"
+   }
+  ]
+ },
+ {
+  "proposition": "Vulnerable people should not be moved to Birmingham without support.",
+  "agree": 4,
+  "disagree": 4,
+  "split": 0.5,
+  "agree_parties": {
+   "Lab": 3,
+   "Con": 1
+  },
+  "disagree_parties": {
+   "Lab": 2,
+   "Con": 1,
+   "Green": 1
+  },
+  "agree_receipts": [
+   {
+    "mp": "Preet Kaur Gill",
+    "party": "Lab",
+    "position": "Opposes shifting vulnerable people to Birmingham without local support",
+    "quote": "The findings are concerning\u2014the very fact that the council has been able to recoup \u00a37.23 million in housing benefit overpayments makes it clear that much more joining-up is needed between the DWP and housing. We must be good at how we do that, how we have the\u2026"
+   },
+   {
+    "mp": "Sir John Hayes",
+    "party": "Con",
+    "position": "Opposes current adapted housing policies; favours personal, hands-on care instead",
+    "quote": "It is not a perfect solution, because equipment often has to be tailored to the specific requirements of the individual concerned, but it might help. The second point I want to raise is about housing. There are real problems with adapted housing, with the\u2026"
+   },
+   {
+    "mp": "Ben Coleman",
+    "party": "Lab",
+    "position": "Supports rebalancing power and better evacuation safety for disabled social housing residents",
+    "quote": "On the council estates that I have the honour of representing, Grenfell and the incompetence and indifference shown by the local council and the tenant management organisation, both before and after the tragedy, are still very much discussed. One of the\u2026"
+   }
+  ],
+  "disagree_receipts": [
+   {
+    "mp": "Dr Luke Evans",
+    "party": "Con",
+    "position": "Supports flexible housing to match life stages when supply is tight",
+    "quote": "Does he agree that when supply is tight, if we allow people to move more easily, the right people will be in the homes that are right for their time of life? An elderly couple in a five-bedroom house will make the choice to downsize, while a family can upsize\u2026"
+   },
+   {
+    "mp": "Apsana Begum",
+    "party": "Lab",
+    "position": "Opposes the Bill for lacking social housing and rent controls",
+    "quote": "However, we will be looking at such measures closely because they need to work in practice, and I remain concerned about the Bill more widely. Can it truly provide the solutions needed to solve the housing crisis without ensuring a commitment to a mass social\u2026"
+   },
+   {
+    "mp": "Carla Denyer",
+    "party": "Green",
+    "position": "Supports disabled tenants\u2019 right to accessible home adaptations",
+    "quote": "Modelling from Generation Rent and other economists predicts that building 1.5 million homes over this Parliament will decrease the private rent burden by just over 1%. Moving on to new clause 9, there are 16 million disabled people in the UK\u2014more than a\u2026"
+   }
+  ]
+ },
+ {
+  "proposition": "Housing should be decided locally, not centrally.",
+  "agree": 8,
+  "disagree": 4,
+  "split": 0.33,
+  "agree_parties": {
+   "Lab": 4,
+   "Con": 2,
+   "LD": 2
+  },
+  "disagree_parties": {
+   "Con": 2,
+   "Lab": 2
+  },
+  "agree_receipts": [
+   {
+    "mp": "Jess Brown-Fuller",
+    "party": "LD",
+    "position": "Supports localised, affordable housing solutions that address local demand and rising prices",
+    "quote": "My constituency of has been grappling with serious housing challenges, which have been continually worsened by a deeply flawed planning process. The demand for social housing vastly outstrips supply. Private rentals are prohibitively expensive, and\u2026"
+   },
+   {
+    "mp": "Luke Murphy",
+    "party": "Lab",
+    "position": "Supports housing reform to improve productivity and provide security for people",
+    "quote": "I congratulate the Secretary of State and the Minister for Housing and Planning,, on bringing this Bill before the House, not least because I really believe it is potentially the most important Bill to be brought forward in this Parliament. As a country, we\u2026"
+   },
+   {
+    "mp": "Chris Hinchliff",
+    "party": "Lab",
+    "position": "Supports a planning system that puts people before profit",
+    "quote": "The failings of our developer-led planning system are writ large across my constituency. In the 10 years from 2014 to 2024, North Hertfordshire and East Hertfordshire delivered a significant expansion of housing supply\u20143,973 and 7,948 net additional dwellings\u2026"
+   }
+  ],
+  "disagree_receipts": [
+   {
+    "mp": "Neil Duncan-Jordan",
+    "party": "Lab",
+    "position": "Supports returning to Labour values with affordable, mass housing through planning reform",
+    "quote": "There is no amount of killing badgers or red tape bonfires that will fix that. It is too simplistic to argue that this is a debate of builders versus blockers. The overwhelming majority of planning applications are approved, which is why we had more than a\u2026"
+   },
+   {
+    "mp": "Chris Hinchliff",
+    "party": "Lab",
+    "position": "Supports government-led council housing for low-income families",
+    "quote": "I remind the House that in six years\u2014at a time of shortages, debt, constraints and even greater competing demands on public expenditure than we face now\u2014the post-war Labour Government oversaw the construction of more than 800,000 council houses, some of the\u2026"
+   },
+   {
+    "mp": "Sir Geoffrey Clifton-Brown",
+    "party": "Con",
+    "position": "Supports faster planning to build more houses, but warns against overriding local people",
+    "quote": "I welcome much of what the Bill will do. It will speeding up the planning system, which as a chartered surveyor who has practised in planning is I know desperately needed if we are to get more houses built. However, the one area of the Bill that I have\u2026"
+   }
+  ]
+ },
+ {
+  "proposition": "Housing targets should be abolished to reduce rural harm.",
+  "agree": 5,
+  "disagree": 4,
+  "split": 0.44,
+  "agree_parties": {
+   "Con": 3,
+   "LD": 1,
+   "Lab": 1
+  },
+  "disagree_parties": {
+   "Lab": 2,
+   "Con": 1,
+   "LD": 1
+  },
+  "agree_receipts": [
+   {
+    "mp": "Paul Holmes",
+    "party": "Con",
+    "position": "Opposes government housing reforms burdening rural areas",
+    "quote": "Indeed, some of the housing targets and reforms brought in by this Government have placed an overwhelming burden on rural areas, rather than on urban areas where the infrastructure is already in place and easier to develop. We look forward to challenging and\u2026"
+   },
+   {
+    "mp": "Gareth Bacon",
+    "party": "Con",
+    "position": "Opposes mandatory housing targets that undermine rural green spaces",
+    "quote": "That is backed by research in December 2025 by the Campaign to Protect Rural England, which showed that, a year after the first NPPF reforms, of the 13 developments of 10 or more homes approved by Government planning inspectors on so-called grey-belt land,\u2026"
+   },
+   {
+    "mp": "Andrew George",
+    "party": "LD",
+    "position": "Opposes new housing targets as counterproductive and unachievable",
+    "quote": "That resulted in the introduction of new standard housing methods, which the Minister is clearly well aware of. I agree with the values that the Labour Government are trying to advance: to try to address the desperate housing needs across this country. I am\u2026"
+   }
+  ],
+  "disagree_receipts": [
+   {
+    "mp": "Paul Holmes",
+    "party": "Con",
+    "position": "Opposes unequal housing targets favouring rural areas over urban ones",
+    "quote": "The is right that I have not followed the minutiae of her career, but I know from her comments in the Chamber and this Committee that she has an expertise that we should all listen to, even if we disagree. She led a council for a good while, so I know that\u2026"
+   },
+   {
+    "mp": "John Milne",
+    "party": "LD",
+    "position": "The standard method worsens housing target confusion and is not a solution to the crisis.",
+    "quote": "Although a neighbourhood plan can meet a housing target at the time it is approved, if a subsequent local plan sets a higher target, the neighbourhood plan will be overruled. That was already a problem under the previous Government. The introduction of the\u2026"
+   },
+   {
+    "mp": "Neil O'Brien",
+    "party": "Con",
+    "position": "Opposes cutting housing targets, especially in midlands cities",
+    "quote": "Labour\u2019s new housing target for is a 40% increase, and the target for Oadby and has doubled. Yet we can see that the overcrowding problem is worse in urban areas, and the gap between population growth and housing growth is worse in those areas, too. We can\u2026"
+   }
+  ]
+ },
+ {
+  "proposition": "No-fault evictions should be banned to protect children and livelihoods.",
+  "agree": 4,
+  "disagree": 5,
+  "split": 0.44,
+  "agree_parties": {
+   "Lab": 4
+  },
+  "disagree_parties": {
+   "Lab": 3,
+   "Con": 1,
+   "LD": 1
+  },
+  "agree_receipts": [
+   {
+    "mp": "Antonia Bance",
+    "party": "Lab",
+    "position": "Supports ending no-fault evictions and strengthening renter rights",
+    "quote": "I gently say to the Minister that it would be good to understand how the tribunal will find out what market rates are; as we all know, looking at Rightmove will not help\u2014that covers only new lets, not all lets in an area. But that detail is for later stages.\u2026"
+   },
+   {
+    "mp": "Satvir Kaur",
+    "party": "Lab",
+    "position": "Supports ending no-fault evictions and fixed-term tenancies to protect renters",
+    "quote": "Two thirds of those who declare themselves homeless in my city do so as a direct result of no-fault evictions and insecure tenancies. Nationally, the charity Shelter warned that 172 families are threatened with homelessness every day for the same reason. That\u2026"
+   },
+   {
+    "mp": "Georgia Gould",
+    "party": "Lab",
+    "position": "Supports community-led local government and housing reform",
+    "quote": "I see that every day, watching the work of Brent and, two brilliant Labour councils in my constituency. Councils are lifelines for communities. They provide care for the children and adults who most need support. They are leaders of place, bringing services\u2026"
+   }
+  ],
+  "disagree_receipts": [
+   {
+    "mp": "Jake Richards",
+    "party": "Lab",
+    "position": "Supports ending no-fault evictions to protect tenants from rogue landlords.",
+    "quote": "In Maltby in my constituency, the campaign group Big Power for Little London has been campaigning to end no-fault evictions for years, because the community have suffered as a result of rogue landlords. I am very grateful to the Housing Minister, who is\u2026"
+   },
+   {
+    "mp": "Sir James Cleverly",
+    "party": "Con",
+    "position": "Opposes eviction framework for care spaces, criticising government indifference to small, vulnerable groups",
+    "quote": "The Government recognise that but then do nothing about it. Amendment 21, also in the name of the noble Lord de Clifford, is about creating the framework whereby a landlord can evict a tenant in order to create space for someone who would then care for them.\u2026"
+   },
+   {
+    "mp": "Gideon Amos",
+    "party": "LD",
+    "position": "Supports the Bill to end no-fault evictions and end homelessness",
+    "quote": "My own experience is limited to being a tenant and landlord\u2014only ever a landlord of registered social housing; I am happy to declare that interest today. The Government face huge challenges, but we must not shrink from the overall objective of ending\u2026"
+   }
+  ]
+ },
+ {
+  "proposition": "Council tax should be raised on second homes.",
+  "agree": 3,
+  "disagree": 4,
+  "split": 0.43,
+  "agree_parties": {
+   "Lab": 2,
+   "Con": 1
+  },
+  "disagree_parties": {
+   "Con": 1,
+   "LD": 1,
+   "Lab": 1,
+   "Green": 1
+  },
+  "agree_receipts": [
+   {
+    "mp": "Kit Malthouse",
+    "party": "Con",
+    "position": "Opposes tax on landlords, saying it deters activity and is already penal",
+    "quote": "Our concern is that there has been no assessment of the impact on the rental market. All that the Opposition new clauses are asking for is a review, because no evidence has been adduced in this debate. There are three people who have spoken in this debate who\u2026"
+   },
+   {
+    "mp": "Sir Keir Starmer",
+    "party": "Lab",
+    "position": "Supports premium council tax on second homes to improve housing affordability and availability.",
+    "quote": "We are committed to building those 1.5 million homes, which includes 4,500 new homes every year in Cornwall. I do recognise the point that makes, which is that excessive concentrations of short-term lets and second homes in places such as Cornwall can impact\u2026"
+   },
+   {
+    "mp": "Matthew Pennycook",
+    "party": "Lab",
+    "position": "Supports ending tax advantages for short-term let owners and introducing council tax premiums",
+    "quote": "In addition, from April 2025 the furnished holiday lettings tax regime was abolished, eliminating the tax advantages that short-term let owners had over private rented sector landlords. Furnished holiday let owners are now subject to the same income,\u2026"
+   }
+  ],
+  "disagree_receipts": [
+   {
+    "mp": "Florence Eshalomi",
+    "party": "Lab",
+    "position": "Supports urgent government action to end unfair CIL charges",
+    "quote": "Councils have seemingly issued the charges due to technical administrative errors such as paperwork being completed incorrectly, but the impact of these charges are life changing for some residents. We heard evidence of homeowners facing unexpected bills\u2026"
+   },
+   {
+    "mp": "Andrew George",
+    "party": "LD",
+    "position": "The speaker opposes the policy, warning of unintended consequences and counterproductive effects.",
+    "quote": "A lot of us were arguing very strongly against the way second holiday homes were being treated, although I was outside Parliament during my nine-year sabbatical. They could not withstand that political pressure; they had to respond to it. Indeed, they\u2026"
+   },
+   {
+    "mp": "Sir Desmond Swayne",
+    "party": "Con",
+    "position": "Opposes differential council tax based on property location",
+    "quote": "That is nothing new. In every one of the last 29 years, people who are lucky enough to have a modest property in the New Forest and a mansion in the city have come to me to complain about how much more their modest property in the forest costs them in council\u2026"
+   }
+  ]
+ },
+ {
+  "proposition": "Devolution should require clear national planning.",
+  "agree": 3,
+  "disagree": 4,
+  "split": 0.43,
+  "agree_parties": {
+   "Con": 2,
+   "LD": 1
+  },
+  "disagree_parties": {
+   "Con": 2,
+   "Lab": 2
+  },
+  "agree_receipts": [
+   {
+    "mp": "Dr Luke Evans",
+    "party": "Con",
+    "position": "Opposes forced devolution without clear planning or unity",
+    "quote": "Communities just will not swallow that. That is the key and why I secured this debate. Let me continue with the example of my constituency. We now have the prospect of devolution, with 21 councils getting a legal invite to change the way in which they\u2026"
+   },
+   {
+    "mp": "Freddie van Mierlo",
+    "party": "LD",
+    "position": "Supports parish councils in developing local fire resilience measures",
+    "quote": "Over the summer, I met two fire resilience experts in my constituency, who have experience of fires in California. They told me that simple measures taken locally can have a significant impact, including things like clearing vegetation around a house and\u2026"
+   },
+   {
+    "mp": "Sir James Cleverly",
+    "party": "Con",
+    "position": "Supports clear government plan to enforce rules effectively",
+    "quote": "Local councils must have the means to enforce the new rules effectively, and the Government should set out a clear and workable plan to that end. The Lords amendments represent a sensible set of adjustments that I would say make this Bill slightly more\u2026"
+   }
+  ],
+  "disagree_receipts": [
+   {
+    "mp": "Damian Hinds",
+    "party": "Con",
+    "position": "Opposes creating new unitary authorities in Hampshire due to loss of rural identity and encroachment risks",
+    "quote": "It will be on a different level, which will be further away\u2014more remote\u2014from the areas that are affected and could involve quite a lot of rebalancing of where housing goes. The expressed the opposite view, but my fear is that in this new set-up, there will be\u2026"
+   },
+   {
+    "mp": "Maya Ellis",
+    "party": "Lab",
+    "position": "Supports parish councils in planning, environment, and local decision-making",
+    "quote": "We all know of councillors\u2014rare as they are, I hope\u2014who stand for political reasons or otherwise and then do not drive things locally. Even though parish and town councils only cover 36% of the population in England, they cover some 90% of its geographical\u2026"
+   },
+   {
+    "mp": "Bradley Thomas",
+    "party": "Con",
+    "position": "Supports giving local residents greater say in housing targets",
+    "quote": "Residents feel powerless in shaping the future of their towns and villages, and trust in government is draining away rapidly. This Bill will only deepen that resentment, because Ministers promise devolution, but communities will actually receive less say\u2026"
+   }
+  ]
+ },
+ {
+  "proposition": "Planning should limit developer influence.",
+  "agree": 4,
+  "disagree": 3,
+  "split": 0.43,
+  "agree_parties": {
+   "Con": 3,
+   "Lab": 1
+  },
+  "disagree_parties": {
+   "Con": 2,
+   "Lab": 1
+  },
+  "agree_receipts": [
+   {
+    "mp": "Wendy Morton",
+    "party": "Con",
+    "position": "Supports including local voices in shaping community policies and housing decisions.",
+    "quote": "I can assure that he is not upsetting me with those comments\u2014far from it. His point, that local democracy and local accountability matter, is exactly the one I am making. It is so important that we include local voices, because it is local voices that have\u2026"
+   },
+   {
+    "mp": "Maureen Burke",
+    "party": "Lab",
+    "position": "Supports community-driven projects and local trust in residents' efforts",
+    "quote": "There are organisations such as the Cranhill Development Trust; Rosemount Lifelong Learning; Denmilne Action Group, a collective of Easterhouse residents who have transformed their community through tackling litter and neglected green spaces; St Paul\u2019s Youth\u2026"
+   },
+   {
+    "mp": "Alberto Costa",
+    "party": "Con",
+    "position": "Supports local planning resources but warns against developer promises and flexible section 106 agreements",
+    "quote": "I welcome \u2019s suggestion, and I would welcome more resources going into local planning teams, but what we have here is a problem, which she may well encounter in her own constituency. Members should be very careful indeed when developers promise X, Y and Z\u2026"
+   }
+  ],
+  "disagree_receipts": [
+   {
+    "mp": "Lewis Cocking",
+    "party": "Con",
+    "position": "The speaker disputes the claim, implying no evidence supports the assertion that the public does not engage.",
+    "quote": "Q I want to come back to something you said at the beginning, Jack\u2014I probably should say that I am still a local councillor until 1 May. You basically said that no one engages with the planning system, or that the public\u2014constituents\u2014do not engage with it.\u2026"
+   },
+   {
+    "mp": "Paul Holmes",
+    "party": "Con",
+    "position": "Supports local councils in shaping development and ensuring resident voices are heard and acted upon.",
+    "quote": "As I am sure colleagues are aware, schedule 9 to the Act created a framework through which parish and town councils, neighbourhood forums and community organisations\u2014in other words, local voices\u2014could lead the charge in designating local development plans,\u2026"
+   },
+   {
+    "mp": "Matthew Pennycook",
+    "party": "Lab",
+    "position": "Supports community engagement in local planning through digital innovation",
+    "quote": "One of the problems we have in our planning system is that not enough people engage with applications or, in particular, with the local plan process. We need to ensure that more people are engaged upstream in the production of local plans because, as I said,\u2026"
+   }
+  ]
+ },
+ {
+  "proposition": "Build 1.5 million homes with community input.",
+  "agree": 9,
+  "disagree": 3,
+  "split": 0.25,
+  "agree_parties": {
+   "Lab": 7,
+   "DUP": 1,
+   "LD": 1
+  },
+  "disagree_parties": {
+   "Con": 3
+  },
+  "agree_receipts": [
+   {
+    "mp": "Jim Shannon",
+    "party": "DUP",
+    "position": "Supports government aim of 1.5 million homes with emphasis on affordable, rural-friendly housing",
+    "quote": "I give great thanks to for raising this matter. Both he and the Minister know that the Minister is not responsible for housing in Northern Ireland, but I always wish to give a perspective, as an MP for contributing to debates in the House and in Hall, on what\u2026"
+   },
+   {
+    "mp": "David Smith",
+    "party": "Lab",
+    "position": "Supports building 1.5 million homes, including for rural areas",
+    "quote": "Similarly, in my constituency, the county council has built just 15,000 homes since 2013 and only 3,700 affordable homes, yet 2,000 people are in urgent need of housing. I am also delighted by this Government\u2019s commitment to building 1.5 million homes, and I\u2026"
+   },
+   {
+    "mp": "Mr Lee Dillon",
+    "party": "LD",
+    "position": "Supports building 1.5 million homes but stresses the need for affordability",
+    "quote": "The Department covers many areas and councils themselves cover more than 700 services, but I shall concentrate on housing, hopefully in the spirit of constructive opposition. Like many others who are in the Chamber today, I support the Government\u2019s headline\u2026"
+   }
+  ],
+  "disagree_receipts": [
+   {
+    "mp": "Mrs Kemi Badenoch",
+    "party": "Con",
+    "position": "Opposes forcing local authorities to build ugly housing",
+    "quote": "Councillors have repeatedly told me they are afraid they will be forced, under a duty to co-operate, to sacrifice their own green spaces to take the housing need that urban leaders, who are her friends, fail to meet. What will she say to reassure leaders in\u2026"
+   },
+   {
+    "mp": "Kevin Hollinrake",
+    "party": "Con",
+    "position": "Opposes the government's plan due to lack of affordability, community consultation, and unfair burden on first-time buyers.",
+    "quote": "They will build over rural areas while claiming it is grey belt land, but we delivered over 1 million homes in the last Parliament alone. It is vital more than ever that we build in the right places with the right infrastructure, but the Prime Minister has\u2026"
+   },
+   {
+    "mp": "Paul Holmes",
+    "party": "Con",
+    "position": "The Deputy Prime Minister will not build 1.5 million homes, including social homes.",
+    "quote": "The Deputy Prime Minister has repeatedly stuck to her commitment that 1.5 million homes, including social homes, will be built over the lifetime of this Parliament despite everybody knowing that she will not achieve it. And today, the latest people to say she\u2026"
+   }
+  ]
+ },
+ {
+  "proposition": "Rural housing targets should be balanced with urban priorities.",
+  "agree": 7,
+  "disagree": 3,
+  "split": 0.3,
+  "agree_parties": {
+   "LD": 3,
+   "Lab": 3,
+   "Con": 1
+  },
+  "disagree_parties": {
+   "Con": 3
+  },
+  "agree_receipts": [
+   {
+    "mp": "James Naish",
+    "party": "Lab",
+    "position": "Supports rural affordable housing and criticises urban-rural imbalance",
+    "quote": "I welcome the Bill and the Government\u2019s commitment to a decade of renewal for social and affordable housing. I will use my time to speak on behalf of the villages in my constituency, and to draw the House\u2019s attention to the work of the Labour Rural Research\u2026"
+   },
+   {
+    "mp": "Simon Hoare",
+    "party": "Con",
+    "position": "Supports ruralisation, skills for young people, and rural housing solutions",
+    "quote": "It could be in a conservation area, it could be listed or it could be thatched\u2014it could be all of those things. People are trying to meet the EPC regulations for rental properties, which is putting huge, artificial and urban-centric pressure on the rural\u2026"
+   },
+   {
+    "mp": "Dr Roz Savage",
+    "party": "LD",
+    "position": "Opposes selling off rural affordable homes to private market",
+    "quote": "We simply cannot add hundreds of new homes without first ensuring that the essential services of water, drainage, transport and healthcare can cope. Our infrastructure is fragile. Growth must be planned sensibly, sympathetically and in a logical order\u2026"
+   }
+  ],
+  "disagree_receipts": [
+   {
+    "mp": "Damian Hinds",
+    "party": "Con",
+    "position": "Opposes rising rural housing targets and council merging",
+    "quote": "People of working age are net contributors. Retired people and children need cash support. There is also the question of housing, which put accurately and succinctly. There is a lot of controversy about the current targets for housing in rural areas, which\u2026"
+   },
+   {
+    "mp": "Sir James Cleverly",
+    "party": "Con",
+    "position": "Opposes increasing rural housing targets while cutting them in urban areas",
+    "quote": "Last week I was in, a rural constituency facing an 85% increase in its housing target. Neighbouring Labour-run Birmingham, which has significant brownfield capacity, has seen its target cut by more than 30%. Targets are increasing by 37% in Essex, but\u2026"
+   },
+   {
+    "mp": "Saqib Bhatti",
+    "party": "Con",
+    "position": "The formula disadvantages rural areas and fails to deliver fair housing outcomes.",
+    "quote": "In many ways I was hanging on his every word, because I genuinely felt that he was also speaking to the concerns of my constituents on a whole number of issues. Let me start in the way that and other started: we all want housing and recognise the need for it.\u2026"
+   }
+  ]
+ },
+ {
+  "proposition": "Green belt should be protected from housing development.",
+  "agree": 6,
+  "disagree": 3,
+  "split": 0.33,
+  "agree_parties": {
+   "Lab": 3,
+   "Con": 2,
+   "LD": 1
+  },
+  "disagree_parties": {
+   "Con": 2,
+   "Lab": 1
+  },
+  "agree_receipts": [
+   {
+    "mp": "Mr Richard Holden",
+    "party": "Con",
+    "position": "Opposes large-scale green belt housing development due to environmental and community concerns",
+    "quote": "First, there is overwhelming opposition to the proposals, especially in the context of London seeing a reduction in its housing targets. Secondly, there are serious concerns about existing and future local services and infrastructure, if this housing goes on\u2026"
+   },
+   {
+    "mp": "David Simmonds",
+    "party": "Con",
+    "position": "Opposes removing green belt protections to build more social housing",
+    "quote": "We share the ambition of seeing a big increase in the supply of housing, and of social housing in particular. Given that there are around 1.4 million new homes with planning consent already granted in this country, what process led the Government to\u2026"
+   },
+   {
+    "mp": "Rachel Blake",
+    "party": "Lab",
+    "position": "Opposes developing green belt land for housing",
+    "quote": "Although we probably disagree on both the analysis and the solutions, I recognise his passion for his constituency and his concern about the issue in London. In, which I am proud to represent, we recognise the appalling cost of temporary accommodation. As\u2026"
+   }
+  ],
+  "disagree_receipts": [
+   {
+    "mp": "David Simmonds",
+    "party": "Con",
+    "position": "Supports building more homes and prioritising housing over green belt deregulation",
+    "quote": "Priority should be given to ensuring that those consents are fulfilled and those homes are built, rather than prioritising, for example, the deregulation of the green belt. I also want to bring something else to the attention of those present. In some\u2026"
+   },
+   {
+    "mp": "Gareth Bacon",
+    "party": "Con",
+    "position": "Opposes Labour's rural-focused housing policy and green belt attacks",
+    "quote": "This Labour Government\u2019s last planning framework began pushing development on to rural areas, prioritising concreting over the green belt and green fields rather than focusing on supporting building in urban areas, which is where we need to build most. From\u2026"
+   },
+   {
+    "mp": "Matthew Pennycook",
+    "party": "Lab",
+    "position": "Supports green-belt reforms with flexible, fair affordable housing targets",
+    "quote": "That approach received broad support through the consultation, but a strong desire was expressed to limit the room for subjectivity. We have therefore set out a clearer description of how to assess whether land meets the definition of grey belt, and we will\u2026"
+   }
+  ]
+ },
+ {
+  "proposition": "Private estate management should be banned without oversight.",
+  "agree": 2,
+  "disagree": 5,
+  "split": 0.29,
+  "agree_parties": {
+   "Con": 1,
+   "Ind": 1
+  },
+  "disagree_parties": {
+   "Lab": 5
+  },
+  "agree_receipts": [
+   {
+    "mp": "Cameron Thomas",
+    "party": "Ind",
+    "position": "Opposes unregulated private estate management charging residents unfairly",
+    "quote": "I purchased my home in 2017. By the time I surrendered a deposit of several thousand pounds, which had taken me a decade to accrue, I had already engaged with a financial adviser, secured a mortgage in principle and researched my eligibility for a Government\u2026"
+   },
+   {
+    "mp": "Mr Gagan Mohindra",
+    "party": "Con",
+    "position": "Opposes unregulated, opaque property charge increases",
+    "quote": "As a member of the Housing, Communities and Local Government Committee, I want to bring the House\u2019s attention to the work we did in the summer looking into property management companies. The Chair of the Committee,, would have been here if she was not already\u2026"
+   }
+  ],
+  "disagree_receipts": [
+   {
+    "mp": "Bell Ribeiro-Addy",
+    "party": "Lab",
+    "position": "Supports independent regulation to fine and prosecute rogue managing agents",
+    "quote": "In every one of those cases, Parliament has decided that taking someone\u2019s money and failing to deliver is not just providing a bad service, but carries real consequences. Management agents can take thousands of pounds a year from leaseholders, deliver next to\u2026"
+   },
+   {
+    "mp": "Uma Kumaran",
+    "party": "Lab",
+    "position": "Supports strong government regulation to protect leaseholders from unregulated property management profiteering.",
+    "quote": "Residents in tell me that some of their monthly service charges have now reached almost \u00a3600. It is driving them to the financial brink, and many of their neighbours are now facing legal threats for falling behind. I have had to intervene on several\u2026"
+   },
+   {
+    "mp": "Abtisam Mohamed",
+    "party": "Lab",
+    "position": "Supports statutory regulation to ensure accountability and transparency for leaseholders",
+    "quote": "Today\u2019s motion rightly says that the absence of statutory regulation for property management agents represents a major weakness in our plans for reform. The Housing, Communities and Local Government Committee has made it clear, as does the evidence in Lord\u2026"
+   }
+  ]
+ },
+ {
+  "proposition": "Section 21 notices should be banned in rural areas.",
+  "agree": 2,
+  "disagree": 5,
+  "split": 0.29,
+  "agree_parties": {
+   "Lab": 2
+  },
+  "disagree_parties": {
+   "Lab": 5
+  },
+  "agree_receipts": [
+   {
+    "mp": "Amanda Martin",
+    "party": "Lab",
+    "position": "Supports abolishing section 21 notices for fairer housing",
+    "quote": "On behalf of all the Sallys and Rachels, I wish to acknowledge the work of this Government in their commitment to rebalance the relationship between landlords and tenants and to produce changes that are pro-market, pro-tenant and pro-community. The abolition\u2026"
+   },
+   {
+    "mp": "Chris Ward",
+    "party": "Lab",
+    "position": "Supports ending no-fault evictions to improve housing security for renters",
+    "quote": "On top of that, my constituency has the among the highest numbers of high and medium-rise blocks outside London, with people trapped for years in unsellable and unsuitable homes. The Bill is a big step in the right direction. Justlife, a wonderful charity\u2026"
+   }
+  ],
+  "disagree_receipts": [
+   {
+    "mp": "Joe Morris",
+    "party": "Lab",
+    "position": "Opposes using Section 21 notices in rural areas before the Renters\u2019 Rights Act 2025",
+    "quote": "Rural housing availability is in crisis, and all the tenants of an estate near Haltwhistle in my constituency, many of whom are elderly tenants in their 70s and 80s, received section 21 notices a week before the Renters\u2019 Rights Act 2025 came into effect. In a\u2026"
+   },
+   {
+    "mp": "Lauren Edwards",
+    "party": "Lab",
+    "position": "Supports ending section 21 evictions and building permanent social homes",
+    "quote": "There must be greater understanding of the detrimental impact on society of people being stuck in cramped and unsuitable accommodation, and greater recognition of the waste of valuable public resources that councils are forced to spend on temporary\u2026"
+   },
+   {
+    "mp": "Dame Siobhain McDonagh",
+    "party": "Lab",
+    "position": "Opposes Section 21 evictions and poor housing support for vulnerable individuals",
+    "quote": "Following a section 21 eviction from their home, they were placed 31 miles away from Merton, in \u2014but only after they had spent eight hours in the reception of the civic centre and got their accommodation so late that when they turned up at, the estate agent\u2026"
+   }
+  ]
+ },
+ {
+  "proposition": "LHA should be unfrozen and tied to local rents.",
+  "agree": 2,
+  "disagree": 2,
+  "split": 0.5,
+  "agree_parties": {
+   "LD": 1,
+   "Lab": 1
+  },
+  "disagree_parties": {
+   "Con": 1,
+   "Lab": 1
+  },
+  "agree_receipts": [
+   {
+    "mp": "Andrew George",
+    "party": "LD",
+    "position": "Supports reviewing LHA methodology to prevent destitution in high-rent areas",
+    "quote": "That leaves people in the kind of poverty I described in the two cases I mentioned earlier. Have the Government reviewed the adequacy of the present methodology for LHA calculations, and are Ministers confident that the present arrangements do not risk\u2026"
+   },
+   {
+    "mp": "Steve Witherden",
+    "party": "Lab",
+    "position": "Supports unfreezing local housing allowance to prevent homelessness and social exclusion",
+    "quote": "It has a knock-on effect across other areas of children\u2019s lives: disrupted education, increased school drop-out rates and children forced to hide their situation, leading to social exclusion. A huge driver of homelessness and rough sleeping is the current\u2026"
+   }
+  ],
+  "disagree_receipts": [
+   {
+    "mp": "Bob Blackman",
+    "party": "Con",
+    "position": "Opposes freeze on local housing allowance and homelessness from public institutions",
+    "quote": "As we approach Christmas, many of us will be doing our shopping, making arrangements to see family and loved ones, and probably turning the heat up a bit, but think of those sleeping rough at this time of year: cold, wet, hungry, on a park bench or in a shop\u2026"
+   },
+   {
+    "mp": "Andrew George",
+    "party": "LD",
+    "position": "The housing allowance freeze is unfair and misaligned with local market realities.",
+    "quote": "My anticipates what I shall go on to say. One of my main messages concerns the impact of the 2024 housing allowance freeze; the Government will not be surprised by that\u2014I gave the Minister advance notice of my questions. The allowance is supposed to be set at\u2026"
+   },
+   {
+    "mp": "Florence Eshalomi",
+    "party": "Lab",
+    "position": "Freezing LHA harms families and pressures homelessness services",
+    "quote": "I come back to an issue that I have raised multiple times, as the Minister knows. I remain concerned about the impact of freezing local housing allowance at a time when private rents have gone up by nearly 10%. That could create extra and significant burdens\u2026"
+   }
+  ]
+ },
+ {
+  "proposition": "Renters\u2019 Rights Bill should be passed to ensure safe, affordable homes.",
+  "agree": 6,
+  "disagree": 2,
+  "split": 0.25,
+  "agree_parties": {
+   "Lab": 6
+  },
+  "disagree_parties": {
+   "Con": 2
+  },
+  "agree_receipts": [
+   {
+    "mp": "Florence Eshalomi",
+    "party": "Lab",
+    "position": "Supports the Renters\u2019 Rights Bill to ensure safe, habitable homes and end housing stigma.",
+    "quote": "Many want to tackle the situation directly with their landlords, but they are afraid of being evicted into a housing market where they can barely find somewhere else to live and barely afford somewhere else. That is unacceptable at any age. It is critical\u2026"
+   },
+   {
+    "mp": "Peter Swallow",
+    "party": "Lab",
+    "position": "Supports rental reform to make housing more affordable and fair for tenants and landlords.",
+    "quote": "These issues are found in my constituency and across the country, so it is a shame to see so few Conservative Members standing up for the renters in their constituency. The Bill will make renting easier, more affordable and more secure for tenants, while\u2026"
+   },
+   {
+    "mp": "Rachel Blake",
+    "party": "Lab",
+    "position": "Supports the Renters\u2019 Rights Bill to protect private renters.",
+    "quote": "Some 27,000 people in the live in the private rented sector. After 14 years of neglect and delay, they face damp and mould in their homes, and risk no-fault evictions and out-of-the-blue rent hikes. Does the Deputy Prime Minister agree that the Renters\u2019\u2026"
+   }
+  ],
+  "disagree_receipts": [
+   {
+    "mp": "Gareth Bacon",
+    "party": "Con",
+    "position": "Opposes the Renters\u2019 Rights Bill, saying it reduces private housing and increases rent pressure",
+    "quote": "That means 42% fewer homes available for families, less choice and more pressure on rents. That is not theoretical; it is happening now, and the Renters\u2019 Rights Bill is accelerating that trend. Of equal concern is what effect an increasing number of people\u2026"
+   },
+   {
+    "mp": "Mrs Kemi Badenoch",
+    "party": "Con",
+    "position": "The legislation will break the rental market and harm landlords and tenants alike.",
+    "quote": "Of course we want people to have security in homes, but to do that we need to increase supply. We did what we could when we were in government, and we will help this Government to deliver. The fact of the matter is that this legislation is not going to help.\u2026"
+   }
+  ]
+ },
+ {
+  "proposition": "Short-term lets should require planning permission.",
+  "agree": 8,
+  "disagree": 2,
+  "split": 0.2,
+  "agree_parties": {
+   "Lab": 5,
+   "LD": 3
+  },
+  "disagree_parties": {
+   "LD": 1,
+   "Lab": 1
+  },
+  "agree_receipts": [
+   {
+    "mp": "Rachel Blake",
+    "party": "Lab",
+    "position": "Supports a national registration scheme for short-term lets to address housing shortages.",
+    "quote": "Those suggestions learn the lessons of attempts to regulate short-term lets in other major cities, where they have benefited from the data and information available. I firmly believe that we should use all the powers at our disposal to address the housing\u2026"
+   },
+   {
+    "mp": "Gideon Amos",
+    "party": "LD",
+    "position": "Supports planning controls to prevent housing leeching into short-term lets",
+    "quote": "That would create disparity and could lead to the leeching of more homes into the Airbnb, short-term let sector. We also want to see the creation of a new planning use class for short-term and holiday lets. I am aware that most recently, in February, although\u2026"
+   },
+   {
+    "mp": "Rachael Maskell",
+    "party": "Lab",
+    "position": "Supports regulated short-term lets to reduce crime and overcrowding",
+    "quote": "It would be self-funding, with no extra cost to local authorities. Every short-term holiday let would have a named person who could be contacted and who would be liable for the management of the property. Also, the licence would say how many people could stay\u2026"
+   }
+  ],
+  "disagree_receipts": [
+   {
+    "mp": "Dame Meg Hillier",
+    "party": "Lab",
+    "position": "Supports Airbnb regulation and a levy to fund council housing while addressing housing shortages",
+    "quote": "Talking of the informal economy, Airbnb is a big issue in London. The old-style Airbnb, in which you simply stayed with somebody, has been overtaken, and people are now purchasing flats just to let them out through Airbnb. I believe Airbnb is within the scope\u2026"
+   },
+   {
+    "mp": "Andrew George",
+    "party": "LD",
+    "position": "Supports C5 for short-term rentals with article 4 safeguards",
+    "quote": "Let me turn to the proposed planning use class change, which the Liberal Democrats have long argued should apply to all non-permanent occupancy residences. In other words, second homes and holiday lets should all be within one category, because we believe\u2026"
+   },
+   {
+    "mp": "Rachel Blake",
+    "party": "Lab",
+    "position": "Opposes automatic reclassification without planning permission and local authority input",
+    "quote": "A new use class for short-term lets not used as a sole or main home is not problematic in theory. The issue comes with the proposal to automatically reclassify existing dedicated short-term lets into this use class without planning permission. This, as the\u2026"
+   }
+  ]
+ },
+ {
+  "proposition": "Green belt land should be released for housing with community input.",
+  "agree": 4,
+  "disagree": 2,
+  "split": 0.33,
+  "agree_parties": {
+   "Lab": 3,
+   "Con": 1
+  },
+  "disagree_parties": {
+   "DUP": 1,
+   "Con": 1
+  },
+  "agree_receipts": [
+   {
+    "mp": "Adam Jogee",
+    "party": "Lab",
+    "position": "Opposes brownfield-first approach, especially on agricultural land use",
+    "quote": "I listened to the Minister on the radio this morning and I listened to his statement, and I welcome his comprehensive steps to tackle the housing crisis. While I work with colleagues across the House\u2014Opposition Members know that\u2014I thought the shadow\u2026"
+   },
+   {
+    "mp": "Wendy Morton",
+    "party": "Con",
+    "position": "Supports brownfield-first housing to protect green belts",
+    "quote": "My is painting a really bleak picture for London. Does he agree that to build the homes that we need in this country, we should focus not only on increased density in our city centres, but crucially on brownfield sites? We are not seeing from the Government a\u2026"
+   },
+   {
+    "mp": "Blake Stephenson",
+    "party": "Con",
+    "position": "Supports planned, community-focused housing and infrastructure development",
+    "quote": "There is a lot of support for brownfield-first development, but also for gently densifying our towns and cities so that we have houses where people want to live within the existing infrastructure. The Government have been elected with a clear mandate to\u2026"
+   }
+  ],
+  "disagree_receipts": [
+   {
+    "mp": "Wendy Morton",
+    "party": "Con",
+    "position": "Supports planning reforms and brownfield development to address housing shortages with local input",
+    "quote": "The west midlands is heavily dominated by Labour MPs, but none of them are here today. Their housing targets have come tumbling down. My constituency is not technically a rural constituency; actually, I have challenged the Government to define whether my seat\u2026"
+   },
+   {
+    "mp": "Jim Shannon",
+    "party": "DUP",
+    "position": "Supports using brownfield sites for housing, but opposes developing productive agricultural land.",
+    "quote": "As a councillor for 26 years from 1985, and as a Member of the Legislative Assembly for 12 years before coming to this place, I recognise that there have been opportunities in my constituency of. Rather than letting land lie derelict in the centre of town,\u2026"
+   },
+   {
+    "mp": "Matthew Pennycook",
+    "party": "Lab",
+    "position": "Supports densification on brownfield land before considering green belt development",
+    "quote": "We want to put in place a planning system that is geared towards meeting housing need in full. That is a clear difference between us and the Conservative party. In bringing forward its local plan and looking at development, every local area should look first\u2026"
+   }
+  ]
+ },
+ {
+  "proposition": "Social housing should be protected from private disposals.",
+  "agree": 4,
+  "disagree": 2,
+  "split": 0.33,
+  "agree_parties": {
+   "Lab": 3,
+   "Con": 1
+  },
+  "disagree_parties": {
+   "LD": 1,
+   "Con": 1
+  },
+  "agree_receipts": [
+   {
+    "mp": "Olivia Blake",
+    "party": "Lab",
+    "position": "Supports giving leaseholders a right of first refusal when selling their homes",
+    "quote": "Leaseholders remain trapped in a system that, at its core, is a feudal relic\u2014a structure designed not to empower people, but to extract value from them. Under this system, people who have bought homes find themselves paying escalating service charges, opaque\u2026"
+   },
+   {
+    "mp": "Peter Swallow",
+    "party": "Lab",
+    "position": "Supports stopping disposals of social homes through the Social Housing Bill",
+    "quote": "The Prime Minister will know that the commitment he has made on social and council housing will be very welcome in places such as, where lots of families are waiting for a home. However, that is undermined when social housing providers sell off their social\u2026"
+   },
+   {
+    "mp": "Gareth Bacon",
+    "party": "Con",
+    "position": "Right to buy does not remove homes; most social homes remain for long-term tenants",
+    "quote": "The point I am making, as says from a sedentary position behind me, is that there will be even fewer new social homes under this Bill. It is not the answer to the problem. The Government\u2019s own data is not the only data available that disproves the\u2026"
+   }
+  ],
+  "disagree_receipts": [
+   {
+    "mp": "Gareth Bacon",
+    "party": "Con",
+    "position": "Supports ending social housing for non-British couples to free up homes for UK families",
+    "quote": "If will listen to the remainder of my speech, she will hear what I have to say. It is understandable that as more and more people watch more and more of their salary slip away from their pockets and into the hands of the taxman, they begin to ask why they\u2026"
+   },
+   {
+    "mp": "Sir Ashley Fox",
+    "party": "Con",
+    "position": "Supports the minister's register to address social housing shortages",
+    "quote": "One reason why so many HMOs are required is the lack of social housing, certainly around. I have had developers approach me who have completed a private scheme, and they want housing associations or a charity to take those social houses off their hands, but\u2026"
+   },
+   {
+    "mp": "Andrew George",
+    "party": "LD",
+    "position": "Opposes restrictions on housing associations disposing of social housing",
+    "quote": "The Minister will know that clause 12 includes provision restricting housing associations from disposing of stock, including, for example, housing for which it is expensive to achieve an energy performance certificate rating of C. My area is haemorrhaging\u2026"
+   }
+  ]
+ }
+]

@@ -1,0 +1,193 @@
+{
+ "n_groups": 102,
+ "n_pairs": 385,
+ "n_accepted": 0,
+ "components": [],
+ "groups": [
+  {
+   "label": "Require non-QTS teachers in schools",
+   "members": [
+    "Require non-QTS teachers in schools"
+   ],
+   "mps_for": 1,
+   "mps_against": 1,
+   "parties_for": [
+    "Lab"
+   ],
+   "parties_against": [
+    "Con"
+   ],
+   "same_party_both_sides": [],
+   "mps_both": [],
+   "strict_for": 1,
+   "strict_against": 1,
+   "contested": false,
+   "contested_strict": false
+  },
+  {
+   "label": "Remove tax breaks for private schools",
+   "members": [
+    "Remove tax breaks for private schools"
+   ],
+   "mps_for": 7,
+   "mps_against": 1,
+   "parties_for": [
+    "Lab"
+   ],
+   "parties_against": [
+    "LD"
+   ],
+   "same_party_both_sides": [],
+   "mps_both": [],
+   "strict_for": 7,
+   "strict_against": 1,
+   "contested": false,
+   "contested_strict": false
+  },
+  {
+   "label": "Introduce an education tax",
+   "members": [
+    "Introduce an education tax"
+   ],
+   "mps_for": 1,
+   "mps_against": 2,
+   "parties_for": [
+    "Lab"
+   ],
+   "parties_against": [
+    "Con"
+   ],
+   "same_party_both_sides": [],
+   "mps_both": [],
+   "strict_for": 1,
+   "strict_against": 2,
+   "contested": false,
+   "contested_strict": false
+  },
+  {
+   "label": "Require academies to follow the national curriculum",
+   "members": [
+    "Require academies to follow the national curriculum"
+   ],
+   "mps_for": 5,
+   "mps_against": 7,
+   "parties_for": [
+    "Con",
+    "Lab"
+   ],
+   "parties_against": [
+    "Con",
+    "Lab"
+   ],
+   "same_party_both_sides": [
+    "Lab"
+   ],
+   "mps_both": [
+    "Damian Hinds"
+   ],
+   "strict_for": 4,
+   "strict_against": 6,
+   "contested": true,
+   "contested_strict": true
+  },
+  {
+   "label": "Charge VAT on private school fees",
+   "members": [
+    "Charge VAT on private school fees"
+   ],
+   "mps_for": 7,
+   "mps_against": 16,
+   "parties_for": [
+    "Lab"
+   ],
+   "parties_against": [
+    "Con",
+    "Ind",
+    "LD"
+   ],
+   "same_party_both_sides": [],
+   "mps_both": [],
+   "strict_for": 7,
+   "strict_against": 16,
+   "contested": true,
+   "contested_strict": true
+  },
+  {
+   "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+   "members": [
+    "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England"
+   ],
+   "mps_for": 3,
+   "mps_against": 1,
+   "parties_for": [
+    "Lab"
+   ],
+   "parties_against": [
+    "Con"
+   ],
+   "same_party_both_sides": [],
+   "mps_both": [],
+   "strict_for": 3,
+   "strict_against": 1,
+   "contested": false,
+   "contested_strict": false
+  },
+  {
+   "label": "Create Skills England",
+   "members": [
+    "Create Skills England"
+   ],
+   "mps_for": 10,
+   "mps_against": 1,
+   "parties_for": [
+    "LD",
+    "Lab"
+   ],
+   "parties_against": [
+    "Con"
+   ],
+   "same_party_both_sides": [],
+   "mps_both": [],
+   "strict_for": 10,
+   "strict_against": 1,
+   "contested": false,
+   "contested_strict": false
+  },
+  {
+   "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+   "members": [
+    "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year"
+   ],
+   "mps_for": 2,
+   "mps_against": 1,
+   "parties_for": [
+    "Con",
+    "Lab"
+   ],
+   "parties_against": [
+    "Con"
+   ],
+   "same_party_both_sides": [
+    "Con"
+   ],
+   "mps_both": [],
+   "strict_for": 2,
+   "strict_against": 1,
+   "contested": false,
+   "contested_strict": false
+  }
+ ],
+ "totals": {
+  "before": 2,
+  "after": 2,
+  "after_strict": 2
+ },
+ "mps_on_both_sides": [
+  [
+   "Damian Hinds",
+   "Require academies to follow the national curriculum"
+  ]
+ ],
+ "tokens": 307326,
+ "cost_usd": 0.012907692000000002
+}

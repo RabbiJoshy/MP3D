@@ -1,0 +1,1097 @@
+{
+ "sample": {
+  "education_passages_total": 5226,
+  "in_edu_sample_jsonl": 1097,
+  "remaining": 4129,
+  "eligible_bill_amend_oppday_not_in_old_sample": 0,
+  "note": "Heading regex (Bill|Amendment|Opposition Day|New Clause|Clause|Motion|Lords) + words>=60 + non-Chair: all 924 such passages already in edu_sample.jsonl (which has 1097 rows, not 970; 173 extra come from committee/other debates). Under looser rule (any length) 180 of the remaining match. So 0 eligible; topped up by random from 4129 remaining (all taken, <5000).",
+  "n_sampled_new": 4129,
+  "split": {
+   "eligible": 0,
+   "topup": 4129
+  }
+ },
+ "n_passages_total": 5226,
+ "n_claims_with_measure": 3391,
+ "n_groups": 1140,
+ "n_contested_by_extractor": 50,
+ "n_judged_claims": 1083,
+ "n_reused": 197,
+ "verdict_shares": {
+  "FOR": 0.459,
+  "NEITHER": 0.383,
+  "AGAINST": 0.158
+ },
+ "n_contested_after_judge": 3,
+ "n_contested_strict": 3,
+ "groups": [
+  {
+   "g": 4,
+   "label": "Impose fines on parents for school absence",
+   "n_claims": 8,
+   "extractor_for": 3,
+   "extractor_against": 5,
+   "mps_for": 0,
+   "mps_against": 3,
+   "parties_for": [],
+   "parties_against": [
+    "Ind",
+    "Lab"
+   ],
+   "both_sides_mps": [],
+   "strict_for": 0,
+   "strict_against": 3,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 5,
+   "label": "Expand school-based nurseries",
+   "n_claims": 42,
+   "extractor_for": 19,
+   "extractor_against": 3,
+   "mps_for": 16,
+   "mps_against": 0,
+   "parties_for": [
+    "Con",
+    "Lab"
+   ],
+   "parties_against": [],
+   "both_sides_mps": [],
+   "strict_for": 16,
+   "strict_against": 0,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 12,
+   "label": "Expand and strengthen apprenticeships",
+   "n_claims": 48,
+   "extractor_for": 34,
+   "extractor_against": 2,
+   "mps_for": 32,
+   "mps_against": 0,
+   "parties_for": [
+    "Con",
+    "DUP",
+    "Green",
+    "Ind",
+    "LD",
+    "Lab"
+   ],
+   "parties_against": [],
+   "both_sides_mps": [],
+   "strict_for": 32,
+   "strict_against": 0,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 13,
+   "label": "Require home-educated children to be registered with local authorities",
+   "n_claims": 29,
+   "extractor_for": 14,
+   "extractor_against": 9,
+   "mps_for": 9,
+   "mps_against": 0,
+   "parties_for": [
+    "LD",
+    "Lab"
+   ],
+   "parties_against": [],
+   "both_sides_mps": [],
+   "strict_for": 9,
+   "strict_against": 0,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 18,
+   "label": "Require academies to follow the national curriculum",
+   "n_claims": 113,
+   "extractor_for": 18,
+   "extractor_against": 29,
+   "mps_for": 7,
+   "mps_against": 8,
+   "parties_for": [
+    "Con",
+    "Lab"
+   ],
+   "parties_against": [
+    "Con",
+    "Lab"
+   ],
+   "both_sides_mps": [
+    "Damian Hinds"
+   ],
+   "strict_for": 6,
+   "strict_against": 7,
+   "contested": true,
+   "strict_contested": true,
+   "same_party_splits": [
+    {
+     "party": "Lab",
+     "for": [
+      "Amanda Martin",
+      "Andrew Cooper",
+      "Bridget Phillipson",
+      "Catherine McKinnell",
+      "Jonathan Davies",
+      "Tom Hayes"
+     ],
+     "against": [
+      "Dame Siobhain McDonagh"
+     ]
+    }
+   ]
+  },
+  {
+   "g": 22,
+   "label": "Increase funding for schools and provide appropriate training for school staff",
+   "n_claims": 17,
+   "extractor_for": 11,
+   "extractor_against": 3,
+   "mps_for": 8,
+   "mps_against": 0,
+   "parties_for": [
+    "Ind",
+    "LD",
+    "Lab"
+   ],
+   "parties_against": [],
+   "both_sides_mps": [],
+   "strict_for": 8,
+   "strict_against": 0,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 23,
+   "label": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+   "n_claims": 10,
+   "extractor_for": 2,
+   "extractor_against": 7,
+   "mps_for": 1,
+   "mps_against": 3,
+   "parties_for": [
+    "LD"
+   ],
+   "parties_against": [
+    "Con"
+   ],
+   "both_sides_mps": [],
+   "strict_for": 1,
+   "strict_against": 3,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 24,
+   "label": "Increase national insurance and teachers' pension scheme contributions",
+   "n_claims": 10,
+   "extractor_for": 3,
+   "extractor_against": 6,
+   "mps_for": 0,
+   "mps_against": 0,
+   "parties_for": [],
+   "parties_against": [],
+   "both_sides_mps": [],
+   "strict_for": 0,
+   "strict_against": 0,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 34,
+   "label": "Cut funding for the International Baccalaureate (IB)",
+   "n_claims": 20,
+   "extractor_for": 6,
+   "extractor_against": 10,
+   "mps_for": 0,
+   "mps_against": 8,
+   "parties_for": [],
+   "parties_against": [
+    "Con",
+    "LD",
+    "Lab"
+   ],
+   "both_sides_mps": [],
+   "strict_for": 0,
+   "strict_against": 8,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 35,
+   "label": "Introduce new V-levels and T-levels",
+   "n_claims": 7,
+   "extractor_for": 3,
+   "extractor_against": 2,
+   "mps_for": 2,
+   "mps_against": 0,
+   "parties_for": [
+    "Lab"
+   ],
+   "parties_against": [],
+   "both_sides_mps": [],
+   "strict_for": 2,
+   "strict_against": 0,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 41,
+   "label": "Abolish the EBacc",
+   "n_claims": 7,
+   "extractor_for": 2,
+   "extractor_against": 4,
+   "mps_for": 1,
+   "mps_against": 3,
+   "parties_for": [
+    "Lab"
+   ],
+   "parties_against": [
+    "Con",
+    "LD"
+   ],
+   "both_sides_mps": [],
+   "strict_for": 1,
+   "strict_against": 3,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 46,
+   "label": "Remove tax breaks for private schools",
+   "n_claims": 51,
+   "extractor_for": 17,
+   "extractor_against": 18,
+   "mps_for": 15,
+   "mps_against": 4,
+   "parties_for": [
+    "Lab"
+   ],
+   "parties_against": [
+    "Con",
+    "LD"
+   ],
+   "both_sides_mps": [],
+   "strict_for": 15,
+   "strict_against": 4,
+   "contested": true,
+   "strict_contested": true,
+   "same_party_splits": []
+  },
+  {
+   "g": 55,
+   "label": "Reform the apprenticeship levy into a growth and skills levy",
+   "n_claims": 21,
+   "extractor_for": 12,
+   "extractor_against": 2,
+   "mps_for": 10,
+   "mps_against": 0,
+   "parties_for": [
+    "Ind",
+    "Lab"
+   ],
+   "parties_against": [],
+   "both_sides_mps": [],
+   "strict_for": 10,
+   "strict_against": 0,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 59,
+   "label": "Extend local authority powers to direct academies to admit children",
+   "n_claims": 13,
+   "extractor_for": 6,
+   "extractor_against": 4,
+   "mps_for": 2,
+   "mps_against": 0,
+   "parties_for": [
+    "Lab"
+   ],
+   "parties_against": [],
+   "both_sides_mps": [],
+   "strict_for": 2,
+   "strict_against": 0,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 63,
+   "label": "Recruit an additional 6,500 teachers",
+   "n_claims": 30,
+   "extractor_for": 9,
+   "extractor_against": 7,
+   "mps_for": 9,
+   "mps_against": 0,
+   "parties_for": [
+    "Con",
+    "Lab"
+   ],
+   "parties_against": [],
+   "both_sides_mps": [],
+   "strict_for": 9,
+   "strict_against": 0,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 67,
+   "label": "Require local authority-maintained schools to follow the same model as academies",
+   "n_claims": 8,
+   "extractor_for": 2,
+   "extractor_against": 3,
+   "mps_for": 0,
+   "mps_against": 1,
+   "parties_for": [],
+   "parties_against": [
+    "Con"
+   ],
+   "both_sides_mps": [],
+   "strict_for": 0,
+   "strict_against": 1,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 76,
+   "label": "Require teachers to have qualified status",
+   "n_claims": 33,
+   "extractor_for": 9,
+   "extractor_against": 6,
+   "mps_for": 9,
+   "mps_against": 1,
+   "parties_for": [
+    "Con",
+    "Green",
+    "LD",
+    "Lab"
+   ],
+   "parties_against": [
+    "Con"
+   ],
+   "both_sides_mps": [
+    "Neil O'Brien"
+   ],
+   "strict_for": 8,
+   "strict_against": 0,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 84,
+   "label": "Require local authorities to issue school attendance orders in cases where it appears that a child may not be receiving a suitable education",
+   "n_claims": 4,
+   "extractor_for": 2,
+   "extractor_against": 2,
+   "mps_for": 0,
+   "mps_against": 0,
+   "parties_for": [],
+   "parties_against": [],
+   "both_sides_mps": [],
+   "strict_for": 0,
+   "strict_against": 0,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 87,
+   "label": "Change visa rules to allow dependants to accompany academics and students and reduce visa costs and NHS surcharges",
+   "n_claims": 6,
+   "extractor_for": 2,
+   "extractor_against": 4,
+   "mps_for": 1,
+   "mps_against": 1,
+   "parties_for": [
+    "Lab"
+   ],
+   "parties_against": [
+    "Con"
+   ],
+   "both_sides_mps": [],
+   "strict_for": 1,
+   "strict_against": 1,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 103,
+   "label": "Abolish the requirement for students to resit GCSE English and maths",
+   "n_claims": 12,
+   "extractor_for": 6,
+   "extractor_against": 4,
+   "mps_for": 2,
+   "mps_against": 0,
+   "parties_for": [
+    "LD",
+    "Lab"
+   ],
+   "parties_against": [],
+   "both_sides_mps": [],
+   "strict_for": 2,
+   "strict_against": 0,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 105,
+   "label": "Abolish high-stakes exams (GCSEs, A-levels, and SATs)",
+   "n_claims": 14,
+   "extractor_for": 3,
+   "extractor_against": 7,
+   "mps_for": 0,
+   "mps_against": 1,
+   "parties_for": [],
+   "parties_against": [
+    "Con"
+   ],
+   "both_sides_mps": [],
+   "strict_for": 0,
+   "strict_against": 1,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 112,
+   "label": "Increase investment in mainstream and special educational needs schools",
+   "n_claims": 19,
+   "extractor_for": 14,
+   "extractor_against": 2,
+   "mps_for": 9,
+   "mps_against": 0,
+   "parties_for": [
+    "DUP",
+    "Green",
+    "LD",
+    "Lab"
+   ],
+   "parties_against": [],
+   "both_sides_mps": [],
+   "strict_for": 9,
+   "strict_against": 0,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 114,
+   "label": "Impose VAT on independent school fees",
+   "n_claims": 125,
+   "extractor_for": 19,
+   "extractor_against": 52,
+   "mps_for": 13,
+   "mps_against": 33,
+   "parties_for": [
+    "LD",
+    "Lab"
+   ],
+   "parties_against": [
+    "Con",
+    "DUP",
+    "Ind",
+    "LD",
+    "RUK"
+   ],
+   "both_sides_mps": [
+    "Ian Sollom"
+   ],
+   "strict_for": 12,
+   "strict_against": 32,
+   "contested": true,
+   "strict_contested": true,
+   "same_party_splits": []
+  },
+  {
+   "g": 116,
+   "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+   "n_claims": 10,
+   "extractor_for": 6,
+   "extractor_against": 2,
+   "mps_for": 3,
+   "mps_against": 1,
+   "parties_for": [
+    "Con",
+    "Lab"
+   ],
+   "parties_against": [
+    "Con"
+   ],
+   "both_sides_mps": [],
+   "strict_for": 3,
+   "strict_against": 1,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": [
+    {
+     "party": "Con",
+     "for": [
+      "Damian Hinds"
+     ],
+     "against": [
+      "Neil O'Brien"
+     ]
+    }
+   ]
+  },
+  {
+   "g": 121,
+   "label": "Maintain a 50% cap on faith-based admissions for new schools",
+   "n_claims": 7,
+   "extractor_for": 3,
+   "extractor_against": 3,
+   "mps_for": 2,
+   "mps_against": 0,
+   "parties_for": [
+    "LD",
+    "Lab"
+   ],
+   "parties_against": [],
+   "both_sides_mps": [],
+   "strict_for": 2,
+   "strict_against": 0,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 124,
+   "label": "Implement a four-day school week",
+   "n_claims": 23,
+   "extractor_for": 3,
+   "extractor_against": 6,
+   "mps_for": 1,
+   "mps_against": 3,
+   "parties_for": [
+    "Lab"
+   ],
+   "parties_against": [
+    "Con",
+    "LD",
+    "Lab"
+   ],
+   "both_sides_mps": [],
+   "strict_for": 1,
+   "strict_against": 3,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": [
+    {
+     "party": "Lab",
+     "for": [
+      "Dave Robertson"
+     ],
+     "against": [
+      "Josh MacAlister"
+     ]
+    }
+   ]
+  },
+  {
+   "g": 152,
+   "label": "Introduce new curriculum content focused on AI and digital skills",
+   "n_claims": 9,
+   "extractor_for": 7,
+   "extractor_against": 2,
+   "mps_for": 2,
+   "mps_against": 0,
+   "parties_for": [
+    "LD"
+   ],
+   "parties_against": [],
+   "both_sides_mps": [],
+   "strict_for": 2,
+   "strict_against": 0,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 158,
+   "label": "Subsume the functions of IfATE into Skills England",
+   "n_claims": 11,
+   "extractor_for": 4,
+   "extractor_against": 3,
+   "mps_for": 4,
+   "mps_against": 0,
+   "parties_for": [
+    "Con",
+    "Lab"
+   ],
+   "parties_against": [],
+   "both_sides_mps": [],
+   "strict_for": 4,
+   "strict_against": 0,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 182,
+   "label": "Establish Skills England",
+   "n_claims": 34,
+   "extractor_for": 15,
+   "extractor_against": 3,
+   "mps_for": 14,
+   "mps_against": 1,
+   "parties_for": [
+    "LD",
+    "Lab"
+   ],
+   "parties_against": [
+    "Con"
+   ],
+   "both_sides_mps": [],
+   "strict_for": 14,
+   "strict_against": 1,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 185,
+   "label": "Integrate play into the key stage 1 curriculum",
+   "n_claims": 21,
+   "extractor_for": 13,
+   "extractor_against": 2,
+   "mps_for": 11,
+   "mps_against": 0,
+   "parties_for": [
+    "LD",
+    "Lab"
+   ],
+   "parties_against": [],
+   "both_sides_mps": [],
+   "strict_for": 11,
+   "strict_against": 0,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 200,
+   "label": "Require schools to teach about the broader concept of gender identity",
+   "n_claims": 4,
+   "extractor_for": 2,
+   "extractor_against": 2,
+   "mps_for": 0,
+   "mps_against": 1,
+   "parties_for": [],
+   "parties_against": [
+    "Ind"
+   ],
+   "both_sides_mps": [],
+   "strict_for": 0,
+   "strict_against": 1,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 203,
+   "label": "Raise tuition fees",
+   "n_claims": 10,
+   "extractor_for": 5,
+   "extractor_against": 4,
+   "mps_for": 3,
+   "mps_against": 1,
+   "parties_for": [
+    "Lab"
+   ],
+   "parties_against": [
+    "Con"
+   ],
+   "both_sides_mps": [],
+   "strict_for": 3,
+   "strict_against": 1,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 206,
+   "label": "Abolish academies",
+   "n_claims": 27,
+   "extractor_for": 5,
+   "extractor_against": 12,
+   "mps_for": 0,
+   "mps_against": 6,
+   "parties_for": [],
+   "parties_against": [
+    "Con",
+    "Lab"
+   ],
+   "both_sides_mps": [],
+   "strict_for": 0,
+   "strict_against": 6,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 207,
+   "label": "Reduce official development assistance spending to 0.3% of GNI by 2027",
+   "n_claims": 5,
+   "extractor_for": 3,
+   "extractor_against": 2,
+   "mps_for": 0,
+   "mps_against": 0,
+   "parties_for": [],
+   "parties_against": [],
+   "both_sides_mps": [],
+   "strict_for": 0,
+   "strict_against": 0,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 208,
+   "label": "Require parents of children with SEND to use the state education system",
+   "n_claims": 5,
+   "extractor_for": 2,
+   "extractor_against": 3,
+   "mps_for": 0,
+   "mps_against": 0,
+   "parties_for": [],
+   "parties_against": [],
+   "both_sides_mps": [],
+   "strict_for": 0,
+   "strict_against": 0,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 211,
+   "label": "Abolish faith selection in state-funded schools",
+   "n_claims": 5,
+   "extractor_for": 3,
+   "extractor_against": 2,
+   "mps_for": 1,
+   "mps_against": 1,
+   "parties_for": [
+    "Lab"
+   ],
+   "parties_against": [
+    "DUP"
+   ],
+   "both_sides_mps": [],
+   "strict_for": 1,
+   "strict_against": 1,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 239,
+   "label": "Close the attainment gap between the richest and poorest pupils in Scotland",
+   "n_claims": 4,
+   "extractor_for": 2,
+   "extractor_against": 2,
+   "mps_for": 1,
+   "mps_against": 0,
+   "parties_for": [
+    "Lab"
+   ],
+   "parties_against": [],
+   "both_sides_mps": [],
+   "strict_for": 1,
+   "strict_against": 0,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 274,
+   "label": "Close the university's Southend campus",
+   "n_claims": 4,
+   "extractor_for": 2,
+   "extractor_against": 2,
+   "mps_for": 0,
+   "mps_against": 1,
+   "parties_for": [],
+   "parties_against": [
+    "Lab"
+   ],
+   "both_sides_mps": [],
+   "strict_for": 0,
+   "strict_against": 1,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 310,
+   "label": "Abolish level 7 apprenticeships",
+   "n_claims": 14,
+   "extractor_for": 3,
+   "extractor_against": 5,
+   "mps_for": 0,
+   "mps_against": 4,
+   "parties_for": [],
+   "parties_against": [
+    "Con",
+    "LD"
+   ],
+   "both_sides_mps": [],
+   "strict_for": 0,
+   "strict_against": 4,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 347,
+   "label": "Make it harder to turn failing schools into academies",
+   "n_claims": 18,
+   "extractor_for": 3,
+   "extractor_against": 9,
+   "mps_for": 0,
+   "mps_against": 5,
+   "parties_for": [],
+   "parties_against": [
+    "Con",
+    "Lab"
+   ],
+   "both_sides_mps": [],
+   "strict_for": 0,
+   "strict_against": 5,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 350,
+   "label": "Abolish or restrict the right to Education, Health and Care Plans (EHCPs)",
+   "n_claims": 7,
+   "extractor_for": 2,
+   "extractor_against": 5,
+   "mps_for": 0,
+   "mps_against": 4,
+   "parties_for": [],
+   "parties_against": [
+    "LD",
+    "Lab"
+   ],
+   "both_sides_mps": [],
+   "strict_for": 0,
+   "strict_against": 4,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 403,
+   "label": "Introduce a register of children not in school",
+   "n_claims": 12,
+   "extractor_for": 8,
+   "extractor_against": 4,
+   "mps_for": 7,
+   "mps_against": 0,
+   "parties_for": [
+    "LD",
+    "Lab"
+   ],
+   "parties_against": [],
+   "both_sides_mps": [],
+   "strict_for": 7,
+   "strict_against": 0,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 405,
+   "label": "Implement the proposals in the Bill (specifically regarding the academy system)",
+   "n_claims": 4,
+   "extractor_for": 2,
+   "extractor_against": 2,
+   "mps_for": 2,
+   "mps_against": 0,
+   "parties_for": [
+    "Lab"
+   ],
+   "parties_against": [],
+   "both_sides_mps": [],
+   "strict_for": 2,
+   "strict_against": 0,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 423,
+   "label": "Introduce breakfast clubs for schools",
+   "n_claims": 76,
+   "extractor_for": 35,
+   "extractor_against": 8,
+   "mps_for": 31,
+   "mps_against": 0,
+   "parties_for": [
+    "DUP",
+    "Lab"
+   ],
+   "parties_against": [],
+   "both_sides_mps": [],
+   "strict_for": 31,
+   "strict_against": 0,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 475,
+   "label": "Provide free school meals to children",
+   "n_claims": 13,
+   "extractor_for": 9,
+   "extractor_against": 3,
+   "mps_for": 8,
+   "mps_against": 0,
+   "parties_for": [
+    "Con",
+    "Ind",
+    "LD",
+    "Lab"
+   ],
+   "parties_against": [],
+   "both_sides_mps": [],
+   "strict_for": 8,
+   "strict_against": 0,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 482,
+   "label": "Invest in state schools",
+   "n_claims": 9,
+   "extractor_for": 5,
+   "extractor_against": 2,
+   "mps_for": 5,
+   "mps_against": 0,
+   "parties_for": [
+    "Lab"
+   ],
+   "parties_against": [],
+   "both_sides_mps": [],
+   "strict_for": 5,
+   "strict_against": 0,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 488,
+   "label": "Ban mobile phone use in schools",
+   "n_claims": 43,
+   "extractor_for": 24,
+   "extractor_against": 8,
+   "mps_for": 19,
+   "mps_against": 0,
+   "parties_for": [
+    "Con",
+    "LD",
+    "Lab"
+   ],
+   "parties_against": [],
+   "both_sides_mps": [],
+   "strict_for": 19,
+   "strict_against": 0,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 496,
+   "label": "Include financial education in the school curriculum",
+   "n_claims": 44,
+   "extractor_for": 25,
+   "extractor_against": 3,
+   "mps_for": 24,
+   "mps_against": 0,
+   "parties_for": [
+    "Con",
+    "LD",
+    "Lab"
+   ],
+   "parties_against": [],
+   "both_sides_mps": [],
+   "strict_for": 24,
+   "strict_against": 0,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 535,
+   "label": "Require local authorities to review and potentially consent to home education for vulnerable children (including those in child protection plans or special schools)",
+   "n_claims": 11,
+   "extractor_for": 6,
+   "extractor_against": 3,
+   "mps_for": 3,
+   "mps_against": 0,
+   "parties_for": [
+    "Con",
+    "Lab"
+   ],
+   "parties_against": [],
+   "both_sides_mps": [],
+   "strict_for": 3,
+   "strict_against": 0,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  },
+  {
+   "g": 1085,
+   "label": "Abolish or significantly reduce tuition fees in higher education",
+   "n_claims": 6,
+   "extractor_for": 3,
+   "extractor_against": 3,
+   "mps_for": 1,
+   "mps_against": 0,
+   "parties_for": [
+    "YP"
+   ],
+   "parties_against": [],
+   "both_sides_mps": [],
+   "strict_for": 1,
+   "strict_against": 0,
+   "contested": false,
+   "strict_contested": false,
+   "same_party_splits": []
+  }
+ ],
+ "tokens": {
+  "extract_in": 1423362,
+  "extract_out": 72246,
+  "judge_input": 546759
+ },
+ "cost_usd": {
+  "extract": 0.05354,
+  "judge": 0.02296,
+  "total": 0.0765
+ }
+}

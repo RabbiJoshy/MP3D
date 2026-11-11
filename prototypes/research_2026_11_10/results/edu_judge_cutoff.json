@@ -1,0 +1,5805 @@
+{
+ "n_raw": 96,
+ "dups_removed": 0,
+ "unmatched": 0,
+ "n": 96,
+ "n_good": 59,
+ "n_bad": 37,
+ "by_source": {
+  "Hinds": {
+   "n": 12,
+   "good": 9,
+   "bad": 3
+  },
+  "handcheck1": {
+   "n": 38,
+   "good": 27,
+   "bad": 11
+  },
+  "stratum A": {
+   "n": 30,
+   "good": 9,
+   "bad": 21
+  },
+  "stratum B": {
+   "n": 16,
+   "good": 14,
+   "bad": 2
+  }
+ },
+ "current_rule": {
+  "hand": {
+   "good": 40,
+   "bad": 2,
+   "Hinds": {
+    "good": 2,
+    "bad": 0,
+    "n_good": 9,
+    "n_bad": 3
+   },
+   "handcheck1": {
+    "good": 24,
+    "bad": 0,
+    "n_good": 27,
+    "n_bad": 11
+   },
+   "stratum A": {
+    "good": 0,
+    "bad": 0,
+    "n_good": 9,
+    "n_bad": 21
+   },
+   "stratum B": {
+    "good": 14,
+    "bad": 2,
+    "n_good": 14,
+    "n_bad": 2
+   }
+  },
+  "contested": [
+   2,
+   2
+  ]
+ },
+ "threshold_table": [
+  {
+   "param": 0.05,
+   "hand": {
+    "good": 58,
+    "bad": 20,
+    "Hinds": {
+     "good": 8,
+     "bad": 1,
+     "n_good": 9,
+     "n_bad": 3
+    },
+    "handcheck1": {
+     "good": 27,
+     "bad": 4,
+     "n_good": 27,
+     "n_bad": 11
+    },
+    "stratum A": {
+     "good": 9,
+     "bad": 13,
+     "n_good": 9,
+     "n_bad": 21
+    },
+    "stratum B": {
+     "good": 14,
+     "bad": 2,
+     "n_good": 14,
+     "n_bad": 2
+    }
+   },
+   "n_claims_kept": 273,
+   "contested": 11,
+   "contested_ex_both": 10,
+   "per_group": {
+    "0": {
+     "label": "Require non-QTS teachers in schools",
+     "mps_for": 1,
+     "mps_against": 3,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "2": {
+     "label": "Require home-educated children to be registered with local authorities",
+     "mps_for": 10,
+     "mps_against": 3,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "3": {
+     "label": "Expand free school meals to lift 100,000 children out of poverty",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "4": {
+     "label": "Remove tax breaks for private schools",
+     "mps_for": 7,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "5": {
+     "label": "Abolish academies",
+     "mps_for": 0,
+     "mps_against": 9,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "7": {
+     "label": "Introduce an education tax",
+     "mps_for": 1,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "15": {
+     "label": "Require academies to follow the national curriculum",
+     "mps_for": 8,
+     "mps_against": 10,
+     "both": 1,
+     "contested": true,
+     "contested_ex": true
+    },
+    "18": {
+     "label": "Introduce a register of children not in school",
+     "mps_for": 8,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "21": {
+     "label": "Abolish level 7 apprenticeships",
+     "mps_for": 0,
+     "mps_against": 4,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "28": {
+     "label": "Make it harder to turn failing schools into academies",
+     "mps_for": 0,
+     "mps_against": 6,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "33": {
+     "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+     "mps_for": 4,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "35": {
+     "label": "Charge VAT on private school fees",
+     "mps_for": 9,
+     "mps_against": 25,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "36": {
+     "label": "Require teachers to have qualified status",
+     "mps_for": 6,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "40": {
+     "label": "Abolish the option to home school",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "50": {
+     "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+     "mps_for": 3,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "61": {
+     "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+     "mps_for": 3,
+     "mps_against": 2,
+     "both": 1,
+     "contested": true,
+     "contested_ex": false
+    },
+    "65": {
+     "label": "Create Skills England",
+     "mps_for": 10,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "91": {
+     "label": "Ban mobile phone use in schools",
+     "mps_for": 12,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "123": {
+     "label": "Require academies to follow a core of standards",
+     "mps_for": 2,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "149": {
+     "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+     "mps_for": 4,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    }
+   }
+  },
+  {
+   "param": 0.1,
+   "hand": {
+    "good": 58,
+    "bad": 18,
+    "Hinds": {
+     "good": 8,
+     "bad": 1,
+     "n_good": 9,
+     "n_bad": 3
+    },
+    "handcheck1": {
+     "good": 27,
+     "bad": 3,
+     "n_good": 27,
+     "n_bad": 11
+    },
+    "stratum A": {
+     "good": 9,
+     "bad": 12,
+     "n_good": 9,
+     "n_bad": 21
+    },
+    "stratum B": {
+     "good": 14,
+     "bad": 2,
+     "n_good": 14,
+     "n_bad": 2
+    }
+   },
+   "n_claims_kept": 264,
+   "contested": 10,
+   "contested_ex_both": 9,
+   "per_group": {
+    "0": {
+     "label": "Require non-QTS teachers in schools",
+     "mps_for": 1,
+     "mps_against": 3,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "2": {
+     "label": "Require home-educated children to be registered with local authorities",
+     "mps_for": 10,
+     "mps_against": 3,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "3": {
+     "label": "Expand free school meals to lift 100,000 children out of poverty",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "4": {
+     "label": "Remove tax breaks for private schools",
+     "mps_for": 7,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "5": {
+     "label": "Abolish academies",
+     "mps_for": 0,
+     "mps_against": 9,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "7": {
+     "label": "Introduce an education tax",
+     "mps_for": 1,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "15": {
+     "label": "Require academies to follow the national curriculum",
+     "mps_for": 8,
+     "mps_against": 9,
+     "both": 1,
+     "contested": true,
+     "contested_ex": true
+    },
+    "18": {
+     "label": "Introduce a register of children not in school",
+     "mps_for": 7,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "21": {
+     "label": "Abolish level 7 apprenticeships",
+     "mps_for": 0,
+     "mps_against": 3,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "28": {
+     "label": "Make it harder to turn failing schools into academies",
+     "mps_for": 0,
+     "mps_against": 6,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "33": {
+     "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+     "mps_for": 4,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "35": {
+     "label": "Charge VAT on private school fees",
+     "mps_for": 9,
+     "mps_against": 24,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "36": {
+     "label": "Require teachers to have qualified status",
+     "mps_for": 6,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "40": {
+     "label": "Abolish the option to home school",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "50": {
+     "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+     "mps_for": 3,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "61": {
+     "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+     "mps_for": 3,
+     "mps_against": 2,
+     "both": 1,
+     "contested": true,
+     "contested_ex": false
+    },
+    "65": {
+     "label": "Create Skills England",
+     "mps_for": 10,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "91": {
+     "label": "Ban mobile phone use in schools",
+     "mps_for": 12,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "123": {
+     "label": "Require academies to follow a core of standards",
+     "mps_for": 2,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "149": {
+     "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+     "mps_for": 4,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    }
+   }
+  },
+  {
+   "param": 0.15,
+   "hand": {
+    "good": 57,
+    "bad": 16,
+    "Hinds": {
+     "good": 7,
+     "bad": 1,
+     "n_good": 9,
+     "n_bad": 3
+    },
+    "handcheck1": {
+     "good": 27,
+     "bad": 1,
+     "n_good": 27,
+     "n_bad": 11
+    },
+    "stratum A": {
+     "good": 9,
+     "bad": 12,
+     "n_good": 9,
+     "n_bad": 21
+    },
+    "stratum B": {
+     "good": 14,
+     "bad": 2,
+     "n_good": 14,
+     "n_bad": 2
+    }
+   },
+   "n_claims_kept": 253,
+   "contested": 9,
+   "contested_ex_both": 8,
+   "per_group": {
+    "0": {
+     "label": "Require non-QTS teachers in schools",
+     "mps_for": 1,
+     "mps_against": 3,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "2": {
+     "label": "Require home-educated children to be registered with local authorities",
+     "mps_for": 10,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "3": {
+     "label": "Expand free school meals to lift 100,000 children out of poverty",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "4": {
+     "label": "Remove tax breaks for private schools",
+     "mps_for": 7,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "5": {
+     "label": "Abolish academies",
+     "mps_for": 0,
+     "mps_against": 9,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "7": {
+     "label": "Introduce an education tax",
+     "mps_for": 1,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "15": {
+     "label": "Require academies to follow the national curriculum",
+     "mps_for": 7,
+     "mps_against": 8,
+     "both": 1,
+     "contested": true,
+     "contested_ex": true
+    },
+    "18": {
+     "label": "Introduce a register of children not in school",
+     "mps_for": 7,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "21": {
+     "label": "Abolish level 7 apprenticeships",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "28": {
+     "label": "Make it harder to turn failing schools into academies",
+     "mps_for": 0,
+     "mps_against": 6,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "33": {
+     "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+     "mps_for": 2,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "35": {
+     "label": "Charge VAT on private school fees",
+     "mps_for": 9,
+     "mps_against": 23,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "36": {
+     "label": "Require teachers to have qualified status",
+     "mps_for": 6,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "40": {
+     "label": "Abolish the option to home school",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "50": {
+     "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+     "mps_for": 3,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "61": {
+     "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+     "mps_for": 3,
+     "mps_against": 2,
+     "both": 1,
+     "contested": true,
+     "contested_ex": false
+    },
+    "65": {
+     "label": "Create Skills England",
+     "mps_for": 10,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "91": {
+     "label": "Ban mobile phone use in schools",
+     "mps_for": 12,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "123": {
+     "label": "Require academies to follow a core of standards",
+     "mps_for": 2,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "149": {
+     "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+     "mps_for": 4,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    }
+   }
+  },
+  {
+   "param": 0.2,
+   "hand": {
+    "good": 54,
+    "bad": 13,
+    "Hinds": {
+     "good": 6,
+     "bad": 1,
+     "n_good": 9,
+     "n_bad": 3
+    },
+    "handcheck1": {
+     "good": 27,
+     "bad": 1,
+     "n_good": 27,
+     "n_bad": 11
+    },
+    "stratum A": {
+     "good": 7,
+     "bad": 9,
+     "n_good": 9,
+     "n_bad": 21
+    },
+    "stratum B": {
+     "good": 14,
+     "bad": 2,
+     "n_good": 14,
+     "n_bad": 2
+    }
+   },
+   "n_claims_kept": 239,
+   "contested": 7,
+   "contested_ex_both": 7,
+   "per_group": {
+    "0": {
+     "label": "Require non-QTS teachers in schools",
+     "mps_for": 1,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "2": {
+     "label": "Require home-educated children to be registered with local authorities",
+     "mps_for": 9,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "3": {
+     "label": "Expand free school meals to lift 100,000 children out of poverty",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "4": {
+     "label": "Remove tax breaks for private schools",
+     "mps_for": 7,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "5": {
+     "label": "Abolish academies",
+     "mps_for": 0,
+     "mps_against": 8,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "7": {
+     "label": "Introduce an education tax",
+     "mps_for": 1,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "15": {
+     "label": "Require academies to follow the national curriculum",
+     "mps_for": 6,
+     "mps_against": 8,
+     "both": 1,
+     "contested": true,
+     "contested_ex": true
+    },
+    "18": {
+     "label": "Introduce a register of children not in school",
+     "mps_for": 7,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "21": {
+     "label": "Abolish level 7 apprenticeships",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "28": {
+     "label": "Make it harder to turn failing schools into academies",
+     "mps_for": 0,
+     "mps_against": 6,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "33": {
+     "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+     "mps_for": 2,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "35": {
+     "label": "Charge VAT on private school fees",
+     "mps_for": 9,
+     "mps_against": 22,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "36": {
+     "label": "Require teachers to have qualified status",
+     "mps_for": 6,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "40": {
+     "label": "Abolish the option to home school",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "50": {
+     "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+     "mps_for": 3,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "61": {
+     "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+     "mps_for": 3,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "65": {
+     "label": "Create Skills England",
+     "mps_for": 10,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "91": {
+     "label": "Ban mobile phone use in schools",
+     "mps_for": 12,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "123": {
+     "label": "Require academies to follow a core of standards",
+     "mps_for": 2,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "149": {
+     "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+     "mps_for": 4,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    }
+   }
+  },
+  {
+   "param": 0.25,
+   "hand": {
+    "good": 53,
+    "bad": 11,
+    "Hinds": {
+     "good": 6,
+     "bad": 1,
+     "n_good": 9,
+     "n_bad": 3
+    },
+    "handcheck1": {
+     "good": 26,
+     "bad": 1,
+     "n_good": 27,
+     "n_bad": 11
+    },
+    "stratum A": {
+     "good": 7,
+     "bad": 7,
+     "n_good": 9,
+     "n_bad": 21
+    },
+    "stratum B": {
+     "good": 14,
+     "bad": 2,
+     "n_good": 14,
+     "n_bad": 2
+    }
+   },
+   "n_claims_kept": 228,
+   "contested": 5,
+   "contested_ex_both": 5,
+   "per_group": {
+    "0": {
+     "label": "Require non-QTS teachers in schools",
+     "mps_for": 1,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "2": {
+     "label": "Require home-educated children to be registered with local authorities",
+     "mps_for": 8,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "3": {
+     "label": "Expand free school meals to lift 100,000 children out of poverty",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "4": {
+     "label": "Remove tax breaks for private schools",
+     "mps_for": 7,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "5": {
+     "label": "Abolish academies",
+     "mps_for": 0,
+     "mps_against": 8,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "7": {
+     "label": "Introduce an education tax",
+     "mps_for": 1,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "15": {
+     "label": "Require academies to follow the national curriculum",
+     "mps_for": 6,
+     "mps_against": 8,
+     "both": 1,
+     "contested": true,
+     "contested_ex": true
+    },
+    "18": {
+     "label": "Introduce a register of children not in school",
+     "mps_for": 6,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "21": {
+     "label": "Abolish level 7 apprenticeships",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "28": {
+     "label": "Make it harder to turn failing schools into academies",
+     "mps_for": 0,
+     "mps_against": 6,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "33": {
+     "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+     "mps_for": 1,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "35": {
+     "label": "Charge VAT on private school fees",
+     "mps_for": 9,
+     "mps_against": 22,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "36": {
+     "label": "Require teachers to have qualified status",
+     "mps_for": 6,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "40": {
+     "label": "Abolish the option to home school",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "50": {
+     "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+     "mps_for": 3,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "61": {
+     "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+     "mps_for": 3,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "65": {
+     "label": "Create Skills England",
+     "mps_for": 10,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "91": {
+     "label": "Ban mobile phone use in schools",
+     "mps_for": 12,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "123": {
+     "label": "Require academies to follow a core of standards",
+     "mps_for": 2,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "149": {
+     "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+     "mps_for": 4,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    }
+   }
+  },
+  {
+   "param": 0.3,
+   "hand": {
+    "good": 50,
+    "bad": 8,
+    "Hinds": {
+     "good": 4,
+     "bad": 1,
+     "n_good": 9,
+     "n_bad": 3
+    },
+    "handcheck1": {
+     "good": 25,
+     "bad": 0,
+     "n_good": 27,
+     "n_bad": 11
+    },
+    "stratum A": {
+     "good": 7,
+     "bad": 5,
+     "n_good": 9,
+     "n_bad": 21
+    },
+    "stratum B": {
+     "good": 14,
+     "bad": 2,
+     "n_good": 14,
+     "n_bad": 2
+    }
+   },
+   "n_claims_kept": 215,
+   "contested": 4,
+   "contested_ex_both": 4,
+   "per_group": {
+    "0": {
+     "label": "Require non-QTS teachers in schools",
+     "mps_for": 1,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "2": {
+     "label": "Require home-educated children to be registered with local authorities",
+     "mps_for": 7,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "3": {
+     "label": "Expand free school meals to lift 100,000 children out of poverty",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "4": {
+     "label": "Remove tax breaks for private schools",
+     "mps_for": 7,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "5": {
+     "label": "Abolish academies",
+     "mps_for": 0,
+     "mps_against": 8,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "7": {
+     "label": "Introduce an education tax",
+     "mps_for": 1,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "15": {
+     "label": "Require academies to follow the national curriculum",
+     "mps_for": 6,
+     "mps_against": 7,
+     "both": 1,
+     "contested": true,
+     "contested_ex": true
+    },
+    "18": {
+     "label": "Introduce a register of children not in school",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "21": {
+     "label": "Abolish level 7 apprenticeships",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "28": {
+     "label": "Make it harder to turn failing schools into academies",
+     "mps_for": 0,
+     "mps_against": 6,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "33": {
+     "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+     "mps_for": 1,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "35": {
+     "label": "Charge VAT on private school fees",
+     "mps_for": 9,
+     "mps_against": 21,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "36": {
+     "label": "Require teachers to have qualified status",
+     "mps_for": 6,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "40": {
+     "label": "Abolish the option to home school",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "50": {
+     "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+     "mps_for": 3,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "61": {
+     "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+     "mps_for": 3,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "65": {
+     "label": "Create Skills England",
+     "mps_for": 10,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "91": {
+     "label": "Ban mobile phone use in schools",
+     "mps_for": 11,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "123": {
+     "label": "Require academies to follow a core of standards",
+     "mps_for": 2,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "149": {
+     "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+     "mps_for": 4,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    }
+   }
+  },
+  {
+   "param": 0.35,
+   "hand": {
+    "good": 47,
+    "bad": 6,
+    "Hinds": {
+     "good": 4,
+     "bad": 1,
+     "n_good": 9,
+     "n_bad": 3
+    },
+    "handcheck1": {
+     "good": 24,
+     "bad": 0,
+     "n_good": 27,
+     "n_bad": 11
+    },
+    "stratum A": {
+     "good": 5,
+     "bad": 3,
+     "n_good": 9,
+     "n_bad": 21
+    },
+    "stratum B": {
+     "good": 14,
+     "bad": 2,
+     "n_good": 14,
+     "n_bad": 2
+    }
+   },
+   "n_claims_kept": 204,
+   "contested": 3,
+   "contested_ex_both": 3,
+   "per_group": {
+    "0": {
+     "label": "Require non-QTS teachers in schools",
+     "mps_for": 1,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "2": {
+     "label": "Require home-educated children to be registered with local authorities",
+     "mps_for": 7,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "3": {
+     "label": "Expand free school meals to lift 100,000 children out of poverty",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "4": {
+     "label": "Remove tax breaks for private schools",
+     "mps_for": 7,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "5": {
+     "label": "Abolish academies",
+     "mps_for": 0,
+     "mps_against": 8,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "7": {
+     "label": "Introduce an education tax",
+     "mps_for": 1,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "15": {
+     "label": "Require academies to follow the national curriculum",
+     "mps_for": 6,
+     "mps_against": 7,
+     "both": 1,
+     "contested": true,
+     "contested_ex": true
+    },
+    "18": {
+     "label": "Introduce a register of children not in school",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "21": {
+     "label": "Abolish level 7 apprenticeships",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "28": {
+     "label": "Make it harder to turn failing schools into academies",
+     "mps_for": 0,
+     "mps_against": 5,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "33": {
+     "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+     "mps_for": 1,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "35": {
+     "label": "Charge VAT on private school fees",
+     "mps_for": 9,
+     "mps_against": 19,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "36": {
+     "label": "Require teachers to have qualified status",
+     "mps_for": 6,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "40": {
+     "label": "Abolish the option to home school",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "50": {
+     "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+     "mps_for": 3,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "61": {
+     "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+     "mps_for": 2,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "65": {
+     "label": "Create Skills England",
+     "mps_for": 10,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "91": {
+     "label": "Ban mobile phone use in schools",
+     "mps_for": 11,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "123": {
+     "label": "Require academies to follow a core of standards",
+     "mps_for": 2,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "149": {
+     "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+     "mps_for": 3,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    }
+   }
+  },
+  {
+   "param": 0.4,
+   "hand": {
+    "good": 44,
+    "bad": 3,
+    "Hinds": {
+     "good": 3,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 3
+    },
+    "handcheck1": {
+     "good": 24,
+     "bad": 0,
+     "n_good": 27,
+     "n_bad": 11
+    },
+    "stratum A": {
+     "good": 3,
+     "bad": 1,
+     "n_good": 9,
+     "n_bad": 21
+    },
+    "stratum B": {
+     "good": 14,
+     "bad": 2,
+     "n_good": 14,
+     "n_bad": 2
+    }
+   },
+   "n_claims_kept": 189,
+   "contested": 2,
+   "contested_ex_both": 2,
+   "per_group": {
+    "0": {
+     "label": "Require non-QTS teachers in schools",
+     "mps_for": 1,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "2": {
+     "label": "Require home-educated children to be registered with local authorities",
+     "mps_for": 7,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "3": {
+     "label": "Expand free school meals to lift 100,000 children out of poverty",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "4": {
+     "label": "Remove tax breaks for private schools",
+     "mps_for": 7,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "5": {
+     "label": "Abolish academies",
+     "mps_for": 0,
+     "mps_against": 8,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "7": {
+     "label": "Introduce an education tax",
+     "mps_for": 1,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "15": {
+     "label": "Require academies to follow the national curriculum",
+     "mps_for": 6,
+     "mps_against": 7,
+     "both": 1,
+     "contested": true,
+     "contested_ex": true
+    },
+    "18": {
+     "label": "Introduce a register of children not in school",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "21": {
+     "label": "Abolish level 7 apprenticeships",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "28": {
+     "label": "Make it harder to turn failing schools into academies",
+     "mps_for": 0,
+     "mps_against": 5,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "33": {
+     "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+     "mps_for": 1,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "35": {
+     "label": "Charge VAT on private school fees",
+     "mps_for": 9,
+     "mps_against": 19,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "36": {
+     "label": "Require teachers to have qualified status",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "40": {
+     "label": "Abolish the option to home school",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "50": {
+     "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+     "mps_for": 3,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "61": {
+     "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "65": {
+     "label": "Create Skills England",
+     "mps_for": 10,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "91": {
+     "label": "Ban mobile phone use in schools",
+     "mps_for": 10,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "123": {
+     "label": "Require academies to follow a core of standards",
+     "mps_for": 2,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "149": {
+     "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+     "mps_for": 3,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    }
+   }
+  },
+  {
+   "param": 0.45,
+   "hand": {
+    "good": 43,
+    "bad": 3,
+    "Hinds": {
+     "good": 3,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 3
+    },
+    "handcheck1": {
+     "good": 24,
+     "bad": 0,
+     "n_good": 27,
+     "n_bad": 11
+    },
+    "stratum A": {
+     "good": 2,
+     "bad": 1,
+     "n_good": 9,
+     "n_bad": 21
+    },
+    "stratum B": {
+     "good": 14,
+     "bad": 2,
+     "n_good": 14,
+     "n_bad": 2
+    }
+   },
+   "n_claims_kept": 183,
+   "contested": 2,
+   "contested_ex_both": 2,
+   "per_group": {
+    "0": {
+     "label": "Require non-QTS teachers in schools",
+     "mps_for": 1,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "2": {
+     "label": "Require home-educated children to be registered with local authorities",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "3": {
+     "label": "Expand free school meals to lift 100,000 children out of poverty",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "4": {
+     "label": "Remove tax breaks for private schools",
+     "mps_for": 7,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "5": {
+     "label": "Abolish academies",
+     "mps_for": 0,
+     "mps_against": 8,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "7": {
+     "label": "Introduce an education tax",
+     "mps_for": 1,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "15": {
+     "label": "Require academies to follow the national curriculum",
+     "mps_for": 6,
+     "mps_against": 7,
+     "both": 1,
+     "contested": true,
+     "contested_ex": true
+    },
+    "18": {
+     "label": "Introduce a register of children not in school",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "21": {
+     "label": "Abolish level 7 apprenticeships",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "28": {
+     "label": "Make it harder to turn failing schools into academies",
+     "mps_for": 0,
+     "mps_against": 5,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "33": {
+     "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+     "mps_for": 1,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "35": {
+     "label": "Charge VAT on private school fees",
+     "mps_for": 8,
+     "mps_against": 18,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "36": {
+     "label": "Require teachers to have qualified status",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "40": {
+     "label": "Abolish the option to home school",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "50": {
+     "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+     "mps_for": 3,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "61": {
+     "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "65": {
+     "label": "Create Skills England",
+     "mps_for": 10,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "91": {
+     "label": "Ban mobile phone use in schools",
+     "mps_for": 10,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "123": {
+     "label": "Require academies to follow a core of standards",
+     "mps_for": 2,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "149": {
+     "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+     "mps_for": 2,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    }
+   }
+  },
+  {
+   "param": 0.5,
+   "hand": {
+    "good": 40,
+    "bad": 2,
+    "Hinds": {
+     "good": 2,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 3
+    },
+    "handcheck1": {
+     "good": 24,
+     "bad": 0,
+     "n_good": 27,
+     "n_bad": 11
+    },
+    "stratum A": {
+     "good": 0,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 21
+    },
+    "stratum B": {
+     "good": 14,
+     "bad": 2,
+     "n_good": 14,
+     "n_bad": 2
+    }
+   },
+   "n_claims_kept": 164,
+   "contested": 2,
+   "contested_ex_both": 2,
+   "per_group": {
+    "0": {
+     "label": "Require non-QTS teachers in schools",
+     "mps_for": 1,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "2": {
+     "label": "Require home-educated children to be registered with local authorities",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "3": {
+     "label": "Expand free school meals to lift 100,000 children out of poverty",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "4": {
+     "label": "Remove tax breaks for private schools",
+     "mps_for": 7,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "5": {
+     "label": "Abolish academies",
+     "mps_for": 0,
+     "mps_against": 6,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "7": {
+     "label": "Introduce an education tax",
+     "mps_for": 1,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "15": {
+     "label": "Require academies to follow the national curriculum",
+     "mps_for": 5,
+     "mps_against": 7,
+     "both": 1,
+     "contested": true,
+     "contested_ex": true
+    },
+    "18": {
+     "label": "Introduce a register of children not in school",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "21": {
+     "label": "Abolish level 7 apprenticeships",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "28": {
+     "label": "Make it harder to turn failing schools into academies",
+     "mps_for": 0,
+     "mps_against": 3,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "33": {
+     "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "35": {
+     "label": "Charge VAT on private school fees",
+     "mps_for": 7,
+     "mps_against": 16,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "36": {
+     "label": "Require teachers to have qualified status",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "40": {
+     "label": "Abolish the option to home school",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "50": {
+     "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+     "mps_for": 3,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "61": {
+     "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "65": {
+     "label": "Create Skills England",
+     "mps_for": 10,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "91": {
+     "label": "Ban mobile phone use in schools",
+     "mps_for": 10,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "123": {
+     "label": "Require academies to follow a core of standards",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "149": {
+     "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+     "mps_for": 2,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    }
+   }
+  },
+  {
+   "param": 0.55,
+   "hand": {
+    "good": 36,
+    "bad": 1,
+    "Hinds": {
+     "good": 2,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 3
+    },
+    "handcheck1": {
+     "good": 24,
+     "bad": 0,
+     "n_good": 27,
+     "n_bad": 11
+    },
+    "stratum A": {
+     "good": 0,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 21
+    },
+    "stratum B": {
+     "good": 10,
+     "bad": 1,
+     "n_good": 14,
+     "n_bad": 2
+    }
+   },
+   "n_claims_kept": 155,
+   "contested": 2,
+   "contested_ex_both": 2,
+   "per_group": {
+    "0": {
+     "label": "Require non-QTS teachers in schools",
+     "mps_for": 1,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "2": {
+     "label": "Require home-educated children to be registered with local authorities",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "3": {
+     "label": "Expand free school meals to lift 100,000 children out of poverty",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "4": {
+     "label": "Remove tax breaks for private schools",
+     "mps_for": 7,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "5": {
+     "label": "Abolish academies",
+     "mps_for": 0,
+     "mps_against": 6,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "7": {
+     "label": "Introduce an education tax",
+     "mps_for": 1,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "15": {
+     "label": "Require academies to follow the national curriculum",
+     "mps_for": 4,
+     "mps_against": 4,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "18": {
+     "label": "Introduce a register of children not in school",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "21": {
+     "label": "Abolish level 7 apprenticeships",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "28": {
+     "label": "Make it harder to turn failing schools into academies",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "33": {
+     "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "35": {
+     "label": "Charge VAT on private school fees",
+     "mps_for": 7,
+     "mps_against": 15,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "36": {
+     "label": "Require teachers to have qualified status",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "40": {
+     "label": "Abolish the option to home school",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "50": {
+     "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+     "mps_for": 3,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "61": {
+     "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "65": {
+     "label": "Create Skills England",
+     "mps_for": 10,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "91": {
+     "label": "Ban mobile phone use in schools",
+     "mps_for": 9,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "123": {
+     "label": "Require academies to follow a core of standards",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "149": {
+     "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+     "mps_for": 2,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    }
+   }
+  },
+  {
+   "param": 0.6,
+   "hand": {
+    "good": 33,
+    "bad": 1,
+    "Hinds": {
+     "good": 2,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 3
+    },
+    "handcheck1": {
+     "good": 23,
+     "bad": 0,
+     "n_good": 27,
+     "n_bad": 11
+    },
+    "stratum A": {
+     "good": 0,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 21
+    },
+    "stratum B": {
+     "good": 8,
+     "bad": 1,
+     "n_good": 14,
+     "n_bad": 2
+    }
+   },
+   "n_claims_kept": 147,
+   "contested": 2,
+   "contested_ex_both": 2,
+   "per_group": {
+    "0": {
+     "label": "Require non-QTS teachers in schools",
+     "mps_for": 1,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "2": {
+     "label": "Require home-educated children to be registered with local authorities",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "3": {
+     "label": "Expand free school meals to lift 100,000 children out of poverty",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "4": {
+     "label": "Remove tax breaks for private schools",
+     "mps_for": 7,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "5": {
+     "label": "Abolish academies",
+     "mps_for": 0,
+     "mps_against": 6,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "7": {
+     "label": "Introduce an education tax",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "15": {
+     "label": "Require academies to follow the national curriculum",
+     "mps_for": 3,
+     "mps_against": 4,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "18": {
+     "label": "Introduce a register of children not in school",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "21": {
+     "label": "Abolish level 7 apprenticeships",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "28": {
+     "label": "Make it harder to turn failing schools into academies",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "33": {
+     "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "35": {
+     "label": "Charge VAT on private school fees",
+     "mps_for": 7,
+     "mps_against": 14,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "36": {
+     "label": "Require teachers to have qualified status",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "40": {
+     "label": "Abolish the option to home school",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "50": {
+     "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+     "mps_for": 3,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "61": {
+     "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "65": {
+     "label": "Create Skills England",
+     "mps_for": 10,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "91": {
+     "label": "Ban mobile phone use in schools",
+     "mps_for": 9,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "123": {
+     "label": "Require academies to follow a core of standards",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "149": {
+     "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+     "mps_for": 1,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    }
+   }
+  },
+  {
+   "param": 0.65,
+   "hand": {
+    "good": 31,
+    "bad": 1,
+    "Hinds": {
+     "good": 1,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 3
+    },
+    "handcheck1": {
+     "good": 23,
+     "bad": 0,
+     "n_good": 27,
+     "n_bad": 11
+    },
+    "stratum A": {
+     "good": 0,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 21
+    },
+    "stratum B": {
+     "good": 7,
+     "bad": 1,
+     "n_good": 14,
+     "n_bad": 2
+    }
+   },
+   "n_claims_kept": 136,
+   "contested": 2,
+   "contested_ex_both": 2,
+   "per_group": {
+    "0": {
+     "label": "Require non-QTS teachers in schools",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "2": {
+     "label": "Require home-educated children to be registered with local authorities",
+     "mps_for": 4,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "3": {
+     "label": "Expand free school meals to lift 100,000 children out of poverty",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "4": {
+     "label": "Remove tax breaks for private schools",
+     "mps_for": 7,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "5": {
+     "label": "Abolish academies",
+     "mps_for": 0,
+     "mps_against": 6,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "7": {
+     "label": "Introduce an education tax",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "15": {
+     "label": "Require academies to follow the national curriculum",
+     "mps_for": 3,
+     "mps_against": 4,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "18": {
+     "label": "Introduce a register of children not in school",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "21": {
+     "label": "Abolish level 7 apprenticeships",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "28": {
+     "label": "Make it harder to turn failing schools into academies",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "33": {
+     "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "35": {
+     "label": "Charge VAT on private school fees",
+     "mps_for": 7,
+     "mps_against": 14,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "36": {
+     "label": "Require teachers to have qualified status",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "40": {
+     "label": "Abolish the option to home school",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "50": {
+     "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "61": {
+     "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "65": {
+     "label": "Create Skills England",
+     "mps_for": 10,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "91": {
+     "label": "Ban mobile phone use in schools",
+     "mps_for": 9,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "123": {
+     "label": "Require academies to follow a core of standards",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "149": {
+     "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    }
+   }
+  },
+  {
+   "param": 0.7,
+   "hand": {
+    "good": 30,
+    "bad": 0,
+    "Hinds": {
+     "good": 1,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 3
+    },
+    "handcheck1": {
+     "good": 23,
+     "bad": 0,
+     "n_good": 27,
+     "n_bad": 11
+    },
+    "stratum A": {
+     "good": 0,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 21
+    },
+    "stratum B": {
+     "good": 6,
+     "bad": 0,
+     "n_good": 14,
+     "n_bad": 2
+    }
+   },
+   "n_claims_kept": 124,
+   "contested": 2,
+   "contested_ex_both": 2,
+   "per_group": {
+    "0": {
+     "label": "Require non-QTS teachers in schools",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "2": {
+     "label": "Require home-educated children to be registered with local authorities",
+     "mps_for": 4,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "3": {
+     "label": "Expand free school meals to lift 100,000 children out of poverty",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "4": {
+     "label": "Remove tax breaks for private schools",
+     "mps_for": 6,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "5": {
+     "label": "Abolish academies",
+     "mps_for": 0,
+     "mps_against": 5,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "7": {
+     "label": "Introduce an education tax",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "15": {
+     "label": "Require academies to follow the national curriculum",
+     "mps_for": 3,
+     "mps_against": 4,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "18": {
+     "label": "Introduce a register of children not in school",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "21": {
+     "label": "Abolish level 7 apprenticeships",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "28": {
+     "label": "Make it harder to turn failing schools into academies",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "33": {
+     "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "35": {
+     "label": "Charge VAT on private school fees",
+     "mps_for": 7,
+     "mps_against": 13,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "36": {
+     "label": "Require teachers to have qualified status",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "40": {
+     "label": "Abolish the option to home school",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "50": {
+     "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "61": {
+     "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "65": {
+     "label": "Create Skills England",
+     "mps_for": 10,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "91": {
+     "label": "Ban mobile phone use in schools",
+     "mps_for": 8,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "123": {
+     "label": "Require academies to follow a core of standards",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "149": {
+     "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    }
+   }
+  },
+  {
+   "param": 0.75,
+   "hand": {
+    "good": 27,
+    "bad": 0,
+    "Hinds": {
+     "good": 1,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 3
+    },
+    "handcheck1": {
+     "good": 20,
+     "bad": 0,
+     "n_good": 27,
+     "n_bad": 11
+    },
+    "stratum A": {
+     "good": 0,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 21
+    },
+    "stratum B": {
+     "good": 6,
+     "bad": 0,
+     "n_good": 14,
+     "n_bad": 2
+    }
+   },
+   "n_claims_kept": 114,
+   "contested": 2,
+   "contested_ex_both": 2,
+   "per_group": {
+    "0": {
+     "label": "Require non-QTS teachers in schools",
+     "mps_for": 0,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "2": {
+     "label": "Require home-educated children to be registered with local authorities",
+     "mps_for": 4,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "3": {
+     "label": "Expand free school meals to lift 100,000 children out of poverty",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "4": {
+     "label": "Remove tax breaks for private schools",
+     "mps_for": 4,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "5": {
+     "label": "Abolish academies",
+     "mps_for": 0,
+     "mps_against": 5,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "7": {
+     "label": "Introduce an education tax",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "15": {
+     "label": "Require academies to follow the national curriculum",
+     "mps_for": 3,
+     "mps_against": 4,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "18": {
+     "label": "Introduce a register of children not in school",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "21": {
+     "label": "Abolish level 7 apprenticeships",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "28": {
+     "label": "Make it harder to turn failing schools into academies",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "33": {
+     "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "35": {
+     "label": "Charge VAT on private school fees",
+     "mps_for": 6,
+     "mps_against": 12,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "36": {
+     "label": "Require teachers to have qualified status",
+     "mps_for": 5,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "40": {
+     "label": "Abolish the option to home school",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "50": {
+     "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "61": {
+     "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "65": {
+     "label": "Create Skills England",
+     "mps_for": 9,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "91": {
+     "label": "Ban mobile phone use in schools",
+     "mps_for": 8,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "123": {
+     "label": "Require academies to follow a core of standards",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "149": {
+     "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    }
+   }
+  },
+  {
+   "param": 0.8,
+   "hand": {
+    "good": 23,
+    "bad": 0,
+    "Hinds": {
+     "good": 0,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 3
+    },
+    "handcheck1": {
+     "good": 19,
+     "bad": 0,
+     "n_good": 27,
+     "n_bad": 11
+    },
+    "stratum A": {
+     "good": 0,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 21
+    },
+    "stratum B": {
+     "good": 4,
+     "bad": 0,
+     "n_good": 14,
+     "n_bad": 2
+    }
+   },
+   "n_claims_kept": 101,
+   "contested": 2,
+   "contested_ex_both": 2,
+   "per_group": {
+    "0": {
+     "label": "Require non-QTS teachers in schools",
+     "mps_for": 0,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "2": {
+     "label": "Require home-educated children to be registered with local authorities",
+     "mps_for": 3,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "3": {
+     "label": "Expand free school meals to lift 100,000 children out of poverty",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "4": {
+     "label": "Remove tax breaks for private schools",
+     "mps_for": 4,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "5": {
+     "label": "Abolish academies",
+     "mps_for": 0,
+     "mps_against": 4,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "7": {
+     "label": "Introduce an education tax",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "15": {
+     "label": "Require academies to follow the national curriculum",
+     "mps_for": 3,
+     "mps_against": 3,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "18": {
+     "label": "Introduce a register of children not in school",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "21": {
+     "label": "Abolish level 7 apprenticeships",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "28": {
+     "label": "Make it harder to turn failing schools into academies",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "33": {
+     "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "35": {
+     "label": "Charge VAT on private school fees",
+     "mps_for": 6,
+     "mps_against": 9,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "36": {
+     "label": "Require teachers to have qualified status",
+     "mps_for": 5,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "40": {
+     "label": "Abolish the option to home school",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "50": {
+     "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "61": {
+     "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "65": {
+     "label": "Create Skills England",
+     "mps_for": 9,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "91": {
+     "label": "Ban mobile phone use in schools",
+     "mps_for": 7,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "123": {
+     "label": "Require academies to follow a core of standards",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "149": {
+     "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    }
+   }
+  },
+  {
+   "param": 0.85,
+   "hand": {
+    "good": 20,
+    "bad": 0,
+    "Hinds": {
+     "good": 0,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 3
+    },
+    "handcheck1": {
+     "good": 17,
+     "bad": 0,
+     "n_good": 27,
+     "n_bad": 11
+    },
+    "stratum A": {
+     "good": 0,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 21
+    },
+    "stratum B": {
+     "good": 3,
+     "bad": 0,
+     "n_good": 14,
+     "n_bad": 2
+    }
+   },
+   "n_claims_kept": 85,
+   "contested": 2,
+   "contested_ex_both": 2,
+   "per_group": {
+    "0": {
+     "label": "Require non-QTS teachers in schools",
+     "mps_for": 0,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "2": {
+     "label": "Require home-educated children to be registered with local authorities",
+     "mps_for": 3,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "3": {
+     "label": "Expand free school meals to lift 100,000 children out of poverty",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "4": {
+     "label": "Remove tax breaks for private schools",
+     "mps_for": 4,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "5": {
+     "label": "Abolish academies",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "7": {
+     "label": "Introduce an education tax",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "15": {
+     "label": "Require academies to follow the national curriculum",
+     "mps_for": 3,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "18": {
+     "label": "Introduce a register of children not in school",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "21": {
+     "label": "Abolish level 7 apprenticeships",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "28": {
+     "label": "Make it harder to turn failing schools into academies",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "33": {
+     "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "35": {
+     "label": "Charge VAT on private school fees",
+     "mps_for": 5,
+     "mps_against": 8,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "36": {
+     "label": "Require teachers to have qualified status",
+     "mps_for": 5,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "40": {
+     "label": "Abolish the option to home school",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "50": {
+     "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "61": {
+     "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "65": {
+     "label": "Create Skills England",
+     "mps_for": 8,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "91": {
+     "label": "Ban mobile phone use in schools",
+     "mps_for": 7,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "123": {
+     "label": "Require academies to follow a core of standards",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "149": {
+     "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+     "mps_for": 0,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    }
+   }
+  },
+  {
+   "param": 0.9,
+   "hand": {
+    "good": 15,
+    "bad": 0,
+    "Hinds": {
+     "good": 0,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 3
+    },
+    "handcheck1": {
+     "good": 13,
+     "bad": 0,
+     "n_good": 27,
+     "n_bad": 11
+    },
+    "stratum A": {
+     "good": 0,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 21
+    },
+    "stratum B": {
+     "good": 2,
+     "bad": 0,
+     "n_good": 14,
+     "n_bad": 2
+    }
+   },
+   "n_claims_kept": 61,
+   "contested": 1,
+   "contested_ex_both": 1,
+   "per_group": {
+    "0": {
+     "label": "Require non-QTS teachers in schools",
+     "mps_for": 0,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "2": {
+     "label": "Require home-educated children to be registered with local authorities",
+     "mps_for": 3,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "3": {
+     "label": "Expand free school meals to lift 100,000 children out of poverty",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "4": {
+     "label": "Remove tax breaks for private schools",
+     "mps_for": 3,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "5": {
+     "label": "Abolish academies",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "7": {
+     "label": "Introduce an education tax",
+     "mps_for": 0,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "15": {
+     "label": "Require academies to follow the national curriculum",
+     "mps_for": 2,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "18": {
+     "label": "Introduce a register of children not in school",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "21": {
+     "label": "Abolish level 7 apprenticeships",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "28": {
+     "label": "Make it harder to turn failing schools into academies",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "33": {
+     "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "35": {
+     "label": "Charge VAT on private school fees",
+     "mps_for": 4,
+     "mps_against": 3,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "36": {
+     "label": "Require teachers to have qualified status",
+     "mps_for": 4,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "40": {
+     "label": "Abolish the option to home school",
+     "mps_for": 0,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "50": {
+     "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "61": {
+     "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+     "mps_for": 0,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "65": {
+     "label": "Create Skills England",
+     "mps_for": 8,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "91": {
+     "label": "Ban mobile phone use in schools",
+     "mps_for": 7,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "123": {
+     "label": "Require academies to follow a core of standards",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "149": {
+     "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+     "mps_for": 0,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    }
+   }
+  },
+  {
+   "param": 0.95,
+   "hand": {
+    "good": 9,
+    "bad": 0,
+    "Hinds": {
+     "good": 0,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 3
+    },
+    "handcheck1": {
+     "good": 8,
+     "bad": 0,
+     "n_good": 27,
+     "n_bad": 11
+    },
+    "stratum A": {
+     "good": 0,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 21
+    },
+    "stratum B": {
+     "good": 1,
+     "bad": 0,
+     "n_good": 14,
+     "n_bad": 2
+    }
+   },
+   "n_claims_kept": 34,
+   "contested": 0,
+   "contested_ex_both": 0,
+   "per_group": {
+    "0": {
+     "label": "Require non-QTS teachers in schools",
+     "mps_for": 0,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "2": {
+     "label": "Require home-educated children to be registered with local authorities",
+     "mps_for": 3,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "3": {
+     "label": "Expand free school meals to lift 100,000 children out of poverty",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "4": {
+     "label": "Remove tax breaks for private schools",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "5": {
+     "label": "Abolish academies",
+     "mps_for": 0,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "7": {
+     "label": "Introduce an education tax",
+     "mps_for": 0,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "15": {
+     "label": "Require academies to follow the national curriculum",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "18": {
+     "label": "Introduce a register of children not in school",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "21": {
+     "label": "Abolish level 7 apprenticeships",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "28": {
+     "label": "Make it harder to turn failing schools into academies",
+     "mps_for": 0,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "33": {
+     "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+     "mps_for": 0,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "35": {
+     "label": "Charge VAT on private school fees",
+     "mps_for": 3,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "36": {
+     "label": "Require teachers to have qualified status",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "40": {
+     "label": "Abolish the option to home school",
+     "mps_for": 0,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "50": {
+     "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "61": {
+     "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+     "mps_for": 0,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "65": {
+     "label": "Create Skills England",
+     "mps_for": 3,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "91": {
+     "label": "Ban mobile phone use in schools",
+     "mps_for": 5,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "123": {
+     "label": "Require academies to follow a core of standards",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "149": {
+     "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+     "mps_for": 0,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    }
+   }
+  }
+ ],
+ "margin_table": [
+  {
+   "param": 0.0,
+   "hand": {
+    "good": 58,
+    "bad": 21,
+    "Hinds": {
+     "good": 8,
+     "bad": 2,
+     "n_good": 9,
+     "n_bad": 3
+    },
+    "handcheck1": {
+     "good": 27,
+     "bad": 4,
+     "n_good": 27,
+     "n_bad": 11
+    },
+    "stratum A": {
+     "good": 9,
+     "bad": 13,
+     "n_good": 9,
+     "n_bad": 21
+    },
+    "stratum B": {
+     "good": 14,
+     "bad": 2,
+     "n_good": 14,
+     "n_bad": 2
+    }
+   },
+   "n_claims_kept": 277,
+   "contested": 11,
+   "contested_ex_both": 10,
+   "per_group": {
+    "0": {
+     "label": "Require non-QTS teachers in schools",
+     "mps_for": 1,
+     "mps_against": 3,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "2": {
+     "label": "Require home-educated children to be registered with local authorities",
+     "mps_for": 11,
+     "mps_against": 3,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "3": {
+     "label": "Expand free school meals to lift 100,000 children out of poverty",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "4": {
+     "label": "Remove tax breaks for private schools",
+     "mps_for": 7,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "5": {
+     "label": "Abolish academies",
+     "mps_for": 0,
+     "mps_against": 9,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "7": {
+     "label": "Introduce an education tax",
+     "mps_for": 1,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "15": {
+     "label": "Require academies to follow the national curriculum",
+     "mps_for": 8,
+     "mps_against": 11,
+     "both": 2,
+     "contested": true,
+     "contested_ex": true
+    },
+    "18": {
+     "label": "Introduce a register of children not in school",
+     "mps_for": 8,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "21": {
+     "label": "Abolish level 7 apprenticeships",
+     "mps_for": 0,
+     "mps_against": 4,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "28": {
+     "label": "Make it harder to turn failing schools into academies",
+     "mps_for": 0,
+     "mps_against": 6,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "33": {
+     "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+     "mps_for": 4,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "35": {
+     "label": "Charge VAT on private school fees",
+     "mps_for": 9,
+     "mps_against": 25,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "36": {
+     "label": "Require teachers to have qualified status",
+     "mps_for": 6,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "40": {
+     "label": "Abolish the option to home school",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "50": {
+     "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+     "mps_for": 3,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "61": {
+     "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+     "mps_for": 3,
+     "mps_against": 2,
+     "both": 1,
+     "contested": true,
+     "contested_ex": false
+    },
+    "65": {
+     "label": "Create Skills England",
+     "mps_for": 10,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "91": {
+     "label": "Ban mobile phone use in schools",
+     "mps_for": 12,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "123": {
+     "label": "Require academies to follow a core of standards",
+     "mps_for": 2,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "149": {
+     "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+     "mps_for": 4,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    }
+   }
+  },
+  {
+   "param": 0.1,
+   "hand": {
+    "good": 53,
+    "bad": 12,
+    "Hinds": {
+     "good": 6,
+     "bad": 1,
+     "n_good": 9,
+     "n_bad": 3
+    },
+    "handcheck1": {
+     "good": 26,
+     "bad": 1,
+     "n_good": 27,
+     "n_bad": 11
+    },
+    "stratum A": {
+     "good": 7,
+     "bad": 8,
+     "n_good": 9,
+     "n_bad": 21
+    },
+    "stratum B": {
+     "good": 14,
+     "bad": 2,
+     "n_good": 14,
+     "n_bad": 2
+    }
+   },
+   "n_claims_kept": 235,
+   "contested": 6,
+   "contested_ex_both": 6,
+   "per_group": {
+    "0": {
+     "label": "Require non-QTS teachers in schools",
+     "mps_for": 1,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "2": {
+     "label": "Require home-educated children to be registered with local authorities",
+     "mps_for": 7,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "3": {
+     "label": "Expand free school meals to lift 100,000 children out of poverty",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "4": {
+     "label": "Remove tax breaks for private schools",
+     "mps_for": 7,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "5": {
+     "label": "Abolish academies",
+     "mps_for": 0,
+     "mps_against": 9,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "7": {
+     "label": "Introduce an education tax",
+     "mps_for": 1,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "15": {
+     "label": "Require academies to follow the national curriculum",
+     "mps_for": 6,
+     "mps_against": 8,
+     "both": 1,
+     "contested": true,
+     "contested_ex": true
+    },
+    "18": {
+     "label": "Introduce a register of children not in school",
+     "mps_for": 6,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "21": {
+     "label": "Abolish level 7 apprenticeships",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "28": {
+     "label": "Make it harder to turn failing schools into academies",
+     "mps_for": 0,
+     "mps_against": 6,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "33": {
+     "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+     "mps_for": 2,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "35": {
+     "label": "Charge VAT on private school fees",
+     "mps_for": 9,
+     "mps_against": 22,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "36": {
+     "label": "Require teachers to have qualified status",
+     "mps_for": 6,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "40": {
+     "label": "Abolish the option to home school",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "50": {
+     "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+     "mps_for": 3,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "61": {
+     "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+     "mps_for": 3,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "65": {
+     "label": "Create Skills England",
+     "mps_for": 10,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "91": {
+     "label": "Ban mobile phone use in schools",
+     "mps_for": 12,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "123": {
+     "label": "Require academies to follow a core of standards",
+     "mps_for": 2,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "149": {
+     "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+     "mps_for": 4,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    }
+   }
+  },
+  {
+   "param": 0.2,
+   "hand": {
+    "good": 51,
+    "bad": 10,
+    "Hinds": {
+     "good": 5,
+     "bad": 1,
+     "n_good": 9,
+     "n_bad": 3
+    },
+    "handcheck1": {
+     "good": 26,
+     "bad": 1,
+     "n_good": 27,
+     "n_bad": 11
+    },
+    "stratum A": {
+     "good": 6,
+     "bad": 6,
+     "n_good": 9,
+     "n_bad": 21
+    },
+    "stratum B": {
+     "good": 14,
+     "bad": 2,
+     "n_good": 14,
+     "n_bad": 2
+    }
+   },
+   "n_claims_kept": 216,
+   "contested": 5,
+   "contested_ex_both": 5,
+   "per_group": {
+    "0": {
+     "label": "Require non-QTS teachers in schools",
+     "mps_for": 1,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "2": {
+     "label": "Require home-educated children to be registered with local authorities",
+     "mps_for": 7,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "3": {
+     "label": "Expand free school meals to lift 100,000 children out of poverty",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "4": {
+     "label": "Remove tax breaks for private schools",
+     "mps_for": 7,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "5": {
+     "label": "Abolish academies",
+     "mps_for": 0,
+     "mps_against": 8,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "7": {
+     "label": "Introduce an education tax",
+     "mps_for": 1,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "15": {
+     "label": "Require academies to follow the national curriculum",
+     "mps_for": 6,
+     "mps_against": 7,
+     "both": 1,
+     "contested": true,
+     "contested_ex": true
+    },
+    "18": {
+     "label": "Introduce a register of children not in school",
+     "mps_for": 6,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "21": {
+     "label": "Abolish level 7 apprenticeships",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "28": {
+     "label": "Make it harder to turn failing schools into academies",
+     "mps_for": 0,
+     "mps_against": 5,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "33": {
+     "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+     "mps_for": 1,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "35": {
+     "label": "Charge VAT on private school fees",
+     "mps_for": 9,
+     "mps_against": 21,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "36": {
+     "label": "Require teachers to have qualified status",
+     "mps_for": 6,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "40": {
+     "label": "Abolish the option to home school",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "50": {
+     "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+     "mps_for": 3,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "61": {
+     "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+     "mps_for": 3,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "65": {
+     "label": "Create Skills England",
+     "mps_for": 10,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "91": {
+     "label": "Ban mobile phone use in schools",
+     "mps_for": 11,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "123": {
+     "label": "Require academies to follow a core of standards",
+     "mps_for": 2,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "149": {
+     "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+     "mps_for": 3,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    }
+   }
+  },
+  {
+   "param": 0.3,
+   "hand": {
+    "good": 44,
+    "bad": 4,
+    "Hinds": {
+     "good": 3,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 3
+    },
+    "handcheck1": {
+     "good": 24,
+     "bad": 0,
+     "n_good": 27,
+     "n_bad": 11
+    },
+    "stratum A": {
+     "good": 3,
+     "bad": 2,
+     "n_good": 9,
+     "n_bad": 21
+    },
+    "stratum B": {
+     "good": 14,
+     "bad": 2,
+     "n_good": 14,
+     "n_bad": 2
+    }
+   },
+   "n_claims_kept": 189,
+   "contested": 2,
+   "contested_ex_both": 2,
+   "per_group": {
+    "0": {
+     "label": "Require non-QTS teachers in schools",
+     "mps_for": 1,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "2": {
+     "label": "Require home-educated children to be registered with local authorities",
+     "mps_for": 7,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "3": {
+     "label": "Expand free school meals to lift 100,000 children out of poverty",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "4": {
+     "label": "Remove tax breaks for private schools",
+     "mps_for": 7,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "5": {
+     "label": "Abolish academies",
+     "mps_for": 0,
+     "mps_against": 8,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "7": {
+     "label": "Introduce an education tax",
+     "mps_for": 1,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "15": {
+     "label": "Require academies to follow the national curriculum",
+     "mps_for": 6,
+     "mps_against": 7,
+     "both": 1,
+     "contested": true,
+     "contested_ex": true
+    },
+    "18": {
+     "label": "Introduce a register of children not in school",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "21": {
+     "label": "Abolish level 7 apprenticeships",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "28": {
+     "label": "Make it harder to turn failing schools into academies",
+     "mps_for": 0,
+     "mps_against": 3,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "33": {
+     "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+     "mps_for": 1,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "35": {
+     "label": "Charge VAT on private school fees",
+     "mps_for": 9,
+     "mps_against": 19,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "36": {
+     "label": "Require teachers to have qualified status",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "40": {
+     "label": "Abolish the option to home school",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "50": {
+     "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+     "mps_for": 3,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "61": {
+     "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "65": {
+     "label": "Create Skills England",
+     "mps_for": 10,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "91": {
+     "label": "Ban mobile phone use in schools",
+     "mps_for": 11,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "123": {
+     "label": "Require academies to follow a core of standards",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "149": {
+     "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+     "mps_for": 3,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    }
+   }
+  },
+  {
+   "param": 0.4,
+   "hand": {
+    "good": 38,
+    "bad": 2,
+    "Hinds": {
+     "good": 2,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 3
+    },
+    "handcheck1": {
+     "good": 24,
+     "bad": 0,
+     "n_good": 27,
+     "n_bad": 11
+    },
+    "stratum A": {
+     "good": 0,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 21
+    },
+    "stratum B": {
+     "good": 12,
+     "bad": 2,
+     "n_good": 14,
+     "n_bad": 2
+    }
+   },
+   "n_claims_kept": 167,
+   "contested": 2,
+   "contested_ex_both": 2,
+   "per_group": {
+    "0": {
+     "label": "Require non-QTS teachers in schools",
+     "mps_for": 1,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "2": {
+     "label": "Require home-educated children to be registered with local authorities",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "3": {
+     "label": "Expand free school meals to lift 100,000 children out of poverty",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "4": {
+     "label": "Remove tax breaks for private schools",
+     "mps_for": 7,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "5": {
+     "label": "Abolish academies",
+     "mps_for": 0,
+     "mps_against": 7,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "7": {
+     "label": "Introduce an education tax",
+     "mps_for": 1,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "15": {
+     "label": "Require academies to follow the national curriculum",
+     "mps_for": 5,
+     "mps_against": 6,
+     "both": 1,
+     "contested": true,
+     "contested_ex": true
+    },
+    "18": {
+     "label": "Introduce a register of children not in school",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "21": {
+     "label": "Abolish level 7 apprenticeships",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "28": {
+     "label": "Make it harder to turn failing schools into academies",
+     "mps_for": 0,
+     "mps_against": 3,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "33": {
+     "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "35": {
+     "label": "Charge VAT on private school fees",
+     "mps_for": 7,
+     "mps_against": 18,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "36": {
+     "label": "Require teachers to have qualified status",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "40": {
+     "label": "Abolish the option to home school",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "50": {
+     "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+     "mps_for": 3,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "61": {
+     "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "65": {
+     "label": "Create Skills England",
+     "mps_for": 10,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "91": {
+     "label": "Ban mobile phone use in schools",
+     "mps_for": 10,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "123": {
+     "label": "Require academies to follow a core of standards",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "149": {
+     "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+     "mps_for": 2,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    }
+   }
+  },
+  {
+   "param": 0.5,
+   "hand": {
+    "good": 35,
+    "bad": 1,
+    "Hinds": {
+     "good": 2,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 3
+    },
+    "handcheck1": {
+     "good": 24,
+     "bad": 0,
+     "n_good": 27,
+     "n_bad": 11
+    },
+    "stratum A": {
+     "good": 0,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 21
+    },
+    "stratum B": {
+     "good": 9,
+     "bad": 1,
+     "n_good": 14,
+     "n_bad": 2
+    }
+   },
+   "n_claims_kept": 152,
+   "contested": 2,
+   "contested_ex_both": 2,
+   "per_group": {
+    "0": {
+     "label": "Require non-QTS teachers in schools",
+     "mps_for": 1,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "2": {
+     "label": "Require home-educated children to be registered with local authorities",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "3": {
+     "label": "Expand free school meals to lift 100,000 children out of poverty",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "4": {
+     "label": "Remove tax breaks for private schools",
+     "mps_for": 7,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "5": {
+     "label": "Abolish academies",
+     "mps_for": 0,
+     "mps_against": 6,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "7": {
+     "label": "Introduce an education tax",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "15": {
+     "label": "Require academies to follow the national curriculum",
+     "mps_for": 4,
+     "mps_against": 4,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "18": {
+     "label": "Introduce a register of children not in school",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "21": {
+     "label": "Abolish level 7 apprenticeships",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "28": {
+     "label": "Make it harder to turn failing schools into academies",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "33": {
+     "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "35": {
+     "label": "Charge VAT on private school fees",
+     "mps_for": 7,
+     "mps_against": 15,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "36": {
+     "label": "Require teachers to have qualified status",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "40": {
+     "label": "Abolish the option to home school",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "50": {
+     "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+     "mps_for": 3,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "61": {
+     "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "65": {
+     "label": "Create Skills England",
+     "mps_for": 10,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "91": {
+     "label": "Ban mobile phone use in schools",
+     "mps_for": 10,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "123": {
+     "label": "Require academies to follow a core of standards",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "149": {
+     "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+     "mps_for": 1,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    }
+   }
+  },
+  {
+   "param": 0.6,
+   "hand": {
+    "good": 31,
+    "bad": 1,
+    "Hinds": {
+     "good": 1,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 3
+    },
+    "handcheck1": {
+     "good": 23,
+     "bad": 0,
+     "n_good": 27,
+     "n_bad": 11
+    },
+    "stratum A": {
+     "good": 0,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 21
+    },
+    "stratum B": {
+     "good": 7,
+     "bad": 1,
+     "n_good": 14,
+     "n_bad": 2
+    }
+   },
+   "n_claims_kept": 135,
+   "contested": 2,
+   "contested_ex_both": 2,
+   "per_group": {
+    "0": {
+     "label": "Require non-QTS teachers in schools",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "2": {
+     "label": "Require home-educated children to be registered with local authorities",
+     "mps_for": 4,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "3": {
+     "label": "Expand free school meals to lift 100,000 children out of poverty",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "4": {
+     "label": "Remove tax breaks for private schools",
+     "mps_for": 6,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "5": {
+     "label": "Abolish academies",
+     "mps_for": 0,
+     "mps_against": 6,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "7": {
+     "label": "Introduce an education tax",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "15": {
+     "label": "Require academies to follow the national curriculum",
+     "mps_for": 3,
+     "mps_against": 4,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "18": {
+     "label": "Introduce a register of children not in school",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "21": {
+     "label": "Abolish level 7 apprenticeships",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "28": {
+     "label": "Make it harder to turn failing schools into academies",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "33": {
+     "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "35": {
+     "label": "Charge VAT on private school fees",
+     "mps_for": 7,
+     "mps_against": 14,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "36": {
+     "label": "Require teachers to have qualified status",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "40": {
+     "label": "Abolish the option to home school",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "50": {
+     "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "61": {
+     "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "65": {
+     "label": "Create Skills England",
+     "mps_for": 10,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "91": {
+     "label": "Ban mobile phone use in schools",
+     "mps_for": 9,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "123": {
+     "label": "Require academies to follow a core of standards",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "149": {
+     "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    }
+   }
+  },
+  {
+   "param": 0.7,
+   "hand": {
+    "good": 26,
+    "bad": 0,
+    "Hinds": {
+     "good": 1,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 3
+    },
+    "handcheck1": {
+     "good": 20,
+     "bad": 0,
+     "n_good": 27,
+     "n_bad": 11
+    },
+    "stratum A": {
+     "good": 0,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 21
+    },
+    "stratum B": {
+     "good": 5,
+     "bad": 0,
+     "n_good": 14,
+     "n_bad": 2
+    }
+   },
+   "n_claims_kept": 114,
+   "contested": 2,
+   "contested_ex_both": 2,
+   "per_group": {
+    "0": {
+     "label": "Require non-QTS teachers in schools",
+     "mps_for": 0,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "2": {
+     "label": "Require home-educated children to be registered with local authorities",
+     "mps_for": 4,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "3": {
+     "label": "Expand free school meals to lift 100,000 children out of poverty",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "4": {
+     "label": "Remove tax breaks for private schools",
+     "mps_for": 5,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "5": {
+     "label": "Abolish academies",
+     "mps_for": 0,
+     "mps_against": 4,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "7": {
+     "label": "Introduce an education tax",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "15": {
+     "label": "Require academies to follow the national curriculum",
+     "mps_for": 3,
+     "mps_against": 4,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "18": {
+     "label": "Introduce a register of children not in school",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "21": {
+     "label": "Abolish level 7 apprenticeships",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "28": {
+     "label": "Make it harder to turn failing schools into academies",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "33": {
+     "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "35": {
+     "label": "Charge VAT on private school fees",
+     "mps_for": 6,
+     "mps_against": 11,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "36": {
+     "label": "Require teachers to have qualified status",
+     "mps_for": 5,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "40": {
+     "label": "Abolish the option to home school",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "50": {
+     "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "61": {
+     "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "65": {
+     "label": "Create Skills England",
+     "mps_for": 10,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "91": {
+     "label": "Ban mobile phone use in schools",
+     "mps_for": 8,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "123": {
+     "label": "Require academies to follow a core of standards",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "149": {
+     "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    }
+   }
+  },
+  {
+   "param": 0.8,
+   "hand": {
+    "good": 20,
+    "bad": 0,
+    "Hinds": {
+     "good": 0,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 3
+    },
+    "handcheck1": {
+     "good": 17,
+     "bad": 0,
+     "n_good": 27,
+     "n_bad": 11
+    },
+    "stratum A": {
+     "good": 0,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 21
+    },
+    "stratum B": {
+     "good": 3,
+     "bad": 0,
+     "n_good": 14,
+     "n_bad": 2
+    }
+   },
+   "n_claims_kept": 88,
+   "contested": 2,
+   "contested_ex_both": 2,
+   "per_group": {
+    "0": {
+     "label": "Require non-QTS teachers in schools",
+     "mps_for": 0,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "2": {
+     "label": "Require home-educated children to be registered with local authorities",
+     "mps_for": 3,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "3": {
+     "label": "Expand free school meals to lift 100,000 children out of poverty",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "4": {
+     "label": "Remove tax breaks for private schools",
+     "mps_for": 4,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "5": {
+     "label": "Abolish academies",
+     "mps_for": 0,
+     "mps_against": 2,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "7": {
+     "label": "Introduce an education tax",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "15": {
+     "label": "Require academies to follow the national curriculum",
+     "mps_for": 3,
+     "mps_against": 2,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "18": {
+     "label": "Introduce a register of children not in school",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "21": {
+     "label": "Abolish level 7 apprenticeships",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "28": {
+     "label": "Make it harder to turn failing schools into academies",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "33": {
+     "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "35": {
+     "label": "Charge VAT on private school fees",
+     "mps_for": 6,
+     "mps_against": 7,
+     "both": 0,
+     "contested": true,
+     "contested_ex": true
+    },
+    "36": {
+     "label": "Require teachers to have qualified status",
+     "mps_for": 5,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "40": {
+     "label": "Abolish the option to home school",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "50": {
+     "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+     "mps_for": 2,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "61": {
+     "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "65": {
+     "label": "Create Skills England",
+     "mps_for": 9,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "91": {
+     "label": "Ban mobile phone use in schools",
+     "mps_for": 7,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "123": {
+     "label": "Require academies to follow a core of standards",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "149": {
+     "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+     "mps_for": 0,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    }
+   }
+  },
+  {
+   "param": 0.9,
+   "hand": {
+    "good": 12,
+    "bad": 0,
+    "Hinds": {
+     "good": 0,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 3
+    },
+    "handcheck1": {
+     "good": 10,
+     "bad": 0,
+     "n_good": 27,
+     "n_bad": 11
+    },
+    "stratum A": {
+     "good": 0,
+     "bad": 0,
+     "n_good": 9,
+     "n_bad": 21
+    },
+    "stratum B": {
+     "good": 2,
+     "bad": 0,
+     "n_good": 14,
+     "n_bad": 2
+    }
+   },
+   "n_claims_kept": 45,
+   "contested": 0,
+   "contested_ex_both": 0,
+   "per_group": {
+    "0": {
+     "label": "Require non-QTS teachers in schools",
+     "mps_for": 0,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "2": {
+     "label": "Require home-educated children to be registered with local authorities",
+     "mps_for": 3,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "3": {
+     "label": "Expand free school meals to lift 100,000 children out of poverty",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "4": {
+     "label": "Remove tax breaks for private schools",
+     "mps_for": 3,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "5": {
+     "label": "Abolish academies",
+     "mps_for": 0,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "7": {
+     "label": "Introduce an education tax",
+     "mps_for": 0,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "15": {
+     "label": "Require academies to follow the national curriculum",
+     "mps_for": 2,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "18": {
+     "label": "Introduce a register of children not in school",
+     "mps_for": 6,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "21": {
+     "label": "Abolish level 7 apprenticeships",
+     "mps_for": 0,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "28": {
+     "label": "Make it harder to turn failing schools into academies",
+     "mps_for": 0,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "33": {
+     "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+     "mps_for": 0,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "35": {
+     "label": "Charge VAT on private school fees",
+     "mps_for": 3,
+     "mps_against": 1,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "36": {
+     "label": "Require teachers to have qualified status",
+     "mps_for": 3,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "40": {
+     "label": "Abolish the option to home school",
+     "mps_for": 0,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "50": {
+     "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "61": {
+     "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+     "mps_for": 0,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "65": {
+     "label": "Create Skills England",
+     "mps_for": 5,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "91": {
+     "label": "Ban mobile phone use in schools",
+     "mps_for": 7,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "123": {
+     "label": "Require academies to follow a core of standards",
+     "mps_for": 1,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    },
+    "149": {
+     "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+     "mps_for": 0,
+     "mps_against": 0,
+     "both": 0,
+     "contested": false,
+     "contested_ex": false
+    }
+   }
+  }
+ ],
+ "t_with_zero_bad": [
+  0.7,
+  0.75,
+  0.8,
+  0.85,
+  0.9,
+  0.95
+ ],
+ "m_with_zero_bad": [
+  0.7,
+  0.8,
+  0.9
+ ],
+ "good_dropped_by_current": {
+  "n": 19,
+  "s_quantiles": [
+   0.14,
+   0.2,
+   0.31,
+   0.355,
+   0.49
+  ],
+  "s_list": [
+   0.14,
+   0.16,
+   0.16,
+   0.17,
+   0.19,
+   0.21,
+   0.29,
+   0.29,
+   0.29,
+   0.31,
+   0.32,
+   0.34,
+   0.35,
+   0.35,
+   0.36,
+   0.41,
+   0.45,
+   0.46,
+   0.49
+  ]
+ },
+ "s_quantiles_all_364": [
+  0.02,
+  0.14,
+  0.45,
+  0.823,
+  0.98
+ ],
+ "frac_all_s_below_0_05": 0.04395604395604396,
+ "hand_stance_mismatch": 0
+}

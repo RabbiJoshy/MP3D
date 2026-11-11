@@ -1,0 +1,248 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Where MPs stand: this Parliament's fights</title>
+<style>
+:root{--bg:#f6f4ee;--card:#fff;--ink:#1b2230;--dim:#5f6b7a;--line:#dcd8cc;--brass:#9a7a1e;--warn:#fff3c9;--warnink:#5a4500;--r:8px;--ok:#2d7a3a;--bad:#b3402a;--chip:#ece8dc;
+--display:"Bricolage Grotesque","Trebuchet MS",sans-serif;--body:"Source Sans 3","Segoe UI",system-ui,sans-serif;color-scheme:light}
+@media(prefers-color-scheme:dark){:root{--bg:#0e1117;--card:#161b24;--ink:#eef1f5;--dim:#9aa4b2;--line:#273142;--brass:#d9b45f;--warn:#3a3016;--warnink:#f1da8c;--ok:#8fd694;--bad:#e58e7a;--chip:#1e2531;color-scheme:dark}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 var(--body)}
+.w{max-width:1040px;margin:0 auto;padding:0 16px 48px}
+h1{font:700 2rem/1.1 var(--display);margin:20px 0 8px}h2{font:700 1.2rem var(--display);margin:28px 0 4px}
+.wip{background:var(--warn);color:var(--warnink);border:1px solid var(--brass);border-radius:var(--r);padding:8px 12px;font-weight:600;margin-top:14px}
+.how{color:var(--dim);max-width:75ch}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:16px 0}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:10px 12px}.stat b{display:block;font:700 1.8rem var(--display)}.stat span{color:var(--dim);font-size:.9rem}
+.badge.chk{color:var(--ok);border-color:var(--ok);margin-left:6px;vertical-align:middle;font-weight:400}.spl{background:var(--chip);border-radius:var(--r);padding:6px 10px;margin-top:12px;font-size:.9rem}.spl i{color:var(--dim);font-style:normal}.cnum{font-size:.78rem;color:var(--dim);margin-left:6px}
+.sub{color:var(--dim);margin:0 0 8px;font-size:.92rem}
+.legend{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:.85rem;color:var(--dim);margin:8px 0}
+.dot{display:inline-block;width:12px;height:12px;border-radius:50%;flex:none;border:1px solid rgba(0,0,0,.3)}
+.dot.snp{border-color:#333}
+.tabs{display:flex;gap:6px;margin:18px 0 4px;border-bottom:2px solid var(--line)}
+.tabs button{font:600 1rem var(--display);background:none;border:0;border-bottom:3px solid transparent;margin-bottom:-2px;padding:8px 14px;color:var(--dim);cursor:pointer}
+.tabs button[aria-selected=true]{color:var(--ink);border-color:var(--brass)}
+:focus-visible{outline:3px solid var(--brass);outline-offset:2px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0;position:sticky;top:0;background:var(--bg);padding:8px 0;z-index:5;border-bottom:1px solid var(--line)}
+.chip{background:var(--chip);border:1px solid var(--line);color:var(--ink);border-radius:16px;padding:3px 10px;font:inherit;font-size:.88rem;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--brass);color:#fff;border-color:var(--brass)}
+.chip.zero{opacity:.55}.chip small{color:inherit;opacity:.75;margin-left:4px}
+details.m{background:var(--card);border:1px solid var(--line);border-radius:var(--r);margin:8px 0}
+details.m>summary{list-style:none;cursor:pointer;padding:10px 12px;display:grid;grid-template-columns:1fr minmax(260px,420px);gap:6px 16px;align-items:center}
+details.m>summary::-webkit-details-marker{display:none}
+.lab{font-weight:600}.lab:before{content:"▸ ";color:var(--dim)}details[open]>summary .lab:before{content:"▾ "}
+.tp{font-size:.75rem;color:var(--dim);font-weight:400;display:block}
+@media(max-width:700px){details.m>summary{grid-template-columns:1fr}}
+.strip{display:grid;grid-template-columns:1fr 2px 1fr;align-items:center;gap:6px}
+.half{display:flex;flex-wrap:wrap;gap:3px;min-height:14px}.half.a{justify-content:flex-end}
+.mid{background:var(--dim);height:22px}
+.cnt{display:flex;justify-content:space-between;font-size:.8rem;color:var(--dim);grid-column:1/-1}
+.body{padding:4px 12px 14px;border-top:1px solid var(--line)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:700px){.cols{grid-template-columns:1fr}}
+.cols h3{font:700 1rem var(--display);margin:12px 0 6px}
+.mp{margin:0 0 12px}.mpn{font-weight:600}.pt{font-size:.8rem;color:var(--dim)}
+.sp{border-left:3px solid var(--line);padding:2px 0 2px 10px;margin:6px 0;font-size:.93rem}
+.meta{font-size:.8rem;color:var(--dim)}.q{margin:2px 0;overflow-wrap:anywhere}
+.badge{font-size:.72rem;border:1px solid var(--line);border-radius:10px;padding:0 7px;white-space:nowrap}
+.badge.opp{color:var(--bad);border-color:var(--bad)}
+button.t{background:none;border:0;color:var(--brass);cursor:pointer;padding:0;font:inherit;font-size:.85rem;text-decoration:underline}
+a{color:var(--brass)}
+.both{background:var(--warn);color:var(--warnink);border-radius:var(--r);padding:6px 10px;margin-top:12px;font-size:.9rem}
+.lbls{margin:10px 0 0;padding-left:18px;font-size:.88rem;color:var(--dim)}
+details.d{margin-top:14px}details.d>summary{cursor:pointer;color:var(--dim);font-weight:600}
+.none{color:var(--dim);font-style:italic}
+.mapgrid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:16px;margin-top:10px}
+@media(max-width:800px){.mapgrid{grid-template-columns:1fr}}
+.plot{background:var(--card);border:1px solid var(--line);border-radius:var(--r);height:560px;position:relative}
+@media(max-width:800px){.plot{height:420px}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:10px 14px;margin-bottom:12px}
+.card h3{font:700 1rem var(--display);margin:0 0 6px}.card ul{margin:4px 0;padding-left:18px;font-size:.88rem}
+.hold p b{font-weight:700}.hold p{margin:4px 0;font-size:.92rem}
+.pos{font-size:.9rem;margin:4px 0}
+.s-for{color:var(--ok);font-weight:700}.s-ag{color:var(--bad);font-weight:700}
+.mtools{display:flex;gap:8px;align-items:center;margin:6px 0;font-size:.88rem;color:var(--dim)}
+.mtools button{font:inherit;font-size:.85rem;background:var(--chip);border:1px solid var(--line);color:var(--ink);border-radius:6px;padding:2px 10px;cursor:pointer}
+table.ho{border-collapse:collapse;width:100%;font-size:.88rem;margin:6px 0}table.ho th,table.ho td{border-bottom:1px solid var(--line);padding:4px 6px;text-align:right}table.ho th:first-child,table.ho td:first-child{text-align:left}table.ho tr.me td{font-weight:700}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;margin:8px 0 2px}.seg button{font:600 .92rem var(--display);background:var(--chip);color:var(--dim);border:0;padding:6px 14px;cursor:pointer}.seg button[aria-pressed=true]{background:var(--brass);color:#fff}
+.badge.with{color:var(--ok);border-color:var(--ok)}.dl{margin:0;padding-left:22px}.dl li{margin:6px 0;font-size:.92rem}
+
+.scale{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:10px 14px;margin:10px 0}.scale h3{font:700 1rem var(--display);margin:0 0 2px}
+.scale svg{display:block;width:100%;height:auto;margin:6px 0 2px}.scale circle{cursor:pointer;stroke:rgba(0,0,0,.4);stroke-width:.8}.scale circle.on{stroke:var(--ink);stroke-width:2.2}
+.ends{display:grid;grid-template-columns:1fr 1fr;gap:16px;font-size:.85rem}.ends ul{margin:2px 0;padding-left:16px}.ends .r{text-align:right}.ends .r ul{list-style:none;padding-left:0}
+@media(max-width:700px){.ends{grid-template-columns:1fr}.ends .r{text-align:left}}
+.badge.free{color:#fff;background:var(--brass);border-color:var(--brass);margin-left:6px;vertical-align:middle;font-weight:600}
+.axbars{margin:6px 0}.axr{display:grid;grid-template-columns:minmax(120px,190px) 1fr 48px;gap:8px;align-items:center;font-size:.85rem;margin:2px 0}
+.axr .bar{position:relative;height:14px}.axr .bar:before{content:"";position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:var(--dim)}.axr .bar i{position:absolute;top:2px;height:10px;border-radius:2px}
+.axr .v{text-align:right;color:var(--dim);font-variant-numeric:tabular-nums}
+.tb{display:grid;grid-template-columns:minmax(90px,150px) 1fr;gap:6px;align-items:center;font-size:.82rem;margin:3px 0}.tb svg{width:100%;height:20px}
+footer{margin-top:40px;border-top:1px solid var(--line);padding-top:12px;color:var(--dim);font-size:.9rem}
+</style></head><body><div class="w">
+<h1>Where MPs stand: this Parliament's fights</h1>
+<div class="wip" role="note">First pass — about 10,000 speeches from the biggest contested debates; positions are model-read, and for every fight shown every speech in its debates was checked</div>
+<p class="how">An AI model reads Commons speeches and extracts the specific policy measure each MP argues for or against; similar measures are merged into one "fight". A second, stricter check keeps only positions where the speech clearly takes that side, and everything it drops is listed so you can see it. For fights marked "every speech in the debate checked", the strict judge was asked about every speech in that fight's debates, so an MP's position there is the average of all their speeches that took a side (shown with the speech count).</p>
+<div class="stats" id="stats"></div>
+<div class="legend" id="legend" aria-label="Party colours"></div>
+<div class="tabs" role="tablist" aria-label="Views">
+ <button role="tab" id="tab-topics" aria-selected="true" aria-controls="v-topics">Topics</button>
+ <button role="tab" id="tab-map" aria-selected="false" aria-controls="v-map" tabindex="-1">Map (experimental)</button></div>
+<section id="v-topics" role="tabpanel" aria-labelledby="tab-topics">
+ <div class="chips" id="chips" role="group" aria-label="Topics"></div>
+ <div id="out"></div></section>
+<section id="v-map" role="tabpanel" aria-labelledby="tab-map" hidden>
+ <h2>MPs placed by their topic scores (experimental)</h2>
+ <div class="seg" role="group" aria-label="Map view"><button type="button" id="sub-whole" aria-pressed="true">Whole space</button><button type="button" id="sub-beyond" aria-pressed="false">Beyond party</button></div>
+ <p class="sub" id="subtxt"></p>
+ <div id="mapnote"></div>
+ <div class="mtools"><button id="flatbtn" type="button">Switch to flat 2D view</button><span id="mapmsg"></span></div>
+ <div class="mapgrid"><div class="plot" id="plot" role="img" aria-label="Scatter of MPs placed by topic scores"></div>
+ <div><div class="card" id="mpcard"><h3>Click an MP</h3><p class="none">Select a point to see that MP's topic scores.</p></div></div></div>
+ <div id="axes"></div><div class="card" id="distinct" hidden></div><div class="card hold" id="hold"></div></section>
+<footer><ul>
+<li>Sample of debates: only the biggest contested debates were read, so many fights and MPs are missing, and absence is not a position.</li>
+<li>The strict check drops about a third of good positions, so counts lean low and some real supporters are in "Not counted".</li>
+<li>Some speeches are filed under the wrong measure; check the speech excerpt before trusting any single placement.</li>
+<li>Thin topics: most topics have only one or two fights, and most MPs appear in only one topic; the map and the party comparisons are only as good as the few scores behind them.</li>
+</ul></footer></div>
+<script id="d" type="application/json">__DATA__</script>
+<script>
+const D=JSON.parse(document.getElementById('d').textContent);
+const COL={Lab:'#E4003B',Con:'#0087DC',LD:'#FAA61A',Green:'#02A95B',SNP:'#FDF38E',DUP:'#D46A4C',Ind:'#888888',RUK:'#12B6CF',PC:'#005B54','Plaid Cymru':'#005B54',SDLP:'#2AA82C',Sinn:'#326760',APNI:'#F6CB2F',TUV:'#0C3A6A',YP:'#7B2D8E'};
+const col=p=>COL[p]||'#6b7584';
+const E=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const Q=new URLSearchParams(location.search);
+const S=D.stats,H=D.map.holdout,pc=x=>Math.round(100*x)+'%';
+document.getElementById('stats').innerHTML=[[S.speeches.toLocaleString('en-GB'),'speeches read'],[S.checked.toLocaleString('en-GB'),`speeches checked against a fight (${S.dense_fights} fights)`],[S.topics,'topics'],[S.fights_real,'fights with MPs on both sides (2+ each)'],[S.mps_placed,'MPs placed on the map']].map(x=>`<div class="stat"><b>${x[0]}</b><span>${x[1]}</span></div>`).join('');
+const parties=[...new Set(D.fights.flatMap(f=>[...f.for,...f.against].map(x=>x.party)))].sort();
+document.getElementById('legend').innerHTML=parties.map(p=>`<span><i class="dot ${p==='SNP'?'snp':''}" style="background:${col(p)}"></i> ${E(p)}</span>`).join('');
+const dots=l=>l.map(x=>`<i class="dot ${x.party==='SNP'?'snp':''}" title="${E(x.mp)} (${E(x.party)})" style="background:${col(x.party)}"></i>`).join('');
+/* ---- Topics ---- */
+const SECS=[['fight','Real fights','At least two MPs on each side under the strict check.'],['one_short','One MP short','MPs on both sides, but only one on at least one side.'],['one_sided','One-sided so far','Only one side has an accepted MP.']];
+const CT=D.conscience_topic,byTopic={};D.fights.forEach(f=>(byTopic[f.topic]=byTopic[f.topic]||[]).push(f));
+const consF=D.fights.filter(f=>f.conscience);if(consF.length)byTopic[CT]=consF;
+const topics=[...Object.keys(D.topics),...(consF.length?[CT]:[])].sort((a,b)=>(byTopic[b]||[]).length-(byTopic[a]||[]).length||a.localeCompare(b));
+let cur=Q.get('topic')&&topics.includes(Q.get('topic'))?Q.get('topic'):'__all';
+const nReal=f=>f.filter(x=>x.status==='fight').length;
+function chips(){document.getElementById('chips').innerHTML=
+ `<button class="chip" aria-pressed="${cur==='__all'}" data-t="__all">All topics<small>${nReal(D.fights)} real</small></button>`+
+ topics.map(t=>{const n=(byTopic[t]||[]).length;return `<button class="chip ${n?'':'zero'}" aria-pressed="${cur===t}" data-t="${E(t)}">${E(t)}<small>${n}</small></button>`}).join('')}
+const tot=f=>f.for.length+f.against.length;
+const pas=p=>D.P[p];
+function claim(c,mp,showOpp,dense){const p=pas(c.p),long=p.full.length>p.ex.length+5;
+ const opp=showOpp?`<span class="badge">${E(c.reason||'')}</span>`:(dense?`<span class="badge ${c.s==='FOR'?'':'opp'}">${c.s==='FOR'?'for':'against'}</span>`:'');
+ return `<div class="sp"><div class="meta">${E(p.date)} · ${E(p.debate)} ${opp}</div>
+ <p class="q" data-s="${E(p.ex)}">${E(p.ex)}</p>
+ ${long?`<button class="t" type="button" data-f="${E(p.full)}" aria-expanded="false">show full speech</button>`:''}
+ ${p.url?` <a class="meta" href="${E(p.url)}" target="_blank" rel="noopener">source ↗</a>`:''}</div>`}
+const stTag=x=>{if(x.stance==null||Math.abs(x.stance)>=1)return'';return x.stance>0?'mostly for':'mostly against'};
+const person=(x,dropped,dense)=>`<div class="mp"><span class="mpn">${E(x.mp)}</span> <span class="pt"><i class="dot ${x.party==='SNP'?'snp':''}" style="background:${col(x.party)}"></i> ${E(x.party)}</span>${dense?` <span class="cnum">${x.focus} speech${x.focus===1?'':'es'}${stTag(x)?` · <b>${stTag(x)}</b>`:''}</span>`:''}${(dense?x.claims:x.claims.slice(0,3)).map(c=>claim(c,x,dropped,dense)).join('')}${!dense&&x.claims.length>3?`<div class="meta">+ ${x.claims.length-3} more speeches</div>`:''}</div>`;
+const col2=(t,l,dn)=>`<div><h3>${t} (${l.length})</h3>${l.length?l.map(x=>person(x,0,dn)).join(''):'<p class="none">No MP yet</p>'}</div>`;
+function fillBody(d,f){if(d.dataset.done)return;d.dataset.done=1;
+ const lbl=f.groups.map(g=>`<li>${E(g.label)}${g.direction<0?' <span class="badge opp">opposite wording</span>':''}</li>`).join('');
+ d.querySelector('.body').innerHTML=`${f.desc?`<p class="fdesc" style="margin:8px 0 0;color:var(--muted,#555)">${E(f.desc)}</p>`:''}${f.splits.length?`<div class="spl" style="margin:10px 0 0"><b>Splits inside a party:</b> ${f.splits.map(x=>`${E(x.party)}: ${x.nf} for, ${x.na} against <i>(${x.small==='for'?'for':'against'}: ${x.names.map(E).join(', ')})</i>`).join('; ')}</div>`:''}
+ <div class="cols">${col2('Against',f.against,f.dense)}${col2('For',f.for,f.dense)}</div>
+ ${f.both.length?`<div class="both"><b>On both sides — unresolved:</b> ${f.both.map(x=>`${E(x.mp)} (${E(x.party)})${f.dense&&x.focus?` ${x.focus} speeches`:''}`).join(', ')}. Not counted on either side.</div>`:''}
+ <details class="d"><summary>Member measure labels merged into this fight (${f.groups.length})</summary><ul class="lbls">${lbl}</ul></details>
+ <details class="d"><summary>Not counted (${f.n_dropped})</summary>${f.dropped.map(x=>person({mp:x.mp,party:x.party,claims:[{p:x.p,reason:x.reason==='NEITHER'?'no clear position':x.reason==='opposite'?'strict check read the other side':'not checked (budget)'}]},1)).join('')||'<p class="none">None</p>'}${f.n_dropped>f.dropped.length?`<p class="meta">${f.n_dropped-f.dropped.length} more not shown.</p>`:''}</details>`}
+function row(f,showTopic){const d=document.createElement('details');d.className='m';d.id='m'+f.i;
+ d.innerHTML=`<summary><span class="lab">${E(f.label)}${f.conscience?`<span class="badge free" title="${E(f.fv.map(x=>x.party+': '+x.for+' for, '+x.against+' against').join('; '))}">free vote: both main parties split</span>`:''}${f.dense?'<span class="badge chk">every speech in the debate checked</span>':''}${showTopic?`<span class="tp">${E(f.topic)}</span>`:''}</span><div class="strip" aria-label="${f.against.length} against, ${f.for.length} for"><div class="half a">${dots(f.against)}</div><div class="mid"></div><div class="half">${dots(f.for)}</div><div class="cnt"><span>${f.against.length} against</span><span>${f.for.length} for</span></div></div></summary><div class="body"></div>`;
+ d.addEventListener('toggle',()=>{if(d.open)fillBody(d,f)});return d}
+const pct=x=>Math.round(100*x)+'%';
+function swarm(pts,W,x0,x1){const o=pts.map((p,k)=>({p,k,x:x0+(p.score+x1)/(2*x1)*(W-60)+30,r:2.6+Math.min(Math.sqrt(p.focus||1),7)*.8})).sort((a,b)=>b.p.focus-a.p.focus||a.x-b.x),placed=[],C=[];
+ for(let dx=-14;dx<=14;dx+=2)for(let dy=-160;dy<=160;dy+=2)C.push([dx,dy]);C.sort((a,b)=>a[0]*a[0]*1.5+a[1]*a[1]-(b[0]*b[0]*1.5+b[1]*b[1]));
+ o.forEach(d=>{const c=C.find(([dx,dy])=>placed.every(q=>(q.cx-d.x-dx)**2+(q.y-dy)**2>=(q.r+d.r+.5)**2));d.cx=d.x+c[0];d.y=c[1];placed.push(d)});return o}
+function endList(s,sign){const mx=Math.max(...s.loadings.map(l=>Math.abs(l.v)));
+ const items=s.loadings.filter(l=>Math.abs(l.v)>=.25*mx).sort((a,b)=>Math.abs(b.v)-Math.abs(a.v)).map(l=>({t:(l.v*sign>0?'for ':'against ')+l.label,i:l.i,v:l.v}));
+ const sh=items.slice(0,4);return `<ul>${sh.map(x=>`<li><a href="#" data-j="${x.i}">${E(x.t)}</a></li>`).join('')}</ul>${items.length>4?`<span class="meta">+ ${items.length-4} more fights on this end</span>`:''}`}
+function scaleBlock(t){const s=D.scales[t];if(!s)return'';
+ if(!s.scale)return `<div class="scale"><h3>This topic's scale</h3><p class="none">No stance scale: this topic has no fight with MPs on both sides, so there is nothing to place MPs between. Speeches still count towards focus.</p></div>`;
+ const W=1000,mx=Math.max(1,...s.mps.map(m=>Math.abs(m.score))),o=swarm(s.mps,W,0,mx),ys=o.map(d=>d.y),top=Math.min(...ys)-12,bot=Math.max(...ys)+12,H=Math.max(40,bot-top)+4,base=-top,cx=30+(W-60)/2;
+ const nf=s.loadings.length,tested=s.explained_multi;
+ const line=nf===1?`${s.mps.length} MPs scored; one fight, so the scale is simply each MP's stance on it.`:
+  `${s.mps.length} MPs scored; the scale explains ${tested==null?pct(s.explained)+' of the recorded positions (but no MP is on 2+ of its fights, so this is untested)':pct(tested)+' of the recorded positions of the '+s.n_multi+' MPs seen on 2+ of its '+nf+' fights'}.`;
+ const svg=`<svg viewBox="0 ${top-6} ${W} ${H}" role="img" aria-label="Scale strip, one dot per MP"><line x1="30" x2="${W-30}" y1="0" y2="0" stroke="var(--line)" stroke-width="2"/><line x1="${cx}" x2="${cx}" y1="-10" y2="10" stroke="var(--dim)"/>`+
+  o.map(d=>`<circle cx="${d.cx.toFixed(1)}" cy="${d.y.toFixed(1)}" r="${d.r.toFixed(1)}" fill="${col(d.p.party)}" data-k="${d.k}"><title>${E(d.p.mp)}, ${E(d.p.party)}, score ${d.p.score>0?'+':''}${d.p.score.toFixed(2)}, ${d.p.focus} speech${d.p.focus===1?'':'es'}</title></circle>`).join('')+`</svg>`;
+ const nfAll=s.fights_all.length,nfU=s.fights_used.length,extra=t===CT?'':(consF.some(f=>f.topic===t)?' The free-vote fight of this topic is scored in the Conscience scale instead.':'');
+ return `<div class="scale" data-t="${E(t)}"><h3>This topic's scale</h3><p class="meta" style="margin:0">${line} Built from ${nfU} of the ${nfAll} fights (those with MPs on both sides, or one short); dot size is the MP's speeches in the whole topic.${extra}</p>${svg}<div class="meta" id="scinfo">Click or hover a dot for the MP.</div>
+ <div class="ends"><div><b>← this end</b>${endList(s,-1)}</div><div class="r"><b>this end →</b>${endList(s,1)}</div></div></div>`}
+function render(){const out=document.getElementById('out');out.innerHTML='';chips();
+ if(cur==='__all'){const l=D.fights.filter(f=>f.status==='fight').sort((a,b)=>tot(b)-tot(a));
+  out.insertAdjacentHTML('beforeend',`<h2>Real fights across all topics (${l.length})</h2><p class="sub">At least two MPs on each side, biggest first. Pick a topic above for the thinner cases.</p>`);
+  l.forEach(f=>out.appendChild(row(f,true)));return}
+ const fs=byTopic[cur]||[];
+ if(!fs.length){out.innerHTML=`<h2>${E(cur)}</h2><p class="none">No fights found in this sample yet</p>`;return}
+ out.insertAdjacentHTML('beforeend',`<h2>${E(cur)}</h2>`+(cur===CT?`<p class="sub">Fights where the two biggest parties are both split (each has at least 20% on its minority side). They are scored on their own scale so they do not pull on the topics they belong to; they also stay visible under their original topic.</p>`:'')+scaleBlock(cur));
+ SECS.forEach(([k,t,s])=>{const l=fs.filter(f=>f.status===k).sort((a,b)=>tot(b)-tot(a));
+  out.insertAdjacentHTML('beforeend',`<h2>${t} (${l.length})</h2><p class="sub">${s}</p>`);
+  if(!l.length)out.insertAdjacentHTML('beforeend','<p class="none">None</p>');l.forEach(f=>out.appendChild(row(f)))})}
+document.getElementById('chips').addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;cur=b.dataset.t;render();
+ const u=new URL(location);u.searchParams.delete('open');cur==='__all'?u.searchParams.delete('topic'):u.searchParams.set('topic',cur);history.replaceState(0,'',u)});
+document.getElementById('out').addEventListener('click',e=>{const c=e.target.closest('.scale circle'),sa=e.target.closest('.scale a[data-j]');
+ if(sa){e.preventDefault();openFight(+sa.dataset.j,true);return}
+ if(c){const sc=D.scales[cur].mps[+c.dataset.k];document.querySelectorAll('.scale circle.on').forEach(x=>x.classList.remove('on'));c.classList.add('on');
+  document.getElementById('scinfo').innerHTML=`<b>${E(sc.mp)}</b> ${E(sc.party)} · score ${sc.score>0?'+':''}${sc.score.toFixed(2)} · ${sc.focus} speech${sc.focus===1?'':'es'} in this topic`;return}
+const b=e.target.closest('button.t');if(!b)return;const q=b.previousElementSibling,open=b.getAttribute('aria-expanded')==='true';
+ q.textContent=open?q.dataset.s:b.dataset.f;b.setAttribute('aria-expanded',!open);b.textContent=open?'show full speech':'hide full speech'});
+function openFight(i,scroll){const f=D.fights[i];if(!f)return;cur=f.topic;render();const d=document.getElementById('m'+i);if(d){d.open=true;if(scroll)d.scrollIntoView({block:'start'})}}
+/* ---- Tabs ---- */
+const tabs=[...document.querySelectorAll('[role=tab]')];
+function show(v,focus){tabs.forEach(t=>{const on=t.id==='tab-'+v;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;document.getElementById(t.getAttribute('aria-controls')).hidden=!on;if(on&&focus)t.focus()});
+ if(v==='map')drawMap()}
+tabs.forEach((t,k)=>{t.addEventListener('click',()=>show(t.id.slice(4)));t.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();show(tabs[(k+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length].id.slice(4),true)}})});
+/* ---- Map ---- */
+const MPW=D.map.mps,B=D.map.beyond,HO=D.map.holdout;let sub=Q.get('sub')==='beyond'?'beyond':'whole';const PTS=()=>sub==='beyond'?(B.ok?B.mps:[]):MPW;let mapDrawn=false,flat=Q.get('flat')==='1',sel=null;
+const tl=t=>`<a href="#" data-t="${E(t)}">${E(t)}</a>`;
+function axisBlock(a,k,beyond){const mx=Math.max(...a.loadings.map(l=>Math.abs(l.v)))||1;
+ return `<div class="card"><h3>Axis ${k+1} <span class="meta">${pc(a.spread)} of the spread between MPs · ${beyond?'party explains '+pc(a.party_eta2)+' of this axis (removed by design)':pc(a.party_eta2)+' of this axis is party'}</span></h3><div class="axbars">`+
+  a.loadings.map(l=>`<div class="axr"><span>${tl(l.topic)}</span><div class="bar"><i style="${l.v>0?'left:50%':'right:50%'};width:${(Math.abs(l.v)/mx*50).toFixed(1)}%;background:${l.v>0?'var(--brass)':'var(--dim)'}"></i></div><span class="v">${l.v>0?'+':''}${l.v.toFixed(2)}</span></div>`).join('')+`</div></div>`}
+function mapText(){
+ const nb=B.n_mps;
+ document.getElementById('mapnote').innerHTML='';
+ document.getElementById('subtxt').textContent=sub==='beyond'?`Each dot is how an MP differs from their own party's average on each topic (only MPs with 3+ topic scores: ${nb}). Parties no longer separate by design; closeness means two MPs break from their parties on the same topics.`:`One dot per MP with scores on at least 2 topics (${MPW.length}). Each topic is first scaled on its own and counts once here, however many fights it has. This view is party-blind, so parties separate.`;
+ ['whole','beyond'].forEach(v=>document.getElementById('sub-'+v).setAttribute('aria-pressed',sub===v));
+ const ax=sub==='beyond'?(B.ok?B.axes:[]):D.map.axes;
+ document.getElementById('axes').innerHTML=(sub==='beyond'&&!B.ok)?'':`<h2>What the ${sub==='beyond'?'"Beyond party" ':''}axes pick up</h2><p class="sub">Each bar is a topic's signed pull on the axis (how far one standard deviation along the axis moves that topic, in standard deviations). Every topic is listed, biggest first. A topic with an opposite sign sits at the other end. Topic scales are oriented so the Labour side is positive.</p>`+ax.map((a,k)=>axisBlock(a,k,sub==='beyond')).join('');
+ const dd=document.getElementById('distinct'),L=D.map.distinct.list,el=D.map.distinct.eligible;dd.hidden=sub!=='beyond'&&false;
+ dd.hidden=false;
+ dd.innerHTML=`<h3>Most distinctive MPs</h3><p class="meta">Largest gap from their own party's average (leaving themselves out), over the topics they have scores on, among MPs with 3+ topic scores, not counting the free-vote scale. ${el<10?`Only ${el} MPs qualify, because most MPs are scored on one or two topics.`:`${el} MPs qualify; top ${L.length} shown.`}</p><ol class="dl">`+L.map(x=>`<li><b>${E(x.mp)}</b> <span class="pt"><i class="dot ${x.party==='SNP'?'snp':''}" style="background:${col(x.party)}"></i> ${E(x.party)}</span> <span class="cnum">${x.n} topics</span>${x.top.map(e=>`<div class="meta">${tl(e.topic)}: ${e.score>0?'+':''}${e.score.toFixed(2)} vs party average ${e.party_mean>0?'+':''}${e.party_mean.toFixed(2)}</div>`).join('')}</li>`).join('')+'</ol>';
+ const P=x=>x==null?'n/a':pc(x),Mf=x=>x==null?'n/a':x.toFixed(2),cv=HO.coverage,R_=HO.R_counts,rt=[0,1,2].map(r=>`${r} dimensions in ${R_[r]||0}`).join(', ');
+ const row=(n,o,me)=>`<tr${me?' class="me"':''}><td>${n}</td><td>${P(o.overall.sign)}</td><td>${Mf(o.overall.mae)}</td><td>${P(o.against.sign)}</td><td>${Mf(o.against.mae)}</td></tr>`;
+ const pm=HO.party_mean,pr=HO.party_plus_rank,tm=HO.topic_mean,gain=pr.overall.sign-pm.overall.sign;
+ document.getElementById('hold').innerHTML=`<h3>Does it predict anything? (hold-out check)</h3>
+ <p>We hid a fifth of the ${HO.n_cells} topic scores at a time (${HO.n_mps_all} MPs, ${HO.n_topics} topics) and guessed each from the rest: for sign (for or against) and for the score itself (average error, 0 to 2; smaller is better). "Against party" means the MP's sign differs from the party's average on that topic (${HO.against_n} scores).</p>
+ <table class="ho"><tr><th></th><th>Sign right</th><th>Avg error</th><th>Sign, against party</th><th>Error, against party</th></tr>
+ ${row('Topic average (everyone)',tm)}${row('Party average (smoothed)',pm)}${row('Party average + own deviation',pr,1)}</table>
+ <p class="meta">${gain>0.005?`Adding each MP's own deviation beats the party average by ${(gain*100).toFixed(1)} points on sign`:gain<-0.005?`Adding each MP's own deviation does not help: it is ${(-gain*100).toFixed(1)} points worse than the party average on sign`:'Adding each MP\'s own deviation makes no real difference to the party average on sign'}, and rebels (${HO.against_n} cases) are called right only ${P(pr.against.sign)} of the time. The inner cross-validation chose: ${rt} of the 5 folds. By construction the party average never calls a rebel right. Nothing here was tuned to win.</p>
+ <p class="meta"><b>Sparsity:</b> of ${HO.n_mps_all} MPs with any topic score, ${cv[2]} have 2 or more, ${cv[3]} have 3 or more, ${cv[4]} have 4 or more. The map shows the ${HO.n_mps} with 2+; most MPs spoke on one topic only, so there is little to learn an individual pattern from, and positions on a topic are often judged from a handful of speeches. Treat the map as a sketch.</p>`}
+['axes','distinct','mpcard'].forEach(id=>document.getElementById(id).addEventListener('click',e=>{const a=e.target.closest('a[data-t]');if(!a)return;e.preventDefault();jumpTopic(a.dataset.t)}));
+function jumpTopic(tp){show('topics');cur=tp;render();const u=new URL(location);u.searchParams.delete('view');u.searchParams.delete('open');u.searchParams.set('topic',tp);history.replaceState(0,'',u);window.scrollTo(0,0)}
+function pick(k){sel=k;const m=PTS()[k];
+ const bar=(s,pm)=>{const W=150,c=W/2,x=v=>c+Math.max(-1.2,Math.min(1.2,v))/1.2*(c-4);return `<svg viewBox="0 0 ${W} 20"><line x1="${c}" x2="${c}" y1="1" y2="19" stroke="var(--dim)"/><rect x="${Math.min(c,x(s))}" y="4" width="${Math.abs(x(s)-c)}" height="12" rx="2" fill="${col(m.party)}" stroke="rgba(0,0,0,.35)"/>${pm?`<path d="M${x(pm[0])} 1 l4 9 -4 9 -4 -9z" fill="none" stroke="var(--ink)" stroke-width="1.5"/>`:''}</svg>`};
+ const pmean=t=>(D.map.party_mean[t]||{})[m.party];
+ document.getElementById('mpcard').innerHTML=`<h3>${E(m.mp)} <span class="pt"><i class="dot ${m.party==='SNP'?'snp':''}" style="background:${col(m.party)}"></i> ${E(m.party)}</span></h3><p class="meta" style="margin:0 0 6px">Topic scores (−1 against … +1 for, Labour side positive). Bar = this MP, ◇ = ${E(m.party)} average.</p>`+
+  m.ts.slice().sort((a,b)=>Math.abs(b[1])-Math.abs(a[1])).map(([t,s,f])=>{const p=pmean(t);return `<div class="tb"><span>${tl(t)}</span><div>${bar(s,p)}<span class="meta">${s>0?'+':''}${s.toFixed(2)} · party ${p?(p[0]>0?'+':'')+p[0].toFixed(2)+' (n='+p[1]+')':'n/a'} · ${f} speech${f===1?'':'es'}</span></div></div>`}).join('')}
+function flatPlot(){const el=document.getElementById('plot');const MP=PTS();const W=el.clientWidth||600,Hh=el.clientHeight||420,pad=30;
+ const xs=MP.map(m=>m.xyz[0]),ys=MP.map(m=>m.xyz[1]);const mn=a=>Math.min(...a),mx=a=>Math.max(...a);
+ const sx=v=>pad+(v-mn(xs))/(mx(xs)-mn(xs)||1)*(W-2*pad),sy=v=>Hh-pad-(v-mn(ys))/(mx(ys)-mn(ys)||1)*(Hh-2*pad);
+ el.innerHTML=`<svg width="100%" height="100%" viewBox="0 0 ${W} ${Hh}"><text x="${W/2}" y="${Hh-6}" text-anchor="middle" fill="currentColor" font-size="11" opacity=".6">axis 1</text><text transform="rotate(-90)" x="${-Hh/2}" y="12" text-anchor="middle" fill="currentColor" font-size="11" opacity=".6">axis 2</text>`+
+ MP.map((m,k)=>`<circle cx="${sx(m.xyz[0])+((k*37)%7-3)*.6}" cy="${sy(m.xyz[1])+((k*53)%7-3)*.6}" r="${Math.min(9,3+m.ts.length*1.6).toFixed(1)}" fill="${col(m.party)}" stroke="${m.party==='SNP'?'#333':'rgba(0,0,0,.35)'}" data-k="${k}" tabindex="0" style="cursor:pointer"><title>${E(m.mp)}, ${E(m.party)}, ${m.ts.length} topics</title></circle>`).join('')+'</svg>';
+ el.querySelectorAll('circle').forEach(c=>{c.addEventListener('click',()=>pick(+c.dataset.k));c.addEventListener('keydown',e=>{if(e.key==='Enter')pick(+c.dataset.k)})})}
+function plot3d(){const el=document.getElementById('plot');const MP=PTS();
+ const ps=[...new Set(MP.map(m=>m.party))],dk=matchMedia('(prefers-color-scheme: dark)').matches,fg=dk?'#eef1f5':'#1b2230';
+ const tr=ps.map(p=>{const ix=MP.map((m,k)=>m.party===p?k:-1).filter(k=>k>=0);return{type:'scatter3d',mode:'markers',name:p,customdata:ix,
+  x:ix.map(k=>MP[k].xyz[0]),y:ix.map(k=>MP[k].xyz[1]),z:ix.map(k=>MP[k].xyz[2]),text:ix.map(k=>`${MP[k].mp}<br>${MP[k].party}<br>${MP[k].ts.length} topics`),hoverinfo:'text',
+  marker:{size:ix.map(k=>Math.min(9,3+MP[k].ts.length*1.6)),color:col(p),line:{color:p==='SNP'?'#333':'rgba(0,0,0,.4)',width:1}}}});
+ const ax=t=>({title:t,color:fg,gridcolor:dk?'#273142':'#dcd8cc',zerolinecolor:dk?'#3a465a':'#bbb'});
+ Plotly.newPlot(el,tr,{margin:{l:0,r:0,t:0,b:0},paper_bgcolor:'rgba(0,0,0,0)',font:{color:fg},legend:{orientation:'h',y:0},scene:{xaxis:ax('axis 1'),yaxis:ax('axis 2'),zaxis:ax('axis 3'),bgcolor:'rgba(0,0,0,0)'}},{responsive:true,displaylogo:false});
+ el.on('plotly_click',ev=>{const p=ev.points[0];pick(p.data.customdata[p.pointNumber])})}
+function drawMap(){mapText();const b=document.getElementById('flatbtn'),el=document.getElementById('plot');
+ const go=()=>{const nolib=typeof Plotly==='undefined';el.innerHTML='';document.getElementById('mapmsg').textContent='';
+  if(sub==='beyond'&&!B.ok){el.innerHTML=`<p class="none" style="padding:24px">Only ${B.n_mps} MPs have scores on 3 or more topics. That is too few (we need at least 30) for a stable "Beyond party" map, so none is drawn.</p>`;return}
+  if(!flat&&nolib){document.getElementById('mapmsg').textContent='3D library did not load (offline?); showing flat view of axes 1 and 2.';flatPlot();b.textContent='Retry 3D view';return}
+  b.textContent=flat?'Switch to 3D view':'Switch to flat 2D view';if(flat)flatPlot();else plot3d()};
+ if(!mapDrawn){['whole','beyond'].forEach(v=>document.getElementById('sub-'+v).addEventListener('click',()=>{if(sub===v)return;sub=v;sel=null;document.getElementById('mpcard').innerHTML='<h3>Click an MP</h3><p class="none">Select a point to see that MP\'s topic scores.</p>';const u=new URL(location);u.searchParams.set('sub',v);history.replaceState(0,'',u);mapText();go()}));b.addEventListener('click',()=>{flat=!flat;go()});mapDrawn=true}go();
+ if(Q.get('pick')!==null&&PTS()[+Q.get('pick')])pick(+Q.get('pick'));const only=Q.get('only');if(only){document.querySelectorAll('.w>h1,.wip,.how,.stats,.legend,.tabs').forEach(x=>x.style.display='none');['axes','distinct','hold'].forEach(i=>{if(i!==only)document.getElementById(i).style.display='none'});document.querySelectorAll('#v-map>h2,#v-map>.seg,#subtxt,.mtools,.mapgrid').forEach(x=>x.style.display='none')}}
+/* ---- start ---- */
+render();
+if(Q.get('open')!==null&&D.fights[+Q.get('open')])openFight(+Q.get('open'));
+else if(Q.get('open')!==null){const l=document.querySelectorAll('details.m')[+Q.get('open')];if(l)l.open=true}
+show(Q.get('view')==='map'?'map':'topics');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.27.0/plotly.min.js" async onload="if(!document.getElementById('v-map').hidden)drawMap()" onerror="if(!document.getElementById('v-map').hidden)drawMap()"></script>
+</body></html>

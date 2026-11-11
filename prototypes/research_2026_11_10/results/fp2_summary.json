@@ -1,0 +1,407 @@
+{
+ "totals": {
+  "passages_extracted": 22529,
+  "claims": 17625,
+  "groups": 6809,
+  "fights_pre": 699,
+  "fights_total": 255,
+  "fights_reported": 242,
+  "by_status": {
+   "fight": 82,
+   "one_short": 42,
+   "one_sided": 118
+  },
+  "dense_by_status": {
+   "fight": 82,
+   "one_short": 42,
+   "one_sided": 118
+  },
+  "dense_candidates": 35921,
+  "claims_judged": 35921,
+  "passages_judged": 18237,
+  "dense_verdicts": {
+   "AGAINST": 959,
+   "FOR": 6692,
+   "NEITHER": 28270
+  }
+ },
+ "new_passages_total": 12338,
+ "new_passages_per_topic": {
+  "Agriculture": 148,
+  "Civil rights": 750,
+  "Culture": 731,
+  "Defence": 750,
+  "Domestic commerce": 750,
+  "Employment": 750,
+  "Energy": 750,
+  "Environment": 547,
+  "Foreign trade": 408,
+  "Government operations": 750,
+  "Health": 750,
+  "Housing": 750,
+  "Immigration": 750,
+  "Law and crime": 750,
+  "Macroeconomics": 750,
+  "Public lands": 750,
+  "Social welfare": 750,
+  "Technology": 4,
+  "Transport": 750
+ },
+ "pre": {
+  "groups": 6809,
+  "pairs_judged": 10234,
+  "pairs_passing": 2495,
+  "accepted": 1867,
+  "rejected_or_capped": 628,
+  "fights_total": 5129,
+  "multi_group": 682,
+  "fights_ge4": 699,
+  "per_topic_ge4": {
+   "Agriculture": 12,
+   "Civil rights": 32,
+   "Culture": 27,
+   "Defence": 26,
+   "Domestic commerce": 33,
+   "Education": 129,
+   "Employment": 40,
+   "Energy": 32,
+   "Environment": 32,
+   "Foreign trade": 16,
+   "Government operations": 42,
+   "Health": 31,
+   "Housing": 31,
+   "Immigration": 35,
+   "International affairs": 6,
+   "Law and crime": 37,
+   "Macroeconomics": 38,
+   "Public lands": 31,
+   "Social welfare": 32,
+   "Technology": 7,
+   "Transport": 30
+  },
+  "mps_dist": {
+   "count": 699.0,
+   "mean": 10.0414878397711,
+   "std": 8.923729421060235,
+   "min": 4.0,
+   "25%": 5.0,
+   "50%": 7.0,
+   "75%": 12.0,
+   "max": 95.0
+  }
+ },
+ "per_topic": {
+  "Agriculture": {
+   "new_passages": 148,
+   "passages": 398,
+   "claims": 315,
+   "groups": 132,
+   "fights_by_status": {
+    "fight": 1,
+    "one_short": 1,
+    "one_sided": 2
+   },
+   "fights_ge4_extractor_mps": 12
+  },
+  "Civil rights": {
+   "new_passages": 750,
+   "passages": 1000,
+   "claims": 861,
+   "groups": 241,
+   "fights_by_status": {
+    "one_short": 2,
+    "fight": 5,
+    "one_sided": 5
+   },
+   "fights_ge4_extractor_mps": 32
+  },
+  "Culture": {
+   "new_passages": 731,
+   "passages": 981,
+   "claims": 740,
+   "groups": 277,
+   "fights_by_status": {
+    "one_short": 2,
+    "one_sided": 6,
+    "fight": 3
+   },
+   "fights_ge4_extractor_mps": 27
+  },
+  "Defence": {
+   "new_passages": 750,
+   "passages": 1000,
+   "claims": 724,
+   "groups": 301,
+   "fights_by_status": {
+    "one_sided": 6,
+    "fight": 2,
+    "one_short": 1
+   },
+   "fights_ge4_extractor_mps": 26
+  },
+  "Domestic commerce": {
+   "new_passages": 750,
+   "passages": 1000,
+   "claims": 851,
+   "groups": 437,
+   "fights_by_status": {
+    "one_sided": 3,
+    "fight": 2,
+    "one_short": 2
+   },
+   "fights_ge4_extractor_mps": 33
+  },
+  "Employment": {
+   "new_passages": 750,
+   "passages": 1000,
+   "claims": 784,
+   "groups": 282,
+   "fights_by_status": {
+    "one_sided": 2,
+    "one_short": 2,
+    "fight": 8
+   },
+   "fights_ge4_extractor_mps": 40
+  },
+  "Energy": {
+   "new_passages": 750,
+   "passages": 1000,
+   "claims": 880,
+   "groups": 318,
+   "fights_by_status": {
+    "one_short": 3,
+    "fight": 2,
+    "one_sided": 7
+   },
+   "fights_ge4_extractor_mps": 32
+  },
+  "Environment": {
+   "new_passages": 547,
+   "passages": 797,
+   "claims": 659,
+   "groups": 274,
+   "fights_by_status": {
+    "one_sided": 7,
+    "one_short": 4
+   },
+   "fights_ge4_extractor_mps": 32
+  },
+  "Foreign trade": {
+   "new_passages": 408,
+   "passages": 658,
+   "claims": 522,
+   "groups": 285,
+   "fights_by_status": {
+    "fight": 3,
+    "one_sided": 1
+   },
+   "fights_ge4_extractor_mps": 16
+  },
+  "Government operations": {
+   "new_passages": 750,
+   "passages": 1000,
+   "claims": 895,
+   "groups": 355,
+   "fights_by_status": {
+    "one_sided": 3,
+    "one_short": 2,
+    "fight": 4
+   },
+   "fights_ge4_extractor_mps": 42
+  },
+  "Health": {
+   "new_passages": 750,
+   "passages": 1000,
+   "claims": 817,
+   "groups": 283,
+   "fights_by_status": {
+    "fight": 3,
+    "one_sided": 3,
+    "one_short": 2
+   },
+   "fights_ge4_extractor_mps": 31
+  },
+  "Housing": {
+   "new_passages": 750,
+   "passages": 1000,
+   "claims": 863,
+   "groups": 312,
+   "fights_by_status": {
+    "one_short": 1,
+    "one_sided": 6,
+    "fight": 4
+   },
+   "fights_ge4_extractor_mps": 31
+  },
+  "Immigration": {
+   "new_passages": 750,
+   "passages": 1000,
+   "claims": 817,
+   "groups": 266,
+   "fights_by_status": {
+    "one_short": 5,
+    "fight": 6,
+    "one_sided": 3
+   },
+   "fights_ge4_extractor_mps": 35
+  },
+  "International affairs": {
+   "new_passages": 0,
+   "passages": 215,
+   "claims": 96,
+   "groups": 55,
+   "fights_by_status": {
+    "one_sided": 1
+   },
+   "fights_ge4_extractor_mps": 6
+  },
+  "Law and crime": {
+   "new_passages": 750,
+   "passages": 1000,
+   "claims": 832,
+   "groups": 354,
+   "fights_by_status": {
+    "fight": 6,
+    "one_sided": 9,
+    "one_short": 1
+   },
+   "fights_ge4_extractor_mps": 37
+  },
+  "Macroeconomics": {
+   "new_passages": 750,
+   "passages": 1000,
+   "claims": 847,
+   "groups": 380,
+   "fights_by_status": {
+    "fight": 11,
+    "one_short": 4,
+    "one_sided": 2
+   },
+   "fights_ge4_extractor_mps": 38
+  },
+  "Public lands": {
+   "new_passages": 750,
+   "passages": 1000,
+   "claims": 850,
+   "groups": 376,
+   "fights_by_status": {
+    "one_sided": 4,
+    "fight": 6,
+    "one_short": 1
+   },
+   "fights_ge4_extractor_mps": 31
+  },
+  "Social welfare": {
+   "new_passages": 750,
+   "passages": 1000,
+   "claims": 864,
+   "groups": 300,
+   "fights_by_status": {
+    "fight": 4,
+    "one_sided": 7,
+    "one_short": 1
+   },
+   "fights_ge4_extractor_mps": 32
+  },
+  "Technology": {
+   "new_passages": 4,
+   "passages": 254,
+   "claims": 161,
+   "groups": 88,
+   "fights_by_status": {
+    "one_sided": 4
+   },
+   "fights_ge4_extractor_mps": 7
+  },
+  "Transport": {
+   "new_passages": 750,
+   "passages": 1000,
+   "claims": 856,
+   "groups": 353,
+   "fights_by_status": {
+    "one_short": 3,
+    "fight": 2,
+    "one_sided": 5
+   },
+   "fights_ge4_extractor_mps": 30
+  },
+  "Education": {
+   "new_passages": 0,
+   "passages": 5226,
+   "claims": 3391,
+   "groups": 1140,
+   "fights_by_status": {
+    "one_sided": 32,
+    "fight": 10,
+    "one_short": 5
+   },
+   "fights_ge4_extractor_mps": 129
+  }
+ },
+ "two_sided_per_topic": {
+  "Agriculture": 1,
+  "Macroeconomics": 11,
+  "Civil rights": 5,
+  "Health": 3,
+  "Culture": 3,
+  "Defence": 2,
+  "Public lands": 6,
+  "Domestic commerce": 2,
+  "Foreign trade": 3,
+  "Social welfare": 4,
+  "Education": 10,
+  "Employment": 8,
+  "Energy": 2,
+  "Government operations": 4,
+  "Transport": 2,
+  "Housing": 4,
+  "Immigration": 6,
+  "Law and crime": 6
+ },
+ "mps_with_position": 577,
+ "mps_in_topics_ge": {
+  "1": 577,
+  "2": 475,
+  "3": 354,
+  "4": 250
+ },
+ "labelling_model": "deepseek-ai/DeepSeek-V3.2",
+ "labelling_price_per_M_in_out": [
+  0.26,
+  0.38
+ ],
+ "labelling_tokens": {
+  "big": [
+   753428,
+   62321
+  ],
+  "small": [
+   0,
+   0
+  ]
+ },
+ "xmerge": {
+  "units": 422,
+  "merged_units": 131
+ },
+ "dense_tokens": {
+  "tokens": 23139326,
+  "usd": 0.971852,
+  "verdicts": {
+   "AGAINST": 960,
+   "FOR": 6694,
+   "NEITHER": 28346
+  }
+ },
+ "cost": {
+  "extract_new": 0.1813,
+  "merge_pairs_10234": 0.371,
+  "relabel_deepseek_v3_2": 0.21957,
+  "relabel_abandoned_qwen_try": 0.0735,
+  "xmerge": 0.08935,
+  "dense": 0.971852,
+  "total_usd": 1.9066
+ },
+ "ledger_usd": 0.9347,
+ "skipped_units": 167
+}

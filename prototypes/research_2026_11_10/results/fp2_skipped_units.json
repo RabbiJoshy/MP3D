@@ -1,0 +1,1171 @@
+[
+ {
+  "unit": 1,
+  "label": "Agree to a multi-year SPS agreement with the EU",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 15
+ },
+ {
+  "unit": 9,
+  "label": "Publish an animal welfare strategy",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 91
+ },
+ {
+  "unit": 14,
+  "label": "Exclude prisoners from the Terminally Ill Adults Bill",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 71
+ },
+ {
+  "unit": 15,
+  "label": "Require Welsh proficiency on the assisted dying panel for Welsh-speaking applicants",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 16,
+  "label": "Require doctors to record efforts to dissuade patients from assisted dying in clinical records",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 21,
+  "label": "Reinstating in-person appointments for abortion",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 67
+ },
+ {
+  "unit": 24,
+  "label": "Require the panel to hear from and question the applicant's relatives, family members, friends, social workers, or care workers",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 26,
+  "label": "Require a supporter or independent advocate for autistic or learning-disabled individuals in initial assisted dying discussions",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 30,
+  "label": "Require usable tactile voting devices at polling stations",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 53
+ },
+ {
+  "unit": 37,
+  "label": "Pass the Royal Albert Hall Bill",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 37
+ },
+ {
+  "unit": 38,
+  "label": "Ban gambling sponsorship at major sporting events",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 44,
+  "label": "Prevent regulated clubs from staging competitive home fixtures outside the UK",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 46,
+  "label": "Remove the journalism exemption from the offence of misleading the public",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 7
+ },
+ {
+  "unit": 49,
+  "label": "Extend licensing hours for sporting events",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 9
+ },
+ {
+  "unit": 53,
+  "label": "Remove visa fees for non-UK veterans with four years of service",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 58,
+  "label": "Place a legal duty on public services to consider veterans' welfare",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 60,
+  "label": "Include veterans' special educational needs in the Special Educational Needs Bill",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 61,
+  "label": "Waive indefinite leave to remain fees for service personnel families",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 63,
+  "label": "Allow seamless transition between regular and reserve forces",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 66,
+  "label": "Increase national insurance contributions and business rates",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 43
+ },
+ {
+  "unit": 68,
+  "label": "Include fraud as a risk in the Cyber Security and Resilience Bill",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 46
+ },
+ {
+  "unit": 70,
+  "label": "Introduce duty stamps on vaping products",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 73,
+  "label": "Introduce borrowing restrictions for water companies in the Water Bill",
+  "n_mps": 6,
+  "scored": 79,
+  "cands": 150
+ },
+ {
+  "unit": 76,
+  "label": "Impose financial penalties on individuals for fraud",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 115
+ },
+ {
+  "unit": 80,
+  "label": "Consult on a refined definition of managed service provider in the Cyber Security and Resilience Bill",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 81,
+  "label": "Strengthen HMRC powers to tackle tax avoidance promoters",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 78
+ },
+ {
+  "unit": 82,
+  "label": "Require the Secretary of State to produce and maintain SME guidance for the Product Regulation and Metrology Bill",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 66
+ },
+ {
+  "unit": 84,
+  "label": "Establish a statutory SME cyber-security support service",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 88
+ },
+ {
+  "unit": 85,
+  "label": "Increase maximum fines under the NIS regulations",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 86,
+  "label": "Require the football regulator to report annually on financial costs to clubs",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 32
+ },
+ {
+  "unit": 87,
+  "label": "Establish a single cyber regulator",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 84
+ },
+ {
+  "unit": 88,
+  "label": "Require schools to implement outdoor education",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 96,
+  "label": "Introduce the international student levy",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 128
+ },
+ {
+  "unit": 102,
+  "label": "Reduce GCSE exam time by 10%",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 112
+ },
+ {
+  "unit": 110,
+  "label": "Invest in teacher training reforms",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 113,
+  "label": "Support the Government's creative education opportunity policy",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 82
+ },
+ {
+  "unit": 114,
+  "label": "Scrap the EBacc in the curriculum review",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 117,
+  "label": "Restore the official development assistance budget for global education",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 96
+ },
+ {
+  "unit": 119,
+  "label": "Impose a statutory duty of care on universities to students",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 39
+ },
+ {
+  "unit": 124,
+  "label": "Adopt a practical framework for the safe and fair use of Generative AI in education",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 19
+ },
+ {
+  "unit": 127,
+  "label": "Encourage stronger links between schools and employers",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 132
+ },
+ {
+  "unit": 128,
+  "label": "Allow dependants to accompany international students and academics",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 58
+ },
+ {
+  "unit": 130,
+  "label": "Bring together colleges and jobcentres for young people",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 54
+ },
+ {
+  "unit": 131,
+  "label": "Specify what adjudicators must consider when setting school admission numbers",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 138,
+  "label": "Keep the 50% faith cap for new schools",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 139,
+  "label": "Reduce the school week to four days",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 49
+ },
+ {
+  "unit": 140,
+  "label": "Allow term-time holidays without fines",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 35
+ },
+ {
+  "unit": 142,
+  "label": "Implement the Government's landmark education reforms",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 148
+ },
+ {
+  "unit": 143,
+  "label": "Introduce a statutory year 8 reading test",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 145,
+  "label": "Reinstating bursaries for music postgraduate certificates in education",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 146,
+  "label": "Reform the student loan system",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 99
+ },
+ {
+  "unit": 147,
+  "label": "Open North Derbyshire University Academy sixth form",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 82
+ },
+ {
+  "unit": 151,
+  "label": "Implement Labour's RISE teams and school improvement plans",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 110
+ },
+ {
+  "unit": 152,
+  "label": "Increase the number of cadets by 30% by 2030",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 10
+ },
+ {
+  "unit": 158,
+  "label": "Allocate \u00a3500,000 to link schools from different communities",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 35
+ },
+ {
+  "unit": 159,
+  "label": "Provide \u00a3165 million via a local skills improvement fund",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 62
+ },
+ {
+  "unit": 161,
+  "label": "Reintroduce means-tested maintenance grants for higher education",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 106
+ },
+ {
+  "unit": 162,
+  "label": "Deliver speech and language support to schools without requiring an EHCP",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 106
+ },
+ {
+  "unit": 164,
+  "label": "Remove funding from existing large and medium qualifications in 2025",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 143
+ },
+ {
+  "unit": 165,
+  "label": "Introduce a British Sign Language GCSE",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 26
+ },
+ {
+  "unit": 168,
+  "label": "Reduce funding for arts and creative university courses",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 27
+ },
+ {
+  "unit": 169,
+  "label": "Create more SEND school places",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 170,
+  "label": "Extend the Erasmus+ scheme to apprentices and young workers",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 39
+ },
+ {
+  "unit": 171,
+  "label": "Include swimming and water safety in the national curriculum",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 17
+ },
+ {
+  "unit": 172,
+  "label": "Introduce new clause 1 to Skills England Bill",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 174,
+  "label": "Implement revised Progress 8 accountability measure",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 175,
+  "label": "Increase support to employers taking T-level students",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 94
+ },
+ {
+  "unit": 176,
+  "label": "Train more qualified teachers of the deaf",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 12
+ },
+ {
+  "unit": 178,
+  "label": "Reduce the strike notice period from 14 days to 10 days",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 181,
+  "label": "Repeal the 2025 Act on summer job flexibility",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 188,
+  "label": "Require Labour MPs to disclose trade union funding",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 189,
+  "label": "Define short-notice cancellation as 48 hours in the Employment Rights Bill",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 196,
+  "label": "Amend the Pension Schemes Bill to require surplus schemes to index pre-1997 pensions",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 120
+ },
+ {
+  "unit": 197,
+  "label": "Extend trade union workplace access to include digital communication",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 198,
+  "label": "Ban fire and rehire practices in the Employment Rights Bill",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 199,
+  "label": "Reinstating the School Support Staff Negotiating Body",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 201,
+  "label": "Ban non-disclosure agreements in harassment and discrimination cases",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 209,
+  "label": "Deliver up to 30 GW of offshore wind leases",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 212,
+  "label": "Increase domestic oil and gas production rather than imports",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 213,
+  "label": "Build a third gigawatt-scale reactor at Wylfa",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 218,
+  "label": "Provide ringfenced funding for new and emerging energy technologies",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 219,
+  "label": "Grant transitional energy certificates for oil and gas tiebacks",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 115
+ },
+ {
+  "unit": 220,
+  "label": "Remove the 29% investment allowance for oil and gas",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 63
+ },
+ {
+  "unit": 228,
+  "label": "Strengthen flood risk planning and resilience measures in the Planning and Infrastructure Bill",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 98
+ },
+ {
+  "unit": 230,
+  "label": "Amend the Water (Special Measures) Bill to require water companies to make customers and the environment a primary objective in their Articles of Association",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 233,
+  "label": "Enshrine the mitigation hierarchy in the Planning and Infrastructure Bill",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 140
+ },
+ {
+  "unit": 235,
+  "label": "Require water companies to publish annual pollution incident reduction plans",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 241,
+  "label": "Increase landfill tax rates from 1 April",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 10
+ },
+ {
+  "unit": 243,
+  "label": "Ban plastic cigarette filters",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 9
+ },
+ {
+  "unit": 245,
+  "label": "Support the Industry and Exports (Financial Assistance) Bill",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 82
+ },
+ {
+  "unit": 248,
+  "label": "Implement the Pillar Two global minimum tax framework",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 108
+ },
+ {
+  "unit": 249,
+  "label": "Increase UK Export Finance's commitment limit to \u00a3160 billion",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 50
+ },
+ {
+  "unit": 250,
+  "label": "Pass the Steel Industry (Nationalisation) Bill",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 67
+ },
+ {
+  "unit": 258,
+  "label": "Revert to supplementary vote for mayoral and police commissioner elections",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 259,
+  "label": "Abolish out-of-area licensing for private hire vehicles",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 260,
+  "label": "Require consultation with neighbouring local authorities before new towns are built",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 262,
+  "label": "Require future increases to election spending limits to follow an independent Electoral Commission recommendation",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 106
+ },
+ {
+  "unit": 265,
+  "label": "Remove the requirement for failing schools to be taken over by an academy",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 18
+ },
+ {
+  "unit": 266,
+  "label": "Introduce simple majority voting for London Assembly budget amendments",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 268,
+  "label": "Support the Planning and Infrastructure Bill's changes to planning committees",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 41
+ },
+ {
+  "unit": 269,
+  "label": "Introduce proportional representation for UK parliamentary elections",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 272,
+  "label": "Nationalise South Western Railway",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 71
+ },
+ {
+  "unit": 273,
+  "label": "Introduce gambling impact assessments",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 49
+ },
+ {
+  "unit": 276,
+  "label": "Introduce a statutory right to an advance choice document",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 280,
+  "label": "Make individualised care and treatment plans statutory in the Mental Health Bill",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 282,
+  "label": "Embed the Health Services Safety Investigations Body in the Care Quality Commission",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 283,
+  "label": "Remove the four-year automatic commencement from the Terminally Ill Adults (End of Life) Bill",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 284,
+  "label": "Allow Ministers to amend the NHS's founding principles via delegated legislation under Clause 38",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 285,
+  "label": "Introduce a tobacco industry levy",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 286,
+  "label": "Ban advertising for assisted dying services",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 119
+ },
+ {
+  "unit": 293,
+  "label": "Allow deeds of variation and section 106A applications to amend section 106 agreements",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 294,
+  "label": "Review shared ownership in the Social Housing Bill",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 295,
+  "label": "Allow local planning authorities to set their own fees",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 296,
+  "label": "Restrict social housing access for non-UK nationals",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 297,
+  "label": "Allow landlords to require a pet deposit of up to three weeks' rent",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 300,
+  "label": "Reduce the no-let period after eviction to sell from 12 to 6 months",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 301,
+  "label": "Support rural exception sites for affordable housing",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 303,
+  "label": "Pass the Building Safety (Remediation of Unsafe Cladding etc) Bill",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 306,
+  "label": "Require social housing for domestic abuse survivors to be furnished",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 312,
+  "label": "Grant immigration enforcement officers access to asylum accommodation centres",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 314,
+  "label": "Set a minimum salary threshold of \u00a338,700 for skilled worker visas",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 317,
+  "label": "Extend indefinite leave to remain eligibility from five to ten years",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 318,
+  "label": "Require the Home Secretary to impose visa penalties",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 321,
+  "label": "Grant powers to search and seize electronic devices from irregular arrivals suspected of facilitation offences",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 324,
+  "label": "Create new offences for supplying items used in organised immigration crime",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 327,
+  "label": "Deny refugee status to those convicted of serious sexual offences",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 328,
+  "label": "Disregard illegal entry in the good character requirement for citizenship",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 330,
+  "label": "Leave the European Convention on Human Rights",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 332,
+  "label": "A new UK-EU security and defence partnership",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 39
+ },
+ {
+  "unit": 333,
+  "label": "Rejoin the European Union",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 62
+ },
+ {
+  "unit": 344,
+  "label": "Require judges to give detailed reasons for judgments",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 346,
+  "label": "Amend the Crime and Policing Bill to create aggravated hate crime offences",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 131
+ },
+ {
+  "unit": 349,
+  "label": "Criminalise profiting from the prostitution of another person",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 351,
+  "label": "Create a specific offence of domestic abuse",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 353,
+  "label": "Abolish the Sentencing Council",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 354,
+  "label": "Insert a statutory definition of child criminal exploitation alongside the offence in clause 38",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 355,
+  "label": "Automatic deportation for foreign criminals sentenced to at least six months",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 356,
+  "label": "Extend extreme pornography definition to include non-fatal strangulation depictions",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 131
+ },
+ {
+  "unit": 357,
+  "label": "Increase police funding by more than \u00a31 billion",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 360,
+  "label": "Remove parental responsibility from convicted child sex offenders",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 364,
+  "label": "Create a temporary repatriation facility for former remittance-based taxpayers",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 106
+ },
+ {
+  "unit": 365,
+  "label": "Impose a \u00a32,000 cap on savings and investment",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 103
+ },
+ {
+  "unit": 367,
+  "label": "Reduce business property relief discount from 75% to 40%",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 149
+ },
+ {
+  "unit": 368,
+  "label": "Introduce a land value tax",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 369,
+  "label": "Close the tax gap to raise \u00a310 billion by 2029-30",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 370,
+  "label": "Set income tax rates at 20%, 40%, and 45% for the 2025-26 tax year",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 372,
+  "label": "Increase the sovereign grant to \u00a399.9 million",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 12
+ },
+ {
+  "unit": 373,
+  "label": "Support the Pension Schemes Bill's megafunds consolidation requirement",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 27
+ },
+ {
+  "unit": 375,
+  "label": "Abolish the furnished holiday lettings tax regime",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 116
+ },
+ {
+  "unit": 377,
+  "label": "Abolish non-domiciled status and replace it with a new residence-based tax regime",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 382,
+  "label": "Increase the higher rates of Stamp Duty Land Tax for additional dwellings",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 137
+ },
+ {
+  "unit": 383,
+  "label": "Increase income tax rates on dividend and savings interest income",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 109
+ },
+ {
+  "unit": 384,
+  "label": "Ringfence money for investment in the Water (Special Measures) Act",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 389,
+  "label": "Support Lords amendment 33 on assets of community value consultation",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 109
+ },
+ {
+  "unit": 394,
+  "label": "Provide allowances to all kinship carers",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 396,
+  "label": "Require new social housing to meet accessible and adaptable standards",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 16
+ },
+ {
+  "unit": 398,
+  "label": "Amend the severe conditions criteria in the Universal Credit and Personal Independence Payment Bill",
+  "n_mps": 5,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 401,
+  "label": "Extend the Staying Put scheme to age 25",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 129
+ },
+ {
+  "unit": 403,
+  "label": "Introduce a profit cap on private special schools",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 99
+ },
+ {
+  "unit": 404,
+  "label": "Extend pupil premium plus and priority admissions to children in kinship care",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 408,
+  "label": "Require step-free access at all railway stations",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 410,
+  "label": "Abolish or significantly reduce airport drop-off charges",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 135
+ },
+ {
+  "unit": 411,
+  "label": "Require Great British Railways to promote disabled passengers' interests",
+  "n_mps": 6,
+  "scored": 0,
+  "cands": 150
+ },
+ {
+  "unit": 417,
+  "label": "Establish a single dedicated rail freight business unit within Great British Railways",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 133
+ },
+ {
+  "unit": 419,
+  "label": "Apply the Regulatory Asset Base model to trunk roads",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 95
+ },
+ {
+  "unit": 420,
+  "label": "Require airlines to report annually on sustainable aviation fuel use",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 31
+ },
+ {
+  "unit": 421,
+  "label": "Freeze rail fares",
+  "n_mps": 4,
+  "scored": 0,
+  "cands": 150
+ }
+]

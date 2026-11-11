@@ -1,0 +1,350 @@
+{
+ "1": {
+  "stratum": "A",
+  "measure": "Regulate home education",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "NEITHER"
+ },
+ "2": {
+  "stratum": "B",
+  "measure": "Require all schools to follow the national curriculum",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "AGAINST"
+ },
+ "3": {
+  "stratum": "A",
+  "measure": "Require local authorities to set all school admissions policies",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "NEITHER"
+ },
+ "4": {
+  "stratum": "B",
+  "measure": "Require all schools to follow the national curriculum",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "AGAINST"
+ },
+ "5": {
+  "stratum": "A",
+  "measure": "Require all teachers in further education, 14 to 19, and 16 to 19 academies, university technical colleges, studio schools, non-maintained schools, and early years settings to hold Qualified Teacher Status (QTS)",
+  "extractor_side": "FOR",
+  "judge_verdict": "NEITHER"
+ },
+ "6": {
+  "stratum": "B",
+  "measure": "Impose a rigid national curriculum",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "AGAINST"
+ },
+ "7": {
+  "stratum": "B",
+  "measure": "Require academies to follow the national curriculum",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "AGAINST"
+ },
+ "8": {
+  "stratum": "B",
+  "measure": "Require academies to follow the national curriculum",
+  "extractor_side": "FOR",
+  "judge_verdict": "FOR"
+ },
+ "9": {
+  "stratum": "A",
+  "measure": "Require all schools and local authorities to co-operate on admissions and place planning",
+  "extractor_side": "FOR",
+  "judge_verdict": "NEITHER"
+ },
+ "10": {
+  "stratum": "B",
+  "measure": "Make the national curriculum compulsory for all academies",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "AGAINST"
+ },
+ "11": {
+  "stratum": "H",
+  "measure": "Require 100% adherence to the national curriculum",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "NEITHER"
+ },
+ "12": {
+  "stratum": "A",
+  "measure": "Charge VAT on private school fees",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "NEITHER"
+ },
+ "13": {
+  "stratum": "H",
+  "measure": "Require schools to follow the national curriculum",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "FOR"
+ },
+ "14": {
+  "stratum": "A",
+  "measure": "Require UTC staff to have qualified teacher status",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "NEITHER"
+ },
+ "15": {
+  "stratum": "B",
+  "measure": "Require academies to follow the national curriculum",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "AGAINST"
+ },
+ "16": {
+  "stratum": "A",
+  "measure": "Require schools to develop mobile phone policies",
+  "extractor_side": "FOR",
+  "judge_verdict": "NEITHER"
+ },
+ "17": {
+  "stratum": "B",
+  "measure": "Require academies to follow the national curriculum",
+  "extractor_side": "FOR",
+  "judge_verdict": "FOR"
+ },
+ "18": {
+  "stratum": "B",
+  "measure": "Require all schools to follow a national curriculum",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "AGAINST"
+ },
+ "19": {
+  "stratum": "A",
+  "measure": "Ban smartphones and social media in schools",
+  "extractor_side": "FOR",
+  "judge_verdict": "NEITHER"
+ },
+ "20": {
+  "stratum": "H",
+  "measure": "Require schools to follow the national curriculum",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "NEITHER"
+ },
+ "21": {
+  "stratum": "A",
+  "measure": "Abolish the academisation approach",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "NEITHER"
+ },
+ "22": {
+  "stratum": "B",
+  "measure": "Require academies to follow the national curriculum",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "AGAINST"
+ },
+ "23": {
+  "stratum": "A",
+  "measure": "Provide free school meals to children in poverty (via the Bill's provisions)",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "NEITHER"
+ },
+ "24": {
+  "stratum": "H",
+  "measure": "Require schools to follow the national curriculum before the new national curriculum is set out",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "NEITHER"
+ },
+ "25": {
+  "stratum": "A",
+  "measure": "Require only those who provide more than six hours per week of home education to be included in a formal register",
+  "extractor_side": "FOR",
+  "judge_verdict": "NEITHER"
+ },
+ "26": {
+  "stratum": "A",
+  "measure": "Charge VAT on private school fees",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "NEITHER"
+ },
+ "27": {
+  "stratum": "H",
+  "measure": "Require academies to follow the national curriculum",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "AGAINST"
+ },
+ "28": {
+  "stratum": "A",
+  "measure": "Retain the cap on the number of new denominational schools (free schools)",
+  "extractor_side": "FOR",
+  "judge_verdict": "NEITHER"
+ },
+ "29": {
+  "stratum": "H",
+  "measure": "Make the national curriculum more rigid",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "NEITHER"
+ },
+ "30": {
+  "stratum": "A",
+  "measure": "Extend qualified teacher status requirements to all primary and secondary state-funded schools in England (including academies)",
+  "extractor_side": "FOR",
+  "judge_verdict": "NEITHER"
+ },
+ "31": {
+  "stratum": "B",
+  "measure": "Remove the safety valve of schools being able to deviate from the national curriculum",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "AGAINST"
+ },
+ "32": {
+  "stratum": "A",
+  "measure": "Require local authority consent for parents to home-educate their children if they are on a child protection plan or subject to child protection inquiries",
+  "extractor_side": "FOR",
+  "judge_verdict": "NEITHER"
+ },
+ "33": {
+  "stratum": "A",
+  "measure": "Implement the proposals in the Bill (specifically regarding the academy system)",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "NEITHER"
+ },
+ "34": {
+  "stratum": "A",
+  "measure": "End level 7 apprenticeships",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "NEITHER"
+ },
+ "35": {
+  "stratum": "A",
+  "measure": "Charge VAT on private school fees",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "NEITHER"
+ },
+ "36": {
+  "stratum": "B",
+  "measure": "Extend academy freedoms to local authority maintained schools to allow them to offer a curriculum different from the national curriculum",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "AGAINST"
+ },
+ "37": {
+  "stratum": "A",
+  "measure": "Abolish VAT on faith and non-faith independent schools",
+  "extractor_side": "FOR",
+  "judge_verdict": "NEITHER"
+ },
+ "38": {
+  "stratum": "H",
+  "measure": "Require schools to follow the national curriculum",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "NEITHER"
+ },
+ "39": {
+  "stratum": "B",
+  "measure": "Retain the national curriculum's focus on knowledge and core knowledge subjects",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "AGAINST"
+ },
+ "40": {
+  "stratum": "A",
+  "measure": "Require all schools to follow the national curriculum without flexibility for specific needs (such as students falling behind or geographical reasons)",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "NEITHER"
+ },
+ "41": {
+  "stratum": "B",
+  "measure": "Introduce a national curriculum core framework",
+  "extractor_side": "FOR",
+  "judge_verdict": "FOR"
+ },
+ "42": {
+  "stratum": "A",
+  "measure": "Require academies to follow the national curriculum",
+  "extractor_side": "FOR",
+  "judge_verdict": "NEITHER"
+ },
+ "43": {
+  "stratum": "H",
+  "measure": "Require primary legislation to mandate schools slavishly follow the detail of the national curriculum in its entirety",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "AGAINST"
+ },
+ "44": {
+  "stratum": "A",
+  "measure": "Exclude settings with high shares of non-QTS teachers from the new requirement",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "NEITHER"
+ },
+ "45": {
+  "stratum": "H",
+  "measure": "Require schools to follow the national curriculum as a strict floor of mandatory learning",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "NEITHER"
+ },
+ "46": {
+  "stratum": "A",
+  "measure": "Require Wales to adopt England's knowledge-based curriculum and academy system",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "NEITHER"
+ },
+ "47": {
+  "stratum": "B",
+  "measure": "Require academies to follow a uniform national curriculum",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "AGAINST"
+ },
+ "48": {
+  "stratum": "H",
+  "measure": "Require all state schools to follow the national curriculum rigidly",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "NEITHER"
+ },
+ "49": {
+  "stratum": "A",
+  "measure": "Require academies to follow the national curriculum",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "NEITHER"
+ },
+ "50": {
+  "stratum": "A",
+  "measure": "Require local authority consent for children to be withdrawn from school if there is or has ever been a child protection plan or if a child is in need",
+  "extractor_side": "FOR",
+  "judge_verdict": "NEITHER"
+ },
+ "51": {
+  "stratum": "A",
+  "measure": "Create a national register of children not in school",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "NEITHER"
+ },
+ "52": {
+  "stratum": "A",
+  "measure": "Require schools to follow the national curriculum exclusively (or stop allowing innovation outside it)",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "NEITHER"
+ },
+ "53": {
+  "stratum": "A",
+  "measure": "Require home-educated children to receive a suitable education and be safeguarded (or: Ensure home education meets the same standards as school education)",
+  "extractor_side": "FOR",
+  "judge_verdict": "NEITHER"
+ },
+ "54": {
+  "stratum": "A",
+  "measure": "Require academies to follow the national curriculum and maintain qualified teacher status requirements",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "NEITHER"
+ },
+ "55": {
+  "stratum": "H",
+  "measure": "Make the national curriculum more rigid",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "NEITHER"
+ },
+ "56": {
+  "stratum": "A",
+  "measure": "Require non-QTS teachers in schools",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "NEITHER"
+ },
+ "57": {
+  "stratum": "H",
+  "measure": "Make the national curriculum more prescriptive",
+  "extractor_side": "AGAINST",
+  "judge_verdict": "NEITHER"
+ },
+ "58": {
+  "stratum": "B",
+  "measure": "Allow deviation from the national curriculum",
+  "extractor_side": "FOR",
+  "judge_verdict": "FOR"
+ }
+}

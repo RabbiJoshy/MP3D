@@ -1,0 +1,593 @@
+{
+ "totals": {
+  "n_claims": 364,
+  "share": {
+   "FOR": 0.36,
+   "AGAINST": 0.181,
+   "NEITHER": 0.459,
+   "ERR": 0.0
+  },
+  "n_groups": 20,
+  "contested": {
+   "a": 20,
+   "b": 10,
+   "c": 2
+  },
+  "acc_share_old": 0.67,
+  "acc_share_new": 0.451,
+  "sanity": {
+   "matching": 38,
+   "of": 38
+  },
+  "input_tokens": 235503,
+  "cost_usd": 0.00989
+ },
+ "groups": [
+  {
+   "g": 0,
+   "label": "Require non-QTS teachers in schools",
+   "n_claims": 12,
+   "a": {
+    "mps_for": 2,
+    "mps_against": 4,
+    "contested": true
+   },
+   "b": {
+    "mps_for": 0,
+    "mps_against": 4,
+    "contested": false
+   },
+   "c": {
+    "mps_for": 1,
+    "mps_against": 1,
+    "contested": false
+   },
+   "parties_for": [
+    "Lab"
+   ],
+   "parties_against": [
+    "Con"
+   ],
+   "within_party_split": {}
+  },
+  {
+   "g": 2,
+   "label": "Require home-educated children to be registered with local authorities",
+   "n_claims": 25,
+   "a": {
+    "mps_for": 11,
+    "mps_against": 6,
+    "contested": true
+   },
+   "b": {
+    "mps_for": 7,
+    "mps_against": 2,
+    "contested": true
+   },
+   "c": {
+    "mps_for": 6,
+    "mps_against": 0,
+    "contested": false
+   },
+   "parties_for": [
+    "LD",
+    "Lab"
+   ],
+   "parties_against": [],
+   "within_party_split": {}
+  },
+  {
+   "g": 3,
+   "label": "Expand free school meals to lift 100,000 children out of poverty",
+   "n_claims": 5,
+   "a": {
+    "mps_for": 2,
+    "mps_against": 2,
+    "contested": true
+   },
+   "b": {
+    "mps_for": 2,
+    "mps_against": 1,
+    "contested": false
+   },
+   "c": {
+    "mps_for": 2,
+    "mps_against": 0,
+    "contested": false
+   },
+   "parties_for": [
+    "LD",
+    "Lab"
+   ],
+   "parties_against": [],
+   "within_party_split": {}
+  },
+  {
+   "g": 4,
+   "label": "Remove tax breaks for private schools",
+   "n_claims": 22,
+   "a": {
+    "mps_for": 7,
+    "mps_against": 7,
+    "contested": true
+   },
+   "b": {
+    "mps_for": 7,
+    "mps_against": 3,
+    "contested": true
+   },
+   "c": {
+    "mps_for": 7,
+    "mps_against": 1,
+    "contested": false
+   },
+   "parties_for": [
+    "Lab"
+   ],
+   "parties_against": [
+    "LD"
+   ],
+   "within_party_split": {}
+  },
+  {
+   "g": 5,
+   "label": "Abolish academies",
+   "n_claims": 22,
+   "a": {
+    "mps_for": 4,
+    "mps_against": 11,
+    "contested": true
+   },
+   "b": {
+    "mps_for": 0,
+    "mps_against": 8,
+    "contested": false
+   },
+   "c": {
+    "mps_for": 0,
+    "mps_against": 6,
+    "contested": false
+   },
+   "parties_for": [],
+   "parties_against": [
+    "Con",
+    "Lab"
+   ],
+   "within_party_split": {}
+  },
+  {
+   "g": 7,
+   "label": "Introduce an education tax",
+   "n_claims": 5,
+   "a": {
+    "mps_for": 2,
+    "mps_against": 2,
+    "contested": true
+   },
+   "b": {
+    "mps_for": 0,
+    "mps_against": 2,
+    "contested": false
+   },
+   "c": {
+    "mps_for": 1,
+    "mps_against": 2,
+    "contested": false
+   },
+   "parties_for": [
+    "Lab"
+   ],
+   "parties_against": [
+    "Con"
+   ],
+   "within_party_split": {}
+  },
+  {
+   "g": 15,
+   "label": "Require academies to follow the national curriculum",
+   "n_claims": 72,
+   "a": {
+    "mps_for": 11,
+    "mps_against": 20,
+    "contested": true
+   },
+   "b": {
+    "mps_for": 4,
+    "mps_against": 9,
+    "contested": true
+   },
+   "c": {
+    "mps_for": 5,
+    "mps_against": 7,
+    "contested": true
+   },
+   "parties_for": [
+    "Con",
+    "Lab"
+   ],
+   "parties_against": [
+    "Con",
+    "Lab"
+   ],
+   "within_party_split": {
+    "Con": {
+     "FOR": [
+      "Damian Hinds"
+     ],
+     "AGAINST": [
+      "Damian Hinds",
+      "Gregory Stafford",
+      "Laura Trott",
+      "Neil O'Brien",
+      "Nick Timothy",
+      "Patrick Spencer"
+     ]
+    },
+    "Lab": {
+     "FOR": [
+      "Andrew Cooper",
+      "Bridget Phillipson",
+      "Catherine McKinnell",
+      "Jonathan Davies"
+     ],
+     "AGAINST": [
+      "Dame Siobhain McDonagh"
+     ]
+    }
+   }
+  },
+  {
+   "g": 18,
+   "label": "Introduce a register of children not in school",
+   "n_claims": 17,
+   "a": {
+    "mps_for": 8,
+    "mps_against": 5,
+    "contested": true
+   },
+   "b": {
+    "mps_for": 6,
+    "mps_against": 4,
+    "contested": true
+   },
+   "c": {
+    "mps_for": 6,
+    "mps_against": 0,
+    "contested": false
+   },
+   "parties_for": [
+    "LD",
+    "Lab"
+   ],
+   "parties_against": [],
+   "within_party_split": {}
+  },
+  {
+   "g": 21,
+   "label": "Abolish level 7 apprenticeships",
+   "n_claims": 11,
+   "a": {
+    "mps_for": 2,
+    "mps_against": 4,
+    "contested": true
+   },
+   "b": {
+    "mps_for": 0,
+    "mps_against": 2,
+    "contested": false
+   },
+   "c": {
+    "mps_for": 0,
+    "mps_against": 2,
+    "contested": false
+   },
+   "parties_for": [],
+   "parties_against": [
+    "Con"
+   ],
+   "within_party_split": {}
+  },
+  {
+   "g": 28,
+   "label": "Make it harder to turn failing schools into academies",
+   "n_claims": 15,
+   "a": {
+    "mps_for": 2,
+    "mps_against": 7,
+    "contested": true
+   },
+   "b": {
+    "mps_for": 0,
+    "mps_against": 4,
+    "contested": false
+   },
+   "c": {
+    "mps_for": 0,
+    "mps_against": 3,
+    "contested": false
+   },
+   "parties_for": [],
+   "parties_against": [
+    "Con",
+    "Lab"
+   ],
+   "within_party_split": {}
+  },
+  {
+   "g": 33,
+   "label": "Require local authorities to invite proposals for academies and other types of school when establishing new schools",
+   "n_claims": 12,
+   "a": {
+    "mps_for": 4,
+    "mps_against": 3,
+    "contested": true
+   },
+   "b": {
+    "mps_for": 1,
+    "mps_against": 1,
+    "contested": false
+   },
+   "c": {
+    "mps_for": 1,
+    "mps_against": 0,
+    "contested": false
+   },
+   "parties_for": [
+    "Lab"
+   ],
+   "parties_against": [],
+   "within_party_split": {}
+  },
+  {
+   "g": 35,
+   "label": "Charge VAT on private school fees",
+   "n_claims": 53,
+   "a": {
+    "mps_for": 13,
+    "mps_against": 29,
+    "contested": true
+   },
+   "b": {
+    "mps_for": 9,
+    "mps_against": 24,
+    "contested": true
+   },
+   "c": {
+    "mps_for": 7,
+    "mps_against": 16,
+    "contested": true
+   },
+   "parties_for": [
+    "Lab"
+   ],
+   "parties_against": [
+    "Con",
+    "Ind",
+    "LD"
+   ],
+   "within_party_split": {}
+  },
+  {
+   "g": 36,
+   "label": "Require teachers to have qualified status",
+   "n_claims": 17,
+   "a": {
+    "mps_for": 6,
+    "mps_against": 5,
+    "contested": true
+   },
+   "b": {
+    "mps_for": 6,
+    "mps_against": 4,
+    "contested": true
+   },
+   "c": {
+    "mps_for": 6,
+    "mps_against": 0,
+    "contested": false
+   },
+   "parties_for": [
+    "Green",
+    "LD",
+    "Lab"
+   ],
+   "parties_against": [],
+   "within_party_split": {}
+  },
+  {
+   "g": 40,
+   "label": "Abolish the option to home school",
+   "n_claims": 4,
+   "a": {
+    "mps_for": 2,
+    "mps_against": 2,
+    "contested": true
+   },
+   "b": {
+    "mps_for": 0,
+    "mps_against": 1,
+    "contested": false
+   },
+   "c": {
+    "mps_for": 0,
+    "mps_against": 1,
+    "contested": false
+   },
+   "parties_for": [],
+   "parties_against": [
+    "Con"
+   ],
+   "within_party_split": {}
+  },
+  {
+   "g": 50,
+   "label": "Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England",
+   "n_claims": 9,
+   "a": {
+    "mps_for": 3,
+    "mps_against": 3,
+    "contested": true
+   },
+   "b": {
+    "mps_for": 3,
+    "mps_against": 3,
+    "contested": true
+   },
+   "c": {
+    "mps_for": 3,
+    "mps_against": 1,
+    "contested": false
+   },
+   "parties_for": [
+    "Lab"
+   ],
+   "parties_against": [
+    "Con"
+   ],
+   "within_party_split": {}
+  },
+  {
+   "g": 61,
+   "label": "Impose a 50% cap on faith-based selection criteria for new academies and free schools",
+   "n_claims": 9,
+   "a": {
+    "mps_for": 3,
+    "mps_against": 3,
+    "contested": true
+   },
+   "b": {
+    "mps_for": 2,
+    "mps_against": 2,
+    "contested": true
+   },
+   "c": {
+    "mps_for": 2,
+    "mps_against": 0,
+    "contested": false
+   },
+   "parties_for": [
+    "LD",
+    "Lab"
+   ],
+   "parties_against": [],
+   "within_party_split": {}
+  },
+  {
+   "g": 65,
+   "label": "Create Skills England",
+   "n_claims": 20,
+   "a": {
+    "mps_for": 10,
+    "mps_against": 3,
+    "contested": true
+   },
+   "b": {
+    "mps_for": 10,
+    "mps_against": 2,
+    "contested": true
+   },
+   "c": {
+    "mps_for": 10,
+    "mps_against": 1,
+    "contested": false
+   },
+   "parties_for": [
+    "LD",
+    "Lab"
+   ],
+   "parties_against": [
+    "Con"
+   ],
+   "within_party_split": {}
+  },
+  {
+   "g": 91,
+   "label": "Ban mobile phone use in schools",
+   "n_claims": 20,
+   "a": {
+    "mps_for": 12,
+    "mps_against": 3,
+    "contested": true
+   },
+   "b": {
+    "mps_for": 11,
+    "mps_against": 1,
+    "contested": false
+   },
+   "c": {
+    "mps_for": 10,
+    "mps_against": 0,
+    "contested": false
+   },
+   "parties_for": [
+    "Con",
+    "LD",
+    "Lab"
+   ],
+   "parties_against": [],
+   "within_party_split": {}
+  },
+  {
+   "g": 123,
+   "label": "Require academies to follow a core of standards",
+   "n_claims": 6,
+   "a": {
+    "mps_for": 2,
+    "mps_against": 3,
+    "contested": true
+   },
+   "b": {
+    "mps_for": 2,
+    "mps_against": 2,
+    "contested": true
+   },
+   "c": {
+    "mps_for": 2,
+    "mps_against": 0,
+    "contested": false
+   },
+   "parties_for": [
+    "Lab"
+   ],
+   "parties_against": [],
+   "within_party_split": {}
+  },
+  {
+   "g": 149,
+   "label": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+   "n_claims": 8,
+   "a": {
+    "mps_for": 5,
+    "mps_against": 2,
+    "contested": true
+   },
+   "b": {
+    "mps_for": 2,
+    "mps_against": 1,
+    "contested": false
+   },
+   "c": {
+    "mps_for": 2,
+    "mps_against": 1,
+    "contested": false
+   },
+   "parties_for": [
+    "Con",
+    "Lab"
+   ],
+   "parties_against": [
+    "Con"
+   ],
+   "within_party_split": {
+    "Con": {
+     "FOR": [
+      "Damian Hinds"
+     ],
+     "AGAINST": [
+      "Neil O'Brien"
+     ]
+    }
+   }
+  }
+ ]
+}

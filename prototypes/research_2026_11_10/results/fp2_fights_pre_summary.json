@@ -1,0 +1,43 @@
+{
+ "groups": 6809,
+ "pairs_judged": 10234,
+ "pairs_passing": 2495,
+ "accepted": 1867,
+ "rejected_or_capped": 628,
+ "fights_total": 5129,
+ "multi_group": 682,
+ "fights_ge4": 699,
+ "per_topic_ge4": {
+  "Agriculture": 12,
+  "Civil rights": 32,
+  "Culture": 27,
+  "Defence": 26,
+  "Domestic commerce": 33,
+  "Education": 129,
+  "Employment": 40,
+  "Energy": 32,
+  "Environment": 32,
+  "Foreign trade": 16,
+  "Government operations": 42,
+  "Health": 31,
+  "Housing": 31,
+  "Immigration": 35,
+  "International affairs": 6,
+  "Law and crime": 37,
+  "Macroeconomics": 38,
+  "Public lands": 31,
+  "Social welfare": 32,
+  "Technology": 7,
+  "Transport": 30
+ },
+ "mps_dist": {
+  "count": 699.0,
+  "mean": 10.0414878397711,
+  "std": 8.923729421060235,
+  "min": 4.0,
+  "25%": 5.0,
+  "50%": 7.0,
+  "75%": 12.0,
+  "max": 95.0
+ }
+}

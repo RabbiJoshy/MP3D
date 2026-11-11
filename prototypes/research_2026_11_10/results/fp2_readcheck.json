@@ -1,0 +1,310 @@
+{
+ "counts": {
+  "no real position": 2,
+  "correct": 26,
+  "different measure": 1,
+  "wrong side": 1
+ },
+ "items": [
+  {
+   "fight_id": 107,
+   "label": "Implement the Best Start in Life strategy for early years",
+   "mp": "Stephen Morgan",
+   "party": "Lab",
+   "predicted": "FOR",
+   "passage_id": "uk.org.publicwhip/debate/2024-09-09d.554.2#0",
+   "verdict": "no real position",
+   "quote": "every child gets the best start in life"
+  },
+  {
+   "fight_id": 390,
+   "label": "Pass the Infants, Parents and Carers Bill",
+   "mp": "Fleur Anderson",
+   "party": "Lab",
+   "predicted": "FOR",
+   "passage_id": "uk.org.publicwhip/debate/2026-02-03d.174.2#2",
+   "verdict": "correct",
+   "quote": "This Bill gives us the chance to break that cycle."
+  },
+  {
+   "fight_id": 214,
+   "label": "Accelerate the transition to clean energy",
+   "mp": "Adrian Ramsay",
+   "party": "Green",
+   "predicted": "FOR",
+   "passage_id": "uk.org.publicwhip/debate/2024-12-10e.847.0#1",
+   "verdict": "different measure",
+   "quote": "The proposed tax relief is too blunt an instrument to make a useful contribution to decarbonisation."
+  },
+  {
+   "fight_id": 34,
+   "label": "Support the Sporting Events Bill [Lords]",
+   "mp": "Connor Naismith",
+   "party": "Lab",
+   "predicted": "FOR",
+   "passage_id": "uk.org.publicwhip/debate/2025-07-08d.887.0#0",
+   "verdict": "correct",
+   "quote": "It is an immense privilege to rise once again to support this important Bill"
+  },
+  {
+   "fight_id": 183,
+   "label": "Pass the Employment Rights Bill",
+   "mp": "Lola McEvoy",
+   "party": "Lab",
+   "predicted": "FOR",
+   "passage_id": "uk.org.publicwhip/debate/2024-10-21f.78.4#0",
+   "verdict": "correct",
+   "quote": "It is with great pride that I rise to speak on the Bill today."
+  },
+  {
+   "fight_id": 183,
+   "label": "Pass the Employment Rights Bill",
+   "mp": "Blair McDougall",
+   "party": "Lab",
+   "predicted": "FOR",
+   "passage_id": "uk.org.publicwhip/debate/2026-07-07a.231.3#0",
+   "verdict": "correct",
+   "quote": "Many spoke about seasonal workers as if the legislation was somehow going to force seasonal contracts to be permanent contracts."
+  },
+  {
+   "fight_id": 185,
+   "label": "Support the Employment Rights Bill",
+   "mp": "Ruth Cadbury",
+   "party": "Lab",
+   "predicted": "FOR",
+   "passage_id": "uk.org.publicwhip/debate/2024-10-21f.68.2#0",
+   "verdict": "correct",
+   "quote": "I support this landmark employment Bill, the biggest expansion of workers\u2019 rights for a generation."
+  },
+  {
+   "fight_id": 62,
+   "label": "Pass the Diego Garcia Military Base and British Indian Ocean Territory Bill",
+   "mp": "Alicia Kearns",
+   "party": "Con",
+   "predicted": "AGAINST",
+   "passage_id": "uk.org.publicwhip/debate/2026-01-20h.256.3#1",
+   "verdict": "correct",
+   "quote": "This is a bad deal, ceding territory not to those hailing from those islands"
+  },
+  {
+   "fight_id": 93,
+   "label": "End VAT exemption for private school fees",
+   "mp": "Jim Shannon",
+   "party": "DUP",
+   "predicted": "AGAINST",
+   "passage_id": "uk.org.publicwhip/debate/2024-10-08e.165.5#0",
+   "verdict": "correct",
+   "quote": "find it impossible to understand how it can be that it is the Labour party"
+  },
+  {
+   "fight_id": 52,
+   "label": "Require single living accommodation for service personnel to meet reasonable standards",
+   "mp": "David Reed",
+   "party": "Con",
+   "predicted": "FOR",
+   "passage_id": "uk.org.publicwhip/debate/2024-11-18b.86.0#2",
+   "verdict": "correct",
+   "quote": "the retention of talented personnel will continue to be a significant challenge"
+  },
+  {
+   "fight_id": 413,
+   "label": "Pass the Railways Bill",
+   "mp": "Mr Richard Holden",
+   "party": "Con",
+   "predicted": "AGAINST",
+   "passage_id": "uk.org.publicwhip/debate/2025-12-09d.214.3#1",
+   "verdict": "correct",
+   "quote": "What the Secretary of State has brought forward is not a coherent model at all"
+  },
+  {
+   "fight_id": 336,
+   "label": "Pass the Sentencing Bill",
+   "mp": "Yvette Cooper",
+   "party": "Lab",
+   "predicted": "FOR",
+   "passage_id": "uk.org.publicwhip/debate/2025-03-10c.682.1#1",
+   "verdict": "correct",
+   "quote": "This Government will be tough on crime and tough on the causes of crime"
+  },
+  {
+   "fight_id": 335,
+   "label": "Establish a Crown court bench division for cases likely to receive a sentence of three years or less",
+   "mp": "Jim Allister",
+   "party": "TUV",
+   "predicted": "AGAINST",
+   "passage_id": "uk.org.publicwhip/debate/2026-03-10b.252.1#0",
+   "verdict": "correct",
+   "quote": "we are suggesting that we should move away from that cornerstone of justice in all those cases."
+  },
+  {
+   "fight_id": 101,
+   "label": "Extend the national curriculum to all schools via the Children\u2019s Wellbeing and Schools Bill",
+   "mp": "Gregory Stafford",
+   "party": "Con",
+   "predicted": "AGAINST",
+   "passage_id": "uk.org.publicwhip/debate/2025-03-18d.255.3#0",
+   "verdict": "correct",
+   "quote": "much of it represents a dangerous and unnecessary centralisation of power that will harm schools"
+  },
+  {
+   "fight_id": 54,
+   "label": "Establish an Armed Forces Commissioner",
+   "mp": "Alex Ballinger",
+   "party": "Lab",
+   "predicted": "FOR",
+   "passage_id": "uk.org.publicwhip/debate/2024-11-18b.100.1#0",
+   "verdict": "correct",
+   "quote": "the Government have in the same month introduced the Armed Forces Commissioner Bill, which rightly recognises"
+  },
+  {
+   "fight_id": 13,
+   "label": "Pass the Terminally Ill Adults (End of Life) Bill",
+   "mp": "Pippa Heylings",
+   "party": "LD",
+   "predicted": "FOR",
+   "passage_id": "uk.org.publicwhip/debate/2026-09-11b.1340.0#2",
+   "verdict": "correct",
+   "quote": "ensuring that people approaching the end of life are treated with dignity, compassion and respect"
+  },
+  {
+   "fight_id": 274,
+   "label": "Pass the Mental Health Bill [Lords]",
+   "mp": "Lauren Edwards",
+   "party": "Lab",
+   "predicted": "FOR",
+   "passage_id": "uk.org.publicwhip/debate/2025-05-19b.808.0#0",
+   "verdict": "correct",
+   "quote": "I welcome today\u2019s Second Reading of the Bill."
+  },
+  {
+   "fight_id": 316,
+   "label": "Establish the Border Security Command and enhance powers to tackle criminal gangs",
+   "mp": "Dan Aldridge",
+   "party": "Lab",
+   "predicted": "FOR",
+   "passage_id": "uk.org.publicwhip/debate/2025-02-10e.96.0#3",
+   "verdict": "correct",
+   "quote": "I am pleased that the Government are taking concrete action through the introduction of the Bill"
+  },
+  {
+   "fight_id": 183,
+   "label": "Pass the Employment Rights Bill",
+   "mp": "Nadia Whittome",
+   "party": "Lab",
+   "predicted": "FOR",
+   "passage_id": "uk.org.publicwhip/debate/2024-10-21f.127.0#0",
+   "verdict": "correct",
+   "quote": "Our economy is fundamentally rigged against millions of workers."
+  },
+  {
+   "fight_id": 100,
+   "label": "Ban mobile phone use in schools",
+   "mp": "Sojan Joseph",
+   "party": "Lab",
+   "predicted": "FOR",
+   "passage_id": "uk.org.publicwhip/debate/2026-02-24c.279.0#1",
+   "verdict": "correct",
+   "quote": "students locking their phones away in sealed pouches at the start of the school day"
+  },
+  {
+   "fight_id": 99,
+   "label": "Implement the Schools White Paper SEND reforms",
+   "mp": "Jayne Kirkham",
+   "party": "Lab",
+   "predicted": "FOR",
+   "passage_id": "uk.org.publicwhip/debate/2026-05-14e.202.1#0",
+   "verdict": "correct",
+   "quote": "Parents of children with SEND in my constituency have made clear that the current system is not fit for purpose."
+  },
+  {
+   "fight_id": 263,
+   "label": "Establish Great British Railways",
+   "mp": "Jen Craft",
+   "party": "Lab",
+   "predicted": "FOR",
+   "passage_id": "uk.org.publicwhip/debate/2026-06-10b.389.1#2",
+   "verdict": "correct",
+   "quote": "It is absolutely right that the organisation becomes part of a unified, publicly owned body"
+  },
+  {
+   "fight_id": 343,
+   "label": "End the automatic right of appeal from magistrates court",
+   "mp": "Jess Brown-Fuller",
+   "party": "LD",
+   "predicted": "AGAINST",
+   "passage_id": "uk.org.publicwhip/debate/2026-03-10b.216.4#2",
+   "verdict": "correct",
+   "quote": "Why does the Deputy Prime Minister believe that should be done when 42% of appeals"
+  },
+  {
+   "fight_id": 180,
+   "label": "Require union members to opt-in to political fund contributions",
+   "mp": "Gregory Stafford",
+   "party": "Con",
+   "predicted": "FOR",
+   "passage_id": "uk.org.publicwhip/debate/2025-03-12c.1119.5#0",
+   "verdict": "correct",
+   "quote": "businesses will face reduced notice periods for strikes, leading to even more disruption and economic damage."
+  },
+  {
+   "fight_id": 157,
+   "label": "Support the Children\u2019s Wellbeing and Schools Bill",
+   "mp": "Damian Hinds",
+   "party": "Con",
+   "predicted": "FOR",
+   "passage_id": "uk.org.publicwhip/standing/standing5376_CHILDREN'S_10-0_2025-02-04a.368.1#0",
+   "verdict": "wrong side",
+   "quote": "is a safety valve against politicisation."
+  },
+  {
+   "fight_id": 10,
+   "label": "Include amendments to the Terminally Ill Adults (End of Life) Bill",
+   "mp": "Dr Marie Tidball",
+   "party": "Lab",
+   "predicted": "FOR",
+   "passage_id": "uk.org.publicwhip/standing/standing5377_TERMINALLY_08-0_2025-02-11a.322.0#0",
+   "verdict": "correct",
+   "quote": "I agree with on what would strengthen the Bill."
+  },
+  {
+   "fight_id": 36,
+   "label": "Apply copyright law to data mining and AI-generative activity",
+   "mp": "Max Wilkinson",
+   "party": "LD",
+   "predicted": "FOR",
+   "passage_id": "uk.org.publicwhip/debate/2025-02-12c.323.2#1",
+   "verdict": "correct",
+   "quote": "we back a system that would protect the IP of creatives; that is, an opt-in system."
+  },
+  {
+   "fight_id": 223,
+   "label": "Support the Water (Special Measures) Bill",
+   "mp": "Ms Julie Minns",
+   "party": "Lab",
+   "predicted": "FOR",
+   "passage_id": "uk.org.publicwhip/debate/2024-12-16d.121.1#1",
+   "verdict": "correct",
+   "quote": "I am delighted that this Bill is giving us the powers finally to hold the water companies to account"
+  },
+  {
+   "fight_id": 116,
+   "label": "Remove VAT and business rates exemptions for private schools",
+   "mp": "Bridget Phillipson",
+   "party": "Lab",
+   "predicted": "FOR",
+   "passage_id": "uk.org.publicwhip/debate/2024-07-24f.703.1#3",
+   "verdict": "no real position",
+   "quote": "We have already begun recruiting 6,500 more expert teachers."
+  },
+  {
+   "fight_id": 348,
+   "label": "Create a new offence of assaulting a retail worker",
+   "mp": "Matt Vickers",
+   "party": "Con",
+   "predicted": "FOR",
+   "passage_id": "uk.org.publicwhip/debate/2025-03-10c.761.1#2",
+   "verdict": "correct",
+   "quote": "I am glad that that will be taken up by the incumbent Government"
+  }
+ ]
+}

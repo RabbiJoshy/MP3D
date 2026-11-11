@@ -1,0 +1,19 @@
+"""Create auditable presentation-only overrides from exact cached source passages."""
+import json
+from pathlib import Path
+import pandas as pd
+R=Path(__file__).resolve().parents[1]
+p=pd.read_parquet(R/'data/clean/passages.parquet').set_index('passage_id')
+def source(pid,start,end=None):
+ row=p.loc[pid];text=str(row['text']);a=text.index(start);b=text.index(end,a)+len(end) if end else len(text)
+ return dict(m=int(row.member_id),d=str(row.date),h=str(row['minor'] or row['major']),t=text[a:b],source_id=pid,source_text=text)
+review={
+'Assisted Dying Legalization':dict(question='Would you support or oppose the assisted-dying proposal debated in November 2024?',lo='Support the proposal',hi='Oppose the proposal',note='This concerns that proposal and its safeguards. Supporting assisted dying does not imply opposing palliative care.',lo_source=source('uk.org.publicwhip/debate/2024-11-29d.1076.0#1','People want and deserve'),hi_source=source('uk.org.publicwhip/debate/2024-11-29d.1039.1#0','The Bill falls woefully short','It is a wrong and rushed answer to a complex problem.')),
+'Winter Fuel Means-Testing':dict(question='Would you support or oppose the restriction of Winter Fuel Payments debated in 2024?',lo='Support restricting eligibility',hi='Oppose that restriction',note='This is about the 2024 restriction, not a statement of today’s eligibility rules or opposition to every possible means test.',lo_source=source('uk.org.publicwhip/debate/2024-10-08e.148.0#0','Yes, we have means-tested','support vulnerable households.'),hi_source=source('uk.org.publicwhip/debate/2024-09-10a.784.1#0','I will not be supporting this measure','unnecessary cut to their income.')),
+'Rail Public Ownership':dict(question='Should passenger rail services move into public ownership or retain private operators?',lo='Retain private operators',hi='Move into public ownership',note='Passenger services, as debated in July 2024; this does not mean every part of the rail industry.',lo_source=source('uk.org.publicwhip/debate/2024-07-29f.1081.0#0','There was a reason why private provision'),hi_source=source('uk.org.publicwhip/debate/2024-07-29f.1113.0#2','I commend both ASLEF','respect for all rail workers.')),
+'Water Industry Ownership':dict(question='Should privately owned water companies move into public ownership, or remain private with regulatory reform?',lo='Move into public ownership',hi='Retain private ownership; reform regulation',note='Both approaches can aim to reduce pollution. Other ownership models exist; choose mixed or skip if neither fits.',lo_source=source('uk.org.publicwhip/debate/2025-03-28b.1241.1#3','I strongly support public ownership','British water board.'),hi_source=source('uk.org.publicwhip/debate/2024-10-23d.279.1#4','It will be pragmatic','serving customers better.')),
+'Planning Reform vs Green Belt':dict(question='Which emphasis is closer to yours in the housing-planning debate?',lo='Stronger limits on green-belt development',hi='Planning reform to accelerate development',note='A difference in emphasis, not mutually exclusive goals. Supporting reform does not automatically mean opposing green-belt protections.',lo_source=source('uk.org.publicwhip/debate/2025-01-17d.701.1#1','The level of building proposed'),hi_source=source('uk.org.publicwhip/debate/2025-03-24d.694.2#0','For too long our planning system','an antiquated, costly and labyrinthine system.'))
+}
+for v in review.values():v['status']='opening_excerpt_checked';v['review_scope']='Question wording and two illustrative excerpts checked against cached cleaned passages. Not an audit of all MP scores or verification against original Hansard.'
+(R/'prototypes/opening_question_review.json').write_text(json.dumps(review,ensure_ascii=False,indent=2))
+print('Verified and saved 10 exact source spans for 5 opening questions.')

@@ -1,0 +1,482 @@
+[
+ {
+  "pair_id": 1,
+  "output": {
+   "position_a": "Implement a national core framework guaranteeing every child a quality education with qualified teachers regardless of school type.",
+   "position_b": "Ensure every child in every type of school gets an excellent education without relying on ideological commitments to academies.",
+   "decision": "the shared policy decision is ensuring every child receives a high-quality education regardless of school type",
+   "relation": "EQUIVALENT",
+   "quote_a": "we are trying to create a core offer for every child in this country. No matter what type of school they go to",
+   "quote_b": "We should focus on ensuring that every child in every type of school gets an excellent education."
+  },
+  "raw": "{\n\"position_a\": \"Implement a national core framework guaranteeing every child a quality education with qualified teachers regardless of school type.\",\n\"position_b\": \"Ensure every child in every type of school gets an excellent education without relying on ideological commitments to academies.\",\n\"decision\": \"the shared policy decision is ensuring every child receives a high-quality education regardless of school type\",\n\"relation\": \"EQUIVALENT\",\n\"quote_a\": \"we are trying to create a core offer for every child in this country. No matter what type of school they go to\",\n\"quote_b\": \"We should focus on ensuring that every child in every type of school gets an excellent education.\"\n}",
+  "quote_check": {
+   "a": true,
+   "b": true
+  }
+ },
+ {
+  "pair_id": 2,
+  "output": {
+   "position_a": "Embed media literacy, digital literacy, citizenship, and oracy into the curriculum through new programmes of study.",
+   "position_b": "Integrate essential skills like media literacy, financial literacy, and oracy throughout the entire curriculum rather than keeping them niche.",
+   "decision": "embedding essential skills such as media literacy and oracy into the school curriculum",
+   "relation": "EQUIVALENT",
+   "quote_a": "We will pursue both knowledge and skills and inclusion and high standards for our young people.",
+   "quote_b": "Another theme that stood out strongly from our evidence sessions is the importance of essential skills being integrated into the curriculum"
+  },
+  "raw": "{\n\"position_a\": \"Embed media literacy, digital literacy, citizenship, and oracy into the curriculum through new programmes of study.\",\n\"position_b\": \"Integrate essential skills like media literacy, financial literacy, and oracy throughout the entire curriculum rather than keeping them niche.\",\n\"decision\": \"embedding essential skills such as media literacy and oracy into the school curriculum\",\n\"relation\": \"EQUIVALENT\",\n\"quote_a\": \"We will pursue both knowledge and skills and inclusion and high standards for our young people.\",\n\"quote_b\": \"Another theme that stood out strongly from our evidence sessions is the importance of essential skills being integrated into the curriculum\"\n}",
+  "quote_check": {
+   "a": true,
+   "b": true
+  }
+ },
+ {
+  "pair_id": 3,
+  "output": {
+   "position_a": "Ensure early diagnosis and support for dyslexic children are available everywhere, not dependent on location.",
+   "position_b": "Implement a national teacher training program to improve reading outcomes for children with dyslexia.",
+   "decision": "early diagnosis and support for dyslexic children",
+   "relation": "UNDETERMINED",
+   "quote_a": "But receiving a diagnosis and the associated help should not be down to a postcode lottery.",
+   "quote_b": "We are strengthening existing programmes and introducing new ones to ensure that all children can secure the essential skills of reading and writing."
+  },
+  "raw": "{\n\"position_a\": \"Ensure early diagnosis and support for dyslexic children are available everywhere, not dependent on location.\",\n\"position_b\": \"Implement a national teacher training program to improve reading outcomes for children with dyslexia.\",\n\"decision\": \"early diagnosis and support for dyslexic children\",\n\"relation\": \"UNDETERMINED\",\n\"quote_a\": \"But receiving a diagnosis and the associated help should not be down to a postcode lottery.\",\n\"quote_b\": \"We are strengthening existing programmes and introducing new ones to ensure that all children can secure the essential skills of reading and writing.\"\n}",
+  "quote_check": {
+   "a": true,
+   "b": true
+  }
+ },
+ {
+  "pair_id": 4,
+  "output": {
+   "position_a": "Speaker A argues for maintaining the National Curriculum to ensure all children have guaranteed access to a high-quality, broad education foundation.",
+   "position_b": "Speaker B argues for allowing academies to deviate from the National Curriculum to serve as a safety valve against politicization.",
+   "decision": "Whether schools should be required to follow the National Curriculum strictly or allowed to deviate from it.",
+   "relation": "INCOMPATIBLE",
+   "quote_a": "The clause will give every child guaranteed access to a cutting-edge curriculum that will provide an excellent foundation in reading, writing and maths.",
+   "quote_b": "the ability of academies... to deviate somewhat from the national curriculum is a safety valve against politicisation."
+  },
+  "raw": "{\n\"position_a\": \"Speaker A argues for maintaining the National Curriculum to ensure all children have guaranteed access to a high-quality, broad education foundation.\",\n\"position_b\": \"Speaker B argues for allowing academies to deviate from the National Curriculum to serve as a safety valve against politicization.\",\n\"decision\": \"Whether schools should be required to follow the National Curriculum strictly or allowed to deviate from it.\",\n\"relation\": \"INCOMPATIBLE\",\n\"quote_a\": \"The clause will give every child guaranteed access to a cutting-edge curriculum that will provide an excellent foundation in reading, writing and maths.\",\n\"quote_b\": \"the ability of academies... to deviate somewhat from the national curriculum is a safety valve against politicisation.\"\n}",
+  "quote_check": {
+   "a": true,
+   "b": false
+  }
+ },
+ {
+  "pair_id": 5,
+  "output": {
+   "position_a": "The government must fix the broken SEND system by ending the perpetuation of inequality that forces parents to seek unaffordable private alternatives.",
+   "position_b": "The government must fix the broken SEND system by making tough funding choices and reforming the system to hold schools, local authorities, and transport providers accountable.",
+   "decision": "Fixing the broken SEND system for children with special educational needs and disabilities",
+   "relation": "EQUIVALENT",
+   "quote_a": "Does the Minister agree with me that perpetuating a system of inequality is not the solution for our broken SEND system?",
+   "quote_b": "The answer lies in both funding and reform of the system."
+  },
+  "raw": "{\n\"position_a\": \"The government must fix the broken SEND system by ending the perpetuation of inequality that forces parents to seek unaffordable private alternatives.\",\n\"position_b\": \"The government must fix the broken SEND system by making tough funding choices and reforming the system to hold schools, local authorities, and transport providers accountable.\",\n\"decision\": \"Fixing the broken SEND system for children with special educational needs and disabilities\",\n\"relation\": \"EQUIVALENT\",\n\"quote_a\": \"Does the Minister agree with me that perpetuating a system of inequality is not the solution for our broken SEND system?\",\n\"quote_b\": \"The answer lies in both funding and reform of the system.\"\n}",
+  "quote_check": {
+   "a": true,
+   "b": true
+  }
+ },
+ {
+  "pair_id": 6,
+  "output": {
+   "position_a": "The Government must provide centralized guidance, teacher training, and support for initiatives like My Money Week to make financial education a statutory part of the primary curriculum.",
+   "position_b": "Financial education should be delivered through schools, families, and communities, with the government keeping matters under review rather than mandating specific school curriculum changes.",
+   "decision": "Whether the government should mandate financial education as a statutory part of the primary school curriculum with centralized teacher support.",
+   "relation": "UNDETERMINED",
+   "quote_a": "Clearly, financial education needs to start early and must become a key part of the primary curriculum.",
+   "quote_b": "Ultimately, though, we must acknowledge that the school timetable is already under intense pressure, and there are many competing calls on limited time."
+  },
+  "raw": "{\n\"position_a\": \"The Government must provide centralized guidance, teacher training, and support for initiatives like My Money Week to make financial education a statutory part of the primary curriculum.\",\n\"position_b\": \"Financial education should be delivered through schools, families, and communities, with the government keeping matters under review rather than mandating specific school curriculum changes.\",\n\"decision\": \"Whether the government should mandate financial education as a statutory part of the primary school curriculum with centralized teacher support.\",\n\"relation\": \"UNDETERMINED\",\n\"quote_a\": \"Clearly, financial education needs to start early and must become a key part of the primary curriculum.\",\n\"quote_b\": \"Ultimately, though, we must acknowledge that the school timetable is already under intense pressure, and there are many competing calls on limited time.\"\n}",
+  "quote_check": {
+   "a": true,
+   "b": true
+  }
+ },
+ {
+  "pair_id": 7,
+  "output": {
+   "position_a": "Speaker A argues that the Department for Education should not remove the large programme uplift funding for the International Baccalaureate, as it would severely impact Hockerill Anglo-European College's ability to offer the diploma.",
+   "position_b": "Speaker B argues that the Government should not scrap funding for the International Baccalaureate, characterizing the move as educational vandalism that imposes a one-size-fits-all approach.",
+   "decision": "The removal of large programme uplift funding for the International Baccalaureate programme by the Department for Education.",
+   "relation": "EQUIVALENT",
+   "quote_a": "The removal of the large programme uplift funding for the international baccalaureate programme by the Department for Education would seriously impact Hockerill's ability to offer the IB.",
+   "quote_b": "I have to put it on record, if there were any doubt, that His Majesty's Opposition are beyond disappointed that funding for the international baccalaureate has been scrapped."
+  },
+  "raw": "{\n\"position_a\": \"Speaker A argues that the Department for Education should not remove the large programme uplift funding for the International Baccalaureate, as it would severely impact Hockerill Anglo-European College's ability to offer the diploma.\",\n\"position_b\": \"Speaker B argues that the Government should not scrap funding for the International Baccalaureate, characterizing the move as educational vandalism that imposes a one-size-fits-all approach.\",\n\"decision\": \"The removal of large programme uplift funding for the International Baccalaureate programme by the Department for Education.\",\n\"relation\": \"EQUIVALENT\",\n\"quote_a\": \"The removal of the large programme uplift funding for the international baccalaureate programme by the Department for Education would seriously impact Hockerill's ability to offer the IB.\",\n\"quote_b\": \"I have to put it on record, if there were any doubt, that His Majesty's Opposition are beyond disappointed that funding for the international baccalaureate has been scrapped.\"\n}",
+  "quote_check": {
+   "a": true,
+   "b": true
+  }
+ },
+ {
+  "pair_id": 8,
+  "output": {
+   "position_a": "The government should not legislate to make play and continuous provision statutory in the key stage 1 curriculum.",
+   "position_b": "The government should prioritize the petitioners' work on play in the key stage 1 curriculum when bringing forward detailed guidance and the schools White Paper.",
+   "decision": "whether to make play and continuous provision statutory in the key stage 1 curriculum",
+   "relation": "INCOMPATIBLE",
+   "quote_a": "That is why it would not be right for us to legislate to make play and continuous provision statutory in the key stage 1 curriculum.",
+   "quote_b": "I hope that as the Government bring forward more detailed guidance... the work of the petitioners on the topic of play in the key stage 1 curriculum will be at the forefront of their thinking."
+  },
+  "raw": "{\n\"position_a\": \"The government should not legislate to make play and continuous provision statutory in the key stage 1 curriculum.\",\n\"position_b\": \"The government should prioritize the petitioners' work on play in the key stage 1 curriculum when bringing forward detailed guidance and the schools White Paper.\",\n\"decision\": \"whether to make play and continuous provision statutory in the key stage 1 curriculum\",\n\"relation\": \"INCOMPATIBLE\",\n\"quote_a\": \"That is why it would not be right for us to legislate to make play and continuous provision statutory in the key stage 1 curriculum.\",\n\"quote_b\": \"I hope that as the Government bring forward more detailed guidance... the work of the petitioners on the topic of play in the key stage 1 curriculum will be at the forefront of their thinking.\"\n}",
+  "quote_check": {
+   "a": true,
+   "b": false
+  }
+ },
+ {
+  "pair_id": 9,
+  "output": {
+   "position_a": "The Secretary of State should commit to universal screening for neurodivergence and increased teacher training for primary school children.",
+   "position_b": "The Secretary of State should reduce the number of examinations by 10% to address examination overload.",
+   "decision": "NONE",
+   "relation": "UNDETERMINED",
+   "quote_a": "To close that gap, will the Secretary of State commit to universal screening for neurodivergence, and to more teacher training on the subject for those teaching primary school-aged children?",
+   "quote_b": "One is on examinations. We know that this country has an examination overload and I welcome the proposed reduction by 10%."
+  },
+  "raw": "{\n\"position_a\": \"The Secretary of State should commit to universal screening for neurodivergence and increased teacher training for primary school children.\",\n\"position_b\": \"The Secretary of State should reduce the number of examinations by 10% to address examination overload.\",\n\"decision\": \"NONE\",\n\"relation\": \"UNDETERMINED\",\n\"quote_a\": \"To close that gap, will the Secretary of State commit to universal screening for neurodivergence, and to more teacher training on the subject for those teaching primary school-aged children?\",\n\"quote_b\": \"One is on examinations. We know that this country has an examination overload and I welcome the proposed reduction by 10%.\"\n}",
+  "quote_check": {
+   "a": true,
+   "b": true
+  }
+ },
+ {
+  "pair_id": 10,
+  "output": {
+   "position_a": "Establish a fully equipped, statutory, universal and open-access youth work system to support children's wellbeing and practical skills.",
+   "position_b": "Oppose Government plans to introduce VAT on independent schools, arguing it will reduce parental choice and increase pressure on state schools.",
+   "decision": "NONE",
+   "relation": "UNDETERMINED",
+   "quote_a": "A fully equipped, statutory, universal and open-access youth work system will be vital to achieve that aim.",
+   "quote_b": "Those students will face VAT under the Government's current plans—plans that will reduce choice for parents and increase pressure on the state school system."
+  },
+  "raw": "{\n\"position_a\": \"Establish a fully equipped, statutory, universal and open-access youth work system to support children's wellbeing and practical skills.\",\n\"position_b\": \"Oppose Government plans to introduce VAT on independent schools, arguing it will reduce parental choice and increase pressure on state schools.\",\n\"decision\": \"NONE\",\n\"relation\": \"UNDETERMINED\",\n\"quote_a\": \"A fully equipped, statutory, universal and open-access youth work system will be vital to achieve that aim.\",\n\"quote_b\": \"Those students will face VAT under the Government's current plans—plans that will reduce choice for parents and increase pressure on the state school system.\"\n}",
+  "quote_check": {
+   "a": true,
+   "b": true
+  }
+ },
+ {
+  "pair_id": 11,
+  "output": {
+   "position_a": "The Labour Government should prioritize broadening educational opportunities through apprenticeships as a vital alternative to university to rebuild the economy.",
+   "position_b": "The Government should ensure apprenticeships are valued equally to degrees and create a future where such success stories are the norm.",
+   "decision": "The shared policy decision is to promote and value apprenticeships as a key component of the national education and economic strategy.",
+   "relation": "EQUIVALENT",
+   "quote_a": "Where university or academic routes are not the right fit, apprenticeships offer vital, valuable alternatives not only for those enrolled, but for training providers, local businesses and the economy.",
+   "quote_b": "It is on us—this Government—to build a future where this kind of apprenticeship success story is the norm, not the exception, and where an apprenticeship holds every bit as much value as a degree."
+  },
+  "raw": "{\n\"position_a\": \"The Labour Government should prioritize broadening educational opportunities through apprenticeships as a vital alternative to university to rebuild the economy.\",\n\"position_b\": \"The Government should ensure apprenticeships are valued equally to degrees and create a future where such success stories are the norm.\",\n\"decision\": \"The shared policy decision is to promote and value apprenticeships as a key component of the national education and economic strategy.\",\n\"relation\": \"EQUIVALENT\",\n\"quote_a\": \"Where university or academic routes are not the right fit, apprenticeships offer vital, valuable alternatives not only for those enrolled, but for training providers, local businesses and the economy.\",\n\"quote_b\": \"It is on us—this Government—to build a future where this kind of apprenticeship success story is the norm, not the exception, and where an apprenticeship holds every bit as much value as a degree.\"\n}",
+  "quote_check": {
+   "a": true,
+   "b": true
+  }
+ },
+ {
+  "pair_id": 12,
+  "output": {
+   "position_a": "Speaker A supports the Employment Rights Bill and the introduction of breakfast clubs to help working parents.",
+   "position_b": "Speaker B supports legislation for school breakfasts but insists on amendments to ensure the policy is implemented correctly.",
+   "decision": "The shared policy decision is the implementation of school breakfast clubs and related employment rights legislation.",
+   "relation": "UNDETERMINED",
+   "quote_a": "This Bill does a lot, and I will vote for it with enthusiasm, but there is still a lot more to do.",
+   "quote_b": "I am, of course, pleased that at long last there is legislation for school breakfasts. However, it is essential that we get that right."
+  },
+  "raw": "{\n\"position_a\": \"Speaker A supports the Employment Rights Bill and the introduction of breakfast clubs to help working parents.\",\n\"position_b\": \"Speaker B supports legislation for school breakfasts but insists on amendments to ensure the policy is implemented correctly.\",\n\"decision\": \"The shared policy decision is the implementation of school breakfast clubs and related employment rights legislation.\",\n\"relation\": \"UNDETERMINED\",\n\"quote_a\": \"This Bill does a lot, and I will vote for it with enthusiasm, but there is still a lot more to do.\",\n\"quote_b\": \"I am, of course, pleased that at long last there is legislation for school breakfasts. However, it is essential that we get that right.\"\n}",
+  "quote_check": {
+   "a": true,
+   "b": true
+  }
+ },
+ {
+  "pair_id": 13,
+  "output": {
+   "position_a": "Speaker A argues against the Government's policy of taxing independent schools with VAT, business rates, and higher national insurance.",
+   "position_b": "Speaker B argues against the Government's policy of increasing VAT on independent school fees to 20%.",
+   "decision": "The shared policy decision is the Government's plan to impose additional taxes (specifically VAT) on independent schools.",
+   "relation": "EQUIVALENT",
+   "quote_a": "There is a good reason why all previous Governments of all colours have avoided taxing education.",
+   "quote_b": "Increasing VAT on independent school fees to 20% is not just a fiscal policy; it is a direct assault on the educational choice and social mobility of our constituents."
+  },
+  "raw": "{\n\"position_a\": \"Speaker A argues against the Government's policy of taxing independent schools with VAT, business rates, and higher national insurance.\",\n\"position_b\": \"Speaker B argues against the Government's policy of increasing VAT on independent school fees to 20%.\",\n\"decision\": \"The shared policy decision is the Government's plan to impose additional taxes (specifically VAT) on independent schools.\",\n\"relation\": \"EQUIVALENT\",\n\"quote_a\": \"There is a good reason why all previous Governments of all colours have avoided taxing education.\",\n\"quote_b\": \"Increasing VAT on independent school fees to 20% is not just a fiscal policy; it is a direct assault on the educational choice and social mobility of our constituents.\"\n}",
+  "quote_check": {
+   "a": true,
+   "b": true
+  }
+ },
+ {
+  "pair_id": 14,
+  "output": {
+   "position_a": "Speaker A supports closing the tax loophole on private schools to fund teacher recruitment and breakfast clubs while protecting smaller independent and faith schools.",
+   "position_b": "Speaker B supports closing subsidies to private schools to redirect resources to state schools and reduce inequality.",
+   "decision": "Closing tax loopholes or subsidies for private schools to fund state education improvements",
+   "relation": "EQUIVALENT",
+   "quote_a": "I fully understand and endorse the spirit of the decision to close the tax loophole on private schools",
+   "quote_b": "I welcome the fact that we are taking a good, hard look at the way education works"
+  },
+  "raw": "{\n\"position_a\": \"Speaker A supports closing the tax loophole on private schools to fund teacher recruitment and breakfast clubs while protecting smaller independent and faith schools.\",\n\"position_b\": \"Speaker B supports closing subsidies to private schools to redirect resources to state schools and reduce inequality.\",\n\"decision\": \"Closing tax loopholes or subsidies for private schools to fund state education improvements\",\n\"relation\": \"EQUIVALENT\",\n\"quote_a\": \"I fully understand and endorse the spirit of the decision to close the tax loophole on private schools\",\n\"quote_b\": \"I welcome the fact that we are taking a good, hard look at the way education works\"\n}",
+  "quote_check": {
+   "a": true,
+   "b": true
+  }
+ },
+ {
+  "pair_id": 15,
+  "output": {
+   "position_a": "Skills England must be granted legislative backing and parliamentary references to secure its independence and prevent being swamped by IfATE.",
+   "position_b": "The government will provide financial support to public sector employers and schools to address skills needs and national insurance costs.",
+   "decision": "Skills England's institutional status and funding for the education sector",
+   "relation": "UNDETERMINED",
+   "quote_a": "A Skills England that has no legislative backing and no parliamentary references...is in danger of losing its birthright before it has got off the ground.",
+   "quote_b": "We are also providing £155 million for post-16 schools, academies and further education colleges."
+  },
+  "raw": "{\n\"position_a\": \"Skills England must be granted legislative backing and parliamentary references to secure its independence and prevent being swamped by IfATE.\",\n\"position_b\": \"The government will provide financial support to public sector employers and schools to address skills needs and national insurance costs.\",\n\"decision\": \"Skills England's institutional status and funding for the education sector\",\n\"relation\": \"UNDETERMINED\",\n\"quote_a\": \"A Skills England that has no legislative backing and no parliamentary references...is in danger of losing its birthright before it has got off the ground.\",\n\"quote_b\": \"We are also providing £155 million for post-16 schools, academies and further education colleges.\"\n}",
+  "quote_check": {
+   "a": false,
+   "b": true
+  }
+ },
+ {
+  "pair_id": 16,
+  "output": {
+   "position_a": "Speaker A argues for passing a clause to expand breakfast clubs to all primary schools.",
+   "position_b": "Speaker B argues for amending the legislation to exclude children in special schools from the proposed measure.",
+   "decision": "The shared policy decision is whether to pass the specific amendment regarding breakfast clubs and its scope.",
+   "relation": "INCOMPATIBLE",
+   "quote_a": "Does the Minister agree that this clause will open up the benefits of breakfast clubs to all our children in primary schools?",
+   "quote_b": "Amendment 33 would provide the narrowing to not include all those in special schools."
+  },
+  "raw": "{\n\"position_a\": \"Speaker A argues for passing a clause to expand breakfast clubs to all primary schools.\",\n\"position_b\": \"Speaker B argues for amending the legislation to exclude children in special schools from the proposed measure.\",\n\"decision\": \"The shared policy decision is whether to pass the specific amendment regarding breakfast clubs and its scope.\",\n\"relation\": \"INCOMPATIBLE\",\n\"quote_a\": \"Does the Minister agree that this clause will open up the benefits of breakfast clubs to all our children in primary schools?\",\n\"quote_b\": \"Amendment 33 would provide the narrowing to not include all those in special schools.\"\n}",
+  "quote_check": {
+   "a": false,
+   "b": true
+  }
+ },
+ {
+  "pair_id": 17,
+  "output": {
+   "position_a": "The government should adopt the Institute for Ethical AI in Education's framework to safely and fairly integrate generative AI in schools.",
+   "position_b": "The government should establish a clear code of practice regarding when and how generative AI is used in education to maintain trust.",
+   "decision": "the adoption and regulation of generative AI in the education system",
+   "relation": "EQUIVALENT",
+   "quote_a": "I want to highlight the work of the Institute for Ethical AI in Education, which has created a practical framework to help schools and Governments use AI safely and fairly.",
+   "quote_b": "But we need a clear code of practice, because for the trust of parents, and indeed of pupils, there needs to be clarity about when and in what ways generative AI has been used."
+  },
+  "raw": "{\n\"position_a\": \"The government should adopt the Institute for Ethical AI in Education's framework to safely and fairly integrate generative AI in schools.\",\n\"position_b\": \"The government should establish a clear code of practice regarding when and how generative AI is used in education to maintain trust.\",\n\"decision\": \"the adoption and regulation of generative AI in the education system\",\n\"relation\": \"EQUIVALENT\",\n\"quote_a\": \"I want to highlight the work of the Institute for Ethical AI in Education, which has created a practical framework to help schools and Governments use AI safely and fairly.\",\n\"quote_b\": \"But we need a clear code of practice, because for the trust of parents, and indeed of pupils, there needs to be clarity about when and in what ways generative AI has been used.\"\n}",
+  "quote_check": {
+   "a": true,
+   "b": true
+  }
+ },
+ {
+  "pair_id": 18,
+  "output": {
+   "position_a": "Speaker A argues for permanent exemptions from the new education tax for specific groups, including children with SEN support and certain religious schools.",
+   "position_b": "Speaker B argues for the implementation of the tax on private schools to generate revenue for state school improvements.",
+   "decision": "The shared policy decision is whether to impose a tax on private schools and grant exemptions to specific groups.",
+   "relation": "INCOMPATIBLE",
+   "quote_a": "We must have an exemption for all children with an EHCP... and for religious denominations where there is no faith school provision in the state sector.",
+   "quote_b": "The money generated by ending the VAT relief on private schools will be vital to recruit the 6,500 more teachers that we need in our state schools."
+  },
+  "raw": "{\n\"position_a\": \"Speaker A argues for permanent exemptions from the new education tax for specific groups, including children with SEN support and certain religious schools.\",\n\"position_b\": \"Speaker B argues for the implementation of the tax on private schools to generate revenue for state school improvements.\",\n\"decision\": \"The shared policy decision is whether to impose a tax on private schools and grant exemptions to specific groups.\",\n\"relation\": \"INCOMPATIBLE\",\n\"quote_a\": \"We must have an exemption for all children with an EHCP... and for religious denominations where there is no faith school provision in the state sector.\",\n\"quote_b\": \"The money generated by ending the VAT relief on private schools will be vital to recruit the 6,500 more teachers that we need in our state schools.\"\n}",
+  "quote_check": {
+   "a": false,
+   "b": true
+  }
+ },
+ {
+  "pair_id": 19,
+  "output": {
+   "position_a": "Speaker A argues for maintaining a minimum 32.5-hour school week to ensure effective learning and pupil development.",
+   "position_b": "Speaker B argues against shortening the school week, asserting that reducing its length would decrease learning opportunities.",
+   "decision": "the length of the school week",
+   "relation": "EQUIVALENT",
+   "quote_a": "For those reasons, the Government have recently restated our commitment to all state-funded mainstream schools delivering a minimum school week of 32.5 hours.",
+   "quote_b": "the research shows that reducing the length of the school week would mean fewer opportunities to learn and improve."
+  },
+  "raw": "{\n\"position_a\": \"Speaker A argues for maintaining a minimum 32.5-hour school week to ensure effective learning and pupil development.\",\n\"position_b\": \"Speaker B argues against shortening the school week, asserting that reducing its length would decrease learning opportunities.\",\n\"decision\": \"the length of the school week\",\n\"relation\": \"EQUIVALENT\",\n\"quote_a\": \"For those reasons, the Government have recently restated our commitment to all state-funded mainstream schools delivering a minimum school week of 32.5 hours.\",\n\"quote_b\": \"the research shows that reducing the length of the school week would mean fewer opportunities to learn and improve.\"\n}",
+  "quote_check": {
+   "a": true,
+   "b": true
+  }
+ },
+ {
+  "pair_id": 20,
+  "output": {
+   "position_a": "Financial education should be woven through existing subjects like maths rather than added as a stand-alone subject.",
+   "position_b": "Financial education must be a core part of the curriculum in our schools.",
+   "decision": "Whether financial education should be a core part of the school curriculum",
+   "relation": "INCOMPATIBLE",
+   "quote_a": "I do not believe that anyone in the House would wish to further overburden them, or indeed the curriculum, by adding more stand-alone subjects.",
+   "quote_b": "If we care about the poor and the most disadvantaged in our society, financial education must be a core part of the curriculum in our schools."
+  },
+  "raw": "{\n\"position_a\": \"Financial education should be woven through existing subjects like maths rather than added as a stand-alone subject.\",\n\"position_b\": \"Financial education must be a core part of the curriculum in our schools.\",\n\"decision\": \"Whether financial education should be a core part of the school curriculum\",\n\"relation\": \"INCOMPATIBLE\",\n\"quote_a\": \"I do not believe that anyone in the House would wish to further overburden them, or indeed the curriculum, by adding more stand-alone subjects.\",\n\"quote_b\": \"If we care about the poor and the most disadvantaged in our society, financial education must be a core part of the curriculum in our schools.\"\n}",
+  "quote_check": {
+   "a": true,
+   "b": true
+  }
+ },
+ {
+  "pair_id": 21,
+  "output": {
+   "position_a": "Speaker A questions whether a four-day school week is feasible for right-sizing the curriculum but does not explicitly advocate for or against it.",
+   "position_b": "Speaker B argues against a four-day school week, stating it would harm working parents and reduce children's total education time.",
+   "decision": "Whether to implement a four-day school week",
+   "relation": "UNDETERMINED",
+   "quote_a": "does this need to be the case? If the teaching time remained the same on the four days... would we be able to right-size and right-shape the curriculum?",
+   "quote_b": "The loss of a whole day would force many working parents to find alternative childcare arrangements at huge personal expense."
+  },
+  "raw": "{\n\"position_a\": \"Speaker A questions whether a four-day school week is feasible for right-sizing the curriculum but does not explicitly advocate for or against it.\",\n\"position_b\": \"Speaker B argues against a four-day school week, stating it would harm working parents and reduce children's total education time.\",\n\"decision\": \"Whether to implement a four-day school week\",\n\"relation\": \"UNDETERMINED\",\n\"quote_a\": \"does this need to be the case? If the teaching time remained the same on the four days... would we be able to right-size and right-shape the curriculum?\",\n\"quote_b\": \"The loss of a whole day would force many working parents to find alternative childcare arrangements at huge personal expense.\"\n}",
+  "quote_check": {
+   "a": false,
+   "b": true
+  }
+ },
+ {
+  "pair_id": 22,
+  "output": {
+   "position_a": "The speaker supports a new Bill to strengthen family and educator roles in child protection, improve information sharing, provide cheaper uniforms, and require academies to improve behavioral standards.",
+   "position_b": "The speaker supports the Labour Government's policy of expanding academies and spreading their innovations to drive educational outcomes for all children.",
+   "decision": "The expansion and regulation of academies",
+   "relation": "UNDETERMINED",
+   "quote_a": "The Bill will strengthen the role of families and educators in child protection teams, improve information sharing between partners, provide cheaper, more accessible school uniforms and require academies to make provisions for improving behavioural standards.",
+   "quote_b": "Academies were, are and will continue to be at the heart of that endeavour. In the nearly nine months since the election, more than 420 schools have been turned into academies."
+  },
+  "raw": "{\n\"position_a\": \"The speaker supports a new Bill to strengthen family and educator roles in child protection, improve information sharing, provide cheaper uniforms, and require academies to improve behavioral standards.\",\n\"position_b\": \"The speaker supports the Labour Government's policy of expanding academies and spreading their innovations to drive educational outcomes for all children.\",\n\"decision\": \"The expansion and regulation of academies\",\n\"relation\": \"UNDETERMINED\",\n\"quote_a\": \"The Bill will strengthen the role of families and educators in child protection teams, improve information sharing between partners, provide cheaper, more accessible school uniforms and require academies to make provisions for improving behavioural standards.\",\n\"quote_b\": \"Academies were, are and will continue to be at the heart of that endeavour. In the nearly nine months since the election, more than 420 schools have been turned into academies.\"\n}",
+  "quote_check": {
+   "a": true,
+   "b": true
+  }
+ },
+ {
+  "pair_id": 23,
+  "output": {
+   "position_a": "Implement age-appropriate relationships and sex education in schools to help boys stand against toxic masculinity.",
+   "position_b": "Start sex and relationship education earlier than secondary school and ensure platforms take responsibility for harmful content.",
+   "decision": "Implement comprehensive sex and relationship education in schools and address online harmful content.",
+   "relation": "EQUIVALENT",
+   "quote_a": "Age-appropriate relationships and sex education at school has a crucial role to play alongside the role of parents and carers.",
+   "quote_b": "Sex and relationship education should start earlier than in secondary school, by which time young people have already acquired a lot of unhealthy information."
+  },
+  "raw": "{\n\"position_a\": \"Implement age-appropriate relationships and sex education in schools to help boys stand against toxic masculinity.\",\n\"position_b\": \"Start sex and relationship education earlier than secondary school and ensure platforms take responsibility for harmful content.\",\n\"decision\": \"Implement comprehensive sex and relationship education in schools and address online harmful content.\",\n\"relation\": \"EQUIVALENT\",\n\"quote_a\": \"Age-appropriate relationships and sex education at school has a crucial role to play alongside the role of parents and carers.\",\n\"quote_b\": \"Sex and relationship education should start earlier than in secondary school, by which time young people have already acquired a lot of unhealthy information.\"\n}",
+  "quote_check": {
+   "a": true,
+   "b": true
+  }
+ },
+ {
+  "pair_id": 24,
+  "output": {
+   "position_a": "Embed play as a fundamental principle throughout the entire curriculum to improve core subjects and child development.",
+   "position_b": "Extend play-based education beyond age five and integrate Steiner-style outdoor learning into the mainstream system.",
+   "decision": "The extent and integration of play-based learning in the education system",
+   "relation": "EQUIVALENT",
+   "quote_a": "It is really important that we embed play as a fundamental principle in the curriculum.",
+   "quote_b": "Play-based education must be a part of that, and should not stop at five years old."
+  },
+  "raw": "{\n\"position_a\": \"Embed play as a fundamental principle throughout the entire curriculum to improve core subjects and child development.\",\n\"position_b\": \"Extend play-based education beyond age five and integrate Steiner-style outdoor learning into the mainstream system.\",\n\"decision\": \"The extent and integration of play-based learning in the education system\",\n\"relation\": \"EQUIVALENT\",\n\"quote_a\": \"It is really important that we embed play as a fundamental principle in the curriculum.\",\n\"quote_b\": \"Play-based education must be a part of that, and should not stop at five years old.\"\n}",
+  "quote_check": {
+   "a": true,
+   "b": true
+  }
+ },
+ {
+  "pair_id": 25,
+  "output": {
+   "position_a": "The government should robustly act to address England's weaknesses in reading and maths and ensure children see school as valuable.",
+   "position_b": "The government should not introduce a vocational pathway for 14-year-olds as it would close down academic options and has failed before.",
+   "decision": "The appropriate educational pathway and curriculum focus for 14-year-olds in England",
+   "relation": "UNDETERMINED",
+   "quote_a": "Does she agree that we should not be complacent with the PISA results and that we should robustly act to address England's weaknesses, particularly in reading and maths?",
+   "quote_b": "However, 14 is far too young to start closing down academic options. We have tried this before, and it failed."
+  },
+  "raw": "{\n\"position_a\": \"The government should robustly act to address England's weaknesses in reading and maths and ensure children see school as valuable.\",\n\"position_b\": \"The government should not introduce a vocational pathway for 14-year-olds as it would close down academic options and has failed before.\",\n\"decision\": \"The appropriate educational pathway and curriculum focus for 14-year-olds in England\",\n\"relation\": \"UNDETERMINED\",\n\"quote_a\": \"Does she agree that we should not be complacent with the PISA results and that we should robustly act to address England's weaknesses, particularly in reading and maths?\",\n\"quote_b\": \"However, 14 is far too young to start closing down academic options. We have tried this before, and it failed.\"\n}",
+  "quote_check": {
+   "a": false,
+   "b": true
+  }
+ },
+ {
+  "pair_id": 26,
+  "output": {
+   "position_a": "Speaker A supports the Bill's provisions to abolish the Institute for Apprenticeships and transfer its functions to Skills England to overhaul the skills system.",
+   "position_b": "Speaker B supports the Bill's provisions to abolish the Institute for Apprenticeships and transfer its functions to Skills England to create a unified skills system.",
+   "decision": "The abolition of the Institute for Apprenticeships and Technical Education and the transfer of its functions to Skills England",
+   "relation": "EQUIVALENT",
+   "quote_a": "The basic provisions of the Bill will abolish the Institute for Apprenticeships and Technical Education and transfer its functions ultimately to Skills England",
+   "quote_b": "This Bill is different. It abolishes the outdated Institute for Apprenticeships and Technical Education and transfers its functions to Skills England."
+  },
+  "raw": "{\n\"position_a\": \"Speaker A supports the Bill's provisions to abolish the Institute for Apprenticeships and transfer its functions to Skills England to overhaul the skills system.\",\n\"position_b\": \"Speaker B supports the Bill's provisions to abolish the Institute for Apprenticeships and transfer its functions to Skills England to create a unified skills system.\",\n\"decision\": \"The abolition of the Institute for Apprenticeships and Technical Education and the transfer of its functions to Skills England\",\n\"relation\": \"EQUIVALENT\",\n\"quote_a\": \"The basic provisions of the Bill will abolish the Institute for Apprenticeships and Technical Education and transfer its functions ultimately to Skills England\",\n\"quote_b\": \"This Bill is different. It abolishes the outdated Institute for Apprenticeships and Technical Education and transfers its functions to Skills England.\"\n}",
+  "quote_check": {
+   "a": true,
+   "b": true
+  }
+ },
+ {
+  "pair_id": 27,
+  "output": {
+   "position_a": "Maintain the current examination and assessment system as it effectively ensures fairness and high standards.",
+   "position_b": "Reduce the intensity and number of exams while increasing coursework, vocational pathways, and mental health support.",
+   "decision": "The extent and role of formal examinations in the education system",
+   "relation": "INCOMPATIBLE",
+   "quote_a": "The examination and assessment system has ensured that children are learning the basic skills and knowledge needed to succeed in life.",
+   "quote_b": "Two, reduce the intensity and number of exams and have more coursework or continuous assessments where possible."
+  },
+  "raw": "{\n\"position_a\": \"Maintain the current examination and assessment system as it effectively ensures fairness and high standards.\",\n\"position_b\": \"Reduce the intensity and number of exams while increasing coursework, vocational pathways, and mental health support.\",\n\"decision\": \"The extent and role of formal examinations in the education system\",\n\"relation\": \"INCOMPATIBLE\",\n\"quote_a\": \"The examination and assessment system has ensured that children are learning the basic skills and knowledge needed to succeed in life.\",\n\"quote_b\": \"Two, reduce the intensity and number of exams and have more coursework or continuous assessments where possible.\"\n}",
+  "quote_check": {
+   "a": true,
+   "b": true
+  }
+ },
+ {
+  "pair_id": 28,
+  "output": {
+   "position_a": "Speaker A supports implementing a slight change in term dates to create off-peak holiday time without reducing annual learning hours.",
+   "position_b": "Speaker B supports maintaining the current system or opposing changes that force working families to choose between taking term-time holidays and affording them due to high summer prices.",
+   "decision": "Whether to implement a change in school term dates to allow off-peak holidays for families.",
+   "relation": "INCOMPATIBLE",
+   "quote_a": "That slight change in term dates creates opportunities for many parents and cleanly sidesteps the whole issue, creating off-peak holiday time that is accessible to families.",
+   "quote_b": "When prices triple the moment that schools break up, parents are faced with an impossible choice: break the rules or break the bank."
+  },
+  "raw": "{\n\"position_a\": \"Speaker A supports implementing a slight change in term dates to create off-peak holiday time without reducing annual learning hours.\",\n\"position_b\": \"Speaker B supports maintaining the current system or opposing changes that force working families to choose between taking term-time holidays and affording them due to high summer prices.\",\n\"decision\": \"Whether to implement a change in school term dates to allow off-peak holidays for families.\",\n\"relation\": \"INCOMPATIBLE\",\n\"quote_a\": \"That slight change in term dates creates opportunities for many parents and cleanly sidesteps the whole issue, creating off-peak holiday time that is accessible to families.\",\n\"quote_b\": \"When prices triple the moment that schools break up, parents are faced with an impossible choice: break the rules or break the bank.\"\n}",
+  "quote_check": {
+   "a": true,
+   "b": true
+  }
+ },
+ {
+  "pair_id": 29,
+  "output": {
+   "position_a": "Speaker A argues for maintaining and expanding access to triple science for all young people, particularly those from disadvantaged backgrounds, to ensure social justice.",
+   "position_b": "Speaker B argues against scrapping the EBacc because it would disadvantage children from poorer backgrounds by reducing their access to modern foreign languages and elite university places.",
+   "decision": "the impact of educational policy changes (specifically regarding the EBacc and science access) on social mobility for disadvantaged students",
+   "relation": "EQUIVALENT",
+   "quote_a": "I do not think we can continue to defend a position where young people from disadvantaged backgrounds do not always have the chance to study triple science",
+   "quote_b": "scrapping the EBacc means potentially reducing the exposure of disadvantaged children to modern foreign languages... and scrapping the EBacc looks like a very funny way of doing it"
+  },
+  "raw": "{\n\"position_a\": \"Speaker A argues for maintaining and expanding access to triple science for all young people, particularly those from disadvantaged backgrounds, to ensure social justice.\",\n\"position_b\": \"Speaker B argues against scrapping the EBacc because it would disadvantage children from poorer backgrounds by reducing their access to modern foreign languages and elite university places.\",\n\"decision\": \"the impact of educational policy changes (specifically regarding the EBacc and science access) on social mobility for disadvantaged students\",\n\"relation\": \"EQUIVALENT\",\n\"quote_a\": \"I do not think we can continue to defend a position where young people from disadvantaged backgrounds do not always have the chance to study triple science\",\n\"quote_b\": \"scrapping the EBacc means potentially reducing the exposure of disadvantaged children to modern foreign languages... and scrapping the EBacc looks like a very funny way of doing it\"\n}",
+  "quote_check": {
+   "a": true,
+   "b": false
+  }
+ },
+ {
+  "pair_id": 30,
+  "output": {
+   "position_a": "Speaker A opposes the introduction of taxation on education.",
+   "position_b": "Speaker B opposes the introduction of an education tax.",
+   "decision": "the introduction of taxation on education",
+   "relation": "EQUIVALENT",
+   "quote_a": "Would agree that the heart of this policy of bringing in taxation on education is stoking division, creating harm to aspiration, and stopping the sharing of facilities and opportunity?",
+   "quote_b": "This education tax will make independent faith schooling unaffordable for many families, hurting the 370,000 pupils who attend independent faith schools in England according to Department for Education figures."
+  },
+  "raw": "{\n\"position_a\": \"Speaker A opposes the introduction of taxation on education.\",\n\"position_b\": \"Speaker B opposes the introduction of an education tax.\",\n\"decision\": \"the introduction of taxation on education\",\n\"relation\": \"EQUIVALENT\",\n\"quote_a\": \"Would agree that the heart of this policy of bringing in taxation on education is stoking division, creating harm to aspiration, and stopping the sharing of facilities and opportunity?\",\n\"quote_b\": \"This education tax will make independent faith schooling unaffordable for many families, hurting the 370,000 pupils who attend independent faith schools in England according to Department for Education figures.\"\n}",
+  "quote_check": {
+   "a": true,
+   "b": true
+  }
+ }
+]

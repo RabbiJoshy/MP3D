@@ -1,0 +1,291 @@
+{
+ "before": {
+  "one_short": 14,
+  "fight": 24,
+  "one_sided": 37
+ },
+ "after": {
+  "one_short": 12,
+  "fight": 19,
+  "one_sided": 28
+ },
+ "n_before": 75,
+ "n_after": 59,
+ "most_changed": [
+  [
+   "Ratify the treaty",
+   "Ratify the British Indian Ocean Territory Bill to establish the Chagos Marine Protected Area"
+  ],
+  [
+   "Introduce new police powers to address dog attacks on livestock",
+   "Amend the Dogs (Protection of Livestock) Act 1953 to strengthen legislation against livestock worrying"
+  ],
+  [
+   "Abolish the current asylum system (or: Implement the measures in the Bill)",
+   "Enact the Illegal Migration Act to curb illegal migration and strengthen border security"
+  ],
+  [
+   "Deliver a core guarantee of high standards with space for innovation in every child's education",
+   "Introduce the Children's Wellbeing and Schools Bill"
+  ],
+  [
+   "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+   "Cap branded school uniform items to three per year with a fourth allowed for ties"
+  ],
+  [
+   "Take railways back into public ownership",
+   "Nationalisation of the railways under the Railways Bill"
+  ],
+  [
+   "Pass the Bill",
+   "Pass the Universal Credit and Personal Independence Payment Bill"
+  ],
+  [
+   "Introduce tougher penalties, ban bonuses for water company executives, and require water companies to cover enforcement costs",
+   "Introduce the Water (Special Measures) Bill to ban executive bonuses and impose unlimited penalties on water companies"
+  ]
+ ],
+ "yvette_after": [
+  [
+   "Enact the Illegal Migration Act to curb illegal migration and strengthen border security",
+   "FOR",
+   "Immigration"
+  ],
+  [
+   "Repeal the Safety of Rwanda (Asylum and Immigration) Act 2024",
+   "AGAINST",
+   "Immigration"
+  ],
+  [
+   "Introduce new civil respect orders for persistent antisocial behaviour offenders",
+   "FOR",
+   "Law and crime"
+  ]
+ ],
+ "yvette_before": [
+  [
+   "Abolish the current asylum system (or: Implement the measures in the Bill)",
+   "FOR"
+  ],
+  [
+   "Repeal sections of the Illegal Migration Act 2023 and the Safety of Rwanda (Asylum and Immigration) Act 2024",
+   "AGAINST"
+  ],
+  [
+   "Repeal the Rwanda scheme",
+   "AGAINST"
+  ]
+ ],
+ "log": [
+  {
+   "unit": 0,
+   "label": "Impose a tax on family farms",
+   "reason": "merged",
+   "members": [
+    0,
+    1
+   ],
+   "mps_before": 13,
+   "mps_after": 12
+  },
+  {
+   "unit": 1,
+   "label": "Pass the Terminally Ill Adults (End of Life) Bill to legalise assisted dying",
+   "reason": "merged",
+   "members": [
+    83,
+    1776
+   ],
+   "mps_before": 74,
+   "mps_after": 71
+  },
+  {
+   "unit": 2,
+   "label": "Pass the Football Governance Bill to establish an independent football regulator",
+   "reason": "merged",
+   "members": [
+    127,
+    129
+   ],
+   "mps_before": 43,
+   "mps_after": 54
+  },
+  {
+   "unit": 3,
+   "label": "Pass the Children's Wellbeing and Schools Bill",
+   "reason": "merged",
+   "members": [
+    351,
+    425,
+    539
+   ],
+   "mps_before": 38,
+   "mps_after": 37
+  },
+  {
+   "unit": 4,
+   "label": "Expand apprenticeships and technical education",
+   "reason": "merged",
+   "members": [
+    361,
+    416
+   ],
+   "mps_before": 62,
+   "mps_after": 70
+  },
+  {
+   "unit": 5,
+   "label": "Establish Skills England as an independent executive agency",
+   "reason": "merged",
+   "members": [
+    375,
+    485
+   ],
+   "mps_before": 23,
+   "mps_after": 16
+  },
+  {
+   "unit": 6,
+   "label": "Remove tax exemption on independent school fees",
+   "reason": "merged",
+   "members": [
+    394,
+    2188
+   ],
+   "mps_before": 62,
+   "mps_after": 60
+  },
+  {
+   "unit": 7,
+   "label": "Ban mobile phone use in schools",
+   "reason": "merged",
+   "members": [
+    578,
+    2407
+   ],
+   "mps_before": 24,
+   "mps_after": 25
+  },
+  {
+   "unit": 8,
+   "label": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+   "reason": "merged",
+   "members": [
+    1363,
+    1368
+   ],
+   "mps_before": 41,
+   "mps_after": 41
+  },
+  {
+   "unit": 9,
+   "label": "Enact the Water (Special Measures) Bill to hold water companies accountable for sewage pollution",
+   "reason": "merged",
+   "members": [
+    1515,
+    1521,
+    1522
+   ],
+   "mps_before": 63,
+   "mps_after": 61
+  },
+  {
+   "unit": 10,
+   "label": "Enact the Illegal Migration Act to curb illegal migration and strengthen border security",
+   "reason": "merged",
+   "members": [
+    1938,
+    1952
+   ],
+   "mps_before": 58,
+   "mps_after": 48
+  },
+  {
+   "unit": 11,
+   "label": "Pass the Universal Credit and Personal Independence Payment Bill",
+   "reason": "merged",
+   "members": [
+    2349,
+    2358
+   ],
+   "mps_before": 39,
+   "mps_after": 26
+  },
+  {
+   "unit": 12,
+   "label": "Create Great British Railways",
+   "reason": "merged",
+   "members": [
+    2486,
+    2495
+   ],
+   "mps_before": 40,
+   "mps_after": 43
+  },
+  {
+   "unit": 14,
+   "label": "Increase defence spending to \u00a32.6 billion in-year cuts",
+   "reason": "unclear",
+   "members": [
+    190
+   ],
+   "mps_before": 23,
+   "mps_after": 1
+  },
+  {
+   "unit": 14,
+   "label": "Increase defence spending to \u00a32.6 billion in-year cuts",
+   "dropped_lt3": true
+  },
+  {
+   "unit": 27,
+   "label": "Implement the Review of Relationship, Sex and Health Education guidance",
+   "reason": "unclear",
+   "members": [
+    393
+   ],
+   "mps_before": 19,
+   "mps_after": 16
+  },
+  {
+   "unit": 28,
+   "label": "Expand funded childcare entitlement from 15 to 30 hours per week",
+   "reason": "unclear",
+   "members": [
+    395
+   ],
+   "mps_before": 28,
+   "mps_after": 10
+  },
+  {
+   "unit": 47,
+   "label": "Pass the English Devolution and Community Empowerment Bill",
+   "reason": "unclear",
+   "members": [
+    1675
+   ],
+   "mps_before": 53,
+   "mps_after": 40
+  },
+  {
+   "unit": 50,
+   "label": "Introduce rent caps on annual increases and rents in advance",
+   "reason": "unclear",
+   "members": [
+    1853
+   ],
+   "mps_before": 14,
+   "mps_after": 16
+  },
+  {
+   "unit": 56,
+   "label": "Ratify the British Indian Ocean Territory Bill to establish the Chagos Marine Protected Area",
+   "reason": "unclear",
+   "members": [
+    2252
+   ],
+   "mps_before": 21,
+   "mps_after": 18
+  }
+ ]
+}

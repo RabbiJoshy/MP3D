@@ -1,0 +1,315 @@
+{
+ "summary": {
+  "n": 30,
+  "agreement_blind": "22/30",
+  "agreement_adjudicated": "22/30",
+  "confusion_blind_rows_reader_cols_model": {
+   "labels": [
+    "EQUIVALENT",
+    "INCOMPATIBLE",
+    "UNDETERMINED"
+   ],
+   "matrix": [
+    [
+     10,
+     1,
+     0
+    ],
+    [
+     0,
+     3,
+     0
+    ],
+    [
+     4,
+     3,
+     9
+    ]
+   ]
+  },
+  "confusion_adjudicated": {
+   "labels": [
+    "EQUIVALENT",
+    "INCOMPATIBLE",
+    "UNDETERMINED"
+   ],
+   "matrix": [
+    [
+     10,
+     0,
+     0
+    ],
+    [
+     0,
+     3,
+     0
+    ],
+    [
+     4,
+     4,
+     9
+    ]
+   ]
+  },
+  "precision_recall": {
+   "blind": {
+    "EQUIVALENT": {
+     "precision": "10/14",
+     "recall": "10/11"
+    },
+    "INCOMPATIBLE": {
+     "precision": "3/7",
+     "recall": "3/3"
+    },
+    "UNDETERMINED": {
+     "precision": "9/9",
+     "recall": "9/16"
+    }
+   },
+   "adjudicated": {
+    "EQUIVALENT": {
+     "precision": "10/14",
+     "recall": "10/10"
+    },
+    "INCOMPATIBLE": {
+     "precision": "3/7",
+     "recall": "3/3"
+    },
+    "UNDETERMINED": {
+     "precision": "9/9",
+     "recall": "9/17"
+    }
+   }
+  },
+  "agreement_by_stratum": {
+   "near-diff": {
+    "n": 10,
+    "blind_agree": 8,
+    "adj_agree": 8
+   },
+   "near-same": {
+    "n": 10,
+    "blind_agree": 7,
+    "adj_agree": 7
+   },
+   "random": {
+    "n": 10,
+    "blind_agree": 7,
+    "adj_agree": 7
+   }
+  },
+  "adjudicated_counts_by_stratum": {
+   "near-diff": {
+    "EQUIVALENT": 4,
+    "INCOMPATIBLE": 2,
+    "UNDETERMINED": 4
+   },
+   "near-same": {
+    "EQUIVALENT": 5,
+    "INCOMPATIBLE": 0,
+    "UNDETERMINED": 5
+   },
+   "random": {
+    "EQUIVALENT": 1,
+    "INCOMPATIBLE": 1,
+    "UNDETERMINED": 8
+   }
+  },
+  "disagreements": [
+   {
+    "pair_id": 1,
+    "stratum": "near-diff",
+    "blind": "UNDETERMINED",
+    "model": "EQUIVALENT",
+    "adjudicated": "UNDETERMINED",
+    "reason": "Model's 'decision' is a vague shared goal; McKinnell defends the Bill's core offer, Chowns challenges academy superiority: no shared decision with a common outcome. Reader right."
+   },
+   {
+    "pair_id": 5,
+    "stratum": "near-same",
+    "blind": "UNDETERMINED",
+    "model": "EQUIVALENT",
+    "adjudicated": "UNDETERMINED",
+    "reason": "Different asks (anti-inequality/private route vs funding and accountability reform); both could happen. Reader right."
+   },
+   {
+    "pair_id": 8,
+    "stratum": "near-same",
+    "blind": "UNDETERMINED",
+    "model": "INCOMPATIBLE",
+    "adjudicated": "UNDETERMINED",
+    "reason": "Minister declines to legislate; Hayes only hopes play is 'at the forefront' of guidance, not that it be statutory, so both could happen. Reader right (low confidence)."
+   },
+   {
+    "pair_id": 11,
+    "stratum": "near-same",
+    "blind": "UNDETERMINED",
+    "model": "EQUIVALENT",
+    "adjudicated": "UNDETERMINED",
+    "reason": "Both pro-apprenticeship but A welcomes the Bill and B wants parity of esteem; no common decision beyond a general goal. Reader right."
+   },
+   {
+    "pair_id": 16,
+    "stratum": "random",
+    "blind": "UNDETERMINED",
+    "model": "INCOMPATIBLE",
+    "adjudicated": "UNDETERMINED",
+    "reason": "Different decisions (breakfast club clause vs home-education register amendment 33). Reader right."
+   },
+   {
+    "pair_id": 20,
+    "stratum": "near-diff",
+    "blind": "EQUIVALENT",
+    "model": "INCOMPATIBLE",
+    "adjudicated": "UNDETERMINED",
+    "reason": "Hazelgrove opposes stand-alone subjects, Mayhew says 'core part' without specifying form; compatible, and shared want is only 'in the curriculum'. Neither model (INCOMPATIBLE) nor reader (EQUIVALENT) holds; adjudicated UNDETERMINED, reader was too lenient."
+   },
+   {
+    "pair_id": 28,
+    "stratum": "random",
+    "blind": "UNDETERMINED",
+    "model": "INCOMPATIBLE",
+    "adjudicated": "UNDETERMINED",
+    "reason": "Model misread Yemm as backing the status quo; Moore offers a term-date redistribution, Yemm wants fairer flexibility for term-time holidays; can both happen. Reader right."
+   },
+   {
+    "pair_id": 29,
+    "stratum": "random",
+    "blind": "UNDETERMINED",
+    "model": "EQUIVALENT",
+    "adjudicated": "UNDETERMINED",
+    "reason": "Different decisions (triple science access vs EBacc); hostile question is not an opposed outcome. Reader right."
+   }
+  ],
+  "adjudicated_incompatible": [
+   {
+    "pair_id": 4,
+    "decision": "Whether academies should be required to follow the national curriculum",
+    "a": "Catherine McKinnell (Lab)",
+    "b": "Damian Hinds (Con)",
+    "same_party": false,
+    "stratum": "near-diff"
+   },
+   {
+    "pair_id": 18,
+    "decision": "Whether to impose VAT on private school fees",
+    "a": "Damian Hinds (Con)",
+    "b": "Connor Naismith (Lab)",
+    "same_party": false,
+    "stratum": "near-diff"
+   },
+   {
+    "pair_id": 27,
+    "decision": "Role and volume of exams in assessment",
+    "a": "Saqib Bhatti (Con)",
+    "b": "Adam Dance (LD)",
+    "same_party": false,
+    "stratum": "random"
+   }
+  ],
+  "quote_check_failures": [
+   [
+    4,
+    "b"
+   ],
+   [
+    8,
+    "b"
+   ],
+   [
+    15,
+    "a"
+   ],
+   [
+    16,
+    "a"
+   ],
+   [
+    18,
+    "a"
+   ],
+   [
+    21,
+    "a"
+   ],
+   [
+    25,
+    "a"
+   ],
+   [
+    29,
+    "b"
+   ]
+  ],
+  "failure_patterns": [
+   "States a vague shared goal ('every child gets a good education') as the decision, producing false EQUIVALENT (pairs 1,5,11,29).",
+   "Calls INCOMPATIBLE where proposals are compatible or on different decisions (pairs 8,16,20,28).",
+   "Misreads or invents a speaker's position from a partial passage; several non-verbatim quotes (4b,15a,16a,18a,21a,25a,29b)."
+  ],
+  "note": "Adjudication: reader's blind label stood for 7 of 8 disagreements; pair 20 moved to UNDETERMINED."
+ },
+ "model_relation": {
+  "1": "EQUIVALENT",
+  "2": "EQUIVALENT",
+  "3": "UNDETERMINED",
+  "4": "INCOMPATIBLE",
+  "5": "EQUIVALENT",
+  "6": "UNDETERMINED",
+  "7": "EQUIVALENT",
+  "8": "INCOMPATIBLE",
+  "9": "UNDETERMINED",
+  "10": "UNDETERMINED",
+  "11": "EQUIVALENT",
+  "12": "UNDETERMINED",
+  "13": "EQUIVALENT",
+  "14": "EQUIVALENT",
+  "15": "UNDETERMINED",
+  "16": "INCOMPATIBLE",
+  "17": "EQUIVALENT",
+  "18": "INCOMPATIBLE",
+  "19": "EQUIVALENT",
+  "20": "INCOMPATIBLE",
+  "21": "UNDETERMINED",
+  "22": "UNDETERMINED",
+  "23": "EQUIVALENT",
+  "24": "EQUIVALENT",
+  "25": "UNDETERMINED",
+  "26": "EQUIVALENT",
+  "27": "INCOMPATIBLE",
+  "28": "INCOMPATIBLE",
+  "29": "EQUIVALENT",
+  "30": "EQUIVALENT"
+ },
+ "adjudicated": {
+  "1": "UNDETERMINED",
+  "2": "EQUIVALENT",
+  "3": "UNDETERMINED",
+  "4": "INCOMPATIBLE",
+  "5": "UNDETERMINED",
+  "6": "UNDETERMINED",
+  "7": "EQUIVALENT",
+  "8": "UNDETERMINED",
+  "9": "UNDETERMINED",
+  "10": "UNDETERMINED",
+  "11": "UNDETERMINED",
+  "12": "UNDETERMINED",
+  "13": "EQUIVALENT",
+  "14": "EQUIVALENT",
+  "15": "UNDETERMINED",
+  "16": "UNDETERMINED",
+  "17": "EQUIVALENT",
+  "18": "INCOMPATIBLE",
+  "19": "EQUIVALENT",
+  "20": "UNDETERMINED",
+  "21": "UNDETERMINED",
+  "22": "UNDETERMINED",
+  "23": "EQUIVALENT",
+  "24": "EQUIVALENT",
+  "25": "UNDETERMINED",
+  "26": "EQUIVALENT",
+  "27": "INCOMPATIBLE",
+  "28": "UNDETERMINED",
+  "29": "UNDETERMINED",
+  "30": "EQUIVALENT"
+ }
+}

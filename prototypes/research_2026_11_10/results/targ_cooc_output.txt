@@ -1,0 +1,66 @@
+261 positions (37 'opposes'), 3065 claims, 626 MPs
+
+AXIS 1 (1%)
+  [-] Opposes the inheritance tax changes affecting family farms (83, Agriculture)
+      Opposes the increase in employer national insurance contributions (49, Employment)
+      Opposes removing the right to jury trials (47, Law and crime)
+      Opposes imposing VAT on independent school fees (30, Education)
+      Supports expanding access to NHS dental and GP services (61, Health)
+      Supports a ban on social media for children under 16 (54, Health)
+  [+] Supports unfettered access to humanitarian aid in Gaza (21, Immigration)
+      Supports increased provision for special educational needs and disabilities (33, Social welfare)
+      Supports the Employment Rights Bill (28, Employment)
+      Supports free breakfast clubs in primary schools (48, Social welfare)
+      Supports taking railways into public ownership and establishing Great British Railways (47, Transport)
+      Supports making apprenticeships more accessible and flexible (38, Education)
+  MPs -: Graham Stuart (Con), Mark Garnier (Con), Sammy Wilson (DUP), Aphra Brandreth (Con), Esther McVey (Con)
+  MPs +: Afzal Khan (Lab), Tahir Ali (Lab), Catherine West (Lab), Mr Clive Betts (Lab), Martin Rhodes (Lab)
+
+AXIS 2 (1%)
+  [-] Supports recognition of a state of Palestine (45, International affairs)
+      Supports unfettered access to humanitarian aid in Gaza (21, Immigration)
+      Opposes removing the right to jury trials (47, Law and crime)
+      Supports building more social housing (43, Housing)
+      Supports a ban on arms sales to Israel (12, International affairs)
+      Supports the assisted dying legislation (74, Health)
+  [+] Supports increased funding for the UK defence industry (33, Defence)
+      Supports community energy projects (36, Energy)
+      Supports expanding access to NHS dental and GP services (61, Health)
+      Supports nationalisation of the steel industry (30, Employment)
+      Supports taking railways into public ownership and establishing Great British Railways (47, Transport)
+      Supports agricultural property relief and inheritance tax threshold for farmers (51, Agriculture)
+  MPs -: Tahir Ali (Lab), Mr Hamish Falconer (Lab), Layla Moran (LD), Afzal Khan (Lab), Mr David Lammy (Lab)
+  MPs +: Alan Strickland (Lab), Richard Baker (Lab), Sarah Jones (Lab), Callum Anderson (Lab), Jonathan Reynolds (Lab)
+
+AXIS 3 (1%)
+  [-] Supports community energy projects (36, Energy)
+      Supports public ownership of the water industry (44, Public lands)
+      Supports recognition of a state of Palestine (45, International affairs)
+      Supports the assisted dying legislation (74, Health)
+      Supports the Water (Special Measures) Bill (24, Environment)
+      Supports unfettered access to humanitarian aid in Gaza (21, Immigration)
+  [+] Supports free breakfast clubs in primary schools (48, Social welfare)
+      Supports reducing diagnosis wait times for endometriosis (29, Health)
+      Supports making apprenticeships more accessible and flexible (38, Education)
+      Supports increased funding for hospices (55, Health)
+      Supports halving violence against women and girls within a decade (16, Law and crime)
+      Supports the establishment of neighbourhood health centres (13, Health)
+  MPs -: Yuan Yang (Lab), Bill Esterson (Lab), Adrian Ramsay (Green), Tahir Ali (Lab), Ms Polly Billington (Lab)
+  MPs +: Helen Morgan (LD), Mrs Sharon Hodgson (Lab), Alison Hume (Lab), Seema Malhotra (Lab), Catherine Atkinson (Lab)
+
+party means (>=3):
+           x     y     z
+party                  
+Con   -0.21 -0.05  0.01
+DUP   -0.22 -0.05  0.09
+Green  0.06  0.08 -0.14
+Ind   -0.02 -0.04 -0.02
+LD    -0.08  0.01 -0.06
+Lab    0.09  0.02  0.01
+PC    -0.28 -0.12  0.01
+RUK   -0.14 -0.10  0.03
+SNP    0.01 -0.11 -0.13
+party R2 axis 1: 0.43
+party R2 axis 2: 0.05
+party R2 axis 3: 0.04
+[Errno 2] No such file or directory: 'targ_map2d.json'

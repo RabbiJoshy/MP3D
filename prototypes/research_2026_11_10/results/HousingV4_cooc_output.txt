@@ -1,0 +1,62 @@
+168 positions (24 'opposes'), 2284 claims, 186 MPs
+
+AXIS 1 (3%)
+  [-] Supports neighbourhood plans and their funding (42, )
+      Opposes higher housing targets for rural areas (17, )
+      Supports reviewing the standard method for assessing local housing need (14, )
+      Opposes the 1.5 million homes housing target (9, )
+      Opposes abolishing housing targets (30, )
+      Supports the new community right to buy scheme (35, )
+  [+] Supports abolishing section 21 no-fault evictions (70, )
+      Supports uprating the local housing allowance (16, )
+      Supports tackling homelessness and reducing reliance on temporary accommodation (20, )
+      Supports rent regulation in the private rented sector (38, )
+      Supports increasing subsidy for temporary accommodation (10, )
+      Supports including deprivation in the local government funding formula (5, )
+  MPs -: Paul Holmes (Con), Vikki Slade (LD), Manuela Perteghella (LD), Wendy Morton (Con), John Milne (LD)
+  MPs +: Paula Barker (Lab), Florence Eshalomi (Lab), Josh Babarinde (LD), Helen Hayes (Lab), Alison McGovern (Lab)
+
+AXIS 2 (2%)
+  [-] Supports building more affordable housing in rural areas (20, )
+      Supports installing solar panels on new social housing (5, )
+      Opposes the sale of social housing stock by developers to the private sector (8, )
+      Supports including deprivation as a metric alongside rurality (5, )
+      Supports building new council housing (49, )
+      Supports regulating second homes and short-term lets (21, )
+  [+] Opposes building homes on the green belt (11, )
+      Opposes removing local councillors' decision-making power on planning applications (22, )
+      Opposes the implementation of the grey belt planning policy (9, )
+      Opposes reducing the number of houses being built in London (6, )
+      Opposes reducing the target for affordable housing (10, )
+      Supports the Homelessness Reduction Act 2017 (7, )
+  MPs -: Caroline Voaden (LD), Linsey Farnsworth (Lab), Olivia Bailey (Lab), Luke Myer (Lab), Josh Newbury (Lab)
+  MPs +: Mr Richard Holden (Con), Bob Blackman (Con), Wendy Morton (Con), Paul Holmes (Con), David Simmonds (Con)
+
+AXIS 3 (2%)
+  [-] Supports the new community right to buy scheme (35, )
+      Supports community ownership of assets (12, )
+      Supports building strong communities via localism and supporting local authorities (9, )
+      Supports high street rental auctions for vacant units (37, )
+      Supports bringing historical buildings back into community use (5, )
+      Supports the Warm Homes Plan for park home residents (7, )
+  [+] Opposes building homes on the green belt (11, )
+      Supports unfreezing local housing allowance and linking it to local rent (12, )
+      Opposes the implementation of the grey belt planning policy (9, )
+      Supports protecting tenants from eviction when they secure work (11, )
+      Opposes abolishing housing targets (30, )
+      Supports higher quality standards for new build homes (6, )
+  MPs -: Jim McMahon (Lab), Manuela Perteghella (LD), Miatta Fahnbulleh (Lab), Alex Norris (Lab), Ed Miliband (Lab)
+  MPs +: Sir James Cleverly (Con), Caroline Voaden (LD), David Simmonds (Con), Claire Young (LD), Victoria Collins (LD)
+
+party means (>=3):
+           x     y     z
+party                  
+Con   -0.22  0.28  0.19
+Green  0.08 -0.08  0.10
+Ind    0.05 -0.05 -0.07
+LD    -0.13 -0.00  0.05
+Lab    0.08 -0.05 -0.06
+party R2 axis 1: 0.16
+party R2 axis 2: 0.18
+party R2 axis 3: 0.10
+corr with Jev axis 1 on 87 MPs: [-0.6, 0.21, -0.04]

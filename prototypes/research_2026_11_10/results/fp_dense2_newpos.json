@@ -1,0 +1,8702 @@
+[
+ {
+  "fight": 0,
+  "member_id": 1442,
+  "name": "Mr Alistair Carmichael",
+  "party": "LD",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-16d.844.0#0",
+    "measure": "Impose a tax on family farms",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 0,
+  "member_id": 1482,
+  "name": "Graham Stuart",
+  "party": "Con",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-16d.840.0#2",
+    "measure": "Impose a tax on family farms",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 0,
+  "member_id": 4494,
+  "name": "Simon Hoare",
+  "party": "Con",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-01-12e.674.4#0",
+    "measure": "Impose a tax on family farms",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 0,
+  "member_id": 4769,
+  "name": "Daisy Cooper",
+  "party": "LD",
+  "stance": -1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-16d.837.0#0",
+    "measure": "Impose a tax on family farms",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-16d.836.1#0",
+    "measure": "Impose a tax on family farms",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 0,
+  "member_id": 4850,
+  "name": "Gareth Davies",
+  "party": "Con",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-01-12e.676.3#1",
+    "measure": "Impose a tax on family farms",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 0,
+  "member_id": 5225,
+  "name": "Lizzi Collinge",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-01-12e.692.1#0",
+    "measure": "Impose a tax on family farms",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 0,
+  "member_id": 5325,
+  "name": "Charlie Maynard",
+  "party": "LD",
+  "stance": -1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-01-12e.682.1#1",
+    "measure": "Impose a tax on family farms",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-01-12e.681.0#0",
+    "measure": "Impose a tax on family farms",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2,
+  "member_id": 5170,
+  "name": "John Grady",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-04a.567.0#3",
+    "measure": "Introduce new police powers to address dog attacks on livestock",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2,
+  "member_id": 5304,
+  "name": "Dr Danny Chambers",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-04a.563.3#0",
+    "measure": "Introduce new police powers to address dog attacks on livestock",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2,
+  "member_id": 5316,
+  "name": "Mike Reader",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-04a.564.0#1",
+    "measure": "Introduce new police powers to address dog attacks on livestock",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 129,
+  "member_id": 394,
+  "name": "Mr Clive Betts",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-04-28c.71.1#3",
+    "measure": "Introduce a new ownership test and licensing regime for football clubs",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-08d.881.2#0",
+    "measure": "Introduce a new ownership test and licensing regime for football clubs",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 129,
+  "member_id": 4032,
+  "name": "Stuart Andrew",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-04-28c.59.3#0",
+    "measure": "Introduce a new ownership test and licensing regime for football clubs",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 129,
+  "member_id": 4607,
+  "name": "Stephanie Peacock",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-08d.872.4#1",
+    "measure": "Introduce a new ownership test and licensing regime for football clubs",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-04-28c.131.0#1",
+    "measure": "Introduce a new ownership test and licensing regime for football clubs",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 129,
+  "member_id": 4654,
+  "name": "Matt Rodda",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-04-28c.119.1#0",
+    "measure": "Introduce a new ownership test and licensing regime for football clubs",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 129,
+  "member_id": 4932,
+  "name": "Mr Louie French",
+  "party": "Con",
+  "stance": 0.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-08d.864.1#1",
+    "measure": "Introduce a new ownership test and licensing regime for football clubs",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-08d.914.1#2",
+    "measure": "Introduce a new ownership test and licensing regime for football clubs",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 129,
+  "member_id": 5051,
+  "name": "Kevin Bonavia",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-04-28c.95.0#0",
+    "measure": "Introduce a new ownership test and licensing regime for football clubs",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 129,
+  "member_id": 5055,
+  "name": "Max Wilkinson",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-04-28c.69.3#0",
+    "measure": "Introduce a new ownership test and licensing regime for football clubs",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 129,
+  "member_id": 5062,
+  "name": "Nick Timothy",
+  "party": "Con",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-04-28c.105.5#2",
+    "measure": "Introduce a new ownership test and licensing regime for football clubs",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 129,
+  "member_id": 5094,
+  "name": "Ms Julie Minns",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-04-28c.101.0#1",
+    "measure": "Introduce a new ownership test and licensing regime for football clubs",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 129,
+  "member_id": 5109,
+  "name": "Chris Bloore",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-04-28c.123.0#2",
+    "measure": "Introduce a new ownership test and licensing regime for football clubs",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 129,
+  "member_id": 5115,
+  "name": "Jon Pearce",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 3,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-04-28c.113.1#0",
+    "measure": "Introduce a new ownership test and licensing regime for football clubs",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-04-28c.113.1#1",
+    "measure": "Introduce a new ownership test and licensing regime for football clubs",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-04-28c.113.1#2",
+    "measure": "Introduce a new ownership test and licensing regime for football clubs",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 129,
+  "member_id": 5143,
+  "name": "Catherine Atkinson",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-04-28c.117.0#1",
+    "measure": "Introduce a new ownership test and licensing regime for football clubs",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 129,
+  "member_id": 5268,
+  "name": "Iqbal Mohamed",
+  "party": "Ind",
+  "stance": 1.0,
+  "focus": 3,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-08d.879.0#2",
+    "measure": "Introduce a new ownership test and licensing regime for football clubs",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-04-28c.107.4#0",
+    "measure": "Introduce a new ownership test and licensing regime for football clubs",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-08d.879.0#4",
+    "measure": "Introduce a new ownership test and licensing regime for football clubs",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 129,
+  "member_id": 5294,
+  "name": "Amanda Martin",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-04-28c.128.1#1",
+    "measure": "Introduce a new ownership test and licensing regime for football clubs",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 129,
+  "member_id": 5310,
+  "name": "Mr Lee Dillon",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-04-28c.92.2#1",
+    "measure": "Introduce a new ownership test and licensing regime for football clubs",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-04-28c.92.2#0",
+    "measure": "Introduce a new ownership test and licensing regime for football clubs",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 129,
+  "member_id": 5321,
+  "name": "Mr Paul Kohler",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-04-28c.100.0#1",
+    "measure": "Introduce a new ownership test and licensing regime for football clubs",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 129,
+  "member_id": 5328,
+  "name": "Sean Woodcock",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-08d.896.1#0",
+    "measure": "Introduce a new ownership test and licensing regime for football clubs",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 190,
+  "member_id": 1444,
+  "name": "Mr Mark Francois",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 3,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-01-26a.703.1#0",
+    "measure": "Increase investment in defence spending",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-23d.240.1#2",
+    "measure": "Increase investment in defence spending",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-23d.242.0#0",
+    "measure": "Increase investment in defence spending",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 190,
+  "member_id": 4095,
+  "name": "Steve Barclay",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-01-26a.667.0#2",
+    "measure": "Increase investment in defence spending",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 190,
+  "member_id": 4358,
+  "name": "Wendy Morton",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-23d.216.2#0",
+    "measure": "Increase investment in defence spending",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 190,
+  "member_id": 4462,
+  "name": "Tom Tugendhat",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-01-26a.660.2#3",
+    "measure": "Increase investment in defence spending",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 190,
+  "member_id": 4682,
+  "name": "Luke Pollard",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-23d.247.8#0",
+    "measure": "Increase investment in defence spending",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-23d.244.3#0",
+    "measure": "Increase investment in defence spending",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 190,
+  "member_id": 4759,
+  "name": "Joy Morrissey",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-23d.217.5#2",
+    "measure": "Increase investment in defence spending",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 190,
+  "member_id": 4803,
+  "name": "Paul Holmes",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-23d.237.0#0",
+    "measure": "Increase investment in defence spending",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-23d.235.1#1",
+    "measure": "Increase investment in defence spending",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 190,
+  "member_id": 5049,
+  "name": "Michelle Scrogham",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-01-26a.659.0#3",
+    "measure": "Increase investment in defence spending",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 190,
+  "member_id": 5065,
+  "name": "Rachel Taylor",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-01-26a.676.0#0",
+    "measure": "Increase investment in defence spending",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-01-26a.676.0#3",
+    "measure": "Increase investment in defence spending",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 190,
+  "member_id": 5089,
+  "name": "Ben Obese-Jecty",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 3,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-23d.227.3#2",
+    "measure": "Increase investment in defence spending",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-23d.227.3#8",
+    "measure": "Increase investment in defence spending",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-23d.227.3#9",
+    "measure": "Increase investment in defence spending",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 190,
+  "member_id": 5093,
+  "name": "Alison Taylor",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-23d.213.0#0",
+    "measure": "Increase investment in defence spending",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 190,
+  "member_id": 5235,
+  "name": "Al Carns",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-01-26a.706.1#0",
+    "measure": "Increase investment in defence spending",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 190,
+  "member_id": 5288,
+  "name": "Dr Al Pinkerton",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 3,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-23d.200.2#0",
+    "measure": "Increase investment in defence spending",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-23d.201.0#0",
+    "measure": "Increase investment in defence spending",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-23d.201.2#2",
+    "measure": "Increase investment in defence spending",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 196,
+  "member_id": 4131,
+  "name": "Jim Shannon",
+  "party": "DUP",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-01-26a.677.0#4",
+    "measure": "Extend the armed forces covenant to every area of Government",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-01-26a.677.0#2",
+    "measure": "Extend the armed forces covenant to every area of Government",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 196,
+  "member_id": 5165,
+  "name": "Peter Swallow",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-01-26a.696.0#0",
+    "measure": "Extend the armed forces covenant to every area of Government",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 196,
+  "member_id": 5235,
+  "name": "Al Carns",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-01-26a.707.0#0",
+    "measure": "Extend the armed forces covenant to every area of Government",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-01-26a.703.2#5",
+    "measure": "Extend the armed forces covenant to every area of Government",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 196,
+  "member_id": 5356,
+  "name": "Jim Allister",
+  "party": "TUV",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-01-26a.684.0#0",
+    "measure": "Extend the armed forces covenant to every area of Government",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-01-26a.684.0#1",
+    "measure": "Extend the armed forces covenant to every area of Government",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 270,
+  "member_id": 227,
+  "name": "Andrew George",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-11-25e.553.2#0",
+    "measure": "Reform the business rates system",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 270,
+  "member_id": 3969,
+  "name": "Damian Hinds",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 3,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-11-25e.569.0#2",
+    "measure": "Reform the business rates system",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-11-25e.569.0#1",
+    "measure": "Reform the business rates system",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-11-25e.569.0#3",
+    "measure": "Reform the business rates system",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 270,
+  "member_id": 5044,
+  "name": "Adam Thompson",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-15c.402.0#0",
+    "measure": "Reform the business rates system",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 270,
+  "member_id": 5152,
+  "name": "Sureena Brackenridge",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-15c.409.0#1",
+    "measure": "Reform the business rates system",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 270,
+  "member_id": 5166,
+  "name": "Mark Sewards",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 4,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-15c.412.1#1",
+    "measure": "Reform the business rates system",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-11-25e.589.0#0",
+    "measure": "Reform the business rates system",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-15c.412.1#0",
+    "measure": "Reform the business rates system",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-15c.414.0#0",
+    "measure": "Reform the business rates system",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 270,
+  "member_id": 5207,
+  "name": "Clive Jones",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-11-25e.588.0#1",
+    "measure": "Reform the business rates system",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 270,
+  "member_id": 5317,
+  "name": "Paul Davies",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-15c.405.2#0",
+    "measure": "Reform the business rates system",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 270,
+  "member_id": 5325,
+  "name": "Charlie Maynard",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-11-25e.576.0#0",
+    "measure": "Reform the business rates system",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 351,
+  "member_id": 1482,
+  "name": "Graham Stuart",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-18d.238.0#1",
+    "measure": "Deliver a core guarantee of high standards with space for innovation in every child's education",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 351,
+  "member_id": 3969,
+  "name": "Damian Hinds",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 6,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/standing/standing5376_CHILDREN'S_10-0_2025-02-04a.369.1#0",
+    "measure": "Deliver a core guarantee of high standards with space for innovation in every child's education",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/standing/standing5376_CHILDREN'S_10-0_2025-02-04a.370.3#0",
+    "measure": "Deliver a core guarantee of high standards with space for innovation in every child's education",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-18d.264.1#0",
+    "measure": "Deliver a core guarantee of high standards with space for innovation in every child's education",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/standing/standing5376_CHILDREN'S_10-0_2025-02-04a.371.6#0",
+    "measure": "Deliver a core guarantee of high standards with space for innovation in every child's education",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-18d.262.0#4",
+    "measure": "Deliver a core guarantee of high standards with space for innovation in every child's education",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/standing/standing5376_CHILDREN'S_10-0_2025-02-04a.371.12#0",
+    "measure": "Deliver a core guarantee of high standards with space for innovation in every child's education",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 351,
+  "member_id": 4679,
+  "name": "Neil O'Brien",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.948.3#0",
+    "measure": "Deliver a core guarantee of high standards with space for innovation in every child's education",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 351,
+  "member_id": 4776,
+  "name": "Munira Wilson",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.875.1#1",
+    "measure": "Deliver a core guarantee of high standards with space for innovation in every child's education",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/standing/standing5376_CHILDREN'S_10-0_2025-02-04a.364.0#1",
+    "measure": "Deliver a core guarantee of high standards with space for innovation in every child's education",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 351,
+  "member_id": 4780,
+  "name": "Laura Trott",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.864.0#0",
+    "measure": "Deliver a core guarantee of high standards with space for innovation in every child's education",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 351,
+  "member_id": 5088,
+  "name": "Sarah Coombes",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.941.0#2",
+    "measure": "Deliver a core guarantee of high standards with space for innovation in every child's education",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 351,
+  "member_id": 5092,
+  "name": "David Baines",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/standing/standing5376_CHILDREN'S_09-0_2025-02-04a.348.1#0",
+    "measure": "Deliver a core guarantee of high standards with space for innovation in every child's education",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-18d.244.0#2",
+    "measure": "Deliver a core guarantee of high standards with space for innovation in every child's education",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 351,
+  "member_id": 5165,
+  "name": "Peter Swallow",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-05-14e.206.0#5",
+    "measure": "Deliver a core guarantee of high standards with space for innovation in every child's education",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 351,
+  "member_id": 5210,
+  "name": "Tom Hayes",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.938.0#0",
+    "measure": "Deliver a core guarantee of high standards with space for innovation in every child's education",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 351,
+  "member_id": 5225,
+  "name": "Lizzi Collinge",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.947.0#1",
+    "measure": "Deliver a core guarantee of high standards with space for innovation in every child's education",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 351,
+  "member_id": 5256,
+  "name": "Jonathan Davies",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.947.1#0",
+    "measure": "Deliver a core guarantee of high standards with space for innovation in every child's education",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 351,
+  "member_id": 5341,
+  "name": "Laura Kyrke-Smith",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.940.0#2",
+    "measure": "Deliver a core guarantee of high standards with space for innovation in every child's education",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 353,
+  "member_id": 5158,
+  "name": "Rupert Lowe",
+  "party": "RB",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-10-27b.6.4#0",
+    "measure": "Impose fines on parents for school absence",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 354,
+  "member_id": 4125,
+  "name": "Catherine McKinnell",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-07-24f.777.1#5",
+    "measure": "Expand school-based nurseries",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 354,
+  "member_id": 5041,
+  "name": "Shaun Davies",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-04a.492.0#0",
+    "measure": "Expand school-based nurseries",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 354,
+  "member_id": 5112,
+  "name": "Luke Akehurst",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-04-02c.345.1#0",
+    "measure": "Expand school-based nurseries",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 354,
+  "member_id": 5216,
+  "name": "Caroline Voaden",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-07-09b.360.0#0",
+    "measure": "Expand school-based nurseries",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 360,
+  "member_id": 4125,
+  "name": "Catherine McKinnell",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-07-16a.185.1#2",
+    "measure": "Increase funding for further education colleges",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-07-16a.188.1#1",
+    "measure": "Increase funding for further education colleges",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 360,
+  "member_id": 4595,
+  "name": "Gareth Snell",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-07-02c.1118.0#1",
+    "measure": "Increase funding for further education colleges",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 360,
+  "member_id": 5032,
+  "name": "Tom Gordon",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-07-02c.1117.0#1",
+    "measure": "Increase funding for further education colleges",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-07-02c.1117.0#0",
+    "measure": "Increase funding for further education colleges",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 360,
+  "member_id": 5033,
+  "name": "Josh MacAlister",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-07-02c.1124.1#1",
+    "measure": "Increase funding for further education colleges",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-07-02c.1122.4#0",
+    "measure": "Increase funding for further education colleges",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 360,
+  "member_id": 5054,
+  "name": "Mr Calvin Bailey",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-09b.667.7#0",
+    "measure": "Increase funding for further education colleges",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 360,
+  "member_id": 5067,
+  "name": "Tony Vaughan",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2024-11-13a.240.2#3",
+    "measure": "Increase funding for further education colleges",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 360,
+  "member_id": 5167,
+  "name": "Gregor Poynton",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2024-11-13a.250.0#0",
+    "measure": "Increase funding for further education colleges",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 360,
+  "member_id": 5208,
+  "name": "Perran Moon",
+  "party": "Ind",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-07-02c.1116.2#1",
+    "measure": "Increase funding for further education colleges",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 360,
+  "member_id": 5240,
+  "name": "Melanie Ward",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-07-16a.184.1#0",
+    "measure": "Increase funding for further education colleges",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 360,
+  "member_id": 5279,
+  "name": "Jayne Kirkham",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-05-14e.200.0#3",
+    "measure": "Increase funding for further education colleges",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 360,
+  "member_id": 5283,
+  "name": "Alison Bennett",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-13c.133.2#0",
+    "measure": "Increase funding for further education colleges",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 360,
+  "member_id": 5290,
+  "name": "Leigh Ingham",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-07-02c.1115.2#1",
+    "measure": "Increase funding for further education colleges",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-07-02c.1115.2#0",
+    "measure": "Increase funding for further education colleges",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 360,
+  "member_id": 5304,
+  "name": "Dr Danny Chambers",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-13c.138.0#0",
+    "measure": "Increase funding for further education colleges",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 361,
+  "member_id": 3952,
+  "name": "Mr Toby Perkins",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-02-25c.717.0#2",
+    "measure": "Expand and strengthen apprenticeships",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-02-04b.243.1#0",
+    "measure": "Expand and strengthen apprenticeships",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 361,
+  "member_id": 4029,
+  "name": "Lilian Greenwood",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-10-20b.313.3#1",
+    "measure": "Expand and strengthen apprenticeships",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 361,
+  "member_id": 4131,
+  "name": "Jim Shannon",
+  "party": "DUP",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2024-11-20b.137.1#0",
+    "measure": "Expand and strengthen apprenticeships",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 361,
+  "member_id": 5032,
+  "name": "Tom Gordon",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-07-02c.1117.0#0",
+    "measure": "Expand and strengthen apprenticeships",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 361,
+  "member_id": 5059,
+  "name": "Gurinder Singh Josan",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-02-25c.696.0#3",
+    "measure": "Expand and strengthen apprenticeships",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 361,
+  "member_id": 5067,
+  "name": "Tony Vaughan",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-02-04b.237.0#0",
+    "measure": "Expand and strengthen apprenticeships",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 361,
+  "member_id": 5093,
+  "name": "Alison Taylor",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-02-04b.238.0#0",
+    "measure": "Expand and strengthen apprenticeships",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 361,
+  "member_id": 5103,
+  "name": "Luke Taylor",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-02-25c.681.2#0",
+    "measure": "Expand and strengthen apprenticeships",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 361,
+  "member_id": 5149,
+  "name": "Amanda Hack",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-02-25c.732.0#2",
+    "measure": "Expand and strengthen apprenticeships",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 361,
+  "member_id": 5165,
+  "name": "Peter Swallow",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-02-25c.726.0#1",
+    "measure": "Expand and strengthen apprenticeships",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 361,
+  "member_id": 5194,
+  "name": "Steve Yemm",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2024-11-20b.133.0#1",
+    "measure": "Expand and strengthen apprenticeships",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 361,
+  "member_id": 5290,
+  "name": "Leigh Ingham",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-02-25c.708.0#2",
+    "measure": "Expand and strengthen apprenticeships",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-02-25c.708.0#0",
+    "measure": "Expand and strengthen apprenticeships",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 362,
+  "member_id": 4046,
+  "name": "Bridget Phillipson",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-18d.311.0#2",
+    "measure": "Require home-educated children to be registered with local authorities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 362,
+  "member_id": 4510,
+  "name": "Helen Hayes",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-18d.229.1#2",
+    "measure": "Require home-educated children to be registered with local authorities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 362,
+  "member_id": 4602,
+  "name": "Wera Hobhouse",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.918.2#0",
+    "measure": "Require home-educated children to be registered with local authorities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 362,
+  "member_id": 4679,
+  "name": "Neil O'Brien",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/standing/standing5376_CHILDREN'S_08-0_2025-01-30c.301.0#0",
+    "measure": "Require home-educated children to be registered with local authorities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 362,
+  "member_id": 5186,
+  "name": "Bradley Thomas",
+  "party": "Con",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-12-01a.253.2#1",
+    "measure": "Require home-educated children to be registered with local authorities",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 364,
+  "member_id": 4493,
+  "name": "Richard Burgon",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2024-09-05a.188.1#2",
+    "measure": "Reform the Special Educational Needs and Disabilities (SEND) system",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 364,
+  "member_id": 4602,
+  "name": "Wera Hobhouse",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-10c.1185.3#0",
+    "measure": "Reform the Special Educational Needs and Disabilities (SEND) system",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 364,
+  "member_id": 4780,
+  "name": "Laura Trott",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-02-23f.54.1#4",
+    "measure": "Reform the Special Educational Needs and Disabilities (SEND) system",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 364,
+  "member_id": 5120,
+  "name": "Shockat Adam",
+  "party": "Ind",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-11-11a.9.0#2",
+    "measure": "Reform the Special Educational Needs and Disabilities (SEND) system",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 364,
+  "member_id": 5165,
+  "name": "Peter Swallow",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2024-09-05a.198.1#1",
+    "measure": "Reform the Special Educational Needs and Disabilities (SEND) system",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 364,
+  "member_id": 5174,
+  "name": "Fred Thomas",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2024-09-05a.196.1#0",
+    "measure": "Reform the Special Educational Needs and Disabilities (SEND) system",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 364,
+  "member_id": 5191,
+  "name": "Adam Dance",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-11-11a.23.0#1",
+    "measure": "Reform the Special Educational Needs and Disabilities (SEND) system",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-06-24a.1016.0#0",
+    "measure": "Reform the Special Educational Needs and Disabilities (SEND) system",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 364,
+  "member_id": 5197,
+  "name": "Dr Neil Shastri-Hurst",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2024-09-05a.190.1#0",
+    "measure": "Reform the Special Educational Needs and Disabilities (SEND) system",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 364,
+  "member_id": 5237,
+  "name": "Chris Vince",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-02-23f.66.2#0",
+    "measure": "Reform the Special Educational Needs and Disabilities (SEND) system",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 364,
+  "member_id": 5286,
+  "name": "Anna Sabine",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-11-11a.16.0#1",
+    "measure": "Reform the Special Educational Needs and Disabilities (SEND) system",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 364,
+  "member_id": 5294,
+  "name": "Amanda Martin",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-06-24a.1026.1#0",
+    "measure": "Reform the Special Educational Needs and Disabilities (SEND) system",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2024-09-05a.192.0#0",
+    "measure": "Reform the Special Educational Needs and Disabilities (SEND) system",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 364,
+  "member_id": 5305,
+  "name": "Georgia Gould",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-10-27b.77.1#2",
+    "measure": "Reform the Special Educational Needs and Disabilities (SEND) system",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 364,
+  "member_id": 5317,
+  "name": "Paul Davies",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-09-15a.487.4#0",
+    "measure": "Reform the Special Educational Needs and Disabilities (SEND) system",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 364,
+  "member_id": 5327,
+  "name": "Vikki Slade",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.898.2#2",
+    "measure": "Reform the Special Educational Needs and Disabilities (SEND) system",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 364,
+  "member_id": 5335,
+  "name": "Jess Brown-Fuller",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-09-15a.510.1#0",
+    "measure": "Reform the Special Educational Needs and Disabilities (SEND) system",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 364,
+  "member_id": 5344,
+  "name": "Ben Coleman",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-09-15a.502.0#1",
+    "measure": "Reform the Special Educational Needs and Disabilities (SEND) system",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 364,
+  "member_id": 5352,
+  "name": "Dr Roz Savage",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-09-15a.475.1#0",
+    "measure": "Reform the Special Educational Needs and Disabilities (SEND) system",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 371,
+  "member_id": 4569,
+  "name": "Jim McMahon",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-15c.426.1#1",
+    "measure": "Increase investment in mainstream and special educational needs schools",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 371,
+  "member_id": 4653,
+  "name": "Stephen Morgan",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-08e.223.2#0",
+    "measure": "Increase investment in mainstream and special educational needs schools",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-09-09d.568.5#0",
+    "measure": "Increase investment in mainstream and special educational needs schools",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 371,
+  "member_id": 4776,
+  "name": "Munira Wilson",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-09-15a.516.1#3",
+    "measure": "Increase investment in mainstream and special educational needs schools",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-06-24a.1031.1#1",
+    "measure": "Increase investment in mainstream and special educational needs schools",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 371,
+  "member_id": 4797,
+  "name": "James Murray",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-11-27a.816.1#0",
+    "measure": "Increase investment in mainstream and special educational needs schools",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 371,
+  "member_id": 4923,
+  "name": "Kim Leadbeater",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2024-09-05a.199.0#2",
+    "measure": "Increase investment in mainstream and special educational needs schools",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 371,
+  "member_id": 5105,
+  "name": "Jo White",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-11-25e.582.2#1",
+    "measure": "Increase investment in mainstream and special educational needs schools",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 371,
+  "member_id": 5123,
+  "name": "Ms Polly Billington",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-11-25e.575.0#3",
+    "measure": "Increase investment in mainstream and special educational needs schools",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 371,
+  "member_id": 5165,
+  "name": "Peter Swallow",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-01-19a.11.3#0",
+    "measure": "Increase investment in mainstream and special educational needs schools",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 371,
+  "member_id": 5185,
+  "name": "Alan Gemmell",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-08e.214.2#1",
+    "measure": "Increase investment in mainstream and special educational needs schools",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 371,
+  "member_id": 5197,
+  "name": "Dr Neil Shastri-Hurst",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-11-27a.856.0#1",
+    "measure": "Increase investment in mainstream and special educational needs schools",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 371,
+  "member_id": 5273,
+  "name": "Connor Naismith",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-08e.195.0#2",
+    "measure": "Increase investment in mainstream and special educational needs schools",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 371,
+  "member_id": 5286,
+  "name": "Anna Sabine",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-11-11a.16.0#1",
+    "measure": "Increase investment in mainstream and special educational needs schools",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 371,
+  "member_id": 5295,
+  "name": "Josh Fenton-Glynn",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-08e.213.0#1",
+    "measure": "Increase investment in mainstream and special educational needs schools",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 371,
+  "member_id": 5335,
+  "name": "Jess Brown-Fuller",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-09-15a.510.1#0",
+    "measure": "Increase investment in mainstream and special educational needs schools",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 371,
+  "member_id": 5341,
+  "name": "Laura Kyrke-Smith",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-08e.204.0#1",
+    "measure": "Increase investment in mainstream and special educational needs schools",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 372,
+  "member_id": 4046,
+  "name": "Bridget Phillipson",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-11-04f.15.4#0",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-18d.311.0#3",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 372,
+  "member_id": 4131,
+  "name": "Jim Shannon",
+  "party": "DUP",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-10-15b.158.0#3",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-10-15b.158.0#2",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 372,
+  "member_id": 4471,
+  "name": "Rachael Maskell",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 3,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-01-26a.270.2#1",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-10-15b.155.0#2",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-10-15b.155.0#1",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 372,
+  "member_id": 4510,
+  "name": "Helen Hayes",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-01-26a.267.0#4",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 372,
+  "member_id": 5047,
+  "name": "James Naish",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-01-26a.265.0#0",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 372,
+  "member_id": 5056,
+  "name": "Jen Craft",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-01-26a.278.1#1",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 372,
+  "member_id": 5092,
+  "name": "David Baines",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-01-26a.273.1#2",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 372,
+  "member_id": 5122,
+  "name": "Manuela Perteghella",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-10-15b.152.2#1",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 372,
+  "member_id": 5149,
+  "name": "Amanda Hack",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-01-26a.277.0#0",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 372,
+  "member_id": 5152,
+  "name": "Sureena Brackenridge",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-01-26a.275.2#0",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 372,
+  "member_id": 5154,
+  "name": "Sarah Hall",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-10-15b.157.0#0",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-10-15b.157.0#2",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 372,
+  "member_id": 5182,
+  "name": "Charlotte Cane",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-01-26a.271.2#1",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 372,
+  "member_id": 5187,
+  "name": "Josh Dean",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-10-15b.151.0#0",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-10-15b.151.2#1",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 372,
+  "member_id": 5210,
+  "name": "Tom Hayes",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-01-26a.276.0#2",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 372,
+  "member_id": 5221,
+  "name": "Steve Witherden",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-10-15b.165.2#1",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 372,
+  "member_id": 5237,
+  "name": "Chris Vince",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-18d.265.2#0",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 372,
+  "member_id": 5268,
+  "name": "Iqbal Mohamed",
+  "party": "Ind",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-10-15b.163.1#1",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-10-15b.162.0#1",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 372,
+  "member_id": 5327,
+  "name": "Vikki Slade",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-10-15b.159.1#0",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-10-15b.159.1#2",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 372,
+  "member_id": 5352,
+  "name": "Dr Roz Savage",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 4,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-01-26a.265.1#3",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-01-26a.264.2#3",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-01-26a.286.4#0",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-01-26a.265.1#0",
+    "measure": "Abolish a narrow approach to the curriculum in favour of a holistic one",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 375,
+  "member_id": 3969,
+  "name": "Damian Hinds",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/standing/standing5414_INSTITUTE_03-0_2025-03-20a.67.0#1",
+    "measure": "Establish Skills England",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 375,
+  "member_id": 5149,
+  "name": "Amanda Hack",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-02-25c.732.0#3",
+    "measure": "Establish Skills England",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 382,
+  "member_id": 4510,
+  "name": "Helen Hayes",
+  "party": "Lab",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-10-29a.148.1#0",
+    "measure": "Cut funding for the International Baccalaureate (IB)",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 382,
+  "member_id": 5066,
+  "name": "Steve Darling",
+  "party": "LD",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-10-29a.145.1#0",
+    "measure": "Cut funding for the International Baccalaureate (IB)",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 382,
+  "member_id": 5123,
+  "name": "Ms Polly Billington",
+  "party": "Lab",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-10-29a.156.0#0",
+    "measure": "Cut funding for the International Baccalaureate (IB)",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 389,
+  "member_id": 4780,
+  "name": "Laura Trott",
+  "party": "Con",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-11-05f.930.1#1",
+    "measure": "Abolish the EBacc",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 393,
+  "member_id": 4125,
+  "name": "Catherine McKinnell",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 3,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-04-01a.112.3#1",
+    "measure": "Implement effective relationship and sex education in schools",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-04-01a.112.3#3",
+    "measure": "Implement effective relationship and sex education in schools",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-04-01a.113.1#0",
+    "measure": "Implement effective relationship and sex education in schools",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 393,
+  "member_id": 4131,
+  "name": "Jim Shannon",
+  "party": "DUP",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-04-01a.100.0#1",
+    "measure": "Implement effective relationship and sex education in schools",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-02-12a.455.0#2",
+    "measure": "Implement effective relationship and sex education in schools",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 393,
+  "member_id": 4518,
+  "name": "Tulip Siddiq",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-04-01a.96.2#0",
+    "measure": "Implement effective relationship and sex education in schools",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 393,
+  "member_id": 5000,
+  "name": "Alistair Strathern",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-01b.640.2#0",
+    "measure": "Implement effective relationship and sex education in schools",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-04-01a.107.2#2",
+    "measure": "Implement effective relationship and sex education in schools",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 393,
+  "member_id": 5094,
+  "name": "Ms Julie Minns",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-02-12a.451.3#0",
+    "measure": "Implement effective relationship and sex education in schools",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 393,
+  "member_id": 5228,
+  "name": "Maya Ellis",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-04-01a.106.0#1",
+    "measure": "Implement effective relationship and sex education in schools",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-02-12a.449.1#2",
+    "measure": "Implement effective relationship and sex education in schools",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 393,
+  "member_id": 5236,
+  "name": "Jade Botterill",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-02-12a.463.0#2",
+    "measure": "Implement effective relationship and sex education in schools",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 393,
+  "member_id": 5301,
+  "name": "Rebecca Smith",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-04-01a.105.1#1",
+    "measure": "Implement effective relationship and sex education in schools",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 395,
+  "member_id": 4510,
+  "name": "Helen Hayes",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-16b.351.1#1",
+    "measure": "Expand access to affordable childcare and early years education",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-07-24f.712.0#0",
+    "measure": "Expand access to affordable childcare and early years education",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 395,
+  "member_id": 5117,
+  "name": "Sarah Smith",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-06-24a.1028.0#0",
+    "measure": "Expand access to affordable childcare and early years education",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 395,
+  "member_id": 5135,
+  "name": "Oliver Ryan",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-17f.1024.1#0",
+    "measure": "Expand access to affordable childcare and early years education",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 395,
+  "member_id": 5216,
+  "name": "Caroline Voaden",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-07-09b.360.0#0",
+    "measure": "Expand access to affordable childcare and early years education",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 395,
+  "member_id": 5237,
+  "name": "Chris Vince",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-04-28c.24.0#0",
+    "measure": "Expand access to affordable childcare and early years education",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 416,
+  "member_id": 165,
+  "name": "Clive Efford",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-09-09b.1078.1#0",
+    "measure": "Expand technical and vocational pathways and qualifications to all children",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 416,
+  "member_id": 4124,
+  "name": "Dame Chi Onwurah",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-09-09b.1075.4#0",
+    "measure": "Expand technical and vocational pathways and qualifications to all children",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 416,
+  "member_id": 4510,
+  "name": "Helen Hayes",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-09-09b.1069.1#0",
+    "measure": "Expand technical and vocational pathways and qualifications to all children",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 416,
+  "member_id": 5033,
+  "name": "Josh MacAlister",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-10-20e.614.4#0",
+    "measure": "Expand technical and vocational pathways and qualifications to all children",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 416,
+  "member_id": 5034,
+  "name": "Josh Newbury",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-10c.1197.0#3",
+    "measure": "Expand technical and vocational pathways and qualifications to all children",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 416,
+  "member_id": 5107,
+  "name": "Linsey Farnsworth",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-10-20e.610.4#0",
+    "measure": "Expand technical and vocational pathways and qualifications to all children",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 416,
+  "member_id": 5144,
+  "name": "Richard Quigley",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-10-20b.293.0#0",
+    "measure": "Expand technical and vocational pathways and qualifications to all children",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-10-20b.289.5#0",
+    "measure": "Expand technical and vocational pathways and qualifications to all children",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 416,
+  "member_id": 5152,
+  "name": "Sureena Brackenridge",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-10-20b.295.0#1",
+    "measure": "Expand technical and vocational pathways and qualifications to all children",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 416,
+  "member_id": 5160,
+  "name": "Jenny Riddell-Carpenter",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-10c.1195.3#1",
+    "measure": "Expand technical and vocational pathways and qualifications to all children",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 416,
+  "member_id": 5208,
+  "name": "Perran Moon",
+  "party": "Ind",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-10-20b.303.0#1",
+    "measure": "Expand technical and vocational pathways and qualifications to all children",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 416,
+  "member_id": 5237,
+  "name": "Chris Vince",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-09-09b.1073.2#0",
+    "measure": "Expand technical and vocational pathways and qualifications to all children",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 416,
+  "member_id": 5250,
+  "name": "Gideon Amos",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-10-20b.293.2#0",
+    "measure": "Expand technical and vocational pathways and qualifications to all children",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 416,
+  "member_id": 5269,
+  "name": "Dr Lauren Sullivan",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-09-09b.1076.4#0",
+    "measure": "Expand technical and vocational pathways and qualifications to all children",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 416,
+  "member_id": 5281,
+  "name": "Anna Dixon",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-02d.999.3#0",
+    "measure": "Expand technical and vocational pathways and qualifications to all children",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 416,
+  "member_id": 5294,
+  "name": "Amanda Martin",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-10-20b.300.0#1",
+    "measure": "Expand technical and vocational pathways and qualifications to all children",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 416,
+  "member_id": 5327,
+  "name": "Vikki Slade",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-02d.1002.0#0",
+    "measure": "Expand technical and vocational pathways and qualifications to all children",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 416,
+  "member_id": 5330,
+  "name": "Mr Peter Bedford",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-10-20e.611.4#0",
+    "measure": "Expand technical and vocational pathways and qualifications to all children",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 416,
+  "member_id": 5334,
+  "name": "Dr Allison Gardner",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-10-20b.302.0#0",
+    "measure": "Expand technical and vocational pathways and qualifications to all children",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 416,
+  "member_id": 5447,
+  "name": "Hannah Spencer",
+  "party": "Green",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-10-20b.292.2#0",
+    "measure": "Expand technical and vocational pathways and qualifications to all children",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 420,
+  "member_id": 4046,
+  "name": "Bridget Phillipson",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.858.4#1",
+    "measure": "Require teachers to have qualified status",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-18d.311.0#3",
+    "measure": "Require teachers to have qualified status",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 420,
+  "member_id": 4597,
+  "name": "Mrs Kemi Badenoch",
+  "party": "Con",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-22c.999.4#0",
+    "measure": "Require teachers to have qualified status",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 420,
+  "member_id": 4776,
+  "name": "Munira Wilson",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/standing/standing5376_CHILDREN'S_09-0_2025-02-04a.353.6#0",
+    "measure": "Require teachers to have qualified status",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 420,
+  "member_id": 5225,
+  "name": "Lizzi Collinge",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/standing/standing5376_CHILDREN'S_09-0_2025-02-04a.344.9#0",
+    "measure": "Require teachers to have qualified status",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 420,
+  "member_id": 5303,
+  "name": "Patrick Spencer",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/standing/standing5376_CHILDREN'S_09-0_2025-02-04a.347.1#0",
+    "measure": "Require teachers to have qualified status",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 420,
+  "member_id": 5341,
+  "name": "Laura Kyrke-Smith",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.940.0#1",
+    "measure": "Require teachers to have qualified status",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 425,
+  "member_id": 1482,
+  "name": "Graham Stuart",
+  "party": "Con",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-18d.238.0#6",
+    "measure": "Require local authorities to review and potentially consent to home education for vulnerable children (including those in child protection plans or special schools)",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 425,
+  "member_id": 4125,
+  "name": "Catherine McKinnell",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-18d.280.0#4",
+    "measure": "Require local authorities to review and potentially consent to home education for vulnerable children (including those in child protection plans or special schools)",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 425,
+  "member_id": 5225,
+  "name": "Lizzi Collinge",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.947.0#0",
+    "measure": "Require local authorities to review and potentially consent to home education for vulnerable children (including those in child protection plans or special schools)",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 425,
+  "member_id": 5250,
+  "name": "Gideon Amos",
+  "party": "LD",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-18d.246.0#1",
+    "measure": "Require local authorities to review and potentially consent to home education for vulnerable children (including those in child protection plans or special schools)",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 452,
+  "member_id": 5294,
+  "name": "Amanda Martin",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.933.0#1",
+    "measure": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 452,
+  "member_id": 5341,
+  "name": "Laura Kyrke-Smith",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.940.0#1",
+    "measure": "Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 469,
+  "member_id": 4125,
+  "name": "Catherine McKinnell",
+  "party": "Lab",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-18d.280.0#5",
+    "measure": "Make it harder to turn failing schools into academies",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 469,
+  "member_id": 4679,
+  "name": "Neil O'Brien",
+  "party": "Con",
+  "stance": -1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-18d.224.1#1",
+    "measure": "Make it harder to turn failing schools into academies",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.952.1#0",
+    "measure": "Make it harder to turn failing schools into academies",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 469,
+  "member_id": 4776,
+  "name": "Munira Wilson",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/standing/standing5376_CHILDREN'S_02-0_2025-01-21b.86.3#0",
+    "measure": "Make it harder to turn failing schools into academies",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 469,
+  "member_id": 5062,
+  "name": "Nick Timothy",
+  "party": "Con",
+  "stance": -1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-18d.258.0#0",
+    "measure": "Make it harder to turn failing schools into academies",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.910.2#1",
+    "measure": "Make it harder to turn failing schools into academies",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 485,
+  "member_id": 4780,
+  "name": "Laura Trott",
+  "party": "Con",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-02-25c.686.1#0",
+    "measure": "Subsume the functions of IfATE into Skills England",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 485,
+  "member_id": 5152,
+  "name": "Sureena Brackenridge",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-02-25c.729.0#0",
+    "measure": "Subsume the functions of IfATE into Skills England",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 508,
+  "member_id": 5047,
+  "name": "James Naish",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-01-26a.265.0#0",
+    "measure": "Integrate play into the key stage 1 curriculum",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 508,
+  "member_id": 5210,
+  "name": "Tom Hayes",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-01-26a.276.0#2",
+    "measure": "Integrate play into the key stage 1 curriculum",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 511,
+  "member_id": 4008,
+  "name": "Dame Caroline Dinenage",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2024-09-05a.191.2#1",
+    "measure": "Require compulsory SEND training for teachers and teaching staff",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-10-20e.606.5#0",
+    "measure": "Require compulsory SEND training for teachers and teaching staff",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 511,
+  "member_id": 4131,
+  "name": "Jim Shannon",
+  "party": "DUP",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2024-10-31b.339.1#5",
+    "measure": "Require compulsory SEND training for teachers and teaching staff",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 511,
+  "member_id": 4493,
+  "name": "Richard Burgon",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2024-09-05a.188.1#1",
+    "measure": "Require compulsory SEND training for teachers and teaching staff",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 511,
+  "member_id": 5058,
+  "name": "Juliet Campbell",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-09-14b.1423.3#0",
+    "measure": "Require compulsory SEND training for teachers and teaching staff",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 511,
+  "member_id": 5094,
+  "name": "Ms Julie Minns",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-09-15a.477.3#0",
+    "measure": "Require compulsory SEND training for teachers and teaching staff",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 511,
+  "member_id": 5197,
+  "name": "Dr Neil Shastri-Hurst",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2024-09-05a.190.1#0",
+    "measure": "Require compulsory SEND training for teachers and teaching staff",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 528,
+  "member_id": 193,
+  "name": "Dame Siobhain McDonagh",
+  "party": "Lab",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.902.0#2",
+    "measure": "Abolish academies",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 528,
+  "member_id": 1593,
+  "name": "Sammy Wilson",
+  "party": "DUP",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.858.3#0",
+    "measure": "Abolish academies",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 528,
+  "member_id": 3969,
+  "name": "Damian Hinds",
+  "party": "Con",
+  "stance": -1.0,
+  "focus": 6,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-18d.264.1#0",
+    "measure": "Abolish academies",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.880.1#0",
+    "measure": "Abolish academies",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-18d.262.0#3",
+    "measure": "Abolish academies",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-18d.262.0#4",
+    "measure": "Abolish academies",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-12-01a.260.0#2",
+    "measure": "Abolish academies",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.878.0#2",
+    "measure": "Abolish academies",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 528,
+  "member_id": 4046,
+  "name": "Bridget Phillipson",
+  "party": "Lab",
+  "stance": -1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-18d.311.0#3",
+    "measure": "Abolish academies",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.857.0#1",
+    "measure": "Abolish academies",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 528,
+  "member_id": 4679,
+  "name": "Neil O'Brien",
+  "party": "Con",
+  "stance": -1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.952.1#0",
+    "measure": "Abolish academies",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.948.3#0",
+    "measure": "Abolish academies",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 528,
+  "member_id": 4872,
+  "name": "David Simmonds",
+  "party": "Con",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-18d.241.0#0",
+    "measure": "Abolish academies",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 528,
+  "member_id": 5195,
+  "name": "Andrew Cooper",
+  "party": "Lab",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-12-01a.251.2#3",
+    "measure": "Abolish academies",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 528,
+  "member_id": 5237,
+  "name": "Chris Vince",
+  "party": "Lab",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-18d.266.1#1",
+    "measure": "Abolish academies",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 528,
+  "member_id": 5239,
+  "name": "Sarah Gibson",
+  "party": "LD",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/standing/standing5339_EMPLOYMENT_14-0_2024-12-17a.484.5#0",
+    "measure": "Abolish academies",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 539,
+  "member_id": 3969,
+  "name": "Damian Hinds",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/standing/standing5376_CHILDREN'S_10-0_2025-02-04a.368.1#0",
+    "measure": "Pass the Children's Wellbeing and Schools Bill",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 539,
+  "member_id": 4118,
+  "name": "Sir Julian Smith",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.905.1#1",
+    "measure": "Pass the Children's Wellbeing and Schools Bill",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 539,
+  "member_id": 4602,
+  "name": "Wera Hobhouse",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.918.2#0",
+    "measure": "Pass the Children's Wellbeing and Schools Bill",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 539,
+  "member_id": 4653,
+  "name": "Stephen Morgan",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/standing/standing5376_CHILDREN'S_09-0_2025-02-04a.330.4#2",
+    "measure": "Pass the Children's Wellbeing and Schools Bill",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 539,
+  "member_id": 4776,
+  "name": "Munira Wilson",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.872.4#2",
+    "measure": "Pass the Children's Wellbeing and Schools Bill",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 539,
+  "member_id": 4780,
+  "name": "Laura Trott",
+  "party": "Con",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.865.3#0",
+    "measure": "Pass the Children's Wellbeing and Schools Bill",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 539,
+  "member_id": 5195,
+  "name": "Andrew Cooper",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.930.0#0",
+    "measure": "Pass the Children's Wellbeing and Schools Bill",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-12-01a.251.2#2",
+    "measure": "Pass the Children's Wellbeing and Schools Bill",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 539,
+  "member_id": 5210,
+  "name": "Tom Hayes",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.938.0#0",
+    "measure": "Pass the Children's Wellbeing and Schools Bill",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 539,
+  "member_id": 5225,
+  "name": "Lizzi Collinge",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/standing/standing5376_CHILDREN'S_09-0_2025-02-04a.320.5#0",
+    "measure": "Pass the Children's Wellbeing and Schools Bill",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 539,
+  "member_id": 5226,
+  "name": "Michelle Welsh",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.919.0#1",
+    "measure": "Pass the Children's Wellbeing and Schools Bill",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 539,
+  "member_id": 5237,
+  "name": "Chris Vince",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.944.0#1",
+    "measure": "Pass the Children's Wellbeing and Schools Bill",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 539,
+  "member_id": 5270,
+  "name": "Darren Paffey",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.924.0#3",
+    "measure": "Pass the Children's Wellbeing and Schools Bill",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 539,
+  "member_id": 5294,
+  "name": "Amanda Martin",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.933.0#0",
+    "measure": "Pass the Children's Wellbeing and Schools Bill",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 539,
+  "member_id": 5326,
+  "name": "Edward Morello",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.916.0#0",
+    "measure": "Pass the Children's Wellbeing and Schools Bill",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 539,
+  "member_id": 5337,
+  "name": "Olivia Bailey",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 3,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-12-01a.273.0#1",
+    "measure": "Pass the Children's Wellbeing and Schools Bill",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-12-01a.272.1#0",
+    "measure": "Pass the Children's Wellbeing and Schools Bill",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-12-01a.270.1#1",
+    "measure": "Pass the Children's Wellbeing and Schools Bill",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 539,
+  "member_id": 5341,
+  "name": "Laura Kyrke-Smith",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-08b.940.0#1",
+    "measure": "Pass the Children's Wellbeing and Schools Bill",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 578,
+  "member_id": 3969,
+  "name": "Damian Hinds",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/standing/standing5376_CHILDREN'S_14-0_2025-02-11a.555.2#1",
+    "measure": "Ban mobile phone use in schools",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-17c.86.1#3",
+    "measure": "Ban mobile phone use in schools",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 578,
+  "member_id": 5335,
+  "name": "Jess Brown-Fuller",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-03-02f.566.1#0",
+    "measure": "Ban mobile phone use in schools",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 616,
+  "member_id": 5070,
+  "name": "Lisa Smart",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-11-05f.943.4#0",
+    "measure": "Include financial education in the school curriculum",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 616,
+  "member_id": 5227,
+  "name": "Jas Athwal",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2026-06-30b.374.0#0",
+    "measure": "Include financial education in the school curriculum",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 647,
+  "member_id": 5067,
+  "name": "Tony Vaughan",
+  "party": "Lab",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/westminhall/2025-11-12a.117.0#1",
+    "measure": "Abolish or restrict the right to Education, Health and Care Plans (EHCPs)",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 751,
+  "member_id": 4510,
+  "name": "Helen Hayes",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-18d.229.1#2",
+    "measure": "Provide free school meals to children",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 751,
+  "member_id": 5109,
+  "name": "Chris Bloore",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-16b.368.0#1",
+    "measure": "Provide free school meals to children",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1363,
+  "member_id": 4119,
+  "name": "Jonathan Reynolds",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.137.0#6",
+    "measure": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.137.0#2",
+    "measure": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1363,
+  "member_id": 4389,
+  "name": "Ruth Cadbury",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.68.2#0",
+    "measure": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1363,
+  "member_id": 4394,
+  "name": "Imran Hussain",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.76.4#2",
+    "measure": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1363,
+  "member_id": 4869,
+  "name": "Nadia Whittome",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.127.0#0",
+    "measure": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.127.0#2",
+    "measure": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1363,
+  "member_id": 4870,
+  "name": "Florence Eshalomi",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.49.1#0",
+    "measure": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.115.1#1",
+    "measure": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1363,
+  "member_id": 5037,
+  "name": "Lola McEvoy",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.78.4#0",
+    "measure": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1363,
+  "member_id": 5063,
+  "name": "Johanna Baxter",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.134.0#0",
+    "measure": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1363,
+  "member_id": 5095,
+  "name": "Kirith Entwistle",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.122.0#0",
+    "measure": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1363,
+  "member_id": 5144,
+  "name": "Richard Quigley",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.60.2#0",
+    "measure": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1363,
+  "member_id": 5165,
+  "name": "Peter Swallow",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.105.3#0",
+    "measure": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1363,
+  "member_id": 5181,
+  "name": "Becky Gittins",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.88.0#0",
+    "measure": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1363,
+  "member_id": 5195,
+  "name": "Andrew Cooper",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.128.0#1",
+    "measure": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1363,
+  "member_id": 5210,
+  "name": "Tom Hayes",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.118.0#1",
+    "measure": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1363,
+  "member_id": 5232,
+  "name": "Lorraine Beavers",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.94.3#1",
+    "measure": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1363,
+  "member_id": 5242,
+  "name": "Michael Wheeler",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.134.3#1",
+    "measure": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1363,
+  "member_id": 5249,
+  "name": "Dr Ellie Chowns",
+  "party": "Green",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.101.1#1",
+    "measure": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1363,
+  "member_id": 5270,
+  "name": "Darren Paffey",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.121.1#0",
+    "measure": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1363,
+  "member_id": 5274,
+  "name": "Sonia Kumar",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.117.0#2",
+    "measure": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1363,
+  "member_id": 5275,
+  "name": "Graeme Downie",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.114.0#2",
+    "measure": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1363,
+  "member_id": 5315,
+  "name": "Lee Barron",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.130.0#0",
+    "measure": "Ban exploitative zero-hours contracts and end fire and rehire practices",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1368,
+  "member_id": 4139,
+  "name": "Ian Lavery",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.97.3#0",
+    "measure": "Introduce day one rights for workers",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1368,
+  "member_id": 4269,
+  "name": "Andy McDonald",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.74.2#0",
+    "measure": "Introduce day one rights for workers",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1368,
+  "member_id": 4394,
+  "name": "Imran Hussain",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.76.4#2",
+    "measure": "Introduce day one rights for workers",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1368,
+  "member_id": 4403,
+  "name": "Chris Law",
+  "party": "SNP",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.88.1#0",
+    "measure": "Introduce day one rights for workers",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1368,
+  "member_id": 4667,
+  "name": "Mike Amesbury",
+  "party": "Ind",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.64.0#2",
+    "measure": "Introduce day one rights for workers",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.64.0#1",
+    "measure": "Introduce day one rights for workers",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1368,
+  "member_id": 4753,
+  "name": "Mary Kelly Foy",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.132.3#0",
+    "measure": "Introduce day one rights for workers",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1368,
+  "member_id": 4870,
+  "name": "Florence Eshalomi",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.115.1#2",
+    "measure": "Introduce day one rights for workers",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.115.1#1",
+    "measure": "Introduce day one rights for workers",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1368,
+  "member_id": 5115,
+  "name": "Jon Pearce",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.124.0#2",
+    "measure": "Introduce day one rights for workers",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1368,
+  "member_id": 5144,
+  "name": "Richard Quigley",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.60.2#0",
+    "measure": "Introduce day one rights for workers",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1368,
+  "member_id": 5165,
+  "name": "Peter Swallow",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 3,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.106.1#0",
+    "measure": "Introduce day one rights for workers",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.105.3#0",
+    "measure": "Introduce day one rights for workers",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.105.3#1",
+    "measure": "Introduce day one rights for workers",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1368,
+  "member_id": 5181,
+  "name": "Becky Gittins",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.88.0#0",
+    "measure": "Introduce day one rights for workers",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.88.0#2",
+    "measure": "Introduce day one rights for workers",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1368,
+  "member_id": 5194,
+  "name": "Steve Yemm",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.126.1#1",
+    "measure": "Introduce day one rights for workers",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1368,
+  "member_id": 5275,
+  "name": "Graeme Downie",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.113.0#0",
+    "measure": "Introduce day one rights for workers",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.114.0#2",
+    "measure": "Introduce day one rights for workers",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1368,
+  "member_id": 5279,
+  "name": "Jayne Kirkham",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.83.1#1",
+    "measure": "Introduce day one rights for workers",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1368,
+  "member_id": 5315,
+  "name": "Lee Barron",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.130.0#0",
+    "measure": "Introduce day one rights for workers",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-21f.130.0#1",
+    "measure": "Introduce day one rights for workers",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1439,
+  "member_id": 4520,
+  "name": "Matthew Pennycook",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-17d.655.2#1",
+    "measure": "Require solar panels on new houses",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1439,
+  "member_id": 5201,
+  "name": "Victoria Collins",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-17d.641.1#0",
+    "measure": "Require solar panels on new houses",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1439,
+  "member_id": 5212,
+  "name": "Dr Scott Arthur",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-17d.624.2#0",
+    "measure": "Require solar panels on new houses",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1439,
+  "member_id": 5249,
+  "name": "Dr Ellie Chowns",
+  "party": "Green",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-17d.654.0#0",
+    "measure": "Require solar panels on new houses",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1439,
+  "member_id": 5296,
+  "name": "Freddie van Mierlo",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-17d.629.2#0",
+    "measure": "Require solar panels on new houses",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1439,
+  "member_id": 5313,
+  "name": "Z\u00f6e Franklin",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-17d.619.2#0",
+    "measure": "Require solar panels on new houses",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1439,
+  "member_id": 5320,
+  "name": "Adrian Ramsay",
+  "party": "Green",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-17d.631.2#0",
+    "measure": "Require solar panels on new houses",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1439,
+  "member_id": 5336,
+  "name": "Helen Maguire",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-17d.628.2#0",
+    "measure": "Require solar panels on new houses",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1439,
+  "member_id": 5346,
+  "name": "Calum Miller",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-17d.628.0#0",
+    "measure": "Require solar panels on new houses",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1442,
+  "member_id": 5040,
+  "name": "Liz Jarvis",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-09-05h.482.1#0",
+    "measure": "Establish Great British Energy",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1442,
+  "member_id": 5085,
+  "name": "Llinos Medi",
+  "party": "PC",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-09-05h.521.2#1",
+    "measure": "Establish Great British Energy",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1442,
+  "member_id": 5123,
+  "name": "Ms Polly Billington",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-09-05h.466.2#0",
+    "measure": "Establish Great British Energy",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1442,
+  "member_id": 5161,
+  "name": "Richard Tice",
+  "party": "RUK",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-09-05h.506.0#0",
+    "measure": "Establish Great British Energy",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-09-05h.506.0#1",
+    "measure": "Establish Great British Energy",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1442,
+  "member_id": 5206,
+  "name": "Elaine Stewart",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-09-05h.516.1#0",
+    "measure": "Establish Great British Energy",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1442,
+  "member_id": 5320,
+  "name": "Adrian Ramsay",
+  "party": "Green",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-09-05h.499.2#3",
+    "measure": "Establish Great British Energy",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1442,
+  "member_id": 5362,
+  "name": "Mr Angus MacDonald",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-09-05h.509.1#4",
+    "measure": "Establish Great British Energy",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1515,
+  "member_id": 4268,
+  "name": "Steve Reed",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-28b.269.0#1",
+    "measure": "Introduce tougher penalties, ban bonuses for water company executives, and require water companies to cover enforcement costs",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1515,
+  "member_id": 4368,
+  "name": "Neil Coyle",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-28b.1263.2#6",
+    "measure": "Introduce tougher penalties, ban bonuses for water company executives, and require water companies to cover enforcement costs",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1515,
+  "member_id": 5192,
+  "name": "Helena Dollimore",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.94.1#0",
+    "measure": "Introduce tougher penalties, ban bonuses for water company executives, and require water companies to cover enforcement costs",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1515,
+  "member_id": 5202,
+  "name": "Jessica Toale",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-28b.246.1#1",
+    "measure": "Introduce tougher penalties, ban bonuses for water company executives, and require water companies to cover enforcement costs",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1515,
+  "member_id": 5243,
+  "name": "Andrew Pakes",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.113.0#1",
+    "measure": "Introduce tougher penalties, ban bonuses for water company executives, and require water companies to cover enforcement costs",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1515,
+  "member_id": 5258,
+  "name": "Louise Sandher-Jones",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-28b.248.2#0",
+    "measure": "Introduce tougher penalties, ban bonuses for water company executives, and require water companies to cover enforcement costs",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1521,
+  "member_id": 4368,
+  "name": "Neil Coyle",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-28b.1263.2#6",
+    "measure": "Ban unjustifiable and undeserved bonuses for water company executives",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1521,
+  "member_id": 4399,
+  "name": "Victoria Atkins",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.84.2#1",
+    "measure": "Ban unjustifiable and undeserved bonuses for water company executives",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1521,
+  "member_id": 5094,
+  "name": "Ms Julie Minns",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.121.1#1",
+    "measure": "Ban unjustifiable and undeserved bonuses for water company executives",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1521,
+  "member_id": 5106,
+  "name": "David Burton-Sampson",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.119.0#1",
+    "measure": "Ban unjustifiable and undeserved bonuses for water company executives",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1521,
+  "member_id": 5132,
+  "name": "Liam Conlon",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-28b.1255.1#3",
+    "measure": "Ban unjustifiable and undeserved bonuses for water company executives",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1521,
+  "member_id": 5149,
+  "name": "Amanda Hack",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-28b.1253.2#2",
+    "measure": "Ban unjustifiable and undeserved bonuses for water company executives",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1521,
+  "member_id": 5192,
+  "name": "Helena Dollimore",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.94.1#0",
+    "measure": "Ban unjustifiable and undeserved bonuses for water company executives",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1521,
+  "member_id": 5220,
+  "name": "Tristan Osborne",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.108.2#1",
+    "measure": "Ban unjustifiable and undeserved bonuses for water company executives",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1521,
+  "member_id": 5279,
+  "name": "Jayne Kirkham",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.116.0#2",
+    "measure": "Ban unjustifiable and undeserved bonuses for water company executives",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1521,
+  "member_id": 5336,
+  "name": "Helen Maguire",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.98.1#2",
+    "measure": "Ban unjustifiable and undeserved bonuses for water company executives",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1521,
+  "member_id": 5347,
+  "name": "David Reed",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.108.1#0",
+    "measure": "Ban unjustifiable and undeserved bonuses for water company executives",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1521,
+  "member_id": 5355,
+  "name": "Sarah Bool",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.101.2#0",
+    "measure": "Ban unjustifiable and undeserved bonuses for water company executives",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 4124,
+  "name": "Dame Chi Onwurah",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.77.0#0",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 4464,
+  "name": "Melanie Onn",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.79.2#0",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 4500,
+  "name": "Clive Lewis",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-28b.1221.1#0",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-28b.1221.1#1",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 4637,
+  "name": "Mr James Frith",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-28b.1247.0#1",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-28b.1249.0#1",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 4645,
+  "name": "Emma Hardy",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 6,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.132.0#3",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-28b.1281.2#0",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-28b.1282.1#1",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-28b.252.5#0",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-28b.1282.1#8",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-28b.253.7#0",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 4739,
+  "name": "Jerome Mayhew",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-28b.1279.1#1",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-28b.1279.1#2",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 4759,
+  "name": "Joy Morrissey",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-28b.245.0#0",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.95.2#0",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 4853,
+  "name": "Dr Neil Hudson",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.129.0#5",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.129.0#3",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 5036,
+  "name": "Jodie Gosling",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.98.0#0",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.98.0#1",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 5047,
+  "name": "James Naish",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.105.2#1",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.105.2#0",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 5094,
+  "name": "Ms Julie Minns",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.121.1#1",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 5097,
+  "name": "Mr Bayo Alaba",
+  "party": "Ind",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.127.0#1",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 5100,
+  "name": "Blake Stephenson",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.97.0#1",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 5101,
+  "name": "Sir Ashley Fox",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-28b.249.0#1",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-28b.249.0#0",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 5102,
+  "name": "Carla Denyer",
+  "party": "Green",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-28b.1225.6#0",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 5106,
+  "name": "David Burton-Sampson",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.119.0#2",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.119.0#0",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 5115,
+  "name": "Jon Pearce",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.96.0#1",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 5132,
+  "name": "Liam Conlon",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-28b.1255.1#3",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 5149,
+  "name": "Amanda Hack",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 3,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-28b.1253.2#2",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.101.3#1",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-28b.1253.2#0",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 5171,
+  "name": "Julia Buckley",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.122.0#1",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 5177,
+  "name": "Ann Davies",
+  "party": "PC",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.112.0#0",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 5207,
+  "name": "Clive Jones",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.115.0#1",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.115.0#0",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 5244,
+  "name": "Chris Hinchliff",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 3,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-28b.1267.1#3",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-28b.1267.1#2",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-28b.1267.1#1",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 5249,
+  "name": "Dr Ellie Chowns",
+  "party": "Green",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.105.1#1",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.104.1#0",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 5254,
+  "name": "Alison Hume",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.99.0#2",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-28b.253.4#0",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 5258,
+  "name": "Louise Sandher-Jones",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-28b.248.0#0",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-28b.248.2#0",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 5270,
+  "name": "Darren Paffey",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.118.0#1",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 5281,
+  "name": "Anna Dixon",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.124.0#1",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.91.0#0",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 5284,
+  "name": "David Chadwick",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.109.0#1",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 5291,
+  "name": "Catherine Fookes",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-28b.244.0#2",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-28b.244.0#1",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 5296,
+  "name": "Freddie van Mierlo",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-28b.247.2#0",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-01-28b.247.0#1",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 5334,
+  "name": "Dr Allison Gardner",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.103.2#0",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 5336,
+  "name": "Helen Maguire",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.98.1#2",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 5340,
+  "name": "Jack Rankin",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 3,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.113.1#0",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.113.1#1",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.113.1#2",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 5342,
+  "name": "John Whitby",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.128.0#1",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 5347,
+  "name": "David Reed",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.107.3#0",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.108.1#0",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1522,
+  "member_id": 5355,
+  "name": "Sarah Bool",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-12-16d.101.2#0",
+    "measure": "Hold water companies to account for sewage pollution",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1674,
+  "member_id": 4861,
+  "name": "Robbie Moore",
+  "party": "Con",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-02e.233.0#0",
+    "measure": "Abolish the two-tier council structure in Lancashire (implement a unitary structure)",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 1674,
+  "member_id": 5050,
+  "name": "Lewis Cocking",
+  "party": "Con",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-02e.225.1#1",
+    "measure": "Abolish the two-tier council structure in Lancashire (implement a unitary structure)",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 1674,
+  "member_id": 5099,
+  "name": "Miatta Fahnbulleh",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-11-24e.89.3#0",
+    "measure": "Abolish the two-tier council structure in Lancashire (implement a unitary structure)",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1674,
+  "member_id": 5182,
+  "name": "Charlotte Cane",
+  "party": "LD",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-02e.203.2#3",
+    "measure": "Abolish the two-tier council structure in Lancashire (implement a unitary structure)",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 1674,
+  "member_id": 5316,
+  "name": "Mike Reader",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-02e.239.1#0",
+    "measure": "Abolish the two-tier council structure in Lancashire (implement a unitary structure)",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1675,
+  "member_id": 40,
+  "name": "Sir Bernard Jenkin",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-11-24e.96.4#0",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-11-24e.89.0#0",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1675,
+  "member_id": 227,
+  "name": "Andrew George",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-11-24e.147.1#0",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1675,
+  "member_id": 1447,
+  "name": "Andrew Rosindell",
+  "party": "RUK",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-02e.233.3#0",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1675,
+  "member_id": 4358,
+  "name": "Wendy Morton",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-02e.206.0#0",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-11-24e.88.1#0",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1675,
+  "member_id": 4511,
+  "name": "Dr Rupa Huq",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-02e.183.0#0",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1675,
+  "member_id": 4602,
+  "name": "Wera Hobhouse",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-02e.240.4#0",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-02e.240.4#1",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1675,
+  "member_id": 4803,
+  "name": "Paul Holmes",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 9,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-11-24e.101.1#0",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-11-24e.95.2#1",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-11-24e.116.1#0",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-11-24e.144.0#0",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-11-24e.98.0#1",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-11-24e.98.2#0",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-11-24e.96.9#2",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-11-24e.96.1#0",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-11-24e.120.0#0",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1675,
+  "member_id": 4870,
+  "name": "Florence Eshalomi",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-11-24e.101.3#3",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1675,
+  "member_id": 4872,
+  "name": "David Simmonds",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-02e.245.1#4",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1675,
+  "member_id": 5045,
+  "name": "Mr Jonathan Brash",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-02e.243.0#0",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1675,
+  "member_id": 5047,
+  "name": "James Naish",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-11-24e.129.2#0",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1675,
+  "member_id": 5073,
+  "name": "Marie Goldman",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-02e.220.0#1",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1675,
+  "member_id": 5074,
+  "name": "Mr Paul Foster",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-02e.191.4#2",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1675,
+  "member_id": 5096,
+  "name": "Ian Sollom",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-11-24e.135.0#2",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-11-24e.135.0#1",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1675,
+  "member_id": 5141,
+  "name": "Alex Mayer",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-11-24e.110.0#2",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-11-24e.110.0#3",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1675,
+  "member_id": 5142,
+  "name": "Abtisam Mohamed",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-02e.202.0#0",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-02e.202.0#1",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1675,
+  "member_id": 5182,
+  "name": "Charlotte Cane",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-02e.203.2#0",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-02e.203.2#2",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1675,
+  "member_id": 5208,
+  "name": "Perran Moon",
+  "party": "Ind",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-11-24e.137.1#0",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-11-24e.137.1#1",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1675,
+  "member_id": 5209,
+  "name": "Peter Fortune",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-02e.198.0#0",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1675,
+  "member_id": 5228,
+  "name": "Maya Ellis",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-02e.234.1#0",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1675,
+  "member_id": 5255,
+  "name": "Joe Robertson",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-11-24e.145.0#0",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1675,
+  "member_id": 5265,
+  "name": "James MacCleary",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-02e.231.0#0",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-02e.231.0#1",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1675,
+  "member_id": 5268,
+  "name": "Iqbal Mohamed",
+  "party": "Ind",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-02e.242.2#0",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-02e.242.2#1",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1675,
+  "member_id": 5297,
+  "name": "Rebecca Paul",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-02e.218.0#3",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1675,
+  "member_id": 5302,
+  "name": "Noah Law",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-02e.217.1#0",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1675,
+  "member_id": 5312,
+  "name": "Sadik Al-Hassan",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-02e.208.0#3",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1675,
+  "member_id": 5313,
+  "name": "Z\u00f6e Franklin",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-11-24e.103.1#1",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-11-24e.103.1#4",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1675,
+  "member_id": 5338,
+  "name": "Terry Jermy",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-02e.238.0#2",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1675,
+  "member_id": 5350,
+  "name": "Ben Maguire",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-02e.215.0#1",
+    "measure": "Devolve power to local authorities and communities",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1763,
+  "member_id": 40,
+  "name": "Sir Bernard Jenkin",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-01c.925.1#0",
+    "measure": "Abolish NHS England",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1763,
+  "member_id": 5028,
+  "name": "Lewis Atkinson",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-01c.930.0#0",
+    "measure": "Abolish NHS England",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1763,
+  "member_id": 5132,
+  "name": "Liam Conlon",
+  "party": "Lab",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-01c.916.0#0",
+    "measure": "Abolish NHS England",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 1767,
+  "member_id": 4124,
+  "name": "Dame Chi Onwurah",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-01c.891.0#0",
+    "measure": "Implement a single patient record",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1767,
+  "member_id": 4269,
+  "name": "Andy McDonald",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-01c.904.2#2",
+    "measure": "Implement a single patient record",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1767,
+  "member_id": 4618,
+  "name": "Liz Twist",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-01c.943.2#0",
+    "measure": "Implement a single patient record",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1767,
+  "member_id": 4656,
+  "name": "Layla Moran",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-01c.915.1#1",
+    "measure": "Implement a single patient record",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1767,
+  "member_id": 4753,
+  "name": "Mary Kelly Foy",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-01c.936.0#1",
+    "measure": "Implement a single patient record",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1767,
+  "member_id": 4785,
+  "name": "Dr Ben Spencer",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-01c.910.0#0",
+    "measure": "Implement a single patient record",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1767,
+  "member_id": 5034,
+  "name": "Josh Newbury",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-01c.946.0#1",
+    "measure": "Implement a single patient record",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1767,
+  "member_id": 5094,
+  "name": "Ms Julie Minns",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-01c.892.4#0",
+    "measure": "Implement a single patient record",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1767,
+  "member_id": 5202,
+  "name": "Jessica Toale",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-01c.947.1#1",
+    "measure": "Implement a single patient record",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1767,
+  "member_id": 5223,
+  "name": "Jim Dickson",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-01c.949.1#1",
+    "measure": "Implement a single patient record",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1767,
+  "member_id": 5250,
+  "name": "Gideon Amos",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-01c.924.0#0",
+    "measure": "Implement a single patient record",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1767,
+  "member_id": 5296,
+  "name": "Freddie van Mierlo",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-01c.931.0#1",
+    "measure": "Implement a single patient record",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1853,
+  "member_id": 4510,
+  "name": "Helen Hayes",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-09d.372.2#1",
+    "measure": "Introduce rent controls",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1853,
+  "member_id": 5048,
+  "name": "Antonia Bance",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-09d.400.1#0",
+    "measure": "Introduce rent controls",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1853,
+  "member_id": 5095,
+  "name": "Kirith Entwistle",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-09d.402.1#0",
+    "measure": "Introduce rent controls",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1853,
+  "member_id": 5102,
+  "name": "Carla Denyer",
+  "party": "Green",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-09d.370.2#2",
+    "measure": "Introduce rent controls",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1853,
+  "member_id": 5118,
+  "name": "Chris Curtis",
+  "party": "Lab",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-09d.376.0#2",
+    "measure": "Introduce rent controls",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 1853,
+  "member_id": 5142,
+  "name": "Abtisam Mohamed",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-09d.378.0#1",
+    "measure": "Introduce rent controls",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1853,
+  "member_id": 5218,
+  "name": "David Smith",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-09d.379.0#2",
+    "measure": "Introduce rent controls",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-09d.379.0#1",
+    "measure": "Introduce rent controls",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1853,
+  "member_id": 5276,
+  "name": "Chris Ward",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-09d.380.1#1",
+    "measure": "Introduce rent controls",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1853,
+  "member_id": 5279,
+  "name": "Jayne Kirkham",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-09d.397.0#1",
+    "measure": "Introduce rent controls",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1867,
+  "member_id": 4510,
+  "name": "Helen Hayes",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-09d.372.0#0",
+    "measure": "Abolish section 21 no-fault evictions",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1867,
+  "member_id": 5042,
+  "name": "Pam Cox",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-09d.363.1#4",
+    "measure": "Abolish section 21 no-fault evictions",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1867,
+  "member_id": 5102,
+  "name": "Carla Denyer",
+  "party": "Green",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-09d.371.2#1",
+    "measure": "Abolish section 21 no-fault evictions",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1867,
+  "member_id": 5257,
+  "name": "Rachel Blake",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-09d.383.4#1",
+    "measure": "Abolish section 21 no-fault evictions",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 1867,
+  "member_id": 5279,
+  "name": "Jayne Kirkham",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2024-10-09d.397.0#1",
+    "measure": "Abolish section 21 no-fault evictions",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2085,
+  "member_id": 1533,
+  "name": "Dame Diana Johnson",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-10c.764.5#1",
+    "measure": "Introduce new respect orders for persistent offenders",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2085,
+  "member_id": 5010,
+  "name": "Damien Egan",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-10c.754.0#0",
+    "measure": "Introduce new respect orders for persistent offenders",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2085,
+  "member_id": 5041,
+  "name": "Shaun Davies",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-10c.699.4#0",
+    "measure": "Introduce new respect orders for persistent offenders",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2085,
+  "member_id": 5044,
+  "name": "Adam Thompson",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-10c.743.0#2",
+    "measure": "Introduce new respect orders for persistent offenders",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2085,
+  "member_id": 5054,
+  "name": "Mr Calvin Bailey",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-10c.756.0#0",
+    "measure": "Introduce new respect orders for persistent offenders",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2085,
+  "member_id": 5060,
+  "name": "Josh Simons",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-10c.740.0#3",
+    "measure": "Introduce new respect orders for persistent offenders",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2085,
+  "member_id": 5092,
+  "name": "David Baines",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-10c.730.0#1",
+    "measure": "Introduce new respect orders for persistent offenders",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2085,
+  "member_id": 5115,
+  "name": "Jon Pearce",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-10c.757.0#1",
+    "measure": "Introduce new respect orders for persistent offenders",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2085,
+  "member_id": 5117,
+  "name": "Sarah Smith",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-10c.714.0#1",
+    "measure": "Introduce new respect orders for persistent offenders",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2085,
+  "member_id": 5152,
+  "name": "Sureena Brackenridge",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-10c.745.0#1",
+    "measure": "Introduce new respect orders for persistent offenders",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2085,
+  "member_id": 5165,
+  "name": "Peter Swallow",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-10c.750.2#1",
+    "measure": "Introduce new respect orders for persistent offenders",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2085,
+  "member_id": 5202,
+  "name": "Jessica Toale",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-03-10c.741.0#1",
+    "measure": "Introduce new respect orders for persistent offenders",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2248,
+  "member_id": 39,
+  "name": "Sir John Whittingdale",
+  "party": "Con",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-09c.796.0#0",
+    "measure": "Surrender the Chagos islands to Mauritius",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2248,
+  "member_id": 4264,
+  "name": "Stephen Doughty",
+  "party": "Lab",
+  "stance": -1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-10-20e.731.1#0",
+    "measure": "Surrender the Chagos islands to Mauritius",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-10-20e.712.3#0",
+    "measure": "Surrender the Chagos islands to Mauritius",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2248,
+  "member_id": 4592,
+  "name": "Dr Caroline Johnson",
+  "party": "Con",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-09c.754.0#0",
+    "measure": "Surrender the Chagos islands to Mauritius",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2248,
+  "member_id": 4638,
+  "name": "Mr Tanmanjeet Singh Dhesi",
+  "party": "Lab",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-09c.767.0#1",
+    "measure": "Surrender the Chagos islands to Mauritius",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2248,
+  "member_id": 4682,
+  "name": "Luke Pollard",
+  "party": "Lab",
+  "stance": -0.333,
+  "focus": 3,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-09c.754.1#1",
+    "measure": "Surrender the Chagos islands to Mauritius",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-09c.743.1#0",
+    "measure": "Surrender the Chagos islands to Mauritius",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-09c.743.3#0",
+    "measure": "Surrender the Chagos islands to Mauritius",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2248,
+  "member_id": 4742,
+  "name": "Stuart Anderson",
+  "party": "Con",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-10-20e.699.2#0",
+    "measure": "Surrender the Chagos islands to Mauritius",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2248,
+  "member_id": 4781,
+  "name": "Dr Luke Evans",
+  "party": "Con",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-09c.817.0#2",
+    "measure": "Surrender the Chagos islands to Mauritius",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2248,
+  "member_id": 5043,
+  "name": "Lillian Jones",
+  "party": "Lab",
+  "stance": -1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-09c.785.2#2",
+    "measure": "Surrender the Chagos islands to Mauritius",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-09c.785.2#0",
+    "measure": "Surrender the Chagos islands to Mauritius",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2248,
+  "member_id": 5100,
+  "name": "Blake Stephenson",
+  "party": "Con",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-10-20e.710.2#0",
+    "measure": "Surrender the Chagos islands to Mauritius",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2248,
+  "member_id": 5241,
+  "name": "Aphra Brandreth",
+  "party": "Con",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-09c.810.0#6",
+    "measure": "Surrender the Chagos islands to Mauritius",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2248,
+  "member_id": 5287,
+  "name": "Tim Roca",
+  "party": "Lab",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-09c.792.1#1",
+    "measure": "Surrender the Chagos islands to Mauritius",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2248,
+  "member_id": 5346,
+  "name": "Calum Miller",
+  "party": "LD",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-09-09c.769.1#2",
+    "measure": "Surrender the Chagos islands to Mauritius",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2349,
+  "member_id": 165,
+  "name": "Clive Efford",
+  "party": "Lab",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.209.0#0",
+    "measure": "Abolish or significantly reduce Personal Independence Payment (PIP)",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2349,
+  "member_id": 1524,
+  "name": "Dame Meg Hillier",
+  "party": "Lab",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.187.0#1",
+    "measure": "Abolish or significantly reduce Personal Independence Payment (PIP)",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2349,
+  "member_id": 4396,
+  "name": "Rebecca Long Bailey",
+  "party": "Lab",
+  "stance": -1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.185.2#2",
+    "measure": "Abolish or significantly reduce Personal Independence Payment (PIP)",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.185.2#0",
+    "measure": "Abolish or significantly reduce Personal Independence Payment (PIP)",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2349,
+  "member_id": 4753,
+  "name": "Mary Kelly Foy",
+  "party": "Lab",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.235.2#2",
+    "measure": "Abolish or significantly reduce Personal Independence Payment (PIP)",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2349,
+  "member_id": 4828,
+  "name": "Paula Barker",
+  "party": "Lab",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.224.4#1",
+    "measure": "Abolish or significantly reduce Personal Independence Payment (PIP)",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2349,
+  "member_id": 5083,
+  "name": "Bobby Dean",
+  "party": "LD",
+  "stance": -1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.202.0#3",
+    "measure": "Abolish or significantly reduce Personal Independence Payment (PIP)",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.202.0#2",
+    "measure": "Abolish or significantly reduce Personal Independence Payment (PIP)",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2349,
+  "member_id": 5120,
+  "name": "Shockat Adam",
+  "party": "Ind",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.228.0#1",
+    "measure": "Abolish or significantly reduce Personal Independence Payment (PIP)",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2349,
+  "member_id": 5283,
+  "name": "Alison Bennett",
+  "party": "LD",
+  "stance": -1.0,
+  "focus": 3,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.196.1#0",
+    "measure": "Abolish or significantly reduce Personal Independence Payment (PIP)",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.197.3#1",
+    "measure": "Abolish or significantly reduce Personal Independence Payment (PIP)",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.197.1#0",
+    "measure": "Abolish or significantly reduce Personal Independence Payment (PIP)",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2349,
+  "member_id": 5314,
+  "name": "Si\u00e2n Berry",
+  "party": "Green",
+  "stance": -1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.214.0#2",
+    "measure": "Abolish or significantly reduce Personal Independence Payment (PIP)",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.214.0#3",
+    "measure": "Abolish or significantly reduce Personal Independence Payment (PIP)",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2358,
+  "member_id": 163,
+  "name": "Sir Stephen Timms",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 4,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.240.5#0",
+    "measure": "Pass the Bill",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.242.6#0",
+    "measure": "Pass the Bill",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.241.4#0",
+    "measure": "Pass the Bill",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.241.0#0",
+    "measure": "Pass the Bill",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2358,
+  "member_id": 165,
+  "name": "Clive Efford",
+  "party": "Lab",
+  "stance": -1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.209.0#2",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.209.0#0",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2358,
+  "member_id": 185,
+  "name": "Jeremy Corbyn",
+  "party": "YP",
+  "stance": -1.0,
+  "focus": 3,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.200.1#2",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.199.0#0",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.200.1#0",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2358,
+  "member_id": 4026,
+  "name": "Liz Kendall",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 7,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.161.5#0",
+    "measure": "Pass the Bill",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.164.3#0",
+    "measure": "Pass the Bill",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.159.3#0",
+    "measure": "Pass the Bill",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.159.6#0",
+    "measure": "Pass the Bill",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.164.3#1",
+    "measure": "Pass the Bill",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.161.3#0",
+    "measure": "Pass the Bill",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.161.5#2",
+    "measure": "Pass the Bill",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2358,
+  "member_id": 4139,
+  "name": "Ian Lavery",
+  "party": "Lab",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.232.2#1",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2358,
+  "member_id": 4357,
+  "name": "Kirsty Blackman",
+  "party": "SNP",
+  "stance": -1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.193.0#2",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.193.0#0",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2358,
+  "member_id": 4396,
+  "name": "Rebecca Long Bailey",
+  "party": "Lab",
+  "stance": -1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.185.2#2",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.185.2#0",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2358,
+  "member_id": 4493,
+  "name": "Richard Burgon",
+  "party": "Lab",
+  "stance": -1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.195.0#2",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.195.0#1",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2358,
+  "member_id": 4597,
+  "name": "Mrs Kemi Badenoch",
+  "party": "Con",
+  "stance": -1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.168.3#0",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.169.1#0",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2358,
+  "member_id": 4742,
+  "name": "Stuart Anderson",
+  "party": "Con",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.177.2#3",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2358,
+  "member_id": 4753,
+  "name": "Mary Kelly Foy",
+  "party": "Lab",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.235.2#2",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2358,
+  "member_id": 4828,
+  "name": "Paula Barker",
+  "party": "Lab",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.224.4#1",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2358,
+  "member_id": 4857,
+  "name": "Carla Lockhart",
+  "party": "Ind",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.174.1#0",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2358,
+  "member_id": 4861,
+  "name": "Robbie Moore",
+  "party": "Con",
+  "stance": -1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.212.0#0",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.210.0#1",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2358,
+  "member_id": 5104,
+  "name": "Gill German",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.229.0#0",
+    "measure": "Pass the Bill",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2358,
+  "member_id": 5120,
+  "name": "Shockat Adam",
+  "party": "Ind",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.228.0#1",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2358,
+  "member_id": 5177,
+  "name": "Ann Davies",
+  "party": "PC",
+  "stance": -1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.225.2#0",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.226.1#1",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2358,
+  "member_id": 5234,
+  "name": "Laurence Turner",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.237.0#0",
+    "measure": "Pass the Bill",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2358,
+  "member_id": 5240,
+  "name": "Melanie Ward",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.188.0#0",
+    "measure": "Pass the Bill",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2358,
+  "member_id": 5268,
+  "name": "Iqbal Mohamed",
+  "party": "Ind",
+  "stance": -1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.221.1#1",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.220.0#0",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2358,
+  "member_id": 5270,
+  "name": "Darren Paffey",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.234.3#1",
+    "measure": "Pass the Bill",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.234.3#0",
+    "measure": "Pass the Bill",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2358,
+  "member_id": 5281,
+  "name": "Anna Dixon",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.212.1#0",
+    "measure": "Pass the Bill",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2358,
+  "member_id": 5283,
+  "name": "Alison Bennett",
+  "party": "LD",
+  "stance": -1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.197.3#0",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.197.1#0",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2358,
+  "member_id": 5284,
+  "name": "David Chadwick",
+  "party": "LD",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.223.0#1",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2358,
+  "member_id": 5314,
+  "name": "Si\u00e2n Berry",
+  "party": "Green",
+  "stance": -1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.214.0#3",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.214.0#2",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2358,
+  "member_id": 5319,
+  "name": "Robin Swann",
+  "party": "UUP",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-07-01b.216.0#0",
+    "measure": "Pass the Bill",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2407,
+  "member_id": 1482,
+  "name": "Graham Stuart",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-04-15f.923.3#0",
+    "measure": "Ban smartphones in schools",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2407,
+  "member_id": 5249,
+  "name": "Dr Ellie Chowns",
+  "party": "Green",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/standing/standing5376_CHILDREN'S_14-0_2025-02-11a.552.0#0",
+    "measure": "Ban smartphones in schools",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2441,
+  "member_id": 39,
+  "name": "Sir John Whittingdale",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-05-07b.764.1#0",
+    "measure": "Require AI companies to provide transparency regarding the use of creative content in their models",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2441,
+  "member_id": 1440,
+  "name": "Pete Wishart",
+  "party": "SNP",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-05-07b.754.3#0",
+    "measure": "Require AI companies to provide transparency regarding the use of creative content in their models",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-02-12c.318.1#1",
+    "measure": "Require AI companies to provide transparency regarding the use of creative content in their models",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2441,
+  "member_id": 1446,
+  "name": "Chris Bryant",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-05-07b.730.1#1",
+    "measure": "Require AI companies to provide transparency regarding the use of creative content in their models",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2441,
+  "member_id": 4008,
+  "name": "Dame Caroline Dinenage",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-05-07b.746.2#1",
+    "measure": "Require AI companies to provide transparency regarding the use of creative content in their models",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2441,
+  "member_id": 4124,
+  "name": "Dame Chi Onwurah",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-05-07b.737.1#1",
+    "measure": "Require AI companies to provide transparency regarding the use of creative content in their models",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2441,
+  "member_id": 4505,
+  "name": "Peter Kyle",
+  "party": "Lab",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-02-12c.291.1#1",
+    "measure": "Require AI companies to provide transparency regarding the use of creative content in their models",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2441,
+  "member_id": 5047,
+  "name": "James Naish",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-05-07b.771.0#1",
+    "measure": "Require AI companies to provide transparency regarding the use of creative content in their models",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2441,
+  "member_id": 5055,
+  "name": "Max Wilkinson",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-02-12c.324.1#1",
+    "measure": "Require AI companies to provide transparency regarding the use of creative content in their models",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2486,
+  "member_id": 4358,
+  "name": "Wendy Morton",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-09d.236.0#1",
+    "measure": "Create Great British Railways",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2486,
+  "member_id": 4389,
+  "name": "Ruth Cadbury",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-09d.223.3#0",
+    "measure": "Create Great British Railways",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2486,
+  "member_id": 4493,
+  "name": "Richard Burgon",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-10b.342.3#0",
+    "measure": "Create Great British Railways",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2486,
+  "member_id": 4739,
+  "name": "Jerome Mayhew",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-10b.347.4#1",
+    "measure": "Create Great British Railways",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2486,
+  "member_id": 4813,
+  "name": "Mr Richard Holden",
+  "party": "Con",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-10b.419.2#1",
+    "measure": "Create Great British Railways",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2486,
+  "member_id": 4995,
+  "name": "Sarah Dyke",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-09d.234.2#2",
+    "measure": "Create Great British Railways",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2486,
+  "member_id": 5046,
+  "name": "Andrew Ranger",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-09d.232.0#0",
+    "measure": "Create Great British Railways",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-09d.233.1#0",
+    "measure": "Create Great British Railways",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2486,
+  "member_id": 5093,
+  "name": "Alison Taylor",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-10b.392.0#0",
+    "measure": "Create Great British Railways",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2486,
+  "member_id": 5138,
+  "name": "Ian Roome",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-09d.229.1#0",
+    "measure": "Create Great British Railways",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2486,
+  "member_id": 5141,
+  "name": "Alex Mayer",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-10b.370.0#0",
+    "measure": "Create Great British Railways",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2486,
+  "member_id": 5165,
+  "name": "Peter Swallow",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-09d.252.0#1",
+    "measure": "Create Great British Railways",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2486,
+  "member_id": 5184,
+  "name": "Daniel Francis",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-09d.256.0#2",
+    "measure": "Create Great British Railways",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2486,
+  "member_id": 5205,
+  "name": "Ben Goldsborough",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-09d.229.2#2",
+    "measure": "Create Great British Railways",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2486,
+  "member_id": 5244,
+  "name": "Chris Hinchliff",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-10b.372.0#0",
+    "measure": "Create Great British Railways",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2486,
+  "member_id": 5279,
+  "name": "Jayne Kirkham",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-09d.261.0#0",
+    "measure": "Create Great British Railways",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2486,
+  "member_id": 5314,
+  "name": "Si\u00e2n Berry",
+  "party": "Green",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-09d.255.0#0",
+    "measure": "Create Great British Railways",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2486,
+  "member_id": 5318,
+  "name": "Olly Glover",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 4,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-10b.354.3#0",
+    "measure": "Create Great British Railways",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-10b.353.3#0",
+    "measure": "Create Great British Railways",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-09d.220.1#0",
+    "measure": "Create Great British Railways",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-09d.220.1#1",
+    "measure": "Create Great British Railways",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2486,
+  "member_id": 5326,
+  "name": "Edward Morello",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-09d.240.2#2",
+    "measure": "Create Great British Railways",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2486,
+  "member_id": 5327,
+  "name": "Vikki Slade",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-10b.381.0#0",
+    "measure": "Create Great British Railways",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2495,
+  "member_id": 178,
+  "name": "John McDonnell",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-10b.358.3#1",
+    "measure": "Take railways back into public ownership",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2495,
+  "member_id": 4269,
+  "name": "Andy McDonald",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-10b.361.0#0",
+    "measure": "Take railways back into public ownership",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2495,
+  "member_id": 4493,
+  "name": "Richard Burgon",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-10b.342.3#0",
+    "measure": "Take railways back into public ownership",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2495,
+  "member_id": 4811,
+  "name": "Navendu Mishra",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-09d.218.2#0",
+    "measure": "Take railways back into public ownership",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-10b.380.1#3",
+    "measure": "Take railways back into public ownership",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2495,
+  "member_id": 4813,
+  "name": "Mr Richard Holden",
+  "party": "Con",
+  "stance": -1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-09d.214.3#1",
+    "measure": "Take railways back into public ownership",
+    "side": "AGAINST"
+   }
+  ]
+ },
+ {
+  "fight": 2495,
+  "member_id": 4993,
+  "name": "Keir Mather",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 3,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-10b.340.0#0",
+    "measure": "Take railways back into public ownership",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-10b.343.1#0",
+    "measure": "Take railways back into public ownership",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-10b.343.1#2",
+    "measure": "Take railways back into public ownership",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2495,
+  "member_id": 5084,
+  "name": "Mrs Elsie Blundell",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-09d.235.0#0",
+    "measure": "Take railways back into public ownership",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-09d.235.0#3",
+    "measure": "Take railways back into public ownership",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2495,
+  "member_id": 5098,
+  "name": "Dr Marie Tidball",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-09d.262.0#1",
+    "measure": "Take railways back into public ownership",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2495,
+  "member_id": 5109,
+  "name": "Chris Bloore",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-09d.260.1#0",
+    "measure": "Take railways back into public ownership",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2495,
+  "member_id": 5126,
+  "name": "Dave Robertson",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 3,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-09d.263.1#1",
+    "measure": "Take railways back into public ownership",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-09d.263.1#0",
+    "measure": "Take railways back into public ownership",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-09d.263.1#2",
+    "measure": "Take railways back into public ownership",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2495,
+  "member_id": 5138,
+  "name": "Ian Roome",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-09d.229.1#0",
+    "measure": "Take railways back into public ownership",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2495,
+  "member_id": 5171,
+  "name": "Julia Buckley",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-09d.243.0#1",
+    "measure": "Take railways back into public ownership",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-10b.385.0#0",
+    "measure": "Take railways back into public ownership",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2495,
+  "member_id": 5221,
+  "name": "Steve Witherden",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-10b.388.1#0",
+    "measure": "Take railways back into public ownership",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2495,
+  "member_id": 5234,
+  "name": "Laurence Turner",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-10b.364.0#0",
+    "measure": "Take railways back into public ownership",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2495,
+  "member_id": 5327,
+  "name": "Vikki Slade",
+  "party": "LD",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-10b.381.0#0",
+    "measure": "Take railways back into public ownership",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2498,
+  "member_id": 4813,
+  "name": "Mr Richard Holden",
+  "party": "Con",
+  "stance": 1.0,
+  "focus": 2,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-09d.214.3#1",
+    "measure": "Require the railway to have a target for passenger growth",
+    "side": "FOR"
+   },
+   {
+    "passage_id": "uk.org.publicwhip/debate/2025-12-09d.218.1#0",
+    "measure": "Require the railway to have a target for passenger growth",
+    "side": "FOR"
+   }
+  ]
+ },
+ {
+  "fight": 2498,
+  "member_id": 4993,
+  "name": "Keir Mather",
+  "party": "Lab",
+  "stance": 1.0,
+  "focus": 1,
+  "claims": [
+   {
+    "passage_id": "uk.org.publicwhip/debate/2026-06-10b.393.0#2",
+    "measure": "Require the railway to have a target for passenger growth",
+    "side": "FOR"
+   }
+  ]
+ }
+]

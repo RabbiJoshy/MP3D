@@ -1,0 +1,178 @@
+{
+  "protocol": "5 MP-disjoint folds, seed 917. MPs with >=4 non-neutral scores. One randomly chosen observed target per MP is withheld and excluded from all selectors. Five attempted questions; unavailable answers are skipped, not imputed. Same empirical neighbour predictor for all orders. Scores/topics were developed upstream: not debate-disjoint or visitor validation. Random is one seeded order per MP. No parameter tuning on these results.",
+  "metrics": {
+    "legacy": {
+      "n": 366,
+      "brier": 0.21068598408020725,
+      "mean_answers": 1.6284153005464481
+    },
+    "coverage": {
+      "n": 366,
+      "brier": 0.21016896555513193,
+      "mean_answers": 1.5846994535519126
+    },
+    "adaptive": {
+      "n": 366,
+      "brier": 0.20746313193085872,
+      "mean_answers": 1.5519125683060109
+    },
+    "random": {
+      "n": 366,
+      "brier": 0.21414159836632138,
+      "mean_answers": 1.453551912568306
+    }
+  },
+  "baselines": {
+    "topic_prior_brier": 0.2217212527754859,
+    "party_prior_brier": 0.15898677844617856
+  },
+  "adaptive_minus_legacy": {
+    "mean": -0.00322285214934865,
+    "bootstrap95": [
+      -0.0062449246272049345,
+      -0.00015149062299845407
+    ]
+  },
+  "initial_order": [
+    {
+      "title": "Israel sanctions vs engagement",
+      "k": 1,
+      "score": 0.26596856946646924,
+      "coverage": 175,
+      "priority": 0
+    },
+    {
+      "title": "Asylum & Border Control",
+      "k": 2,
+      "score": 0.2515006333780677,
+      "coverage": 162,
+      "priority": 0
+    },
+    {
+      "title": "Inheritance Tax Policy",
+      "k": 16,
+      "score": 0.23896162736459264,
+      "coverage": 155,
+      "priority": 0
+    },
+    {
+      "title": "Planning Reform vs Green Belt",
+      "k": 13,
+      "score": 0.23807255453724976,
+      "coverage": 154,
+      "priority": 0
+    },
+    {
+      "title": "Assisted Dying Legalization",
+      "k": 0,
+      "score": 0.23610006458626692,
+      "coverage": 156,
+      "priority": 0
+    },
+    {
+      "title": "North Sea extraction future",
+      "k": 5,
+      "score": 0.23482927345129662,
+      "coverage": 151,
+      "priority": 0
+    },
+    {
+      "title": "Winter Fuel Means-Testing",
+      "k": 3,
+      "score": 0.22475443697497105,
+      "coverage": 167,
+      "priority": 0
+    },
+    {
+      "title": "Local Control of Bus Funding",
+      "k": 14,
+      "score": 0.2245601958005261,
+      "coverage": 150,
+      "priority": 0
+    },
+    {
+      "title": "Water Industry Ownership",
+      "k": 7,
+      "score": 0.21780184617668052,
+      "coverage": 154,
+      "priority": 0
+    },
+    {
+      "title": "Agricultural Inheritance Tax",
+      "k": 12,
+      "score": 0.2126864707410159,
+      "coverage": 143,
+      "priority": 0
+    },
+    {
+      "title": "Two-Child Benefit Cap",
+      "k": 4,
+      "score": 0.1923548019752324,
+      "coverage": 173,
+      "priority": 0
+    },
+    {
+      "title": "Post-Brexit EU Trade",
+      "k": 8,
+      "score": 0.1887134281759299,
+      "coverage": 144,
+      "priority": 0
+    },
+    {
+      "title": "Jury Trial Restrictions",
+      "k": 9,
+      "score": 0.1876008364580493,
+      "coverage": 131,
+      "priority": 0
+    },
+    {
+      "title": "Social Housing Supply",
+      "k": 17,
+      "score": 0.18001126088520233,
+      "coverage": 138,
+      "priority": 0
+    },
+    {
+      "title": "Prostate Cancer Screening",
+      "k": 15,
+      "score": 0.17261819795611164,
+      "coverage": 111,
+      "priority": 0
+    },
+    {
+      "title": "Rail Public Ownership",
+      "k": 6,
+      "score": 0.17137713854827233,
+      "coverage": 120,
+      "priority": 0
+    },
+    {
+      "title": "ECHR and Human Rights Act",
+      "k": 10,
+      "score": 0.1624632871908989,
+      "coverage": 151,
+      "priority": 0
+    },
+    {
+      "title": "Private School Tax Status",
+      "k": 19,
+      "score": 0.16243055756288835,
+      "coverage": 105,
+      "priority": 0
+    },
+    {
+      "title": "Wind Farms on Peatland",
+      "k": 18,
+      "score": 0.15538037241308547,
+      "coverage": 131,
+      "priority": 0
+    },
+    {
+      "title": "Electoral System (PR vs FPTP)",
+      "k": 11,
+      "score": 0.15304664220251749,
+      "coverage": 99,
+      "priority": 0
+    }
+  ]
+}

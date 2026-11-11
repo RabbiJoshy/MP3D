@@ -1,0 +1,105 @@
+{
+ "chosen": [
+  [
+   0,
+   1.0
+  ],
+  [
+   0,
+   1.0
+  ],
+  [
+   0,
+   1.0
+  ],
+  [
+   0,
+   1.0
+  ],
+  [
+   0,
+   1.0
+  ]
+ ],
+ "R_counts": {
+  "0": 5
+ },
+ "topic_mean": {
+  "overall": {
+   "sign": 0.765,
+   "mae": 0.629,
+   "n": 605
+  },
+  "against": {
+   "sign": 0.2,
+   "mae": 1.185,
+   "n": 105
+  },
+  "multi_overall": {
+   "sign": 0.78,
+   "mae": 0.612,
+   "n": 391
+  },
+  "multi_against": {
+   "sign": 0.203,
+   "mae": 1.16,
+   "n": 64
+  }
+ },
+ "party_mean": {
+  "overall": {
+   "sign": 0.826,
+   "mae": 0.416,
+   "n": 605
+  },
+  "against": {
+   "sign": 0.0,
+   "mae": 1.319,
+   "n": 105
+  },
+  "multi_overall": {
+   "sign": 0.836,
+   "mae": 0.406,
+   "n": 391
+  },
+  "multi_against": {
+   "sign": 0.0,
+   "mae": 1.299,
+   "n": 64
+  }
+ },
+ "party_plus_rank": {
+  "overall": {
+   "sign": 0.826,
+   "mae": 0.416,
+   "n": 605
+  },
+  "against": {
+   "sign": 0.0,
+   "mae": 1.319,
+   "n": 105
+  },
+  "multi_overall": {
+   "sign": 0.836,
+   "mae": 0.406,
+   "n": 391
+  },
+  "multi_against": {
+   "sign": 0.0,
+   "mae": 1.299,
+   "n": 64
+  }
+ },
+ "against_n": 105,
+ "multi_cells": 391,
+ "n_mps": 156,
+ "n_topics": 15,
+ "n_cells": 605,
+ "coverage": {
+  "1": 370,
+  "2": 156,
+  "3": 56,
+  "4": 17
+ },
+ "n_mps_all": 370
+}

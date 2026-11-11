@@ -1,0 +1,7994 @@
+{
+ "var": [
+  0.013913750786363503,
+  0.011883705987734045,
+  0.011634442824999399
+ ],
+ "positions": [
+  {
+   "pos": 0,
+   "x": 0.109,
+   "y": -0.027,
+   "z": 0.009,
+   "label": "Supports developing a successful defence AI sector in the UK",
+   "topic": "Defence",
+   "n": 4
+  },
+  {
+   "pos": 1,
+   "x": -0.063,
+   "y": 0.099,
+   "z": 0.018,
+   "label": "Supports permanent solution to VAT on free medicine donations",
+   "topic": "Health",
+   "n": 5
+  },
+  {
+   "pos": 2,
+   "x": 0.171,
+   "y": 0.017,
+   "z": 0.141,
+   "label": "Supports reforming the Ministry of Defence's procurement system",
+   "topic": "Defence",
+   "n": 4
+  },
+  {
+   "pos": 3,
+   "x": -0.373,
+   "y": 0.324,
+   "z": -0.321,
+   "label": "Supports the tax change to raise revenue and support family farms",
+   "topic": "Agriculture",
+   "n": 14
+  },
+  {
+   "pos": 4,
+   "x": 0.176,
+   "y": -0.098,
+   "z": 0.068,
+   "label": "Supports appropriate legal processes to establish responsibility for war crimes in Gaza",
+   "topic": "Law and crime",
+   "n": 4
+  },
+  {
+   "pos": 5,
+   "x": 0.254,
+   "y": -0.233,
+   "z": 0.039,
+   "label": "Supports a duty of candour for civil servants and parity of legal representation",
+   "topic": "Government operations",
+   "n": 6
+  },
+  {
+   "pos": 6,
+   "x": -0.111,
+   "y": 0.233,
+   "z": -0.033,
+   "label": "Supports increased funding for farmers",
+   "topic": "Agriculture",
+   "n": 7
+  },
+  {
+   "pos": 7,
+   "x": -0.185,
+   "y": -0.011,
+   "z": -0.049,
+   "label": "Supports opening crossings and ending arbitrary restrictions for humanitarian aid",
+   "topic": "Health",
+   "n": 5
+  },
+  {
+   "pos": 8,
+   "x": 0.125,
+   "y": -0.022,
+   "z": 0.068,
+   "label": "Supports granting regulators statutory powers to test and block risky AI",
+   "topic": "Technology",
+   "n": 6
+  },
+  {
+   "pos": 9,
+   "x": 0.347,
+   "y": -0.05,
+   "z": 0.013,
+   "label": "Supports the Bill to benefit children and families",
+   "topic": "Law and crime",
+   "n": 11
+  },
+  {
+   "pos": 10,
+   "x": 0.781,
+   "y": -0.285,
+   "z": -0.44,
+   "label": "Supports increased provision for special educational needs and disabilities",
+   "topic": "Social welfare",
+   "n": 33
+  },
+  {
+   "pos": 11,
+   "x": -0.004,
+   "y": -0.049,
+   "z": -0.18,
+   "label": "Supports funding the BBC World Service",
+   "topic": "Culture",
+   "n": 4
+  },
+  {
+   "pos": 12,
+   "x": -0.184,
+   "y": -0.256,
+   "z": 0.06,
+   "label": "Supports allowing pensions to be paid to the relevant group",
+   "topic": "Employment",
+   "n": 12
+  },
+  {
+   "pos": 13,
+   "x": 0.657,
+   "y": 0.083,
+   "z": 0.815,
+   "label": "Supports making apprenticeships more accessible and flexible",
+   "topic": "Education",
+   "n": 38
+  },
+  {
+   "pos": 14,
+   "x": 0.491,
+   "y": -0.521,
+   "z": 0.33,
+   "label": "Supports increasing the proportion of funding towards NHS mental health services",
+   "topic": "Health",
+   "n": 20
+  },
+  {
+   "pos": 15,
+   "x": 0.152,
+   "y": -0.372,
+   "z": -0.181,
+   "label": "Supports creating an expert panel to oversee assisted dying cases",
+   "topic": "Civil rights",
+   "n": 6
+  },
+  {
+   "pos": 16,
+   "x": -0.157,
+   "y": 0.016,
+   "z": 0.086,
+   "label": "Supports an AI Bill",
+   "topic": "Technology",
+   "n": 4
+  },
+  {
+   "pos": 17,
+   "x": 0.256,
+   "y": -0.083,
+   "z": 0.075,
+   "label": "Supports the pledge of \u00a33 billion annual military aid to Ukraine",
+   "topic": "International affairs",
+   "n": 14
+  },
+  {
+   "pos": 18,
+   "x": 0.052,
+   "y": -0.158,
+   "z": -0.011,
+   "label": "Supports a long-term plan to address the social care crisis",
+   "topic": "Social welfare",
+   "n": 4
+  },
+  {
+   "pos": 19,
+   "x": -0.059,
+   "y": -0.061,
+   "z": 0.043,
+   "label": "Supports updating the House on Government action for leaseholders and cladding",
+   "topic": "Government operations",
+   "n": 4
+  },
+  {
+   "pos": 20,
+   "x": 0.167,
+   "y": 0.083,
+   "z": -0.546,
+   "label": "Supports bringing Thames Water into special administration",
+   "topic": "Public lands",
+   "n": 20
+  },
+  {
+   "pos": 21,
+   "x": 0.122,
+   "y": -0.221,
+   "z": -0.082,
+   "label": "Supports \u00a32 billion investment in Scottish local and regional growth programmes.",
+   "topic": "Government operations",
+   "n": 4
+  },
+  {
+   "pos": 22,
+   "x": 0.551,
+   "y": -0.593,
+   "z": 0.229,
+   "label": "Supports ending the two-child benefit cap",
+   "topic": "Social welfare",
+   "n": 76
+  },
+  {
+   "pos": 23,
+   "x": 0.066,
+   "y": 0.513,
+   "z": -0.691,
+   "label": "Supports the Water (Special Measures) Bill",
+   "topic": "Environment",
+   "n": 24
+  },
+  {
+   "pos": 24,
+   "x": -0.092,
+   "y": -0.069,
+   "z": -0.218,
+   "label": "Supports additional safeguards included in the Bill",
+   "topic": "Health",
+   "n": 10
+  },
+  {
+   "pos": 25,
+   "x": 0.156,
+   "y": 0.051,
+   "z": 0.101,
+   "label": "Supports shifting healthcare from hospitals into communities",
+   "topic": "Health",
+   "n": 5
+  },
+  {
+   "pos": 26,
+   "x": -0.112,
+   "y": 0.035,
+   "z": 0.151,
+   "label": "Supports investigation into inequalities affecting patients with the disease",
+   "topic": "Health",
+   "n": 3
+  },
+  {
+   "pos": 27,
+   "x": 0.142,
+   "y": -0.135,
+   "z": -0.024,
+   "label": "Supports holding social media giants accountable for their platforms' role in public discourse",
+   "topic": "Law and crime",
+   "n": 5
+  },
+  {
+   "pos": 28,
+   "x": 0.072,
+   "y": -0.129,
+   "z": -0.232,
+   "label": "Supports a comprehensive ban on the import of settlement goods",
+   "topic": "Immigration",
+   "n": 4
+  },
+  {
+   "pos": 29,
+   "x": -0.161,
+   "y": 0.038,
+   "z": 0.511,
+   "label": "Supports measures to reduce Crown court backlogs",
+   "topic": "Law and crime",
+   "n": 14
+  },
+  {
+   "pos": 30,
+   "x": -0.115,
+   "y": 0.009,
+   "z": 0.006,
+   "label": "Supports fixing Royal Mail delays",
+   "topic": "Government operations",
+   "n": 4
+  },
+  {
+   "pos": 31,
+   "x": 0.05,
+   "y": -0.346,
+   "z": -0.267,
+   "label": "Supports advocating for a peaceful resolution in Kashmir",
+   "topic": "Government operations",
+   "n": 4
+  },
+  {
+   "pos": 32,
+   "x": 0.347,
+   "y": -0.177,
+   "z": 0.481,
+   "label": "Supports making paternity and unpaid parental leave available from day one of employment",
+   "topic": "Employment",
+   "n": 16
+  },
+  {
+   "pos": 33,
+   "x": -0.007,
+   "y": -0.081,
+   "z": 0.126,
+   "label": "Supports creating an independent body to review government claims",
+   "topic": "Defence",
+   "n": 4
+  },
+  {
+   "pos": 34,
+   "x": -0.101,
+   "y": -0.015,
+   "z": -0.094,
+   "label": "Supports suicide prevention initiatives",
+   "topic": "Health",
+   "n": 5
+  },
+  {
+   "pos": 35,
+   "x": 0.08,
+   "y": 0.122,
+   "z": 0.102,
+   "label": "Supports measures to minimise the need for food banks",
+   "topic": "Social welfare",
+   "n": 5
+  },
+  {
+   "pos": 36,
+   "x": -0.158,
+   "y": -0.077,
+   "z": 0.147,
+   "label": "Supports the Bill to update legislation against cyber-attacks on the NHS",
+   "topic": "Defence",
+   "n": 5
+  },
+  {
+   "pos": 37,
+   "x": 0.262,
+   "y": 0.334,
+   "z": -0.293,
+   "label": "Supports Great British Energy",
+   "topic": "Energy",
+   "n": 14
+  },
+  {
+   "pos": 38,
+   "x": 0.21,
+   "y": 0.035,
+   "z": -0.151,
+   "label": "Supports providing significant multiyear funding to local authorities for bus services",
+   "topic": "Transport",
+   "n": 8
+  },
+  {
+   "pos": 39,
+   "x": 0.101,
+   "y": -0.186,
+   "z": -0.047,
+   "label": "Supports opposing the expansion of illegal settlements in Palestine",
+   "topic": "International affairs",
+   "n": 7
+  },
+  {
+   "pos": 40,
+   "x": -0.113,
+   "y": 0.269,
+   "z": 0.689,
+   "label": "Supports paid leave for unpaid carers",
+   "topic": "Social welfare",
+   "n": 31
+  },
+  {
+   "pos": 41,
+   "x": 0.006,
+   "y": -0.238,
+   "z": 0.109,
+   "label": "Supports a national strategy and support package for care leavers",
+   "topic": "Social welfare",
+   "n": 6
+  },
+  {
+   "pos": 42,
+   "x": 0.166,
+   "y": 0.161,
+   "z": -0.154,
+   "label": "Supports better regulation of fireworks",
+   "topic": "Law and crime",
+   "n": 21
+  },
+  {
+   "pos": 43,
+   "x": 0.012,
+   "y": 0.027,
+   "z": -0.218,
+   "label": "Supports improved home insulation and energy efficiency",
+   "topic": "Energy",
+   "n": 5
+  },
+  {
+   "pos": 44,
+   "x": 0.332,
+   "y": 0.046,
+   "z": 0.076,
+   "label": "Supports better spending and modernisation of the NHS",
+   "topic": "Health",
+   "n": 20
+  },
+  {
+   "pos": 45,
+   "x": 0.249,
+   "y": -0.189,
+   "z": 0.08,
+   "label": "Supports the Bill's measures to deter illegal immigration and disrupt organised crime",
+   "topic": "Immigration",
+   "n": 8
+  },
+  {
+   "pos": 46,
+   "x": -0.129,
+   "y": 0.32,
+   "z": -0.378,
+   "label": "Supports anchoring offshore oil and gas jobs in the UK",
+   "topic": "Energy",
+   "n": 7
+  },
+  {
+   "pos": 47,
+   "x": -0.013,
+   "y": 0.119,
+   "z": -0.015,
+   "label": "Supports mandatory reporting of domestic abuse by healthcare professionals",
+   "topic": "Law and crime",
+   "n": 5
+  },
+  {
+   "pos": 48,
+   "x": 0.255,
+   "y": -0.611,
+   "z": -0.722,
+   "label": "Supports the assisted dying legislation",
+   "topic": "Health",
+   "n": 74
+  },
+  {
+   "pos": 49,
+   "x": 0.173,
+   "y": -0.05,
+   "z": 0.116,
+   "label": "Supports action to tackle ticket touts and price gouging",
+   "topic": "Culture",
+   "n": 13
+  },
+  {
+   "pos": 50,
+   "x": 0.092,
+   "y": -0.063,
+   "z": 0.213,
+   "label": "Supports repealing previous Government's immigration and asylum legislation",
+   "topic": "Immigration",
+   "n": 5
+  },
+  {
+   "pos": 51,
+   "x": 0.609,
+   "y": -0.807,
+   "z": -0.324,
+   "label": "Supports building more social housing",
+   "topic": "Housing",
+   "n": 43
+  },
+  {
+   "pos": 52,
+   "x": 0.024,
+   "y": -0.228,
+   "z": 0.161,
+   "label": "Supports regulating loot boxes and virtual currencies in video games",
+   "topic": "Health",
+   "n": 4
+  },
+  {
+   "pos": 53,
+   "x": 0.09,
+   "y": 0.189,
+   "z": -0.044,
+   "label": "Supports the inclusion of the enhancing financial services Bill in the King's Speech",
+   "topic": "Employment",
+   "n": 4
+  },
+  {
+   "pos": 54,
+   "x": 0.267,
+   "y": 1.392,
+   "z": 0.117,
+   "label": "Supports increased funding for the UK defence industry",
+   "topic": "Defence",
+   "n": 33
+  },
+  {
+   "pos": 55,
+   "x": 0.085,
+   "y": -0.084,
+   "z": -0.249,
+   "label": "Supports devolution of powers and funding to Lancashire",
+   "topic": "Government operations",
+   "n": 4
+  },
+  {
+   "pos": 56,
+   "x": 0.365,
+   "y": -0.105,
+   "z": 0.726,
+   "label": "Supports increased funding for hospices",
+   "topic": "Health",
+   "n": 55
+  },
+  {
+   "pos": 57,
+   "x": 0.067,
+   "y": 0.116,
+   "z": -0.065,
+   "label": "Supports investment in new community mental health and crisis centres",
+   "topic": "Health",
+   "n": 7
+  },
+  {
+   "pos": 58,
+   "x": 0.123,
+   "y": 0.048,
+   "z": -0.022,
+   "label": "Supports suspending F-35 supply and spare parts to Israel",
+   "topic": "International affairs",
+   "n": 4
+  },
+  {
+   "pos": 59,
+   "x": 0.107,
+   "y": 0.112,
+   "z": 0.019,
+   "label": "Supports Labour's economic plan",
+   "topic": "Government operations",
+   "n": 4
+  },
+  {
+   "pos": 60,
+   "x": 0.003,
+   "y": -0.088,
+   "z": 0.235,
+   "label": "Supports private schools paying VAT",
+   "topic": "Education",
+   "n": 35
+  },
+  {
+   "pos": 61,
+   "x": 0.076,
+   "y": -0.761,
+   "z": -0.56,
+   "label": "Supports a ban on arms sales to Israel",
+   "topic": "International affairs",
+   "n": 12
+  },
+  {
+   "pos": 62,
+   "x": 0.343,
+   "y": -0.264,
+   "z": 0.175,
+   "label": "Supports continued local government funding and access to investment opportunities",
+   "topic": "Government operations",
+   "n": 20
+  },
+  {
+   "pos": 63,
+   "x": -0.014,
+   "y": -0.197,
+   "z": -0.093,
+   "label": "Supports reducing the welfare bill before the next election",
+   "topic": "Social welfare",
+   "n": 6
+  },
+  {
+   "pos": 64,
+   "x": 0.718,
+   "y": 0.794,
+   "z": 0.103,
+   "label": "Supports taking railways into public ownership and establishing Great British Railways",
+   "topic": "Transport",
+   "n": 47
+  },
+  {
+   "pos": 65,
+   "x": -0.122,
+   "y": 0.204,
+   "z": -0.192,
+   "label": "Supports building a dental school at the University of East Anglia",
+   "topic": "Health",
+   "n": 6
+  },
+  {
+   "pos": 66,
+   "x": -0.055,
+   "y": 1.024,
+   "z": -1.524,
+   "label": "Supports community energy projects",
+   "topic": "Energy",
+   "n": 36
+  },
+  {
+   "pos": 67,
+   "x": 0.075,
+   "y": -0.138,
+   "z": 0.026,
+   "label": "Supports Government support for town centre regeneration",
+   "topic": "Government operations",
+   "n": 6
+  },
+  {
+   "pos": 68,
+   "x": 0.066,
+   "y": -0.059,
+   "z": 0.118,
+   "label": "Supports the increase in apprenticeship minimum wage from \u00a36.40 to \u00a37.55",
+   "topic": "Employment",
+   "n": 5
+  },
+  {
+   "pos": 69,
+   "x": -0.984,
+   "y": 0.893,
+   "z": -0.256,
+   "label": "Supports expanding access to NHS dental and GP services",
+   "topic": "Health",
+   "n": 61
+  },
+  {
+   "pos": 70,
+   "x": 0.038,
+   "y": 0.118,
+   "z": -0.159,
+   "label": "Supports raising minimum energy efficiency standards in the private and social rented sectors to EPC C by 2030",
+   "topic": "Housing",
+   "n": 4
+  },
+  {
+   "pos": 71,
+   "x": 0.174,
+   "y": -0.087,
+   "z": 0.077,
+   "label": "Supports engaging with support groups for victims",
+   "topic": "Law and crime",
+   "n": 5
+  },
+  {
+   "pos": 72,
+   "x": -0.008,
+   "y": 0.534,
+   "z": -1.398,
+   "label": "Supports public ownership of the water industry",
+   "topic": "Public lands",
+   "n": 44
+  },
+  {
+   "pos": 73,
+   "x": 0.015,
+   "y": 0.009,
+   "z": -0.01,
+   "label": "Supports incentives and support for smaller members of the fishing industry",
+   "topic": "Agriculture",
+   "n": 5
+  },
+  {
+   "pos": 74,
+   "x": -0.056,
+   "y": 0.071,
+   "z": -0.119,
+   "label": "Supports raising more investment to bring growth back to the economy.",
+   "topic": "Macroeconomics",
+   "n": 4
+  },
+  {
+   "pos": 75,
+   "x": 0.135,
+   "y": 0.062,
+   "z": 0.22,
+   "label": "Supports the Border Security, Asylum and Immigration Bill",
+   "topic": "Immigration",
+   "n": 13
+  },
+  {
+   "pos": 76,
+   "x": -0.154,
+   "y": 0.033,
+   "z": 0.157,
+   "label": "Supports changes to agricultural property relief",
+   "topic": "Agriculture",
+   "n": 8
+  },
+  {
+   "pos": 77,
+   "x": 0.207,
+   "y": -0.163,
+   "z": 0.064,
+   "label": "Supports the \u00a3600 million grant funding for social care",
+   "topic": "Health",
+   "n": 5
+  },
+  {
+   "pos": 78,
+   "x": 0.042,
+   "y": 0.009,
+   "z": -0.019,
+   "label": "Supports the \u00a39 billion repair and renewal of 36,000 forces homes",
+   "topic": "Defence",
+   "n": 4
+  },
+  {
+   "pos": 79,
+   "x": 0.032,
+   "y": 0.179,
+   "z": 0.284,
+   "label": "Supports introducing a menstruation action plan for workplaces",
+   "topic": "Health",
+   "n": 8
+  },
+  {
+   "pos": 80,
+   "x": 0.191,
+   "y": -0.158,
+   "z": 0.129,
+   "label": "Supports promoting onshoring, local procurement, and support for small firms.",
+   "topic": "Domestic commerce",
+   "n": 4
+  },
+  {
+   "pos": 81,
+   "x": 0.098,
+   "y": -0.078,
+   "z": 0.051,
+   "label": "Supports a record to capture details of bereaved children for support",
+   "topic": "Health",
+   "n": 4
+  },
+  {
+   "pos": 82,
+   "x": 0.622,
+   "y": -0.122,
+   "z": 0.403,
+   "label": "Supports banning exploitative zero-hours contracts and ending fire and rehire",
+   "topic": "Employment",
+   "n": 18
+  },
+  {
+   "pos": 83,
+   "x": 0.058,
+   "y": 0.025,
+   "z": 0.184,
+   "label": "Supports support for all carers, including young carers",
+   "topic": "Social welfare",
+   "n": 11
+  },
+  {
+   "pos": 84,
+   "x": -0.13,
+   "y": -0.164,
+   "z": 0.217,
+   "label": "Supports increasing Crown court sitting days and magistrate sentencing powers",
+   "topic": "Law and crime",
+   "n": 10
+  },
+  {
+   "pos": 85,
+   "x": -0.21,
+   "y": -0.194,
+   "z": 0.021,
+   "label": "Supports exempting hospices from the rise in employer National Insurance contributions",
+   "topic": "Health",
+   "n": 8
+  },
+  {
+   "pos": 86,
+   "x": -0.517,
+   "y": 0.114,
+   "z": -0.543,
+   "label": "Supports seizing frozen Russian assets to fund Ukraine",
+   "topic": "International affairs",
+   "n": 38
+  },
+  {
+   "pos": 87,
+   "x": 0.146,
+   "y": -0.04,
+   "z": 0.29,
+   "label": "Supports the Online Safety Act",
+   "topic": "Law and crime",
+   "n": 16
+  },
+  {
+   "pos": 88,
+   "x": -0.001,
+   "y": 0.15,
+   "z": 0.044,
+   "label": "Supports providing digital and AI skills to school pupils",
+   "topic": "Education",
+   "n": 4
+  },
+  {
+   "pos": 89,
+   "x": 0.149,
+   "y": -0.136,
+   "z": 0.028,
+   "label": "Supports raising statutory sick pay to the level of the living wage",
+   "topic": "Employment",
+   "n": 4
+  },
+  {
+   "pos": 90,
+   "x": 0.077,
+   "y": -0.035,
+   "z": 0.084,
+   "label": "Supports reducing trial delays to ensure justice is fast and fair",
+   "topic": "Law and crime",
+   "n": 4
+  },
+  {
+   "pos": 91,
+   "x": -0.035,
+   "y": -0.034,
+   "z": 0.144,
+   "label": "Supports prohibiting private provision of voluntary assisted dying services",
+   "topic": "Civil rights",
+   "n": 5
+  },
+  {
+   "pos": 92,
+   "x": 0.069,
+   "y": 0.014,
+   "z": -0.032,
+   "label": "Supports ongoing funding for community organisations supporting women and girls",
+   "topic": "Health",
+   "n": 6
+  },
+  {
+   "pos": 93,
+   "x": 0.038,
+   "y": -0.085,
+   "z": 0.088,
+   "label": "Supports extending assisted death eligibility to terminally ill patients with under 12 months to live",
+   "topic": "Civil rights",
+   "n": 4
+  },
+  {
+   "pos": 94,
+   "x": 0.208,
+   "y": -0.059,
+   "z": 0.168,
+   "label": "Supports devolving power from central government to local communities",
+   "topic": "Government operations",
+   "n": 4
+  },
+  {
+   "pos": 95,
+   "x": -0.082,
+   "y": -0.194,
+   "z": -0.094,
+   "label": "Supports repealing the Trade Union Act 2016 and minimum service levels laws",
+   "topic": "Employment",
+   "n": 4
+  },
+  {
+   "pos": 96,
+   "x": 0.067,
+   "y": -0.047,
+   "z": 0.049,
+   "label": "Supports increases to the national minimum wage and the living wage",
+   "topic": "Employment",
+   "n": 5
+  },
+  {
+   "pos": 97,
+   "x": 0.061,
+   "y": -0.025,
+   "z": 0.158,
+   "label": "Supports a price cap on the resale of tickets for all live events",
+   "topic": "Culture",
+   "n": 4
+  },
+  {
+   "pos": 98,
+   "x": 0.085,
+   "y": -0.027,
+   "z": 0.008,
+   "label": "Supports parity between mental and physical health in the NHS",
+   "topic": "Health",
+   "n": 4
+  },
+  {
+   "pos": 99,
+   "x": 0.774,
+   "y": 0.499,
+   "z": 0.545,
+   "label": "Supports the Employment Rights Bill",
+   "topic": "Employment",
+   "n": 28
+  },
+  {
+   "pos": 100,
+   "x": 0.162,
+   "y": 0.265,
+   "z": -0.357,
+   "label": "Supports inclusion of community energy in the Bill",
+   "topic": "Energy",
+   "n": 10
+  },
+  {
+   "pos": 101,
+   "x": -0.034,
+   "y": 0.357,
+   "z": -0.257,
+   "label": "Supports independent review of carer's allowance overpayments",
+   "topic": "Social welfare",
+   "n": 11
+  },
+  {
+   "pos": 102,
+   "x": -0.53,
+   "y": 0.471,
+   "z": 0.055,
+   "label": "Supports increasing investment in defence spending",
+   "topic": "Defence",
+   "n": 155
+  },
+  {
+   "pos": 103,
+   "x": 0.051,
+   "y": 0.141,
+   "z": 0.003,
+   "label": "Supports ending the use of dogs in science",
+   "topic": "Agriculture",
+   "n": 4
+  },
+  {
+   "pos": 104,
+   "x": 0.326,
+   "y": -0.265,
+   "z": 0.039,
+   "label": "Supports \u00a3740 million investment to expand specialist provision in mainstream schools",
+   "topic": "Social welfare",
+   "n": 7
+  },
+  {
+   "pos": 105,
+   "x": 0.005,
+   "y": 0.112,
+   "z": -0.029,
+   "label": "Supports councils building and retaining homes as public assets",
+   "topic": "Housing",
+   "n": 5
+  },
+  {
+   "pos": 106,
+   "x": -0.127,
+   "y": 0.153,
+   "z": -0.015,
+   "label": "Supports expanding community pharmacy services to support patients and prevent ill health",
+   "topic": "Health",
+   "n": 9
+  },
+  {
+   "pos": 107,
+   "x": 0.088,
+   "y": 0.048,
+   "z": 0.151,
+   "label": "Supports adding more homes to the market",
+   "topic": "Housing",
+   "n": 5
+  },
+  {
+   "pos": 108,
+   "x": 0.023,
+   "y": 0.011,
+   "z": 0.154,
+   "label": "Supports restoring local police presence to combat antisocial behaviour",
+   "topic": "Law and crime",
+   "n": 4
+  },
+  {
+   "pos": 109,
+   "x": -0.929,
+   "y": 0.118,
+   "z": 0.386,
+   "label": "Supports a ban on social media for children under 16",
+   "topic": "Health",
+   "n": 54
+  },
+  {
+   "pos": 110,
+   "x": -0.03,
+   "y": -0.239,
+   "z": -0.173,
+   "label": "Supports business investment and expansion plans",
+   "topic": "Employment",
+   "n": 4
+  },
+  {
+   "pos": 111,
+   "x": -0.134,
+   "y": 0.112,
+   "z": -0.039,
+   "label": "Supports expanding school lunches and auto-enrolling children for free meals",
+   "topic": "Social welfare",
+   "n": 9
+  },
+  {
+   "pos": 112,
+   "x": 0.087,
+   "y": -0.068,
+   "z": -0.039,
+   "label": "Supports expanding community-owned energy and securing grid interconnector capacity.",
+   "topic": "Energy",
+   "n": 4
+  },
+  {
+   "pos": 113,
+   "x": -0.04,
+   "y": -0.037,
+   "z": -0.017,
+   "label": "Supports repairing road defects and potholes",
+   "topic": "Government operations",
+   "n": 4
+  },
+  {
+   "pos": 114,
+   "x": 0.242,
+   "y": -0.079,
+   "z": -0.129,
+   "label": "Supports tightening donation rules for political parties",
+   "topic": "Government operations",
+   "n": 7
+  },
+  {
+   "pos": 115,
+   "x": -0.065,
+   "y": 0.231,
+   "z": -0.077,
+   "label": "Supports small modular reactors for low-carbon energy",
+   "topic": "Energy",
+   "n": 4
+  },
+  {
+   "pos": 116,
+   "x": 0.091,
+   "y": 0.069,
+   "z": 0.144,
+   "label": "Supports the new hospital programme",
+   "topic": "Health",
+   "n": 5
+  },
+  {
+   "pos": 117,
+   "x": -0.011,
+   "y": 0.11,
+   "z": -0.035,
+   "label": "Supports legal right to consular assistance for detained British nationals abroad",
+   "topic": "Immigration",
+   "n": 4
+  },
+  {
+   "pos": 118,
+   "x": 0.189,
+   "y": 0.019,
+   "z": -0.049,
+   "label": "Supports the Sustainable Aviation Fuels Bill",
+   "topic": "Energy",
+   "n": 4
+  },
+  {
+   "pos": 119,
+   "x": 0.063,
+   "y": 0.017,
+   "z": 0.029,
+   "label": "Supports limiting annual spending increases to \u00a39.5 billion",
+   "topic": "Macroeconomics",
+   "n": 6
+  },
+  {
+   "pos": 120,
+   "x": -0.025,
+   "y": 0.126,
+   "z": -0.043,
+   "label": "Supports providing adequate financial support for kinship carers",
+   "topic": "Social welfare",
+   "n": 4
+  },
+  {
+   "pos": 121,
+   "x": -0.149,
+   "y": 0.207,
+   "z": -0.161,
+   "label": "Supports fairer funding for rural areas",
+   "topic": "Agriculture",
+   "n": 6
+  },
+  {
+   "pos": 122,
+   "x": -0.09,
+   "y": 0.057,
+   "z": -0.094,
+   "label": "Supports new nuclear power stations in Scotland",
+   "topic": "Energy",
+   "n": 6
+  },
+  {
+   "pos": 123,
+   "x": 0.191,
+   "y": 0.164,
+   "z": -0.064,
+   "label": "Supports the \u00a32.5 billion National Wealth Fund investment to rebuild the UK steel sector",
+   "topic": "Energy",
+   "n": 6
+  },
+  {
+   "pos": 124,
+   "x": -0.032,
+   "y": 0.052,
+   "z": 0.08,
+   "label": "Supports the Bill to ensure asylum decisions and appeals are fast and fair.",
+   "topic": "Immigration",
+   "n": 4
+  },
+  {
+   "pos": 125,
+   "x": 0.195,
+   "y": 0.406,
+   "z": 0.17,
+   "label": "Supports incorporating the armed forces covenant fully into law",
+   "topic": "Defence",
+   "n": 15
+  },
+  {
+   "pos": 126,
+   "x": 0.336,
+   "y": -0.244,
+   "z": 0.136,
+   "label": "Supports the new right to buy for community assets",
+   "topic": "Housing",
+   "n": 13
+  },
+  {
+   "pos": 127,
+   "x": -0.121,
+   "y": 0.162,
+   "z": 0.023,
+   "label": "Supports the negotiated trade deal",
+   "topic": "Foreign trade",
+   "n": 8
+  },
+  {
+   "pos": 128,
+   "x": -0.029,
+   "y": -0.067,
+   "z": 0.029,
+   "label": "Supports the Government's approach to economic growth",
+   "topic": "Government operations",
+   "n": 5
+  },
+  {
+   "pos": 129,
+   "x": -0.041,
+   "y": -0.022,
+   "z": -0.089,
+   "label": "Supports restoring Britain's military capability",
+   "topic": "Defence",
+   "n": 4
+  },
+  {
+   "pos": 130,
+   "x": 0.055,
+   "y": 0.062,
+   "z": -0.161,
+   "label": "Supports transitioning to clean energy sources like solar and offshore wind",
+   "topic": "Energy",
+   "n": 4
+  },
+  {
+   "pos": 131,
+   "x": -0.133,
+   "y": 0.215,
+   "z": -0.162,
+   "label": "Supports achieving net zero targets and creating green jobs",
+   "topic": "Energy",
+   "n": 10
+  },
+  {
+   "pos": 132,
+   "x": -0.209,
+   "y": -0.132,
+   "z": 0.064,
+   "label": "Supports winter fuel payments for pensioners",
+   "topic": "Employment",
+   "n": 11
+  },
+  {
+   "pos": 133,
+   "x": 0.1,
+   "y": -0.102,
+   "z": -0.059,
+   "label": "Supports making mental health services more accessible in communities",
+   "topic": "Health",
+   "n": 10
+  },
+  {
+   "pos": 134,
+   "x": -0.036,
+   "y": -0.295,
+   "z": 0.726,
+   "label": "Supports halving violence against women and girls within a decade",
+   "topic": "Law and crime",
+   "n": 16
+  },
+  {
+   "pos": 135,
+   "x": -0.013,
+   "y": 0.026,
+   "z": 0.048,
+   "label": "Supports the sustainable farming incentive scheme",
+   "topic": "Agriculture",
+   "n": 6
+  },
+  {
+   "pos": 136,
+   "x": -0.148,
+   "y": -0.185,
+   "z": -0.111,
+   "label": "Supports giving local authorities extra funding for SEND",
+   "topic": "Government operations",
+   "n": 4
+  },
+  {
+   "pos": 137,
+   "x": 0.114,
+   "y": 0.001,
+   "z": 0.032,
+   "label": "Supports improving workplace menopause support scope, coverage and quality",
+   "topic": "Employment",
+   "n": 8
+  },
+  {
+   "pos": 138,
+   "x": 0.085,
+   "y": 0.344,
+   "z": -0.069,
+   "label": "Supports investment in ports and the national shipbuilding strategy",
+   "topic": "Employment",
+   "n": 4
+  },
+  {
+   "pos": 139,
+   "x": -0.133,
+   "y": -0.001,
+   "z": 0.024,
+   "label": "Supports maintaining business rates relief",
+   "topic": "Domestic commerce",
+   "n": 4
+  },
+  {
+   "pos": 140,
+   "x": 0.513,
+   "y": 0.827,
+   "z": 0.109,
+   "label": "Supports nationalisation of the steel industry",
+   "topic": "Employment",
+   "n": 30
+  },
+  {
+   "pos": 141,
+   "x": 0.154,
+   "y": -0.091,
+   "z": 0.038,
+   "label": "Supports breakfast clubs, local funding increases, and affordable social housing.",
+   "topic": "Social welfare",
+   "n": 4
+  },
+  {
+   "pos": 142,
+   "x": 0.013,
+   "y": 0.054,
+   "z": -0.044,
+   "label": "Supports a whistle-to-whistle ban on gambling advertising",
+   "topic": "Health",
+   "n": 4
+  },
+  {
+   "pos": 143,
+   "x": 0.043,
+   "y": 0.059,
+   "z": 0.032,
+   "label": "Supports actively encouraging integration between trains and other transport modes",
+   "topic": "Transport",
+   "n": 4
+  },
+  {
+   "pos": 144,
+   "x": 0.053,
+   "y": 0.148,
+   "z": -0.298,
+   "label": "Supports investment in public transport including bus lanes and cycling infrastructure",
+   "topic": "Transport",
+   "n": 7
+  },
+  {
+   "pos": 145,
+   "x": -0.019,
+   "y": 0.762,
+   "z": 0.707,
+   "label": "Supports agricultural property relief and inheritance tax threshold for farmers",
+   "topic": "Agriculture",
+   "n": 51
+  },
+  {
+   "pos": 146,
+   "x": -0.081,
+   "y": -0.022,
+   "z": 0.037,
+   "label": "Supports protecting agricultural land from conversion to housing and solar panels",
+   "topic": "Agriculture",
+   "n": 4
+  },
+  {
+   "pos": 147,
+   "x": -0.221,
+   "y": -0.06,
+   "z": 0.24,
+   "label": "Supports removing VAT from defibrillators",
+   "topic": "Health",
+   "n": 6
+  },
+  {
+   "pos": 148,
+   "x": 0.107,
+   "y": 0.156,
+   "z": -0.044,
+   "label": "Supports serious action to tackle water pollution and supply issues",
+   "topic": "Environment",
+   "n": 6
+  },
+  {
+   "pos": 149,
+   "x": 0.022,
+   "y": 0.227,
+   "z": 0.18,
+   "label": "Supports rolling out mental health support teams in schools",
+   "topic": "Health",
+   "n": 29
+  },
+  {
+   "pos": 150,
+   "x": -0.034,
+   "y": 0.138,
+   "z": -0.382,
+   "label": "Supports decoupling electricity and gas prices",
+   "topic": "Energy",
+   "n": 7
+  },
+  {
+   "pos": 151,
+   "x": 0.605,
+   "y": -1.537,
+   "z": -1.331,
+   "label": "Supports recognition of a state of Palestine",
+   "topic": "International affairs",
+   "n": 45
+  },
+  {
+   "pos": 152,
+   "x": -0.108,
+   "y": 0.419,
+   "z": -0.444,
+   "label": "Supports continued North Sea oil and gas drilling",
+   "topic": "Energy",
+   "n": 16
+  },
+  {
+   "pos": 153,
+   "x": 0.784,
+   "y": -1.322,
+   "z": -0.587,
+   "label": "Supports unfettered access to humanitarian aid in Gaza",
+   "topic": "Immigration",
+   "n": 21
+  },
+  {
+   "pos": 154,
+   "x": 0.195,
+   "y": 0.219,
+   "z": -0.183,
+   "label": "Supports the Better Buses Bill",
+   "topic": "Transport",
+   "n": 5
+  },
+  {
+   "pos": 155,
+   "x": 0.077,
+   "y": 0.006,
+   "z": 0.09,
+   "label": "Supports reforming the criminal injuries compensation scheme to better serve victims",
+   "topic": "Law and crime",
+   "n": 4
+  },
+  {
+   "pos": 156,
+   "x": -0.178,
+   "y": -0.211,
+   "z": 0.163,
+   "label": "Supports recruiting and retaining magistrates for the justice system",
+   "topic": "Law and crime",
+   "n": 5
+  },
+  {
+   "pos": 157,
+   "x": 0.179,
+   "y": 0.149,
+   "z": -0.081,
+   "label": "Supports the new 10-year, \u00a339-billion social and affordable homes programme",
+   "topic": "Housing",
+   "n": 7
+  },
+  {
+   "pos": 158,
+   "x": 0.229,
+   "y": 0.112,
+   "z": -0.08,
+   "label": "Supports the measures in the Budget and the Bill",
+   "topic": "Employment",
+   "n": 12
+  },
+  {
+   "pos": 159,
+   "x": 0.065,
+   "y": -0.118,
+   "z": 0.116,
+   "label": "Supports the repeal of the Rwanda legislation",
+   "topic": "Immigration",
+   "n": 5
+  },
+  {
+   "pos": 160,
+   "x": 0.102,
+   "y": -0.125,
+   "z": -0.3,
+   "label": "Supports restricting jury trials",
+   "topic": "Law and crime",
+   "n": 7
+  },
+  {
+   "pos": 161,
+   "x": 0.055,
+   "y": 0.047,
+   "z": 0.061,
+   "label": "Supports the establishment of AI growth zones to host AI infrastructure",
+   "topic": "Energy",
+   "n": 4
+  },
+  {
+   "pos": 162,
+   "x": 0.73,
+   "y": -0.346,
+   "z": 1.204,
+   "label": "Supports free breakfast clubs in primary schools",
+   "topic": "Social welfare",
+   "n": 48
+  },
+  {
+   "pos": 163,
+   "x": -0.042,
+   "y": -0.005,
+   "z": 0.031,
+   "label": "Supports arranging a meeting with the public health Minister",
+   "topic": "Health",
+   "n": 3
+  },
+  {
+   "pos": 164,
+   "x": 0.161,
+   "y": 0.002,
+   "z": 0.074,
+   "label": "Supports the Bill to improve cancer diagnosis and ensure justice for patients.",
+   "topic": "Health",
+   "n": 4
+  },
+  {
+   "pos": 165,
+   "x": 0.017,
+   "y": 0.127,
+   "z": 0.204,
+   "label": "Supports the Government's new NHS workforce plan",
+   "topic": "Health",
+   "n": 5
+  },
+  {
+   "pos": 166,
+   "x": 0.105,
+   "y": 0.122,
+   "z": -0.074,
+   "label": "Supports permanently lower business rates for retail, hospitality and leisure sectors",
+   "topic": "Domestic commerce",
+   "n": 7
+  },
+  {
+   "pos": 167,
+   "x": -0.256,
+   "y": -0.283,
+   "z": -0.163,
+   "label": "Supports mandatory solar panels on new build homes",
+   "topic": "Energy",
+   "n": 11
+  },
+  {
+   "pos": 168,
+   "x": -0.005,
+   "y": 0.101,
+   "z": 0.069,
+   "label": "Supports cleaning up the mess left by the previous Conservative Government",
+   "topic": "Defence",
+   "n": 4
+  },
+  {
+   "pos": 169,
+   "x": 0.076,
+   "y": -0.133,
+   "z": 0.051,
+   "label": "Supports building 1.5 million homes",
+   "topic": "Housing",
+   "n": 6
+  },
+  {
+   "pos": 170,
+   "x": 0.232,
+   "y": -0.607,
+   "z": -0.268,
+   "label": "Supports fresh sanctions on Russia",
+   "topic": "International affairs",
+   "n": 10
+  },
+  {
+   "pos": 171,
+   "x": -0.03,
+   "y": 0.055,
+   "z": 0.114,
+   "label": "Supports providing redress and compensation to victims",
+   "topic": "Law and crime",
+   "n": 8
+  },
+  {
+   "pos": 172,
+   "x": 0.078,
+   "y": -0.105,
+   "z": -0.007,
+   "label": "Supports the establishment of a regulator for football",
+   "topic": "Culture",
+   "n": 4
+  },
+  {
+   "pos": 173,
+   "x": -0.031,
+   "y": 0.031,
+   "z": 0.006,
+   "label": "Supports mandatory human rights and environmental corporate due diligence legislation",
+   "topic": "Civil rights",
+   "n": 4
+  },
+  {
+   "pos": 174,
+   "x": -0.191,
+   "y": 0.007,
+   "z": 0.064,
+   "label": "Supports abolishing inheritance tax on family homes",
+   "topic": "Macroeconomics",
+   "n": 4
+  },
+  {
+   "pos": 175,
+   "x": 0.027,
+   "y": -0.077,
+   "z": -0.001,
+   "label": "Supports prioritising medical graduates and aligning training numbers with postgraduate capacity",
+   "topic": "Health",
+   "n": 4
+  },
+  {
+   "pos": 176,
+   "x": 0.039,
+   "y": 0.09,
+   "z": -0.044,
+   "label": "Supports a wealth tax",
+   "topic": "Agriculture",
+   "n": 7
+  },
+  {
+   "pos": 177,
+   "x": 0.056,
+   "y": 0.098,
+   "z": -0.007,
+   "label": "Supports clamping down on illegal discharges of sewage",
+   "topic": "Environment",
+   "n": 4
+  },
+  {
+   "pos": 178,
+   "x": 0.038,
+   "y": -0.331,
+   "z": -0.154,
+   "label": "Supports increasing neighbourhood policing funding and officer presence",
+   "topic": "Law and crime",
+   "n": 6
+  },
+  {
+   "pos": 179,
+   "x": 0.083,
+   "y": -0.191,
+   "z": 0.085,
+   "label": "Supports a youth mobility scheme with the EU",
+   "topic": "Employment",
+   "n": 4
+  },
+  {
+   "pos": 180,
+   "x": 0.06,
+   "y": 0.095,
+   "z": 0.266,
+   "label": "Supports the introduction of domestic abuse protection orders",
+   "topic": "Law and crime",
+   "n": 5
+  },
+  {
+   "pos": 181,
+   "x": 0.165,
+   "y": 0.09,
+   "z": 0.167,
+   "label": "Supports recruiting 8,500 new mental health workers",
+   "topic": "Health",
+   "n": 10
+  },
+  {
+   "pos": 182,
+   "x": -0.186,
+   "y": 0.078,
+   "z": -0.155,
+   "label": "Supports reducing energy costs for businesses and households",
+   "topic": "Energy",
+   "n": 8
+  },
+  {
+   "pos": 183,
+   "x": -0.088,
+   "y": 0.251,
+   "z": -0.179,
+   "label": "Supports rural infrastructure improvements including transport, healthcare, roads, housing, and broadband.",
+   "topic": "Health",
+   "n": 5
+  },
+  {
+   "pos": 184,
+   "x": 0.172,
+   "y": 0.368,
+   "z": 0.05,
+   "label": "Supports establishing an Armed Forces Commissioner",
+   "topic": "Defence",
+   "n": 26
+  },
+  {
+   "pos": 185,
+   "x": -0.048,
+   "y": 0.055,
+   "z": -0.068,
+   "label": "Supports giving chalk streams a new status of protection and supporting their physical restoration.",
+   "topic": "Environment",
+   "n": 4
+  },
+  {
+   "pos": 186,
+   "x": -0.01,
+   "y": -0.131,
+   "z": 0.073,
+   "label": "Supports removing the right to jury trial for certain offences in favour of judge-alone trials",
+   "topic": "Law and crime",
+   "n": 5
+  },
+  {
+   "pos": 187,
+   "x": -0.033,
+   "y": 0.027,
+   "z": -0.039,
+   "label": "Supports building a new lower Thames crossing",
+   "topic": "Transport",
+   "n": 6
+  },
+  {
+   "pos": 188,
+   "x": -0.001,
+   "y": -0.105,
+   "z": -0.018,
+   "label": "Supports investment to redevelop high streets",
+   "topic": "Government operations",
+   "n": 4
+  },
+  {
+   "pos": 189,
+   "x": -0.213,
+   "y": 0.12,
+   "z": 0.137,
+   "label": "Supports improving the palliative care system",
+   "topic": "Health",
+   "n": 19
+  },
+  {
+   "pos": 190,
+   "x": 0.105,
+   "y": 0.087,
+   "z": 0.15,
+   "label": "Supports including gynaecological conditions as impairments in the Equality Act 2010 guidance",
+   "topic": "Employment",
+   "n": 5
+  },
+  {
+   "pos": 191,
+   "x": 0.064,
+   "y": 0.17,
+   "z": -0.269,
+   "label": "Supports blocking bonuses for water executives and monitoring sewage outlets",
+   "topic": "Environment",
+   "n": 5
+  },
+  {
+   "pos": 192,
+   "x": -0.058,
+   "y": -0.279,
+   "z": 0.045,
+   "label": "Supports a \u00a32,000 to \u00a35,000 grant for small businesses hiring apprentices.",
+   "topic": "Employment",
+   "n": 6
+  },
+  {
+   "pos": 193,
+   "x": 0.148,
+   "y": -0.012,
+   "z": 0.711,
+   "label": "Supports the establishment of neighbourhood health centres",
+   "topic": "Health",
+   "n": 13
+  },
+  {
+   "pos": 194,
+   "x": 0.107,
+   "y": -0.042,
+   "z": 0.001,
+   "label": "Supports rail upgrades and investment in the trans-Pennine route",
+   "topic": "Transport",
+   "n": 4
+  },
+  {
+   "pos": 195,
+   "x": 0.088,
+   "y": 0.178,
+   "z": 0.005,
+   "label": "Supports the establishment of the Defence, Security and Resilience Bank",
+   "topic": "Defence",
+   "n": 8
+  },
+  {
+   "pos": 196,
+   "x": 0.159,
+   "y": 0.017,
+   "z": -0.208,
+   "label": "Supports long-term support and funding for youth services",
+   "topic": "Health",
+   "n": 6
+  },
+  {
+   "pos": 197,
+   "x": 0.07,
+   "y": 0.259,
+   "z": -0.157,
+   "label": "Supports increasing the employment allowance from \u00a35,000 to \u00a310,500",
+   "topic": "Employment",
+   "n": 10
+  },
+  {
+   "pos": 198,
+   "x": 0.069,
+   "y": -0.013,
+   "z": 0.041,
+   "label": "Supports a new growth and defence partnership with Europe",
+   "topic": "Defence",
+   "n": 5
+  },
+  {
+   "pos": 199,
+   "x": -0.002,
+   "y": 0.069,
+   "z": 0.093,
+   "label": "Supports investigation of assisted deaths by coroners",
+   "topic": "Health",
+   "n": 4
+  },
+  {
+   "pos": 200,
+   "x": 0.012,
+   "y": 0.312,
+   "z": 0.284,
+   "label": "Supports engaging with SMEs to ensure fair access to government defence contracts",
+   "topic": "Defence",
+   "n": 7
+  },
+  {
+   "pos": 201,
+   "x": 0.076,
+   "y": -0.043,
+   "z": 0.007,
+   "label": "Supports new towns with social infrastructure and development corporation models",
+   "topic": "Housing",
+   "n": 4
+  },
+  {
+   "pos": 202,
+   "x": -0.088,
+   "y": -0.194,
+   "z": -0.125,
+   "label": "Supports open access competition on the railway network",
+   "topic": "Transport",
+   "n": 4
+  },
+  {
+   "pos": 203,
+   "x": 0.068,
+   "y": 0.111,
+   "z": 0.164,
+   "label": "Supports radical reform of the business rates system",
+   "topic": "Macroeconomics",
+   "n": 4
+  },
+  {
+   "pos": 204,
+   "x": -0.151,
+   "y": 0.21,
+   "z": -0.522,
+   "label": "Supports rejoining the European Union",
+   "topic": "Foreign trade",
+   "n": 11
+  },
+  {
+   "pos": 205,
+   "x": 0.111,
+   "y": 0.349,
+   "z": 0.038,
+   "label": "Supports investing in renewables rather than domestic oil and gas",
+   "topic": "Energy",
+   "n": 6
+  },
+  {
+   "pos": 206,
+   "x": 0.129,
+   "y": -0.049,
+   "z": -0.005,
+   "label": "Supports expanding apprenticeships and technical pathways with \u00a3725 million investment",
+   "topic": "Defence",
+   "n": 4
+  },
+  {
+   "pos": 207,
+   "x": 0.121,
+   "y": -0.059,
+   "z": 0.047,
+   "label": "Supports the additional \u00a33.4 billion block grant for Scotland",
+   "topic": "Government operations",
+   "n": 4
+  },
+  {
+   "pos": 208,
+   "x": 0.153,
+   "y": 0.154,
+   "z": 0.866,
+   "label": "Supports reducing diagnosis wait times for endometriosis",
+   "topic": "Health",
+   "n": 29
+  },
+  {
+   "pos": 209,
+   "x": 0.037,
+   "y": 0.148,
+   "z": 0.05,
+   "label": "Supports the \u00a35 billion funding for the farming budget over two years",
+   "topic": "Agriculture",
+   "n": 5
+  },
+  {
+   "pos": 210,
+   "x": -0.006,
+   "y": 0.036,
+   "z": 0.147,
+   "label": "Supports offshore detention and processing centres for illegal migrants",
+   "topic": "Immigration",
+   "n": 6
+  },
+  {
+   "pos": 211,
+   "x": 0.102,
+   "y": 0.018,
+   "z": 0.037,
+   "label": "Supports creating a statutory right to paid time off for fertility treatment",
+   "topic": "Employment",
+   "n": 4
+  },
+  {
+   "pos": 212,
+   "x": 0.099,
+   "y": 0.086,
+   "z": -0.131,
+   "label": "Supports regulating short-term lets to address safety and housing affordability",
+   "topic": "Housing",
+   "n": 7
+  },
+  {
+   "pos": 213,
+   "x": -0.083,
+   "y": -0.281,
+   "z": 0.241,
+   "label": "Supports the triple lock on state pensions",
+   "topic": "Employment",
+   "n": 20
+  },
+  {
+   "pos": 214,
+   "x": 0.046,
+   "y": 0.227,
+   "z": -0.157,
+   "label": "Supports the warm homes plan",
+   "topic": "Energy",
+   "n": 6
+  },
+  {
+   "pos": 215,
+   "x": -0.129,
+   "y": -0.047,
+   "z": 0.133,
+   "label": "Supports a tightened-up ministerial code",
+   "topic": "Government operations",
+   "n": 5
+  },
+  {
+   "pos": 216,
+   "x": 0.066,
+   "y": 0.104,
+   "z": -0.318,
+   "label": "Supports Government compensation for the infected blood community",
+   "topic": "Employment",
+   "n": 5
+  },
+  {
+   "pos": 217,
+   "x": 0.011,
+   "y": 0.053,
+   "z": 0.158,
+   "label": "Supports increased funding for animal welfare charities",
+   "topic": "Agriculture",
+   "n": 4
+  },
+  {
+   "pos": 218,
+   "x": -0.003,
+   "y": 0.049,
+   "z": -0.061,
+   "label": "Supports water companies being statutory consultees on planning applications",
+   "topic": "Environment",
+   "n": 4
+  },
+  {
+   "pos": 219,
+   "x": 0.294,
+   "y": 0.208,
+   "z": -0.148,
+   "label": "Supports transforming the apprenticeship levy into a growth and skills levy",
+   "topic": "Employment",
+   "n": 10
+  },
+  {
+   "pos": 220,
+   "x": 0.043,
+   "y": -0.045,
+   "z": 0.144,
+   "label": "Supports Government support for young people's mental health",
+   "topic": "Health",
+   "n": 7
+  },
+  {
+   "pos": 221,
+   "x": 0.038,
+   "y": 0.116,
+   "z": 0.327,
+   "label": "Supports providing 700,000 additional urgent dental appointments",
+   "topic": "Health",
+   "n": 19
+  },
+  {
+   "pos": 222,
+   "x": 0.224,
+   "y": -0.2,
+   "z": -0.142,
+   "label": "Supports a ceasefire in Gaza, release of hostages, and provision of aid",
+   "topic": "International affairs",
+   "n": 7
+  },
+  {
+   "pos": 223,
+   "x": -0.274,
+   "y": -0.233,
+   "z": 0.072,
+   "label": "Supports raising employer national insurance contributions",
+   "topic": "Employment",
+   "n": 15
+  },
+  {
+   "pos": 224,
+   "x": 0.092,
+   "y": -0.024,
+   "z": -0.044,
+   "label": "Opposes privatisation of the railways",
+   "topic": "Employment",
+   "n": 5
+  },
+  {
+   "pos": 225,
+   "x": -0.231,
+   "y": -0.154,
+   "z": 0.002,
+   "label": "Opposes the Bill and its regulations",
+   "topic": "Employment",
+   "n": 10
+  },
+  {
+   "pos": 226,
+   "x": -0.012,
+   "y": -0.18,
+   "z": -0.126,
+   "label": "Opposes banning international humanitarian agencies from Gaza",
+   "topic": "Health",
+   "n": 4
+  },
+  {
+   "pos": 227,
+   "x": -1.587,
+   "y": -0.594,
+   "z": -0.037,
+   "label": "Opposes the increase in employer national insurance contributions",
+   "topic": "Employment",
+   "n": 49
+  },
+  {
+   "pos": 228,
+   "x": 0.197,
+   "y": 0.05,
+   "z": -0.275,
+   "label": "Opposes cutting support for disabled people and limiting personal independence payment eligibility",
+   "topic": "Social welfare",
+   "n": 20
+  },
+  {
+   "pos": 229,
+   "x": -0.928,
+   "y": -0.437,
+   "z": -0.19,
+   "label": "Opposes higher taxation measures",
+   "topic": "Employment",
+   "n": 18
+  },
+  {
+   "pos": 230,
+   "x": -2.095,
+   "y": -0.509,
+   "z": 0.224,
+   "label": "Opposes the inheritance tax changes affecting family farms",
+   "topic": "Agriculture",
+   "n": 83
+  },
+  {
+   "pos": 231,
+   "x": -0.274,
+   "y": -0.173,
+   "z": 0.084,
+   "label": "Opposes cutting fiscal headroom to \u00a315 billion",
+   "topic": "Employment",
+   "n": 9
+  },
+  {
+   "pos": 232,
+   "x": -0.101,
+   "y": -0.076,
+   "z": -0.304,
+   "label": "Opposes further expansion of oil and gas production in the North Sea",
+   "topic": "Energy",
+   "n": 5
+  },
+  {
+   "pos": 233,
+   "x": -0.005,
+   "y": -0.003,
+   "z": -0.086,
+   "label": "Opposes slashing the aid budget to fund defence investment",
+   "topic": "International affairs",
+   "n": 9
+  },
+  {
+   "pos": 234,
+   "x": -0.316,
+   "y": 0.065,
+   "z": 0.115,
+   "label": "Opposes the Employment Rights Bill",
+   "topic": "Employment",
+   "n": 11
+  },
+  {
+   "pos": 235,
+   "x": -1.076,
+   "y": -1.083,
+   "z": 0.636,
+   "label": "Opposes removing the right to jury trials",
+   "topic": "Law and crime",
+   "n": 47
+  },
+  {
+   "pos": 236,
+   "x": -0.275,
+   "y": 0.041,
+   "z": -0.005,
+   "label": "Opposes current schemes failing to reach young people on ordinary incomes",
+   "topic": "Employment",
+   "n": 4
+  },
+  {
+   "pos": 237,
+   "x": -0.219,
+   "y": 0.027,
+   "z": -0.348,
+   "label": "Opposes the increase in defence spending",
+   "topic": "Defence",
+   "n": 15
+  },
+  {
+   "pos": 238,
+   "x": -0.008,
+   "y": -0.003,
+   "z": -0.149,
+   "label": "Opposes the Government's proposal",
+   "topic": "Employment",
+   "n": 4
+  },
+  {
+   "pos": 239,
+   "x": -0.076,
+   "y": 0.039,
+   "z": -0.097,
+   "label": "Opposes abolishing most level 7 apprenticeships",
+   "topic": "Employment",
+   "n": 5
+  },
+  {
+   "pos": 240,
+   "x": -0.355,
+   "y": -0.146,
+   "z": 0.037,
+   "label": "Opposes the Labour party's Budget proposal to raise national insurance",
+   "topic": "Health",
+   "n": 7
+  },
+  {
+   "pos": 241,
+   "x": 0.09,
+   "y": -0.28,
+   "z": -0.047,
+   "label": "Opposes arms sales to Israel",
+   "topic": "Defence",
+   "n": 7
+  },
+  {
+   "pos": 242,
+   "x": -0.236,
+   "y": -0.067,
+   "z": -0.054,
+   "label": "Opposes the King's Speech proposals for rural agriculture",
+   "topic": "Agriculture",
+   "n": 5
+  },
+  {
+   "pos": 243,
+   "x": -0.198,
+   "y": -0.006,
+   "z": 0.031,
+   "label": "Opposes planned reduction in business rate relief for hospitality",
+   "topic": "Government operations",
+   "n": 5
+  },
+  {
+   "pos": 244,
+   "x": -1.057,
+   "y": 0.077,
+   "z": 0.322,
+   "label": "Opposes imposing VAT on independent school fees",
+   "topic": "Education",
+   "n": 30
+  },
+  {
+   "pos": 245,
+   "x": 0.156,
+   "y": 0.068,
+   "z": 0.098,
+   "label": "Opposes a blanket ban on social media for young people",
+   "topic": "Law and crime",
+   "n": 11
+  },
+  {
+   "pos": 246,
+   "x": -0.263,
+   "y": -0.112,
+   "z": 0.023,
+   "label": "Opposes the Budget measures",
+   "topic": "Agriculture",
+   "n": 7
+  },
+  {
+   "pos": 247,
+   "x": -0.041,
+   "y": 0.093,
+   "z": -0.161,
+   "label": "Opposes nationalisation of the water industry",
+   "topic": "Public lands",
+   "n": 8
+  },
+  {
+   "pos": 248,
+   "x": 0.035,
+   "y": -0.152,
+   "z": 0.006,
+   "label": "Opposes unilateral recognition of Palestinian statehood",
+   "topic": "International affairs",
+   "n": 5
+  },
+  {
+   "pos": 249,
+   "x": 0.178,
+   "y": -0.075,
+   "z": 0.065,
+   "label": "Opposes adding a new clause to the Bill regarding border security transparency",
+   "topic": "Defence",
+   "n": 5
+  },
+  {
+   "pos": 250,
+   "x": -0.028,
+   "y": -0.064,
+   "z": 0.06,
+   "label": "Opposes guaranteed hours for zero-hours contract workers",
+   "topic": "Employment",
+   "n": 5
+  },
+  {
+   "pos": 251,
+   "x": 0.072,
+   "y": -0.014,
+   "z": -0.073,
+   "label": "Opposes the reinterpretation of the Equality Act removing protection for trans women",
+   "topic": "Civil rights",
+   "n": 4
+  },
+  {
+   "pos": 252,
+   "x": -0.281,
+   "y": 0.022,
+   "z": 0.228,
+   "label": "Opposes the Bill allowing assisted dying",
+   "topic": "Health",
+   "n": 59
+  },
+  {
+   "pos": 253,
+   "x": 0.005,
+   "y": 0.008,
+   "z": -0.278,
+   "label": "Opposes reorganisation without the consent of local residents",
+   "topic": "Government operations",
+   "n": 4
+  },
+  {
+   "pos": 254,
+   "x": -0.119,
+   "y": 0.192,
+   "z": -0.103,
+   "label": "Opposes mandatory digital ID scheme",
+   "topic": "Immigration",
+   "n": 6
+  },
+  {
+   "pos": 255,
+   "x": -0.207,
+   "y": -0.031,
+   "z": 0.11,
+   "label": "Opposes the current NHS dental contract system",
+   "topic": "Health",
+   "n": 4
+  },
+  {
+   "pos": 256,
+   "x": -0.173,
+   "y": -0.127,
+   "z": 0.035,
+   "label": "Opposes the proposed solar panel development in the constituency",
+   "topic": "Energy",
+   "n": 5
+  },
+  {
+   "pos": 257,
+   "x": 0.111,
+   "y": -0.121,
+   "z": -0.04,
+   "label": "Opposes banning the operations of UNRWA in Gaza",
+   "topic": "Agriculture",
+   "n": 4
+  },
+  {
+   "pos": 258,
+   "x": -0.413,
+   "y": -0.113,
+   "z": 0.01,
+   "label": "Opposes the Government's net zero policy and carbon taxes",
+   "topic": "Energy",
+   "n": 8
+  },
+  {
+   "pos": 259,
+   "x": -0.161,
+   "y": -0.361,
+   "z": -0.006,
+   "label": "Opposes the two-child benefit cap",
+   "topic": "Social welfare",
+   "n": 13
+  },
+  {
+   "pos": 260,
+   "x": -0.032,
+   "y": 0.01,
+   "z": -0.048,
+   "label": "Opposes the withdrawal of winter fuel payments",
+   "topic": "Employment",
+   "n": 7
+  }
+ ],
+ "mps": [
+  {
+   "member_id": 39,
+   "x": -0.501,
+   "y": -0.056,
+   "z": 0.08,
+   "mp": "Sir John Whittingdale",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 40,
+   "x": -0.014,
+   "y": 0.321,
+   "z": 0.149,
+   "mp": "Sir Bernard Jenkin",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 54,
+   "x": -0.123,
+   "y": 0.106,
+   "z": -0.226,
+   "mp": "Sir Julian Lewis",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 55,
+   "x": 0.14,
+   "y": -0.129,
+   "z": 0.001,
+   "mp": "Sir Desmond Swayne",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 87,
+   "x": -0.127,
+   "y": -0.141,
+   "z": -0.011,
+   "mp": "Sir Roger Gale",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 146,
+   "x": -0.025,
+   "y": 0.1,
+   "z": -0.166,
+   "mp": "Barry Gardiner",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 152,
+   "x": -0.32,
+   "y": -0.002,
+   "z": -0.063,
+   "mp": "Sir Iain Duncan Smith",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 163,
+   "x": 0.242,
+   "y": -0.084,
+   "z": -0.069,
+   "mp": "Sir Stephen Timms",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 165,
+   "x": 0.324,
+   "y": -0.197,
+   "z": 0.063,
+   "mp": "Clive Efford",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 172,
+   "x": 0.09,
+   "y": 0.135,
+   "z": -0.026,
+   "mp": "Ms Diane Abbott",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 177,
+   "x": 0.153,
+   "y": 0.223,
+   "z": -0.017,
+   "mp": "Gareth Thomas",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 178,
+   "x": 0.046,
+   "y": -0.192,
+   "z": 0.085,
+   "mp": "John McDonnell",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 185,
+   "x": -0.104,
+   "y": -0.192,
+   "z": -0.319,
+   "mp": "Jeremy Corbyn",
+   "party": "YP",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 188,
+   "x": -0.074,
+   "y": 0.135,
+   "z": -0.185,
+   "mp": "Ed Davey",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 193,
+   "x": 0.179,
+   "y": -0.124,
+   "z": 0.082,
+   "mp": "Dame Siobhain McDonagh",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 206,
+   "x": 0.265,
+   "y": -0.526,
+   "z": -0.333,
+   "mp": "Mr David Lammy",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 227,
+   "x": 0.135,
+   "y": -0.305,
+   "z": -0.252,
+   "mp": "Andrew George",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 242,
+   "x": -0.204,
+   "y": -0.086,
+   "z": -0.007,
+   "mp": "Sir Christopher Chope",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 249,
+   "x": -0.053,
+   "y": 0.161,
+   "z": 0.091,
+   "mp": "Sir Geoffrey Clifton-Brown",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 345,
+   "x": -0.084,
+   "y": -0.177,
+   "z": -0.038,
+   "mp": "Sir Edward Leigh",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 350,
+   "x": -0.378,
+   "y": -0.285,
+   "z": 0.124,
+   "mp": "Sir John Hayes",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 373,
+   "x": 0.067,
+   "y": -0.007,
+   "z": 0.044,
+   "mp": "David Davis",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 394,
+   "x": 0.386,
+   "y": -0.376,
+   "z": -0.283,
+   "mp": "Mr Clive Betts",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 400,
+   "x": 0.028,
+   "y": -0.012,
+   "z": -0.05,
+   "mp": "John Healey",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 410,
+   "x": -0.16,
+   "y": -0.163,
+   "z": 0.127,
+   "mp": "Jon Trickett",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 413,
+   "x": 0.095,
+   "y": 0.267,
+   "z": 0.051,
+   "mp": "Hilary Benn",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 415,
+   "x": -0.005,
+   "y": 0.053,
+   "z": 0.011,
+   "mp": "Fabian Hamilton",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 420,
+   "x": -0.046,
+   "y": 0.014,
+   "z": -0.045,
+   "mp": "Yvette Cooper",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 429,
+   "x": 0.142,
+   "y": -0.094,
+   "z": 0.137,
+   "mp": "Derek Twigg",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 449,
+   "x": -0.086,
+   "y": 0.062,
+   "z": 0.016,
+   "mp": "Graham Stringer",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 473,
+   "x": 0.042,
+   "y": 0.126,
+   "z": -0.186,
+   "mp": "Sir Mark Hendrick",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 483,
+   "x": 0.047,
+   "y": 0.207,
+   "z": 0.023,
+   "mp": "Maria Eagle",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 491,
+   "x": 0.101,
+   "y": 0.079,
+   "z": 0.318,
+   "mp": "Dame Angela Eagle",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 529,
+   "x": -0.001,
+   "y": -0.145,
+   "z": -0.1,
+   "mp": "Sir Alan Campbell",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 632,
+   "x": 0.017,
+   "y": 0.251,
+   "z": -0.382,
+   "mp": "Mr Douglas Alexander",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 1171,
+   "x": 0.255,
+   "y": 0.231,
+   "z": 0.142,
+   "mp": "Liam Byrne",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 1211,
+   "x": 0.182,
+   "y": -0.334,
+   "z": -0.205,
+   "mp": "Sir Andrew Mitchell",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 1409,
+   "x": 0.061,
+   "y": 0.09,
+   "z": -0.003,
+   "mp": "Mr Gregory Campbell",
+   "party": "DUP",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 1427,
+   "x": -0.034,
+   "y": 0.177,
+   "z": -0.133,
+   "mp": "Andy Burnham",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 1440,
+   "x": 0.255,
+   "y": -0.158,
+   "z": 0.12,
+   "mp": "Pete Wishart",
+   "party": "SNP",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 1442,
+   "x": -0.107,
+   "y": 0.228,
+   "z": -0.253,
+   "mp": "Mr Alistair Carmichael",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 1444,
+   "x": 0.03,
+   "y": -0.091,
+   "z": -0.234,
+   "mp": "Mr Mark Francois",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 1446,
+   "x": 0.08,
+   "y": -0.143,
+   "z": 0.042,
+   "mp": "Chris Bryant",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 1447,
+   "x": -0.236,
+   "y": -0.108,
+   "z": 0.022,
+   "mp": "Andrew Rosindell",
+   "party": "RUK",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 1466,
+   "x": -0.306,
+   "y": -0.013,
+   "z": 0.162,
+   "mp": "Dr Andrew Murrison",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 1482,
+   "x": -0.596,
+   "y": -0.025,
+   "z": 0.025,
+   "mp": "Graham Stuart",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 1489,
+   "x": 0.12,
+   "y": -0.089,
+   "z": 0.15,
+   "mp": "Dawn Butler",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 1491,
+   "x": -0.028,
+   "y": 0.267,
+   "z": -0.38,
+   "mp": "Kerry McCarthy",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 1506,
+   "x": -0.058,
+   "y": 0.248,
+   "z": 0.021,
+   "mp": "Andrew Gwynne",
+   "party": "Ind",
+   "role": "minister"
+  },
+  {
+   "member_id": 1508,
+   "x": -0.391,
+   "y": -0.233,
+   "z": 0.262,
+   "mp": "Sir Geoffrey Cox",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 1510,
+   "x": 0.068,
+   "y": 0.038,
+   "z": -0.468,
+   "mp": "Ed Miliband",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 1512,
+   "x": -0.396,
+   "y": 0.069,
+   "z": -0.016,
+   "mp": "David Mundell",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 1516,
+   "x": 0.13,
+   "y": -0.283,
+   "z": -0.364,
+   "mp": "Andy Slaughter",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 1521,
+   "x": 0.137,
+   "y": 0.024,
+   "z": 0.403,
+   "mp": "Mrs Sharon Hodgson",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 1524,
+   "x": -0.043,
+   "y": 0.158,
+   "z": -0.072,
+   "mp": "Dame Meg Hillier",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 1533,
+   "x": 0.119,
+   "y": -0.093,
+   "z": 0.015,
+   "mp": "Dame Diana Johnson",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 1536,
+   "x": -0.035,
+   "y": -0.051,
+   "z": -0.173,
+   "mp": "Emily Thornberry",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 1541,
+   "x": 0.031,
+   "y": 0.038,
+   "z": 0.244,
+   "mp": "Dame Nia Griffith",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 1548,
+   "x": 0.147,
+   "y": 0.183,
+   "z": 0.011,
+   "mp": "Jessica Morden",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 1560,
+   "x": 0.177,
+   "y": -0.223,
+   "z": -0.223,
+   "mp": "Sir Jeremy Wright",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 1572,
+   "x": -0.393,
+   "y": -0.121,
+   "z": -0.065,
+   "mp": "Sir Jeremy Hunt",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 1576,
+   "x": 0.082,
+   "y": -0.31,
+   "z": -0.269,
+   "mp": "Mark Pritchard",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 1579,
+   "x": 0.057,
+   "y": 0.155,
+   "z": -0.044,
+   "mp": "Mary Creagh",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 1587,
+   "x": 0.152,
+   "y": -0.094,
+   "z": 0.215,
+   "mp": "Pat McFadden",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 1591,
+   "x": -0.038,
+   "y": 0.076,
+   "z": 0.021,
+   "mp": "Tim Farron",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 1593,
+   "x": -0.562,
+   "y": -0.182,
+   "z": -0.024,
+   "mp": "Sammy Wilson",
+   "party": "DUP",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 3909,
+   "x": 0.06,
+   "y": -0.106,
+   "z": 0.044,
+   "mp": "Pamela Nash",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 3912,
+   "x": -0.54,
+   "y": -0.238,
+   "z": -0.153,
+   "mp": "Richard Fuller",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 3914,
+   "x": -0.11,
+   "y": -0.081,
+   "z": 0.253,
+   "mp": "Shabana Mahmood",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 3924,
+   "x": -0.218,
+   "y": 0.141,
+   "z": 0.109,
+   "mp": "Yasmin Qureshi",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 3928,
+   "x": -0.031,
+   "y": -0.024,
+   "z": 0.002,
+   "mp": "Nick Smith",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 3935,
+   "x": -0.408,
+   "y": -0.213,
+   "z": 0.056,
+   "mp": "Sir Mel Stride",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 3948,
+   "x": -0.04,
+   "y": -0.032,
+   "z": 0.009,
+   "mp": "Rebecca Harris",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 3952,
+   "x": 0.275,
+   "y": 0.258,
+   "z": 0.082,
+   "mp": "Mr Toby Perkins",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 3957,
+   "x": 0.185,
+   "y": 0.239,
+   "z": 0.126,
+   "mp": "Martin Vickers",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 3966,
+   "x": -0.134,
+   "y": 0.098,
+   "z": -0.08,
+   "mp": "Ian Murray",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 3969,
+   "x": 0.045,
+   "y": 0.055,
+   "z": 0.176,
+   "mp": "Damian Hinds",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 3973,
+   "x": 0.118,
+   "y": 0.265,
+   "z": -0.185,
+   "mp": "Grahame Morris",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 3991,
+   "x": -0.06,
+   "y": -0.069,
+   "z": 0.043,
+   "mp": "Jesse Norman",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 3997,
+   "x": -0.204,
+   "y": 0.05,
+   "z": 0.117,
+   "mp": "Sir Alec Shelbrooke",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4005,
+   "x": 0.011,
+   "y": 0.003,
+   "z": -0.038,
+   "mp": "Bob Blackman",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4008,
+   "x": -0.106,
+   "y": -0.211,
+   "z": 0.062,
+   "mp": "Dame Caroline Dinenage",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4018,
+   "x": -0.352,
+   "y": -0.3,
+   "z": 0.226,
+   "mp": "Helen Grant",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4020,
+   "x": -0.255,
+   "y": 0.124,
+   "z": -0.216,
+   "mp": "George Freeman",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4026,
+   "x": -0.039,
+   "y": -0.136,
+   "z": -0.032,
+   "mp": "Liz Kendall",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4029,
+   "x": 0.204,
+   "y": 0.16,
+   "z": -0.063,
+   "mp": "Lilian Greenwood",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4030,
+   "x": -0.167,
+   "y": -0.181,
+   "z": 0.21,
+   "mp": "Karl Turner",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4031,
+   "x": 0.017,
+   "y": -0.024,
+   "z": 0.164,
+   "mp": "Rachel Reeves",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4032,
+   "x": 0.02,
+   "y": 0.06,
+   "z": 0.246,
+   "mp": "Stuart Andrew",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4038,
+   "x": 0.137,
+   "y": 0.139,
+   "z": 0.017,
+   "mp": "Heidi Alexander",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4040,
+   "x": -0.029,
+   "y": -0.014,
+   "z": -0.067,
+   "mp": "Chris Evans",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4046,
+   "x": 0.351,
+   "y": -0.201,
+   "z": 0.163,
+   "mp": "Bridget Phillipson",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4051,
+   "x": -0.259,
+   "y": 0.018,
+   "z": -0.008,
+   "mp": "John Glen",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4056,
+   "x": 0.008,
+   "y": -0.01,
+   "z": -0.069,
+   "mp": "Sir Nicholas Dakin",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4061,
+   "x": -0.046,
+   "y": 0.34,
+   "z": -0.526,
+   "mp": "Bill Esterson",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4066,
+   "x": -0.077,
+   "y": 0.081,
+   "z": -0.139,
+   "mp": "Priti Patel",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4074,
+   "x": -0.571,
+   "y": -0.257,
+   "z": -0.011,
+   "mp": "Mark Garnier",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4076,
+   "x": 0.124,
+   "y": 0.119,
+   "z": -0.084,
+   "mp": "Valerie Vaz",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4077,
+   "x": 0.044,
+   "y": 0.287,
+   "z": -0.177,
+   "mp": "Emma Reynolds",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4082,
+   "x": 0.081,
+   "y": 0.07,
+   "z": -0.05,
+   "mp": "Lisa Nandy",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4083,
+   "x": 0.071,
+   "y": -0.101,
+   "z": 0.269,
+   "mp": "Alison McGovern",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4084,
+   "x": -0.549,
+   "y": -0.215,
+   "z": 0.16,
+   "mp": "Esther McVey",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4088,
+   "x": 0.14,
+   "y": -0.318,
+   "z": -0.033,
+   "mp": "Ms Stella Creasy",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4089,
+   "x": -0.026,
+   "y": 0.146,
+   "z": -0.23,
+   "mp": "Tessa Munt",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4095,
+   "x": -0.267,
+   "y": 0.027,
+   "z": -0.106,
+   "mp": "Steve Barclay",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4107,
+   "x": -0.389,
+   "y": -0.016,
+   "z": -0.098,
+   "mp": "Dame Harriett Baldwin",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4108,
+   "x": -0.194,
+   "y": -0.063,
+   "z": 0.135,
+   "mp": "Sir Gavin Williamson",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4110,
+   "x": -0.117,
+   "y": -0.029,
+   "z": 0.038,
+   "mp": "Dame Karen Bradley",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4118,
+   "x": -0.074,
+   "y": 0.258,
+   "z": -0.288,
+   "mp": "Sir Julian Smith",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4119,
+   "x": 0.232,
+   "y": 0.553,
+   "z": 0.183,
+   "mp": "Jonathan Reynolds",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4124,
+   "x": -0.177,
+   "y": 0.083,
+   "z": 0.099,
+   "mp": "Dame Chi Onwurah",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4125,
+   "x": 0.231,
+   "y": -0.076,
+   "z": -0.024,
+   "mp": "Catherine McKinnell",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4126,
+   "x": -0.076,
+   "y": 0.051,
+   "z": -0.096,
+   "mp": "Mary Glindon",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4131,
+   "x": -0.121,
+   "y": -0.006,
+   "z": 0.322,
+   "mp": "Jim Shannon",
+   "party": "DUP",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4138,
+   "x": 0.136,
+   "y": 0.014,
+   "z": -0.071,
+   "mp": "Rushanara Ali",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4139,
+   "x": -0.115,
+   "y": -0.112,
+   "z": -0.024,
+   "mp": "Ian Lavery",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4212,
+   "x": -0.104,
+   "y": 0.082,
+   "z": -0.029,
+   "mp": "Debbie Abrahams",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4243,
+   "x": -0.024,
+   "y": 0.078,
+   "z": 0.066,
+   "mp": "Dan Jarvis",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4253,
+   "x": 0.112,
+   "y": -0.056,
+   "z": 0.499,
+   "mp": "Seema Malhotra",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4263,
+   "x": 0.322,
+   "y": -0.081,
+   "z": 0.225,
+   "mp": "Lucy Powell",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4264,
+   "x": 0.107,
+   "y": -0.024,
+   "z": 0.191,
+   "mp": "Stephen Doughty",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4267,
+   "x": 0.154,
+   "y": 0.116,
+   "z": -0.109,
+   "mp": "Sarah Champion",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4268,
+   "x": 0.054,
+   "y": 0.304,
+   "z": -0.073,
+   "mp": "Steve Reed",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4269,
+   "x": 0.274,
+   "y": 0.156,
+   "z": 0.072,
+   "mp": "Andy McDonald",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4277,
+   "x": 0.161,
+   "y": -0.087,
+   "z": 0.133,
+   "mp": "Emma Lewell",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4316,
+   "x": 0.226,
+   "y": -0.108,
+   "z": -0.055,
+   "mp": "Mike Kane",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4320,
+   "x": -0.268,
+   "y": -0.234,
+   "z": 0.12,
+   "mp": "Robert Jenrick",
+   "party": "RUK",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4356,
+   "x": 0.299,
+   "y": -0.154,
+   "z": 0.115,
+   "mp": "Angela Rayner",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4357,
+   "x": 0.114,
+   "y": -0.056,
+   "z": -0.099,
+   "mp": "Kirsty Blackman",
+   "party": "SNP",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4358,
+   "x": -0.097,
+   "y": -0.231,
+   "z": -0.028,
+   "mp": "Wendy Morton",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4359,
+   "x": 0.096,
+   "y": 0.032,
+   "z": 0.183,
+   "mp": "Stephen Kinnock",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4360,
+   "x": -0.267,
+   "y": -0.119,
+   "z": 0.062,
+   "mp": "Gavin Robinson",
+   "party": "DUP",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4362,
+   "x": 0.062,
+   "y": 0.013,
+   "z": 0.323,
+   "mp": "Edward Argar",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4366,
+   "x": -0.222,
+   "y": -0.118,
+   "z": 0.093,
+   "mp": "Sir James Cleverly",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4368,
+   "x": 0.042,
+   "y": 0.12,
+   "z": -0.262,
+   "mp": "Neil Coyle",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4370,
+   "x": -0.029,
+   "y": -0.053,
+   "z": 0.266,
+   "mp": "Jess Phillips",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4371,
+   "x": 0.201,
+   "y": -0.375,
+   "z": -0.087,
+   "mp": "Brendan O'Hara",
+   "party": "SNP",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4382,
+   "x": 0.093,
+   "y": 0.141,
+   "z": 0.289,
+   "mp": "Daniel Zeichner",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4384,
+   "x": -0.312,
+   "y": -0.23,
+   "z": 0.114,
+   "mp": "Mike Wood",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4389,
+   "x": 0.207,
+   "y": 0.048,
+   "z": -0.12,
+   "mp": "Ruth Cadbury",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4394,
+   "x": 0.12,
+   "y": -0.148,
+   "z": 0.104,
+   "mp": "Imran Hussain",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4396,
+   "x": 0.144,
+   "y": 0.172,
+   "z": -0.186,
+   "mp": "Rebecca Long Bailey",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4399,
+   "x": -0.287,
+   "y": -0.051,
+   "z": -0.018,
+   "mp": "Victoria Atkins",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4403,
+   "x": 0.067,
+   "y": -0.337,
+   "z": -0.233,
+   "mp": "Chris Law",
+   "party": "SNP",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4407,
+   "x": -0.498,
+   "y": -0.059,
+   "z": 0.093,
+   "mp": "Nigel Huddleston",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4409,
+   "x": 0.068,
+   "y": -0.082,
+   "z": -0.06,
+   "mp": "Naz Shah",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4418,
+   "x": 0.245,
+   "y": 0.095,
+   "z": 0.274,
+   "mp": "Justin Madders",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4425,
+   "x": 0.123,
+   "y": 0.201,
+   "z": 0.107,
+   "mp": "Jo Stevens",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4434,
+   "x": -0.109,
+   "y": -0.223,
+   "z": -0.098,
+   "mp": "Stephen Gethins",
+   "party": "SNP",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4436,
+   "x": 0.089,
+   "y": -0.08,
+   "z": -0.019,
+   "mp": "Cat Smith",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4441,
+   "x": -0.403,
+   "y": -0.163,
+   "z": -0.027,
+   "mp": "Sir Oliver Dowden",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4444,
+   "x": 0.15,
+   "y": -0.062,
+   "z": 0.163,
+   "mp": "Karin Smyth",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4449,
+   "x": 0.142,
+   "y": -0.129,
+   "z": 0.045,
+   "mp": "Anna Turley",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4456,
+   "x": -0.084,
+   "y": -0.085,
+   "z": -0.006,
+   "mp": "Jeff Smith",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4457,
+   "x": -0.081,
+   "y": 0.103,
+   "z": -0.072,
+   "mp": "Ms Marie Rimmer",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4462,
+   "x": -0.225,
+   "y": 0.073,
+   "z": -0.008,
+   "mp": "Tom Tugendhat",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4464,
+   "x": 0.108,
+   "y": 0.182,
+   "z": 0.082,
+   "mp": "Melanie Onn",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4471,
+   "x": -0.075,
+   "y": 0.12,
+   "z": -0.177,
+   "mp": "Rachael Maskell",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4473,
+   "x": 0.17,
+   "y": 0.275,
+   "z": -0.258,
+   "mp": "Louise Haigh",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4474,
+   "x": -0.13,
+   "y": -0.029,
+   "z": 0.034,
+   "mp": "Kevin Hollinrake",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4475,
+   "x": -0.02,
+   "y": -0.178,
+   "z": -0.035,
+   "mp": "Suella Braverman",
+   "party": "RUK",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4479,
+   "x": 0.038,
+   "y": 0.023,
+   "z": 0.057,
+   "mp": "Nick Thomas-Symonds",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4480,
+   "x": 0.09,
+   "y": 0.028,
+   "z": -0.002,
+   "mp": "Carolyn Harris",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4483,
+   "x": -0.15,
+   "y": 0.004,
+   "z": -0.066,
+   "mp": "Rishi Sunak",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4484,
+   "x": -0.41,
+   "y": -0.187,
+   "z": -0.055,
+   "mp": "Alan Mak",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4491,
+   "x": -0.044,
+   "y": -0.011,
+   "z": 0.04,
+   "mp": "Vicky Foxcroft",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4493,
+   "x": 0.206,
+   "y": 0.09,
+   "z": -0.082,
+   "mp": "Richard Burgon",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4494,
+   "x": -0.226,
+   "y": 0.046,
+   "z": 0.086,
+   "mp": "Simon Hoare",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4495,
+   "x": -0.08,
+   "y": -0.321,
+   "z": -0.303,
+   "mp": "Kit Malthouse",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4500,
+   "x": -0.045,
+   "y": 0.265,
+   "z": -0.417,
+   "mp": "Clive Lewis",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4501,
+   "x": 0.008,
+   "y": 0.031,
+   "z": -0.009,
+   "mp": "Gerald Jones",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4503,
+   "x": 0.051,
+   "y": -0.046,
+   "z": 0.083,
+   "mp": "Chris Philp",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4504,
+   "x": 0.032,
+   "y": 0.073,
+   "z": 0.268,
+   "mp": "Wes Streeting",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4505,
+   "x": 0.191,
+   "y": 0.182,
+   "z": 0.071,
+   "mp": "Peter Kyle",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4510,
+   "x": 0.274,
+   "y": -0.346,
+   "z": -0.183,
+   "mp": "Helen Hayes",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4511,
+   "x": -0.119,
+   "y": -0.002,
+   "z": -0.034,
+   "mp": "Dr Rupa Huq",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4513,
+   "x": -0.061,
+   "y": 0.007,
+   "z": 0.099,
+   "mp": "Mims Davies",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4514,
+   "x": 0.089,
+   "y": 0.053,
+   "z": 0.281,
+   "mp": "Sir Keir Starmer",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4515,
+   "x": 0.312,
+   "y": -0.392,
+   "z": 0.066,
+   "mp": "Kate Osamor",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4518,
+   "x": -0.007,
+   "y": 0.012,
+   "z": 0.047,
+   "mp": "Tulip Siddiq",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4519,
+   "x": -0.273,
+   "y": 0.035,
+   "z": -0.111,
+   "mp": "James Cartlidge",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4520,
+   "x": 0.162,
+   "y": -0.167,
+   "z": -0.103,
+   "mp": "Matthew Pennycook",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4521,
+   "x": -0.113,
+   "y": -0.136,
+   "z": 0.113,
+   "mp": "Liz Saville Roberts",
+   "party": "PC",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4523,
+   "x": 0.367,
+   "y": -0.492,
+   "z": 0.077,
+   "mp": "Catherine West",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4527,
+   "x": -0.038,
+   "y": -0.035,
+   "z": -0.011,
+   "mp": "Helen Whately",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4569,
+   "x": 0.219,
+   "y": -0.198,
+   "z": 0.069,
+   "mp": "Jim McMahon",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4571,
+   "x": 0.121,
+   "y": 0.146,
+   "z": 0.366,
+   "mp": "Gill Furniss",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4573,
+   "x": 0.041,
+   "y": -0.223,
+   "z": 0.02,
+   "mp": "Dr Rosena Allin-Khan",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4591,
+   "x": -0.144,
+   "y": -0.014,
+   "z": 0.161,
+   "mp": "Sarah Olney",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4592,
+   "x": -0.126,
+   "y": 0.087,
+   "z": 0.11,
+   "mp": "Dr Caroline Johnson",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4595,
+   "x": -0.045,
+   "y": 0.046,
+   "z": -0.23,
+   "mp": "Gareth Snell",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4597,
+   "x": -0.251,
+   "y": -0.103,
+   "z": -0.124,
+   "mp": "Mrs Kemi Badenoch",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4598,
+   "x": 0.104,
+   "y": 0.107,
+   "z": 0.157,
+   "mp": "Mohammad Yasin",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4601,
+   "x": -0.278,
+   "y": 0.023,
+   "z": -0.074,
+   "mp": "Andrew Bowie",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4602,
+   "x": -0.07,
+   "y": 0.146,
+   "z": 0.009,
+   "mp": "Wera Hobhouse",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4603,
+   "x": 0.087,
+   "y": 0.01,
+   "z": -0.069,
+   "mp": "Preet Kaur Gill",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4607,
+   "x": 0.081,
+   "y": -0.021,
+   "z": 0.153,
+   "mp": "Stephanie Peacock",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4608,
+   "x": -0.257,
+   "y": -0.081,
+   "z": 0.05,
+   "mp": "John Lamont",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4610,
+   "x": -0.019,
+   "y": 0.06,
+   "z": 0.081,
+   "mp": "Bambos Charalambous",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4612,
+   "x": -0.066,
+   "y": 0.027,
+   "z": 0.143,
+   "mp": "Jamie Stone",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4613,
+   "x": -0.121,
+   "y": 0.096,
+   "z": -0.118,
+   "mp": "Alex Burghart",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4616,
+   "x": 0.093,
+   "y": 0.031,
+   "z": -0.255,
+   "mp": "Rosie Duffield",
+   "party": "Ind",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4617,
+   "x": -0.015,
+   "y": 0.113,
+   "z": 0.017,
+   "mp": "Matt Western",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4618,
+   "x": -0.031,
+   "y": 0.069,
+   "z": -0.236,
+   "mp": "Liz Twist",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4620,
+   "x": 0.098,
+   "y": -0.464,
+   "z": 0.261,
+   "mp": "Ellie Reeves",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4621,
+   "x": 0.019,
+   "y": -0.075,
+   "z": -0.012,
+   "mp": "Darren Jones",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4623,
+   "x": -0.012,
+   "y": -0.135,
+   "z": -0.174,
+   "mp": "Tonia Antoniazzi",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4630,
+   "x": -0.526,
+   "y": -0.225,
+   "z": -0.029,
+   "mp": "Ben Lake",
+   "party": "PC",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4631,
+   "x": 0.116,
+   "y": 0.533,
+   "z": -0.176,
+   "mp": "Sarah Jones",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4632,
+   "x": 0.082,
+   "y": -0.197,
+   "z": -0.048,
+   "mp": "Anna McMorrin",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4634,
+   "x": 0.09,
+   "y": -0.225,
+   "z": -0.301,
+   "mp": "Christine Jardine",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4637,
+   "x": -0.14,
+   "y": 0.13,
+   "z": 0.128,
+   "mp": "Mr James Frith",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4638,
+   "x": 0.11,
+   "y": 0.136,
+   "z": 0.119,
+   "mp": "Mr Tanmanjeet Singh Dhesi",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4641,
+   "x": 0.095,
+   "y": 0.042,
+   "z": 0.041,
+   "mp": "Alex Norris",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4645,
+   "x": 0.023,
+   "y": 0.125,
+   "z": -0.328,
+   "mp": "Emma Hardy",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4647,
+   "x": -0.066,
+   "y": 0.103,
+   "z": 0.05,
+   "mp": "Julia Lopez",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4651,
+   "x": 0.175,
+   "y": -0.073,
+   "z": 0.209,
+   "mp": "Dan Carden",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4653,
+   "x": 0.132,
+   "y": -0.036,
+   "z": 0.262,
+   "mp": "Stephen Morgan",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4654,
+   "x": 0.114,
+   "y": 0.067,
+   "z": -0.12,
+   "mp": "Matt Rodda",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4656,
+   "x": 0.311,
+   "y": -0.579,
+   "z": -0.302,
+   "mp": "Layla Moran",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4657,
+   "x": 0.179,
+   "y": -0.296,
+   "z": -0.242,
+   "mp": "Anneliese Dodds",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4658,
+   "x": -0.044,
+   "y": 0.095,
+   "z": -0.118,
+   "mp": "Alex Sobel",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4667,
+   "x": 0.261,
+   "y": 0.094,
+   "z": 0.208,
+   "mp": "Mike Amesbury",
+   "party": "Ind",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4671,
+   "x": 0.355,
+   "y": -0.55,
+   "z": -0.352,
+   "mp": "Afzal Khan",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4673,
+   "x": 0.21,
+   "y": -0.029,
+   "z": 0.088,
+   "mp": "Jo Platt",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4676,
+   "x": 0.102,
+   "y": -0.0,
+   "z": -0.049,
+   "mp": "Marsha De Cordova",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4679,
+   "x": -0.098,
+   "y": -0.1,
+   "z": 0.202,
+   "mp": "Neil O'Brien",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4682,
+   "x": 0.076,
+   "y": 0.34,
+   "z": 0.051,
+   "mp": "Luke Pollard",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4698,
+   "x": 0.212,
+   "y": -0.04,
+   "z": 0.336,
+   "mp": "Janet Daby",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4716,
+   "x": 0.186,
+   "y": 0.347,
+   "z": 0.118,
+   "mp": "Ruth Jones",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4735,
+   "x": 0.03,
+   "y": 0.064,
+   "z": -0.196,
+   "mp": "Stephen Flynn",
+   "party": "SNP",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4736,
+   "x": -0.38,
+   "y": -0.002,
+   "z": -0.283,
+   "mp": "Dave Doogan",
+   "party": "SNP",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4739,
+   "x": -0.25,
+   "y": 0.048,
+   "z": -0.138,
+   "mp": "Jerome Mayhew",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4742,
+   "x": -0.41,
+   "y": 0.086,
+   "z": -0.04,
+   "mp": "Stuart Anderson",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4743,
+   "x": -0.312,
+   "y": -0.119,
+   "z": 0.04,
+   "mp": "Lee Anderson",
+   "party": "RUK",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4747,
+   "x": 0.362,
+   "y": -0.656,
+   "z": -0.493,
+   "mp": "Tahir Ali",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4753,
+   "x": 0.045,
+   "y": 0.167,
+   "z": 0.059,
+   "mp": "Mary Kelly Foy",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4759,
+   "x": -0.051,
+   "y": 0.016,
+   "z": 0.273,
+   "mp": "Joy Morrissey",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4765,
+   "x": -0.197,
+   "y": -0.062,
+   "z": 0.162,
+   "mp": "Wendy Chamberlain",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4769,
+   "x": -0.182,
+   "y": -0.182,
+   "z": -0.019,
+   "mp": "Daisy Cooper",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4776,
+   "x": -0.271,
+   "y": 0.074,
+   "z": 0.16,
+   "mp": "Munira Wilson",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4777,
+   "x": 0.321,
+   "y": -0.167,
+   "z": 0.187,
+   "mp": "Sarah Owen",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4778,
+   "x": -0.403,
+   "y": -0.058,
+   "z": 0.081,
+   "mp": "Greg Smith",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4779,
+   "x": -0.006,
+   "y": 0.029,
+   "z": -0.046,
+   "mp": "Taiwo Owatemi",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4780,
+   "x": -0.273,
+   "y": -0.111,
+   "z": 0.026,
+   "mp": "Laura Trott",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4781,
+   "x": -0.102,
+   "y": -0.038,
+   "z": -0.034,
+   "mp": "Dr Luke Evans",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4783,
+   "x": 0.049,
+   "y": 0.17,
+   "z": -0.257,
+   "mp": "Kate Osborne",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4785,
+   "x": -0.233,
+   "y": -0.045,
+   "z": 0.182,
+   "mp": "Dr Ben Spencer",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4786,
+   "x": 0.086,
+   "y": -0.101,
+   "z": -0.064,
+   "mp": "Zarah Sultana",
+   "party": "YP",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4787,
+   "x": -0.329,
+   "y": 0.254,
+   "z": -0.178,
+   "mp": "James Wild",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4788,
+   "x": -0.014,
+   "y": 0.012,
+   "z": 0.003,
+   "mp": "Fleur Anderson",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4790,
+   "x": -0.005,
+   "y": -0.442,
+   "z": -0.088,
+   "mp": "Apsana Begum",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4797,
+   "x": -0.11,
+   "y": 0.018,
+   "z": 0.346,
+   "mp": "James Murray",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4798,
+   "x": -0.135,
+   "y": -0.073,
+   "z": -0.085,
+   "mp": "Gareth Bacon",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4799,
+   "x": 0.025,
+   "y": -0.059,
+   "z": 0.177,
+   "mp": "Charlotte Nichols",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4803,
+   "x": -0.019,
+   "y": -0.051,
+   "z": 0.118,
+   "mp": "Paul Holmes",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4804,
+   "x": -0.152,
+   "y": 0.21,
+   "z": -0.164,
+   "mp": "Mr Gagan Mohindra",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4805,
+   "x": -0.368,
+   "y": -0.167,
+   "z": 0.052,
+   "mp": "Alicia Kearns",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4806,
+   "x": -0.194,
+   "y": -0.002,
+   "z": -0.122,
+   "mp": "Claire Coutinho",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4811,
+   "x": 0.053,
+   "y": 0.131,
+   "z": -0.267,
+   "mp": "Navendu Mishra",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4813,
+   "x": -0.182,
+   "y": 0.076,
+   "z": -0.041,
+   "mp": "Mr Richard Holden",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4818,
+   "x": -0.481,
+   "y": -0.086,
+   "z": 0.093,
+   "mp": "Saqib Bhatti",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4820,
+   "x": 0.272,
+   "y": -0.121,
+   "z": 0.32,
+   "mp": "Ms Abena Oppong-Asare",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4822,
+   "x": 0.088,
+   "y": 0.037,
+   "z": 0.078,
+   "mp": "Feryal Clark",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4824,
+   "x": 0.081,
+   "y": -0.333,
+   "z": 0.265,
+   "mp": "Kim Johnson",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4827,
+   "x": 0.142,
+   "y": -0.252,
+   "z": -0.141,
+   "mp": "Claire Hanna",
+   "party": "SDLP",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4828,
+   "x": 0.291,
+   "y": -0.503,
+   "z": -0.272,
+   "mp": "Paula Barker",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4831,
+   "x": 0.279,
+   "y": -0.132,
+   "z": 0.131,
+   "mp": "Ian Byrne",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4844,
+   "x": -0.016,
+   "y": -0.03,
+   "z": -0.092,
+   "mp": "Matt Vickers",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4849,
+   "x": 0.072,
+   "y": 0.008,
+   "z": 0.141,
+   "mp": "Alex Davies-Jones",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4850,
+   "x": -0.279,
+   "y": -0.293,
+   "z": -0.245,
+   "mp": "Gareth Davies",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4853,
+   "x": -0.408,
+   "y": -0.006,
+   "z": 0.092,
+   "mp": "Dr Neil Hudson",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4857,
+   "x": -0.373,
+   "y": -0.124,
+   "z": 0.176,
+   "mp": "Carla Lockhart",
+   "party": "Ind",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4858,
+   "x": 0.009,
+   "y": -0.092,
+   "z": -0.053,
+   "mp": "Danny Kruger",
+   "party": "RUK",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4860,
+   "x": -0.138,
+   "y": -0.313,
+   "z": -0.007,
+   "mp": "Dr Kieran Mullan",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4861,
+   "x": -0.205,
+   "y": 0.034,
+   "z": -0.23,
+   "mp": "Robbie Moore",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4864,
+   "x": 0.181,
+   "y": -0.063,
+   "z": 0.184,
+   "mp": "Olivia Blake",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4869,
+   "x": 0.249,
+   "y": -0.221,
+   "z": -0.02,
+   "mp": "Nadia Whittome",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4870,
+   "x": 0.135,
+   "y": -0.163,
+   "z": 0.004,
+   "mp": "Florence Eshalomi",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4873,
+   "x": 0.132,
+   "y": -0.162,
+   "z": -0.101,
+   "mp": "Rachel Hopkins",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4874,
+   "x": -0.258,
+   "y": -0.049,
+   "z": 0.062,
+   "mp": "Andrew Griffith",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4918,
+   "x": 0.025,
+   "y": -0.029,
+   "z": -0.186,
+   "mp": "Sarah Green",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4923,
+   "x": 0.179,
+   "y": -0.212,
+   "z": -0.221,
+   "mp": "Kim Leadbeater",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4932,
+   "x": -0.109,
+   "y": 0.015,
+   "z": 0.099,
+   "mp": "Mr Louie French",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4934,
+   "x": -0.219,
+   "y": 0.163,
+   "z": 0.387,
+   "mp": "Helen Morgan",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4938,
+   "x": 0.092,
+   "y": -0.074,
+   "z": -0.031,
+   "mp": "Paulette Hamilton",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4942,
+   "x": -0.16,
+   "y": 0.22,
+   "z": 0.004,
+   "mp": "Richard Foord",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4943,
+   "x": 0.215,
+   "y": 0.19,
+   "z": -0.091,
+   "mp": "Simon Lightwood",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4979,
+   "x": -0.04,
+   "y": -0.055,
+   "z": 0.048,
+   "mp": "Andrew Western",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4981,
+   "x": -0.082,
+   "y": 0.068,
+   "z": 0.113,
+   "mp": "Ashley Dalton",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4993,
+   "x": 0.145,
+   "y": 0.128,
+   "z": -0.003,
+   "mp": "Keir Mather",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 4995,
+   "x": -0.094,
+   "y": 0.326,
+   "z": -0.453,
+   "mp": "Sarah Dyke",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 4998,
+   "x": 0.081,
+   "y": 0.267,
+   "z": -0.348,
+   "mp": "Michael Shanks",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 5000,
+   "x": 0.255,
+   "y": 0.183,
+   "z": 0.173,
+   "mp": "Alistair Strathern",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5001,
+   "x": 0.237,
+   "y": 0.348,
+   "z": 0.006,
+   "mp": "Sarah Edwards",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5010,
+   "x": 0.061,
+   "y": -0.055,
+   "z": 0.03,
+   "mp": "Damien Egan",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5011,
+   "x": 0.076,
+   "y": 0.156,
+   "z": -0.137,
+   "mp": "Gen Kitchen",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 5025,
+   "x": 0.009,
+   "y": 0.168,
+   "z": -0.042,
+   "mp": "Chris Webb",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5028,
+   "x": 0.074,
+   "y": -0.049,
+   "z": 0.062,
+   "mp": "Lewis Atkinson",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5029,
+   "x": -0.046,
+   "y": 0.003,
+   "z": 0.05,
+   "mp": "Emma Foody",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5030,
+   "x": 0.031,
+   "y": -0.045,
+   "z": -0.097,
+   "mp": "Dr Simon Opher",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5031,
+   "x": 0.229,
+   "y": 0.07,
+   "z": 0.012,
+   "mp": "Mark Ferguson",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5032,
+   "x": -0.14,
+   "y": 0.172,
+   "z": -0.054,
+   "mp": "Tom Gordon",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5033,
+   "x": 0.192,
+   "y": -0.21,
+   "z": 0.12,
+   "mp": "Josh MacAlister",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 5035,
+   "x": 0.096,
+   "y": 0.303,
+   "z": -0.143,
+   "mp": "Will Stone",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5036,
+   "x": 0.17,
+   "y": -0.022,
+   "z": 0.264,
+   "mp": "Jodie Gosling",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5037,
+   "x": -0.011,
+   "y": -0.055,
+   "z": 0.226,
+   "mp": "Lola McEvoy",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5038,
+   "x": 0.197,
+   "y": 0.127,
+   "z": 0.095,
+   "mp": "Anneliese Midgley",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5039,
+   "x": -0.111,
+   "y": 0.035,
+   "z": 0.072,
+   "mp": "Kanishka Narayan",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 5040,
+   "x": 0.228,
+   "y": -0.088,
+   "z": 0.297,
+   "mp": "Liz Jarvis",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5041,
+   "x": 0.152,
+   "y": -0.21,
+   "z": 0.081,
+   "mp": "Shaun Davies",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5042,
+   "x": 0.191,
+   "y": 0.093,
+   "z": 0.265,
+   "mp": "Pam Cox",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5043,
+   "x": 0.212,
+   "y": -0.259,
+   "z": -0.144,
+   "mp": "Lillian Jones",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5044,
+   "x": 0.263,
+   "y": -0.113,
+   "z": 0.064,
+   "mp": "Adam Thompson",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5045,
+   "x": 0.092,
+   "y": 0.144,
+   "z": 0.063,
+   "mp": "Mr Jonathan Brash",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5046,
+   "x": 0.188,
+   "y": 0.011,
+   "z": -0.08,
+   "mp": "Andrew Ranger",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5047,
+   "x": 0.062,
+   "y": 0.356,
+   "z": -0.155,
+   "mp": "James Naish",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5048,
+   "x": 0.242,
+   "y": 0.35,
+   "z": 0.249,
+   "mp": "Antonia Bance",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5049,
+   "x": -0.005,
+   "y": 0.078,
+   "z": 0.014,
+   "mp": "Michelle Scrogham",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5050,
+   "x": -0.418,
+   "y": -0.126,
+   "z": 0.195,
+   "mp": "Lewis Cocking",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5051,
+   "x": 0.005,
+   "y": 0.209,
+   "z": 0.102,
+   "mp": "Kevin Bonavia",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5052,
+   "x": -0.043,
+   "y": -0.031,
+   "z": 0.212,
+   "mp": "Patrick Hurley",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5053,
+   "x": 0.06,
+   "y": -0.054,
+   "z": 0.225,
+   "mp": "Natalie Fleet",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 5054,
+   "x": 0.046,
+   "y": 0.186,
+   "z": 0.041,
+   "mp": "Mr Calvin Bailey",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5055,
+   "x": -0.125,
+   "y": -0.047,
+   "z": 0.018,
+   "mp": "Max Wilkinson",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5056,
+   "x": 0.126,
+   "y": 0.111,
+   "z": 0.071,
+   "mp": "Jen Craft",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5057,
+   "x": 0.215,
+   "y": 0.322,
+   "z": 0.214,
+   "mp": "Douglas McAllister",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5058,
+   "x": 0.013,
+   "y": 0.059,
+   "z": 0.067,
+   "mp": "Juliet Campbell",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5059,
+   "x": 0.097,
+   "y": 0.409,
+   "z": 0.009,
+   "mp": "Gurinder Singh Josan",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5060,
+   "x": 0.097,
+   "y": -0.0,
+   "z": 0.236,
+   "mp": "Josh Simons",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5061,
+   "x": -0.072,
+   "y": -0.264,
+   "z": -0.139,
+   "mp": "Andrew Lewin",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5062,
+   "x": -0.288,
+   "y": -0.11,
+   "z": 0.117,
+   "mp": "Nick Timothy",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5063,
+   "x": 0.153,
+   "y": 0.214,
+   "z": 0.237,
+   "mp": "Johanna Baxter",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5064,
+   "x": 0.024,
+   "y": 0.193,
+   "z": 0.213,
+   "mp": "Steve Race",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5065,
+   "x": -0.087,
+   "y": 0.154,
+   "z": 0.297,
+   "mp": "Rachel Taylor",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5066,
+   "x": -0.315,
+   "y": -0.162,
+   "z": 0.093,
+   "mp": "Steve Darling",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5067,
+   "x": -0.265,
+   "y": -0.13,
+   "z": 0.174,
+   "mp": "Tony Vaughan",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5068,
+   "x": -0.225,
+   "y": 0.063,
+   "z": 0.08,
+   "mp": "Shivani Raja",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5069,
+   "x": -0.014,
+   "y": -0.099,
+   "z": 0.076,
+   "mp": "Torsten Bell",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 5070,
+   "x": -0.11,
+   "y": 0.316,
+   "z": -0.368,
+   "mp": "Lisa Smart",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5071,
+   "x": 0.079,
+   "y": -0.123,
+   "z": 0.054,
+   "mp": "Paul Waugh",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5072,
+   "x": -0.193,
+   "y": 0.338,
+   "z": 0.029,
+   "mp": "Mr Andrew Snowden",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5073,
+   "x": 0.168,
+   "y": -0.057,
+   "z": -0.13,
+   "mp": "Marie Goldman",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5075,
+   "x": 0.211,
+   "y": -0.243,
+   "z": 0.106,
+   "mp": "Deirdre Costigan",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5076,
+   "x": 0.026,
+   "y": 0.25,
+   "z": -0.311,
+   "mp": "Blair McDougall",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5077,
+   "x": 0.32,
+   "y": 0.1,
+   "z": 0.103,
+   "mp": "Jacob Collier",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5078,
+   "x": -0.022,
+   "y": 0.111,
+   "z": -0.391,
+   "mp": "Pippa Heylings",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5080,
+   "x": 0.14,
+   "y": 0.454,
+   "z": 0.093,
+   "mp": "Alan Strickland",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5081,
+   "x": -0.027,
+   "y": 0.278,
+   "z": -0.373,
+   "mp": "Joe Morris",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5082,
+   "x": -0.102,
+   "y": -0.268,
+   "z": 0.038,
+   "mp": "Jake Richards",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5083,
+   "x": -0.07,
+   "y": 0.233,
+   "z": -0.177,
+   "mp": "Bobby Dean",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5084,
+   "x": 0.272,
+   "y": 0.096,
+   "z": 0.257,
+   "mp": "Mrs Elsie Blundell",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5085,
+   "x": -0.167,
+   "y": 0.116,
+   "z": -0.047,
+   "mp": "Llinos Medi",
+   "party": "PC",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5086,
+   "x": 0.097,
+   "y": -0.05,
+   "z": 0.054,
+   "mp": "Josh Babarinde",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5087,
+   "x": 0.088,
+   "y": -0.028,
+   "z": 0.157,
+   "mp": "Tom Collins",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5088,
+   "x": 0.056,
+   "y": 0.077,
+   "z": 0.096,
+   "mp": "Sarah Coombes",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5089,
+   "x": -0.47,
+   "y": -0.144,
+   "z": 0.155,
+   "mp": "Ben Obese-Jecty",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5090,
+   "x": 0.145,
+   "y": -0.037,
+   "z": 0.094,
+   "mp": "Tom Morrison",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5092,
+   "x": 0.334,
+   "y": -0.13,
+   "z": 0.076,
+   "mp": "David Baines",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5093,
+   "x": -0.028,
+   "y": 0.092,
+   "z": -0.155,
+   "mp": "Alison Taylor",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5094,
+   "x": 0.172,
+   "y": -0.096,
+   "z": 0.025,
+   "mp": "Ms Julie Minns",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5095,
+   "x": 0.213,
+   "y": 0.148,
+   "z": 0.061,
+   "mp": "Kirith Entwistle",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5096,
+   "x": 0.033,
+   "y": -0.024,
+   "z": 0.088,
+   "mp": "Ian Sollom",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5097,
+   "x": 0.043,
+   "y": 0.203,
+   "z": -0.063,
+   "mp": "Mr Bayo Alaba",
+   "party": "Ind",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5098,
+   "x": 0.218,
+   "y": 0.181,
+   "z": -0.065,
+   "mp": "Dr Marie Tidball",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5099,
+   "x": 0.109,
+   "y": 0.002,
+   "z": -0.01,
+   "mp": "Miatta Fahnbulleh",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 5100,
+   "x": -0.34,
+   "y": -0.109,
+   "z": 0.179,
+   "mp": "Blake Stephenson",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5101,
+   "x": -0.291,
+   "y": -0.266,
+   "z": 0.145,
+   "mp": "Sir Ashley Fox",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5102,
+   "x": -0.062,
+   "y": 0.237,
+   "z": -0.451,
+   "mp": "Carla Denyer",
+   "party": "Green",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5103,
+   "x": 0.079,
+   "y": -0.229,
+   "z": -0.311,
+   "mp": "Luke Taylor",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5104,
+   "x": 0.203,
+   "y": -0.064,
+   "z": 0.018,
+   "mp": "Gill German",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5105,
+   "x": 0.314,
+   "y": 0.059,
+   "z": 0.304,
+   "mp": "Jo White",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5106,
+   "x": 0.105,
+   "y": -0.019,
+   "z": 0.082,
+   "mp": "David Burton-Sampson",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5107,
+   "x": 0.033,
+   "y": 0.116,
+   "z": 0.211,
+   "mp": "Linsey Farnsworth",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5108,
+   "x": -0.009,
+   "y": -0.077,
+   "z": 0.186,
+   "mp": "Dr Sam Rushworth",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5109,
+   "x": 0.188,
+   "y": 0.103,
+   "z": 0.22,
+   "mp": "Chris Bloore",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5110,
+   "x": -0.055,
+   "y": 0.086,
+   "z": 0.157,
+   "mp": "Euan Stainbank",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5111,
+   "x": 0.012,
+   "y": 0.095,
+   "z": -0.326,
+   "mp": "Martin Wrigley",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5112,
+   "x": 0.075,
+   "y": -0.133,
+   "z": -0.183,
+   "mp": "Luke Akehurst",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5114,
+   "x": -0.017,
+   "y": -0.05,
+   "z": -0.004,
+   "mp": "Kirsty McNeill",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 5115,
+   "x": -0.033,
+   "y": 0.107,
+   "z": 0.072,
+   "mp": "Jon Pearce",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5116,
+   "x": 0.139,
+   "y": 0.299,
+   "z": 0.011,
+   "mp": "Chris McDonald",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5117,
+   "x": 0.058,
+   "y": -0.033,
+   "z": 0.178,
+   "mp": "Sarah Smith",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5118,
+   "x": 0.047,
+   "y": 0.047,
+   "z": -0.041,
+   "mp": "Chris Curtis",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5119,
+   "x": -0.096,
+   "y": 0.047,
+   "z": 0.112,
+   "mp": "Natasha Irons",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5120,
+   "x": 0.304,
+   "y": -0.09,
+   "z": 0.264,
+   "mp": "Shockat Adam",
+   "party": "Ind",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5121,
+   "x": 0.082,
+   "y": 0.121,
+   "z": -0.351,
+   "mp": "Henry Tufnell",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5122,
+   "x": -0.137,
+   "y": -0.092,
+   "z": 0.012,
+   "mp": "Manuela Perteghella",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5123,
+   "x": 0.184,
+   "y": -0.098,
+   "z": -0.486,
+   "mp": "Ms Polly Billington",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5124,
+   "x": 0.022,
+   "y": -0.026,
+   "z": 0.207,
+   "mp": "Markus Campbell-Savours",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5125,
+   "x": -0.369,
+   "y": 0.137,
+   "z": 0.094,
+   "mp": "Sorcha Eastwood",
+   "party": "APNI",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5126,
+   "x": 0.153,
+   "y": 0.213,
+   "z": 0.211,
+   "mp": "Dave Robertson",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5127,
+   "x": 0.099,
+   "y": 0.198,
+   "z": 0.012,
+   "mp": "John Slinger",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5128,
+   "x": -0.205,
+   "y": 0.044,
+   "z": 0.036,
+   "mp": "Phil Brickell",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5129,
+   "x": 0.11,
+   "y": 0.256,
+   "z": -0.16,
+   "mp": "Martin McCluskey",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 5130,
+   "x": 0.178,
+   "y": -0.086,
+   "z": 0.291,
+   "mp": "Matt Turmaine",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5131,
+   "x": 0.111,
+   "y": 0.026,
+   "z": 0.103,
+   "mp": "Jack Abbott",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5132,
+   "x": 0.185,
+   "y": -0.204,
+   "z": -0.042,
+   "mp": "Liam Conlon",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5133,
+   "x": 0.14,
+   "y": -0.129,
+   "z": 0.034,
+   "mp": "Alice Macdonald",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5134,
+   "x": 0.131,
+   "y": 0.222,
+   "z": 0.212,
+   "mp": "Andy MacNae",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5135,
+   "x": 0.02,
+   "y": -0.409,
+   "z": -0.147,
+   "mp": "Oliver Ryan",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5136,
+   "x": 0.022,
+   "y": -0.026,
+   "z": 0.207,
+   "mp": "Imogen Walker",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5137,
+   "x": 0.26,
+   "y": -0.219,
+   "z": 0.007,
+   "mp": "Maureen Burke",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5138,
+   "x": 0.058,
+   "y": 0.154,
+   "z": 0.036,
+   "mp": "Ian Roome",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5139,
+   "x": 0.081,
+   "y": -0.235,
+   "z": 0.386,
+   "mp": "Emily Darlington",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5140,
+   "x": -0.143,
+   "y": 0.284,
+   "z": -0.141,
+   "mp": "Claire Young",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5141,
+   "x": 0.067,
+   "y": 0.207,
+   "z": -0.324,
+   "mp": "Alex Mayer",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5143,
+   "x": 0.068,
+   "y": 0.061,
+   "z": 0.531,
+   "mp": "Catherine Atkinson",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 5144,
+   "x": 0.164,
+   "y": 0.046,
+   "z": -0.004,
+   "mp": "Richard Quigley",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5145,
+   "x": -0.196,
+   "y": 0.12,
+   "z": -0.02,
+   "mp": "Irene Campbell",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5146,
+   "x": 0.063,
+   "y": -0.117,
+   "z": -0.018,
+   "mp": "Michael Payne",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5147,
+   "x": 0.108,
+   "y": 0.4,
+   "z": 0.143,
+   "mp": "Luke Myer",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5148,
+   "x": 0.279,
+   "y": -0.599,
+   "z": -0.366,
+   "mp": "Mr Hamish Falconer",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 5149,
+   "x": -0.003,
+   "y": 0.252,
+   "z": -0.223,
+   "mp": "Amanda Hack",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5150,
+   "x": -0.12,
+   "y": -0.054,
+   "z": 0.184,
+   "mp": "Samantha Niblett",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5151,
+   "x": 0.04,
+   "y": -0.099,
+   "z": -0.053,
+   "mp": "David Williams",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5152,
+   "x": 0.162,
+   "y": 0.174,
+   "z": -0.024,
+   "mp": "Sureena Brackenridge",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5154,
+   "x": 0.112,
+   "y": 0.125,
+   "z": -0.32,
+   "mp": "Sarah Hall",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5155,
+   "x": 0.124,
+   "y": 0.048,
+   "z": -0.354,
+   "mp": "Chris Kane",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5156,
+   "x": -0.026,
+   "y": 0.137,
+   "z": 0.062,
+   "mp": "Jess Asato",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5157,
+   "x": -0.234,
+   "y": 0.237,
+   "z": -0.175,
+   "mp": "Susan Murray",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5158,
+   "x": -0.095,
+   "y": -0.065,
+   "z": 0.267,
+   "mp": "Rupert Lowe",
+   "party": "RB",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5159,
+   "x": -0.014,
+   "y": 0.032,
+   "z": 0.029,
+   "mp": "Mr Connor Rand",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5160,
+   "x": 0.134,
+   "y": 0.133,
+   "z": -0.364,
+   "mp": "Jenny Riddell-Carpenter",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5161,
+   "x": -0.151,
+   "y": 0.166,
+   "z": -0.115,
+   "mp": "Richard Tice",
+   "party": "RUK",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5162,
+   "x": -0.183,
+   "y": -0.064,
+   "z": -0.149,
+   "mp": "Matthew Patrick",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5163,
+   "x": -0.084,
+   "y": -0.001,
+   "z": -0.167,
+   "mp": "Dr Peter Prinsley",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5164,
+   "x": -0.129,
+   "y": -0.099,
+   "z": -0.32,
+   "mp": "Steff Aquarone",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5165,
+   "x": 0.187,
+   "y": 0.247,
+   "z": 0.107,
+   "mp": "Peter Swallow",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5166,
+   "x": -0.046,
+   "y": 0.087,
+   "z": 0.16,
+   "mp": "Mark Sewards",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5167,
+   "x": 0.309,
+   "y": -0.068,
+   "z": 0.138,
+   "mp": "Gregor Poynton",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5168,
+   "x": -0.017,
+   "y": 0.029,
+   "z": -0.056,
+   "mp": "Adam Jogee",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5169,
+   "x": -0.427,
+   "y": -0.268,
+   "z": -0.069,
+   "mp": "Charlie Dewhirst",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5170,
+   "x": -0.122,
+   "y": 0.008,
+   "z": 0.078,
+   "mp": "John Grady",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5171,
+   "x": 0.075,
+   "y": 0.246,
+   "z": -0.135,
+   "mp": "Julia Buckley",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5172,
+   "x": 0.046,
+   "y": 0.17,
+   "z": 0.158,
+   "mp": "Dan Aldridge",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5173,
+   "x": 0.145,
+   "y": 0.074,
+   "z": -0.008,
+   "mp": "Alex Baker",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5174,
+   "x": -0.046,
+   "y": 0.328,
+   "z": 0.13,
+   "mp": "Fred Thomas",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5175,
+   "x": 0.057,
+   "y": 0.104,
+   "z": -0.227,
+   "mp": "Mr Alex Barros-Curtis",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5176,
+   "x": 0.291,
+   "y": 0.186,
+   "z": -0.004,
+   "mp": "Baggy Shanker",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5177,
+   "x": -0.324,
+   "y": -0.244,
+   "z": 0.019,
+   "mp": "Ann Davies",
+   "party": "PC",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5178,
+   "x": 0.04,
+   "y": -0.083,
+   "z": 0.124,
+   "mp": "Sally Jameson",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5179,
+   "x": -0.07,
+   "y": 0.332,
+   "z": -0.108,
+   "mp": "Kirsteen Sullivan",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5180,
+   "x": 0.127,
+   "y": -0.093,
+   "z": 0.148,
+   "mp": "Nesil Caliskan",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 5181,
+   "x": 0.147,
+   "y": 0.185,
+   "z": 0.201,
+   "mp": "Becky Gittins",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5182,
+   "x": -0.228,
+   "y": -0.12,
+   "z": -0.038,
+   "mp": "Charlotte Cane",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5183,
+   "x": 0.278,
+   "y": -0.353,
+   "z": -0.078,
+   "mp": "Frank McNally",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5184,
+   "x": 0.04,
+   "y": 0.013,
+   "z": 0.27,
+   "mp": "Daniel Francis",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5185,
+   "x": 0.004,
+   "y": -0.045,
+   "z": -0.057,
+   "mp": "Alan Gemmell",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5186,
+   "x": -0.489,
+   "y": -0.148,
+   "z": 0.182,
+   "mp": "Bradley Thomas",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5187,
+   "x": 0.205,
+   "y": 0.087,
+   "z": 0.035,
+   "mp": "Josh Dean",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5188,
+   "x": 0.253,
+   "y": -0.306,
+   "z": -0.124,
+   "mp": "Tracy Gilbert",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5189,
+   "x": 0.24,
+   "y": -0.344,
+   "z": -0.158,
+   "mp": "Gordon McKee",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5190,
+   "x": 0.192,
+   "y": -0.357,
+   "z": -0.164,
+   "mp": "Patricia Ferguson",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5191,
+   "x": -0.039,
+   "y": 0.234,
+   "z": 0.141,
+   "mp": "Adam Dance",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5192,
+   "x": 0.061,
+   "y": 0.07,
+   "z": -0.169,
+   "mp": "Helena Dollimore",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5193,
+   "x": -0.095,
+   "y": 0.553,
+   "z": -0.139,
+   "mp": "Callum Anderson",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5194,
+   "x": 0.166,
+   "y": 0.233,
+   "z": 0.273,
+   "mp": "Steve Yemm",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5195,
+   "x": 0.284,
+   "y": -0.148,
+   "z": 0.23,
+   "mp": "Andrew Cooper",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5196,
+   "x": 0.04,
+   "y": -0.097,
+   "z": 0.08,
+   "mp": "Brian Leishman",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5197,
+   "x": -0.279,
+   "y": -0.176,
+   "z": 0.071,
+   "mp": "Dr Neil Shastri-Hurst",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5198,
+   "x": 0.137,
+   "y": 0.008,
+   "z": -0.11,
+   "mp": "Chris Coghlan",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5199,
+   "x": 0.027,
+   "y": 0.313,
+   "z": 0.018,
+   "mp": "Mr Luke Charters",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5200,
+   "x": 0.194,
+   "y": -0.287,
+   "z": -0.052,
+   "mp": "Kenneth Stevenson",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5201,
+   "x": -0.074,
+   "y": 0.031,
+   "z": 0.303,
+   "mp": "Victoria Collins",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5202,
+   "x": -0.011,
+   "y": 0.125,
+   "z": -0.233,
+   "mp": "Jessica Toale",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5203,
+   "x": -0.08,
+   "y": 0.03,
+   "z": 0.071,
+   "mp": "Alison Griffiths",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5204,
+   "x": 0.017,
+   "y": -0.152,
+   "z": 0.015,
+   "mp": "Sarah Sackman",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 5205,
+   "x": -0.043,
+   "y": 0.216,
+   "z": 0.039,
+   "mp": "Ben Goldsborough",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5206,
+   "x": 0.03,
+   "y": 0.204,
+   "z": -0.332,
+   "mp": "Elaine Stewart",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5207,
+   "x": 0.162,
+   "y": 0.024,
+   "z": -0.068,
+   "mp": "Clive Jones",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5208,
+   "x": 0.133,
+   "y": 0.144,
+   "z": -0.151,
+   "mp": "Perran Moon",
+   "party": "Ind",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5209,
+   "x": -0.464,
+   "y": 0.026,
+   "z": 0.117,
+   "mp": "Peter Fortune",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5210,
+   "x": 0.302,
+   "y": 0.005,
+   "z": 0.371,
+   "mp": "Tom Hayes",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5211,
+   "x": 0.152,
+   "y": 0.004,
+   "z": 0.135,
+   "mp": "James Asser",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5212,
+   "x": -0.067,
+   "y": 0.132,
+   "z": 0.086,
+   "mp": "Dr Scott Arthur",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5213,
+   "x": 0.027,
+   "y": 0.08,
+   "z": 0.131,
+   "mp": "Dr Zubir Ahmed",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 5214,
+   "x": -0.233,
+   "y": -0.239,
+   "z": -0.152,
+   "mp": "Brian Mathew",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5215,
+   "x": 0.187,
+   "y": -0.153,
+   "z": -0.003,
+   "mp": "Naushabah Khan",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5216,
+   "x": -0.334,
+   "y": 0.097,
+   "z": 0.192,
+   "mp": "Caroline Voaden",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5217,
+   "x": 0.132,
+   "y": 0.121,
+   "z": -0.436,
+   "mp": "Lloyd Hatton",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5218,
+   "x": -0.046,
+   "y": 0.274,
+   "z": -0.052,
+   "mp": "David Smith",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5219,
+   "x": -0.138,
+   "y": 0.078,
+   "z": 0.018,
+   "mp": "Mike Martin",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5220,
+   "x": -0.014,
+   "y": -0.003,
+   "z": 0.015,
+   "mp": "Tristan Osborne",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5221,
+   "x": 0.326,
+   "y": 0.141,
+   "z": 0.245,
+   "mp": "Steve Witherden",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5222,
+   "x": -0.039,
+   "y": 0.294,
+   "z": -0.027,
+   "mp": "Tom Rutland",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5223,
+   "x": 0.113,
+   "y": 0.082,
+   "z": 0.298,
+   "mp": "Jim Dickson",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5224,
+   "x": 0.183,
+   "y": 0.145,
+   "z": 0.138,
+   "mp": "Kate Dearden",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 5225,
+   "x": -0.045,
+   "y": 0.073,
+   "z": 0.024,
+   "mp": "Lizzi Collinge",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5226,
+   "x": 0.039,
+   "y": -0.06,
+   "z": 0.206,
+   "mp": "Michelle Welsh",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5227,
+   "x": 0.278,
+   "y": -0.328,
+   "z": -0.307,
+   "mp": "Jas Athwal",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5228,
+   "x": 0.131,
+   "y": 0.073,
+   "z": -0.239,
+   "mp": "Maya Ellis",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5229,
+   "x": 0.031,
+   "y": 0.03,
+   "z": -0.142,
+   "mp": "Joe Powell",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5230,
+   "x": 0.256,
+   "y": -0.229,
+   "z": 0.167,
+   "mp": "Warinder Juss",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5231,
+   "x": -0.027,
+   "y": -0.482,
+   "z": -0.431,
+   "mp": "Mr Adnan Hussain",
+   "party": "Ind",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5232,
+   "x": 0.104,
+   "y": -0.02,
+   "z": -0.031,
+   "mp": "Lorraine Beavers",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5233,
+   "x": 0.062,
+   "y": 0.234,
+   "z": 0.058,
+   "mp": "Lee Pitcher",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5234,
+   "x": 0.059,
+   "y": 0.045,
+   "z": 0.212,
+   "mp": "Laurence Turner",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5235,
+   "x": 0.01,
+   "y": 0.117,
+   "z": -0.014,
+   "mp": "Al Carns",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 5237,
+   "x": -0.027,
+   "y": -0.064,
+   "z": 0.058,
+   "mp": "Chris Vince",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5238,
+   "x": 0.057,
+   "y": 0.368,
+   "z": -0.108,
+   "mp": "Alex Ballinger",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5239,
+   "x": -0.212,
+   "y": 0.186,
+   "z": 0.197,
+   "mp": "Sarah Gibson",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5240,
+   "x": 0.013,
+   "y": -0.367,
+   "z": -0.169,
+   "mp": "Melanie Ward",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5241,
+   "x": -0.554,
+   "y": 0.071,
+   "z": -0.007,
+   "mp": "Aphra Brandreth",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5242,
+   "x": 0.145,
+   "y": 0.178,
+   "z": 0.15,
+   "mp": "Michael Wheeler",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5244,
+   "x": 0.181,
+   "y": 0.203,
+   "z": -0.268,
+   "mp": "Chris Hinchliff",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5245,
+   "x": -0.042,
+   "y": -0.008,
+   "z": -0.001,
+   "mp": "Chris Murray",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5246,
+   "x": 0.025,
+   "y": 0.166,
+   "z": -0.294,
+   "mp": "Torcuil Crichton",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5247,
+   "x": 0.226,
+   "y": -0.136,
+   "z": 0.237,
+   "mp": "Sojan Joseph",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5248,
+   "x": 0.103,
+   "y": 0.285,
+   "z": 0.145,
+   "mp": "Luke Murphy",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5249,
+   "x": 0.075,
+   "y": -0.051,
+   "z": -0.089,
+   "mp": "Dr Ellie Chowns",
+   "party": "Green",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5250,
+   "x": -0.071,
+   "y": 0.041,
+   "z": -0.025,
+   "mp": "Gideon Amos",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5251,
+   "x": 0.404,
+   "y": -0.516,
+   "z": -0.207,
+   "mp": "Martin Rhodes",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5252,
+   "x": -0.455,
+   "y": 0.115,
+   "z": 0.065,
+   "mp": "Rachel Gilmour",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5253,
+   "x": -0.024,
+   "y": 0.467,
+   "z": -0.086,
+   "mp": "Richard Baker",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5254,
+   "x": 0.101,
+   "y": 0.057,
+   "z": 0.412,
+   "mp": "Alison Hume",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5255,
+   "x": -0.308,
+   "y": -0.3,
+   "z": 0.226,
+   "mp": "Joe Robertson",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5256,
+   "x": 0.003,
+   "y": 0.013,
+   "z": 0.211,
+   "mp": "Jonathan Davies",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5257,
+   "x": 0.227,
+   "y": -0.053,
+   "z": -0.173,
+   "mp": "Rachel Blake",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5258,
+   "x": -0.042,
+   "y": -0.007,
+   "z": -0.011,
+   "mp": "Louise Sandher-Jones",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5259,
+   "x": -0.145,
+   "y": -0.229,
+   "z": -0.079,
+   "mp": "Dr Jeevun Sandher",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5260,
+   "x": 0.046,
+   "y": 0.26,
+   "z": -0.389,
+   "mp": "Katie White",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5262,
+   "x": -0.488,
+   "y": -0.001,
+   "z": 0.038,
+   "mp": "Alex Easton",
+   "party": "Ind",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5263,
+   "x": -0.166,
+   "y": -0.265,
+   "z": -0.098,
+   "mp": "Alex Brewer",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5264,
+   "x": -0.001,
+   "y": 0.006,
+   "z": 0.006,
+   "mp": "Jonathan Hinder",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5265,
+   "x": -0.04,
+   "y": 0.389,
+   "z": -0.226,
+   "mp": "James MacCleary",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5266,
+   "x": 0.044,
+   "y": -0.014,
+   "z": 0.076,
+   "mp": "Mike Tapp",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 5267,
+   "x": 0.233,
+   "y": 0.047,
+   "z": -0.644,
+   "mp": "Yuan Yang",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5268,
+   "x": 0.236,
+   "y": -0.16,
+   "z": 0.122,
+   "mp": "Iqbal Mohamed",
+   "party": "Ind",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5269,
+   "x": -0.048,
+   "y": 0.065,
+   "z": -0.074,
+   "mp": "Dr Lauren Sullivan",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5270,
+   "x": 0.27,
+   "y": -0.312,
+   "z": 0.139,
+   "mp": "Darren Paffey",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5271,
+   "x": 0.039,
+   "y": 0.09,
+   "z": 0.07,
+   "mp": "Satvir Kaur",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5272,
+   "x": 0.324,
+   "y": -0.027,
+   "z": -0.008,
+   "mp": "Margaret Mullane",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5273,
+   "x": 0.068,
+   "y": -0.077,
+   "z": 0.152,
+   "mp": "Connor Naismith",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5274,
+   "x": 0.123,
+   "y": 0.01,
+   "z": 0.084,
+   "mp": "Sonia Kumar",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5275,
+   "x": 0.15,
+   "y": -0.029,
+   "z": 0.214,
+   "mp": "Graeme Downie",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5276,
+   "x": 0.123,
+   "y": -0.038,
+   "z": 0.189,
+   "mp": "Chris Ward",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 5277,
+   "x": 0.095,
+   "y": 0.05,
+   "z": -0.354,
+   "mp": "Graham Leadbitter",
+   "party": "SNP",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5278,
+   "x": 0.218,
+   "y": -0.369,
+   "z": -0.437,
+   "mp": "Uma Kumaran",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5279,
+   "x": 0.124,
+   "y": 0.239,
+   "z": -0.09,
+   "mp": "Jayne Kirkham",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5280,
+   "x": -0.184,
+   "y": 0.057,
+   "z": 0.115,
+   "mp": "Seamus Logan",
+   "party": "SNP",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5281,
+   "x": -0.135,
+   "y": 0.198,
+   "z": 0.002,
+   "mp": "Anna Dixon",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5282,
+   "x": -0.012,
+   "y": 0.169,
+   "z": 0.076,
+   "mp": "Dan Tomlinson",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 5283,
+   "x": 0.003,
+   "y": -0.11,
+   "z": 0.251,
+   "mp": "Alison Bennett",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5284,
+   "x": -0.384,
+   "y": -0.028,
+   "z": 0.199,
+   "mp": "David Chadwick",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5285,
+   "x": -0.371,
+   "y": -0.275,
+   "z": 0.258,
+   "mp": "Katie Lam",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5286,
+   "x": -0.144,
+   "y": 0.117,
+   "z": 0.135,
+   "mp": "Anna Sabine",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5287,
+   "x": -0.384,
+   "y": 0.15,
+   "z": -0.183,
+   "mp": "Tim Roca",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5288,
+   "x": -0.306,
+   "y": 0.213,
+   "z": -0.34,
+   "mp": "Dr Al Pinkerton",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5289,
+   "x": 0.141,
+   "y": -0.113,
+   "z": 0.005,
+   "mp": "Harpreet Uppal",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5290,
+   "x": 0.203,
+   "y": 0.209,
+   "z": -0.073,
+   "mp": "Leigh Ingham",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5291,
+   "x": 0.1,
+   "y": 0.036,
+   "z": -0.311,
+   "mp": "Catherine Fookes",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5293,
+   "x": 0.162,
+   "y": 0.321,
+   "z": -0.004,
+   "mp": "Cat Eccles",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5294,
+   "x": 0.325,
+   "y": 0.15,
+   "z": 0.069,
+   "mp": "Amanda Martin",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5295,
+   "x": 0.096,
+   "y": -0.04,
+   "z": 0.178,
+   "mp": "Josh Fenton-Glynn",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5296,
+   "x": 0.031,
+   "y": 0.173,
+   "z": -0.281,
+   "mp": "Freddie van Mierlo",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5297,
+   "x": -0.269,
+   "y": -0.123,
+   "z": 0.162,
+   "mp": "Rebecca Paul",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5298,
+   "x": 0.015,
+   "y": 0.134,
+   "z": -0.207,
+   "mp": "Lauren Edwards",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5299,
+   "x": 0.082,
+   "y": -0.371,
+   "z": -0.279,
+   "mp": "Monica Harding",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5300,
+   "x": 0.053,
+   "y": -0.105,
+   "z": -0.137,
+   "mp": "Kevin McKenna",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5301,
+   "x": -0.054,
+   "y": -0.028,
+   "z": 0.034,
+   "mp": "Rebecca Smith",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5302,
+   "x": 0.026,
+   "y": 0.103,
+   "z": -0.094,
+   "mp": "Noah Law",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5303,
+   "x": -0.341,
+   "y": -0.105,
+   "z": 0.033,
+   "mp": "Patrick Spencer",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5304,
+   "x": -0.283,
+   "y": 0.024,
+   "z": 0.119,
+   "mp": "Dr Danny Chambers",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5305,
+   "x": 0.251,
+   "y": -0.089,
+   "z": 0.149,
+   "mp": "Georgia Gould",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 5306,
+   "x": 0.162,
+   "y": -0.003,
+   "z": -0.212,
+   "mp": "Claire Hazelgrove",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5307,
+   "x": 0.124,
+   "y": -0.135,
+   "z": -0.086,
+   "mp": "Dr Beccy Cooper",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5308,
+   "x": -0.142,
+   "y": 0.009,
+   "z": 0.117,
+   "mp": "Sam Carling",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5309,
+   "x": 0.069,
+   "y": 0.069,
+   "z": 0.052,
+   "mp": "Katrina Murray",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5310,
+   "x": 0.154,
+   "y": -0.218,
+   "z": -0.103,
+   "mp": "Mr Lee Dillon",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5311,
+   "x": -0.454,
+   "y": -0.014,
+   "z": -0.14,
+   "mp": "Harriet Cross",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5312,
+   "x": 0.018,
+   "y": -0.01,
+   "z": -0.303,
+   "mp": "Sadik Al-Hassan",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5313,
+   "x": 0.243,
+   "y": -0.127,
+   "z": 0.275,
+   "mp": "Z\u00f6e Franklin",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5314,
+   "x": 0.071,
+   "y": -0.158,
+   "z": 0.048,
+   "mp": "Si\u00e2n Berry",
+   "party": "Green",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5315,
+   "x": 0.234,
+   "y": 0.009,
+   "z": 0.057,
+   "mp": "Lee Barron",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5316,
+   "x": 0.201,
+   "y": 0.057,
+   "z": -0.283,
+   "mp": "Mike Reader",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5317,
+   "x": 0.126,
+   "y": 0.238,
+   "z": -0.03,
+   "mp": "Paul Davies",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5318,
+   "x": 0.166,
+   "y": -0.18,
+   "z": -0.014,
+   "mp": "Olly Glover",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5319,
+   "x": -0.245,
+   "y": 0.022,
+   "z": 0.059,
+   "mp": "Robin Swann",
+   "party": "UUP",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5320,
+   "x": 0.015,
+   "y": 0.346,
+   "z": -0.501,
+   "mp": "Adrian Ramsay",
+   "party": "Green",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5321,
+   "x": -0.005,
+   "y": -0.27,
+   "z": -0.037,
+   "mp": "Mr Paul Kohler",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5322,
+   "x": 0.095,
+   "y": -0.474,
+   "z": -0.436,
+   "mp": "Mr Will Forster",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5323,
+   "x": -0.055,
+   "y": 0.143,
+   "z": 0.217,
+   "mp": "Matt Bishop",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5324,
+   "x": 0.113,
+   "y": -0.099,
+   "z": 0.161,
+   "mp": "Sarah Russell",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5325,
+   "x": 0.108,
+   "y": -0.052,
+   "z": -0.101,
+   "mp": "Charlie Maynard",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5326,
+   "x": -0.382,
+   "y": 0.142,
+   "z": 0.088,
+   "mp": "Edward Morello",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5327,
+   "x": 0.039,
+   "y": 0.322,
+   "z": 0.205,
+   "mp": "Vikki Slade",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5328,
+   "x": 0.089,
+   "y": 0.051,
+   "z": -0.074,
+   "mp": "Sean Woodcock",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5329,
+   "x": -0.25,
+   "y": 0.265,
+   "z": -0.445,
+   "mp": "John Milne",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5330,
+   "x": -0.184,
+   "y": -0.208,
+   "z": -0.197,
+   "mp": "Mr Peter Bedford",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5331,
+   "x": 0.109,
+   "y": -0.03,
+   "z": 0.002,
+   "mp": "Rosie Wrighting",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5332,
+   "x": -0.194,
+   "y": -0.098,
+   "z": 0.093,
+   "mp": "Lincoln Jopp",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5333,
+   "x": -0.024,
+   "y": -0.1,
+   "z": 0.204,
+   "mp": "Lucy Rigby",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 5334,
+   "x": 0.256,
+   "y": 0.08,
+   "z": 0.175,
+   "mp": "Dr Allison Gardner",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5335,
+   "x": -0.39,
+   "y": -0.128,
+   "z": 0.229,
+   "mp": "Jess Brown-Fuller",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5336,
+   "x": -0.153,
+   "y": 0.277,
+   "z": -0.142,
+   "mp": "Helen Maguire",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5337,
+   "x": 0.09,
+   "y": 0.06,
+   "z": 0.083,
+   "mp": "Olivia Bailey",
+   "party": "Lab",
+   "role": "minister"
+  },
+  {
+   "member_id": 5338,
+   "x": 0.138,
+   "y": 0.135,
+   "z": 0.198,
+   "mp": "Terry Jermy",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5339,
+   "x": -0.072,
+   "y": 0.134,
+   "z": 0.138,
+   "mp": "Danny Beales",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5340,
+   "x": -0.013,
+   "y": 0.111,
+   "z": -0.355,
+   "mp": "Jack Rankin",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5341,
+   "x": 0.151,
+   "y": -0.13,
+   "z": 0.212,
+   "mp": "Laura Kyrke-Smith",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5342,
+   "x": -0.213,
+   "y": 0.335,
+   "z": -0.294,
+   "mp": "John Whitby",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5343,
+   "x": 0.0,
+   "y": 0.097,
+   "z": 0.274,
+   "mp": "Mr Joshua Reynolds",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5344,
+   "x": 0.206,
+   "y": -0.143,
+   "z": 0.298,
+   "mp": "Ben Coleman",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5345,
+   "x": 0.158,
+   "y": -0.074,
+   "z": 0.084,
+   "mp": "Peter Lamb",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5346,
+   "x": -0.018,
+   "y": -0.126,
+   "z": -0.308,
+   "mp": "Calum Miller",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5347,
+   "x": 0.046,
+   "y": 0.117,
+   "z": 0.036,
+   "mp": "David Reed",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5348,
+   "x": -0.022,
+   "y": 0.087,
+   "z": 0.026,
+   "mp": "David Taylor",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5349,
+   "x": 0.015,
+   "y": -0.108,
+   "z": 0.098,
+   "mp": "Alex McIntyre",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5350,
+   "x": -0.153,
+   "y": -0.232,
+   "z": -0.385,
+   "mp": "Ben Maguire",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5351,
+   "x": -0.227,
+   "y": -0.174,
+   "z": 0.149,
+   "mp": "Gregory Stafford",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5352,
+   "x": -0.228,
+   "y": -0.078,
+   "z": -0.388,
+   "mp": "Dr Roz Savage",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5353,
+   "x": 0.004,
+   "y": 0.021,
+   "z": -0.03,
+   "mp": "Anna Gelderd",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5354,
+   "x": -0.261,
+   "y": -0.116,
+   "z": -0.209,
+   "mp": "Cameron Thomas",
+   "party": "Ind",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5355,
+   "x": -0.327,
+   "y": 0.027,
+   "z": 0.067,
+   "mp": "Sarah Bool",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5356,
+   "x": -0.513,
+   "y": -0.196,
+   "z": 0.202,
+   "mp": "Jim Allister",
+   "party": "TUV",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5357,
+   "x": -0.117,
+   "y": -0.44,
+   "z": -0.053,
+   "mp": "Ayoub Khan",
+   "party": "Ind",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5358,
+   "x": -0.159,
+   "y": 0.118,
+   "z": -0.082,
+   "mp": "John Cooper",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5359,
+   "x": 0.103,
+   "y": -0.004,
+   "z": 0.051,
+   "mp": "Neil Duncan-Jordan",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5360,
+   "x": 0.051,
+   "y": -0.034,
+   "z": -0.009,
+   "mp": "David Pinto-Duschinsky",
+   "party": "Lab",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5361,
+   "x": 0.058,
+   "y": 0.184,
+   "z": 0.024,
+   "mp": "James McMurdock",
+   "party": "Ind",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5362,
+   "x": -0.393,
+   "y": -0.132,
+   "z": -0.122,
+   "mp": "Mr Angus MacDonald",
+   "party": "LD",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5403,
+   "x": -0.035,
+   "y": -0.152,
+   "z": 0.201,
+   "mp": "Sarah Pochin",
+   "party": "RUK",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5447,
+   "x": 0.209,
+   "y": 0.032,
+   "z": 0.288,
+   "mp": "Hannah Spencer",
+   "party": "Green",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5449,
+   "x": 0.002,
+   "y": -0.097,
+   "z": -0.217,
+   "mp": "Lara Bird",
+   "party": "SNP",
+   "role": "backbench_or_opposition"
+  },
+  {
+   "member_id": 5450,
+   "x": -0.057,
+   "y": 0.158,
+   "z": -0.193,
+   "mp": "Douglas Lumsden",
+   "party": "Con",
+   "role": "backbench_or_opposition"
+  }
+ ]
+}

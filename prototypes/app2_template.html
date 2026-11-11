@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MP3D — Where do you sit in this Parliament?</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600;700&display=swap">
+<style>
+:root{--bench:#0e1117;--bench2:#161b24;--bench3:#1f2633;--ink:#eef1f5;--dim:#9aa4b2;--brass:#d9b45f;--line:#273142;--yes:#8fd694;--no:#e58e7a;--display:"Bricolage Grotesque","Trebuchet MS",sans-serif;--body:"Source Sans 3","Segoe UI",sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bench);color:var(--ink);font:15px/1.5 var(--body)}
+a{color:var(--brass)}
+h1,h2,h3{font-family:var(--display);margin:0}
+h2{font-size:24px;line-height:1.2;margin-bottom:6px}
+h3{font-size:12px;font-family:var(--body);letter-spacing:.09em;text-transform:uppercase;color:var(--brass);margin:22px 0 8px}
+p{margin:0 0 8px}
+.meta{color:var(--dim);font-size:13.5px}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+.top{position:sticky;top:0;z-index:20;background:var(--bench);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px;padding:10px max(16px,env(safe-area-inset-left));flex-wrap:wrap}
+.brand{font:700 18px var(--display);letter-spacing:.02em;margin-right:6px;background:none;border:0;padding:0}
+.tabs{display:flex;gap:2px;padding:2px;background:var(--bench2);border:1px solid var(--line);border-radius:8px}
+.tabs button{background:none;border:0;border-radius:6px;padding:6px 14px;color:var(--dim);font-weight:600;font-size:13.5px}
+.tabs button[aria-current=page]{background:var(--bench3);color:var(--ink)}
+.tools{margin-left:auto;display:flex;gap:10px;align-items:center;position:relative}
+.tools input{background:var(--bench2);border:1px solid var(--line);border-radius:8px;color:var(--ink);padding:6px 10px;width:200px;font:inherit;font-size:13.5px}
+.link{background:none;border:0;padding:0;color:var(--dim);font-weight:600;font-size:13.5px}.link:hover{color:var(--ink)}
+.sugg{position:absolute;right:60px;top:38px;width:280px;background:#131821;border:1px solid var(--line);border-radius:10px;z-index:30;max-height:320px;overflow:auto;box-shadow:0 12px 30px #0008}
+.sugg button{display:flex;justify-content:space-between;gap:8px;width:100%;background:none;border:0;border-bottom:1px solid var(--line);padding:8px 12px;text-align:left}.sugg button:hover,.sugg button:focus{background:var(--bench3)}
+main{max-width:1100px;margin:0 auto;padding:22px max(16px,env(safe-area-inset-left)) 60px}
+.card{background:var(--bench2);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.tile{display:block;text-align:left;width:100%;background:var(--bench2);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.tile:hover{border-color:var(--brass)}.tile b{display:block;font:700 16px var(--display)}
+.chip{display:inline-block;border:1px solid var(--line);background:var(--bench);border-radius:999px;padding:1px 9px;font-size:12.5px;color:var(--brass);font-weight:600;margin-right:4px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;vertical-align:-1px;margin-right:5px}
+.btn{background:var(--brass);border:0;border-radius:8px;color:#14181f;padding:10px 18px;font-weight:700}
+.btn[disabled]{opacity:.45;cursor:default}
+.quiet{background:var(--bench);border:1px solid var(--line);border-radius:8px;padding:9px 14px;font-weight:600}.quiet:hover{border-color:var(--brass)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.crumbs{font-size:13.5px;color:var(--dim);margin-bottom:10px}.crumbs button{background:none;border:0;padding:0;color:var(--brass);text-decoration:underline;text-underline-offset:2px}
+/* strip */
+.strip{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--bench)}
+.strip>div{padding:10px 12px;min-height:72px}.strip>div+div{border-left:2px solid var(--line)}
+.strip h4{margin:0 0 6px;font:700 12px var(--body);letter-spacing:.08em;text-transform:uppercase}
+.strip .f h4{color:var(--yes)}.strip .a h4{color:var(--no)}
+.dots{display:flex;flex-wrap:wrap;gap:4px}
+.dots button{width:15px;height:15px;border-radius:50%;border:1px solid #0006;padding:0}.dots button:hover,.dots button:focus-visible{outline:2px solid var(--ink);outline-offset:1px}
+.pcount{font-size:13px;color:var(--dim);margin-top:6px}
+/* positions */
+.pos{border-top:1px solid var(--line);padding:12px 0}
+.pos .s{font:600 16.5px/1.35 var(--display)}
+.tag{display:inline-block;font-size:11.5px;font-weight:700;padding:1px 8px;border-radius:999px;margin-right:6px;vertical-align:1px;color:#10201b}
+.tag.for{background:var(--yes)}.tag.against{background:var(--no)}
+.mk{font-size:12.5px;font-weight:600;border-radius:999px;padding:1px 9px;margin-left:4px;border:1px solid var(--line)}
+.mk.with{color:var(--yes)}.mk.vs{color:var(--no);border-color:var(--no)}
+details.sp{margin:6px 0 0 0;border-left:3px solid var(--line);padding:2px 0 2px 10px}
+details.sp summary{cursor:pointer;color:var(--ink)}
+.sp .ex{color:var(--ink);font-size:14.5px}.sp .full{white-space:pre-wrap;font-size:14px;color:#cfd6e0;margin-top:6px;max-height:340px;overflow:auto;padding:8px;background:var(--bench);border-radius:8px}
+/* bars */
+.bar{display:grid;grid-template-columns:minmax(110px,190px) 1fr 54px;gap:8px;align-items:center;font-size:13.5px;margin:3px 0}
+.bar .t{position:relative;height:12px;background:var(--bench)}.bar .t:before{content:"";position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:var(--dim)}
+.bar .t i{position:absolute;top:2px;height:8px;border-radius:2px}
+.bar .t.pl i{left:0;background:var(--brass)}
+.bar a,.bar button.l{background:none;border:0;padding:0;text-align:left;color:var(--ink)}
+.v{text-align:right;color:var(--dim);font-variant-numeric:tabular-nums}
+.mrow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 10px;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);padding:9px 0}
+.mrow:hover b{color:var(--brass)}.mrow small{grid-column:1/3;color:var(--dim);font-size:13px}
+.mapwrap{position:relative}canvas{display:block;width:100%;height:520px;border-radius:10px;background:var(--bench);touch-action:pan-y}canvas.orbit{touch-action:none;cursor:grab}
+.legend{display:flex;flex-wrap:wrap;gap:6px 10px;margin-top:8px;font-size:13px}
+.legend button{background:none;border:1px solid var(--line);border-radius:999px;padding:2px 10px}.legend button[aria-pressed=false]{opacity:.4}
+.tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--bench);padding:4px 9px;border-radius:6px;font-size:13px;z-index:50;display:none}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}.seg button{background:none;border:0;padding:5px 14px;font-weight:600;font-size:13.5px}.seg button[aria-pressed=true]{background:var(--brass);color:#14181f}
+.ans{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
+.ans button{background:var(--bench);border:1px solid var(--line);border-radius:10px;padding:14px;text-align:left;font-weight:600}.ans button:hover{border-color:var(--brass)}.ans button small{display:block;font-weight:400;color:var(--dim);margin-top:4px}
+.ans button.y{border-left:4px solid var(--yes)}.ans button.n{border-left:4px solid var(--no)}
+.prog{height:5px;background:var(--line);border-radius:3px;overflow:hidden;margin:6px 0 14px}.prog i{display:block;height:100%;background:var(--brass)}
+.pickc{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}.pickc button{background:var(--bench);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-weight:600}.pickc button[aria-pressed=true]{background:var(--brass);color:#14181f;border-color:var(--brass)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.ag{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin-top:4px}.ag i{display:block;height:100%;background:var(--brass)}
+.note{border-left:3px solid var(--brass);padding:6px 12px;color:var(--dim);font-size:14px;background:var(--bench2);border-radius:0 8px 8px 0}
+@media(max-width:760px){.two{grid-template-columns:1fr}.tools{margin-left:0;width:100%}.tools input{flex:1;width:auto}.sugg{right:0;left:0;width:auto}.bar{grid-template-columns:100px 1fr 46px}h2{font-size:21px}canvas{height:380px}.ans{grid-template-columns:1fr}.strip{grid-template-columns:1fr}.strip>div+div{border-left:0;border-top:2px solid var(--line)}}
+</style>
+</head>
+<body>
+<header class="top">
+ <button class="brand" data-go="#home">MP3D</button>
+ <nav class="tabs" aria-label="Sections"><button data-go="#space" id="t-space">The space</button><button data-go="#play" id="t-play">Find my place</button><button data-go="#topics" id="t-topics">Topics</button></nav>
+ <div class="tools"><input id="q" type="search" placeholder="Find MP by name" aria-label="Find an MP by name" autocomplete="off"><button class="link" data-go="#about">About this data</button><div class="sugg" id="sugg" hidden></div></div>
+</header>
+<main id="m"></main>
+<div class="tip" id="tip"></div>
+<script>
+const D=__DATA__;
+const $=id=>document.getElementById(id);
+const E=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const F=D.fights,PC=D.pcol,SP=D.space,ST=D.stats,PS=D.P;
+const col=p=>PC[p]||"#8a94a3";
+const pct=x=>Math.round(x*100)+"%";
+const STATUS={fight:"Two-sided: at least 2 MPs on each side",one_short:"One short: one side has only 1 MP",one_sided:"One-sided: no MP found against"};
+// ---- MP index
+const MP={};
+F.forEach(f=>["for","against"].forEach(k=>f[k].forEach(m=>{const e=MP[m.id]||(MP[m.id]={id:m.id,name:m.mp,party:m.party,pos:[]});e.pos.push({f:f.i,side:k==="for"?1:-1,st:m.st,n:m.n,p:m.p});})));
+const MPL=Object.values(MP);
+// party majority per fight (positioned MPs of the party)
+function partyMark(m,pos){const f=F[pos.f];let a=0,b=0,n=0;["for","against"].forEach(k=>f[k].forEach(x=>{if(x.party===m.party&&x.id!==m.id){n++;(k==="for"?a++:b++)}}));
+ if(n<3||a===b)return null;const maj=a>b?1:-1;return{with:maj===pos.side,n,a,b};}
+const topicsAll=ST.all_topics, topicFights=t=>F.filter(f=>f.topic===t);
+const GAME=F.filter(f=>f.status==="fight");
+const topicsWithGame=[...new Set(GAME.map(f=>f.topic))];
+const sideText=(f,side)=>side>0?(f.fm||"For: "+f.label):(f.am||"Against: "+f.label);
+// ---- routing
+const Q=new URLSearchParams(location.hash.slice(1).includes("=")?location.hash.slice(1):"");
+function route(){const h=location.hash.slice(1);const [k,v]=h.includes("=")?[h.split("=")[0],decodeURIComponent(h.slice(h.indexOf("=")+1))]:[h||"home",""];
+ document.querySelectorAll(".tabs button").forEach(b=>b.removeAttribute("aria-current"));
+ const tab={space:"space",play:"play",q:"play",results:"play",topics:"topics",topic:"topics",fight:"topics",mp:"space"}[k];if(tab)$("t-"+tab).setAttribute("aria-current","page");
+ const m=$("m");
+ if(k==="mp"&&MP[v.split("&")[0]]){m.innerHTML=viewMP(MP[v.split("&")[0]]);if(v.includes("&open")){const d=m.querySelectorAll("details.sp");[0,1].forEach(j=>{if(d[j]){d[j].open=true;if(j==0)d[j].querySelector("details").open=true}})}}
+ else if(k==="topic")m.innerHTML=viewTopic(v);
+ else if(k==="fight"&&F[+v])m.innerHTML=viewFight(F[+v]);
+ else if(k==="topics")m.innerHTML=viewTopics();
+ else if(k==="space"){m.innerHTML=viewSpace();initMap("mapMain")}
+ else if(k==="play"){playView()}
+ else if(k==="q"){G.order=buildOrder();G.i=+v||0;G.step="q";playView()}
+ else if(k==="results"){if(v==="demo")demo();playView(true)}
+ else if(k==="about")m.innerHTML=viewAbout();
+ else m.innerHTML=viewHome();
+ window.scrollTo(0,0);bindMain();}
+addEventListener("hashchange",route);
+document.addEventListener("click",e=>{const g=e.target.closest("[data-go]");if(g){e.preventDefault();location.hash=g.dataset.go}});
+// ---- search
+const qi=$("q"),sg=$("sugg");
+qi.addEventListener("input",()=>{const v=qi.value.trim().toLowerCase();if(v.length<2){sg.hidden=true;return}
+ const r=MPL.filter(m=>m.name.toLowerCase().includes(v)).sort((a,b)=>b.pos.length-a.pos.length).slice(0,8);
+ sg.innerHTML=r.map(m=>`<button data-go="#mp=${m.id}"><span><span class="dot" style="background:${col(m.party)}"></span>${E(m.name)}</span><span class="meta">${E(m.party)} · ${m.pos.length}</span></button>`).join("")||'<p class="meta" style="padding:10px">No MP with positions in this data matches.</p>';sg.hidden=false});
+qi.addEventListener("keydown",e=>{if(e.key==="Enter"){const b=sg.querySelector("button");if(b)b.click()}if(e.key==="Escape")sg.hidden=true;if(e.key==="ArrowDown"){const b=sg.querySelector("button");if(b){e.preventDefault();b.focus()}}});
+sg.addEventListener("click",e=>{if(e.target.closest("button")){sg.hidden=true;qi.value=""}});
+sg.addEventListener("keydown",e=>{const bs=[...sg.querySelectorAll("button")],i=bs.indexOf(document.activeElement);if(e.key==="ArrowDown"&&bs[i+1]){e.preventDefault();bs[i+1].focus()}if(e.key==="ArrowUp"){e.preventDefault();(bs[i-1]||qi).focus()}});
+// ---- views
+const mpLink=m=>`<button class="link" style="color:var(--ink)" data-go="#mp=${m.id}">${E(m.name||m.mp)}</button>`;
+function viewHome(){return `<h2 style="font-size:32px;margin-top:10px">Where do you sit in this Parliament?</h2>
+<p class="meta" style="max-width:640px;font-size:16px">${ST.fights} specific policy fights from the biggest contested debates, and what ${ST.mps} MPs actually said about each. Answer ${GAME.length} questions to see which MPs and parties you agree with, or click any MP to read their positions and the speeches behind them.</p>
+<div class="row" style="margin:16px 0"><button class="btn" data-go="#play">Find my place</button><button class="quiet" data-go="#topics">Browse topics</button><button class="quiet" data-go="#space">See the space</button></div>
+<h3>Today's fights</h3><div class="grid">${topicsWithGame.map(t=>`<button class="tile" data-go="#topic=${encodeURIComponent(t)}"><b>${E(t)}</b><span class="meta">${GAME.filter(f=>f.topic===t).length} two-sided fight${GAME.filter(f=>f.topic===t).length>1?"s":""}</span></button>`).join("")}</div>
+<p class="note" style="margin-top:18px">First pass. ${ST.speeches?ST.speeches.toLocaleString()+" speeches":"Speeches"} read by an AI model and partly checked. <button class="link" style="color:var(--brass)" data-go="#about">About this data</button></p>`}
+function viewTopics(){return `<h2>Topics</h2><p class="meta">Each topic lists the specific fights found in it. A fight is two-sided when at least 2 MPs were found on each side.</p><div class="grid">${topicsAll.map(t=>{const fs=topicFights(t),g=fs.filter(f=>f.status==="fight").length;
+ return `<button class="tile" data-go="#topic=${encodeURIComponent(t)}"><b>${E(t)}</b><span class="meta">${fs.length?(g?g+" two-sided fight"+(g>1?"s":""):"No two-sided fight")+(fs.length-g?" · "+(fs.length-g)+" other":""):"No fights found yet"}</span></button>`}).join("")}</div>`}
+function viewTopic(t){const fs=topicFights(t),g=fs.filter(f=>f.status==="fight");
+ const ts=ST.topic_stats[t];
+ return `<div class="crumbs"><button data-go="#topics">Topics</button> / ${E(t)}</div><h2>${E(t)}</h2>
+ ${ts?`<p class="meta">${ts.passages} speeches read in this topic.</p>`:""}
+ ${!fs.length?'<p class="note">No fight was found in this topic. That means no specific measure had enough positioned MPs, not that nobody cares.</p>':!g.length?'<p class="note">No two-sided fight in this topic: every measure found has MPs on one side only, or just one on the other.</p>':""}
+ ${fs.sort((a,b)=>(a.status==="fight"?0:1)-(b.status==="fight"?0:1)).map(f=>fightCard(f)).join("")}`}
+function stripHTML(f){const dots=(arr,s)=>arr.slice().sort((a,b)=>(a.party>b.party)-(a.party<b.party)).map(m=>`<button style="background:${col(m.party)}" data-go="#mp=${m.id}" aria-label="${E(m.mp)}, ${E(m.party)}" data-tip="${E(m.mp)} (${E(m.party)})"></button>`).join("");
+ const pcs=arr=>Object.entries(arr.reduce((o,m)=>(o[m.party]=(o[m.party]||0)+1,o),{})).sort((a,b)=>b[1]-a[1]).map(([p,n])=>`<span style="color:${col(p)}">●</span> ${E(p)} ${n}`).join(" · ");
+ return `<div class="strip"><div class="f"><h4>For · ${f.for.length} MP${f.for.length===1?"":"s"}</h4><div class="dots">${dots(f.for)}</div><div class="pcount">${pcs(f.for)||"No MP found"}</div></div><div class="a"><h4>Against · ${f.against.length} MP${f.against.length===1?"":"s"}</h4><div class="dots">${dots(f.against)}</div><div class="pcount">${pcs(f.against)||"No MP found"}</div></div></div>`}
+function fightCard(f){return `<div class="card"><button class="link" style="color:var(--ink);font:700 18px var(--display);text-align:left" data-go="#fight=${f.i}">${E(f.label)}</button><div class="meta" style="margin:2px 0 8px">${E(STATUS[f.status])}</div>${f.desc?`<p class="meta">${E(f.desc)}</p>`:""}${stripHTML(f)}</div>`}
+function viewFight(f){const tm=(arr)=>arr.slice().sort((a,b)=>b.n-a.n).map(m=>`<button class="mrow" data-go="#mp=${m.id}"><b><span class="dot" style="background:${col(m.party)}"></span>${E(m.mp)}</b><span class="meta">${E(m.party)} · ${m.n} speech${m.n===1?"":"es"}</span></button>`).join("")||'<p class="meta">Nobody found.</p>';
+ return `<div class="crumbs"><button data-go="#topics">Topics</button> / <button data-go="#topic=${encodeURIComponent(f.topic)}">${E(f.topic)}</button></div><h2>${E(f.label)}</h2>
+ ${f.desc?`<p>${E(f.desc)}</p>`:""}<p class="meta">${E(STATUS[f.status])}</p>
+ ${f.fm||f.am?`<div class="two" style="margin:8px 0"><div class="note" style="border-color:var(--yes)"><b>For means:</b> ${E(f.fm)}</div><div class="note" style="border-color:var(--no)"><b>Against means:</b> ${E(f.am)}</div></div>`:""}
+ <div style="margin:12px 0">${stripHTML(f)}</div>
+ <div class="two"><div><h3>For</h3>${tm(f.for)}</div><div><h3>Against</h3>${tm(f.against)}</div></div>`}
+function speechHTML(pid,label){const p=PS[pid];if(!p)return"";
+ return `<details class="sp"><summary>${E(p.date)} · ${E(p.debate||"Debate")}</summary><p class="ex">${E(p.ex)}</p><details><summary class="meta">Read the full speech</summary><div class="full">${E(p.full)}</div></details>${p.url?`<p class="meta" style="margin-top:6px"><a href="${E(p.url)}" target="_blank" rel="noopener noreferrer">Open the source on TheyWorkForYou ↗</a></p>`:""}</details>`}
+function viewMP(m){const byT={};m.pos.forEach(p=>(byT[F[p.f].topic]=byT[F[p.f].topic]||[]).push(p));
+ const nsp=m.pos.reduce((a,p)=>a+p.n,0);
+ return `<div class="crumbs"><button data-go="#space">The space</button> / MP</div>
+ <h2><span class="dot" style="background:${col(m.party)};width:14px;height:14px"></span>${E(m.name)}</h2>
+ <p class="meta">${E(m.party)} · ${m.pos.length} position${m.pos.length===1?"":"s"} on ${Object.keys(byT).length} topic${Object.keys(byT).length===1?"":"s"} · ${nsp} speech${nsp===1?"":"es"} behind them</p>
+ ${Object.entries(byT).map(([t,ps])=>`<h3>${E(t)}</h3>`+ps.map(p=>{const f=F[p.f],mk=partyMark(m,p);
+  return `<div class="pos"><div class="s"><span class="tag ${p.side>0?"for":"against"}">${p.side>0?"For":"Against"}</span>${E(sideText(f,p.side).replace(/^(For|Against): /,""))}${mk?`<span class="mk ${mk.with?"with":"vs"}" title="${mk.n} party colleagues positioned: ${mk.a} for, ${mk.b} against">${mk.with?"with party":"against most of their party"}</span>`:""}</div>
+  ${f.desc?`<div class="meta">${E(f.desc)}</div>`:""}<div class="meta" style="margin:2px 0 4px">${p.n} speech${p.n===1?"":"es"} · <button class="link" style="color:var(--brass)" data-go="#fight=${f.i}">see everyone on this fight</button></div>${p.p.map(speechHTML).join("")}</div>`}).join("")).join("")}`}
+// ---- map
+const AX=SP.axes;let MAPST={yaw:-.6,pitch:.25,dim:2,ax:[0,1],hide:{},you:null,pts:null};
+const MAPPTS=Object.entries(SP.xyz).map(([id,xyz])=>({id:+id,xyz,m:MP[id]})).filter(p=>p.m);
+function viewSpace(){return `<h2>The space</h2><p class="meta" style="max-width:700px">Each dot is an MP with scored positions on at least 2 topics (${SP.n_mps}). Closer dots took similar sides on the same topics. This view is party-blind, so parties separate. Click a dot to read their positions.</p>
+ <div class="card"><div class="row" style="margin-bottom:8px"><div class="seg" role="group" aria-label="Map view"><button data-dm="2" aria-pressed="${MAPST.dim===2}">2D</button><button data-dm="3" aria-pressed="${MAPST.dim===3}">3D</button></div><span class="meta" id="axlabel"></span></div>
+ <div class="mapwrap"><canvas id="mapMain" tabindex="0" role="img" aria-label="Map of ${SP.n_mps} MPs. Use Find MP to read a particular MP."></canvas></div><div class="legend" id="legend"></div></div>
+ ${axesHTML(false)}`}
+function axesHTML(showYou){return `<h3>What the axes seem to pick up</h3><p class="meta">Each bar is a topic's signed pull on the axis, biggest first. A topic with the opposite sign sits at the other end. Topic scales are oriented so the Labour side is positive.</p>`+AX.map((a,k)=>{const mx=Math.max(...a.loadings.map(l=>Math.abs(l.v)))||1;
+ return `<div class="card"><b>Axis ${k+1}</b> <span class="meta">${pct(a.spread)} of the spread between MPs · ${pct(a.party)} of it is party${showYou&&MAPST.you?` · <span style="color:var(--brass)">you: ${MAPST.you[k]>0?"+":""}${MAPST.you[k].toFixed(2)}</span>`:""}</span><p style="margin:6px 0 8px">${E(a.text)}</p>${a.loadings.map(l=>`<div class="bar"><button class="l" data-go="#topic=${encodeURIComponent(l.topic)}">${E(l.topic)}</button><div class="t"><i style="${l.v>0?"left:50%":"right:50%"};width:${(Math.abs(l.v)/mx*50).toFixed(1)}%;background:${l.v>0?"var(--brass)":"var(--dim)"}"></i></div><span class="v">${l.v>0?"+":""}${l.v.toFixed(2)}</span></div>`).join("")}</div>`}).join("")}
+function initMap(id){const cv=$(id);if(!cv)return;MAPST.cv=cv;
+ const parties=[...new Set(MAPPTS.map(p=>p.m.party))].sort((a,b)=>MAPPTS.filter(p=>p.m.party===b).length-MAPPTS.filter(p=>p.m.party===a).length);
+ const lg=$("legend");if(lg){lg.innerHTML=parties.map(p=>`<button aria-pressed="${!MAPST.hide[p]}" data-pp="${E(p)}"><span class="dot" style="background:${col(p)}"></span>${E(p)} ${MAPPTS.filter(x=>x.m.party===p).length}</button>`).join("");lg.onclick=e=>{const b=e.target.closest("[data-pp]");if(!b)return;MAPST.hide[b.dataset.pp]=!MAPST.hide[b.dataset.pp];initMap(id)}}
+ document.querySelectorAll("[data-dm]").forEach(b=>b.onclick=()=>{MAPST.dim=+b.dataset.dm;document.querySelectorAll("[data-dm]").forEach(x=>x.setAttribute("aria-pressed",String(+x.dataset.dm===MAPST.dim)));drawMap()});
+ cv.classList.toggle("orbit",MAPST.dim===3);
+ let drag=null;cv.onpointerdown=e=>{if(MAPST.dim===3){drag=[e.clientX,e.clientY];cv.setPointerCapture(e.pointerId)}};
+ cv.onpointerup=()=>drag=null;
+ cv.onpointermove=e=>{if(drag){MAPST.yaw+=(e.clientX-drag[0])*.008;MAPST.pitch=Math.max(-1.4,Math.min(1.4,MAPST.pitch+(e.clientY-drag[1])*.008));drag=[e.clientX,e.clientY];drawMap();return}
+  const h=hit(e);const t=$("tip");if(h){t.style.display="block";t.textContent=h.m.name+" ("+h.m.party+")";t.style.left=e.clientX+12+"px";t.style.top=e.clientY+12+"px";cv.style.cursor="pointer"}else{t.style.display="none";cv.style.cursor=MAPST.dim===3?"grab":"default"}};
+ cv.onpointerleave=()=>$("tip").style.display="none";
+ cv.onclick=e=>{const h=hit(e);if(h)location.hash="#mp="+h.id};
+ drawMap()}
+function hit(e){const r=MAPST.cv.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;let b=null,bd=100;(MAPST.scr||[]).forEach(s=>{const d=(s.x-x)**2+(s.y-y)**2;if(d<bd){bd=d;b=s.p}});return b}
+function drawMap(){const cv=MAPST.cv;if(!cv||!cv.isConnected)return;const dpr=devicePixelRatio||1,r=cv.getBoundingClientRect(),W=r.width,H=r.height;cv.width=W*dpr;cv.height=H*dpr;const c=cv.getContext("2d");c.scale(dpr,dpr);c.clearRect(0,0,W,H);
+ const sd=[0,1,2].map(i=>{const v=MAPPTS.map(p=>p.xyz[i]);const mu=v.reduce((a,b)=>a+b,0)/v.length;return Math.sqrt(v.reduce((a,b)=>a+(b-mu)**2,0)/v.length)||1});
+ const norm=xyz=>xyz.map((v,i)=>v/sd[i]/2.3);
+ const proj=xyz=>{const n=norm(xyz);if(MAPST.dim===2){const a=MAPST.ax;return{x:W/2+n[a[0]]*W*.42,y:H/2-n[a[1]]*H*.42,z:0,s:1}}
+  const cy=Math.cos(MAPST.yaw),sy=Math.sin(MAPST.yaw),cp=Math.cos(MAPST.pitch),sp=Math.sin(MAPST.pitch);let x=n[0]*cy+n[2]*sy,z=-n[0]*sy+n[2]*cy,y=n[1]*cp-z*sp;z=n[1]*sp+z*cp;const k=1/(1.8-z*.5);return{x:W/2+x*W*.38*k*1.4,y:H/2-y*H*.38*k*1.4,z,s:k*1.3}};
+ c.strokeStyle="#273142";c.lineWidth=1;
+ if(MAPST.dim===2){c.beginPath();c.moveTo(W/2,10);c.lineTo(W/2,H-10);c.moveTo(10,H/2);c.lineTo(W-10,H/2);c.stroke();c.fillStyle="#9aa4b2";c.font="12px 'Source Sans 3',sans-serif";c.fillText("Axis "+(MAPST.ax[0]+1)+" →",W-80,H/2-6);c.fillText("Axis "+(MAPST.ax[1]+1)+" ↑",W/2+6,18);const al=$("axlabel");if(al)al.textContent="Horizontal: axis "+(MAPST.ax[0]+1)+" · vertical: axis "+(MAPST.ax[1]+1)}
+ else{const al=$("axlabel");if(al)al.textContent="Drag to rotate"}
+ const pts=MAPPTS.filter(p=>!MAPST.hide[p.m.party]).map(p=>({p,...proj(p.xyz)})).sort((a,b)=>a.z-b.z);
+ MAPST.scr=pts;
+ pts.forEach(s=>{c.globalAlpha=MAPST.you?.55:.9;c.fillStyle=col(s.p.m.party);c.beginPath();c.arc(s.x,s.y,Math.max(2.5,Math.min(6,2+s.p.m.pos.length*.5))*(MAPST.dim===3?s.s:1),0,7);c.fill()});c.globalAlpha=1;
+ if(MAPST.you){const y=proj(MAPST.you);c.fillStyle="#d9b45f";c.strokeStyle="#0e1117";c.lineWidth=2;c.font="bold 22px sans-serif";c.textAlign="center";c.strokeText("★",y.x,y.y+7);c.fillText("★",y.x,y.y+7);c.font="600 12px 'Source Sans 3',sans-serif";c.fillText("You",y.x,y.y-14);c.textAlign="left"}
+ if(MAPST.hl){MAPST.hl.forEach(id=>{const p=MAPPTS.find(q=>q.id===id);if(!p)return;const s=proj(p.xyz);c.strokeStyle="#eef1f5";c.lineWidth=1.5;c.beginPath();c.arc(s.x,s.y,8,0,7);c.stroke()})}}
+addEventListener("resize",()=>drawMap());
+// ---- game
+let G={step:"start",star:{},order:[],i:0,ans:{}};
+function saveG(){try{localStorage.setItem("mp3d2",JSON.stringify({ans:G.ans,star:G.star}))}catch(e){}}
+try{const s=JSON.parse(localStorage.getItem("mp3d2")||"{}");G.ans=s.ans||{};G.star=s.star||{}}catch(e){}
+function buildOrder(){const first=topicsWithGame.filter(t=>G.star[t]),rest=topicsWithGame.filter(t=>!G.star[t]);const lists=[...first,...rest].map(t=>GAME.filter(f=>f.topic===t));
+ const out=[];let more=true,r=0;const grp=[first.map(t=>GAME.filter(f=>f.topic===t)),rest.map(t=>GAME.filter(f=>f.topic===t))];
+ grp.forEach(gs=>{for(let r=0;gs.some(l=>l.length>r);r++)gs.forEach(l=>{if(l[r])out.push(l[r].i)})});return out}
+function demo(){G.ans={};G.step="results";GAME.forEach((f,j)=>{if(j%7===3)return;G.ans[f.i]=(j%3===1)?-1:1});G.order=buildOrder()}
+function playView(res){if(res)G.step="results";else if(G.step==="results"&&!Object.keys(G.ans).length)G.step="start";const m=$("m");
+ const A=Object.keys(G.ans).length;
+ if(G.step==="start"){m.innerHTML=`<h2>Where would you like to start?</h2><p class="meta" style="max-width:640px">${GAME.length} questions, each a real contested measure from Parliament, across ${topicsWithGame.length} topics. Pick the topics that matter most to you and we ask those first. Answer as many as you like; you can see your place after 3.</p>
+ <div class="pickc" role="group" aria-label="Topics that matter to you">${topicsWithGame.map(t=>`<button aria-pressed="${!!G.star[t]}" data-star="${E(t)}">${E(t)} <span class="meta">${GAME.filter(f=>f.topic===t).length}</span></button>`).join("")}</div>
+ <div class="row"><button class="btn" id="go">${A?"Start again":"Start"}</button>${A>=3?'<button class="quiet" data-go="#results=mine">See my place</button>':""}</div>`}
+ else if(G.step==="q"){const f=F[G.order[G.i]];const n=G.order.length;
+  m.innerHTML=`<p class="meta">Question ${G.i+1} of ${n} · ${E(f.topic)}</p><div class="prog"><i style="width:${(G.i+1)/n*100}%"></i></div><h2 style="font-size:28px">${E(f.label)}</h2>${f.desc?`<p class="meta" style="font-size:15.5px">${E(f.desc)}</p>`:""}
+  <div class="ans"><button class="y" data-a="1" aria-pressed="${G.ans[f.i]===1}">I agree<small>${E(f.fm||"I support this")}</small></button><button class="n" data-a="-1" aria-pressed="${G.ans[f.i]===-1}">I disagree<small>${E(f.am||"I oppose this")}</small></button></div>
+  <div class="row"><button class="quiet" data-a="0">Skip</button>${G.i?'<button class="quiet" id="back">← Back</button>':""}<span style="flex:1"></span>${A>=3?'<button class="quiet" data-go="#results=mine">See my place now</button>':""}</div>
+  <details style="margin-top:18px"><summary class="meta">Who is on each side?</summary><div style="margin-top:8px">${stripHTML(f)}</div></details>`}
+ else{m.innerHTML=viewResults()}
+ bindMain();if(G.step==="results")initMap("mapRes")}
+function bindMain(){const m=$("m");
+ m.querySelectorAll("[data-star]").forEach(b=>b.onclick=()=>{G.star[b.dataset.star]=!G.star[b.dataset.star];b.setAttribute("aria-pressed",String(!!G.star[b.dataset.star]))});
+ const go=$("go");if(go)go.onclick=()=>{G.ans={};G.order=buildOrder();G.i=0;G.step="q";saveG();playView()};
+ m.querySelectorAll("[data-a]").forEach(b=>b.onclick=()=>{const f=F[G.order[G.i]],a=+b.dataset.a;if(a)G.ans[f.i]=a;else delete G.ans[f.i];saveG();if(G.i<G.order.length-1){G.i++;playView()}else{location.hash="#results=mine";G.step="results";playView()}});
+ const bk=$("back");if(bk)bk.onclick=()=>{G.i--;playView()};
+ m.querySelectorAll("[data-redo]").forEach(b=>b.onclick=()=>{G.step="start";location.hash="#play";playView()});
+ m.querySelectorAll("[data-tip]").forEach(b=>{b.onmouseenter=e=>{const t=$("tip");t.textContent=b.dataset.tip;t.style.display="block";t.style.left=e.clientX+12+"px";t.style.top=e.clientY+12+"px"};b.onmouseleave=()=>$("tip").style.display="none"});}
+// ---- placement
+function place(){const ans=G.ans;const rows=[];
+ MPL.forEach(m=>{let w=0,ag=0,n=0;const agree=[],dis=[];m.pos.forEach(p=>{const a=ans[p.f];if(!a||F[p.f].status!=="fight"||!p.st)return;const wt=Math.abs(p.st);w+=wt;n++;if(Math.sign(p.st)===a){ag+=wt;agree.push(p)}else dis.push(p)});
+  if(n>=2)rows.push({m,n,score:ag/w,rank:(ag+1)/(w+2),agree,dis})});
+ rows.sort((a,b)=>b.rank-a.rank);
+ // party agreement
+ const bp={};rows.forEach(r=>(bp[r.m.party]=bp[r.m.party]||[]).push(r.score));
+ const party=Object.entries(bp).filter(([,v])=>v.length>=3).map(([p,v])=>({p,n:v.length,s:v.reduce((a,b)=>a+b,0)/v.length})).sort((a,b)=>b.s-a.s);
+ // per topic lean
+ const lean=[];[...new Set(Object.keys(ans).map(i=>F[i].topic))].forEach(t=>{const acc={};MPL.forEach(m=>m.pos.forEach(p=>{const a=ans[p.f];if(!a||F[p.f].topic!==t||F[p.f].status!=="fight"||!p.st)return;const o=acc[m.party]=acc[m.party]||{w:0,a:0,n:0};const wt=Math.abs(p.st);o.w+=wt;o.n++;if(Math.sign(p.st)===a)o.a+=wt}));
+  const ps=Object.entries(acc).filter(([,o])=>o.n>=3).map(([p,o])=>({p,s:o.a/o.w,n:o.n})).sort((a,b)=>b.s-a.s);lean.push({t,ps,k:Object.keys(ans).filter(i=>F[i].topic===t).length})});
+ // map placement: weighted centroid of the best-agreeing MPs that are on the map
+ const onmap=rows.filter(r=>SP.xyz[r.m.id]).slice(0,25);let you=null;
+ if(onmap.length>=3){const ws=onmap.map(r=>Math.pow(r.rank,3));const sw=ws.reduce((a,b)=>a+b,0);you=[0,1,2].map(i=>onmap.reduce((a,r,j)=>a+ws[j]*SP.xyz[r.m.id][i],0)/sw)}
+ return{rows,party,lean,you,onmap}}
+function mpRow(r,kind){const lab=(arr)=>arr.slice(0,3).map(p=>`<li>${E(F[p.f].label)}</li>`).join("");
+ return `<div class="card" style="margin:8px 0"><div class="row" style="justify-content:space-between"><button class="link" style="color:var(--ink);font:700 17px var(--display)" data-go="#mp=${r.m.id}"><span class="dot" style="background:${col(r.m.party)}"></span>${E(r.m.name)}</button><span><b>${pct(r.score)}</b> <span class="meta">of ${r.n} shared</span></span></div><div class="ag"><i style="width:${r.score*100}%"></i></div><div class="meta" style="margin-top:4px">${E(r.m.party)}</div>
+ ${r.agree.length?`<p style="margin:6px 0 0"><b style="color:var(--yes)">You agree on</b></p><ul style="margin:2px 0 0 18px;padding:0;font-size:14px">${lab(r.agree)}</ul>`:""}${r.dis.length?`<p style="margin:6px 0 0"><b style="color:var(--no)">You differ on</b></p><ul style="margin:2px 0 0 18px;padding:0;font-size:14px">${lab(r.dis)}</ul>`:""}<p style="margin:8px 0 0"><button class="link" style="color:var(--brass)" data-go="#mp=${r.m.id}">Read their positions and speeches ↗</button></p></div>`}
+function viewResults(){const A=Object.keys(G.ans).length;const R=place();MAPST.you=R.you;MAPST.hl=R.onmap.slice(0,5).map(r=>r.m.id);
+ if(A<2||R.rows.length<3)return `<h2>Not enough answers yet</h2><p class="meta">We need at least 2 shared fights with 3 or more MPs to compare you. You have answered ${A}. Missing answers are not disagreement.</p><button class="btn" data-redo>Answer more</button>`;
+ const top=R.rows.slice(0,5),bot=R.rows.slice(-5).reverse();
+ return `<h2>Your place</h2><p class="meta">${A} answer${A===1?"":"s"}; ${R.rows.length} MPs have positions on at least 2 of the fights you answered. Agreement = share of shared fights where the MP took your side, weighted by how clear their stance was.</p>
+ <div class="card"><div class="meta" style="margin-bottom:6px">${R.you?"The star is placed at the centre of the MPs who agree with you most (on the map), so it shows where like-minded MPs sit, not a measured coordinate.":"Too few of your matches are on the map to place you; showing the ranked list below."}</div>${R.you?`<div class="row" style="margin-bottom:8px"><div class="seg" role="group" aria-label="Map view"><button data-dm="2" aria-pressed="${MAPST.dim===2}">2D</button><button data-dm="3" aria-pressed="${MAPST.dim===3}">3D</button></div><span class="meta" id="axlabel"></span></div><div class="mapwrap"><canvas id="mapRes" role="img" aria-label="Map of MPs with your position marked by a star. Your closest MPs are ringed. The ranked list below has the same information."></canvas></div>`:""}</div>
+ <div class="two"><div><h3>Closest to you</h3>${top.map(r=>mpRow(r)).join("")}</div><div><h3>Furthest from you</h3>${bot.map(r=>mpRow(r)).join("")}</div></div>
+ <h3>Agreement by party</h3><div class="card">${R.party.length?R.party.map(p=>`<div class="bar" style="grid-template-columns:70px 1fr 90px"><span><span class="dot" style="background:${col(p.p)}"></span>${E(p.p)}</span><div class="ag" style="margin:0"><i style="width:${p.s*100}%;background:${col(p.p)}"></i></div><span class="v">${pct(p.s)} · ${p.n} MPs</span></div>`).join(""):'<p class="meta">Only parties with 3 or more compared MPs are shown, and none qualify yet.</p>'}</div>
+ <h3>Which party side you lean to, by topic</h3><div class="card">${R.lean.map(l=>`<div style="padding:6px 0;border-top:1px solid var(--line)"><b>${E(l.t)}</b> <span class="meta">${l.k} answer${l.k===1?"":"s"}</span><br>${l.ps.length>=2?`You lean to <b style="color:${col(l.ps[0].p)}">${E(l.ps[0].p)}</b> (${pct(l.ps[0].s)}) over ${E(l.ps[l.ps.length-1].p)} (${pct(l.ps[l.ps.length-1].s)}).`:'<span class="meta">Too few positioned MPs per party to say.</span>'}</div>`).join("")}</div>
+ ${axesHTML(true)}
+ <div class="row" style="margin-top:14px"><button class="quiet" data-redo>Answer again</button><button class="quiet" data-go="#about">About this data</button></div>`}
+function viewAbout(){return `<h2>About this data</h2><div class="card"><p>This is a first pass. It covers ${ST.speeches?ST.speeches.toLocaleString():"about 10,000"} speeches from the biggest contested debates of this Parliament, read by an AI model that pulled out which specific measure each MP spoke for or against. The readings are partly checked by hand, not fully.</p>
+ <p>Absence is not a position: an MP who does not appear on a fight simply was not found speaking on it. ${ST.fights} fights were found (${ST.by_status.fight||0} two-sided, ${ST.by_status.one_short||0} one short, ${ST.by_status.one_sided||0} one-sided), with positions for ${ST.mps} MPs.</p>
+ <p>The game asks only the two-sided fights. Your match is the share of shared fights where an MP took your side. MPs with a single position on your answers are left out. The map is built from topic-level scores and is party-blind; your star is placed from your matches, not measured.</p>
+ <p>"With party" and "against most of their party" compare an MP to other positioned MPs of the same party on that fight, shown only when 3 or more colleagues are positioned. Speech excerpts link to the original source on TheyWorkForYou.</p></div>`}
+route();
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+864 claims with a measure; 323 measure groups; 46 with >=3 MPs
+
+CONTESTED (>= 2 MPs each side): 20
+                                                                                                                                             label  for  against  claims
+g                                                                                                                                                                       
+15                                                                                             Require academies to follow the national curriculum   11       20      72
+35                                                                                                               Charge VAT on private school fees   13       29      53
+2                                                                           Require home-educated children to be registered with local authorities   11        6      25
+4                                                                                                            Remove tax breaks for private schools    7        7      22
+5                                                                                                                                Abolish academies    4       11      22
+91                                                                                                                 Ban mobile phone use in schools   12        3      20
+65                                                                                                                           Create Skills England   10        3      20
+18                                                                                                  Introduce a register of children not in school    8        5      17
+36                                                                                                       Require teachers to have qualified status    6        5      17
+28                                                                                           Make it harder to turn failing schools into academies    2        7      15
+0                                                                                                              Require non-QTS teachers in schools    2        4      12
+33                             Require local authorities to invite proposals for academies and other types of school when establishing new schools    4        3      12
+21                                                                                                                 Abolish level 7 apprenticeships    2        4      11
+50                            Transfer IfATE's functions, assets, and liabilities to the Secretary of State to deliver them through Skills England    3        3       9
+61                                                           Impose a 50% cap on faith-based selection criteria for new academies and free schools    3        3       9
+149  Limit secondary school pupils to wearing no more than three (or four if a tie is included) different branded items of school uniform per year    5        2       8
+123                                                                                                Require academies to follow a core of standards    2        3       6
+7                                                                                                                       Introduce an education tax    2        2       5
+3                                                                                 Expand free school meals to lift 100,000 children out of poverty    2        2       5
+40                                                                                                               Abolish the option to home school    2        2       4
+
+BIGGEST ONE-SIDED:
+                                                                                           label  for  against  claims
+g                                                                                                                     
+22                                                         Introduce breakfast clubs for schools   18        1      24
+11  Broaden educational opportunities and skills training (specifically through apprenticeships)   13        0      14
+31       Require home-educating parents to provide detailed split-hour reporting between parents    0        6       7
+76                                                                          Abolish free schools    1        4       6
+19                                     Push children from independent schools into state schools    0        4       5
+27                                               Reduce total education capacity (close schools)    1        4       5
+83                        Pass the Bill to reform skills training and apprenticeships in England    5        0       5
+20                                                    Cut the cost of sending children to school    3        1       5
