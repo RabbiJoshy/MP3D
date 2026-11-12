@@ -14,30 +14,49 @@ ROOT = HERE.parent
 ev = json.loads((RES / "fp2_mp_evidence.json").read_text())
 ts = json.loads((RES / "fp2_topic_space.json").read_text())
 _fj = json.loads((RES / "fp2_fights.json").read_text()); FALL = _fj["fights"]; _tot = _fj["totals"]      # all 242 fights (82 two-sided, 42 one_short, 118 one_sided)
+def _merge_fight_claims(f, es, party_of=None):
+    acc = {}
+    for k in ("mps_for", "mps_against", "mps_both_sides"):
+        for m in f[k]: acc[m["member_id"]] = dict(m, claims=list(m["claims"]))
+    added = 0
+    for e in es:
+        mid = int(e["member_id"])
+        m = acc.setdefault(mid, {"member_id": mid, "name": e["mp"], "party": e.get("party") or (party_of(mid) if party_of else ""), "claims": []})
+        if not any(c["passage_id"] == e["passage_id"] for c in m["claims"]):      # dedupe speech x fight
+            m["claims"].append({"passage_id": e["passage_id"], "measure": f["label"], "side": e["verdict"]}); added += 1
+    f["mps_for"], f["mps_against"], f["mps_both_sides"] = [], [], []
+    for m in acc.values():
+        net = sum(1 if c["side"] == "FOR" else -1 for c in m["claims"])
+        m["stance"] = round(net / len(m["claims"]), 3); m["focus"] = len(m["claims"])
+        f["mps_for" if net > 0 else "mps_against" if net < 0 else "mps_both_sides"].append(m)
+    nf, na = len(f["mps_for"]), len(f["mps_against"])
+    f["status"] = "fight" if nf >= 2 and na >= 2 else "one_short" if min(nf, na) == 1 and max(nf, na) >= 2 else "one_sided"
+    return added
+
 # ---- pilot positions: strict-judge FOR/AGAINST verdicts on claims matched to fp2 fights (pl_core.inject_factory rule), added to the dense verdicts
 def inject_pilot(F):
     j = pd.read_json(ROOT / "data/quick/research_2026_11_10/pl/judge_out.jsonl", lines=True)
     j = j[j.verdict.isin(["FOR", "AGAINST"])]
     by = collections.defaultdict(list)
-    for r in j.itertuples(): by[int(r.fight)].append(r)
-    added = 0
-    for fi, es in by.items():
-        f = F[fi]; acc = {}
-        for k in ("mps_for", "mps_against", "mps_both_sides"):
-            for m in f[k]: acc[m["member_id"]] = dict(m, claims=list(m["claims"]))
-        for e in es:
-            m = acc.setdefault(int(e.member_id), {"member_id": int(e.member_id), "name": e.mp, "party": e.party, "claims": []})
-            if not any(c["passage_id"] == e.passage_id for c in m["claims"]):      # dedupe speech x fight
-                m["claims"].append({"passage_id": e.passage_id, "measure": f["label"], "side": e.verdict}); added += 1
-        f["mps_for"], f["mps_against"], f["mps_both_sides"] = [], [], []
-        for m in acc.values():
-            net = sum(1 if c["side"] == "FOR" else -1 for c in m["claims"])
-            m["stance"] = round(net / len(m["claims"]), 3); m["focus"] = len(m["claims"])
-            f["mps_for" if net > 0 else "mps_against" if net < 0 else "mps_both_sides"].append(m)
-        nf, na = len(f["mps_for"]), len(f["mps_against"])
-        f["status"] = "fight" if nf >= 2 and na >= 2 else "one_short" if min(nf, na) == 1 and max(nf, na) >= 2 else "one_sided"
+    for r in j.itertuples(): by[int(r.fight)].append({"member_id": r.member_id, "mp": r.mp, "party": r.party, "passage_id": r.passage_id, "verdict": r.verdict})
+    added = sum(_merge_fight_claims(F[fi], es) for fi, es in by.items())
     print("pilot positions added:", added)
     return F
+
+# ---- bridge positions: verified targeted-reading additions (research_2026_11_12)
+def inject_bridge(F, members_df):
+    bf = ROOT / "data/quick/research_2026_11_12/bridge/accepted.json"
+    if not bf.exists(): return F
+    by_label = {f["label"]: f for f in F}
+    by = collections.defaultdict(list)
+    for r in json.loads(bf.read_text()):
+        if r.get("verdict") in ("FOR", "AGAINST") and r.get("label") in by_label:
+            by[r["label"]].append(r)
+    party_of = lambda mid: str(members_df.loc[mid, "party"]) if mid in members_df.index else ""
+    added = sum(_merge_fight_claims(by_label[lbl], es, party_of) for lbl, es in by.items())
+    print("bridge positions added:", added)
+    return F
+
 USE_PILOT = "--no-pilot" not in sys.argv
 if USE_PILOT: FALL = inject_pilot(FALL)
 EVF = {f["i"]: f for f in ev["fights"]}                                  # two-sided fights with per-MP claims + stance
@@ -46,6 +65,7 @@ members = pd.read_parquet(ROOT / "data/clean/members.parquet").set_index("member
 for c in ("party", "party_abbr", "constituency", "name"):
     if c in members: members[c] = members[c].fillna("")
 members["party_colour"] = members.party_colour.fillna("888888")
+FALL = inject_bridge(FALL, members)
 
 # ---------------- merge same-bill duplicate fights (generic rules, no hand edits) ----------------
 topic_of = {int(k): v for k, v in ts["topic_of"].items()}
@@ -343,8 +363,10 @@ used_p = {p for v in list(fight_claims.values()) + list(mp_one.values()) for fc 
 
 # passages: reuse fp2's excerpts where present, otherwise cut an excerpt from data/clean/passages.parquet (same method as fp2_build_space_page.py)
 def url(pid):
-    m = re.match(r"uk\.org\.publicwhip/(debate|westminhall)/([^#]+)", pid)
-    return None if not m else f"https://www.theyworkforyou.com/{'debates' if m.group(1) == 'debate' else 'whall'}/?id={m.group(2)}"
+    m = re.match(r"uk\.org\.publicwhip/(debate|westminhall|standing)/([^#]+)", pid)
+    if not m: return None
+    sec = {"debate": "debates", "westminhall": "whall", "standing": "pbc"}[m.group(1)]
+    return f"https://www.theyworkforyou.com/{sec}/?id={m.group(2)}"
 W = lambda s: set(re.findall(r"[a-z]{4,}", s.lower()))
 def excerpt(text, measure, n=380):
     t = " ".join(text.split())
