@@ -44,7 +44,8 @@ const HAQuiz=(()=>{
     const sameSubj=answered.some(j=>info.get(j)&&info.get(j).subj===info.get(k).subj),sameGrp=answered.some(j=>info.get(j)&&info.get(j).grp!=null&&info.get(j).grp===info.get(k).grp);
     const repeat=(sameSubj?.65:1)*(sameGrp?.85:1);
     const qinfo=info.get(k),sal=Math.log2(1+n)*(0.35+(qinfo&&qinfo.r!=null?qinfo.r:0.5));
-    return{k,score:mass*entropy(p)*(1-.75*red)*repeat*sal,coverage:n}}).sort((a,b)=>b.score-a.score||a.k-b.k)}
+    const opener=(answered.length<5&&qinfo&&qinfo.subj==='Conscience (free votes)')?.35:1;
+    return{k,score:mass*entropy(p)*(1-.75*red)*repeat*sal*opener,coverage:n}}).sort((a,b)=>b.score-a.score||a.k-b.k)}
   return{rank,rates}
  }
  /* Visitor position: when `model` ({v, b, ridge}) is supplied, uses the exact same 3D ridge projection

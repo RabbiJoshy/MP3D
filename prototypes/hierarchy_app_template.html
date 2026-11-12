@@ -768,18 +768,19 @@ $('profile').addEventListener('click',e=>{const b=e.target.closest('button');if(
  if(b.classList.contains('why')){const o=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',o);b.parentNode.nextElementSibling.hidden=!o}});
 function hideMP(){drawnMP=null;$('app').classList.remove('mp-open');$('mpq').value='';$('profile').classList.remove('on')}
 addEventListener('keydown',e=>{if(e.key!=='Escape')return;if($('layPop').classList.contains('on')||$('filPop').classList.contains('on')){closePops();return}if(curSel!=null&&!document.querySelector('dialog[open]'))go(sel,null)});
-// ---- you (visitor) star (with smooth glide animation)
-let YOU_ANIM={from:null,cur:null,t0:0,raf:null};
+// ---- you (visitor) star (with smooth glide animation along the answered question's arrow)
+let YOU_ANIM={from:null,cur:null,u:null,t0:0,raf:null};
 function drawYou(nd){if(!YOU||MODE==='rel')return;
  const pos=YOU_ANIM.cur||YOU.p,p=P(pos);ctx.save();
- if(YOU_ANIM.from&&YOU_ANIM.cur){const pf=P(YOU_ANIM.from);ctx.strokeStyle='#ffd45e';ctx.globalAlpha=.45;ctx.lineWidth=2.4;ctx.beginPath();ctx.moveTo(pf[0],pf[1]);ctx.lineTo(p[0],p[1]);ctx.stroke()}
- if(MODE==='quiz'&&Q.step==='q'&&nd.kind==='fight'&&nd.u){
-  const a=P(pos.map((x,j)=>x-nd.u[j]*.55)),b=P(pos.map((x,j)=>x+nd.u[j]*.55));
-  ctx.strokeStyle='#ffd45e';ctx.globalAlpha=.75;ctx.setLineDash([4,4]);ctx.lineWidth=1.8;ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);ctx.stroke();ctx.setLineDash([]);
-  ctx.font='600 11px "Source Sans 3",sans-serif';ctx.fillStyle='#ffd45e';ctx.globalAlpha=.9;ctx.fillText('FOR',b[0]+5,b[1]+3);ctx.fillText('AGAINST',a[0]-46,a[1]+3);
+ const guideU=(YOU_ANIM.from&&YOU_ANIM.u)?YOU_ANIM.u:(MODE==='quiz'&&Q.step==='q'&&nd.kind==='fight'&&nd.u?nd.u:null);
+ if(guideU){
+  const a=P(pos.map((x,j)=>x-guideU[j]*.55)),b=P(pos.map((x,j)=>x+guideU[j]*.55));
+  ctx.strokeStyle='#ffd45e';ctx.globalAlpha=.8;ctx.setLineDash([4,4]);ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);ctx.stroke();ctx.setLineDash([]);
+  ctx.font='700 11px "Source Sans 3",sans-serif';ctx.fillStyle='#ffd45e';ctx.globalAlpha=.95;ctx.fillText('FOR',b[0]+5,b[1]+3);ctx.fillText('AGAINST',a[0]-48,a[1]+3);
  }else if((nd.kind==='fight'||nd.kind==='subject')&&nd.u){const t=pos[0]*nd.u[0]+pos[1]*nd.u[1]+pos[2]*nd.u[2],q=P(nd.u.map(x=>x*t));
   ctx.strokeStyle='#ffd45e';ctx.globalAlpha=.65;ctx.setLineDash([3,4]);ctx.lineWidth=1.4;ctx.beginPath();ctx.moveTo(p[0],p[1]);ctx.lineTo(q[0],q[1]);ctx.stroke();ctx.setLineDash([]);
   ctx.globalAlpha=1;ctx.beginPath();ctx.arc(q[0],q[1],5,0,7);ctx.fillStyle='#0e1117';ctx.fill();ctx.stroke()}
+ if(YOU_ANIM.from&&YOU_ANIM.cur){const pf=P(YOU_ANIM.from);ctx.strokeStyle='#ffd45e';ctx.globalAlpha=.5;ctx.lineWidth=2.6;ctx.beginPath();ctx.moveTo(pf[0],pf[1]);ctx.lineTo(p[0],p[1]);ctx.stroke()}
  ctx.globalAlpha=.26;ctx.fillStyle='#ffd45e';ctx.beginPath();ctx.arc(p[0],p[1],28,0,7);ctx.fill();
  ctx.globalAlpha=1;ctx.translate(p[0],p[1]);ctx.beginPath();for(let k=0;k<10;k++){const a=-Math.PI/2+k*Math.PI/5,r=k%2?8.5:20;ctx.lineTo(Math.cos(a)*r,Math.sin(a)*r)}ctx.closePath();
  ctx.fillStyle='#ffd45e';ctx.strokeStyle='#0e1117';ctx.lineWidth=3.5;ctx.lineJoin='round';ctx.stroke();ctx.lineWidth=1.5;ctx.strokeStyle='#fff';ctx.stroke();ctx.fill();
@@ -802,32 +803,31 @@ const Q={step:'intro',ans:{},star:new Set(),hist:[],idx:0,target:8,pick:new Set(
 const qText=k=>HAQuiz.question(D.fights[k].label);
 function nextFight(){const base=Math.floor(Math.max(0,Q.hist.length-1)/5)*5,used=new Set(Q.hist.slice(Q.hist.length%5===0?Q.hist.length:base).map(k=>D.fights[k].subj));
  const r=QM.rank(Q.ans,{excluded:Q.hist,priorities:[...Q.pick],avoidSubj:used});return r.length?r[0].k:null}
-function updateYou(){const prev=YOU?YOU.p.slice():null,pl=HAQuiz.place(Q.ans,Q.star,D.fights,D.model);YOU=pl?{p:pl.p,n:pl.n}:null;
+function updateYou(u){const prev=YOU?YOU.p.slice():null,pl=HAQuiz.place(Q.ans,Q.star,D.fights,D.model);YOU=pl?{p:pl.p,n:pl.n}:null;
  if(YOU_ANIM.raf){cancelAnimationFrame(YOU_ANIM.raf);YOU_ANIM.raf=null}
- if(!YOU){YOU_ANIM={from:null,cur:null,t0:0,raf:null};return}
- if(!prev){YOU_ANIM={from:null,cur:YOU.p.slice(),t0:0,raf:null};return}
- YOU_ANIM={from:prev,cur:prev.slice(),t0:performance.now(),raf:null};
- const step=now=>{const u=Math.min(1,(now-YOU_ANIM.t0)/480),e=1-(1-u)**3;
+ if(!YOU){YOU_ANIM={from:null,cur:null,u:null,t0:0,raf:null};return}
+ if(!prev){YOU_ANIM={from:null,cur:YOU.p.slice(),u:null,t0:0,raf:null};return}
+ YOU_ANIM={from:prev,cur:prev.slice(),u:u||null,t0:performance.now(),raf:null};
+ const step=now=>{const u_=Math.min(1,(now-YOU_ANIM.t0)/520),e=1-(1-u_)**3;
   YOU_ANIM.cur=YOU_ANIM.from.map((v,j)=>v+(YOU.p[j]-v)*e);draw();
-  if(u<1)YOU_ANIM.raf=requestAnimationFrame(step);
-  else{YOU_ANIM.from=null;YOU_ANIM.cur=YOU.p.slice();YOU_ANIM.raf=null;draw()}};
+  if(u_<1)YOU_ANIM.raf=requestAnimationFrame(step);
+  else{YOU_ANIM.from=null;YOU_ANIM.cur=YOU.p.slice();YOU_ANIM.u=null;YOU_ANIM.raf=null;draw()}};
  YOU_ANIM.raf=requestAnimationFrame(step)}
 function silentSel(s){sel=s;hov=null;try{history.replaceState(null,'',hashStr(sel,curSel))}catch(e){}update(true)}
 function qAdvance(){
  if(Q.idx+1<Q.hist.length)Q.idx++;
- else if(Q.hist.length>=Q.target)Q.step='results';
  else{const n=nextFight();if(n==null)Q.step='results';else{Q.hist.push(n);Q.idx=Q.hist.length-1}}
  renderQuiz();$('qz').scrollTop=0}
-function qAnswer(v){const k=Q.hist[Q.idx];if(v===null){delete Q.ans[k];Q.star.delete(k)}else{Q.ans[k]=v;if(v===0)Q.star.delete(k)}updateYou();qAdvance()}
-function qStart(){Q.hist=[];Q.idx=0;Q.target=8;const n=nextFight();if(n==null){Q.step='results'}else{Q.hist.push(n);Q.step='q'}renderQuiz()}
+function qAnswer(v){const k=Q.hist[Q.idx],u=D.fights[k]&&D.fights[k].u;if(v===null){delete Q.ans[k];Q.star.delete(k)}else{Q.ans[k]=v;if(v===0)Q.star.delete(k)}updateYou(u);qAdvance()}
+function qStart(){Q.hist=[];Q.idx=0;const n=nextFight();if(n==null){Q.step='results'}else{Q.hist.push(n);Q.step='q'}renderQuiz()}
 function openEvidence(i,k){focusF=k;drawnMP=null;setAppMode('explore');go({t:'fight',i:k},i)}
 function sideTxt(v){return v>0?'For':'Against'}
 function renderQuiz(){const el=$('qz');let h='';
  const nAns=Object.keys(Q.ans).length,dir=Object.values(Q.ans).filter(v=>v!==0).length;
  if(Q.step==='intro'){
   if(MODE==='quiz')silentSel({t:'root'});
-  h=`<div class="meta">Find my place</div><h2>Where would you sit in this Parliament?</h2><p>Answer ${Q.target} questions about real fights from Commons debates. Each is a bill or measure that MPs argued over on both sides. The questions come from different subjects and are chosen to tell MPs apart.</p><p class="meta">For and Against place you; Mixed and Skip do not. MPs are matched on the questions you both answered, using only what they actually said. Nothing leaves this page.</p>
-  <p><button class="primary" data-start>Start with ${Q.target} suggested questions &rarr;</button></p><p><button class="linkb" data-choose>or choose which subjects to start with</button></p>${nAns?'<p><button class="qbtn" data-results>View my results</button></p>':''}`}
+  h=`<div class="meta">Find my place</div><h2>Where would you sit in this Parliament?</h2><p>Answer questions about real fights from Commons debates and watch your star move through Parliament's 3D space. Keep going as long as you like, and view your closest MPs anytime.</p><p class="meta">For and Against place you; Mixed and Skip do not. MPs are matched on the questions you both answered, using only what they actually said. Nothing leaves this page.</p>
+  <p><button class="primary" data-start>Start &rarr;</button></p><p><button class="linkb" data-choose>or choose which subjects to start with</button></p>${nAns?'<p><button class="qbtn" data-results>View my results</button></p>':''}`}
  else if(Q.step==='choose'){
   if(MODE==='quiz')silentSel({t:'root'});
   const cnt={};QOK.forEach(k=>{const s=D.fights[k].subj;cnt[s]=(cnt[s]||0)+1});
@@ -835,7 +835,7 @@ function renderQuiz(){const el=$('qz');let h='';
  else if(Q.step==='q'){
   const k=Q.hist[Q.idx],f=D.fights[k],a=Q.ans[k];
   if(MODE==='quiz')silentSel({t:'fight',i:k});
-  h=`<div class="qtop"><button class="qbtn" data-back>&larr; Back</button><span class="meta">Question ${Q.idx+1} of ${Math.max(Q.target,Q.hist.length)}</span><button class="qbtn" data-results ${nAns?'':'disabled'}>Results</button></div><div class="qprog"><i style="width:${Math.round(100*(Q.idx+1)/Math.max(Q.target,Q.hist.length))}%"></i></div>
+  h=`<div class="qtop"><button class="qbtn" data-back>&larr; Back</button><span class="meta">Question ${Q.idx+1} (${nAns} answered)</span><button class="qbtn" data-results ${nAns?'':'disabled'}>Results &rarr;</button></div><div class="qprog"><i style="width:${Math.min(100,Math.round(100*nAns/15))}%"></i></div>
   <div class="meta">${esc(f.subj)}</div><h2 tabindex="-1" id="qtext">${esc(qText(k))}</h2>
   <details class="qctx"><summary>About this fight</summary>${f.desc?`<p>${esc(f.desc)}</p>`:''}<p class="meta">${f.nfor} MPs for and ${f.nag} against were found. The gold line in the map is this fight; its FOR end is where those in favour sit.</p></details>
   <div class="qans"><button class="qopt for" data-a="1" aria-pressed="${a===1}"><b>For</b><span>${esc(f.fm||'In favour')}</span></button><button class="qopt against" data-a="-1" aria-pressed="${a===-1}"><b>Against</b><span>${esc(f.am||'Opposed')}</span></button></div>
@@ -857,7 +857,7 @@ function renderQuiz(){const el=$('qz');let h='';
     h+=matches.slice(0,6).map(m=>{const mp=D.mps[m.i];
      return`<article class="mcard"><div class="mh"><span class="dot" style="background:${mp.col}"></span><div><h4><button class="linkb" data-mp="${m.i}">${esc(mp.n)}</button></h4><div class="meta">${esc(mp.p)}${mp.c?' &middot; '+esc(mp.c):''}<br><b class="ink">${m.hit} of ${m.nShared} agree</b>${m.nShared-m.hit?' &middot; '+(m.nShared-m.hit)+' differ':''}</div></div></div>${m.shared.map(s=>`<div class="mq"><p><b>${esc(D.fights[s.k].label)}</b></p><p>You: <b>${sideTxt(Q.ans[s.k])}</b> &middot; ${esc(mp.n.split(' ').slice(-1)[0])}: <b>${sideTxt(s.sc)}</b> <span class="${s.ok?'ok':'no'}">${s.ok?'agree':'differ'}</span></p><button class="qbtn" data-ev="${m.i}:${s.k}" aria-label="Read ${esc(mp.n)}'s evidence on ${esc(D.fights[s.k].label)}">Read evidence &#8599;</button></div>`).join('')}</article>`}).join('');
     h+=`<h3>Party match</h3><p class="meta">Share of comparable answers that agree, for parties with at least 3 matched MPs.</p>${pm.length?pm.map(a=>`<div class="pm"><span><b>${esc(a.p)}</b></span><span class="b"><i style="width:${a.pct}%;background:${pcount[a.p]?pcount[a.p].col:'#888'}"></i></span><span>${a.pct}%<br><small class="meta">${a.mps} MPs</small></span></div>`).join(''):'<p class="meta">No party has 3 matched MPs yet.</p>'}`}}
-  h+=`<div style="display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 8px">${Q.hist.length<QOK.length?'<button class="primary" data-more>Ask 5 more &rarr;</button>':''}<button class="qbtn" data-review>Review answers</button><button class="qbtn" data-explore>Explore the map &rarr;</button></div><button class="linkb" data-reset>Reset my answers</button>`}
+  h+=`<div style="display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 8px">${Q.hist.length<QOK.length?'<button class="primary" data-more>Continue answering &rarr;</button>':''}<button class="qbtn" data-review>Review answers</button><button class="qbtn" data-explore>Explore the map &rarr;</button></div><button class="linkb" data-reset>Reset my answers</button>`}
  el.innerHTML=h;
  const on=(q,fn)=>el.querySelectorAll(q).forEach(b=>b.onclick=()=>fn(b));
  on('[data-start]',qStart);on('[data-choose]',()=>{Q.step='choose';renderQuiz()});on('[data-intro]',()=>{Q.step='intro';renderQuiz()});
