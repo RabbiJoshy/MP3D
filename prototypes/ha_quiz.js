@@ -43,7 +43,8 @@ const HAQuiz=(()=>{
     const red=Math.max(0,...answered.map(j=>corr.get(Math.min(j,k)+':'+Math.max(j,k))||0));
     const sameSubj=answered.some(j=>info.get(j)&&info.get(j).subj===info.get(k).subj),sameGrp=answered.some(j=>info.get(j)&&info.get(j).grp!=null&&info.get(j).grp===info.get(k).grp);
     const repeat=(sameSubj?.65:1)*(sameGrp?.85:1);
-    return{k,score:mass*entropy(p)*(1-.75*red)*repeat,coverage:n}}).sort((a,b)=>b.score-a.score||a.k-b.k)}
+    const qinfo=info.get(k),sal=Math.log2(1+n)*(0.35+(qinfo&&qinfo.r!=null?qinfo.r:0.5));
+    return{k,score:mass*entropy(p)*(1-.75*red)*repeat*sal,coverage:n}}).sort((a,b)=>b.score-a.score||a.k-b.k)}
   return{rank,rates}
  }
  /* Visitor position: when `model` ({v, b, ridge}) is supplied, uses the exact same 3D ridge projection
