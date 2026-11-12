@@ -163,7 +163,7 @@ blockquote{margin:8px 0 4px;padding:12px 14px;background:var(--bench3);border-le
 .more{margin:2px 0 8px;height:26px;padding:0 4px;border:0;background:none;color:var(--brass);font:600 12px var(--body);text-decoration:underline}
 /* sk15: axis view and key chips */
 .axs{display:flex;flex-wrap:wrap;gap:4px;margin-top:5px}
-.axc{border:1px solid var(--line);background:var(--bench);border-radius:12px;padding:2px 9px;font:inherit;font-size:11.5px;color:var(--dim);text-align:left;line-height:1.3}.axc b{color:var(--brass)}.axc:hover,.axc[aria-pressed=true]{border-color:var(--brass);color:var(--ink)}
+.axc{border:1px solid var(--line);background:var(--bench);border-radius:14px;padding:4px 11px;font:inherit;font-size:12.5px;color:var(--dim);text-align:left;line-height:1.3;cursor:pointer}.axc b{color:var(--brass)}.axc:hover,.axc[aria-pressed=true]{border-color:var(--brass);color:var(--ink)}
 .axk{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin:8px 0 2px}
 .axr{display:grid;grid-template-columns:minmax(0,1fr) 92px 38px;gap:8px;align-items:center;width:100%;text-align:left;border:0;border-top:1px solid var(--line);background:none;padding:6px 2px;font-size:12.5px}
 button.axr:hover{background:var(--bench3)}.axr .axn{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -418,9 +418,13 @@ function draw(){
  ctx.save();ctx.strokeStyle='#2a3445';ctx.lineWidth=1;ctx.beginPath();ctx.arc(cx(),H/2,S,0,7);ctx.stroke();
  if(mode3){ctx.globalAlpha=.55;for(let ax=0;ax<3;ax++){ctx.beginPath();for(let k=0;k<=72;k++){const a=k/72*6.2832,c=Math.cos(a),s=Math.sin(a);const v=ax===0?[0,c,s]:ax===1?[c,0,s]:[c,s,0];const p=P(v);k?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1])}ctx.stroke()}}
  axHit=[];
- if(L.axes){ctx.globalAlpha=.9;ctx.fillStyle=AX===null?DIM:INK;ctx.font='600 11px "Source Sans 3",sans-serif';
-  [[1,0,0],[0,1,0],[0,0,1]].forEach((v,i)=>{if(!mode3&&i===2)return;const a=P(v.map(x=>x*1.12)),t='axis '+(i+1),w=ctx.measureText(t).width;ctx.fillStyle=AX===i?'#d9b45f':DIM;ctx.fillText(t,a[0]+3,a[1]-3);
-   ctx.fillRect(a[0]+3,a[1]-1,w,1);axHit.push({i,x:a[0]+1,y:a[1]-15,w:w+4,h:18})})}
+ if(L.axes){ctx.font='700 13px "Source Sans 3",sans-serif';ctx.textBaseline='middle';
+  [[1,0,0],[0,1,0],[0,0,1]].forEach((v,i)=>{if(!mode3&&i===2)return;
+   [1,-1].forEach(sgn=>{const a=P(v.map(x=>x*sgn*1.12)),t='Axis '+(i+1)+(sgn>0?' +':' −'),w=ctx.measureText(t).width,px=a[0]-w/2-7,py=a[1]-11,pw=w+14,ph=22;
+    ctx.globalAlpha=AX===i?1:.88;ctx.fillStyle='rgba(14,17,23,.86)';ctx.strokeStyle=AX===i?'#d9b45f':'#3b4659';ctx.lineWidth=AX===i?1.6:1;
+    ctx.beginPath();ctx.roundRect(px,py,pw,ph,11);ctx.fill();ctx.stroke();
+    ctx.fillStyle=AX===i?'#d9b45f':'#eef1f5';ctx.fillText(t,px+7,a[1]+.5);
+    axHit.push({i,x:px-4,y:py-4,w:pw+8,h:ph+8})})});ctx.textBaseline='alphabetic'}
  ctx.restore();
  const picked=nd.sc||null,sc=picked?pct(picked,.96):1;
  VIS=D.mps.map((m,i)=>visible(i,nd));
@@ -573,13 +577,23 @@ function openAxis(n){AXALL=false;if(curSel!=null||drawnMP!=null){curSel=null;cur
  AX=n;if($('app').classList.contains('dock-c'))setDock(false);info();draw()}
 function closeAxis(){AX=null;info();draw()}
 function axisHtml(n){const L=(D.axl||[])[n]||[],mx=Math.max(1e-9,...L.map(x=>Math.abs(x[1]))),list=AXALL?L:L.slice(0,6);
- let h=`<div class="up"><button type="button" class="link" data-axclose>&larr; Close</button></div><h2>Axis ${n+1}</h2><p class="sp">MPs are spread along this axis mostly by their positions on:</p><div class="axk"><span>&larr; other end</span><span>labelled end &rarr;</span></div>`;
+ const fs=D.fights.filter(f=>f.u&&f.r>=0.2).map(f=>({f,s:f.u[n]*f.r})).sort((a,b)=>Math.abs(b.s)-Math.abs(a.s));
+ const topF=fs.slice(0,4);
+ const posArgs=topF.map(({f,s})=>`<button type="button" class="kid" data-nav="F${f.i}" style="margin-bottom:4px"><span><b style="color:#d9b45f">${s>=0?'Supports:':'Opposes:'}</b> ${esc(f.label)}</span></button>`).join('');
+ const negArgs=topF.map(({f,s})=>`<button type="button" class="kid" data-nav="F${f.i}" style="margin-bottom:4px"><span><b style="color:#6fb3e0">${s>=0?'Opposes:':'Supports:'}</b> ${esc(f.label)}</span></button>`).join('');
+ let h=`<div class="up"><button type="button" class="link" data-axclose>&larr; Close</button></div><h2>Axis ${n+1}</h2>`;
+ h+=`<p class="sp"><b class="ink">Stance axis (not focus):</b> this axis reflects which side MPs argued for across debates, not how often they spoke.</p>`;
+ if(topF.length){
+  h+=`<h4>+ end tends to argue</h4><div class="kids">${posArgs}</div>`;
+  h+=`<h4>&minus; end tends to argue</h4><div class="kids">${negArgs}</div>`;
+ }
+ h+=`<h4>Subject correlations</h4><div class="axk"><span>&larr; &minus; end</span><span>+ end &rarr;</span></div>`;
  list.forEach(([nm,v])=>{const k=subjIdx(nm),w=Math.round(50*Math.abs(v)/mx),bar=`<span class="axb"><i style="${v>=0?'left:50%':'right:50%'};width:${w}%;background:${v>=0?'#d9b45f':'#6fb3e0'}"></i></span>`;
   const inner=`<span class="axn" title="${esc(nm)}">${esc(nm)}</span>${bar}<span class="axv">${v>0?'+':''}${v.toFixed(2)}</span>`;
   h+=k>=0?`<button type="button" class="axr" data-axs="${k}">${inner}</button>`:`<div class="axr">${inner}</div>`});
  if(L.length>6)h+=`<button type="button" class="more" data-axall aria-expanded="${AXALL}">${AXALL?'Show fewer':'Show all '+L.length}</button>`;
  const ix=D.mps.map((m,i)=>i).filter(i=>D.onmap[i]).sort((a,b)=>XYZ[b][n]-XYZ[a][n]);
- h+=`<h4>Furthest toward the labelled end</h4><div class="mpl">${mpBtns(ix.slice(0,3).map(i=>[i,null]))}</div><h4>Furthest toward the other end</h4><div class="mpl">${mpBtns(ix.slice(-3).reverse().map(i=>[i,null]))}</div>`;
+ h+=`<h4>Furthest toward + end</h4><div class="mpl">${mpBtns(ix.slice(0,3).map(i=>[i,null]))}</div><h4>Furthest toward &minus; end</h4><div class="mpl">${mpBtns(ix.slice(-3).reverse().map(i=>[i,null]))}</div>`;
  return h}
 function drawInset(){const c=$('ins');insPts=[];if(!c||sel.t!=='group')return;const g=D.groups[sel.i],e1=g.plane[0],e2=g.plane[1],d=window.devicePixelRatio||1,w=c.clientWidth,h=c.clientHeight;c.width=w*d;c.height=h*d;const x=c.getContext('2d');x.setTransform(d,0,0,d,0,0);
  const pts=[];g.sc.forEach((v,i)=>{if(v==null)return;const q=XYZ[i];pts.push([i,q[0]*e1[0]+q[1]*e1[1]+q[2]*e1[2],q[0]*e2[0]+q[1]*e2[1]+q[2]*e2[2]])});
