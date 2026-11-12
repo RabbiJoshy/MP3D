@@ -62,7 +62,7 @@ a{color:var(--brass)}
 #crumbs a{color:var(--dim);text-decoration:none;overflow:hidden;text-overflow:ellipsis;max-width:190px;flex:0 1 auto}#crumbs a:hover{color:var(--ink);text-decoration:underline}
 #crumbs b{color:var(--brass);font-weight:600;overflow:hidden;text-overflow:ellipsis;max-width:260px}
 #crumbs span.sep{color:var(--muted);padding:0 3px}
-#tools{position:absolute;z-index:7;top:calc(var(--gap) + var(--h) + 8px);left:var(--gap);display:flex;gap:6px;align-items:center;flex-wrap:wrap;right:var(--gap)}
+#tools{position:absolute;z-index:7;top:calc(var(--gap) + var(--h) + 8px);right:var(--gap);display:flex;gap:6px;align-items:center;pointer-events:none}#tools>*{pointer-events:auto}
 .pop{position:absolute;z-index:8;top:calc(var(--gap) + 2*var(--h) + 14px);left:var(--gap);width:320px;max-height:calc(100% - 120px);overflow:auto;padding:12px 14px;display:none;box-shadow:0 14px 40px rgba(0,0,0,.5)}
 .pop.on{display:block}
 .pop h3{font:700 11px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--brass);margin:10px 0 4px}.pop h3:first-child{margin-top:0}
@@ -251,7 +251,7 @@ body[data-mode=quiz] #browse{display:none}
  <main id="stage">
   <canvas id="cv" aria-label="3D map of MPs"></canvas>
   <div id="nav"><button class="fbtn" id="browse" aria-expanded="true" title="Show or hide the list">&#9776; Browse</button><button class="fbtn" id="home" title="Back to All of Parliament">&#8962; Home</button><nav id="crumbs" aria-label="Breadcrumb"></nav></div>
-  <div id="tools"><div class="seg" id="dm" role="group" aria-label="Topic dots"><span class="sl">Topic dots</span><button data-dm="none" aria-pressed="false">None</button><button data-dm="subjects" aria-pressed="true">Subjects</button><button data-dm="all" aria-pressed="false">All</button></div><button class="fbtn" id="layBtn" aria-expanded="false">Layers</button><button class="fbtn" id="filBtn" aria-expanded="false">Filters<span class="dotb"></span></button><button class="fbtn" id="reset" title="Reset camera and layers">Reset view</button></div>
+  <div id="tools"><button class="fbtn" id="layBtn" aria-expanded="false">Layers</button><button class="fbtn" id="filBtn" aria-expanded="false">Filters<span class="dotb"></span></button><button class="fbtn" id="reset" title="Reset camera and layers">Reset</button></div>
   <div class="float pop" id="layPop" aria-label="Layers"></div>
   <div class="float pop" id="filPop" aria-label="Filters"></div>
   <div id="leg"></div>
@@ -641,12 +641,12 @@ $('browse').onclick=()=>{const a=$('app');if(matchMedia('(max-width:820px)').mat
 addEventListener('resize',draw);
 try{new ResizeObserver(()=>draw()).observe($('stage'))}catch(e){}
 function setDM(m){DM=m;document.querySelectorAll('#dm button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.dm===m));hoverDot=null;$('tip').style.display='none';draw()}
-$('dm').addEventListener('click',e=>{const b=e.target.closest('button');if(b)setDM(b.dataset.dm)});
+$('layPop').addEventListener('click',e=>{const b=e.target.closest('#dm button');if(b)setDM(b.dataset.dm)});
 function setDock(c,save){$('app').classList.toggle('dock-c',c);const b=$('dockbtn');b.setAttribute('aria-expanded',!c);b.innerHTML=c?'&lsaquo;':'&rsaquo;';b.title=c?'Show details':'Collapse details';if(save)store.set('dockC',c?'1':'0')}
 $('dockbtn').onclick=()=>setDock(!$('app').classList.contains('dock-c'),true);
 $('leg').addEventListener('click',e=>{const ac=e.target.closest('[data-ax]');if(ac){e.stopPropagation();AX===+ac.dataset.ax?closeAxis():openAxis(+ac.dataset.ax);return}if(e.target.closest('#legT')){store.set('legC',store.get('legC')==='1'?'0':'1');draw()}});
 // ---- layers / filters popovers
-function buildLayers(){$('layPop').innerHTML='<h3>Show or hide</h3>'+LAYERS.map(([k,t,c])=>`<label class="ck"><input type="checkbox" data-l="${k}" ${L[k]?'checked':''}><i style="background:${c};border-radius:${k.startsWith('rimS')||k==='rimI'?'1px;transform:rotate(45deg) scale(.8)':'50%'}"></i>${t}</label>`).join('')+'<p class="small" style="margin-top:8px">Fight dots show only when Topic dots is set to All. Reset view puts the camera and these switches back to the start.</p>'}
+function buildLayers(){$('layPop').innerHTML=`<h3>Topic dots</h3><div class="seg" id="dm" role="group" aria-label="Topic dots" style="margin-bottom:10px"><button data-dm="none" aria-pressed="${DM==='none'}">None</button><button data-dm="subjects" aria-pressed="${DM==='subjects'}">Subjects</button><button data-dm="all" aria-pressed="${DM==='all'}">All</button></div><h3>Show or hide</h3>`+LAYERS.map(([k,t,c])=>`<label class="ck"><input type="checkbox" data-l="${k}" ${L[k]?'checked':''}><i style="background:${c};border-radius:${k.startsWith('rimS')||k==='rimI'?'1px;transform:rotate(45deg) scale(.8)':'50%'}"></i>${t}</label>`).join('')+'<p class="small" style="margin-top:8px">Fight dots show only when Topic dots is set to All. Reset puts the camera and these switches back to the start.</p>'}
 $('layPop').addEventListener('change',e=>{const k=e.target.dataset.l;if(k){L[k]=e.target.checked;draw()}});
 function buildFilters(){const ps=Object.entries(pcount).sort((a,b)=>b[1].n-a[1].n);
  $('filPop').innerHTML=`<h3>Party</h3><div class="chips">${ps.map(([p,a])=>`<button class="pchip" data-p="${esc(p)}" aria-pressed="${FL.parties.has(p)}"><em style="background:${a.col}"></em>${esc(p)} <span style="opacity:.6">${a.n}</span></button>`).join('')}</div><div class="small">Pick one or more; the others fade out. None picked = all shown.</div>
