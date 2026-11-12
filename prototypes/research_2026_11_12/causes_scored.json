@@ -1,0 +1,118 @@
+{
+ "cost_usd": 0.019577082000000003,
+ "tokens": 466121,
+ "causes": [
+  {
+   "cid": 19,
+   "label": "Introduce a wealth tax and tax excess corporate profits",
+   "subj": "Macroeconomics",
+   "fm": "Supports a wealth tax or higher taxes on excess profits",
+   "am": "Opposes a wealth tax or higher corporate taxes",
+   "for": [
+    {
+     "id": 5359,
+     "stance": 1.0,
+     "claims": [
+      {
+       "p": "uk.org.publicwhip/debate/2026-05-18b.364.1#1",
+       "s": "FOR"
+      }
+     ]
+    },
+    {
+     "id": 4500,
+     "stance": 1.0,
+     "claims": [
+      {
+       "p": "uk.org.publicwhip/westminhall/2025-09-03a.143.2#3",
+       "s": "FOR"
+      }
+     ]
+    },
+    {
+     "id": 4764,
+     "stance": 1.0,
+     "claims": [
+      {
+       "p": "uk.org.publicwhip/westminhall/2025-06-17a.75.0#0",
+       "s": "FOR"
+      }
+     ]
+    },
+    {
+     "id": 4394,
+     "stance": 1.0,
+     "claims": [
+      {
+       "p": "uk.org.publicwhip/debate/2025-12-02g.883.1#0",
+       "s": "FOR"
+      }
+     ]
+    },
+    {
+     "id": 4493,
+     "stance": 1.0,
+     "claims": [
+      {
+       "p": "uk.org.publicwhip/debate/2024-11-05b.213.1#1",
+       "s": "FOR"
+      }
+     ]
+    },
+    {
+     "id": 4471,
+     "stance": 1.0,
+     "claims": [
+      {
+       "p": "uk.org.publicwhip/debate/2025-07-01b.172.1#0",
+       "s": "FOR"
+      }
+     ]
+    }
+   ],
+   "against": [
+    {
+     "id": 5186,
+     "stance": -1.0,
+     "claims": [
+      {
+       "p": "uk.org.publicwhip/debate/2025-07-15c.242.4#0",
+       "s": "AGAINST"
+      }
+     ]
+    },
+    {
+     "id": 1447,
+     "stance": -1.0,
+     "claims": [
+      {
+       "p": "uk.org.publicwhip/debate/2025-11-27d.584.0#4",
+       "s": "AGAINST"
+      }
+     ]
+    },
+    {
+     "id": 4858,
+     "stance": -1.0,
+     "claims": [
+      {
+       "p": "uk.org.publicwhip/debate/2025-07-15c.203.0#0",
+       "s": "AGAINST"
+      }
+     ]
+    },
+    {
+     "id": 3912,
+     "stance": -1.0,
+     "claims": [
+      {
+       "p": "uk.org.publicwhip/debate/2025-07-15c.258.1#2",
+       "s": "AGAINST"
+      }
+     ]
+    }
+   ],
+   "both": []
+  }
+ ]
+}

@@ -1,0 +1,865 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MP3D — Parliament's space, by subject and fight</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600;700&display=swap">
+<style>
+:root{--bench:#0e1117;--bench2:#161b24;--bench3:#1f2633;--line:#273142;--ink:#eef1f5;--dim:#9aa4b2;--muted:#6b7584;--brass:#d9b45f;--yes:#8fd694;--no:#e58e7a;
+  --r:8px;--h:32px;--gap:16px;--top:48px;--display:"Bricolage Grotesque","Trebuchet MS",sans-serif;--body:"Source Sans 3","Segoe UI",system-ui,sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:var(--bench);color:var(--ink);font:14px/1.4 var(--body);overflow:hidden}
+h1,h2,h3,p{margin:0}h2{font:700 16.5px/1.15 var(--display)}
+button{font:inherit;color:inherit;cursor:pointer}
+a{color:var(--brass)}
+.meta{color:var(--dim);font-size:12px}
+:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+/* top bar */
+.masthead{position:relative;z-index:50;height:var(--top);padding:0 var(--gap);display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--bench);border-bottom:1px solid var(--line)}
+.brand{font:700 17px var(--display);color:var(--ink);text-decoration:none;display:flex;align-items:baseline;gap:10px;white-space:nowrap}
+.brand small{font:600 10px var(--body);letter-spacing:.16em;color:var(--brass)}
+.mode-tabs{position:absolute;left:50%;transform:translateX(-50%);display:flex;gap:2px;padding:2px;height:var(--h);background:var(--bench2);border:1px solid var(--line);border-radius:var(--r)}
+.tab-btn{height:100%;padding:0 14px;border:0;border-radius:6px;background:transparent;color:var(--dim);font:600 13px var(--body);white-space:nowrap}
+.tab-btn[aria-pressed=true]{background:var(--bench3);color:var(--ink)}
+.tab-btn[disabled]{cursor:default;opacity:.7}.tab-btn i{font-style:normal;font-weight:400;font-size:11px;color:var(--muted);margin-left:6px}
+.actions{display:flex;gap:4px;align-items:center}
+.nav-btn{height:var(--h);padding:0 10px;border:0;border-radius:var(--r);background:transparent;color:var(--dim);font:600 13px var(--body);white-space:nowrap}
+.nav-btn:hover{background:var(--bench2);color:var(--ink)}
+#mpbox{position:relative}
+#mpq{width:220px;height:var(--h);background:var(--bench2);border:1px solid var(--line);color:var(--ink);padding:0 10px;border-radius:var(--r);font:inherit;font-size:13px}
+#mpq:focus{border-color:var(--brass);outline:0}
+#mpsug{position:absolute;top:calc(var(--h) + 4px);right:0;width:320px;background:var(--bench2);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 14px 40px rgba(0,0,0,.5);display:none;max-height:340px;overflow:auto;padding:4px}
+.sg-i{display:flex;justify-content:space-between;gap:10px;width:100%;text-align:left;border:0;background:none;padding:7px 8px;border-radius:6px}
+.sg-i:hover,.sg-i.act{background:var(--bench3)}
+/* shell */
+.app{--lw:320px;--rw:330px;display:grid;grid-template-columns:var(--lw) minmax(0,1fr) var(--rw);height:calc(100dvh - var(--top));transition:grid-template-columns .18s ease}
+.app.hide-left{--lw:0px}.app.dock-c{--rw:44px}.app.mp-open{--rw:min(520px,100vw)}
+#left{background:var(--bench2);border-right:1px solid var(--line);display:flex;flex-direction:column;min-height:0;overflow:hidden}
+.app.hide-left #left{border:0;visibility:hidden}
+.lhead{padding:12px var(--gap) 8px}.lhead h1{font:700 16px var(--display)}.lhead p{margin-top:2px}
+#sq{width:100%;height:32px;margin-top:8px;background:var(--bench);border:1px solid var(--line);color:var(--ink);padding:0 10px;border-radius:var(--r);font:inherit;font-size:13px}
+#sq:focus{border-color:var(--brass);outline:0}
+#tree{flex:1;overflow:auto;padding:4px 8px 16px;font-size:12.5px}
+.row{display:flex;align-items:center;gap:6px;padding:6px 6px;border-radius:6px;cursor:pointer;white-space:nowrap;color:var(--ink)}
+.row:hover{background:var(--bench3)}
+.row.sel{background:var(--bench3);color:var(--brass);font-weight:600;box-shadow:inset 2px 0 0 var(--brass)}
+.row .t{overflow:hidden;text-overflow:ellipsis;flex:1}.row .tw{width:14px;color:var(--dim);text-align:center;flex:none}
+.row.g{font:700 10.5px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--brass);margin-top:8px}
+.row.g .t{text-transform:none;letter-spacing:0;font-size:12.5px}
+.bar{width:34px;height:5px;background:var(--bench);border-radius:3px;flex:none;overflow:hidden;border:1px solid var(--line)}.bar i{display:block;height:100%}
+.weak .t{color:var(--dim);font-style:italic}.tag{font-size:11px;color:var(--dim);flex:none;min-width:30px;text-align:right}
+.ind1{padding-left:6px}.ind2{padding-left:18px}.ind3{padding-left:34px}
+.few{color:var(--muted);font-size:11.5px;padding:3px 6px 3px 40px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#stage{position:relative;min-width:0;background:var(--bench);overflow:hidden}
+#cv{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:grab;touch-action:none}
+.float{position:absolute;z-index:5;background:var(--bench2);border:1px solid var(--line);border-radius:var(--r)}
+.fbtn{height:var(--h);padding:0 12px;font:600 13px var(--body);display:inline-flex;align-items:center;gap:6px;color:var(--ink);background:var(--bench2);border:1px solid var(--line);border-radius:var(--r);white-space:nowrap}
+.fbtn:hover{border-color:var(--muted)}.fbtn[aria-pressed=true],.fbtn[aria-expanded=true]{border-color:var(--brass);color:var(--brass)}
+.fbtn .dotb{width:7px;height:7px;border-radius:50%;background:var(--brass);display:none}.fbtn.act .dotb{display:inline-block}
+#nav{position:absolute;z-index:6;top:var(--gap);left:var(--gap);right:var(--gap);display:flex;gap:6px;align-items:center;min-width:0}
+#crumbs{display:flex;align-items:center;min-width:0;height:var(--h);padding:0 10px;gap:2px;font-size:12.5px;background:var(--bench2);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;white-space:nowrap}
+#crumbs a{color:var(--dim);text-decoration:none;overflow:hidden;text-overflow:ellipsis;max-width:190px;flex:0 1 auto}#crumbs a:hover{color:var(--ink);text-decoration:underline}
+#crumbs b{color:var(--brass);font-weight:600;overflow:hidden;text-overflow:ellipsis;max-width:260px}
+#crumbs span.sep{color:var(--muted);padding:0 3px}
+#tools{position:absolute;z-index:7;top:calc(var(--gap) + var(--h) + 8px);left:var(--gap);display:flex;gap:6px;align-items:center;flex-wrap:wrap;right:var(--gap)}
+.pop{position:absolute;z-index:8;top:calc(var(--gap) + 2*var(--h) + 14px);left:var(--gap);width:320px;max-height:calc(100% - 120px);overflow:auto;padding:12px 14px;display:none;box-shadow:0 14px 40px rgba(0,0,0,.5)}
+.pop.on{display:block}
+.pop h3{font:700 11px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--brass);margin:10px 0 4px}.pop h3:first-child{margin-top:0}
+.pop label.ck{display:flex;align-items:center;gap:8px;padding:3px 0;cursor:pointer;font-size:13px}
+.pop label.ck i{width:10px;height:10px;display:inline-block;flex:none}
+.chips{display:flex;flex-wrap:wrap;gap:5px;margin:4px 0}
+.pchip{height:24px;padding:0 9px;border-radius:12px;border:1px solid var(--line);background:var(--bench);color:var(--dim);font:600 11.5px var(--body);display:inline-flex;align-items:center;gap:5px}
+.pchip[aria-pressed=true]{color:var(--ink);border-color:var(--brass);background:var(--bench3)}
+.pchip em{width:8px;height:8px;border-radius:50%;display:inline-block;font-style:normal}
+.pop input[type=range]{width:100%;accent-color:#d9b45f}
+.pop .small{font-size:12px;color:var(--dim)}
+.link{background:none;border:0;padding:0;color:var(--brass);font:inherit;text-decoration:underline;cursor:pointer}
+#dock{background:var(--bench2);border-left:1px solid var(--line);display:flex;flex-direction:column;min-height:0;overflow:hidden}
+.app.mp-open #dock{visibility:hidden}
+#dockhead{display:flex;align-items:center;justify-content:space-between;padding:8px 8px 8px 14px;border-bottom:1px solid var(--line);font:700 11px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--brass)}
+#dockbtn{height:26px;width:28px;border:1px solid var(--line);border-radius:6px;background:var(--bench);color:var(--dim);padding:0}#dockbtn:hover{color:var(--ink);border-color:var(--muted)}
+#chip{flex:1;overflow:auto;padding:12px 14px 20px}
+.app.dock-c #chip,.app.dock-c #dockhead span{display:none}.app.dock-c #dockhead{padding:8px;justify-content:center;border:0}
+.seg{display:inline-flex;align-items:center;height:var(--h);gap:2px;padding:2px 2px 2px 10px;background:var(--bench2);border:1px solid var(--line);border-radius:var(--r)}
+.seg .sl{font:600 12px var(--body);color:var(--dim);margin-right:4px;white-space:nowrap}
+.seg button{height:100%;padding:0 10px;border:0;border-radius:6px;background:none;color:var(--dim);font:600 12.5px var(--body)}
+.seg button[aria-pressed=true]{background:var(--bench3);color:var(--brass)}
+.seg button:hover{color:var(--ink)}
+#chip h2{margin-bottom:2px;font-size:17px}
+.up{margin-bottom:6px;font-size:12.5px}.up a{text-decoration:none}.up a:hover{text-decoration:underline}
+.kind{color:var(--dim);font-size:12px}
+.big{font:700 22px var(--display)}.pill{display:inline-block;border-radius:6px;padding:0 8px;font-size:11.5px;font-weight:700;color:#0e1117}
+.dim{color:var(--dim)}.sp{margin-top:8px}
+.ink{color:var(--ink)}
+.sides{display:grid;gap:6px;margin-top:10px}
+.sd{border-left:3px solid var(--line);padding:2px 0 2px 9px;font-size:12.5px}.sd b{display:block;font-size:11px;letter-spacing:.04em;text-transform:uppercase}
+.sd.pos{border-color:#e08a1e}.sd.pos b{color:#e08a1e}.sd.neg{border-color:#9664c8}.sd.neg b{color:#b987e0}
+.chip h4,#chip h4{font:700 11px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--brass);margin:14px 0 4px}
+.split{display:flex;height:12px;border-radius:4px;overflow:hidden;background:var(--bench);border:1px solid var(--line);margin-top:3px}.split i{display:block;height:100%}
+.splabel{font-size:11.5px;color:var(--dim);margin-top:2px}
+.mpl{display:flex;flex-wrap:wrap;gap:4px;margin-top:3px}
+.mpb{border:1px solid var(--line);background:var(--bench);border-radius:6px;padding:2px 7px;font-size:12px;color:var(--ink);display:inline-flex;gap:5px;align-items:center}
+.mpb:hover{border-color:var(--brass)}.mpb em{font-style:normal;color:var(--dim);font-size:11px}
+.mpb i{width:7px;height:7px;border-radius:50%;display:inline-block}
+.kids{margin-top:2px}.kid{display:flex;justify-content:space-between;gap:8px;width:100%;text-align:left;border:0;background:none;padding:4px 6px;border-radius:6px;font-size:12.5px}.kid:hover{background:var(--bench3)}.kid span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#leg{position:absolute;left:var(--gap);bottom:var(--gap);z-index:4;font-size:12px;color:var(--dim);max-width:calc(100% - 150px);background:rgba(22,27,36,.88);border:1px solid var(--line);border-radius:var(--r);padding:5px 10px}
+#leg .lk{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center}#leg .it{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+#leg svg{width:14px;height:14px;flex:none}
+#leg .lt{background:none;border:0;color:var(--brass);font:600 12px var(--body);padding:0;margin-right:4px}
+#leg.c .lk{display:none}
+#leg b{color:var(--dim);font-weight:600}#leg .sw{width:9px;height:9px;border-radius:50%;display:inline-block}
+#bar{right:var(--gap);bottom:var(--gap);display:flex;height:var(--h);padding:2px;gap:2px}
+#bar button{height:100%;padding:0 10px;border:0;border-radius:6px;background:none;color:var(--dim);font:600 12px var(--body)}
+#bar button[aria-pressed=true]{background:var(--bench3);color:var(--ink)}
+#tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--bench);font-size:12px;padding:5px 9px;border-radius:6px;display:none;white-space:normal;max-width:300px;z-index:9;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+#ins{width:100%;height:250px;display:block;background:var(--bench);border:1px solid var(--line);border-radius:var(--r);cursor:pointer}
+.axl{font-size:11.5px;color:var(--dim);margin-top:3px}.axl b{color:var(--ink)}
+/* profile drawer */
+#profile{position:fixed;top:var(--top);right:0;bottom:0;width:min(520px,100vw);background:var(--bench2);border-left:1px solid var(--line);box-shadow:-16px 0 40px rgba(0,0,0,.35);overflow:auto;transform:translateX(102%);transition:transform .18s ease;z-index:60}
+#profile.on{transform:none}
+.p-top{position:sticky;top:0;background:var(--bench2);z-index:2;padding:16px 22px 12px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.p-top h2{font-size:24px}.xbtn{height:var(--h);padding:0 10px;border:0;border-radius:var(--r);background:none;color:var(--dim);white-space:nowrap}.xbtn:hover{background:var(--bench3);color:var(--ink)}
+.p-body{padding:10px 22px 40px}
+.p-body h3{font:700 13px var(--body);color:var(--brass);margin:20px 0 4px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.thin{margin:0 0 10px;padding:8px 10px;border:1px solid #6a5a2c;background:#2a2412;border-radius:var(--r);font-size:12.5px;color:#e8d9a8}
+.badge{font-size:10.5px;padding:1px 6px;border-radius:4px;background:var(--bench);border:1px solid var(--line);color:var(--dim);font-weight:600}
+.srow{border-bottom:1px solid var(--line);padding:8px 0}.srow>summary{cursor:pointer;display:flex;gap:8px;justify-content:space-between;font-weight:600}
+.sg{font-variant-numeric:tabular-nums}.pos{color:#e08a1e}.neg{color:#b987e0}
+.cl{padding:8px 0 4px}
+.position-side{font-size:12px;font-weight:700}.position-side.for{color:var(--yes)}.position-side.against{color:var(--no)}.position-side.both{color:var(--brass)}
+.cl strong,.took strong{display:block;margin-top:2px}
+blockquote{margin:8px 0 4px;padding:12px 14px;background:var(--bench3);border-left:2px solid var(--brass);border-radius:0 var(--r) var(--r) 0;font-size:13.5px;line-height:1.6}
+.cl .m,.took .m{font-size:12px;color:var(--dim)}
+.cl details,.took details{margin-top:6px}.cl details>summary,.took details>summary{cursor:pointer;font-size:12px;color:var(--dim)}
+.took{border-left:2px solid var(--line);padding:6px 0 6px 12px;margin:10px 0}
+.took .subj{font-size:11.5px;color:var(--dim)}
+.shared{color:var(--brass)}
+
+/* sk15: collapsed profile outline */
+.cc{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px}.cc span{font-size:11.5px;padding:1px 8px;border:1px solid var(--line);border-radius:10px;color:var(--dim);background:var(--bench)}
+.note{font-size:12px;color:var(--dim);margin:0 0 6px}.note .link{font-size:12px}.note-x{font-size:12px;color:var(--dim);margin:0 0 6px}
+.ps{border-top:1px solid var(--line)}.ps:last-child{border-bottom:1px solid var(--line)}
+.ph{display:flex;align-items:center;gap:6px}
+.p-body .pht{margin:0;flex:1;min-width:0;display:block;font:inherit}
+.phb{width:100%;display:flex;align-items:center;gap:8px;padding:10px 0;border:0;background:none;text-align:left;min-width:0}
+.chev{width:10px;flex:none;color:var(--dim);font-size:15px;line-height:1;transition:transform .12s}.phb[aria-expanded=true] .chev{transform:rotate(90deg)}
+.pt{font:700 13px var(--body);color:var(--brass);white-space:nowrap}
+.pv{flex:1;min-width:0;color:var(--muted);font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.qb{width:24px;height:24px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--dim);font:600 12px var(--body);padding:0;flex:none}.qb:hover,.qb[aria-expanded=true]{border-color:var(--brass);color:var(--brass)}
+.help{margin:0 0 8px;font-size:12px;line-height:1.45}
+.sh{display:flex;justify-content:space-between;gap:8px;font-size:11.5px;color:var(--dim);padding:8px 0 3px;border-top:1px solid var(--line);font-weight:600}.pb>.sh:first-child{border-top:0}
+.it{border-top:1px solid var(--line)}.pb>.it:first-child,.sh+.it{border-top:0}
+.ir{display:flex;gap:8px;align-items:baseline;width:100%;padding:7px 0;border:0;background:none;text-align:left;font-size:13px;min-width:0}
+.ir:hover .il{color:#fff}
+.sdm{flex:none;width:64px;font-size:11.5px;font-weight:600;display:inline-flex;gap:5px;align-items:baseline}.sdm i{width:7px;height:7px;border-radius:50%;background:currentColor;flex:none;align-self:center}
+.sdm.for{color:var(--yes)}.sdm.against{color:var(--no)}.sdm.both{color:var(--brass)}
+.il{flex:1;min-width:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere;color:var(--ink)}
+.ir[aria-expanded=true] .il{-webkit-line-clamp:unset;display:block}
+.iv{flex:none;color:var(--muted);font-size:11.5px;white-space:nowrap}
+.ib{padding:0 0 10px 12px;overflow-wrap:anywhere}.ib .m{font-size:12px;color:var(--dim);margin-top:3px}.ib .shared{color:var(--brass)}
+.ib blockquote{margin:4px 0 2px;padding:2px 0 2px 10px;background:none;border-radius:0;font-size:13px;line-height:1.55}
+.ib details{margin-top:6px}.ib details>summary{cursor:pointer;font-size:12px;color:var(--dim)}
+.more{margin:2px 0 8px;height:26px;padding:0 4px;border:0;background:none;color:var(--brass);font:600 12px var(--body);text-decoration:underline}
+/* sk15: axis view and key chips */
+.axs{display:flex;flex-wrap:wrap;gap:4px;margin-top:5px}
+.axc{border:1px solid var(--line);background:var(--bench);border-radius:12px;padding:2px 9px;font:inherit;font-size:11.5px;color:var(--dim);text-align:left;line-height:1.3}.axc b{color:var(--brass)}.axc:hover,.axc[aria-pressed=true]{border-color:var(--brass);color:var(--ink)}
+.axk{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin:8px 0 2px}
+.axr{display:grid;grid-template-columns:minmax(0,1fr) 92px 38px;gap:8px;align-items:center;width:100%;text-align:left;border:0;border-top:1px solid var(--line);background:none;padding:6px 2px;font-size:12.5px}
+button.axr:hover{background:var(--bench3)}.axr .axn{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.axb{position:relative;height:8px;background:var(--bench);border:1px solid var(--line);border-radius:4px}.axb:before{content:"";position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:var(--muted)}.axb i{position:absolute;top:0;bottom:0;border-radius:3px}
+.axv{font-variant-numeric:tabular-nums;color:var(--dim);font-size:11.5px;text-align:right}
+/* dialogs */
+dialog{color:var(--ink);background:var(--bench2);border:1px solid var(--line);border-radius:var(--r);padding:0;width:min(600px,94vw);max-height:88dvh;box-shadow:0 24px 64px rgba(0,0,0,.5)}
+dialog::backdrop{background:rgba(7,9,13,.72)}
+.d-top{padding:14px 20px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}.d-top h2{font-size:18px}
+.d-body{padding:16px 20px 20px;overflow:auto;max-height:70dvh;line-height:1.6}.d-body p{margin-bottom:10px}.d-body ul{margin:0 0 10px;padding-left:18px}.d-body li{margin-bottom:4px}
+.d-body h3{font:700 12px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--brass);margin:14px 0 4px}
+@media(max-width:1180px){.mode-tabs{display:none}}
+@media(max-width:820px){
+ .app,.app.hide-left,.app.dock-c,.app.mp-open{--lw:0px;--rw:0px}
+ #stage{grid-column:2;grid-row:1}
+ #dock{position:fixed;left:0;right:0;bottom:0;max-height:42%;z-index:44;border-left:0;border-top:1px solid var(--line)}.app.dock-c #dock{max-height:none}.app.mp-open #dock{display:none}
+ #left{position:fixed;top:var(--top);bottom:0;left:0;width:min(330px,88vw);z-index:45;visibility:visible;transform:translateX(-101%);transition:transform .18s;box-shadow:16px 0 40px rgba(0,0,0,.4)}
+ .app.mobile-open #left{transform:none}
+ .brand small{display:none}#leg{max-width:calc(100% - 140px);font-size:11px}
+ #mpq{width:130px}.nav-btn{padding:0 6px}
+ #leg,#bar{bottom:calc(var(--gap) + 48px)}
+}
+@media(max-width:560px){.p-top{padding:14px 16px 10px}.p-body{padding:10px 16px 40px}.sdm{width:60px}.masthead{padding:0 10px;gap:4px}.actions{gap:0}#mpq{width:104px;font-size:12px}.nav-btn{font-size:12px;padding:0 5px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* tabs, quiz, relationships */
+.mode-tabs .tab-btn{cursor:pointer}
+.app.quiz{--lw:440px}.app.quiz.hide-left #left{visibility:visible;border-right:1px solid var(--line)}
+.app.quiz .lhead,.app.quiz #tree{display:none}#qz{display:none;flex:1;overflow:auto;padding:18px 20px 40px}.app.quiz #qz{display:block}
+body[data-mode=quiz] #browse{display:none}
+.app.quiz #dock{display:none}.app.quiz{grid-template-columns:var(--lw) minmax(0,1fr) 0}
+#qz h2{font:700 20px/1.25 var(--display);margin:6px 0 8px}#qz h3{font:700 11px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--brass);margin:18px 0 6px}
+#qz p{line-height:1.55;margin-bottom:8px}#qz .qtop{display:flex;align-items:center;gap:8px;justify-content:space-between}
+.qprog{height:4px;background:var(--line);border-radius:4px;margin:8px 0 14px}.qprog i{display:block;height:100%;background:var(--brass);border-radius:4px}
+.qbtn{height:var(--h);padding:0 12px;border:1px solid var(--line);border-radius:var(--r);background:var(--bench);color:var(--ink);font:600 13px var(--body);display:inline-flex;align-items:center;gap:6px}
+.qbtn:hover{border-color:var(--muted)}.qbtn[aria-pressed=true]{border-color:var(--brass);color:var(--brass)}
+.primary{height:var(--h);padding:0 14px;border:0;border-radius:var(--r);background:var(--brass);color:#0e1117;font:700 13px var(--body)}.primary:hover{filter:brightness(1.08)}
+.qans{display:grid;gap:10px;margin:14px 0 10px}.qopt{text-align:left;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--bench);line-height:1.45;width:100%}
+.qopt:hover{border-color:var(--muted)}.qopt[aria-pressed=true]{border-color:var(--brass);box-shadow:inset 0 0 0 1px var(--brass)}
+.qopt b{display:block;font:700 11px var(--body);letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px}.qopt.for b{color:var(--yes)}.qopt.against b{color:var(--no)}.qopt span{font-size:13px;color:var(--ink)}
+.qsec{display:grid;grid-template-columns:1fr 1fr;gap:8px}.qsec .qbtn{justify-content:center;min-height:40px}
+.qctx{font-size:12.5px;color:var(--dim);margin:6px 0}.qctx summary{cursor:pointer;color:var(--brass)}
+.subjpick{display:flex;flex-direction:column;gap:2px;margin:8px 0 14px}.subjpick label{display:flex;gap:8px;align-items:center;padding:5px 2px;cursor:pointer;font-size:13px}
+#qz input[type=checkbox]{accent-color:var(--brass);width:16px;height:16px}
+.mcard{border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:10px 0;background:var(--bench)}
+.mcard h4{font:700 14.5px var(--display);margin:0 0 2px;letter-spacing:0;text-transform:none;color:var(--ink)}.mcard .mh{display:flex;gap:10px;align-items:flex-start}
+.mcard .dot{width:11px;height:11px;border-radius:50%;flex:none;margin-top:4px}
+.mq{border-top:1px solid var(--line);margin-top:9px;padding-top:7px;font-size:12.5px}.mq p{margin:0 0 3px}.mq .ok{color:var(--yes);font-weight:700}.mq .no{color:var(--no);font-weight:700}
+.mq button{margin-top:4px}
+.pm{display:grid;grid-template-columns:62px 1fr 44px;gap:8px;align-items:center;font-size:12.5px;margin:4px 0}.pm .b{height:9px;border-radius:5px;background:var(--bench);border:1px solid var(--line);overflow:hidden}.pm .b i{display:block;height:100%}
+#qz .linkb{background:none;border:0;color:var(--brass);text-decoration:underline;padding:0;font:inherit;cursor:pointer}
+#rel{position:fixed;z-index:48;top:var(--top);left:0;right:0;bottom:0;background:var(--bench);overflow:auto;display:none;padding:14px var(--gap) 30px}
+#rel.on{display:block}
+.rel-bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.rel-sel{display:flex;gap:8px;align-items:center;font-size:12.5px;color:var(--dim)}
+.rel-sel select{height:var(--h);background:var(--bench2);border:1px solid var(--line);color:var(--ink);border-radius:var(--r);padding:0 8px;font:inherit;max-width:min(420px,60vw)}
+.rel-sides{display:flex;gap:8px;margin:10px 0;flex-wrap:wrap}.rel-sides button{border:1px solid var(--line);background:var(--bench2);border-radius:var(--r);padding:6px 10px;text-align:left;font-size:12.5px;max-width:420px}.rel-sides button[aria-pressed=true]{border-color:var(--brass);color:var(--brass)}
+.rel-grid{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:20px;margin-top:10px}
+#relPlot{width:100%;height:auto;max-height:calc(100dvh - 190px);background:var(--bench2);border:1px solid var(--line);border-radius:var(--r)}
+#relPlot text{fill:var(--dim);font:11.5px "Source Sans 3",sans-serif}#relPlot .rn circle{fill:#6fb3e0;stroke:#0e1117;stroke-width:2;cursor:pointer}#relPlot .rn.act circle{fill:#d9b45f}#relPlot .rn.act text{fill:var(--ink);font-weight:700}#relPlot .rn{cursor:pointer}#relPlot .rn:hover circle{stroke:#fff}
+.rel-detail h2{font-size:17px;margin-bottom:4px}.rel-nb{display:grid;width:100%;text-align:left;gap:2px;border:1px solid var(--line);background:var(--bench2);border-radius:var(--r);padding:8px 10px;margin:6px 0}.rel-nb:hover{border-color:var(--brass)}.rel-nb small{color:var(--dim);font-size:11.5px}.rel-nb meter{width:100%;height:8px}
+.rel-detail .primary{margin:10px 0}.rel-detail details{font-size:12.5px;line-height:1.55;color:var(--dim)}.rel-detail summary{cursor:pointer;color:var(--brass)}
+@media(max-width:900px){.rel-grid{grid-template-columns:1fr}}
+@media(max-width:1180px){.mode-tabs{display:flex;position:static;transform:none}.masthead{gap:6px}.brand{flex:none}.brand small{display:none}}
+@media(max-width:820px){#howOpen{display:none}.tab-btn{padding:0 9px;font-size:12px}
+ .app.quiz #stage{align-self:start;height:40dvh;grid-column:2}
+ .app.quiz #left{top:auto;bottom:0;left:0;right:0;width:100%;max-width:none;height:60dvh;transform:none;border-top:1px solid var(--line);border-right:0;box-shadow:0 -12px 40px rgba(0,0,0,.4)}
+ .app.quiz #tools,.app.quiz #leg,.app.quiz #bar{display:none}.app.quiz #nav{display:none}}
+@media(max-width:620px){:root{--top:88px}.masthead{flex-wrap:wrap;height:var(--top);align-content:center;row-gap:6px}.mode-tabs{order:3;width:100%;justify-content:center}.mode-tabs .tab-btn{flex:1}.actions{margin-left:auto}}
+</style></head>
+<body>
+<header class="masthead">
+ <a class="brand" href="#root">MP3D <small>PARLIAMENT'S SPACE</small></a>
+ <div class="mode-tabs" role="tablist"><button class="tab-btn" id="tabExplore" data-mode="explore" aria-pressed="true">Explore</button><button class="tab-btn" id="tabQuiz" data-mode="quiz" aria-pressed="false">Find my place</button><button class="tab-btn" id="tabRel" data-mode="rel" aria-pressed="false">Relationships</button></div>
+ <div class="actions">
+  <div id="mpbox"><input type="search" id="mpq" placeholder="Find an MP (name or seat)" autocomplete="off" aria-label="Find an MP" role="combobox" aria-expanded="false" aria-controls="mpsug"><div id="mpsug" role="listbox"></div></div>
+  <button class="nav-btn" id="aboutOpen">About this data</button><button class="nav-btn" id="howOpen">How it works</button>
+ </div>
+</header>
+<div class="app" id="app">
+ <aside id="left" aria-label="Parliament, groups, subjects, fights">
+  <div class="lhead"><h1>All of Parliament</h1><p class="meta">Groups, subjects and fights. Pick one to draw it in the space; hover to preview.</p><input type="search" id="sq" placeholder="Search subjects and fights" autocomplete="off" aria-label="Search subjects and fights"></div>
+  <div id="tree" role="tree"></div>
+  <div id="qz" aria-live="polite"></div>
+ </aside>
+ <main id="stage">
+  <canvas id="cv" aria-label="3D map of MPs"></canvas>
+  <div id="nav"><button class="fbtn" id="browse" aria-expanded="true" title="Show or hide the list">&#9776; Browse</button><button class="fbtn" id="home" title="Back to All of Parliament">&#8962; Home</button><nav id="crumbs" aria-label="Breadcrumb"></nav></div>
+  <div id="tools"><div class="seg" id="dm" role="group" aria-label="Topic dots"><span class="sl">Topic dots</span><button data-dm="none" aria-pressed="false">None</button><button data-dm="subjects" aria-pressed="true">Subjects</button><button data-dm="all" aria-pressed="false">All</button></div><button class="fbtn" id="layBtn" aria-expanded="false">Layers</button><button class="fbtn" id="filBtn" aria-expanded="false">Filters<span class="dotb"></span></button><button class="fbtn" id="reset" title="Reset camera and layers">Reset view</button></div>
+  <div class="float pop" id="layPop" aria-label="Layers"></div>
+  <div class="float pop" id="filPop" aria-label="Filters"></div>
+  <div id="leg"></div>
+  <div class="float" id="bar"><button id="b3" aria-pressed="true">3D</button><button id="b2" aria-pressed="false">2D</button></div>
+  <div id="tip"></div>
+ </main>
+ <aside id="dock" aria-label="Details"><div id="dockhead"><span>Details</span><button id="dockbtn" aria-expanded="true" title="Collapse details">&rsaquo;</button></div><div id="chip"></div></aside>
+</div>
+<section id="rel" aria-label="Relationships between subjects"></section>
+<aside id="profile" aria-label="MP positions"></aside>
+<dialog id="howDlg"><div class="d-top"><h2>How it works</h2><button class="xbtn" data-close="howDlg">&#10005; Close</button></div><div class="d-body">
+ <p>Each dot is an MP, placed in one 3D space built from how they spoke on the subjects in Commons debates. Rotate it by dragging; click a dot for that MP's positions.</p>
+ <p>Pick anything in the list on the left. A <b>line</b> is one fight (a bill or measure with MPs on both sides) and points towards where MPs who argued <i>for</i> sit. A <b>disc</b> is a subject, spanned by its fights' lines. A group shows its subjects' discs. Dots are coloured by their score on what you picked; grey means no score.</p>
+ <p><b>Faint, dashed lines mean the space only partly explains that fight.</b> The fit strength is measured in a map rebuilt without that subject, so it is an honest test, and the page says "weak fit" when the picture should not be trusted.</p>
+ <p>In an MP's profile, <b>positions in fights</b> are the two-sided evidence behind the map. <b>Took a side</b> lists speeches on fights where only one side was found. They are shown for context and are not used to place anyone on the map.</p>
+ <p>Use <b>Layers</b> to hide parts of the picture, <b>Filters</b> to fade parties or thinly-evidenced MPs, and the box at the top to find an MP. The browser Back button steps back through what you opened.</p>
+ <p><b>Find my place</b> (top tabs) asks five questions about real fights, one per subject, and places a gold star for you. <b>Relationships</b> shows which subjects go together and which split MPs most.</p><p class="meta">Near-duplicate fights on the same bill are merged before anything is scored.</p></div></dialog>
+<dialog id="aboutDlg"><div class="d-top"><h2>About this data</h2><button class="xbtn" data-close="aboutDlg">&#10005; Close</button></div><div class="d-body" id="aboutBody"></div></dialog>
+<script id="d" type="application/json">__DATA__</script>
+<script>
+/*__HA_QUIZ__*/
+/*__HA_REL__*/
+const D=JSON.parse(document.getElementById('d').textContent);
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const $=id=>document.getElementById(id);
+const N=D.mps.length,XYZ=D.xyz;
+const cv=$('cv'),ctx=cv.getContext('2d');
+const YAW0=-0.6,PITCH0=0.35;
+let yaw=YAW0,pitch=PITCH0,mode3=true,sel={t:'root'},hov=null,curMP=null,drawnMP=null,W=0,H=0,dpr=1,hover=-1,curSel=null,proj=[],hoverDot=null,rimP=[],tq='';
+let AX=null,AXALL=false,axHit=[];
+let DM='subjects',GSUB=false,focusF=null,YOU=null,MODE='explore';
+const GPS={};
+function planeSc(gi){if(GPS[gi])return GPS[gi];const g=D.groups[gi],e=g.plane[0];return GPS[gi]=g.sc.map((v,i)=>v==null?null:XYZ[i][0]*e[0]+XYZ[i][1]*e[1]+XYZ[i][2]*e[2])}
+let insPts=[];
+const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+const lvl=r=>r>=.5?'good fit':r>=.3?'partial fit':'weak fit';
+const lcol=r=>r>=.5?'#8fd694':r>=.3?'#d9b45f':'#6b7584';
+const INK='#eef1f5',DIM='#9aa4b2';
+// ---- layers and filters
+const LAYERS=[['mps','MPs','#9aa4b2'],['pavg','Party averages','#d9b45f'],['shape','Selected line / plane','#8fd694'],['rimM','Fight dots: measured','#6fb3e0'],['rimS','Fight dots: small sample (diamonds)','#e0a96f'],['rimI','Fight dots: inferred, one-sided (diamonds)','#c27fd0'],['planes','All subject planes','#6b7584'],['axes','Axis labels','#6b7584']];
+const L0={mps:true,pavg:true,shape:true,rimM:true,rimS:true,rimI:true,planes:false,axes:true};
+let L={...L0};
+let FL={parties:new Set(),onlyPos:false,minSub:0};
+// ---- derived per-MP facts
+const nsub=D.mps.map((m,i)=>D.subjects.reduce((a,s)=>a+(s.sc[i]!=null?1:0),0));
+const npos=D.mps.map((m,i)=>(D.mpclaims[i]||[]).length);
+const maxSub=Math.max(...nsub);
+const pcount={};D.mps.forEach(m=>{const a=pcount[m.p]||(pcount[m.p]={n:0,col:m.col});a.n++});
+const pavg={};D.mps.forEach((m,i)=>{const a=pavg[m.p]||(pavg[m.p]={n:0,s:[0,0,0],col:m.col});a.n++;for(let k=0;k<3;k++)a.s[k]+=XYZ[i][k]});
+const pAvg=Object.entries(pavg).filter(([p,a])=>a.n>=2).map(([p,a])=>({p,col:a.col,n:a.n,v:a.s.map(x=>x/a.n)}));
+const subjIdx=name=>D.subjects.findIndex(s=>s.name===name);
+const groupOf=k=>D.groups.findIndex(g=>g.subjects.includes(k));
+function getNode(s){
+ if(s.t==='root')return{name:'All of Parliament',n:N,kind:'root'};
+ if(s.t==='group'){const g=D.groups[s.i];return{name:'Group: '+gname(g),full:gfull(g),sc:(g.plane&&!GSUB)?planeSc(s.i):g.sc,n:g.n,subs:g.subjects,g:g,kind:'group'}}
+ if(s.t==='subj'){const x=D.subjects[s.i];return{name:x.name,sc:x.sc,n:x.n,r:x.r,u:x.u,plane:x.plane,cap:x.capture,sub:x,kind:'subject'}}
+ if(s.t==='os'){const o=D.os[s.i];return{name:o.label,n:o.nb,r:o.r,u:o.u,o:o,kind:'inferred'}}
+ const f=D.fights[s.i];return{name:f.label,sc:f.sc,n:f.n,r:f.r,u:f.u,f:f,kind:'fight'}}
+function parentOf(s){
+ if(s.t==='root')return null;
+ if(s.t==='group')return{t:'root'};
+ if(s.t==='subj'){const g=groupOf(s.i);return g>=0?{t:'group',i:g}:{t:'root'}}
+ const k=subjIdx(s.t==='os'?D.os[s.i].subj:D.fights[s.i].subj);return k>=0?{t:'subj',i:k}:{t:'root'}}
+const keyOf=s=>s.t==='root'?'root':s.t==='group'?'G'+s.i:s.t==='subj'?'S'+s.i:s.t==='os'?'O'+s.i:'F'+s.i;
+const selOf=k=>k==='root'?{t:'root'}:k[0]==='G'?{t:'group',i:+k.slice(1)}:k[0]==='S'?{t:'subj',i:+k.slice(1)}:k[0]==='O'?{t:'os',i:+k.slice(1)}:{t:'fight',i:+k.slice(1)};
+const shortName=(s,n)=>{const x=getNode(s).name;return x.length>n?x.slice(0,n-1)+'…':x};
+// ---- geometry
+function rot(v){const cy=Math.cos(yaw),sy=Math.sin(yaw),cp=Math.cos(pitch),sp=Math.sin(pitch);
+ const x=cy*v[0]+sy*v[2],z=-sy*v[0]+cy*v[2],y=cp*v[1]-sp*z,z2=sp*v[1]+cp*z;return[x,y,z2]}
+function cx(){return W/2}
+function P(v){const r=mode3?rot(v):[v[0],v[1],0];const S=Math.min(W,H)*0.40;return[cx()+r[0]*S,H/2-r[1]*S,r[2]]}
+function scol(s,sc){if(s==null)return null;const a=Math.max(-1,Math.min(1,s/sc));const t=Math.abs(a);
+ const g=[70,76,88],c=a>0?[224,138,30]:[150,100,200];
+ return`rgb(${g.map((x,i)=>Math.round(x+(c[i]-x)*Math.min(1,.15+.85*t))).join(',')})`}
+function pct(a,q){const b=a.filter(x=>x!=null).map(Math.abs).sort((x,y)=>x-y);return b.length?(b[Math.floor(q*(b.length-1))]||1):1}
+function line(u,r,label,sideLabels,boost,light){
+ const weak=r<.3,w=weak?1.4:1.5+5.5*r,al=weak?.5:.4+.6*r;
+ const a=P(u.map(x=>x*1.08)),b=P(u.map(x=>-x*1.08));
+ ctx.save();ctx.lineCap='round';ctx.strokeStyle=weak?DIM:lcol(r);ctx.globalAlpha=light?al*.5:boost?Math.max(al,.85):al;ctx.lineWidth=light?Math.max(1,w*.6):w+(boost?1.5:0);if(weak)ctx.setLineDash([5,5]);
+ ctx.beginPath();ctx.moveTo(b[0],b[1]);ctx.lineTo(a[0],a[1]);ctx.stroke();ctx.setLineDash([]);
+ ctx.globalAlpha=light?.5:Math.max(.55,al);ctx.fillStyle=ctx.strokeStyle;ctx.beginPath();ctx.arc(a[0],a[1],weak?3:4+3*r,0,7);ctx.fill();
+ if(sideLabels){ctx.font='600 12px "Source Sans 3",sans-serif';ctx.fillStyle=INK;ctx.globalAlpha=Math.max(.7,al);
+  ctx.fillText('FOR'+(weak?' (weak fit)':''),a[0]+8,a[1]-6);ctx.globalAlpha=.6;ctx.fillText('AGAINST',b[0]+8,b[1]+14)}
+ ctx.restore()}
+function disc(pl,r,name,showLabel){const weak=r<.3,e1=pl[0],e2=pl[1];ctx.save();
+ const pts=[];for(let k=0;k<=60;k++){const a=k/60*6.2832;pts.push(P([0,1,2].map(i=>Math.cos(a)*e1[i]+Math.sin(a)*e2[i])))}
+ ctx.beginPath();pts.forEach((p,k)=>k?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]));ctx.closePath();
+ ctx.globalAlpha=weak?.06:.08+.22*r;ctx.fillStyle=lcol(r);ctx.fill();
+ ctx.globalAlpha=weak?.45:.5+.4*r;ctx.strokeStyle=lcol(r);ctx.lineWidth=weak?1:2;if(weak)ctx.setLineDash([4,4]);ctx.stroke();ctx.setLineDash([]);
+ if(showLabel){const p=P(e1);ctx.globalAlpha=.95;ctx.fillStyle=INK;ctx.font='600 12px "Source Sans 3",sans-serif';ctx.fillText(name+(weak?' (weak fit)':''),p[0]+6,p[1]+14)}
+ ctx.restore()}
+function shape(nd,boost){
+ if(nd.kind==='inferred'&&nd.u)line(nd.u,nd.r,nd.name,true,boost);
+ if(nd.kind==='fight'&&nd.u)line(nd.u,nd.r,nd.name,true,boost);
+ if(nd.kind==='subject'){const x=nd.sub;if(x.plane)disc(x.plane,x.r,x.name,true);
+  D.fights.filter(f=>f.subj===x.name&&f.u).forEach(f=>line(f.u,f.r,f.label,false,boost));
+  if(x.u)line(x.u,x.r,x.name,false,boost)}
+ if(nd.kind==='group'){if(nd.g.plane&&!GSUB){disc(nd.g.plane,nd.g.r,'Group plane',true);nd.subs.forEach(k=>{const x=D.subjects[k];if(x.u)line(x.u,x.r,x.name,false,false,true)})}
+  else nd.subs.forEach(k=>{const x=D.subjects[k];if(x.plane)disc(x.plane,x.r,x.name,true);else if(x.u)line(x.u,x.r,x.name,false,boost)})}}
+const gname=g=>{if(g.label)return g.label;const t=g.subjects.slice().sort((a,b)=>D.subjects[b].n-D.subjects[a].n),r=t.length-2;return t.slice(0,2).map(k=>D.subjects[k].name).join(' & ')+(r>0?' +'+r:'')};
+const gfull=g=>g.subjects.map(k=>D.subjects[k].name).join(', ');
+const SCOL=k=>`hsl(${(k*137.5)%360},65%,64%)`;
+// rim: cls = M (measured), S (small sample), I (inferred)
+const RIM=[];
+D.fights.forEach((f,i)=>{if(f.u)[1,-1].forEach(e=>RIM.push({t:'fight',i,e,u:f.u.map(x=>x*e),r:f.r,inf:!!f.small,cls:f.small?'S':'M',k:subjIdx(f.subj)}))});
+D.os.forEach((o,i)=>{if(o.u)[1,-1].forEach(e=>RIM.push({t:'os',i,e,u:o.u.map(x=>x*e),r:o.r,inf:true,cls:'I',k:subjIdx(o.subj)}))});
+D.subjects.forEach((s,k)=>{if(s.u)[1,-1].forEach(e=>RIM.push({t:'subj',i:k,e,u:s.u.map(x=>x*e),r:s.r,cls:'J',k}))});
+function addSet(s,F,Sj,O){
+ if(s.t==='fight')F.add(s.i);else if(s.t==='os')O.add(s.i);
+ else if(s.t==='subj'){Sj.add(s.i);D.os.forEach((o,i)=>{if(o.subj===D.subjects[s.i].name)O.add(i)});D.fights.forEach((f,i)=>{if(f.subj===D.subjects[s.i].name)F.add(i)})}
+ else if(s.t==='group')D.groups[s.i].subjects.forEach(k=>{Sj.add(k);D.os.forEach((o,i)=>{if(o.subj===D.subjects[k].name)O.add(i)});D.fights.forEach((f,i)=>{if(f.subj===D.subjects[k].name)F.add(i)})})}
+function hlSets(){const F=new Set(),Sj=new Set(),O=new Set();
+ addSet(sel,F,Sj,O);if(hov)addSet(hov,F,Sj,O);
+ return{F,Sj,O,on:sel.t!=='root'||!!hov}}
+const clsOn=c=>c==='J'?true:c==='M'?L.rimM:c==='S'?L.rimS:L.rimI;
+let labs=[];
+function drawRim(back){const h=hlSets();
+ if(DM==='none')return;
+ RIM.forEach(d=>{const p=P(d.u);if(back&&p[2]>=0||!back&&p[2]<0)return;if(!clsOn(d.cls))return;
+  const rel=d.t==='fight'?h.F.has(d.i):d.t==='os'?h.O.has(d.i):h.Sj.has(d.i),isSel=sel.t===d.t&&sel.i===d.i,isHov=hov&&hov.t===d.t&&hov.i===d.i;
+  if(DM==='subjects'&&d.t!=='subj'&&!(h.on&&rel))return;
+  if(h.on&&!rel&&DM!=='all')return;
+  const on=!h.on||rel;
+  const weak=d.r<.3,big=d.t==='subj',dep=mode3?(.55+.45*(p[2]+1)/2):1;
+  let rad=(big?4.6+3*d.r:2+2*d.r)+(on&&h.on?1:0),al=(weak?.3:.45+.5*d.r)*dep*(on?1:.18);
+  if(on&&h.on){al=Math.max(al,.95);rad+=1}
+  if(isSel||isHov||(hoverDot&&hoverDot.d===d)){al=1;rad+=1.5}
+  rimP.push({d,x:p[0],y:p[1],rad:Math.max(rad,3.5)});
+  if(!back&&d.e>0&&on&&(big||isHov||(hoverDot&&hoverDot.d===d)))labs.push({d,x:p[0],y:p[1],rad,pr:(isSel||isHov||(hoverDot&&hoverDot.d===d)?10:0)+(big?d.r+1:0)});
+  ctx.save();ctx.globalAlpha=Math.min(1,al);const c=SCOL(d.k);
+  ctx.beginPath();if(d.inf){const q=rad*1.3;ctx.moveTo(p[0],p[1]-q);ctx.lineTo(p[0]+q,p[1]);ctx.lineTo(p[0],p[1]+q);ctx.lineTo(p[0]-q,p[1]);ctx.closePath();if(d.e<=0)ctx.setLineDash([2,2])}else ctx.arc(p[0],p[1],rad,0,7);
+  if(d.e>0){ctx.fillStyle=c;ctx.fill();if(big||isSel||isHov||(on&&h.on)){ctx.strokeStyle=big||isSel||isHov?'#fff':c;ctx.lineWidth=big?1.6:1;ctx.stroke()}}
+  else{ctx.fillStyle='rgba(14,17,23,.7)';ctx.fill();ctx.strokeStyle=c;ctx.lineWidth=big?2.2:1.4;ctx.stroke()}
+  if(hoverDot&&hoverDot.d===d){ctx.globalAlpha=1;ctx.strokeStyle='#fff';ctx.lineWidth=2;ctx.beginPath();ctx.arc(p[0],p[1],rad+3,0,7);ctx.stroke()}
+  ctx.restore()})}
+function drawLabels(){if(DM==='none'||!labs.length)return;
+ ctx.save();ctx.font='600 11.5px "Source Sans 3",sans-serif';ctx.textBaseline='middle';
+ const placed=[];
+ labs.sort((a,b)=>b.pr-a.pr).forEach(l=>{
+  let nm=l.d.t==='subj'?D.subjects[l.d.i].name:l.d.t==='fight'?D.fights[l.d.i].label:D.os[l.d.i].label;if(nm.length>34)nm=nm.slice(0,33)+'…';
+  const tw=ctx.measureText(nm).width,x=l.x+l.rad+5,y=l.y,r={x0:x-3,x1:x+tw+3,y0:y-8,y1:y+8};
+  if(r.x1>W-4||r.x0<4||r.y0<4||r.y1>H-4)return;
+  if(l.pr<10&&placed.some(q=>r.x0<q.x1&&r.x1>q.x0&&r.y0<q.y1&&r.y1>q.y0))return;
+  placed.push(r);ctx.globalAlpha=.82;ctx.fillStyle='rgba(14,17,23,.85)';ctx.fillRect(r.x0,r.y0,r.x1-r.x0,16);
+  ctx.globalAlpha=1;ctx.fillStyle=INK;ctx.fillText(nm,x,y)});
+ ctx.restore()}
+function allPlanes(){D.subjects.forEach((s,k)=>{if(!s.plane)return;const e1=s.plane[0],e2=s.plane[1];ctx.save();ctx.beginPath();
+ for(let j=0;j<=60;j++){const a=j/60*6.2832,p=P([0,1,2].map(i=>Math.cos(a)*e1[i]+Math.sin(a)*e2[i]));j?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1])}
+ ctx.closePath();ctx.globalAlpha=.05;ctx.fillStyle=SCOL(k);ctx.fill();ctx.globalAlpha=.28;ctx.strokeStyle=SCOL(k);ctx.lineWidth=1;ctx.stroke();ctx.restore()})}
+// ---- filters
+function hasPos(i,nd){if(nd.kind==='inferred')return nd.o.bk.includes(i);if(nd.sc)return nd.sc[i]!=null;return nsub[i]>0}
+function visible(i,nd){const m=D.mps[i];
+ if(i===curMP)return true;
+ if(FL.parties.size&&!FL.parties.has(m.p))return false;
+ if(nsub[i]<FL.minSub)return false;
+ if(FL.onlyPos&&!hasPos(i,nd))return false;
+ return true}
+const filtersOn=()=>FL.parties.size>0||FL.onlyPos||FL.minSub>0;
+let VIS=new Array(N).fill(true);
+function draw(){
+ dpr=window.devicePixelRatio||1;const R=cv.getBoundingClientRect();W=R.width;H=R.height;if(cv.width!==Math.round(W*dpr)||cv.height!==Math.round(H*dpr)){cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr)}
+ ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,W,H);
+ const nd=getNode(sel),S=Math.min(W,H)*0.40;
+ ctx.save();ctx.strokeStyle='#2a3445';ctx.lineWidth=1;ctx.beginPath();ctx.arc(cx(),H/2,S,0,7);ctx.stroke();
+ if(mode3){ctx.globalAlpha=.55;for(let ax=0;ax<3;ax++){ctx.beginPath();for(let k=0;k<=72;k++){const a=k/72*6.2832,c=Math.cos(a),s=Math.sin(a);const v=ax===0?[0,c,s]:ax===1?[c,0,s]:[c,s,0];const p=P(v);k?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1])}ctx.stroke()}}
+ axHit=[];
+ if(L.axes){ctx.globalAlpha=.9;ctx.fillStyle=AX===null?DIM:INK;ctx.font='600 11px "Source Sans 3",sans-serif';
+  [[1,0,0],[0,1,0],[0,0,1]].forEach((v,i)=>{if(!mode3&&i===2)return;const a=P(v.map(x=>x*1.12)),t='axis '+(i+1),w=ctx.measureText(t).width;ctx.fillStyle=AX===i?'#d9b45f':DIM;ctx.fillText(t,a[0]+3,a[1]-3);
+   ctx.fillRect(a[0]+3,a[1]-1,w,1);axHit.push({i,x:a[0]+1,y:a[1]-15,w:w+4,h:18})})}
+ ctx.restore();
+ const picked=nd.sc||null,sc=picked?pct(picked,.96):1;
+ VIS=D.mps.map((m,i)=>visible(i,nd));
+ rimP=[];labs=[];
+ if(L.planes)allPlanes();
+ proj=D.xyz.map((v,i)=>{const p=P(v);return{i,x:p[0],y:p[1],z:p[2]}});
+ const order=proj.slice().sort((a,b)=>a.z-b.z);
+ if(L.shape)shape(nd,false);
+ if(hov&&!(hov.t===sel.t&&hov.i===sel.i))shape(getNode(hov),true);
+ drawRim(true);
+ const focusK=nd.kind==='subject'?nd.sub.k:nd.kind==='fight'?subjIdx(nd.f.subj):-1;
+ const focusAvg=focusK>=0?(D.subjects[focusK].avg_focus||1):1;
+ const focusPct=(i)=>{if(focusK<0||!D.focus||!D.focus[i])return 0;const r=D.focus[i].rows.find(x=>x[0]===focusK);return r?r[2]:0};
+ order.forEach(o=>{if(!L.mps&&o.i!==curMP)return;const m=D.mps[o.i];let fill=m.col,rad=3.2+(mode3?o.z*0.8:0),al=.85;
+  if(focusK>=0&&VIS[o.i]){const fp=focusPct(o.i);if(fp>0)rad+=Math.min(3.2,Math.sqrt(fp/Math.max(1,focusAvg))*1.15)}
+  if(!VIS[o.i]){fill='#3a4150';al=.1;rad=2}
+  else if(picked){const c=scol(picked[o.i],sc);if(c){fill=c;rad+=.6;al=.95}else{fill='#3a4150';al=.16;rad-=1.2}}
+  ctx.globalAlpha=al;ctx.fillStyle=fill;ctx.beginPath();ctx.arc(o.x,o.y,Math.max(1.8,rad),0,7);ctx.fill();
+  if(o.i===hover||o.i===curMP){ctx.globalAlpha=1;ctx.strokeStyle='#fff';ctx.lineWidth=2;ctx.stroke()}});
+ drawRim(false);
+ drawLabels();
+ ctx.globalAlpha=1;
+ if(L.pavg)pAvg.forEach(a=>{const p=P(a.v),off=FL.parties.size&&!FL.parties.has(a.p),big=a.n>=8,rr=big?12:6.5;ctx.globalAlpha=off?.12:1;ctx.beginPath();ctx.arc(p[0],p[1],rr,0,7);ctx.fillStyle=a.col;ctx.fill();ctx.strokeStyle='#eef1f5';ctx.lineWidth=big?2:1.5;ctx.stroke();
+  if(big){ctx.fillStyle='#fff';ctx.font='700 9px "Source Sans 3",sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(a.p,p[0],p[1]+.5);ctx.textAlign='left';ctx.textBaseline='alphabetic'}
+  else{ctx.font='700 9px "Source Sans 3",sans-serif';ctx.textBaseline='middle';ctx.lineWidth=3;ctx.strokeStyle='rgba(14,17,23,.85)';ctx.strokeText(a.p,p[0]+rr+3,p[1]+.5);ctx.fillStyle='#eef1f5';ctx.fillText(a.p,p[0]+rr+3,p[1]+.5);ctx.textBaseline='alphabetic'}});
+ ctx.globalAlpha=1;
+ if(curMP!=null){const o=proj[curMP],m=D.mps[curMP];ctx.save();ctx.strokeStyle='#d9b45f';ctx.lineWidth=2;ctx.beginPath();ctx.arc(o.x,o.y,11,0,7);ctx.stroke();ctx.globalAlpha=.35;ctx.beginPath();ctx.arc(o.x,o.y,17,0,7);ctx.stroke();ctx.globalAlpha=1;
+  ctx.font='700 12px "Source Sans 3",sans-serif';const tw=ctx.measureText(m.n).width;ctx.fillStyle='rgba(14,17,23,.85)';ctx.fillRect(o.x+16,o.y-9,tw+10,18);ctx.fillStyle='#d9b45f';ctx.fillText(m.n,o.x+21,o.y+4);ctx.restore()}
+ drawYou(nd)
+ const ic=(h)=>`<svg viewBox="0 0 14 14">${h}</svg>`;
+ const endName=nd.kind==='fight'?['for','against']:['positive end','negative end'];
+ const kv=(svg,t)=>`<span class="it">${svg}${t}</span>`;
+ const lk=kv(ic('<circle cx="7" cy="7" r="4.5" fill="#9aa4b2"/>'),'for end')+kv(ic('<circle cx="7" cy="7" r="4" fill="none" stroke="#9aa4b2" stroke-width="1.6"/>'),'against end')+kv(ic('<path d="M7 2L12 7L7 12L2 7Z" fill="#9aa4b2"/>'),'inferred / small')+kv(ic('<circle cx="7" cy="7" r="4.5" fill="#9aa4b2" opacity=".3"/>'),'weak fit')+kv(ic('<circle cx="7" cy="7" r="4" fill="#3a4150"/>'),'no score')+(picked?kv('<span class="sw" style="background:#e08a1e"></span>','MP high')+kv('<span class="sw" style="background:#9664c8"></span>','MP low'):'')+kv(ic('<circle cx="7" cy="7" r="6" fill="#d9b45f"/>'),'party avg')+kv(ic('<circle cx="7" cy="7" r="3.5" fill="#d9b45f"/>'),'party avg, under 8 MPs')+(YOU?kv(ic('<path d="M7 1l1.8 4.2 4.5.4-3.4 3 1 4.4L7 10.6 3.1 13l1-4.4-3.4-3 4.5-.4z" fill="#ffd45e"/>'),'you'):'');
+ const lg=$('leg');lg.classList.toggle('c',store.get('legC')==='1');
+ lg.innerHTML=`<div class="lk"><button class="lt" id="legT" aria-expanded="${store.get('legC')!=='1'}">Key &#9662;</button>${lk}</div>`+`<div class="axs">${[0,1,2].map(n=>`<button type="button" class="axc" data-ax="${n}" aria-pressed="${AX===n}" title="What does axis ${n+1} mean?"><b>axis ${n+1}</b> ${esc(D.axes[n])}</button>`).join('')}</div>`;
+ if(lg.classList.contains('c'))lg.innerHTML='<button class="lt" id="legT" aria-expanded="false" style="margin:0">Key &#9656;</button>'+lg.querySelector('.axs').outerHTML;
+ filCount()}
+// ---- tree (with subject search)
+const open={};
+function rowHtml(cls,key,txt,r,tag,selected,extra,ttl){const bar=r==null?'':`<span class="bar" title="fit strength ${r.toFixed(2)}"><i style="width:${Math.round(r*100)}%;background:${lcol(r)}"></i></span>`;
+ return`<div class="row ${cls} ${r!=null&&r<.3?'weak':''} ${selected?'sel':''}" data-k="${key}" role="treeitem"><span class="tw" ${extra||''}>${extra?(open[key]?'v':'>'):''}</span><span class="t" title="${esc(ttl||txt)}">${esc(txt)}</span>${bar}<span class="tag">${tag||''}</span></div>`}
+const isSel=(t,i)=>sel.t===t&&sel.i===i;
+function renderTree(){const q=tq.trim().toLowerCase(),hit=x=>!q||String(x).toLowerCase().includes(q);
+ let h=rowHtml('','root','All of Parliament',null,N+' MPs',sel.t==='root');let any=false;
+ const subjRows=(idxs,ind)=>idxs.map(k=>{const s=D.subjects[k];if(open['S'+k]===undefined)open['S'+k]=false;
+  const fl=D.fights.map((f,i)=>[f,i]).filter(([f])=>f.subj===s.name),osl=D.os.map((o,i)=>[o,i]).filter(([o])=>o.subj===s.name&&o.u);
+  const mS=hit(s.name),kids=q&&!mS;
+  const fF=kids?fl.filter(([f])=>hit(f.label)):fl,fO=kids?osl.filter(([o])=>hit(o.label)):osl;
+  if(q&&!mS&&!fF.length&&!fO.length)return'';any=true;
+  const isOpen=q?true:open['S'+k],sv=open['S'+k];open['S'+k]=isOpen;
+  let o=rowHtml(ind,'S'+k,s.name,s.u?s.r:null,s.u?(s.r<.3?'weak':''):'no line',isSel('subj',k),'data-tog="S'+k+'"');open['S'+k]=sv;
+  if(isOpen){fF.filter(([f])=>f.u).sort((a,b)=>b[0].r-a[0].r).forEach(([f,i])=>{o+=rowHtml('ind3','F'+i,f.label+(f.merged>1?' ('+f.merged+' merged)':''),f.r,f.small?'small n':f.r<.3?'weak':'',isSel('fight',i))});
+   fO.forEach(([oo,i])=>{o+=rowHtml('ind3 weak','O'+i,'◇ '+oo.label,oo.r,'inferred',isSel('os',i))});
+   if(!q)fl.filter(([f])=>!f.u).forEach(([f])=>{o+=`<div class="few" title="${esc(f.label)}">too few MPs (${f.n}): ${esc(f.label)}</div>`})}
+  return o}).join('');
+ if(D.groups.length){D.groups.forEach((g,gi)=>{if(open['G'+gi]===undefined)open['G'+gi]=true;
+  const rows=subjRows(g.subjects,'ind2');if(q&&!rows)return;
+  h+=rowHtml('g ind1','G'+gi,gname(g),null,g.subjects.length+' subj',isSel('group',gi),'data-tog="G'+gi+'"',gfull(g));
+  if(open['G'+gi]||q)h+=rows});
+  const rest=D.subjects.map((s,k)=>k).filter(k=>!D.groups.some(g=>g.subjects.includes(k)));
+  if(rest.length){const rr=subjRows(rest,'ind2');if(rr)h+='<div class="few" style="padding-left:14px">Not in a group (no usable direction):</div>'+rr}}
+ else h+=subjRows(D.subjects.map((s,k)=>k).sort((a,b)=>D.subjects[a].name.localeCompare(D.subjects[b].name)),'ind1');
+ if(q&&!any)h+='<div class="few" style="padding-left:14px">No subject or fight matches "'+esc(tq)+'".</div>';
+ $('tree').innerHTML=h}
+$('sq').oninput=e=>{tq=e.target.value;renderTree()};
+$('tree').addEventListener('click',e=>{const tg=e.target.closest('[data-tog]');if(tg){open[tg.dataset.tog]=!open[tg.dataset.tog];renderTree();return}
+ const r=e.target.closest('.row');if(!r)return;$('app').classList.remove('mobile-open');go(selOf(r.dataset.k))});
+$('tree').addEventListener('mouseover',e=>{const r=e.target.closest('.row');const k=r?r.dataset.k:null;
+ const n=k&&k!=='root'?selOf(k):null;if((n&&hov&&n.t===hov.t&&n.i===hov.i)||(!n&&!hov))return;hov=n;draw()});
+$('tree').addEventListener('mouseleave',()=>{if(hov){hov=null;draw()}});
+// ---- routing: the URL hash is the state, so Back works
+function hashStr(s,mp){return'#'+s.t+(s.i!=null?'='+s.i:'')+(mode3?'':'&2d')+(mp!=null?'&mp='+mp:'')}
+function go(s,mp){const m=mp===undefined?curSel:mp;const h=hashStr(s,m);if(h===location.hash)applyHash();else location.hash=h}
+function applyHash(){const h=location.hash.slice(1);AX=null;
+ const m=h.match(/^(root|group|subj|fight|os)(?:=(\d+))?/);let s={t:'root'};
+ if(m&&m[1]!=='root'&&m[2]!=null){const i=+m[2],ok=m[1]==='group'?D.groups[i]:m[1]==='subj'?D.subjects[i]:m[1]==='os'?D.os[i]:D.fights[i];if(ok)s={t:m[1],i}}
+ sel=s;hov=null;
+ const m3=!/&2d/.test(h);if(m3!==mode3)setModeRaw(m3);
+ const mm=h.match(/mp=(\d+)/),sid=mm?+mm[1]:null;curMP=sid!=null&&D.mps[sid]?sid:null;curSel=curMP!=null?curMP:(sid!=null&&sid>=N&&D.po[sid-N]?sid:null);
+ let a=s;while(a=parentOf(a)){if(a.t==='subj')open['S'+a.i]=true;if(a.t==='group')open['G'+a.i]=true}
+ if(s.t==='subj')open['S'+s.i]=true;if(s.t==='group')open['G'+s.i]=true;
+ update(true);
+ if(curSel!==drawnMP){if(curSel==null)hideMP();else if(curMP!=null)renderMP(curMP);else renderPO(curSel)}}
+addEventListener('hashchange',applyHash);
+function update(scroll){renderTree();info();crumbs();draw();$('tip').style.display='none';hoverDot=null;
+ if(scroll){const r=document.querySelector('#tree .row.sel');if(r)r.scrollIntoView({block:'nearest'})}}
+function crumbs(){const chain=[];let a=sel;while(a){chain.unshift(a);a=parentOf(a)}
+ $('crumbs').innerHTML=chain.map((s,j)=>{const last=j===chain.length-1,nm=s.t==='root'?'All':shortName(s,38).replace(/^Group: /,'');
+  return(j?'<span class="sep">&rsaquo;</span>':'')+(last?`<b title="${esc(getNode(s).name)}">${esc(nm)}</b>`:`<a href="${hashStr(s,curSel)}" title="${esc(getNode(s).name)}">${esc(nm)}</a>`)}).join('');
+ $('home').disabled=false}
+// ---- info panel
+function partyEnds(sc){const pos={},neg={};let np=0,nn=0;
+ sc.forEach((v,i)=>{if(v==null||v===0)return;const p=D.mps[i].p;if(v>0){pos[p]=(pos[p]||0)+1;np++}else{neg[p]=(neg[p]||0)+1;nn++}});return{pos,neg,np,nn}}
+function splitBar(cnt,tot,label){if(!tot)return`<div class="splabel">${label}: nobody</div>`;
+ const e=Object.entries(cnt).sort((a,b)=>b[1]-a[1]);
+ const seg=e.map(([p,c])=>`<i style="width:${c/tot*100}%;background:${pcount[p]?pcount[p].col:'#888'}" title="${esc(p)}: ${c} of ${tot}"></i>`).join('');
+ const lab=e.slice(0,4).map(([p,c])=>esc(p)+' '+Math.round(c/tot*100)+'%').join(' · ')+(e.length>4?' · +'+(e.length-4)+' more':'');
+ return`<div class="splabel"><b class="ink">${label}</b> (${tot} MPs)</div><div class="split">${seg}</div><div class="splabel">${lab}</div>`}
+function mpBtns(arr){return arr.map(([i,v])=>`<button class="mpb" data-mp="${i}" title="${esc(D.mps[i].c)}"><i style="background:${D.mps[i].col}"></i>${esc(D.mps[i].n)} <em>${v==null?esc(D.mps[i].p):(v>0?'+':'')+v.toFixed(2)}</em></button>`).join('')}
+function topEnds(sc){const a=sc.map((v,i)=>[i,v]).filter(x=>x[1]!=null&&x[1]!==0);
+ return{pos:a.filter(x=>x[1]>0).sort((x,y)=>y[1]-x[1]).slice(0,6),neg:a.filter(x=>x[1]<0).sort((x,y)=>x[1]-y[1]).slice(0,6)}}
+function kid(k,t,r,tag,ttl){return`<button class="kid" title="${esc(ttl||t)}" data-nav="${k}"><span>${esc(t)}</span><span class="dim">${r!=null?`<span class="pill" style="background:${lcol(r)}">${r.toFixed(2)}</span> `:''}${esc(tag||'')}</span></button>`}
+function info(){if(AX!==null){$('chip').innerHTML=axisHtml(AX);return}const nd=getNode(sel),par=parentOf(sel);let h='';
+ if(par)h+=`<div class="up"><a href="${hashStr(par,curSel)}" data-nav="${keyOf(par)}">&uarr; Back up to ${esc(par.t==='root'?'All of Parliament':shortName(par,40))}</a></div>`;
+ h+=`<h2>${esc(nd.name)}</h2>`;
+ if(sel.t==='root'){
+  h+=`<div class="sp"><span class="big">${N}</span> <span class="dim">MPs placed</span></div><p class="meta sp">Every MP with at least one subject score. ${D.onmap.filter(x=>x).length} sit on the research map; the rest are projected from the subjects they have (lower confidence).</p>`;
+  h+=`<p class="meta sp"><b class="ink">This is the full 3D space.</b> Every MP is one point. Its three axes are (1) ${esc(D.axes[0])}, (2) ${esc(D.axes[1])}, (3) ${esc(D.axes[2])}. Groups, subjects and fights are drawn inside it as planes and lines.</p><p class="meta sp">Pick a group below, or a subject or fight in the list on the left. Hover over anything in the list to preview it in the space.</p><h4>Groups</h4><div class="kids">`;
+  D.groups.forEach((g,gi)=>{h+=kid('G'+gi,gname(g),null,g.subjects.length+(g.subjects.length===1?' subject':' subjects'),gfull(g))});h+='</div>';
+  const sc=null;h+=`<h4>Party mix of all MPs</h4>`+splitBar(Object.fromEntries(Object.entries(pcount).map(([p,a])=>[p,a.n])),N,'All MPs')}
+ else if(sel.t==='os'){const o=nd.o;
+  h+=`<div class="kind">inferred fight (one-sided)</div>`;
+  if(o.desc)h+=`<p class="sp">${esc(o.desc)}</p>`;
+  h+=`<div class="sides"><div class="sd pos"><b>Supporters want</b>${esc(o.fm||'the FOR side')}</div><div class="sd neg"><b>Opponents want</b>${esc(o.am||'the AGAINST side')}</div></div>`;
+  h+=`<div class="sp"><span class="big">${o.nb}</span> <span class="dim">placed MPs backed it (${o.nfor} for, ${o.nag} against found)</span></div>`;
+  h+=o.u?`<div class="sp">Signal <span class="big" style="font-size:18px">${o.r.toFixed(2)}</span> <span class="pill" style="background:${lcol(o.r)}">${lvl(o.r)}</span></div><p class="meta sp">The line runs from the centre of all MPs to the average position of the ${o.side==='for'?'MPs who backed it':'MPs who opposed it'}. Signal = that offset divided by its standard error, rescaled to 0-1.</p>`:'';
+  h+=`<p class="meta sp"><b class="ink">Not used to place any MP.</b> Only one side of this fight was found, so this is a guess from who backed it (it tends to follow party), not a measured fit.</p>`;
+  const cnt={};o.bk.forEach(i=>{const p=D.mps[i].p;cnt[p]=(cnt[p]||0)+1});
+  h+=`<h4>Party split of backers</h4>`+splitBar(cnt,o.bk.length,'Backers');
+  h+=`<h4>Backers on the map</h4><div class="mpl">${mpBtns(o.bk.slice(0,12).map(i=>[i,null]))}</div>`}
+ else{
+  h+=`<div class="kind">${nd.kind}${nd.kind==='fight'?' (a line)':nd.kind==='subject'?' (a plane)':' (a set of subjects)'}</div>`;
+  if(nd.kind==='fight'){if(nd.f.desc)h+=`<p class="sp">${esc(nd.f.desc)}</p>`;
+   h+=`<div class="sides"><div class="sd pos"><b>Those <span style="text-transform:none">for</span> want</b>${esc(nd.f.fm||'the FOR side')}</div><div class="sd neg"><b>Those against want</b>${esc(nd.f.am||'the AGAINST side')}</div></div>`}
+  if(nd.kind==='subject'){const x=nd.sub;h+=`<p class="sp">${x.nfights} fights on this subject (${x.nlines} drawn as lines) feed one scale. It runs from the orange end to the purple end:</p><div class="sides"><div class="sd pos"><b>Orange end</b>${esc(x.hi)}</div><div class="sd neg"><b>Purple end</b>${esc(x.lo)}</div></div>`}
+  if(nd.kind==='group'){const g=nd.g;h+=`<p class="meta sp"><b class="ink">All subjects:</b> ${esc(nd.full)}</p>`;
+   if(g.plane&&!GSUB)h+=`<p class="sp">One plane for the whole group: the two main directions its ${nd.subs.length} subjects (and their fights) point in. Colour = where an MP sits along the plane's first axis.</p><p class="meta sp">The plane captures ${Math.round(g.capture*100)}% of its subjects' directions.</p>`;
+   else h+=`<p class="sp">Subjects whose scales point the same way in the space. Colour = average of the subjects' standardised scores.${g.plane?'':' (This group has too few directions for a single plane.)'}</p>`;
+   if(D.gstab<.5)h+=`<p class="meta sp"><b class="ink">Groups are tentative.</b> Re-drawing the MP sample gives the same grouping only partly (agreement ${D.gstab.toFixed(2)}; 1 = identical).</p>`;
+   if(g.plane)h+=`<label class="ck" style="display:flex;gap:8px;align-items:center;margin-top:8px;cursor:pointer"><input type="checkbox" id="gsub" ${GSUB?'checked':''}> Show subject planes (${nd.subs.length} separate planes)</label>`;
+   if(g.plane&&!GSUB)h+=`<h4>MPs on the group plane</h4><canvas id="ins" aria-label="MPs projected onto the group plane"></canvas><div class="axl"><b>x</b> ${esc(g.ax[0])}</div><div class="axl"><b>y</b> ${esc(g.ax[1])}</div>`}
+  h+=`<div class="sp"><span class="big">${nd.n}</span> <span class="dim">MPs with a score${nd.kind==='fight'?' ('+nd.f.nfor+' for, '+nd.f.nag+' against)':''}</span></div>`;
+  if(nd.r!=null){h+=nd.u?`<div class="sp">Fit strength <span class="big" style="font-size:18px">${nd.r.toFixed(2)}</span> <span class="pill" style="background:${lcol(nd.r)}">${lvl(nd.r)}</span></div>
+   <p class="meta sp">How well the MPs' scores line up with one direction in the space (0 = not at all, 1 = perfectly), tested on a map built without this ${nd.kind}; fitted on ${nd.f?nd.f.nfit:nd.sub.nfit} MPs.${nd.r<.3?' <b class="ink">The space does not explain this well. Treat the line as a guess.</b>':''}${nd.f&&nd.f.small?' <b class="ink">Small sample: fitted on few MPs.</b>':''}${nd.f&&nd.f.merged>1?' Merged from '+nd.f.merged+' near-duplicate fights on the same bill.':''}</p>`:`<div class="meta sp">No line: too few MPs (${nd.n}, need 12).</div>`}
+  if(nd.kind==='subject'){const x=nd.sub;h+=x.plane?`<p class="meta sp">The plane captures ${Math.round(x.capture*100)}% of its ${x.nlines} fights' directions.</p>`:`<p class="meta sp">${x.nlines<2?'Fewer than two fights have a line, so no plane; showing the subject direction only.':''}</p>`}
+  h+=youInfo(nd);
+  if(nd.sc){const pe=partyEnds(nd.sc),te=topEnds(nd.sc);
+   const lp=nd.kind==='fight'?'Backed it':nd.kind==='subject'?'Orange end':'Positive end',ln=nd.kind==='fight'?'Opposed it':nd.kind==='subject'?'Purple end':'Negative end';
+   h+=`<h4>Party split</h4>`+splitBar(pe.pos,pe.np,lp)+splitBar(pe.neg,pe.nn,ln);
+   h+=`<h4>Top MPs at each end</h4><div class="splabel">${lp}</div><div class="mpl">${mpBtns(te.pos)||'<span class="meta">none</span>'}</div><div class="splabel" style="margin-top:6px">${ln}</div><div class="mpl">${mpBtns(te.neg)||'<span class="meta">none</span>'}</div>`}
+  if(nd.kind==='subject'){const fl=D.fights.map((f,i)=>[f,i]).filter(([f])=>f.subj===nd.sub.name&&f.u).sort((a,b)=>b[0].r-a[0].r),ol=D.os.map((o,i)=>[o,i]).filter(([o])=>o.subj===nd.sub.name&&o.u);
+   h+=`<h4>Fights in this subject</h4><div class="kids">${fl.map(([f,i])=>kid('F'+i,f.label,f.r,f.small?'small n':'')).join('')}${ol.map(([o,i])=>kid('O'+i,'◇ '+o.label,o.r,'inferred')).join('')||''}</div>`;
+   if(nd.sub.top_focus&&nd.sub.top_focus.length){
+    h+=`<h4>Most active speakers (focus, not stance)</h4><p class="meta">Commons avg: ${nd.sub.avg_focus!=null?nd.sub.avg_focus.toFixed(1):'?'}% of speeches</p><div class="mpl">${nd.sub.top_focus.map(([mi,cnt,pct])=>{const m=D.mps[mi];return`<button class="mpbtn" data-mp="${mi}"><span class="dot" style="background:${m.col}"></span>${esc(m.n)} <span class="meta">${pct}% (${cnt})</span></button>`}).join('')}</div>`}}
+  if(nd.kind==='group')h+=`<h4>Subjects</h4><div class="kids">${nd.subs.map(k=>kid('S'+k,D.subjects[k].name,D.subjects[k].u?D.subjects[k].r:null,D.subjects[k].n+' MPs')).join('')}</div>`}
+ $('chip').innerHTML=h;drawInset()}
+
+// ---- sk15: axis explainer (details panel)
+function openAxis(n){AXALL=false;if(curSel!=null||drawnMP!=null){curSel=null;curMP=null;hideMP();try{history.replaceState(null,'',hashStr(sel,null))}catch(e){}}
+ AX=n;if($('app').classList.contains('dock-c'))setDock(false);info();draw()}
+function closeAxis(){AX=null;info();draw()}
+function axisHtml(n){const L=(D.axl||[])[n]||[],mx=Math.max(1e-9,...L.map(x=>Math.abs(x[1]))),list=AXALL?L:L.slice(0,6);
+ let h=`<div class="up"><button type="button" class="link" data-axclose>&larr; Close</button></div><h2>Axis ${n+1}</h2><p class="sp">MPs are spread along this axis mostly by their positions on:</p><div class="axk"><span>&larr; other end</span><span>labelled end &rarr;</span></div>`;
+ list.forEach(([nm,v])=>{const k=subjIdx(nm),w=Math.round(50*Math.abs(v)/mx),bar=`<span class="axb"><i style="${v>=0?'left:50%':'right:50%'};width:${w}%;background:${v>=0?'#d9b45f':'#6fb3e0'}"></i></span>`;
+  const inner=`<span class="axn" title="${esc(nm)}">${esc(nm)}</span>${bar}<span class="axv">${v>0?'+':''}${v.toFixed(2)}</span>`;
+  h+=k>=0?`<button type="button" class="axr" data-axs="${k}">${inner}</button>`:`<div class="axr">${inner}</div>`});
+ if(L.length>6)h+=`<button type="button" class="more" data-axall aria-expanded="${AXALL}">${AXALL?'Show fewer':'Show all '+L.length}</button>`;
+ const ix=D.mps.map((m,i)=>i).filter(i=>D.onmap[i]).sort((a,b)=>XYZ[b][n]-XYZ[a][n]);
+ h+=`<h4>Furthest toward the labelled end</h4><div class="mpl">${mpBtns(ix.slice(0,3).map(i=>[i,null]))}</div><h4>Furthest toward the other end</h4><div class="mpl">${mpBtns(ix.slice(-3).reverse().map(i=>[i,null]))}</div>`;
+ return h}
+function drawInset(){const c=$('ins');insPts=[];if(!c||sel.t!=='group')return;const g=D.groups[sel.i],e1=g.plane[0],e2=g.plane[1],d=window.devicePixelRatio||1,w=c.clientWidth,h=c.clientHeight;c.width=w*d;c.height=h*d;const x=c.getContext('2d');x.setTransform(d,0,0,d,0,0);
+ const pts=[];g.sc.forEach((v,i)=>{if(v==null)return;const q=XYZ[i];pts.push([i,q[0]*e1[0]+q[1]*e1[1]+q[2]*e1[2],q[0]*e2[0]+q[1]*e2[1]+q[2]*e2[2]])});
+ let m=0.2;pts.forEach(p=>{m=Math.max(m,Math.abs(p[1]),Math.abs(p[2]))});m*=1.12;const sx=(w/2-8)/m,sy=(h/2-8)/m,S=Math.min(sx,sy);
+ x.strokeStyle='#273142';x.beginPath();x.moveTo(0,h/2);x.lineTo(w,h/2);x.moveTo(w/2,0);x.lineTo(w/2,h);x.stroke();
+ pts.forEach(p=>{const X=w/2+p[1]*S,Y=h/2-p[2]*S;insPts.push({i:p[0],X,Y});x.globalAlpha=.8;x.fillStyle=D.mps[p[0]].col;x.beginPath();x.arc(X,Y,2.6,0,7);x.fill()});x.globalAlpha=1;
+ let lm=0.01;g.load.forEach(l=>{lm=Math.max(lm,Math.hypot(l.a,l.b))});
+ x.font='600 10.5px "Source Sans 3",sans-serif';g.load.forEach(l=>{const X=w/2+l.a/lm*m*.8*S,Y=h/2-l.b/lm*m*.8*S;x.strokeStyle='#d9b45f';x.globalAlpha=.55;x.lineWidth=1.4;x.beginPath();x.moveTo(w/2,h/2);x.lineTo(X,Y);x.stroke();x.globalAlpha=1;x.fillStyle='#d9b45f';x.beginPath();x.arc(X,Y,3,0,7);x.fill();const nm=D.subjects[l.k].name,tw=x.measureText(nm).width;x.fillStyle='#eef1f5';x.fillText(nm,Math.max(2,Math.min(w-tw-2,X+5)),Y-5)});
+ if(curMP!=null){const q=insPts.find(p=>p.i===curMP);if(q){x.strokeStyle='#fff';x.lineWidth=2;x.beginPath();x.arc(q.X,q.Y,6,0,7);x.stroke()}}
+ c.onclick=ev=>{const R=c.getBoundingClientRect(),px=ev.clientX-R.left,py=ev.clientY-R.top;let b=null,bd=100;insPts.forEach(p=>{const dd=(p.X-px)**2+(p.Y-py)**2;if(dd<bd){bd=dd;b=p}});if(b)go(sel,b.i)};
+ c.onmousemove=ev=>{const R=c.getBoundingClientRect(),px=ev.clientX-R.left,py=ev.clientY-R.top;let b=null,bd=100;insPts.forEach(p=>{const dd=(p.X-px)**2+(p.Y-py)**2;if(dd<bd){bd=dd;b=p}});c.title=b?D.mps[b.i].n+' ('+D.mps[b.i].p+')':''}}
+addEventListener('resize',()=>{if(sel.t==='group')drawInset()});
+$('chip').addEventListener('change',e=>{if(e.target.id==='gsub'){GSUB=e.target.checked;info();draw()}});
+$('chip').addEventListener('click',e=>{if(e.target.closest('[data-axclose]')){closeAxis();return}
+ const as=e.target.closest('[data-axs]');if(as){const k=+as.dataset.axs;AX=null;go({t:'subj',i:k});return}
+ if(e.target.closest('[data-axall]')){AXALL=!AXALL;info();return}
+ const m=e.target.closest('[data-mp]');if(m){go(sel,+m.dataset.mp);return}
+ const n=e.target.closest('[data-nav]');if(n){e.preventDefault();go(selOf(n.dataset.nav))}});
+$('crumbs').addEventListener('click',e=>{const a=e.target.closest('a');if(a){e.preventDefault();location.hash=a.getAttribute('href')}});
+$('home').onclick=()=>go({t:'root'});
+// ---- canvas interaction
+let drag=null;
+cv.addEventListener('pointerdown',e=>{drag={x:e.clientX,y:e.clientY,moved:0};cv.setPointerCapture(e.pointerId);closePops()});
+cv.addEventListener('pointermove',e=>{const R=cv.getBoundingClientRect();
+ if(drag){const dx=e.clientX-drag.x,dy=e.clientY-drag.y;drag.moved+=Math.abs(dx)+Math.abs(dy);if(mode3){yaw+=dx*.008;pitch=Math.max(-1.5,Math.min(1.5,pitch+dy*.008))}drag.x=e.clientX;drag.y=e.clientY;draw();return}
+ const x=e.clientX-R.left,y=e.clientY-R.top;const hd=dotAt(x,y);hoverDot=hd;const ah=axAt(x,y);hover=hd||ah?-1:nearest(x,y);const t=$('tip');cv.style.cursor=hd||ah?'pointer':'';
+ if(hd){t.style.display='block';t.style.left=Math.min(x+12,W-310)+'px';t.style.top=(y+12)+'px';t.innerHTML=dotTip(hd.d)}
+ else if(hover>=0){const m=D.mps[hover];t.style.display='block';t.style.left=(x+12)+'px';t.style.top=(y+12)+'px';t.textContent=m.n+' ('+m.p+') · '+nsub[hover]+' subject'+(nsub[hover]===1?'':'s')}else t.style.display='none';draw()});
+const axAt=(x,y)=>axHit.find(h=>x>=h.x&&x<=h.x+h.w&&y>=h.y&&y<=h.y+h.h);
+cv.addEventListener('pointerup',e=>{if(drag&&drag.moved<5){const R=cv.getBoundingClientRect();const ah=axAt(e.clientX-R.left,e.clientY-R.top);if(ah){openAxis(ah.i);drag=null;return}const hd=dotAt(e.clientX-R.left,e.clientY-R.top);if(hd){go(hd.d.t==='subj'?{t:'subj',i:hd.d.i}:{t:hd.d.t,i:hd.d.i})}else{const i=nearest(e.clientX-R.left,e.clientY-R.top);if(i>=0)go(sel,i)}}drag=null});
+function dotAt(x,y){let b=null,bd=1e9;for(const q of rimP){const d=Math.hypot(q.x-x,q.y-y);if(d<=q.rad+3&&d-q.rad*0.3<bd){bd=d-q.rad*0.3;b=q}}return b}
+function dotTip(d){const wk=d.r<.3?' &nbsp;<b>weak fit</b>':'';
+ if(d.t==='os'){const o=D.os[d.i],txt=d.e>0?o.fm:o.am;
+  return`<b>${esc(o.label)}</b><br>${d.e>0?'wants':'opposes'}: ${esc(txt||(d.e>0?'the FOR side':'the AGAINST side'))}<br><i>inferred from who backed it (one-sided)</i><br>${esc(o.subj||'')} · signal ${o.r.toFixed(2)} · ${o.nb} backers${wk}`}
+ if(d.t==='fight'){const f=D.fights[d.i],txt=d.e>0?f.fm:f.am,sm=f.small?' &nbsp;<b>small sample</b>':'';
+  return`<b>${esc(f.label)}</b><br>${d.e>0?'wants':'opposes'}: ${esc(txt||(d.e>0?'the FOR side':'the AGAINST side'))}<br>${esc(f.subj||'')} · fit r ${f.r.toFixed(2)} · ${f.n} MPs${wk}${sm}`}
+ const s=D.subjects[d.i];return`<b>${esc(s.name)}</b> (subject)<br>${d.e>0?esc(s.hi):esc(s.lo)}<br>fit r ${s.r.toFixed(2)} · ${s.n} MPs${wk}`}
+function nearest(x,y){let b=-1,bd=100;for(const o of proj.slice().sort((a,b)=>b.z-a.z)){if(!VIS[o.i]||(!L.mps&&o.i!==curMP))continue;const d=(o.x-x)**2+(o.y-y)**2;if(d<bd){bd=d;b=o.i}}return b}
+function setModeRaw(m3){mode3=m3;$('b3').setAttribute('aria-pressed',m3);$('b2').setAttribute('aria-pressed',!m3)}
+function setMode(m3){setModeRaw(m3);try{history.replaceState(null,'',hashStr(sel,curSel))}catch(e){}draw()}
+$('b3').onclick=()=>setMode(true);$('b2').onclick=()=>setMode(false);
+$('browse').onclick=()=>{const a=$('app');if(matchMedia('(max-width:820px)').matches)a.classList.toggle('mobile-open');else{a.classList.toggle('hide-left');$('browse').setAttribute('aria-expanded',!a.classList.contains('hide-left'))}};
+addEventListener('resize',draw);
+try{new ResizeObserver(()=>draw()).observe($('stage'))}catch(e){}
+function setDM(m){DM=m;document.querySelectorAll('#dm button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.dm===m));hoverDot=null;$('tip').style.display='none';draw()}
+$('dm').addEventListener('click',e=>{const b=e.target.closest('button');if(b)setDM(b.dataset.dm)});
+function setDock(c,save){$('app').classList.toggle('dock-c',c);const b=$('dockbtn');b.setAttribute('aria-expanded',!c);b.innerHTML=c?'&lsaquo;':'&rsaquo;';b.title=c?'Show details':'Collapse details';if(save)store.set('dockC',c?'1':'0')}
+$('dockbtn').onclick=()=>setDock(!$('app').classList.contains('dock-c'),true);
+$('leg').addEventListener('click',e=>{const ac=e.target.closest('[data-ax]');if(ac){e.stopPropagation();AX===+ac.dataset.ax?closeAxis():openAxis(+ac.dataset.ax);return}if(e.target.closest('#legT')){store.set('legC',store.get('legC')==='1'?'0':'1');draw()}});
+// ---- layers / filters popovers
+function buildLayers(){$('layPop').innerHTML='<h3>Show or hide</h3>'+LAYERS.map(([k,t,c])=>`<label class="ck"><input type="checkbox" data-l="${k}" ${L[k]?'checked':''}><i style="background:${c};border-radius:${k.startsWith('rimS')||k==='rimI'?'1px;transform:rotate(45deg) scale(.8)':'50%'}"></i>${t}</label>`).join('')+'<p class="small" style="margin-top:8px">Fight dots show only when Topic dots is set to All. Reset view puts the camera and these switches back to the start.</p>'}
+$('layPop').addEventListener('change',e=>{const k=e.target.dataset.l;if(k){L[k]=e.target.checked;draw()}});
+function buildFilters(){const ps=Object.entries(pcount).sort((a,b)=>b[1].n-a[1].n);
+ $('filPop').innerHTML=`<h3>Party</h3><div class="chips">${ps.map(([p,a])=>`<button class="pchip" data-p="${esc(p)}" aria-pressed="${FL.parties.has(p)}"><em style="background:${a.col}"></em>${esc(p)} <span style="opacity:.6">${a.n}</span></button>`).join('')}</div><div class="small">Pick one or more; the others fade out. None picked = all shown.</div>
+ <h3>Evidence</h3><label class="ck"><input type="checkbox" id="onlyPos" ${FL.onlyPos?'checked':''}><span id="onlyLab"></span></label>
+ <div style="margin-top:6px" class="small">Only MPs with at least <b class="ink" id="minV">${FL.minSub}</b> subject${FL.minSub===1?'':'s'} scored</div><input type="range" id="minSub" min="0" max="${Math.min(maxSub,8)}" step="1" value="${FL.minSub}" aria-label="Minimum subjects scored">
+ <p class="small" id="filCnt" style="margin-top:8px"></p><button class="link" id="filClear">Clear filters</button>`;onlyLabel()}
+function onlyLabel(){const e=$('onlyLab');if(e)e.textContent='Only MPs with a position on '+(sel.t==='root'?'anything (all of Parliament)':'"'+shortName(sel,34).replace(/^Group: /,'')+'"')}
+function filCount(){const n=VIS.filter(Boolean).length;const e=$('filCnt');if(e)e.textContent='Showing '+n+' of '+N+' MPs.';$('filBtn').classList.toggle('act',filtersOn());onlyLabel()}
+$('filPop').addEventListener('click',e=>{const c=e.target.closest('.pchip');if(c){const p=c.dataset.p;FL.parties.has(p)?FL.parties.delete(p):FL.parties.add(p);c.setAttribute('aria-pressed',FL.parties.has(p));draw();return}
+ if(e.target.id==='filClear'){FL={parties:new Set(),onlyPos:false,minSub:0};buildFilters();draw()}});
+$('filPop').addEventListener('input',e=>{if(e.target.id==='minSub'){FL.minSub=+e.target.value;$('minV').textContent=FL.minSub;draw()}});
+$('filPop').addEventListener('change',e=>{if(e.target.id==='onlyPos'){FL.onlyPos=e.target.checked;draw()}});
+function closePops(){['layPop','filPop'].forEach(p=>$(p).classList.remove('on'));$('layBtn').setAttribute('aria-expanded',false);$('filBtn').setAttribute('aria-expanded',false)}
+function togglePop(p,b){const was=$(p).classList.contains('on');closePops();if(!was){$(p).classList.add('on');$(b).setAttribute('aria-expanded',true)}}
+$('layBtn').onclick=e=>{e.stopPropagation();togglePop('layPop','layBtn')};$('filBtn').onclick=e=>{e.stopPropagation();togglePop('filPop','filBtn')};
+document.addEventListener('pointerdown',e=>{if(!e.target.closest('.pop,#tools'))closePops();if(!e.target.closest('#mpbox'))$('mpsug').style.display='none'});
+$('reset').onclick=()=>{GSUB=false;if(sel.t==='group')info();yaw=YAW0;pitch=PITCH0;L={...L0};setDM('subjects');setModeRaw(true);buildLayers();closePops();try{history.replaceState(null,'',hashStr(sel,curSel))}catch(e){}draw()};
+// ---- find MP (autocomplete)
+const norm=s=>String(s).normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
+const PO=D.po||[],ALL=D.mps.concat(PO),NORM=ALL.map(m=>norm(m.n+' '+m.c+' '+m.p));
+let sugAct=-1,sugList=[];
+function sug(){const q=norm($('mpq').value.trim());const box=$('mpsug');
+ if(!q){box.style.display='none';$('mpq').setAttribute('aria-expanded',false);sugList=[];return}
+ sugList=[];for(let i=0;i<ALL.length&&sugList.length<30;i++)if(NORM[i].includes(q))sugList.push(i);
+ sugList.sort((a,b)=>(norm(ALL[a].n).startsWith(q)?0:1)-(norm(ALL[b].n).startsWith(q)?0:1));sugList=sugList.slice(0,8);sugAct=sugList.length?0:-1;
+ box.innerHTML=sugList.map((i,j)=>`<button class="sg-i ${j===0?'act':''}" role="option" data-i="${i}"><span>${esc(ALL[i].n)}</span><span class="meta">${esc(ALL[i].p)} · ${esc(ALL[i].c)}${i>=N?' · <em class="po">profile only</em>':''}</span></button>`).join('')||'<div class="meta" style="padding:8px">No match.</div>';
+ box.style.display='block';$('mpq').setAttribute('aria-expanded',true)}
+function pickSug(i){$('mpsug').style.display='none';$('mpq').value=ALL[i].n;$('mpq').blur();go(sel,i)}
+$('mpq').addEventListener('input',sug);$('mpq').addEventListener('focus',sug);
+$('mpq').addEventListener('keydown',e=>{if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();if(!sugList.length)return;sugAct=(sugAct+(e.key==='ArrowDown'?1:-1)+sugList.length)%sugList.length;[...$('mpsug').children].forEach((c,j)=>c.classList.toggle('act',j===sugAct))}
+ else if(e.key==='Enter'&&sugAct>=0){e.preventDefault();pickSug(sugList[sugAct])}else if(e.key==='Escape'){$('mpsug').style.display='none'}});
+$('mpsug').addEventListener('click',e=>{const b=e.target.closest('.sg-i');if(b)pickSug(+b.dataset.i)});
+// ---- dialogs
+document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>$(b.dataset.close).close());
+$('howOpen').onclick=()=>$('howDlg').showModal();
+const A=D.about,fmt=n=>n.toLocaleString('en-GB');
+$('aboutBody').innerHTML=`<h3>The quiz and Relationships</h3><ul>
+ <li><b>Find my place</b>: you answer For / Against / Mixed / Skip on up to five fights (more if you ask). Your answers are compared with each MP's recorded side on the same fights; an MP needs at least three comparable answers to be listed, and a neutral or missing score never counts as agreement. Your star is the average of the fight lines you chose a side on, so it is a rough placement, not a measurement. Nothing is stored or sent.</li>
+ <li><b>Relationships</b>: how subjects (or fights) go together across MPs, using only observed scores.</li></ul>
+<h3>What was read</h3><ul>
+ <li><b>${fmt(A.passages_extracted)}</b> Commons speeches read by a language model, which pulled out what measure each was about and which side the speaker took (${fmt(A.claims)} gave a clear for/against).</li>
+ <li>A strict judge then checked <b>${fmt(A.dense_candidates)}</b> speeches against the fights in the same debates, to find every MP who took a side.</li>
+ <li><b>${A.fights_reported}</b> fights found, <b>${A.fights_merged}</b> after merging duplicates on the same bill; <b>${A.fights_two_sided}</b> have MPs on both sides (drawn as lines).</li>
+ <li><b>${A.mps}</b> MPs placed on <b>${A.subjects}</b> subjects; ${A.mps_on_map} sit on the research map, the others are projected from fewer subjects.</li></ul>
+<h3>How to read the picture</h3><ul>
+ <li><b>Grey dot</b>: no score for the thing you picked (they did not speak on it), or faded by a filter.</li>
+ <li><b>Diamonds on the rim</b>: a fight with a small sample (few MPs), or an inferred fight where only one side was found, so its direction is guessed from who backed it.</li>
+ <li><b>Weak fit</b>: the space explains less than 0.3 of that line or subject (tested on a map rebuilt without it). Dashed and faint; treat as a guess.</li>
+ <li><b>Placed from N positions</b> in an MP's profile: an MP with fewer than 3 scored subjects is placed roughly.</li></ul>
+<h3>Known limits</h3><ul>
+ <li>Positions are read by machine from speeches. In reading checks about 85% were right; the rest were a wrong side or no real position.</li>
+ <li>What an MP said is not how they voted. Speech positions matched division votes about 85% of the time.</li>
+ <li>Inferred (one-sided) fights follow party: they say who backed a measure, not a measured split.</li>
+ <li>The map describes who stands where; it does not beat the party line as a predictor.</li>
+ <li>Only fights with enough speeches were scored; small fights were left out for budget.</li></ul>`;
+$('aboutOpen').onclick=()=>$('aboutDlg').showModal();
+// ---- MP drawer
+const SIDE={FOR:'Supports',AGAINST:'Opposes'};
+function speech(c,both){const q=D.P[c[0]];if(!q)return'';
+ return`<blockquote>${both?`<span class="position-side ${c[1]==='FOR'?'for':'against'}">${SIDE[c[1]]||''}</span> `:''}${esc(q.t)}</blockquote><div class="m">${esc(q.d)} · ${esc(q.h)}${q.u?` · <a href="${esc(q.u)}" target="_blank" rel="noopener noreferrer">Read the source debate &#8599;</a>`:''}</div>`}
+const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const dFmt=d=>{const m=/^(\d{4})-(\d\d)/.exec(d||'');return m?MON[+m[2]-1]+' '+m[1]:''};
+let PF={};try{PF=JSON.parse(store.get('sk15_open')||'{}')||{}}catch(e){PF={}}
+const LIM=6;
+function posDetail(subj,side,cs){const both=side==='both',shown=cs.filter(c=>D.P[c[0]]);
+ return(subj?`<div class="m">${esc(subj)}</div>`:'')+(shown.length?speech(shown[0],both):'<p class="meta">No speech text available.</p>')+(shown.length>1?`<details><summary>show more (${shown.length-1})</summary>${shown.slice(1).map(c=>speech(c,both)).join('')}</details>`:'')}
+function itRow(side,txt,label,date,detail,hid,fi){return`<div class="it"${hid?' hidden':''}${fi!=null?' data-f="'+fi+'"':''}><button type="button" class="ir" aria-expanded="false"><span class="sdm ${side}"><i></i>${txt}</span><span class="il">${esc(label)}</span><span class="iv">${esc(date)}</span></button><div class="ib" hidden>${detail}</div></div>`}
+const SIDET={for:'Supports',against:'Opposes',both:'Both sides'};
+function askDetail(r){const[,meas,deb,date,oth,ex,u]=r;
+ return`<div class="m">${esc(deb)}${date?' · '+esc(date):''}</div>${oth>0?`<div class="m shared">also argued by ${oth} other MP${oth===1?'':'s'}</div>`:''}${ex?`<blockquote>${esc(ex)}</blockquote>`:''}<div class="m">${u?`<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">Read the speech &#8599;</a>`:'<span class="meta">no link available</span>'}</div>`}
+function secHtml(id,title,count,preview,help,body,force){const o=force||!!PF[id];
+ return`<section class="ps" data-s="${id}"${force?' data-po="1"':''}><div class="ph"><h3 class="pht"><button type="button" class="phb" aria-expanded="${o}" aria-controls="pb-${id}"><span class="chev">&rsaquo;</span><span class="pt">${title}</span><span class="badge">${count}</span><span class="pv">${esc(preview)}</span></button></h3><button type="button" class="qb" aria-expanded="false" aria-label="About: ${title}" title="About this section">?</button></div><p class="meta help" hidden>${help}</p><div class="pb" id="pb-${id}" data-n="${count}"${o?'':' hidden'}>${body}${count>LIM?`<button type="button" class="more" data-more aria-expanded="false">Show all ${count}</button>`:''}</div></section>`}
+function asksSec(i,force){const A=D.asks[i]||[];if(!A.length)return'';const nf=A.filter(r=>r[0]===0).length;
+ return secHtml('asks','Argued for or against',A.length,`${nf} for · ${A.length-nf} against`,'<span class="badge">from single speeches</span> Single speeches read by a model and checked by a second one. About 9 in 10 are right.',
+  A.map((r,k)=>itRow(r[0]===0?'for':'against',r[0]===0?'For':'Against',r[1],dFmt(r[3]),askDetail(r),k>=LIM)).join(''),force)}
+function chipsHtml(a,b,c){return`<div class="cc">${[a,b,c].filter(Boolean).map(x=>`<span>${x}</span>`).join('')}</div>`}
+const pl=(n,w,w2)=>n+' '+(n===1?w:(w2||w+'s'));
+function noteHtml(short,more){return`<div class="note">${short} <button type="button" class="link why" aria-expanded="false">why?</button></div><p class="note-x meta" hidden>${more}</p>`}
+const profTop=m=>`<div class="p-top"><div><h2>${esc(m.n)}</h2><div class="meta"><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:${m.col};margin-right:5px"></span>${esc(m.p)}${m.c?' · '+esc(m.c):''}</div></div><button class="xbtn" id="pclose">&#10005; Close</button></div>`;
+function finishProf(h){$('profile').innerHTML=h;$('profile').classList.add('on');$('profile').scrollTop=0;$('pclose').onclick=()=>go(sel,null)}
+function focusSec(i){const f=D.focus&&D.focus[i];if(!f||!f.rows||!f.rows.length)return'';const top=f.rows[0],ts=D.subjects[top[0]];
+ const body=f.rows.map(([sk,cnt,pct],k)=>{const s=D.subjects[sk],avg=s.avg_focus||0,w=Math.min(100,Math.round(pct*2.5));
+  return`<div class="it"${k>=LIM?' hidden':''}><div class="ir" style="cursor:default"><span class="il">${esc(s.name)}</span><span class="iv">${pct}% (${cnt} · avg ${avg.toFixed(1)}%)</span></div><div style="height:3px;background:rgba(255,255,255,.08);margin:0 0 4px"><div style="height:100%;width:${w}%;background:#5fa8d3"></div></div></div>`}).join('');
+ return secHtml('focus','Topic focus (what they talk about)',f.rows.length,`${ts?ts.name:''} ${top[2]}% · ${f.tot} speeches`,'<span class="badge">attention only</span> Share of this MP\'s policy speeches by subject compared with the Commons average. Talking about a subject does not imply a side.',body,false)}
+function renderMP(i){drawnMP=i;$('app').classList.add('mp-open');const m=D.mps[i];$('mpq').value=m.n;const cl=D.mpclaims[i]||[],one=D.mpone[i]||[],A=D.asks[i]||[];
+ const bySubj={};cl.forEach(([fi,side,cs])=>{const f=D.fights[fi];(bySubj[f.subj]=bySubj[f.subj]||[]).push([f,side,cs,fi])});
+ const names=[...new Set([...D.subjects.filter(s=>s.sc[i]!=null).map(s=>s.name),...Object.keys(bySubj)])];
+ const rows=names.map(nm=>{const s=D.subjects.find(x=>x.name===nm);return{nm,v:s?s.sc[i]:null}}).sort((a,b)=>Math.abs(b.v??0)-Math.abs(a.v??0)).filter(r=>(bySubj[r.nm]||[]).length);
+ let h=profTop(m)+'<div class="p-body">';
+ h+=chipsHtml(cl.length&&pl(cl.length,'position'),one.length&&one.length+' took a side',A.length&&A.length+' argued');
+ if(nsub[i]<3)h+=noteHtml('Placed from little evidence.',`This dot rests on ${nsub[i]} scored subject${nsub[i]===1?'':'s'} and ${npos[i]} fight position${npos[i]===1?'':'s'}${D.onmap[i]?'':', and is projected rather than on the research map'}. Treat its place as rough.`);
+ else if(!D.onmap[i])h+=noteHtml('Projected, lower confidence.',`Projected from the ${nsub[i]} subjects they have (lower confidence than MPs on the research map).`);
+ h+=focusSec(i);
+ if(cl.length){let k=0,body='';
+  rows.forEach(({nm,v})=>{const fs=bySubj[nm];body+=`<div class="sh"${k>=LIM?' hidden':''}><span>${esc(nm)}</span><span class="sg ${v==null?'dim':v>0?'pos':'neg'}">${v==null?'no score':(v>0?'+':'')+v.toFixed(2)}</span></div>`;
+   fs.forEach(([f,side,cs,fi])=>{const q=cs.find(c=>D.P[c[0]]);body+=itRow(side,SIDET[side]||'Opposes',f.label,q?dFmt(D.P[q[0]].d):'',posDetail('',side,cs),k>=LIM,fi);k++})});
+  h+=secHtml('pos','Positions in fights',cl.length,rows.map(r=>r.nm).join(' · '),'<span class="badge">behind the map</span> Fights with MPs on both sides, grouped by subject, strongest subject first. The signed number is the MP\'s score on that subject\'s scale.',body)}
+ if(one.length){const so=one.slice().sort((a,b)=>(D.os[a[0]].subj||'').localeCompare(D.os[b[0]].subj||'')),ns=so.filter(x=>x[1]==='for').length,na=so.filter(x=>x[1]==='against').length,nb=so.length-ns-na;
+  h+=secHtml('took','Took a side',one.length,`${ns} supports · ${na} opposes${nb?` · ${nb} both`:''}`,'<span class="badge">not used for map placement</span> Fights where only one side was found. These speeches show what the MP backed, but they do not move them on the map.',
+   so.map(([oi,side,cs],k)=>{const f=D.os[oi],q=cs.find(c=>D.P[c[0]]);return itRow(side,SIDET[side]||'Opposes',f.label,q?dFmt(D.P[q[0]].d):'',posDetail(f.subj,side,cs),k>=LIM)}).join(''))}
+ h+=asksSec(i,false)+'</div>';
+ finishProf(h);
+ if(focusF!=null){const el=$('profile').querySelector('[data-f="'+focusF+'"]');if(el){const sc=el.closest('.ps');sc.querySelector('.phb').setAttribute('aria-expanded',true);sc.querySelector('.pb').hidden=false;lim(sc,true);
+   el.querySelector('.ir').setAttribute('aria-expanded',true);el.querySelector('.ib').hidden=false;el.scrollIntoView({block:'center'});el.style.boxShadow='0 0 0 2px #d9b45f'}focusF=null}}
+function renderPO(i){drawnMP=i;$('app').classList.add('mp-open');const m=PO[i-N];$('mpq').value=m.n;const n=(D.asks[i]||[]).length;
+ let h=profTop(m)+'<div class="p-body">'+chipsHtml(n&&n+' argued');
+ h+=noteHtml('Not on the map.','No positions on contested fights yet, so there is nothing to place this MP by.')+focusSec(i)+asksSec(i,true)+'</div>';
+ finishProf(h)}
+function lim(sec,all){const its=[...sec.querySelectorAll('.pb>.it,.pb>.sh')];let k=0;
+ its.forEach(el=>{if(el.classList.contains('it')){el.hidden=!all&&k>=LIM;k++}});
+ its.forEach((el,j)=>{if(el.classList.contains('sh')){let vis=false;for(let q=j+1;q<its.length&&!its[q].classList.contains('sh');q++)if(!its[q].hidden)vis=true;el.hidden=!vis}});
+ const mb=sec.querySelector('.more');if(mb){mb.setAttribute('aria-expanded',!!all);mb.textContent=all?'Show fewer':'Show all '+sec.querySelector('.pb').dataset.n}}
+$('profile').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const sec=b.closest('.ps');
+ if(b.classList.contains('phb')){const o=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',o);sec.querySelector('.pb').hidden=!o;if(!sec.dataset.po){PF[sec.dataset.s]=o;store.set('sk15_open',JSON.stringify(PF))}return}
+ if(b.classList.contains('qb')){const o=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',o);sec.querySelector('.help').hidden=!o;return}
+ if(b.classList.contains('ir')){const o=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',o);b.nextElementSibling.hidden=!o;return}
+ if(b.classList.contains('more')){lim(sec,b.getAttribute('aria-expanded')!=='true');return}
+ if(b.classList.contains('why')){const o=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',o);b.parentNode.nextElementSibling.hidden=!o}});
+function hideMP(){drawnMP=null;$('app').classList.remove('mp-open');$('mpq').value='';$('profile').classList.remove('on')}
+addEventListener('keydown',e=>{if(e.key!=='Escape')return;if($('layPop').classList.contains('on')||$('filPop').classList.contains('on')){closePops();return}if(curSel!=null&&!document.querySelector('dialog[open]'))go(sel,null)});
+// ---- you (visitor) star
+function drawYou(nd){if(!YOU||MODE==='rel')return;
+ const p=P(YOU.p);ctx.save();
+ if((nd.kind==='fight'||nd.kind==='subject')&&nd.u){const t=YOU.p[0]*nd.u[0]+YOU.p[1]*nd.u[1]+YOU.p[2]*nd.u[2],q=P(nd.u.map(x=>x*t));
+  ctx.strokeStyle='#ffd45e';ctx.globalAlpha=.7;ctx.setLineDash([3,4]);ctx.lineWidth=1.4;ctx.beginPath();ctx.moveTo(p[0],p[1]);ctx.lineTo(q[0],q[1]);ctx.stroke();ctx.setLineDash([]);
+  ctx.globalAlpha=1;ctx.beginPath();ctx.arc(q[0],q[1],5,0,7);ctx.fillStyle='#0e1117';ctx.fill();ctx.stroke()}
+ ctx.globalAlpha=1;ctx.translate(p[0],p[1]);ctx.beginPath();for(let k=0;k<10;k++){const a=-Math.PI/2+k*Math.PI/5,r=k%2?6:15;ctx.lineTo(Math.cos(a)*r,Math.sin(a)*r)}ctx.closePath();
+ ctx.fillStyle='#ffd45e';ctx.strokeStyle='#0e1117';ctx.lineWidth=3;ctx.lineJoin='round';ctx.stroke();ctx.lineWidth=1.2;ctx.strokeStyle='#fff';ctx.stroke();ctx.fill();
+ ctx.font='700 13px "Source Sans 3",sans-serif';const tw=ctx.measureText('You').width;ctx.fillStyle='rgba(14,17,23,.88)';ctx.fillRect(18,-9,tw+10,18);ctx.fillStyle='#ffd45e';ctx.fillText('You',23,5);ctx.restore()}
+const ANSW={1:'For',[-1]:'Against',0:'Mixed'};
+function youInfo(nd){if(!YOU||!Object.keys(Q.ans).length)return'';
+ if(nd.kind==='fight'){const a=Q.ans[nd.f.i];const t=nd.u?YOU.p[0]*nd.u[0]+YOU.p[1]*nd.u[1]+YOU.p[2]*nd.u[2]:null;
+  return`<h4>You</h4><p class="meta">${a===undefined?'You did not answer this one.':'You answered <b class="ink">'+ANSW[a]+'</b>.'}${t!=null?` Your star sits ${t>=0?'towards the FOR end':'towards the AGAINST end'} of this line (${Math.abs(t).toFixed(2)} of the way).`:''}</p>`}
+ if(nd.kind==='subject'){const fs=D.fights.map((f,i)=>[f,i]).filter(([f,i])=>f.subj===nd.sub.name&&Q.ans[i]!==undefined);const u=nd.u,t=u?YOU.p[0]*u[0]+YOU.p[1]*u[1]+YOU.p[2]*u[2]:null;
+  return`<h4>You</h4><p class="meta">${fs.length?'Your answers here: '+fs.map(([f,i])=>esc(f.label)+' <b class="ink">('+ANSW[Q.ans[i]]+')</b>').join('; ')+'.':'You answered no question on this subject.'}${t!=null?` Your star sits ${t>=0?'towards the orange':'towards the purple'} end of this subject's line (${Math.abs(t).toFixed(2)} of the way).`:''}</p>`}
+ return''}
+// ---- quiz
+const nzF=D.fights.map(f=>f.sc.reduce((a,v)=>a+(v!=null&&v!==0?1:0),0));
+const QOK=D.fights.map((f,i)=>i).filter(i=>nzF[i]>=8);
+const QSET=new Set(QOK);
+const rowsQ=D.mps.map((m,i)=>{const r=new Map();QOK.forEach(k=>{const v=D.fights[k].sc[i];if(v!=null&&v!==0)r.set(k,v)});return r});
+const QS=QOK.map(k=>{const g=groupOf(subjIdx(D.fights[k].subj));return{k,subj:D.fights[k].subj,grp:g<0?null:g}});
+const QM=HAQuiz.create(rowsQ,QS,15);
+const Q={step:'intro',ans:{},star:new Set(),hist:[],idx:0,target:5,pick:new Set()};
+const qText=k=>HAQuiz.question(D.fights[k].label);
+function nextFight(){const base=Math.floor(Math.max(0,Q.hist.length-1)/5)*5,used=new Set(Q.hist.slice(Q.hist.length%5===0?Q.hist.length:base).map(k=>D.fights[k].subj));
+ const r=QM.rank(Q.ans,{excluded:Q.hist,priorities:[...Q.pick],avoidSubj:used});return r.length?r[0].k:null}
+function updateYou(){const pl=HAQuiz.place(Q.ans,Q.star,D.fights,D.model);YOU=pl?{p:pl.p,n:pl.n}:null}
+function silentSel(s){sel=s;hov=null;try{history.replaceState(null,'',hashStr(sel,curSel))}catch(e){}update(true)}
+function qAdvance(){
+ if(Q.idx+1<Q.hist.length)Q.idx++;
+ else if(Q.hist.length>=Q.target)Q.step='results';
+ else{const n=nextFight();if(n==null)Q.step='results';else{Q.hist.push(n);Q.idx=Q.hist.length-1}}
+ renderQuiz();$('qz').scrollTop=0}
+function qAnswer(v){const k=Q.hist[Q.idx];if(v===null){delete Q.ans[k];Q.star.delete(k)}else{Q.ans[k]=v;if(v===0)Q.star.delete(k)}updateYou();qAdvance()}
+function qStart(){Q.hist=[];Q.idx=0;Q.target=5;const n=nextFight();if(n==null){Q.step='results'}else{Q.hist.push(n);Q.step='q'}renderQuiz()}
+function openEvidence(i,k){focusF=k;drawnMP=null;setAppMode('explore');go({t:'fight',i:k},i)}
+function sideTxt(v){return v>0?'For':'Against'}
+function renderQuiz(){const el=$('qz');let h='';
+ const nAns=Object.keys(Q.ans).length,dir=Object.values(Q.ans).filter(v=>v!==0).length;
+ if(Q.step==='intro'){
+  h=`<div class="meta">Find my place</div><h2>Where would you sit in this Parliament?</h2><p>Answer ${Q.target} questions about real fights from Commons debates. Each is a bill or measure that MPs argued over on both sides. The questions come from different subjects and are chosen to tell MPs apart.</p><p class="meta">For and Against place you; Mixed and Skip do not. MPs are matched on the questions you both answered, using only what they actually said. Nothing leaves this page.</p>
+  <p><button class="primary" data-start>Start with ${Q.target} suggested questions &rarr;</button></p><p><button class="linkb" data-choose>or choose which subjects to start with</button></p>${nAns?'<p><button class="qbtn" data-results>View my results</button></p>':''}`}
+ else if(Q.step==='choose'){
+  const cnt={};QOK.forEach(k=>{const s=D.fights[k].subj;cnt[s]=(cnt[s]||0)+1});
+  h=`<div class="qtop"><button class="qbtn" data-intro>&larr; Back</button></div><h2>Choose subjects</h2><p class="meta">Tick the subjects you care about; the opening questions will come from them. Tick none for the suggested mix.</p><div class="subjpick">${D.subjects.filter(s=>cnt[s.name]).map(s=>`<label><input type="checkbox" data-pick="${esc(s.name)}" ${Q.pick.has(s.name)?'checked':''}> ${esc(s.name)} <span class="meta">${cnt[s.name]} question${cnt[s.name]===1?'':'s'}</span></label>`).join('')}</div><button class="primary" data-start>Start &rarr;</button>`}
+ else if(Q.step==='q'){
+  const k=Q.hist[Q.idx],f=D.fights[k],a=Q.ans[k];
+  h=`<div class="qtop"><button class="qbtn" data-back>&larr; Back</button><span class="meta">Question ${Q.idx+1} of ${Math.max(Q.target,Q.hist.length)}</span><button class="qbtn" data-results ${nAns?'':'disabled'}>Results</button></div><div class="qprog"><i style="width:${Math.round(100*(Q.idx+1)/Math.max(Q.target,Q.hist.length))}%"></i></div>
+  <div class="meta">${esc(f.subj)}</div><h2 tabindex="-1" id="qtext">${esc(qText(k))}</h2>
+  <details class="qctx"><summary>About this fight</summary>${f.desc?`<p>${esc(f.desc)}</p>`:''}<p class="meta">${f.nfor} MPs for and ${f.nag} against were found. The gold line in the map is this fight; its FOR end is where those in favour sit.</p></details>
+  <div class="qans"><button class="qopt for" data-a="1" aria-pressed="${a===1}"><b>For</b><span>${esc(f.fm||'In favour')}</span></button><button class="qopt against" data-a="-1" aria-pressed="${a===-1}"><b>Against</b><span>${esc(f.am||'Opposed')}</span></button></div>
+  <div class="qsec"><button class="qbtn" data-a="0" aria-pressed="${a===0}">Mixed / in between</button><button class="qbtn" data-skip>Skip &middot; no view</button></div>`}
+ else{
+  const matches=dir>=3?HAQuiz.match(Q.ans,Q.star,D.fights,N,i=>YOU?Math.hypot(XYZ[i][0]-YOU.p[0],XYZ[i][1]-YOU.p[1],XYZ[i][2]-YOU.p[2]):0):[];
+  const skipped=Q.hist.filter(k=>Q.ans[k]===undefined).length,mixed=nAns-dir,subs=new Set(Object.keys(Q.ans).map(k=>D.fights[k].subj));
+  h=`<div class="meta">Find my place</div><h2>Your results</h2><p class="meta">${nAns} answered (${dir} for or against, ${mixed} mixed) &middot; ${skipped} skipped &middot; ${subs.size} subject${subs.size===1?'':'s'}</p>`;
+  if(dir<3)h+=`<p>Give a For or Against answer to at least three questions to see which MPs match you. ${YOU?'Your gold star is already on the map.':''}</p>`;
+  else{
+   h+=`<p class="meta">Your <b style="color:#ffd45e">gold star</b> on the map is the average of the fight lines you took a side on. It is a rough placement, not a measurement.</p>`;
+   const dirKs=Object.keys(Q.ans).filter(k=>Q.ans[k]!==0);
+   h+=`<details class="qctx"><summary>Which issues matter most to you?</summary><p class="meta">Tick to give an answer more weight.</p>${dirKs.map(k=>`<label class="ck" style="display:flex;gap:8px;padding:3px 0"><input type="checkbox" data-star="${k}" ${Q.star.has(+k)?'checked':''}> ${esc(D.fights[k].label)}</label>`).join('')}</details>`;
+   if(!matches.length)h+=`<p>No MP has three comparable answers with you yet. Try more questions.</p>`;
+   else{
+    const pm=HAQuiz.parties(matches,i=>D.mps[i].p,3);
+    h+=`<h3>Closest MPs</h3><p class="meta">MPs with at least three questions in common with you. Agreement counts only what each MP said on that fight.</p>`;
+    h+=matches.slice(0,6).map(m=>{const mp=D.mps[m.i];
+     return`<article class="mcard"><div class="mh"><span class="dot" style="background:${mp.col}"></span><div><h4><button class="linkb" data-mp="${m.i}">${esc(mp.n)}</button></h4><div class="meta">${esc(mp.p)}${mp.c?' &middot; '+esc(mp.c):''}<br><b class="ink">${m.hit} of ${m.nShared} agree</b>${m.nShared-m.hit?' &middot; '+(m.nShared-m.hit)+' differ':''}</div></div></div>${m.shared.map(s=>`<div class="mq"><p><b>${esc(D.fights[s.k].label)}</b></p><p>You: <b>${sideTxt(Q.ans[s.k])}</b> &middot; ${esc(mp.n.split(' ').slice(-1)[0])}: <b>${sideTxt(s.sc)}</b> <span class="${s.ok?'ok':'no'}">${s.ok?'agree':'differ'}</span></p><button class="qbtn" data-ev="${m.i}:${s.k}" aria-label="Read ${esc(mp.n)}'s evidence on ${esc(D.fights[s.k].label)}">Read evidence &#8599;</button></div>`).join('')}</article>`}).join('');
+    h+=`<h3>Party match</h3><p class="meta">Share of comparable answers that agree, for parties with at least 3 matched MPs.</p>${pm.length?pm.map(a=>`<div class="pm"><span><b>${esc(a.p)}</b></span><span class="b"><i style="width:${a.pct}%;background:${pcount[a.p]?pcount[a.p].col:'#888'}"></i></span><span>${a.pct}%<br><small class="meta">${a.mps} MPs</small></span></div>`).join(''):'<p class="meta">No party has 3 matched MPs yet.</p>'}`}}
+  h+=`<div style="display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 8px">${Q.hist.length<QOK.length?'<button class="primary" data-more>Ask 5 more &rarr;</button>':''}<button class="qbtn" data-review>Review answers</button><button class="qbtn" data-explore>Explore the map &rarr;</button></div><button class="linkb" data-reset>Reset my answers</button>`}
+ el.innerHTML=h;
+ const on=(q,fn)=>el.querySelectorAll(q).forEach(b=>b.onclick=()=>fn(b));
+ on('[data-start]',qStart);on('[data-choose]',()=>{Q.step='choose';renderQuiz()});on('[data-intro]',()=>{Q.step='intro';renderQuiz()});
+ on('[data-results]',()=>{Q.step='results';renderQuiz();el.scrollTop=0});
+ on('[data-back]',()=>{if(Q.idx>0)Q.idx--;else Q.step='intro';renderQuiz()});
+ on('[data-a]',b=>qAnswer(+b.dataset.a));on('[data-skip]',()=>qAnswer(null));
+ on('[data-more]',()=>{Q.target=Q.hist.length+5;const n=nextFight();if(n==null){renderQuiz();return}Q.hist.push(n);Q.idx=Q.hist.length-1;Q.step='q';renderQuiz();el.scrollTop=0});
+ on('[data-review]',()=>{if(Q.hist.length){Q.idx=0;Q.step='q';renderQuiz();el.scrollTop=0}});
+ on('[data-explore]',()=>setAppMode('explore'));
+ on('[data-reset]',()=>{Q.ans={};Q.star.clear();Q.hist=[];Q.idx=0;Q.target=5;Q.step='intro';updateYou();renderQuiz();draw()});
+ on('[data-mp]',b=>{setAppMode('explore');go(sel,+b.dataset.mp)});
+ on('[data-ev]',b=>{const[i,k]=b.dataset.ev.split(':').map(Number);openEvidence(i,k)});
+ el.querySelectorAll('[data-pick]').forEach(c=>c.onchange=()=>{c.checked?Q.pick.add(c.dataset.pick):Q.pick.delete(c.dataset.pick)});
+ el.querySelectorAll('[data-star]').forEach(c=>c.onchange=()=>{const k=+c.dataset.star;c.checked?Q.star.add(k):Q.star.delete(k);updateYou();renderQuiz();el.querySelector('.qctx')&&(el.querySelector('.qctx').open=true);draw()});
+ if(Q.step==='q'){silentSel({t:'fight',i:Q.hist[Q.idx]});const t=$('qtext');if(t&&matchMedia('(min-width:821px)').matches)t.focus({preventScroll:true})}else draw()}
+// ---- relationships
+let REL=null;
+function mountRel(){
+ if(!REL){
+  const subjRows=D.mps.map((m,i)=>{const r=new Map();D.subjects.forEach((s,k)=>{if(s.sc[i]!=null)r.set(k,s.sc[i])});return r});
+  const fRows=D.mps.map((m,i)=>{const r=new Map();D.fights.forEach((f,k)=>{if(f.sc[i]!=null)r.set(k,f.sc[i])});return r});
+  REL=HARel.create($('rel'),{
+   sets:{subjects:{label:'Subjects',noun:'subject',topics:D.subjects.map((s,k)=>({k,title:s.name,lo:s.lo,hi:s.hi})),rows:subjRows,minShared:15,minSide:3,extra:'This view uses the '+D.subjects.length+' subjects. Subjects have only 21 to 164 scored MPs each, so the bar is 15 shared MPs per pair here, lower than the 30 the older version used; subjects with no pair that large are not drawn.'},
+         fights:{label:'Fights',noun:'fight',topics:D.fights.map((f,k)=>({k,title:f.label,lo:'Against: '+f.label,hi:'For: '+f.label})),rows:fRows,minShared:12,minSide:4,extra:'Fights use a lower bar (12 shared MPs) because few MPs spoke on two different fights, so many fights have no links.'}},
+   getSel:n=>n==='subjects'&&sel.t==='subj'?sel.i:n==='fights'&&sel.t==='fight'?sel.i:null,
+   onSelect:(n,k)=>silentSel(n==='subjects'?{t:'subj',i:k}:{t:'fight',i:k}),
+   onExplore:(n,k)=>{silentSel(n==='subjects'?{t:'subj',i:k}:{t:'fight',i:k});setAppMode('explore')}})}
+ {const k=sel.t==='subj'?sel.i:sel.t==='fight'?subjIdx(D.fights[sel.i].subj):-1;if(k>=0)REL.select('subjects',k);else REL.select('subjects',null)}}
+// ---- top-level mode
+function setAppMode(m){MODE=m;document.body.dataset.mode=m;$('app').classList.toggle('quiz',m==='quiz');$('rel').classList.toggle('on',m==='rel');
+ document.querySelectorAll('.tab-btn').forEach(b=>b.setAttribute('aria-pressed',b.dataset.mode===m));
+ if(m!=='explore'&&curSel!=null)go(sel,null);
+ if(m==='quiz')renderQuiz();else if(m==='rel')mountRel();
+ if(m==='explore')update(true);else draw()}
+document.querySelectorAll('.tab-btn').forEach(b=>b.onclick=()=>setAppMode(b.dataset.mode));
+// ---- start
+buildLayers();buildFilters();
+setDock(store.get('dockC')==='1'||(matchMedia('(max-width:820px)').matches&&store.get('dockC')!=='0'),false);
+if(matchMedia('(max-width:820px)').matches)$('browse').setAttribute('aria-expanded','false');
+{const q=new URLSearchParams(location.search);if(q.get('gsub')==='1')GSUB=true;if(q.get('yaw'))yaw=+q.get('yaw');if(q.get('pitch'))pitch=+q.get('pitch');if(['none','subjects','all'].includes(q.get('dm')))setDM(q.get('dm'))}
+applyHash();
+</script></body></html>

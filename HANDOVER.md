@@ -1,3 +1,49 @@
+# Current release handover — 12 November 2026
+
+This section supersedes the older app paths below. Consolidation is complete locally; no public deployment has been performed.
+
+- Canonical source: `prototypes/build_hierarchy_app.py` and `prototypes/hierarchy_app_template.html`, promoted from the improved sk13 copy. Shared quiz and relationship modules: `ha_quiz.js`, `ha_relationships.js`.
+- The sphere stays. The user asked specifically about retaining it; consolidation leaves its geometry unchanged. A future local-topic redesign must preserve the sphere as the overview.
+- Preserve the agreed topic tree and current geometry for this release. The atlas redesign is deferred; no new paid extraction or scoring is needed.
+- Tonight’s additions: checked asks with linked excerpts; 82 profile-only MPs searchable by name; collapsed profile sections with remembered state; clickable axis explanations; small-party averages; restored place names; duplicate asks removed.
+- Existing saved build counts: 551 map/profile MPs plus 82 profile-only = 633 searchable; 3,591 additional asks; 614 profiles with at least three entries. The asks read-check was 18/20, not a guarantee of correctness.
+- Focus remains a separate, unintegrated research result. Show speech share and counts if integrated later; broad subject coverage alone is not discriminating.
+- Defer the 44 sk19 candidate causes: their saved read-check found 21/40 real matches.
+- Known geometry limitation: topics are compressed to rank one before the global rank-three map. Quiz placement uses a different weighted-direction formula. Consolidating the release does not fix these limitations.
+- Pre-consolidation source copies are preserved under `prototypes/archive/pre_consolidation_2026_11_12/`. Research scripts and results remain in place. No commit or push has been performed by this takeover.
+
+## Targeted reading experiment — 12 November
+
+User wants to preserve the current UI and try additional evidence before deciding whether to keep the sphere. They are open to a UMAP/t-SNE-style clustered 2D alternative, but no switch was made.
+
+- Experiment source and reports: `prototypes/research_2026_11_12/bridge_{select,judge,verify,evaluate,plot}.py`, `bridge_report.json`, `bridge_readcheck.json`, `bridge_result.png`.
+- Local checkpoints and candidate passages: `data/quick/research_2026_11_12/bridge/` (gitignored).
+- Selected 480 missing MP/argument pairs across all 72 existing arguments and 213 MPs; 450 candidates were for MPs with only 1–2 existing positions. Same-debate-heading BGE retrieval, no party selection, no new propositions.
+- First judge: 148 directional verdicts, 81 at p(side)>=0.8 and p(other)<=0.2. Random 20-item Codex reading check: 17 supported, 2 partial scope/deadline, 1 wrong bill. Not independent human validation.
+- Rechecked all 81 with debate heading and exact-proposal scope rules. Final 60 additions across 49 MPs and 35 arguments passed both checks. The stricter rule independently rejected all 3 reading-check faults at the acceptance threshold; it also rejected 2 initially supported sampled claims. Remaining additions are provisional machine labels.
+- Coverage: 516→518 MPs with any scored argument; 281→301 with 3+; 199→216 eligible for a 3-shared-argument neighbour comparison; eligible pairs 591→627.
+- Frozen original holdout: correct side unchanged at 79.15% (259 nonzero cells); RMSE 0.75346→0.74974 (260 cells). One new passage excluded from evaluation because its speech also supplied test evidence. No claim of improved prediction or beyond-party structure is supported.
+- 561 paid requests total (480 initial +81 verification), 375,504 input tokens, USD 0.015771168 at official $0.042/million. No more paid work queued.
+- Added-data model saved locally, not installed in release or experiment UI. Shared JS/Python placement replays all 518 placed MPs within 5e-16. Current app UI, docs pages and sphere remain unchanged.
+- Interpretation: targeted reading can fill coverage gaps cheaply, but this batch did not resolve the geometry. Do not scale blindly or claim a clustered 2D view would cure sparse evidence. Inspect selection, graph overlap, argument definition/context and representation before another large batch.
+
+## Build and verify
+
+```sh
+.venv/bin/python prototypes/build_hierarchy_app.py
+node prototypes/test_release.cjs
+node --test prototypes/test_map_evidence.cjs prototypes/test_visitor_placement.cjs prototypes/test_topic_selection.cjs prototypes/test_topic_relationships.cjs
+python3 -m http.server 8765 --bind 127.0.0.1
+```
+
+Open `http://127.0.0.1:8765/docs/index.html`. The canonical builder writes byte-identical `docs/index.html`, `docs/stance.html`, `prototypes/app_hierarchy.html`, and the `sk13_app_asks.html` compatibility copy. The sk13 command delegates; its old template is retired. Legacy unified and POC builders cannot overwrite the release pages.
+
+Browser smoke fixture: `prototypes/test_release.html` loads the actual docs release, scans all 633 profiles, exercises sections/rows/axis explanations and five quiz answers, then Relationships. Saved result: `docs/reviews/RELEASE_CHECK_2026_11_12.json`. Observed: no runtime errors, no profile issues, quiz reaches results. Existing four Node suites pass against their respective legacy modules/artifact. These checks verify integration, not stance truth or map validity.
+
+The local build requires existing gitignored evidence, parquet files, excerpt cache and locally cached BGE model. It is not a clean-clone rebuild. Source backups are local and untracked; research work still needs a deliberate Git checkpoint. Do not stage browser-profile directories or credentials.
+
+## Earlier handover (historical; app paths below are superseded)
+
 # MP3D handover (current as of 11 November 2026)
 
 **Read this first, then `CLAUDE.md`.**

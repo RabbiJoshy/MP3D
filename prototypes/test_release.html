@@ -1,0 +1,98 @@
+<!doctype html><meta charset=utf-8><body style="margin:0"><iframe id=f src="../docs/index.html" style="width:1200px;height:800px;border:0"></iframe><pre id=o></pre>
+<script>
+const out={errors:[],steps:{}};
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+f.onload=()=>setTimeout(async()=>{
+ const w=f.contentWindow,d=f.contentDocument,D=w.eval('D'),N=D.mps.length,PO=D.po;
+ w.addEventListener('error',e=>out.errors.push(String(e.message)));
+ const prof=d.getElementById('profile');
+ const go=async h=>{w.history.replaceState(null,'',h);w.applyHash();await sleep(60)};
+ const secs=()=>[...prof.querySelectorAll('.ps')].map(s=>({id:s.dataset.s,open:s.querySelector('.phb').getAttribute('aria-expanded')==='true',hidden:s.querySelector('.pb').hidden}));
+ try{localStorage.removeItem('sk15_open')}catch(e){}
+ // ---- first load: axis chips visible
+ out.axisChipsOnLoad=[...d.querySelectorAll('#leg .axc')].map(b=>b.textContent+' |vis='+(b.getBoundingClientRect().width>0));
+ // ---- David Pinto-Duschinsky
+ const dp=D.mps.findIndex(m=>/Pinto-Duschinsky/.test(m.n));out.dp=dp;
+ await go('#root&mp='+dp);
+ out.s1=secs();out.rowsVisibleCollapsed=[...prof.querySelectorAll('.pb')].filter(p=>!p.hidden).length;
+ out.chips=[...prof.querySelectorAll('.cc span')].map(x=>x.textContent);
+ out.previews=[...prof.querySelectorAll('.pv')].map(x=>x.textContent);
+ // open each section
+ for(const b of prof.querySelectorAll('.phb'))b.click();
+ await sleep(30);out.s2=secs();
+ const sec=prof.querySelector('.ps[data-s=asks]')||prof.querySelector('.ps');
+ const vis=s=>[...s.querySelectorAll('.pb>.it')].filter(i=>!i.hidden).length;
+ out.visibleRows=[...prof.querySelectorAll('.ps')].map(s=>[s.dataset.s,vis(s),s.querySelector('.pb').dataset.n]);
+ // expand / collapse a row
+ const ir=sec.querySelector('.ir');ir.click();
+ out.rowExpanded=[ir.getAttribute('aria-expanded'),!ir.nextElementSibling.hidden,prof.querySelectorAll('blockquote').length,[...prof.querySelectorAll('blockquote')].filter(q=>q.offsetParent).length];
+ ir.click();out.rowCollapsed=[ir.getAttribute('aria-expanded'),ir.nextElementSibling.hidden];
+ // show all
+ const more=sec.querySelector('.more');if(more){more.click();out.showAll=[vis(sec),more.getAttribute('aria-expanded'),more.textContent];more.click();out.showFewer=[vis(sec),more.textContent]}
+ // help toggle
+ const q=sec.querySelector('.qb');q.click();out.help=[q.getAttribute('aria-expanded'),!sec.querySelector('.help').hidden];q.click();
+ // expand a row then switch MP
+ sec.querySelector('.ir').click();
+ const other=D.mps.findIndex((m,i)=>i!==dp&&(D.asks[i]||[]).length>2&&(D.mpclaims[i]||[]).length>0);
+ await go('#root&mp='+other);
+ out.otherMP=D.mps[other].n;out.s3=secs();out.rowsExpandedAfterSwitch=[...prof.querySelectorAll('.ir[aria-expanded=true]')].length;
+ out.stored=localStorage.getItem('sk15_open');
+ // ---- profile only
+ const po=N+PO.findIndex(m=>/Debbie Abrahams/.test(m.n));await go('#root&mp='+po);
+ out.po=secs();out.poName=prof.querySelector('h2').textContent;out.poNote=prof.querySelector('.note').textContent;
+ // ---- axis chips
+ await go('#root');
+ out.axis=[];
+ for(let n=0;n<3;n++){
+  d.querySelectorAll('#leg .axc')[n].click();await sleep(60);
+  const c=d.getElementById('chip');const rows=[...c.querySelectorAll('.axr')];
+  const r={n,h2:c.querySelector('h2').textContent,rows:rows.length,mps:c.querySelectorAll('.mpb').length,clickable:c.querySelectorAll('button.axr').length,dockC:d.getElementById('app').classList.contains('dock-c')};
+  if(n===0){const first=c.querySelector('button.axr');const nm=first.querySelector('.axn').textContent;first.click();await sleep(80);r.pickedSubject=nm;r.selAfter=w.eval('sel');r.nameAfter=d.querySelector('#chip h2').textContent;r.axAfter=w.eval('AX')}
+  else{ // close restores
+   c.querySelector('[data-axclose]').click();await sleep(30);r.afterClose=d.querySelector('#chip h2').textContent;r.axAfterClose=w.eval('AX')}
+  out.axis.push(r);await go('#root')}
+ // show all
+ d.querySelectorAll('#leg .axc')[0].click();await sleep(30);d.querySelector('[data-axall]').click();out.axisAllRows=d.querySelectorAll('#chip .axr').length;
+ // axis label hit-test
+ out.axHit=w.eval('axHit').length;
+ // axis from open MP profile
+ await go('#root&mp='+dp);d.querySelectorAll('#leg .axc')[1].click();await sleep(30);out.axisFromMP=[prof.classList.contains('on'),w.location.hash,d.querySelector('#chip h2').textContent];
+ // ---- reload keeps sections open
+ await go('#root&mp='+dp);for(const b of prof.querySelectorAll('.phb'))if(b.getAttribute('aria-expanded')==='true')b.click();prof.querySelector('.ps[data-s=took] .phb').click();
+ await new Promise(r=>{f.onload=r;w.location.reload()});await sleep(1500);
+ {const w2=f.contentWindow,d2=f.contentDocument;w2.history.replaceState(null,'','#root&mp='+dp);w2.applyHash();await sleep(100);
+  out.afterReload=[...d2.querySelectorAll('#profile .ps')].map(s=>[s.dataset.s,s.querySelector('.phb').getAttribute('aria-expanded')]);}
+ return finish(f.contentWindow,f.contentDocument);
+ async function finish(w,d){const prof=d.getElementById('profile');const go=async h=>{w.history.replaceState(null,'',h);w.applyHash();await sleep(60)};
+ // ---- scan all profiles
+ const bad=/undefined|NaN|\[object/;const issues=[];let n=0;
+ for(let i=0;i<N+PO.length;i++){
+  try{await go('#root&mp='+i)}catch(e){issues.push([i,'throw '+e.message]);continue}
+  const t=prof.innerText,hh=prof.innerHTML;n++;
+  if(bad.test(t)||bad.test(hh.replace(/<[^>]+>/g,' ')))issues.push([i,'bad string']);
+  prof.querySelectorAll('.ps').forEach(s=>{if(!s.querySelectorAll('.pb>.it').length)issues.push([i,'empty section '+s.dataset.s])});
+  if(i>=N&&prof.querySelectorAll('.ps').length!==1)issues.push([i,'po sections '+prof.querySelectorAll('.ps').length]);
+  if(prof.querySelector('.ps')===null)issues.push([i,'no sections']);
+  if(prof.scrollWidth>prof.clientWidth+1)issues.push([i,'hscroll']);
+ }
+ // Exercise the same embedded quiz that ships in docs.
+ w.setAppMode('quiz');
+ out.quizStart=!!d.getElementById('qz').textContent.trim();
+ w.qStart();
+ for(let step=0;step<5;step++)w.qAnswer(step%2? -1:1);
+ out.quizAnswers=Object.keys(w.eval('Q.ans')).length;
+ out.quizStep=w.eval('Q.step');
+ out.quizText=d.getElementById('qz').textContent.slice(0,180);
+ w.setAppMode('rel');out.relationships=!!d.getElementById('rel').textContent.trim();
+ w.setAppMode('explore');
+ out.scanned=n;out.nIssues=issues.length;out.issues=issues.slice(0,15);
+ out.N=N;out.po_n=PO.length;out.onmap=D.onmap.filter(x=>x).length;
+ // party table
+ const pc={},pm={};D.mps.forEach((m,i)=>{pc[m.p]=(pc[m.p]||0)+1;if(D.onmap[i])pm[m.p]=(pm[m.p]||0)+1});
+ out.parties=Object.keys(pc).sort((a,b)=>pc[b]-pc[a]).map(p=>[p,pc[p],pm[p]||0,pc[p]>=2]);
+ out.pAvgN=w.eval('pAvg.length');
+ out.axl=D.axl.map(a=>[a.length,a.filter(x=>w.eval('subjIdx')(x[0])<0).length,a.slice(0,3)]);
+ await go('#root');
+ document.getElementById('o').textContent=JSON.stringify(out,null,1);document.title='done';}
+},2000);
+</script>
