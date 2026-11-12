@@ -771,7 +771,11 @@ addEventListener('keydown',e=>{if(e.key!=='Escape')return;if($('layPop').classLi
 // ---- you (visitor) star
 function drawYou(nd){if(!YOU||MODE==='rel')return;
  const p=P(YOU.p);ctx.save();
- if((nd.kind==='fight'||nd.kind==='subject')&&nd.u){const t=YOU.p[0]*nd.u[0]+YOU.p[1]*nd.u[1]+YOU.p[2]*nd.u[2],q=P(nd.u.map(x=>x*t));
+ if(MODE==='quiz'&&Q.step==='q'&&nd.kind==='fight'&&nd.u){
+  const a=P(YOU.p.map((x,j)=>x-nd.u[j]*.55)),b=P(YOU.p.map((x,j)=>x+nd.u[j]*.55));
+  ctx.strokeStyle='#ffd45e';ctx.globalAlpha=.75;ctx.setLineDash([4,4]);ctx.lineWidth=1.8;ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);ctx.stroke();ctx.setLineDash([]);
+  ctx.font='600 10.5px "Source Sans 3",sans-serif';ctx.fillStyle='#ffd45e';ctx.globalAlpha=.85;ctx.fillText('FOR',b[0]+5,b[1]+3);ctx.fillText('AGAINST',a[0]-44,a[1]+3);
+ }else if((nd.kind==='fight'||nd.kind==='subject')&&nd.u){const t=YOU.p[0]*nd.u[0]+YOU.p[1]*nd.u[1]+YOU.p[2]*nd.u[2],q=P(nd.u.map(x=>x*t));
   ctx.strokeStyle='#ffd45e';ctx.globalAlpha=.7;ctx.setLineDash([3,4]);ctx.lineWidth=1.4;ctx.beginPath();ctx.moveTo(p[0],p[1]);ctx.lineTo(q[0],q[1]);ctx.stroke();ctx.setLineDash([]);
   ctx.globalAlpha=1;ctx.beginPath();ctx.arc(q[0],q[1],5,0,7);ctx.fillStyle='#0e1117';ctx.fill();ctx.stroke()}
  ctx.globalAlpha=1;ctx.translate(p[0],p[1]);ctx.beginPath();for(let k=0;k<10;k++){const a=-Math.PI/2+k*Math.PI/5,r=k%2?6:15;ctx.lineTo(Math.cos(a)*r,Math.sin(a)*r)}ctx.closePath();
@@ -809,19 +813,23 @@ function sideTxt(v){return v>0?'For':'Against'}
 function renderQuiz(){const el=$('qz');let h='';
  const nAns=Object.keys(Q.ans).length,dir=Object.values(Q.ans).filter(v=>v!==0).length;
  if(Q.step==='intro'){
+  if(MODE==='quiz')silentSel({t:'root'});
   h=`<div class="meta">Find my place</div><h2>Where would you sit in this Parliament?</h2><p>Answer ${Q.target} questions about real fights from Commons debates. Each is a bill or measure that MPs argued over on both sides. The questions come from different subjects and are chosen to tell MPs apart.</p><p class="meta">For and Against place you; Mixed and Skip do not. MPs are matched on the questions you both answered, using only what they actually said. Nothing leaves this page.</p>
   <p><button class="primary" data-start>Start with ${Q.target} suggested questions &rarr;</button></p><p><button class="linkb" data-choose>or choose which subjects to start with</button></p>${nAns?'<p><button class="qbtn" data-results>View my results</button></p>':''}`}
  else if(Q.step==='choose'){
+  if(MODE==='quiz')silentSel({t:'root'});
   const cnt={};QOK.forEach(k=>{const s=D.fights[k].subj;cnt[s]=(cnt[s]||0)+1});
   h=`<div class="qtop"><button class="qbtn" data-intro>&larr; Back</button></div><h2>Choose subjects</h2><p class="meta">Tick the subjects you care about; the opening questions will come from them. Tick none for the suggested mix.</p><div class="subjpick">${D.subjects.filter(s=>cnt[s.name]).map(s=>`<label><input type="checkbox" data-pick="${esc(s.name)}" ${Q.pick.has(s.name)?'checked':''}> ${esc(s.name)} <span class="meta">${cnt[s.name]} question${cnt[s.name]===1?'':'s'}</span></label>`).join('')}</div><button class="primary" data-start>Start &rarr;</button>`}
  else if(Q.step==='q'){
   const k=Q.hist[Q.idx],f=D.fights[k],a=Q.ans[k];
+  if(MODE==='quiz')silentSel({t:'fight',i:k});
   h=`<div class="qtop"><button class="qbtn" data-back>&larr; Back</button><span class="meta">Question ${Q.idx+1} of ${Math.max(Q.target,Q.hist.length)}</span><button class="qbtn" data-results ${nAns?'':'disabled'}>Results</button></div><div class="qprog"><i style="width:${Math.round(100*(Q.idx+1)/Math.max(Q.target,Q.hist.length))}%"></i></div>
   <div class="meta">${esc(f.subj)}</div><h2 tabindex="-1" id="qtext">${esc(qText(k))}</h2>
   <details class="qctx"><summary>About this fight</summary>${f.desc?`<p>${esc(f.desc)}</p>`:''}<p class="meta">${f.nfor} MPs for and ${f.nag} against were found. The gold line in the map is this fight; its FOR end is where those in favour sit.</p></details>
   <div class="qans"><button class="qopt for" data-a="1" aria-pressed="${a===1}"><b>For</b><span>${esc(f.fm||'In favour')}</span></button><button class="qopt against" data-a="-1" aria-pressed="${a===-1}"><b>Against</b><span>${esc(f.am||'Opposed')}</span></button></div>
   <div class="qsec"><button class="qbtn" data-a="0" aria-pressed="${a===0}">Mixed / in between</button><button class="qbtn" data-skip>Skip &middot; no view</button></div>`}
  else{
+  if(MODE==='quiz')silentSel({t:'root'});
   const matches=dir>=3?HAQuiz.match(Q.ans,Q.star,D.fights,N,i=>YOU?Math.hypot(XYZ[i][0]-YOU.p[0],XYZ[i][1]-YOU.p[1],XYZ[i][2]-YOU.p[2]):0):[];
   const skipped=Q.hist.filter(k=>Q.ans[k]===undefined).length,mixed=nAns-dir,subs=new Set(Object.keys(Q.ans).map(k=>D.fights[k].subj));
   h=`<div class="meta">Find my place</div><h2>Your results</h2><p class="meta">${nAns} answered (${dir} for or against, ${mixed} mixed) &middot; ${skipped} skipped &middot; ${subs.size} subject${subs.size===1?'':'s'}</p>`;
