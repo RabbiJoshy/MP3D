@@ -94,7 +94,7 @@ a{color:var(--brass)}
 .ink{color:var(--ink)}
 .sides{display:grid;gap:6px;margin-top:10px}
 .sd{border-left:3px solid var(--line);padding:2px 0 2px 9px;font-size:12.5px}.sd b{display:block;font-size:11px;letter-spacing:.04em;text-transform:uppercase}
-.sd.pos{border-color:#e08a1e}.sd.pos b{color:#e08a1e}.sd.neg{border-color:#9664c8}.sd.neg b{color:#b987e0}
+.sd.pos{border-color:#2dd4bf}.sd.pos b{color:#2dd4bf}.sd.neg{border-color:#fb7185}.sd.neg b{color:#fb7185}
 .chip h4,#chip h4{font:700 11px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--brass);margin:14px 0 4px}
 .split{display:flex;height:12px;border-radius:4px;overflow:hidden;background:var(--bench);border:1px solid var(--line);margin-top:3px}.split i{display:block;height:100%}
 .splabel{font-size:11.5px;color:var(--dim);margin-top:2px}
@@ -125,7 +125,7 @@ a{color:var(--brass)}
 .thin{margin:0 0 10px;padding:8px 10px;border:1px solid #6a5a2c;background:#2a2412;border-radius:var(--r);font-size:12.5px;color:#e8d9a8}
 .badge{font-size:10.5px;padding:1px 6px;border-radius:4px;background:var(--bench);border:1px solid var(--line);color:var(--dim);font-weight:600}
 .srow{border-bottom:1px solid var(--line);padding:8px 0}.srow>summary{cursor:pointer;display:flex;gap:8px;justify-content:space-between;font-weight:600}
-.sg{font-variant-numeric:tabular-nums}.pos{color:#e08a1e}.neg{color:#b987e0}
+.sg{font-variant-numeric:tabular-nums}.pos{color:#2dd4bf}.neg{color:#fb7185}
 .cl{padding:8px 0 4px}
 .position-side{font-size:12px;font-weight:700}.position-side.for{color:var(--yes)}.position-side.against{color:var(--no)}.position-side.both{color:var(--brass)}
 .cl strong,.took strong{display:block;margin-top:2px}
@@ -324,7 +324,7 @@ function rot(v){const cy=Math.cos(yaw),sy=Math.sin(yaw),cp=Math.cos(pitch),sp=Ma
 function cx(){return W/2}
 function P(v){const r=mode3?rot(v):[v[0],v[1],0];const S=Math.min(W,H)*0.40;return[cx()+r[0]*S,H/2-r[1]*S,r[2]]}
 function scol(s,sc){if(s==null)return null;const a=Math.max(-1,Math.min(1,s/sc));const t=Math.abs(a);
- const g=[70,76,88],c=a>0?[224,138,30]:[150,100,200];
+ const g=[70,76,88],c=a>0?[45,212,191]:[251,113,133];
  return`rgb(${g.map((x,i)=>Math.round(x+(c[i]-x)*Math.min(1,.15+.85*t))).join(',')})`}
 function pct(a,q){const b=a.filter(x=>x!=null).map(Math.abs).sort((x,y)=>x-y);return b.length?(b[Math.floor(q*(b.length-1))]||1):1}
 function line(u,r,label,sideLabels,boost,light){
@@ -345,7 +345,7 @@ function disc(pl,r,name,showLabel){const weak=r<.3,e1=pl[0],e2=pl[1];ctx.save();
  ctx.restore()}
 function shape(nd,boost){
  if(nd.kind==='inferred'&&nd.u)line(nd.u,nd.r,nd.name,true,boost);
- if(nd.kind==='fight'&&nd.u)line(nd.u,nd.r,nd.name,true,boost);
+ if(nd.kind==='fight'&&nd.u)line(nd.u,nd.r,nd.name,!(MODE==='quiz'&&Q.step==='q'&&YOU),boost);
  if(nd.kind==='subject'){const x=nd.sub;if(x.plane)disc(x.plane,x.r,x.name,true);
   D.fights.filter(f=>f.subj===x.name&&f.u).forEach(f=>line(f.u,f.r,f.label,false,boost));
   if(x.u)line(x.u,x.r,x.name,false,boost)}
@@ -457,7 +457,7 @@ function draw(){
  const ic=(h)=>`<svg viewBox="0 0 14 14">${h}</svg>`;
  const endName=nd.kind==='fight'?['for','against']:['positive end','negative end'];
  const kv=(svg,t)=>`<span class="it">${svg}${t}</span>`;
- const lk=kv(ic('<circle cx="7" cy="7" r="4.5" fill="#9aa4b2"/>'),'for end')+kv(ic('<circle cx="7" cy="7" r="4" fill="none" stroke="#9aa4b2" stroke-width="1.6"/>'),'against end')+kv(ic('<path d="M7 2L12 7L7 12L2 7Z" fill="#9aa4b2"/>'),'inferred / small')+kv(ic('<circle cx="7" cy="7" r="4.5" fill="#9aa4b2" opacity=".3"/>'),'weak fit')+kv(ic('<circle cx="7" cy="7" r="4" fill="#3a4150"/>'),'no score')+(picked?kv('<span class="sw" style="background:#e08a1e"></span>','MP high')+kv('<span class="sw" style="background:#9664c8"></span>','MP low'):'')+kv(ic('<circle cx="7" cy="7" r="6" fill="#d9b45f"/>'),'party avg')+kv(ic('<circle cx="7" cy="7" r="3.5" fill="#d9b45f"/>'),'party avg, under 8 MPs')+(YOU?kv(ic('<path d="M7 1l1.8 4.2 4.5.4-3.4 3 1 4.4L7 10.6 3.1 13l1-4.4-3.4-3 4.5-.4z" fill="#ffd45e"/>'),'you'):'');
+ const lk=kv(ic('<circle cx="7" cy="7" r="4.5" fill="#9aa4b2"/>'),'for end')+kv(ic('<circle cx="7" cy="7" r="4" fill="none" stroke="#9aa4b2" stroke-width="1.6"/>'),'against end')+kv(ic('<path d="M7 2L12 7L7 12L2 7Z" fill="#9aa4b2"/>'),'inferred / small')+kv(ic('<circle cx="7" cy="7" r="4.5" fill="#9aa4b2" opacity=".3"/>'),'weak fit')+kv(ic('<circle cx="7" cy="7" r="4" fill="#3a4150"/>'),'no score')+(picked?kv('<span class="sw" style="background:#2dd4bf"></span>','MP high')+kv('<span class="sw" style="background:#fb7185"></span>','MP low'):'')+kv(ic('<circle cx="7" cy="7" r="6" fill="#d9b45f"/>'),'party avg')+kv(ic('<circle cx="7" cy="7" r="3.5" fill="#d9b45f"/>'),'party avg, under 8 MPs')+(YOU?kv(ic('<path d="M7 1l1.8 4.2 4.5.4-3.4 3 1 4.4L7 10.6 3.1 13l1-4.4-3.4-3 4.5-.4z" fill="#ffd45e"/>'),'you'):'');
  const lg=$('leg');lg.classList.toggle('c',store.get('legC')==='1');
  lg.innerHTML=`<div class="lk"><button class="lt" id="legT" aria-expanded="${store.get('legC')!=='1'}">Key &#9662;</button>${lk}</div>`+`<div class="axs">${[0,1,2].map(n=>`<button type="button" class="axc" data-ax="${n}" aria-pressed="${AX===n}" title="What does axis ${n+1} mean?"><b>axis ${n+1}</b> ${esc(D.axes[n])}</button>`).join('')}</div>`;
  if(lg.classList.contains('c'))lg.innerHTML='<button class="lt" id="legT" aria-expanded="false" style="margin:0">Key &#9656;</button>'+lg.querySelector('.axs').outerHTML;
@@ -549,7 +549,7 @@ function info(){if(AX!==null){$('chip').innerHTML=axisHtml(AX);return}const nd=g
   h+=`<div class="kind">${nd.kind}${nd.kind==='fight'?' (a line)':nd.kind==='subject'?' (a plane)':' (a set of subjects)'}</div>`;
   if(nd.kind==='fight'){if(nd.f.desc)h+=`<p class="sp">${esc(nd.f.desc)}</p>`;
    h+=`<div class="sides"><div class="sd pos"><b>Those <span style="text-transform:none">for</span> want</b>${esc(nd.f.fm||'the FOR side')}</div><div class="sd neg"><b>Those against want</b>${esc(nd.f.am||'the AGAINST side')}</div></div>`}
-  if(nd.kind==='subject'){const x=nd.sub;h+=`<p class="sp">${x.nfights} fights on this subject (${x.nlines} drawn as lines) feed one scale. It runs from the orange end to the purple end:</p><div class="sides"><div class="sd pos"><b>Orange end</b>${esc(x.hi)}</div><div class="sd neg"><b>Purple end</b>${esc(x.lo)}</div></div>`}
+  if(nd.kind==='subject'){const x=nd.sub;h+=`<p class="sp">${x.nfights} fights on this subject (${x.nlines} drawn as lines) feed one scale. It runs from the teal end to the coral end:</p><div class="sides"><div class="sd pos"><b>Teal end</b>${esc(x.hi)}</div><div class="sd neg"><b>Coral end</b>${esc(x.lo)}</div></div>`}
   if(nd.kind==='group'){const g=nd.g;h+=`<p class="meta sp"><b class="ink">All subjects:</b> ${esc(nd.full)}</p>`;
    if(g.plane&&!GSUB)h+=`<p class="sp">One plane for the whole group: the two main directions its ${nd.subs.length} subjects (and their fights) point in. Colour = where an MP sits along the plane's first axis.</p><p class="meta sp">The plane captures ${Math.round(g.capture*100)}% of its subjects' directions.</p>`;
    else h+=`<p class="sp">Subjects whose scales point the same way in the space. Colour = average of the subjects' standardised scores.${g.plane?'':' (This group has too few directions for a single plane.)'}</p>`;
@@ -770,13 +770,24 @@ function hideMP(){drawnMP=null;$('app').classList.remove('mp-open');$('mpq').val
 addEventListener('keydown',e=>{if(e.key!=='Escape')return;if($('layPop').classList.contains('on')||$('filPop').classList.contains('on')){closePops();return}if(curSel!=null&&!document.querySelector('dialog[open]'))go(sel,null)});
 // ---- you (visitor) star (with smooth glide animation along the answered question's arrow)
 let YOU_ANIM={from:null,cur:null,u:null,t0:0,raf:null};
+ function drawRailTip(x,y,dx,dy,col){ctx.save();ctx.translate(x,y);ctx.rotate(Math.atan2(dy,dx));ctx.fillStyle=col;ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(-10,-5);ctx.lineTo(-7.5,0);ctx.lineTo(-10,5);ctx.closePath();ctx.fill();ctx.restore()}
+function drawRailPill(cx,cy,txt,bg,bd,fg){ctx.save();ctx.font='700 11px "Source Sans 3",sans-serif';const w=ctx.measureText(txt).width+14,h=20,x=Math.max(4,Math.min(W-w-4,cx-w/2)),y=Math.max(4,Math.min(H-h-4,cy-h/2));ctx.fillStyle=bg;ctx.strokeStyle=bd;ctx.lineWidth=1.2;ctx.beginPath();ctx.roundRect(x,y,w,h,999);ctx.fill();ctx.stroke();ctx.fillStyle=fg;ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(txt,x+w/2,y+h/2+.5);ctx.restore()}
 function drawYou(nd){if(!YOU||MODE==='rel')return;
  const pos=YOU_ANIM.cur||YOU.p,p=P(pos);ctx.save();
  const guideU=(YOU_ANIM.from&&YOU_ANIM.u)?YOU_ANIM.u:(MODE==='quiz'&&Q.step==='q'&&nd.kind==='fight'&&nd.u?nd.u:null);
  if(guideU){
   const a=P(pos.map((x,j)=>x-guideU[j]*.55)),b=P(pos.map((x,j)=>x+guideU[j]*.55));
-  ctx.strokeStyle='#ffd45e';ctx.globalAlpha=.8;ctx.setLineDash([4,4]);ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);ctx.stroke();ctx.setLineDash([]);
-  ctx.font='700 11px "Source Sans 3",sans-serif';ctx.fillStyle='#ffd45e';ctx.globalAlpha=.95;ctx.fillText('FOR',b[0]+5,b[1]+3);ctx.fillText('AGAINST',a[0]-48,a[1]+3);
+  const vx=b[0]-a[0],vy=b[1]-a[1],len=Math.hypot(vx,vy);
+  if(len>8){
+   const dx=vx/len,dy=vy/len,g=ctx.createLinearGradient(a[0],a[1],b[0],b[1]);
+   g.addColorStop(0,'#fb7185');g.addColorStop(.5,'rgba(255,255,255,.65)');g.addColorStop(1,'#2dd4bf');
+   ctx.strokeStyle=g;ctx.globalAlpha=.92;ctx.lineWidth=2.6;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);ctx.stroke();
+   ctx.strokeStyle='rgba(255,255,255,.32)';ctx.lineWidth=1.4;
+   [-.33,-.165,0,.165,.33].forEach(s=>{const t=P(pos.map((x,j)=>x+guideU[j]*s));ctx.beginPath();ctx.moveTo(t[0]-dy*4,t[1]+dx*4);ctx.lineTo(t[0]+dy*4,t[1]-dx*4);ctx.stroke()});
+   ctx.globalAlpha=.98;drawRailTip(b[0],b[1],dx,dy,'#2dd4bf');drawRailTip(a[0],a[1],-dx,-dy,'#fb7185');
+   drawRailPill(b[0]+dx*26,b[1]+dy*26,'FOR','rgba(10,36,34,.92)','#2dd4bf','#5eead4');
+   drawRailPill(a[0]-dx*32,a[1]-dy*32,'AGAINST','rgba(44,14,22,.92)','#fb7185','#fda4af');
+  }
  }else if((nd.kind==='fight'||nd.kind==='subject')&&nd.u){const t=pos[0]*nd.u[0]+pos[1]*nd.u[1]+pos[2]*nd.u[2],q=P(nd.u.map(x=>x*t));
   ctx.strokeStyle='#ffd45e';ctx.globalAlpha=.65;ctx.setLineDash([3,4]);ctx.lineWidth=1.4;ctx.beginPath();ctx.moveTo(p[0],p[1]);ctx.lineTo(q[0],q[1]);ctx.stroke();ctx.setLineDash([]);
   ctx.globalAlpha=1;ctx.beginPath();ctx.arc(q[0],q[1],5,0,7);ctx.fillStyle='#0e1117';ctx.fill();ctx.stroke()}
@@ -790,7 +801,7 @@ function youInfo(nd){if(!YOU||!Object.keys(Q.ans).length)return'';
  if(nd.kind==='fight'){const a=Q.ans[nd.f.i];const t=nd.u?YOU.p[0]*nd.u[0]+YOU.p[1]*nd.u[1]+YOU.p[2]*nd.u[2]:null;
   return`<h4>You</h4><p class="meta">${a===undefined?'You did not answer this one.':'You answered <b class="ink">'+ANSW[a]+'</b>.'}${t!=null?` Your star sits ${t>=0?'towards the FOR end':'towards the AGAINST end'} of this line (${Math.abs(t).toFixed(2)} of the way).`:''}</p>`}
  if(nd.kind==='subject'){const fs=D.fights.map((f,i)=>[f,i]).filter(([f,i])=>f.subj===nd.sub.name&&Q.ans[i]!==undefined);const u=nd.u,t=u?YOU.p[0]*u[0]+YOU.p[1]*u[1]+YOU.p[2]*u[2]:null;
-  return`<h4>You</h4><p class="meta">${fs.length?'Your answers here: '+fs.map(([f,i])=>esc(f.label)+' <b class="ink">('+ANSW[Q.ans[i]]+')</b>').join('; ')+'.':'You answered no question on this subject.'}${t!=null?` Your star sits ${t>=0?'towards the orange':'towards the purple'} end of this subject's line (${Math.abs(t).toFixed(2)} of the way).`:''}</p>`}
+  return`<h4>You</h4><p class="meta">${fs.length?'Your answers here: '+fs.map(([f,i])=>esc(f.label)+' <b class="ink">('+ANSW[Q.ans[i]]+')</b>').join('; ')+'.':'You answered no question on this subject.'}${t!=null?` Your star sits ${t>=0?'towards the teal':'towards the coral'} end of this subject's line (${Math.abs(t).toFixed(2)} of the way).`:''}</p>`}
  return''}
 // ---- quiz
 const nzF=D.fights.map(f=>f.sc.reduce((a,v)=>a+(v!=null&&v!==0?1:0),0));
