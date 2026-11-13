@@ -9,15 +9,30 @@ renderTree=function(){
  let h='<button class="topic-entry" data-k="root">All of Parliament <span>↗</span></button>';
  D.groups.forEach(g=>{h+='<div class="group-label">'+esc(gname(g))+'</div>';g.subjects.forEach(k=>{const s=D.subjects[k];h+=`<button class="topic-entry row" data-k="S${k}"><span>${esc(s.name)}</span><span>→</span></button>`})});
  const grouped=new Set(D.groups.flatMap(g=>g.subjects));D.subjects.forEach((s,k)=>{if(!grouped.has(k)&&s.name!=='No policy')h+=`<button class="topic-entry row" data-k="S${k}">${esc(s.name)} <span>→</span></button>`});
- h+='<button class="comp-related" data-comp-rel>Explore relationships →</button>';$('tree').innerHTML=h;
+ $('tree').innerHTML=h;
 };
 const proposal=(key,title,sub)=>`<button class="comp-proposal" data-nav="${key}">${esc(title)}<small>${esc(sub)} →</small></button>`;
+const renderCompMpRow=i=>{
+ const m=D.mps[i];
+ return `<button type="button" class="comp-mp-row" data-mp="${i}"><span class="comp-mp-dot" style="background:${m.col}"></span><span class="comp-mp-info"><strong class="comp-mp-name">${esc(m.n)}</strong><small class="comp-mp-meta">${esc(m.p)} · ${esc(m.c)}</small></span><span class="comp-mp-arrow" aria-hidden="true">→</span></button>`;
+};
 info=function(){
  const key=companionKey();if(previousPanel!==key){panelPositions.set(previousPanel,$('chip').scrollTop);previousPanel=key}
  originalInfo();
  if(AX!==null||sel.t==='root')return;
- const nd=getNode(sel),par=parentOf(sel),old=$('chip').innerHTML;
- let h=`<nav class="comp-back"><button data-nav="root">← All topics</button>${par&&par.t!=='root'?`<button data-nav="${keyOf(par)}">← ${esc(shortName(par,50).replace(/^Group: /,''))}</button>`:''}</nav><h2>${esc(nd.name)}</h2>`;
+ const nd=getNode(sel),par=parentOf(sel);
+ const chain=[];let a=sel;while(a){chain.unshift(a);a=parentOf(a)}
+ let crumbsHtml='<nav class="comp-crumbs">';
+ chain.forEach((s,j)=>{
+  const isLast=j===chain.length-1;
+  const rawNm=(s.t==='root'?'All topics':shortName(s,42)).replace(/^Group: /,'');
+  if(j)crumbsHtml+='<span class="crumb-sep">›</span>';
+  if(isLast)crumbsHtml+=`<span class="crumb-cur" title="${esc(getNode(s).name)}">${esc(rawNm)}</span>`;
+  else crumbsHtml+=`<button type="button" data-nav="${keyOf(s)}" title="${esc(getNode(s).name)}">${esc(rawNm)}</button>`;
+ });
+ crumbsHtml+='</nav>';
+ const titleName=esc(nd.name.replace(/^Group: /,''));
+ let h=`${crumbsHtml}<h2>${titleName}</h2>`;
  if(sel.t==='subj'){
   const fs=D.fights.map((f,i)=>[f,i]).filter(([f])=>f.subj===nd.sub.name),os=D.os.map((o,i)=>[o,i]).filter(([o])=>o.subj===nd.sub.name&&o.u);
   h+='<p class="comp-intro">Explore the proposals, the positions MPs took, and the speeches behind them.</p>';
@@ -31,14 +46,12 @@ info=function(){
   if(sel.t==='fight'){
    h+=`<p class="comp-count">${f.nfor} for · ${f.nag} against · ${f.n} scored MPs<br>Positions from speeches, not a vote count.</p>`;
    if(f.r<.3||f.small||!f.u)h+='<p class="thin">'+(!f.u?'Too few MPs for a map line.':f.small?'Small sample: interpret this placement cautiously.':'Weak map fit: the direction is only approximate.')+'</p>';
-   const ends=topEnds(f.sc);h+='<section class="comp-section comp-people"><h3>Some MPs who support it</h3>'+mpBtns(ends.pos.slice(0,3))+'<h3>Some MPs who oppose it</h3>'+mpBtns(ends.neg.slice(0,3))+'</section>';
-   const all=f.sc.map((v,i)=>[i,v]).filter(([i,v])=>v!=null).sort((a,b)=>b[1]-a[1]);h+=`<details class="comp-analysis comp-people"><summary>All ${all.length} scored MPs</summary>${mpBtns(all)}</details>`;
-  }else h+=`<p class="thin">Inferred from one-sided evidence. This proposal is not used to place MPs.</p><div class="comp-people">${mpBtns(f.bk.slice(0,3).map(i=>[i,null]))}</div>`;
+   const ends=topEnds(f.sc);
+   h+='<section class="comp-section comp-people"><h3>Some MPs who support it</h3><div class="comp-mp-list">'+ends.pos.slice(0,3).map(([i])=>renderCompMpRow(i)).join('')+'</div><h3>Some MPs who oppose it</h3><div class="comp-mp-list">'+ends.neg.slice(0,3).map(([i])=>renderCompMpRow(i)).join('')+'</div></section>';
+  }else h+=`<p class="thin">Inferred from one-sided evidence. This proposal is not used to place MPs.</p><div class="comp-people"><div class="comp-mp-list">${f.bk.slice(0,3).map(i=>renderCompMpRow(i)).join('')}</div></div>`;
  }else{ // Preserve group plane and its controls in the full analysis.
   h+='<p class="comp-intro">Choose a topic in this group.</p>'+nd.subs.map(k=>proposal('S'+k,D.subjects[k].name,D.subjects[k].n+' scored MPs')).join('');
  }
- h+='<button class="comp-related" data-comp-rel>Related topics & positions →</button>';
- h+=`<details class="comp-analysis"><summary>Full analysis, party breakdown & method</summary><div>${old}</div></details>`;
  $('chip').innerHTML=h;$('chip').scrollTop=panelPositions.get(key)||0;
  $('chip').querySelectorAll('details').forEach(d=>d.addEventListener('toggle',()=>{if(d.open&&sel.t==='group')drawInset()}));
 };
@@ -78,7 +91,26 @@ let companionZoom=1;
 const baseProjection=P;P=function(v){const p=baseProjection(v);return[cx()+(p[0]-cx())*companionZoom,H/2+(p[1]-H/2)*companionZoom,p[2]]};
 $('tools').insertAdjacentHTML('afterbegin','<div class="comp-dimension" role="group" aria-label="Map dimension"><button id="comp2d" aria-pressed="false">2D</button><button id="comp3d" aria-pressed="true">3D</button></div>');
 $('stage').insertAdjacentHTML('beforeend','<div class="comp-zoom" role="group" aria-label="Map zoom"><button id="zoomOut" aria-label="Zoom out">−</button><button id="zoomReset" aria-label="Reset zoom">100%</button><button id="zoomIn" aria-label="Zoom in">+</button></div>');
-function zoomMap(z){companionZoom=Math.max(.5,Math.min(3,z));$('zoomReset').textContent=Math.round(companionZoom*100)+'%';$('zoomOut').disabled=companionZoom<=.5;$('zoomIn').disabled=companionZoom>=3;draw()}
+const compZoomEl=$('stage').querySelector('.comp-zoom');
+let zoomFadeTimer=null;
+function flashZoom(){
+ if(!compZoomEl)return;
+ compZoomEl.classList.add('visible');
+ if(zoomFadeTimer)clearTimeout(zoomFadeTimer);
+ zoomFadeTimer=setTimeout(()=>{compZoomEl.classList.remove('visible')},1200);
+}
+if(compZoomEl){
+ compZoomEl.addEventListener('mouseenter',()=>{if(zoomFadeTimer)clearTimeout(zoomFadeTimer);compZoomEl.classList.add('visible')});
+ compZoomEl.addEventListener('mouseleave',()=>{if(zoomFadeTimer)clearTimeout(zoomFadeTimer);zoomFadeTimer=setTimeout(()=>{compZoomEl.classList.remove('visible')},800)});
+}
+function zoomMap(z){
+ companionZoom=Math.max(.5,Math.min(3,z));
+ $('zoomReset').textContent=Math.round(companionZoom*100)+'%';
+ $('zoomOut').disabled=companionZoom<=.5;
+ $('zoomIn').disabled=companionZoom>=3;
+ flashZoom();
+ draw();
+}
 $('zoomIn').onclick=()=>zoomMap(companionZoom*1.2);$('zoomOut').onclick=()=>zoomMap(companionZoom/1.2);$('zoomReset').onclick=()=>zoomMap(1);
 cv.addEventListener('wheel',e=>{e.preventDefault();zoomMap(companionZoom*Math.exp(-Math.max(-100,Math.min(100,e.deltaY))*.002))},{passive:false});
 const previousModeRaw=setModeRaw;setModeRaw=function(m){previousModeRaw(m);$('comp2d').setAttribute('aria-pressed',!m);$('comp3d').setAttribute('aria-pressed',m)};
@@ -88,7 +120,15 @@ function syncPanelButton(){const on=panelVisible();$('browse').textContent=on?'H
 function showCompanionPanel(){$('app').classList.remove('hide-left','companion-map');$('app').classList.add('mobile-open');syncPanelButton();draw()}
 $('browse').onclick=()=>{if(curSel!=null){go(sel,null);return}if(panelVisible()){if(matchMedia('(max-width:820px)').matches)$('app').classList.add('companion-map');else $('app').classList.add('hide-left')}else showCompanionPanel();syncPanelButton();draw()};
 mobileMapButton.onclick=()=>{$('app').classList.add('companion-map');syncPanelButton();draw()};
-new MutationObserver(syncPanelButton).observe($('app'),{attributes:true,attributeFilter:['class']});addEventListener('resize',syncPanelButton);syncPanelButton();
+new MutationObserver(()=>{
+ syncPanelButton();
+ if(typeof axfActive==='function'&&axfActive())requestAnimationFrame(()=>drawAxFull());
+}).observe($('app'),{attributes:true,attributeFilter:['class']});
+addEventListener('resize',()=>{
+ syncPanelButton();
+ if(typeof axfActive==='function'&&axfActive())drawAxFull();
+});
+syncPanelButton();
 const drawMode=()=>L.mps&&L.pavg?'both':L.pavg?'avg':'mps';
 buildLayers=function(){
  const dmode=drawMode(),parties=Object.entries(pcount).sort((a,b)=>b[1].n-a[1].n),fitted=D.onmap.filter(Boolean).length;
@@ -141,8 +181,8 @@ if(gameHeading){const p=gameHeading.nextElementSibling;useGuide.prepend(gameHead
 // Explore axes as its own top-level tab. By default it is a full-size explorer; "Show the map" moves the axes into the side panel.
 const baseSetAppMode=setAppMode,baseOpenAxis=openAxis;
 let AXFULL=false,axfKeep=null,axfOne=false;
-const axfActive=()=>AXFULL&&MODE==='explore'&&(AX!==null||axfKeep!==null);
-function syncAxesTab(){const on=(AX!==null||axfKeep!==null)&&MODE==='explore';document.querySelectorAll('.tab-btn').forEach(b=>{if(b.dataset.mode==='axes')b.setAttribute('aria-pressed',on);else if(b.dataset.mode==='explore')b.setAttribute('aria-pressed',MODE==='explore'&&!on)})}
+const axfActive=()=>AXFULL&&MODE==='explore';
+function syncAxesTab(){const on=AXFULL&&MODE==='explore';document.querySelectorAll('.tab-btn').forEach(b=>{if(b.dataset.mode==='axes')b.setAttribute('aria-pressed',on);else if(b.dataset.mode==='explore')b.setAttribute('aria-pressed',MODE==='explore'&&!on)})}
 setAppMode=function(m,fromMap){
  if(m==='axes'){if(!fromMap&&!mode3)setModeRaw(true);AXFULL=true;axfKeep=null;if(MODE!=='explore')baseSetAppMode('explore');if(AX===null)baseOpenAxis('all');else{info();draw()}syncAxesTab();return}
  AXFULL=false;axfKeep=null;
@@ -157,58 +197,108 @@ addEventListener('hashchange',()=>{if(axfKeep!==null&&curSel==null){AX=axfKeep;a
 
 const axFull=document.createElement('div');axFull.id='axFull';axFull.hidden=true;$('stage').appendChild(axFull);
 const axTip=document.createElement('div');axTip.id='axTip';document.body.appendChild(axTip);
-const axEnds=i=>{const p=String(D.axes[i]||'').split(' ↔ ');return p.length===2?{plus:p[0],minus:p[1]}:{plus:'Positive end',minus:'Negative end'}};
+const axEnds=i=>{
+ const p=String(D.axes[i]||'').split(' ↔ ');
+ const L=((D.axl||[])[i]||[]).filter(([nm])=>nm!=='No policy');
+ const posTopics=L.filter(([nm,v])=>v>0.4).slice(0,3).map(([nm])=>nm);
+ const negTopics=L.filter(([nm,v])=>v<-0.1).slice(0,2).map(([nm])=>nm);
+ return {
+  plus: p.length===2?p[0]:'Positive end',
+  minus: p.length===2?p[1]:'Negative end',
+  plusTopics: posTopics,
+  negTopics: negTopics
+ };
+};
 function renderAxFull(){
  const on=axfActive();$('app').classList.toggle('axfull',on);axFull.hidden=!on;axTip.style.display='none';
  if(!on){axFull.innerHTML='';return}
- const cur=AX!==null?AX:axfKeep,one=cur!=='all',idx=one?[cur]:(mode3?[0,1,2]:[0,1]);axfOne=one;
+ const cur=AX!==null?AX:(axfKeep!==null?axfKeep:'all'),one=cur!=='all',idx=one?[cur]:(mode3?[0,1,2]:[0,1]);axfOne=one;
  const SPH='<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3.5 9h17M3.5 15h17" opacity=".7"/></svg>';
  const EXP='<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"/></svg>';
  const COL='<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10h-6V4M14 10l7-7M4 14h6v6M10 14l-7 7"/></svg>';
  const bk=mode3?'Back to all three axes':'Back to both axes';
- axFull.innerHTML=`<div class="axf-bar"><p>Each dot is an MP. Diamonds are party averages.${mode3?'':' The flat map plots Axis 1 across and Axis 2 up.'}${one?' Hover a dot to see who it is; click to open their profile.':''}</p><div class="axf-tools"><div class="comp-dimension" role="group" aria-label="Map dimension"><button type="button" data-axf-dim="2" aria-pressed="${!mode3}">2D</button><button type="button" data-axf-dim="3" aria-pressed="${mode3}">3D</button></div><button type="button" class="axf-ico" data-axf="map" aria-label="Show the map" title="Show the map">${SPH}</button></div></div>`+
- `<div class="axf-body${one?' one':idx.length===2?' two':''}">`+idx.map(i=>{const e=axEnds(i);return `<section class="axf-ax"><div class="axf-head">${one?`<b class="axf-title">Axis ${i+1}</b>`:`<button type="button" class="axf-title" data-axf-ax="${i}">Axis ${i+1}</button>`}<button type="button" class="axf-ico sm" ${one?`data-axf-ax="all" aria-label="${bk}" title="${bk}"`:`data-axf-ax="${i}" aria-label="Show this axis only" title="Show this axis only"`}>${one?COL:EXP}</button></div><div class="axf-plot" data-axf-plot="${i}"><canvas></canvas></div><div class="axf-ends"><span class="m">← ${esc(e.minus)}</span><span class="p">${esc(e.plus)} →</span></div></section>`}).join('')+'</div>';
+ axFull.innerHTML=`<div class="axf-bar"><p>Each dot is an MP, grouped by party. Large circled dots are party averages.${mode3?'':' The flat map plots Axis 1 across and Axis 2 up.'}${one?' Hover a dot to see who it is; click to open their profile.':''}</p><div class="axf-tools"><div class="comp-dimension" role="group" aria-label="Map dimension"><button type="button" data-axf-dim="2" aria-pressed="${!mode3}">2D</button><button type="button" data-axf-dim="3" aria-pressed="${mode3}">3D</button></div><button type="button" class="axf-ico" data-axf="map" aria-label="Show the map" title="Show the map">${SPH}</button></div></div>`+
+ `<div class="axf-body${one?' one':idx.length===2?' two':''}">`+idx.map(i=>{const e=axEnds(i);return `<section class="axf-ax"><div class="axf-head">${one?`<b class="axf-title">Axis ${i+1}</b>`:`<button type="button" class="axf-title" data-axf-ax="${i}">Axis ${i+1}</button>`}<button type="button" class="axf-ico sm" ${one?`data-axf-ax="all" aria-label="${bk}" title="${bk}"`:`data-axf-ax="${i}" aria-label="Show this axis only" title="Show this axis only"`}>${one?COL:EXP}</button></div><div class="axf-plot" data-axf-plot="${i}"><canvas></canvas></div><div class="axf-ends"><div class="axf-end m"><span class="axf-end-label">← ${esc(e.minus)}</span>${e.negTopics.length?`<small class="axf-end-topics">${esc(e.negTopics.join(' · '))}</small>`:''}</div><div class="axf-end p"><span class="axf-end-label">${esc(e.plus)} →</span>${e.plusTopics.length?`<small class="axf-end-topics">${esc(e.plusTopics.join(' · '))}</small>`:''}</div></div></section>`}).join('')+'</div>';
  drawAxFull();
+ requestAnimationFrame(()=>drawAxFull());
 }
 const axfHandlers=new WeakMap();
 function drawAxFull(){
  axFull.querySelectorAll('.axf-plot').forEach(wrap=>{
-  const ax=+wrap.dataset.axfPlot,c=wrap.firstElementChild,w=wrap.clientWidth,d=devicePixelRatio||1,single=axfOne;
-  if(!w)return;
-  const g=c.getContext('2d');
-  const vals=D.mps.map((m,i)=>D.onmap[i]?Math.abs(XYZ[i][ax]):0),ext=Math.max(.85,...vals)*1.05,padX=single?26:22,xOf=v=>padX+(v+ext)/(2*ext)*(w-2*padX);
-  const groups={};D.mps.forEach((m,i)=>{if(D.onmap[i]){const q=groups[m.p]||(groups[m.p]={p:m.p,col:m.col,values:[]});q.values.push(XYZ[i][ax])}});
-  g.font='600 14px "Source Sans 3",sans-serif';
-  const means=Object.values(groups).filter(q=>q.values.length>=4).map(q=>({...q,mean:q.values.reduce((a,b)=>a+b,0)/q.values.length})).sort((a,b)=>a.mean-b.mean),laneEnd=[];
-  means.forEach(q=>{q.x=xOf(q.mean);q.width=g.measureText(q.p).width+20;q.left=Math.max(3,Math.min(w-q.width-3,q.x-8));let lane=0;while(laneEnd[lane]!=null&&laneEnd[lane]+8>q.left)lane++;laneEnd[lane]=q.left+q.width;q.lane=lane});
-  const laneH=22;wrap.style.minHeight=Math.max(150,110+laneEnd.length*laneH+34)+'px';wrap.style.height='';
-  const h=wrap.clientHeight,dotH=Math.max(70,h-laneEnd.length*laneH-34),r=single?4.2:3.4,pts=[];c.width=Math.round(w*d);c.height=Math.round(h*d);g.setTransform(d,0,0,d,0,0);
-  D.mps.forEach((m,i)=>{if(!D.onmap[i])return;const seed=Math.sin((i*3+ax+1)*12.9898)*43758.5453;pts.push({i,x:xOf(XYZ[i][ax]),y:9+(seed-Math.floor(seed))*(dotH-18)})});
-  means.forEach(q=>{q.y=dotH+16+q.lane*laneH});
+  const ax=+wrap.dataset.axfPlot,c=wrap.firstElementChild,w=wrap.clientWidth,h=wrap.clientHeight,d=devicePixelRatio||1,single=axfOne;
+  if(!w||!h)return;
+  c.style.width=w+'px';c.style.height=h+'px';
+  const g=c.getContext('2d');c.width=Math.round(w*d);c.height=Math.round(h*d);g.setTransform(d,0,0,d,0,0);
+  const vals=D.mps.map((m,i)=>D.onmap[i]?Math.abs(XYZ[i][ax]):0),ext=Math.max(.85,...vals)*1.05;
+  // Party lanes: parties with at least 4 MPs get their own lane (ascending average, top to bottom); the rest share "Other".
+  const groups={};D.mps.forEach((m,i)=>{if(D.onmap[i]){const q=groups[m.p]||(groups[m.p]={p:m.p,col:m.col,values:[],ids:[]});q.values.push(XYZ[i][ax]);q.ids.push(i)}});
+  const lanes=Object.values(groups).filter(q=>q.values.length>=4).map(q=>({...q,mean:q.values.reduce((a,b)=>a+b,0)/q.values.length})).sort((a,b)=>a.mean-b.mean||(a.p<b.p?-1:1));
+  const means=lanes.slice(),small=Object.values(groups).filter(q=>q.values.length<4);
+  if(small.length){const ids=[];small.forEach(q=>q.ids.forEach(i=>ids.push(i)));lanes.push({p:'Other',col:'#aab5c4',values:[],ids,other:true})}
+  // Left gutter for party names (wrapped onto two lines when long).
+  const NF='700 13.5px "Source Sans 3",sans-serif';g.font=NF;
+  const maxN=Math.min(w*.27,104);
+  const wrapName=s=>{if(g.measureText(s).width<=maxN)return[s];const ws=s.split(' ');let best=null;for(let k=1;k<ws.length;k++){const a=ws.slice(0,k).join(' '),b=ws.slice(k).join(' '),m=Math.max(g.measureText(a).width,g.measureText(b).width);if(!best||m<best.m)best={l:[a,b],m}}
+   const out=(best?best.l:[s]).map(t=>{while(t.length>3&&g.measureText(t).width>maxN)t=t.slice(0,-2).trimEnd()+'…';return t});return out};
+  lanes.forEach(L=>{L.lines=wrapName(L.p)});
+  const gut=Math.ceil(Math.max(48,...lanes.map(L=>Math.max(...L.lines.map(t=>g.measureText(t).width))))+16);
+  const padR=single?26:18,x0=gut+6,x1=w-padR,xOf=v=>x0+(v+ext)/(2*ext)*(x1-x0);
+  // Lane heights: proportional to MP count, clamped to 4.5%..36% of the total, then a pixel minimum.
+  const top=4,bot=22,H=h-top-bot,total=lanes.reduce((a,L)=>a+L.ids.length,0)||1;
+  lanes.forEach(L=>{L.wt=Math.min(.36*total,Math.max(.045*total,L.ids.length))});
+  const minPx=Math.min(single?30:26,H/lanes.length);let fixed=new Set();
+  for(let it=0;it<lanes.length;it++){const free=lanes.filter(L=>!fixed.has(L)),rem=H-fixed.size*minPx,sw=free.reduce((a,L)=>a+L.wt,0);let again=false;
+   free.forEach(L=>{L.hh=rem*L.wt/sw;if(L.hh<minPx){fixed.add(L);L.hh=minPx;again=true}});if(!again)break}
+  lanes.forEach(L=>{if(fixed.has(L))L.hh=minPx});
+  let y=top;lanes.forEach(L=>{L.y0=y;L.cy=y+L.hh/2;y+=L.hh;L.y1=y});
+  // Deterministic beeswarm inside each lane: x is the exact value; y packs outward from the centre line.
+  const pts=[];const maxR=single?4.4:3.6;
+  lanes.forEach(L=>{
+   const order=L.ids.slice().sort((a,b)=>XYZ[a][ax]-XYZ[b][ax]||a-b),lim=L.hh/2-1.5;
+   let placed=null,rr=maxR;
+   for(;rr>=2.4;rr-=.3){
+    const gap=rr*2+.4,step=Math.max(.5,rr*.5),out=[];let ok=true;
+    for(const i of order){const px=xOf(XYZ[i][ax]);let found=null;
+     for(let k=0;k*step<=lim-rr+1e-6;k++){for(const s of(k?[1,-1]:[1])){const off=s*k*step;let clash=false;
+       for(let j=out.length-1;j>=0;j--){const o=out[j];if(px-o.x>=gap)break;if((o.x-px)**2+(o.dy-off)**2<gap*gap){clash=true;break}}
+       if(!clash){found=off;break}}if(found!==null)break}
+     if(found===null){ok=false;break}out.push({i,x:px,dy:found})}
+    if(ok){placed=out;break}}
+   if(!placed){rr=2.4;const gap=rr*1.7,step=.5,out=[];for(const i of order){const px=xOf(XYZ[i][ax]);let best=0,bs=1e9;
+     for(let k=0;k*step<=lim-rr+1e-6;k++){for(const s of(k?[1,-1]:[1])){const off=s*k*step;let sc=0;for(let j=out.length-1;j>=0;j--){const o=out[j];if(px-o.x>=gap)break;const dd=Math.hypot(o.x-px,o.dy-off);if(dd<gap)sc+=gap-dd}
+       if(sc<bs){bs=sc;best=off}}if(bs===0)break}out.push({i,x:px,dy:best})}placed=out}
+   placed.forEach(o=>pts.push({i:o.i,x:o.x,y:L.cy+o.dy,r:rr,L}));L.r=rr});
   function paint(hi){
-   g.clearRect(0,0,w,h);g.fillStyle='#11161e';g.fillRect(0,0,w,h);g.strokeStyle='#303a48';g.lineWidth=1;
-   g.beginPath();g.moveTo(xOf(0),4);g.lineTo(xOf(0),dotH);g.moveTo(padX,dotH);g.lineTo(w-padX,dotH);g.stroke();
-   pts.forEach(p=>{g.globalAlpha=hi==null||hi===p.i?.8:.35;g.fillStyle=D.mps[p.i].col;g.beginPath();g.arc(p.x,p.y,r,0,7);g.fill()});g.globalAlpha=1;
-   if(hi!=null){const p=pts.find(q=>q.i===hi);if(p){g.fillStyle=D.mps[hi].col;g.strokeStyle='#fff';g.lineWidth=2;g.beginPath();g.arc(p.x,p.y,r+2.5,0,7);g.fill();g.stroke()}}
-   g.font='600 14px "Source Sans 3",sans-serif';g.textBaseline='middle';
-   means.forEach(q=>{g.fillStyle=q.col;g.strokeStyle='#e5eaf0';g.lineWidth=1;g.beginPath();g.moveTo(q.x,q.y-6);g.lineTo(q.x+6,q.y);g.lineTo(q.x,q.y+6);g.lineTo(q.x-6,q.y);g.closePath();g.fill();g.stroke();g.fillStyle='#e5eaf0';g.fillText(q.p,Math.max(3,Math.min(w-g.measureText(q.p).width-3,q.x+10)),q.y)});
-   g.font='14px "Source Sans 3",sans-serif';g.fillStyle='#aab5c4';g.textBaseline='alphabetic';g.textAlign='left';g.fillText('−',padX,h-4);g.textAlign='center';g.fillText('0',xOf(0),h-4);g.textAlign='right';g.fillText('+',w-padX,h-4);g.textAlign='left'}
+   g.clearRect(0,0,w,h);g.fillStyle='#11161e';g.fillRect(0,0,w,h);
+   g.strokeStyle='#232c39';g.lineWidth=1;g.beginPath();lanes.forEach((L,k)=>{if(k){const yy=Math.round(L.y0)+.5;g.moveTo(4,yy);g.lineTo(w-4,yy)}});g.stroke();
+   g.strokeStyle='#303a48';g.beginPath();g.moveTo(xOf(0),top);g.lineTo(xOf(0),top+H);g.moveTo(x0,top+H+.5);g.lineTo(x1,top+H+.5);g.stroke();
+   const selMp=(curSel!=null&&curSel<N)?curSel:null;
+   const target=hi!==undefined?hi:selMp;
+   pts.forEach(p=>{g.globalAlpha=target==null||target===p.i?.82:.35;g.fillStyle=D.mps[p.i].col;g.beginPath();g.arc(p.x,p.y,p.r,0,7);g.fill()});g.globalAlpha=1;
+   if(target!=null){const p=pts.find(q=>q.i===target);if(p){g.fillStyle=D.mps[target].col;g.strokeStyle='#fff';g.lineWidth=2.5;g.beginPath();g.arc(p.x,p.y,p.r+3,0,7);g.fill();g.stroke()}}
+   means.forEach(q=>{const L=q.lane||(q.lane=lanes.find(l=>l.p===q.p)),mx=xOf(q.mean),tk=Math.min(L.hh/2-2,12),R=single?8.5:7.5;
+    g.strokeStyle='rgba(255,255,255,.35)';g.lineWidth=1.5;g.beginPath();g.moveTo(mx,L.cy-tk);g.lineTo(mx,L.cy+tk);g.stroke();
+    g.fillStyle=q.col;g.beginPath();g.arc(mx,L.cy,R,0,2*Math.PI);g.fill();
+    g.strokeStyle='#ffffff';g.lineWidth=2;g.stroke()});
+   g.font=NF;g.textBaseline='middle';g.textAlign='left';
+   lanes.forEach(L=>{g.fillStyle=L.col;const n=L.lines.length,lh=14;L.lines.forEach((t,k)=>g.fillText(t,6,L.cy+(k-(n-1)/2)*lh))});
+   g.font='14px "Source Sans 3",sans-serif';g.fillStyle='#aab5c4';g.textBaseline='alphabetic';g.textAlign='left';g.fillText('−',x0,h-4);g.textAlign='center';g.fillText('0',xOf(0),h-4);g.textAlign='right';g.fillText('+',x1,h-4);g.textAlign='left'}
   function hit(e){const R=c.getBoundingClientRect(),x=e.clientX-R.left,y=e.clientY-R.top,reach=e.pointerType==='touch'?20:12;
-   const m=means.find(q=>Math.abs(q.y-y)<11&&x>=q.left-6&&x<=q.left+q.width+6);if(m)return{x,y,mean:m};
+   const m=means.find(q=>{const L=q.lane,mx=xOf(q.mean);return Math.abs(L.cy-y)<=12&&Math.abs(mx-x)<=12});if(m)return{x,y,mean:m};
    let best=null,bd=reach*reach;pts.forEach(p=>{const dd=(p.x-x)**2+(p.y-y)**2;if(dd<bd){bd=dd;best=p}});return{x,y,dot:best}}
   function tip(h2,cx,cy){
    if(!h2.dot&&!h2.mean){axTip.style.display='none';return}
    axTip.innerHTML=h2.mean?`<b>${esc(h2.mean.p)}</b><small>Party average ${h2.mean.mean.toFixed(2)} · ${h2.mean.values.length} MPs</small>`:`<b>${esc(D.mps[h2.dot.i].n)}</b><small>${esc(D.mps[h2.dot.i].p)}</small>`;
    axTip.style.display='block';const tw=axTip.offsetWidth,th=axTip.offsetHeight;axTip.style.left=Math.max(6,Math.min(innerWidth-tw-6,cx+14))+'px';axTip.style.top=Math.max(6,Math.min(innerHeight-th-6,cy-th-10))+'px'}
   let tapped=null;
-  paint(null);
-  c.setAttribute('aria-label',`Axis ${ax+1}. Party averages: `+means.map(q=>q.p+' '+q.mean.toFixed(2)+' ('+q.values.length+' MPs)').join('; '));
+  paint();
+  c.setAttribute('aria-label',`Axis ${ax+1}. Party averages, lowest first: `+means.map(q=>q.p+' '+q.mean.toFixed(2)+' ('+q.values.length+' MPs)').join('; '));
   c.onpointermove=e=>{if(e.pointerType==='touch')return;const h2=hit(e);tip(h2,e.clientX,e.clientY);paint(h2.dot?h2.dot.i:null);c.style.cursor=h2.dot?'pointer':''};
-  c.onpointerleave=()=>{axTip.style.display='none';paint(null)};
+  c.onpointerleave=()=>{axTip.style.display='none';paint()};
   c.onclick=e=>{const h2=hit(e);
    if(!h2.dot){tapped=null;axTip.style.display='none';return}
    if(e.pointerType==='touch'&&tapped!==h2.dot.i){tapped=h2.dot.i;const R=c.getBoundingClientRect();tip(h2,R.left+h2.dot.x,R.top+h2.dot.y);paint(h2.dot.i);return}
-   axTip.style.display='none';axfKeep=ax;go(sel,h2.dot.i)};
+   axTip.style.display='none';axfKeep=(AX!==null?AX:ax);go(sel,h2.dot.i)};
  });
 }
 function setAxFullAxis(v){AX=v;AXSUB=null;axfKeep=null;info();draw()}
@@ -217,6 +307,9 @@ axFull.addEventListener('click',e=>{
  const a=e.target.closest('[data-axf-ax]');if(a){const v=a.dataset.axfAx;setAxFullAxis(v==='all'?'all':+v);axFull.scrollTop=0;return}
  if(e.target.closest('[data-axf="map"]')){AXFULL=false;if(AX===null&&axfKeep!==null)AX=axfKeep;axfKeep=null;showCompanionPanel();info();draw()}});
 $('chip').addEventListener('click',e=>{if(e.target.closest('[data-axf="full"]')){AXFULL=true;axfKeep=null;info();draw()}});
+if(window.ResizeObserver){
+ new ResizeObserver(()=>{if(typeof axfActive==='function'&&axfActive())drawAxFull()}).observe(axFull);
+}
 addEventListener('resize',()=>{if(axfActive())drawAxFull()});
 addEventListener('keydown',e=>{if(e.key==='Escape'&&axfActive()&&axfOne&&!document.querySelector('dialog[open]')){setAxFullAxis('all')}});
 // The Topics panel starts closed on desktop; opening a profile, the quiz or the axes tab still opens it as before.
@@ -228,3 +321,6 @@ if(matchMedia('(max-width:620px)').matches)$('mpq').placeholder='Find an MP';
 const _sm=setModeRaw;setModeRaw=function(m){_sm(m);if(typeof axfActive==='function'&&axfActive())renderAxFull()};
 $('tools').insertAdjacentHTML('afterbegin','<button type="button" class="fbtn" id="compAxes" title="Explore axes"><span class="wide">Explore axes</span><span class="short">Axes</span></button>');
 $('compAxes').onclick=()=>setAppMode('axes',true);
+if(document.fonts&&document.fonts.ready){
+ document.fonts.ready.then(()=>{if(typeof axfActive==='function'&&axfActive())drawAxFull()});
+}

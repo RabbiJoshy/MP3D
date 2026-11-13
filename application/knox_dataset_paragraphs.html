@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Knox dataset paragraphs</title>
+<style>
+  @page { size: A4; margin: 20mm 20mm 21mm 20mm; }
+  body { font-family: Helvetica, Arial, sans-serif; font-size: 11pt; line-height: 1.65; color: #374452; }
+  h1 { font-size: 24pt; font-weight: normal; margin: 0 0 0.25em 0; line-height: 1.2; }
+  h1 { text-align: center; }
+  .name { font-size: 12pt; margin: 0 0 2.6em 0; text-align: center !important; }
+  p { margin: 0 0 1em 0; text-align: justify; }
+  a { color: #1a5fb4; }
+  .signoff { margin-top: 1.6em; }
+  .c { text-align: center; }
+  .foot { margin-top: 3em; font-size: 10pt; }
+</style>
+</head>
+<body>
+<h1>Knox Cover Letter</h1>
+<p class="name">Joshua Thomas</p>
+<p>This is <a href="https://rabbijoshy.github.io/MP3D/">a machine learning political project</a> I began a few years ago. I got interested in Netflix-style recommender systems, and wanted to see if I could predict policies that I would agree with by turning MPs’ division votes into a 3D space where MPs who agree on policy sit close together. Political compass tools tend to use generic axes somebody defined on American politics and are usually 2D, so the aim was to create a different kind of tool. The issue was that MPs mostly vote the way their party tells them to, so all I discovered was whipped party lines on highly specific amendments and debates. I have since rebuilt it on Hansard, the full record of Commons speeches, which is the dataset I’d put forward. A language model extracts the contested questions from each debate and classifies every speech as for, against or neither, and each MP’s position on a question is the average of the speeches where they take a side. You can answer a few questions and see which MPs you land closest to, and every position links back to the speech it came from. This version is built for the current Parliament and is rough for now, but it places you in a multidimensional policy space.</p>
+
+<p>Where this could be useful is in identifying the gap between MPs and their voters. MPs are obviously not expected to focus solely on what constituents talk about, but there is real value in illuminating where the two diverge. The tool maps what MPs focus on and where they argue. By leveraging constituency-level polling and petition data, a similar picture could be built for each seat to highlight where an MP’s stance differs from their electorate, or which voter concerns never reach the Commons floor. That comparison is not what this does today, but where it could be leveraged. Building that missing layer and matching constituent demand to parliamentary argument is a much more challenging, less solved problem, but it is the logical next step.</p>
+<p class="signoff c">Thank you for your consideration,</p>
+<p class="c">Joshua</p>
+</body>
+</html>

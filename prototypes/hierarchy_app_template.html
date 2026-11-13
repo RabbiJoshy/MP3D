@@ -752,7 +752,7 @@ function asksSec(i,force){const A=D.asks[i]||[];if(!A.length)return'';const nf=A
 function chipsHtml(a,b,c){return`<div class="cc">${[a,b,c].filter(Boolean).map(x=>`<span>${x}</span>`).join('')}</div>`}
 const pl=(n,w,w2)=>n+' '+(n===1?w:(w2||w+'s'));
 function noteHtml(short,more){return`<div class="note">${short} <button type="button" class="link why" aria-expanded="false">why?</button></div><p class="note-x meta" hidden>${more}</p>`}
-const profTop=m=>`<div class="p-top"><div><h2>${esc(m.n)}</h2><div class="meta"><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:${m.col};margin-right:5px"></span>${esc(m.p)}${m.c?' · '+esc(m.c):''}</div></div><button class="xbtn" id="pclose">&#10005; Close</button></div>`;
+const profTop=m=>`<div class="p-top"><div class="p-lead"><img class="p-pic" src="https://members-api.parliament.uk/api/Members/${Number(m.id)}/Portrait?cropType=ThreeTwo" alt="${esc(m.n)}" loading="lazy" onerror="this.remove()"><div><h2>${esc(m.n)}</h2><div class="meta"><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:${m.col};margin-right:5px"></span>${esc(m.p)}${m.c?' · '+esc(m.c):''}</div></div></div><button class="xbtn" id="pclose">&#10005; Close</button></div>`;
 function finishProf(h){$('profile').innerHTML=h;$('profile').classList.add('on');$('profile').scrollTop=0;$('pclose').onclick=()=>go(sel,null)}
 function focusSec(i){const f=D.focus&&D.focus[i];if(!f||!f.rows||!f.rows.length)return'';const top=f.rows[0],ts=D.subjects[top[0]];
  const body=f.rows.map(([sk,cnt,pct],k)=>{const s=D.subjects[sk],avg=s.avg_focus||0,w=Math.min(100,Math.round(pct*2.5));
@@ -865,7 +865,7 @@ function renderQuiz(){const el=$('qz');let h='';
  const nAns=Object.keys(Q.ans).length,dir=Object.values(Q.ans).filter(v=>v!==0).length;
  if(Q.step==='intro'){
   if(MODE==='quiz')silentSel({t:'root'});
-  h=`<div class="quiz-eyebrow">Find my place</div><h2>Where do you fit?</h2><p class="quiz-lead">Take a position on real proposals. Find the MPs who share your answers.</p><div class="quiz-steps"><span>01 <b>Choose your side</b></span><span>02 <b>See where your answers place you</b></span><span>03 <b>Compare with MPs</b></span></div><p class="meta">Start with a few questions. Keep going for a fuller picture.</p>
+  h=`<h2>Find my place</h2><p class="quiz-lead">Take a position on real proposals to find the MPs who share your answers.</p><div class="quiz-steps"><span>01 <b>Choose your side</b></span><span>02 <b>See where your answers place you</b></span><span>03 <b>Compare with MPs</b></span></div><p class="meta">Start with a few questions. Keep going for a fuller picture.</p>
   <div class="quiz-routes"><button class="primary" data-start>Answer the default questions &rarr;</button><span class="quiz-or" aria-hidden="true">or</span><button class="qbtn" data-choose>Choose the topics you care about first &rarr;</button></div>${nAns?'<p><button class="qbtn" data-results>View my results</button></p>':''}`}
  else if(Q.step==='choose'){
   if(MODE==='quiz')silentSel({t:'root'});

@@ -1,4 +1,53 @@
-# Current release handover — 13 November 2026
+# Handover — 13 November 2026, evening (read this first)
+
+**State:** the app is live and sendable. https://rabbijoshy.github.io/MP3D/ is built from `main` (`/docs`); last published commit `1d575f6`. Local preview: `http://127.0.0.1:8765/prototypes/map_companion/index.html` (refreshed automatically by every build).
+
+**What the app is:** a descriptive tool. What MPs said in the Commons since July 2024, each position linked to the speech, on a 3D map that separates parties where they disagree. It is **not** predictive (`results/sk20_summary.json`, `results/sk21_summary.json`); "How it works" says so.
+
+## In progress when this was written (check before doing anything else)
+- A redesign of the full-size **Explore axes** view was under way: each axis drawn as **party lanes** (one horizontal lane per party, dots packed as a beeswarm, party average as a diamond on its lane) instead of random vertical jitter, which looked stretched. Edits are in `prototypes/map_companion/companion.js` and `companion.css` only and may be **uncommitted and unreviewed**. Screenshots, if it finished: `prototypes/research_2026_11_10/results/lanes_*.png`.
+- To finish it: look at those screenshots; if it reads cleanly, rebuild, run the tests, show the user the preview, and publish only when the user says so. If it is broken, `git checkout -- prototypes/map_companion/companion.js prototypes/map_companion/companion.css` restores the published side-by-side version, then rebuild.
+- This handover file itself is uncommitted.
+
+## How to build, test and publish
+    .venv/bin/python prototypes/build_hierarchy_app.py     # ~30 s; writes app_hierarchy.html, docs/, and the map_companion preview
+    node prototypes/test_release.cjs                       # must pass
+    node --check prototypes/map_companion/companion.js
+- Edit sources only: `prototypes/hierarchy_app_template.html`, `prototypes/map_companion/companion.js|css`, `prototypes/ha_quiz.js`, `prototypes/build_hierarchy_app.py`. Never hand-edit `docs/` or `app_hierarchy.html`.
+- Publish = commit the rebuilt `docs/` and push to `main` (the working branch `rebuild/speech-space` is kept identical). **Only when the user asks.**
+- Any headless Chrome works for screenshots; the in-app browser pane could not open the local preview today.
+
+## The user's rules (they matter)
+- Show **one finished preview**, not changes piece by piece. Short plain answers. Ask before spending more than about 10¢ or pushing.
+- Never open `.env`. No hand-written proposition lists, no cherry-picked topics.
+- **The overrides layer is append-only.** `results/overrides/positions.jsonl` and `labels.jsonl` are a second layer over the machine output; never rewrite or reorder them (a previous agent overwrote the file in place and it had to be restored from git). `--no-overrides`, `--no-sk22`, `--no-anchor` rebuild without each layer.
+- UI tone: semi-professional, plain British English, nothing childish, no exclamation marks.
+
+## What exists now
+- **Map:** 531 MPs, 76 two-sided arguments. Party explains 34% of the map (25% on 12 Nov); held-out argument accuracy 0.93; within-party split votes AUC 0.70. Pass marks fixed in advance: `results/sk22_passmarks.json`.
+- **Axes (anchored):** every build is turned to `results/axis_reference.json` (orthogonal Procrustes), so adding data no longer reshuffles them. Names are cached in `results/axis_names.json` (written by `sk24_axis_names.py`, one tiny DeepSeek call; reused while at least 4 of 7 arguments at each end are unchanged): 1 Government programme ↔ Critics from left and right; 2 Social and economic reform ↔ Border control and fiscal restraint; 3 Tax and constitutional measures ↔ Social welfare and accountability. Axis 3 is the weakest theme. There is no Europe axis in the data.
+- **Contested proposals (`sk22_wedge.py`):** debates with at least 5 Labour and 5 non-Labour speakers → model writes the proposal → strict judge on every speaker → 32 kept. A second round on smaller debates added one. Method exhausted.
+- **Second read (overrides):** 4,731 positions re-read by a second model: all 1,049 sk22 positions (Gemini Flash, saw the verdict), 1,907 older positions read **blind** (Gemini Flash), 1,775 positions of 69 prominent MPs read blind (Claude Sonnet). 3,709 confirmed, 969 dropped, 53 flipped. Key finding: judge confidence below 0.7 was right only about 50-62% of the time; 0.7-0.9 about 80-94%; above 0.9 about 92-99%. Worklists and marks: `results/overrides/older/`, `results/overrides/prominent/`; worklist builder: `sk23_worklist.py`.
+- **Less certain positions:** unread positions with confidence below 0.7 (all on one-sided arguments, none used by the map) are flagged by the builder and shown in profiles behind "Show N less certain positions". Hidden, not deleted.
+- **Interface (today):** brand is just "MP3D"; Topics panel closed by default; larger type; filters folded into Map options with "what the map draws" (MPs and party averages / averages only / MPs only); Explore axes is its own tab with a 2D/3D toggle, expand icons, MP tooltips and an entry button on the map; frosted glass on floating map controls only; quiz copy rewritten; "No policy" topic hidden.
+
+## Not verified by anyone
+- Touch behaviour on a real phone (axis explorer: tap for name, tap again for profile).
+- The quiz from first question to final result.
+- "Party averages only" / "MPs only" by eye.
+- Speech links were checked by the release test, not clicked through to Hansard.
+
+## Worth doing next, in order
+1. **Who breaks from their party, and on what** (free, about 20 minutes): for each two-sided argument list MPs on the opposite side from their party's majority; show as a "Breaks from party" line on profiles and a "Where parties split" list. Closest thing to what a political consultancy needs. The user has seen this idea and not yet said yes.
+2. **Cross-party allies**: nearest MPs from other parties for any MP (free, quick).
+3. **A first screen that shows a finding** instead of an unexplained sphere. The user rejected a tagline plus three buttons; ask which direction they want (a clickable finding, a search prompt, a short animated entrance).
+4. **Finish the second read**: about 5,500 older positions unread, mostly one-sided. Use the blind chunk format in `results/overrides/older/` and give each reader its own scratch folder (today six readers shared one and wrote into each other's files; unique ids saved it).
+5. **Signed motions (EDMs) as new evidence**: unwhipped, heavy among Labour backbenchers, the one idea that could split the Labour cluster. Hours, not minutes. Data from last night's test is under `data/quick/research_2026_11_10/sk20/`.
+6. Uncommitted edits that predate this work and are nobody's from today: `README.md`, `build_poc_page.py`, `build_unified_space.py`, two `test_*.cjs` files. Ask the user before touching them.
+
+---
+
+# Earlier on 13 November (numbers superseded by the section above)
 
 **What the app is.** A descriptive tool: what MPs said in the Commons, with a link to the speech, on a 3D map that separates parties where they actually disagree. It is **not** a predictive model. Two pre-registered tests (`results/sk20_summary.json`, `results/sk21_summary.json`) showed speeches add little to predicting which motions an MP signs, and the map adds nothing beyond party. Say so if asked.
 
