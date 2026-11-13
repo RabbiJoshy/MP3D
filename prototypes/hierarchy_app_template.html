@@ -33,12 +33,14 @@ a{color:var(--brass)}
 .sg-i{display:flex;justify-content:space-between;gap:10px;width:100%;text-align:left;border:0;background:none;padding:7px 8px;border-radius:6px}
 .sg-i:hover,.sg-i.act{background:var(--bench3)}
 /* shell */
-.app{--lw:320px;--rw:330px;display:grid;grid-template-columns:var(--lw) minmax(0,1fr) var(--rw);height:calc(100dvh - var(--top));transition:grid-template-columns .18s ease}
-.app.hide-left{--lw:0px}.app.dock-c{--rw:44px}.app.mp-open{--rw:min(520px,100vw)}
+.app{--lw:395px;display:grid;grid-template-columns:var(--lw) minmax(0,1fr);height:calc(100dvh - var(--top));transition:grid-template-columns .18s ease}
+.app.hide-left{--lw:0px}
 #left{background:var(--bench2);border-right:1px solid var(--line);display:flex;flex-direction:column;min-height:0;overflow:hidden}
 .app.hide-left #left{border:0;visibility:hidden}
-.lhead{padding:12px var(--gap) 8px}.lhead h1{font:700 16px var(--display)}.lhead p{margin-top:2px}
-#sq{width:100%;height:32px;margin-top:8px;background:var(--bench);border:1px solid var(--line);color:var(--ink);padding:0 10px;border-radius:var(--r);font:inherit;font-size:13px}
+.app.detail-open .lhead,.app.detail-open #tree{display:none}
+#chip{display:none;flex:1;overflow:auto;padding:12px 16px 24px}.app.detail-open #chip{display:block}
+.lhead{padding:12px var(--gap) 8px;display:flex;flex-direction:column;gap:8px}.lhead h1{font:700 16px var(--display)}
+#sq{width:100%;height:32px;background:var(--bench);border:1px solid var(--line);color:var(--ink);padding:0 10px;border-radius:var(--r);font:inherit;font-size:13px}
 #sq:focus{border-color:var(--brass);outline:0}
 #tree{flex:1;overflow:auto;padding:4px 8px 16px;font-size:12.5px}
 .row{display:flex;align-items:center;gap:6px;padding:6px 6px;border-radius:6px;cursor:pointer;white-space:nowrap;color:var(--ink)}
@@ -57,13 +59,14 @@ a{color:var(--brass)}
 .fbtn{height:var(--h);padding:0 12px;font:600 13px var(--body);display:inline-flex;align-items:center;gap:6px;color:var(--ink);background:var(--bench2);border:1px solid var(--line);border-radius:var(--r);white-space:nowrap}
 .fbtn:hover{border-color:var(--muted)}.fbtn[aria-pressed=true],.fbtn[aria-expanded=true]{border-color:var(--brass);color:var(--brass)}
 .fbtn .dotb{width:7px;height:7px;border-radius:50%;background:var(--brass);display:none}.fbtn.act .dotb{display:inline-block}
-#nav{position:absolute;z-index:6;top:var(--gap);left:var(--gap);right:var(--gap);display:flex;gap:6px;align-items:center;min-width:0}
+#nav{position:absolute;z-index:6;top:var(--gap);left:var(--gap);display:flex;gap:6px;align-items:center;min-width:0;max-width:calc(100% - 340px)}
 #crumbs{display:flex;align-items:center;min-width:0;height:var(--h);padding:0 10px;gap:2px;font-size:12.5px;background:var(--bench2);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;white-space:nowrap}
-#crumbs a{color:var(--dim);text-decoration:none;overflow:hidden;text-overflow:ellipsis;max-width:190px;flex:0 1 auto}#crumbs a:hover{color:var(--ink);text-decoration:underline}
-#crumbs b{color:var(--brass);font-weight:600;overflow:hidden;text-overflow:ellipsis;max-width:260px}
+.app:not(.detail-open) #crumbs{display:none}
+#crumbs a{color:var(--dim);text-decoration:none;overflow:hidden;text-overflow:ellipsis;max-width:160px;flex:0 1 auto}#crumbs a:hover{color:var(--ink);text-decoration:underline}
+#crumbs b{color:var(--brass);font-weight:600;overflow:hidden;text-overflow:ellipsis;max-width:200px}
 #crumbs span.sep{color:var(--muted);padding:0 3px}
-#tools{position:absolute;z-index:7;top:calc(var(--gap) + var(--h) + 8px);right:var(--gap);display:flex;gap:6px;align-items:center;pointer-events:none}#tools>*{pointer-events:auto}
-.pop{position:absolute;z-index:8;top:calc(var(--gap) + 2*var(--h) + 14px);left:var(--gap);width:320px;max-height:calc(100% - 120px);overflow:auto;padding:12px 14px;display:none;box-shadow:0 14px 40px rgba(0,0,0,.5)}
+#tools{position:absolute;z-index:7;top:var(--gap);right:var(--gap);display:flex;gap:6px;align-items:center;pointer-events:none}#tools>*{pointer-events:auto}
+.pop{position:absolute;z-index:8;top:calc(var(--gap) + var(--h) + 8px);right:var(--gap);width:320px;max-height:calc(100% - 100px);overflow:auto;padding:12px 14px;display:none;box-shadow:0 14px 40px rgba(0,0,0,.5)}
 .pop.on{display:block}
 .pop h3{font:700 11px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--brass);margin:10px 0 4px}.pop h3:first-child{margin-top:0}
 .pop label.ck{display:flex;align-items:center;gap:8px;padding:3px 0;cursor:pointer;font-size:13px}
@@ -75,12 +78,7 @@ a{color:var(--brass)}
 .pop input[type=range]{width:100%;accent-color:#d9b45f}
 .pop .small{font-size:12px;color:var(--dim)}
 .link{background:none;border:0;padding:0;color:var(--brass);font:inherit;text-decoration:underline;cursor:pointer}
-#dock{background:var(--bench2);border-left:1px solid var(--line);display:flex;flex-direction:column;min-height:0;overflow:hidden}
-.app.mp-open #dock{visibility:hidden}
-#dockhead{display:flex;align-items:center;justify-content:space-between;padding:8px 8px 8px 14px;border-bottom:1px solid var(--line);font:700 11px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--brass)}
-#dockbtn{height:26px;width:28px;border:1px solid var(--line);border-radius:6px;background:var(--bench);color:var(--dim);padding:0}#dockbtn:hover{color:var(--ink);border-color:var(--muted)}
-#chip{flex:1;overflow:auto;padding:12px 14px 20px}
-.app.dock-c #chip,.app.dock-c #dockhead span{display:none}.app.dock-c #dockhead{padding:8px;justify-content:center;border:0}
+#dock{display:none}
 .seg{display:inline-flex;align-items:center;height:var(--h);gap:2px;padding:2px 2px 2px 10px;background:var(--bench2);border:1px solid var(--line);border-radius:var(--r)}
 .seg .sl{font:600 12px var(--body);color:var(--dim);margin-right:4px;white-space:nowrap}
 .seg button{height:100%;padding:0 10px;border:0;border-radius:6px;background:none;color:var(--dim);font:600 12.5px var(--body)}
@@ -115,8 +113,8 @@ a{color:var(--brass)}
 #tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--bench);font-size:12px;padding:5px 9px;border-radius:6px;display:none;white-space:normal;max-width:300px;z-index:9;box-shadow:0 4px 14px rgba(0,0,0,.4)}
 #ins{width:100%;height:250px;display:block;background:var(--bench);border:1px solid var(--line);border-radius:var(--r);cursor:pointer}
 .axl{font-size:11.5px;color:var(--dim);margin-top:3px}.axl b{color:var(--ink)}
-/* profile drawer */
-#profile{position:fixed;top:var(--top);right:0;bottom:0;width:min(520px,100vw);background:var(--bench2);border-left:1px solid var(--line);box-shadow:-16px 0 40px rgba(0,0,0,.35);overflow:auto;transform:translateX(102%);transition:transform .18s ease;z-index:60}
+/* profile drawer (opens on left over single sidebar) */
+#profile{position:fixed;top:var(--top);left:0;bottom:0;width:min(440px,100vw);background:var(--bench2);border-right:1px solid var(--line);box-shadow:16px 0 40px rgba(0,0,0,.35);overflow:auto;transform:translateX(-102%);transition:transform .18s ease;z-index:60}
 #profile.on{transform:none}
 .p-top{position:sticky;top:0;background:var(--bench2);z-index:2;padding:16px 22px 12px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
 .p-top h2{font-size:24px}.xbtn{height:var(--h);padding:0 10px;border:0;border-radius:var(--r);background:none;color:var(--dim);white-space:nowrap}.xbtn:hover{background:var(--bench3);color:var(--ink)}
@@ -239,26 +237,25 @@ body[data-mode=quiz] #browse{display:none}
  <div class="mode-tabs" role="tablist"><button class="tab-btn" id="tabExplore" data-mode="explore" aria-pressed="true">Explore</button><button class="tab-btn" id="tabQuiz" data-mode="quiz" aria-pressed="false">Find my place</button><button class="tab-btn" id="tabRel" data-mode="rel" aria-pressed="false">Relationships</button></div>
  <div class="actions">
   <div id="mpbox"><input type="search" id="mpq" placeholder="Find an MP (name or seat)" autocomplete="off" aria-label="Find an MP" role="combobox" aria-expanded="false" aria-controls="mpsug"><div id="mpsug" role="listbox"></div></div>
-  <button class="nav-btn" id="aboutOpen">About this data</button><button class="nav-btn" id="howOpen">How it works</button>
+  <button class="nav-btn" id="howOpen" title="How it works &amp; about this data">?</button><button class="nav-btn" id="aboutOpen" style="display:none">About</button>
  </div>
 </header>
 <div class="app" id="app">
- <aside id="left" aria-label="Parliament, groups, subjects, fights">
-  <div class="lhead"><h1>All of Parliament</h1><p class="meta">Groups, subjects and fights. Pick one to draw it in the space; hover to preview.</p><input type="search" id="sq" placeholder="Search subjects and fights" autocomplete="off" aria-label="Search subjects and fights"></div>
+ <aside id="left" aria-label="Topics, subjects, fights and details">
+  <div class="lhead"><h1>Topics</h1><input type="search" id="sq" placeholder="Search subjects and fights" autocomplete="off" aria-label="Search subjects and fights"></div>
   <div id="tree" role="tree"></div>
+  <div id="chip"></div>
   <div id="qz" aria-live="polite"></div>
  </aside>
  <main id="stage">
   <canvas id="cv" aria-label="3D map of MPs"></canvas>
-  <div id="nav"><button class="fbtn" id="browse" aria-expanded="true" title="Show or hide the list">&#9776; Browse</button><button class="fbtn" id="home" title="Back to All of Parliament">&#8962; Home</button><nav id="crumbs" aria-label="Breadcrumb"></nav></div>
-  <div id="tools"><button class="fbtn" id="layBtn" aria-expanded="false">Layers</button><button class="fbtn" id="filBtn" aria-expanded="false">Filters<span class="dotb"></span></button><button class="fbtn" id="reset" title="Reset camera and layers">Reset</button></div>
+  <div id="nav"><button class="fbtn" id="browse" aria-expanded="true" title="Show or hide topics">&#9776; Topics</button><nav id="crumbs" aria-label="Breadcrumb"></nav></div>
+  <div id="tools"><div class="seg" id="bar"><button id="b3" aria-pressed="true">3D</button><button id="b2" aria-pressed="false">2D</button></div><button class="fbtn" id="layBtn" aria-expanded="false">Layers</button><button class="fbtn" id="filBtn" aria-expanded="false">Filters<span class="dotb"></span></button><button class="fbtn" id="reset" title="Reset camera and layers">Reset</button></div>
   <div class="float pop" id="layPop" aria-label="Layers"></div>
   <div class="float pop" id="filPop" aria-label="Filters"></div>
   <div id="leg"></div>
-  <div class="float" id="bar"><button id="b3" aria-pressed="true">3D</button><button id="b2" aria-pressed="false">2D</button></div>
   <div id="tip"></div>
  </main>
- <aside id="dock" aria-label="Details"><div id="dockhead"><span>Details</span><button id="dockbtn" aria-expanded="true" title="Collapse details">&rsaquo;</button></div><div id="chip"></div></aside>
 </div>
 <section id="rel" aria-label="Relationships between subjects"></section>
 <aside id="profile" aria-label="MP positions"></aside>
@@ -268,7 +265,7 @@ body[data-mode=quiz] #browse{display:none}
  <p><b>Faint, dashed lines mean the space only partly explains that fight.</b> The fit strength is measured in a map rebuilt without that subject, so it is an honest test, and the page says "weak fit" when the picture should not be trusted.</p>
  <p>In an MP's profile, <b>positions in fights</b> are the two-sided evidence behind the map. <b>Took a side</b> lists speeches on fights where only one side was found. They are shown for context and are not used to place anyone on the map.</p>
  <p>Use <b>Layers</b> to hide parts of the picture, <b>Filters</b> to fade parties or thinly-evidenced MPs, and the box at the top to find an MP. The browser Back button steps back through what you opened.</p>
- <p><b>Find my place</b> (top tabs) asks five questions about real fights, one per subject, and places a gold star for you. <b>Relationships</b> shows which subjects go together and which split MPs most.</p><p class="meta">Near-duplicate fights on the same bill are merged before anything is scored.</p></div></dialog>
+ <p><b>Find my place</b> (top tabs) asks questions about real fights and places a gold star for you. <b>Relationships</b> shows which subjects go together and which split MPs most.</p><p class="meta">Near-duplicate fights on the same bill are merged before anything is scored. <button type="button" class="link" onclick="document.getElementById('howDlg').close();document.getElementById('aboutDlg').showModal()">About this data &rarr;</button></p></div></dialog>
 <dialog id="aboutDlg"><div class="d-top"><h2>About this data</h2><button class="xbtn" data-close="aboutDlg">&#10005; Close</button></div><div class="d-body" id="aboutBody"></div></dialog>
 <script id="d" type="application/json">__DATA__</script>
 <script>
@@ -458,8 +455,8 @@ function draw(){
  const endName=nd.kind==='fight'?['for','against']:['positive end','negative end'];
  const kv=(svg,t)=>`<span class="it">${svg}${t}</span>`;
  const lk=kv(ic('<circle cx="7" cy="7" r="4.5" fill="#9aa4b2"/>'),'for end')+kv(ic('<circle cx="7" cy="7" r="4" fill="none" stroke="#9aa4b2" stroke-width="1.6"/>'),'against end')+kv(ic('<path d="M7 2L12 7L7 12L2 7Z" fill="#9aa4b2"/>'),'inferred / small')+kv(ic('<circle cx="7" cy="7" r="4.5" fill="#9aa4b2" opacity=".3"/>'),'weak fit')+kv(ic('<circle cx="7" cy="7" r="4" fill="#3a4150"/>'),'no score')+(picked?kv('<span class="sw" style="background:#2dd4bf"></span>','MP high')+kv('<span class="sw" style="background:#fb7185"></span>','MP low'):'')+kv(ic('<circle cx="7" cy="7" r="6" fill="#d9b45f"/>'),'party avg')+kv(ic('<circle cx="7" cy="7" r="3.5" fill="#d9b45f"/>'),'party avg, under 8 MPs')+(YOU?kv(ic('<path d="M7 1l1.8 4.2 4.5.4-3.4 3 1 4.4L7 10.6 3.1 13l1-4.4-3.4-3 4.5-.4z" fill="#ffd45e"/>'),'you'):'');
- const lg=$('leg');lg.classList.toggle('c',store.get('legC')==='1');
- lg.innerHTML=`<div class="lk"><button class="lt" id="legT" aria-expanded="${store.get('legC')!=='1'}">Key &#9662;</button>${lk}</div>`+`<div class="axs"><button type="button" class="axc" data-ax="all" aria-pressed="${AX==='all'}" title="Compare all 3 axes side by side"><b>axes</b> Overview</button>${[0,1,2].map(n=>`<button type="button" class="axc" data-ax="${n}" aria-pressed="${AX===n}" title="What does axis ${n+1} mean?"><b>axis ${n+1}</b> ${esc(D.axes[n])}</button>`).join('')}</div>`;
+ const lg=$('leg');lg.classList.toggle('c',store.get('legC')!=='0');
+ lg.innerHTML=`<div class="lk"><button class="lt" id="legT" aria-expanded="${store.get('legC')==='0'}">Key &#9662;</button>${lk}</div>`+`<div class="axs"><button type="button" class="axc" data-ax="all" aria-pressed="${AX==='all'}" title="Compare all 3 axes side by side"><b>axes</b> Overview</button>${[0,1,2].map(n=>`<button type="button" class="axc" data-ax="${n}" aria-pressed="${AX===n}" title="What does axis ${n+1} mean?"><b>axis ${n+1}</b> ${esc(D.axes[n])}</button>`).join('')}</div>`;
  if(lg.classList.contains('c'))lg.innerHTML='<button class="lt" id="legT" aria-expanded="false" style="margin:0">Key &#9656;</button>'+lg.querySelector('.axs').outerHTML;
  filCount()}
 // ---- tree (with subject search)
@@ -527,8 +524,10 @@ function mpBtns(arr){return arr.map(([i,v])=>`<button class="mpb" data-mp="${i}"
 function topEnds(sc){const a=sc.map((v,i)=>[i,v]).filter(x=>x[1]!=null&&x[1]!==0);
  return{pos:a.filter(x=>x[1]>0).sort((x,y)=>y[1]-x[1]).slice(0,6),neg:a.filter(x=>x[1]<0).sort((x,y)=>x[1]-y[1]).slice(0,6)}}
 function kid(k,t,r,tag,ttl){return`<button class="kid" title="${esc(ttl||t)}" data-nav="${k}"><span>${esc(t)}</span><span class="dim">${r!=null?`<span class="pill" style="background:${lcol(r)}">${r.toFixed(2)}</span> `:''}${esc(tag||'')}</span></button>`}
-function info(){if(AX!==null){$('chip').innerHTML=axisHtml(AX);drawAxisPlots();return}const nd=getNode(sel),par=parentOf(sel);let h='';
- if(par)h+=`<div class="up"><a href="${hashStr(par,curSel)}" data-nav="${keyOf(par)}">&uarr; Back up to ${esc(par.t==='root'?'All of Parliament':shortName(par,40))}</a></div>`;
+function info(){const det=AX!==null||sel.t!=='root';$('app').classList.toggle('detail-open',det);if(det)$('app').classList.remove('hide-left');
+ if(AX!==null){$('chip').innerHTML=axisHtml(AX);drawAxisPlots();return}
+ if(sel.t==='root'){$('chip').innerHTML='';return}
+ const nd=getNode(sel),par=parentOf(sel);let h=`<div class="up" style="display:flex;justify-content:space-between;align-items:center;gap:8px;padding-bottom:8px;border-bottom:1px solid var(--line);margin-bottom:10px"><button type="button" class="link" data-nav="root">&larr; All topics</button>${par&&par.t!=='root'?`<a href="${hashStr(par,curSel)}" data-nav="${keyOf(par)}">&uarr; ${esc(shortName(par,28))}</a>`:''}</div>`;
  h+=`<h2>${esc(nd.name)}</h2>`;
  if(sel.t==='root'){
   h+=`<div class="sp"><span class="big">${N}</span> <span class="dim">MPs placed</span></div><p class="meta sp">Every MP with at least one subject score. ${D.onmap.filter(x=>x).length} sit on the research map; the rest are projected from the subjects they have (lower confidence).</p>`;
@@ -575,7 +574,7 @@ function info(){if(AX!==null){$('chip').innerHTML=axisHtml(AX);drawAxisPlots();r
 // ---- sk15: axis explainer (details panel)
 let AXSUB=null;
 function openAxis(n){AXALL=false;AXSUB=null;if(curSel!=null||drawnMP!=null){curSel=null;curMP=null;hideMP();try{history.replaceState(null,'',hashStr(sel,null))}catch(e){}}
- AX=n;if($('app').classList.contains('dock-c'))setDock(false);info();draw()}
+ AX=n;$('app').classList.remove('hide-left');info();draw()}
 function closeAxis(){AX=null;AXSUB=null;info();draw()}
 function axisHtml(n){
  const tabs=`<div style="display:flex;gap:4px;flex-wrap:wrap;margin:6px 0 8px"><button type="button" class="axc" data-axtab="all" aria-pressed="${n==='all'}">All 3 axes</button>${[0,1,2].map(i=>`<button type="button" class="axc" data-axtab="${i}" aria-pressed="${n===i}">Axis ${i+1}</button>`).join('')}</div>`;
@@ -649,7 +648,7 @@ $('chip').addEventListener('click',e=>{if(e.target.closest('[data-axclose]')){cl
  const m=e.target.closest('[data-mp]');if(m){go(sel,+m.dataset.mp);return}
  const n=e.target.closest('[data-nav]');if(n){e.preventDefault();go(selOf(n.dataset.nav))}});
 $('crumbs').addEventListener('click',e=>{const a=e.target.closest('a');if(a){e.preventDefault();location.hash=a.getAttribute('href')}});
-$('home').onclick=()=>go({t:'root'});
+// ($home removed; MP3D brand + "All topics" button handle root)
 // ---- canvas interaction
 let drag=null;
 cv.addEventListener('pointerdown',e=>{drag={x:e.clientX,y:e.clientY,moved:0};cv.setPointerCapture(e.pointerId);closePops()});
@@ -676,9 +675,8 @@ addEventListener('resize',draw);
 try{new ResizeObserver(()=>draw()).observe($('stage'))}catch(e){}
 function setDM(m){DM=m;document.querySelectorAll('#dm button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.dm===m));hoverDot=null;$('tip').style.display='none';draw()}
 $('layPop').addEventListener('click',e=>{const b=e.target.closest('#dm button');if(b)setDM(b.dataset.dm)});
-function setDock(c,save){$('app').classList.toggle('dock-c',c);const b=$('dockbtn');b.setAttribute('aria-expanded',!c);b.innerHTML=c?'&lsaquo;':'&rsaquo;';b.title=c?'Show details':'Collapse details';if(save)store.set('dockC',c?'1':'0')}
-$('dockbtn').onclick=()=>setDock(!$('app').classList.contains('dock-c'),true);
-$('leg').addEventListener('click',e=>{const ac=e.target.closest('[data-ax]');if(ac){e.stopPropagation();const v=ac.dataset.ax==='all'?'all':+ac.dataset.ax;AX===v?closeAxis():openAxis(v);return}if(e.target.closest('#legT')){store.set('legC',store.get('legC')==='1'?'0':'1');draw()}});
+function setDock(){}
+$('leg').addEventListener('click',e=>{const ac=e.target.closest('[data-ax]');if(ac){e.stopPropagation();const v=ac.dataset.ax==='all'?'all':+ac.dataset.ax;AX===v?closeAxis():openAxis(v);return}if(e.target.closest('#legT')){store.set('legC',store.get('legC')==='0'?'1':'0');draw()}});
 // ---- layers / filters popovers
 function buildLayers(){$('layPop').innerHTML=`<h3>Topic dots</h3><div class="seg" id="dm" role="group" aria-label="Topic dots" style="margin-bottom:10px"><button data-dm="none" aria-pressed="${DM==='none'}">None</button><button data-dm="subjects" aria-pressed="${DM==='subjects'}">Subjects</button><button data-dm="all" aria-pressed="${DM==='all'}">All</button></div><h3>Show or hide</h3>`+LAYERS.map(([k,t,c])=>`<label class="ck"><input type="checkbox" data-l="${k}" ${L[k]?'checked':''}><i style="background:${c};border-radius:${k.startsWith('rimS')||k==='rimI'?'1px;transform:rotate(45deg) scale(.8)':'50%'}"></i>${t}</label>`).join('')+'<p class="small" style="margin-top:8px">Fight dots show only when Topic dots is set to All. Reset puts the camera and these switches back to the start.</p>'}
 $('layPop').addEventListener('change',e=>{const k=e.target.dataset.l;if(k){L[k]=e.target.checked;draw()}});
