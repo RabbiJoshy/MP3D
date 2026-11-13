@@ -508,8 +508,7 @@ function update(scroll){renderTree();info();crumbs();draw();$('tip').style.displ
  if(scroll){const r=document.querySelector('#tree .row.sel');if(r)r.scrollIntoView({block:'nearest'})}}
 function crumbs(){const chain=[];let a=sel;while(a){chain.unshift(a);a=parentOf(a)}
  $('crumbs').innerHTML=chain.map((s,j)=>{const last=j===chain.length-1,nm=s.t==='root'?'All':shortName(s,38).replace(/^Group: /,'');
-  return(j?'<span class="sep">&rsaquo;</span>':'')+(last?`<b title="${esc(getNode(s).name)}">${esc(nm)}</b>`:`<a href="${hashStr(s,curSel)}" title="${esc(getNode(s).name)}">${esc(nm)}</a>`)}).join('');
- $('home').disabled=false}
+  return(j?'<span class="sep">&rsaquo;</span>':'')+(last?`<b title="${esc(getNode(s).name)}">${esc(nm)}</b>`:`<a href="${hashStr(s,curSel)}" title="${esc(getNode(s).name)}">${esc(nm)}</a>`)}).join('')}
 // ---- info panel
 function partyEnds(sc){const pos={},neg={};let np=0,nn=0;
  sc.forEach((v,i)=>{if(v==null||v===0)return;const p=D.mps[i].p;if(v>0){pos[p]=(pos[p]||0)+1;np++}else{neg[p]=(neg[p]||0)+1;nn++}});return{pos,neg,np,nn}}
