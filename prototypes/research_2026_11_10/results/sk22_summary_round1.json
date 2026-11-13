@@ -1,0 +1,2176 @@
+{
+ "judged": 13143,
+ "verdicts": {
+  "NEITHER": 9620,
+  "FOR": 2572,
+  "AGAINST": 951
+ },
+ "strict_kept_rows": 2437,
+ "strict_sides": {
+  "FOR": 1900,
+  "AGAINST": 537
+ },
+ "proposals_judged": 198,
+ "proposals_kept": 31,
+ "mps_in_kept": 381,
+ "cells_kept": 740,
+ "against_cells_kept": 259,
+ "proposals": [
+  {
+   "label": "Pass the Terminally Ill Adults (End of Life) Bill to legalize assisted dying for terminally ill adults",
+   "key": "Terminally Ill Adults (End of Life) Bill",
+   "for": 58,
+   "against": 27,
+   "for_parties": {
+    "Lab": 36,
+    "Con": 11,
+    "LD": 8,
+    "Green": 2,
+    "RUK": 1
+   },
+   "against_parties": {
+    "Lab": 14,
+    "Con": 8,
+    "LD": 2,
+    "RUK": 1,
+    "Ind": 1,
+    "TUV": 1
+   },
+   "kept": true
+  },
+  {
+   "label": "Impose VAT on independent school fees",
+   "key": "2024-07-24|Education and Opportunity|",
+   "for": 19,
+   "against": 20,
+   "for_parties": {
+    "Lab": 18,
+    "Con": 1
+   },
+   "against_parties": {
+    "Con": 15,
+    "LD": 4,
+    "RUK": 1
+   },
+   "kept": true
+  },
+  {
+   "label": "Increase secondary Class 1 National Insurance contributions for employers",
+   "key": "National Insurance Contributions (Secondary Class 1 Contributions) Bill",
+   "for": 18,
+   "against": 19,
+   "for_parties": {
+    "Lab": 18
+   },
+   "against_parties": {
+    "Con": 14,
+    "LD": 3,
+    "RB": 1,
+    "Ind": 1
+   },
+   "kept": true
+  },
+  {
+   "label": "Adopt dynamic alignment on trade with the European Union",
+   "key": "2025-05-13|Opposition Day|UK-EU Summit",
+   "for": 12,
+   "against": 9,
+   "for_parties": {
+    "Lab": 7,
+    "LD": 4,
+    "PC": 1
+   },
+   "against_parties": {
+    "Con": 7,
+    "RUK": 1,
+    "TUV": 1
+   },
+   "kept": true
+  },
+  {
+   "label": "Pass the Universal Credit and Personal Independence Payment Bill with its current clauses",
+   "key": "Universal Credit and Personal Independence Payment Bill",
+   "for": 9,
+   "against": 14,
+   "for_parties": {
+    "Lab": 9
+   },
+   "against_parties": {
+    "Lab": 5,
+    "Con": 2,
+    "Ind": 2,
+    "LD": 2,
+    "SNP": 1,
+    "PC": 1
+   },
+   "kept": true
+  },
+  {
+   "label": "Ratify the treaty transferring sovereignty of the British Indian Ocean Territory to Mauritius",
+   "key": "Diego Garcia Military Base and British Indian Ocean Territory Bill",
+   "for": 9,
+   "against": 14,
+   "for_parties": {
+    "Lab": 7,
+    "YP": 1,
+    "LD": 1
+   },
+   "against_parties": {
+    "Con": 10,
+    "RUK": 3,
+    "DUP": 1
+   },
+   "kept": true
+  },
+  {
+   "label": "Pass the Employment Rights Bill with new trade union recognition measures",
+   "key": "Employment Rights Bill",
+   "for": 43,
+   "against": 7,
+   "for_parties": {
+    "Lab": 40,
+    "Ind": 1,
+    "YP": 1,
+    "LD": 1
+   },
+   "against_parties": {
+    "Con": 7
+   },
+   "kept": true
+  },
+  {
+   "label": "Refer the Prime Minister to the Committee of Privileges over misleading statements about the Mandelson appointment",
+   "key": "2026-04-28|Referral of Prime Minister to Committee of Privileges|",
+   "for": 21,
+   "against": 7,
+   "for_parties": {
+    "Con": 11,
+    "Lab": 3,
+    "SNP": 2,
+    "APNI": 1,
+    "RUK": 1,
+    "PC": 1
+   },
+   "against_parties": {
+    "Lab": 7
+   },
+   "kept": true
+  },
+  {
+   "label": "Remove the two-child limit on Universal Credit support for families",
+   "key": "Universal Credit (Removal of Two Child Limit) Bill",
+   "for": 43,
+   "against": 6,
+   "for_parties": {
+    "Lab": 31,
+    "LD": 7,
+    "SNP": 1,
+    "YP": 1,
+    "PC": 1,
+    "Green": 1
+   },
+   "against_parties": {
+    "Con": 5,
+    "RUK": 1
+   },
+   "kept": true
+  },
+  {
+   "label": "Repeal the Safety of Rwanda (Asylum and Immigration) Act 2024",
+   "key": "Border Security, Asylum and Immigration Bill",
+   "for": 11,
+   "against": 6,
+   "for_parties": {
+    "Lab": 8,
+    "YP": 1,
+    "LD": 1,
+    "Ind": 1
+   },
+   "against_parties": {
+    "Con": 5,
+    "Lab": 1
+   },
+   "kept": true
+  },
+  {
+   "label": "Grant new oil and gas licences in the North Sea",
+   "key": "2026-03-24|Opposition Day|Oil and Gas",
+   "for": 11,
+   "against": 5,
+   "for_parties": {
+    "Con": 9,
+    "Ind": 1,
+    "RUK": 1
+   },
+   "against_parties": {
+    "Lab": 3,
+    "LD": 1,
+    "Green": 1
+   },
+   "kept": true
+  },
+  {
+   "label": "Lower the voting age to 16 for all UK elections",
+   "key": "Representation of the People Bill",
+   "for": 29,
+   "against": 5,
+   "for_parties": {
+    "Lab": 20,
+    "LD": 6,
+    "YP": 1,
+    "SNP": 1,
+    "Green": 1
+   },
+   "against_parties": {
+    "Con": 4,
+    "RUK": 1
+   },
+   "kept": true
+  },
+  {
+   "label": "Means-test winter fuel payments by limiting them to pension credit recipients",
+   "key": "2024-09-10|Winter Fuel Payment|",
+   "for": 5,
+   "against": 8,
+   "for_parties": {
+    "Lab": 5
+   },
+   "against_parties": {
+    "Con": 5,
+    "SNP": 1,
+    "PC": 1,
+    "LD": 1
+   },
+   "kept": true
+  },
+  {
+   "label": "Proceed with the Pathways trial on puberty blockers for children",
+   "key": "2026-06-23|Puberty Blockers|",
+   "for": 7,
+   "against": 5,
+   "for_parties": {
+    "Lab": 6,
+    "LD": 1
+   },
+   "against_parties": {
+    "Con": 2,
+    "Ind": 2,
+    "LD": 1
+   },
+   "kept": true
+  },
+  {
+   "label": "Reduce Agricultural Property Relief and Business Property Relief inheritance tax exemptions",
+   "key": "Finance (No. 2) Bill",
+   "for": 5,
+   "against": 10,
+   "for_parties": {
+    "Lab": 4,
+    "Con": 1
+   },
+   "against_parties": {
+    "Con": 5,
+    "LD": 4,
+    "Lab": 1
+   },
+   "kept": true
+  },
+  {
+   "label": "Scrap the two-child benefit cap",
+   "key": "2025-12-01|Income tax (charge)|",
+   "for": 44,
+   "against": 5,
+   "for_parties": {
+    "Lab": 35,
+    "LD": 3,
+    "SNP": 2,
+    "Ind": 2,
+    "DUP": 1,
+    "Green": 1
+   },
+   "against_parties": {
+    "Con": 5
+   },
+   "kept": true
+  },
+  {
+   "label": "Withdraw from the European Convention on Human Rights",
+   "key": "2026-10-14|MOD Bicester and Illegal Migrants|",
+   "for": 5,
+   "against": 7,
+   "for_parties": {
+    "Con": 4,
+    "RUK": 1
+   },
+   "against_parties": {
+    "Lab": 5,
+    "SNP": 1,
+    "LD": 1
+   },
+   "kept": true
+  },
+  {
+   "label": "Abolish the right to jury trial for certain offences currently carrying up to three years' imprisonment",
+   "key": "Courts and Tribunals Bill",
+   "for": 4,
+   "against": 30,
+   "for_parties": {
+    "Lab": 4
+   },
+   "against_parties": {
+    "Con": 17,
+    "Lab": 7,
+    "LD": 3,
+    "RUK": 2,
+    "TUV": 1
+   },
+   "kept": true
+  },
+  {
+   "label": "Introduce a presumption to suspend short prison sentences under 12 months",
+   "key": "Sentencing Bill",
+   "for": 8,
+   "against": 4,
+   "for_parties": {
+    "Lab": 6,
+    "LD": 2
+   },
+   "against_parties": {
+    "Con": 2,
+    "RUK": 2
+   },
+   "kept": true
+  },
+  {
+   "label": "Require Attorney General consent for prosecutions of Troubles-related offences",
+   "key": "Northern Ireland Troubles Bill",
+   "for": 5,
+   "against": 4,
+   "for_parties": {
+    "Lab": 5
+   },
+   "against_parties": {
+    "Lab": 2,
+    "SDLP": 1,
+    "APNI": 1
+   },
+   "kept": true
+  },
+  {
+   "label": "Adopt the English Devolution and Community Empowerment Bill",
+   "key": "English Devolution and Community Empowerment Bill",
+   "for": 43,
+   "against": 3,
+   "for_parties": {
+    "Lab": 35,
+    "LD": 4,
+    "Con": 2,
+    "RUK": 1,
+    "Ind": 1
+   },
+   "against_parties": {
+    "Con": 3
+   },
+   "kept": true
+  },
+  {
+   "label": "Extend the Northern Ireland Troubles Bill's parliamentary passage",
+   "key": "Northern Ireland Troubles Bill (Carry-over Extension)",
+   "for": 6,
+   "against": 3,
+   "for_parties": {
+    "Lab": 5,
+    "APNI": 1
+   },
+   "against_parties": {
+    "Con": 2,
+    "Ind": 1
+   },
+   "kept": true
+  },
+  {
+   "label": "Increase the energy (oil and gas) profits levy rate",
+   "key": "Finance Bill",
+   "for": 3,
+   "against": 5,
+   "for_parties": {
+    "Lab": 2,
+    "Green": 1
+   },
+   "against_parties": {
+    "Con": 3,
+    "DUP": 1,
+    "SNP": 1
+   },
+   "kept": true
+  },
+  {
+   "label": "Introduce a wealth tax on assets over \u00a310 million",
+   "key": "2025-07-15|Taxes|",
+   "for": 3,
+   "against": 5,
+   "for_parties": {
+    "SNP": 1,
+    "PC": 1,
+    "Lab": 1
+   },
+   "against_parties": {
+    "Con": 4,
+    "Lab": 1
+   },
+   "kept": true
+  },
+  {
+   "label": "Introduce financial charges for asylum seekers to contribute towards the costs of the asylum system",
+   "key": "Immigration and Asylum Bill",
+   "for": 6,
+   "against": 3,
+   "for_parties": {
+    "Lab": 6
+   },
+   "against_parties": {
+    "LD": 1,
+    "Lab": 1,
+    "Green": 1
+   },
+   "kept": true
+  },
+  {
+   "label": "Leave the European Convention on Human Rights to stop small boat crossings",
+   "key": "Immigration and Asylum Bill",
+   "for": 3,
+   "against": 5,
+   "for_parties": {
+    "Con": 2,
+    "RUK": 1
+   },
+   "against_parties": {
+    "Lab": 2,
+    "YP": 1,
+    "LD": 1,
+    "Green": 1
+   },
+   "kept": true
+  },
+  {
+   "label": "Pass the Employment Rights Bill to regulate zero-hour contracts and shift cancellations",
+   "key": "2025-12-10|Seasonal Work|",
+   "for": 5,
+   "against": 3,
+   "for_parties": {
+    "Lab": 5
+   },
+   "against_parties": {
+    "Con": 3
+   },
+   "kept": true
+  },
+  {
+   "label": "Pass the House of Lords (Hereditary Peers) Bill to remove hereditary peers",
+   "key": "House of Lords (Hereditary Peers) Bill",
+   "for": 26,
+   "against": 3,
+   "for_parties": {
+    "Lab": 14,
+    "Con": 5,
+    "LD": 3,
+    "SNP": 1,
+    "RUK": 1,
+    "Green": 1
+   },
+   "against_parties": {
+    "Con": 2,
+    "RUK": 1
+   },
+   "kept": true
+  },
+  {
+   "label": "Proscribe Palestine Action as a terrorist organisation under the Terrorism Act 2000",
+   "key": "2025-07-02|Prevention and Suppression of Terrorism|",
+   "for": 3,
+   "against": 10,
+   "for_parties": {
+    "Lab": 2,
+    "Con": 1
+   },
+   "against_parties": {
+    "Lab": 5,
+    "YP": 2,
+    "SNP": 1,
+    "Ind": 1,
+    "Green": 1
+   },
+   "kept": true
+  },
+  {
+   "label": "Remove charitable business rates relief from private schools in England",
+   "key": "Non-Domestic Rating (Multipliers and Private Schools) Bill",
+   "for": 14,
+   "against": 3,
+   "for_parties": {
+    "Lab": 14
+   },
+   "against_parties": {
+    "Con": 2,
+    "LD": 1
+   },
+   "kept": true
+  },
+  {
+   "label": "Repeal or amend the Illegal Migration Act 2023 to remove inadmissibility rules for certain countries",
+   "key": "Border Security, Asylum and Immigration Bill",
+   "for": 3,
+   "against": 4,
+   "for_parties": {
+    "Lab": 2,
+    "YP": 1
+   },
+   "against_parties": {
+    "Con": 4
+   },
+   "kept": true
+  },
+  {
+   "label": "Abolish the Health Services Safety Investigations Body and transfer its functions to the Care Quality Commission",
+   "key": "Health Bill",
+   "for": 2,
+   "against": 10,
+   "for_parties": {
+    "Lab": 2
+   },
+   "against_parties": {
+    "Con": 6,
+    "Lab": 2,
+    "LD": 2
+   },
+   "kept": false
+  },
+  {
+   "label": "Align UK regulations with the European single market",
+   "key": "2026-05-18|Debate on the Address|Backing Business to Create Economic Growth",
+   "for": 3,
+   "against": 2,
+   "for_parties": {
+    "Lab": 2,
+    "LD": 1
+   },
+   "against_parties": {
+    "RUK": 1,
+    "TUV": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Ban UK trade in goods and services from Israeli settlements in the Occupied Palestinian Territories",
+   "key": "2026-07-09|Israeli Settlements: Trade Ban|",
+   "for": 39,
+   "against": 2,
+   "for_parties": {
+    "Lab": 25,
+    "LD": 7,
+    "Con": 2,
+    "Ind": 2,
+    "YP": 1,
+    "SNP": 1
+   },
+   "against_parties": {
+    "Con": 2
+   },
+   "kept": false
+  },
+  {
+   "label": "Fund the defence spending increase by cutting the official development assistance budget",
+   "key": "2025-03-05|Foreign, Commonwealth and Development Office|",
+   "for": 2,
+   "against": 12,
+   "for_parties": {
+    "Con": 2
+   },
+   "against_parties": {
+    "Lab": 5,
+    "LD": 3,
+    "SNP": 2,
+    "Con": 1,
+    "Green": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Implement the Sentencing Council's revised guidelines on pre-sentence reports for ethnic, cultural or faith minorities",
+   "key": "Sentencing Guidelines (Pre-sentence Reports) Bill",
+   "for": 2,
+   "against": 5,
+   "for_parties": {
+    "Lab": 1,
+    "Ind": 1
+   },
+   "against_parties": {
+    "Con": 3,
+    "Lab": 2
+   },
+   "kept": false
+  },
+  {
+   "label": "Nationalise the UK steel industry via the Steel Industry (Nationalisation) Bill",
+   "key": "Steel Industry (Nationalisation) Bill",
+   "for": 19,
+   "against": 2,
+   "for_parties": {
+    "Lab": 17,
+    "Con": 1,
+    "RUK": 1
+   },
+   "against_parties": {
+    "Con": 2
+   },
+   "kept": false
+  },
+  {
+   "label": "Pass the Passenger Railway Services (Public Ownership) Bill to renationalise passenger railways",
+   "key": "Passenger Railway Services (Public Ownership) Bill",
+   "for": 31,
+   "against": 2,
+   "for_parties": {
+    "Lab": 29,
+    "APNI": 1,
+    "SNP": 1
+   },
+   "against_parties": {
+    "Con": 2
+   },
+   "kept": false
+  },
+  {
+   "label": "Repeal or amend the Employment Rights Act 2025",
+   "key": "2026-07-07|Opposition Day|Summer Jobs",
+   "for": 3,
+   "against": 2,
+   "for_parties": {
+    "Con": 3
+   },
+   "against_parties": {
+    "Lab": 2
+   },
+   "kept": false
+  },
+  {
+   "label": "Abandon the net zero emissions target",
+   "key": "2026-06-24|Climate Change|",
+   "for": 1,
+   "against": 20,
+   "for_parties": {
+    "RUK": 1
+   },
+   "against_parties": {
+    "Lab": 15,
+    "LD": 4,
+    "Green": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Abolish Stamp Duty Land Tax",
+   "key": "2025-10-28|Stamp Duty Land Tax|",
+   "for": 9,
+   "against": 1,
+   "for_parties": {
+    "Con": 9
+   },
+   "against_parties": {
+    "Lab": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Abolish inheritance tax on family homes, farms, and businesses",
+   "key": "2026-10-14|Inheritance Tax|",
+   "for": 6,
+   "against": 1,
+   "for_parties": {
+    "Con": 6
+   },
+   "against_parties": {
+    "Lab": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Adopt a youth experience scheme with the European Union",
+   "key": "2025-05-22|Backbench Business|EU-UK Summit",
+   "for": 5,
+   "against": 1,
+   "for_parties": {
+    "Lab": 4,
+    "LD": 1
+   },
+   "against_parties": {
+    "RUK": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Adopt new clause 21 requiring disclosure of transgender status in official data",
+   "key": "Data (Use and Access) Bill [Lords]",
+   "for": 1,
+   "against": 5,
+   "for_parties": {
+    "Con": 1
+   },
+   "against_parties": {
+    "Lab": 3,
+    "Green": 1,
+    "LD": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Adopt proportional representation for UK general elections",
+   "key": "2025-01-30|Proportional Representation: General Elections|",
+   "for": 17,
+   "against": 1,
+   "for_parties": {
+    "Lab": 8,
+    "LD": 6,
+    "RUK": 1,
+    "Green": 1,
+    "Ind": 1
+   },
+   "against_parties": {
+    "Con": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Approve large-scale solar developments on agricultural land",
+   "key": "2024-07-26|Making Britain a Clean Energy Superpower|",
+   "for": 1,
+   "against": 1,
+   "for_parties": {
+    "Lab": 1
+   },
+   "against_parties": {
+    "Con": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Cut business property relief",
+   "key": "2025-02-26|Family Businesses|",
+   "for": 1,
+   "against": 7,
+   "for_parties": {
+    "Lab": 1
+   },
+   "against_parties": {
+    "Con": 7
+   },
+   "kept": false
+  },
+  {
+   "label": "Establish an independent football regulator via the Football Governance Bill",
+   "key": "2025-03-06|Backbench Business|English Football: Financial Sustainability and Governance",
+   "for": 16,
+   "against": 1,
+   "for_parties": {
+    "Lab": 14,
+    "Con": 1,
+    "LD": 1
+   },
+   "against_parties": {
+    "RB": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Increase borrowing to fund higher fixed capital investment",
+   "key": "2024-10-30|Income Tax (Charge)|",
+   "for": 3,
+   "against": 1,
+   "for_parties": {
+    "Lab": 2,
+    "LD": 1
+   },
+   "against_parties": {
+    "Con": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Increase employers' national insurance contributions",
+   "key": "2024-11-06|Income Tax (Charge)|",
+   "for": 1,
+   "against": 3,
+   "for_parties": {
+    "LD": 1
+   },
+   "against_parties": {
+    "Con": 1,
+    "RB": 1,
+    "LD": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Introduce a salt and sugar reformulation tax",
+   "key": "2025-01-20|Obesity: Food and Diet|",
+   "for": 6,
+   "against": 1,
+   "for_parties": {
+    "Lab": 5,
+    "Ind": 1
+   },
+   "against_parties": {
+    "Con": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Permit the Secretary of State to vary the proportion of public and private provision of health services",
+   "key": "Health Bill",
+   "for": 1,
+   "against": 1,
+   "for_parties": {
+    "Lab": 1
+   },
+   "against_parties": {
+    "Lab": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Publish all documents relating to the collapsed China spying prosecution",
+   "key": "2025-10-28|China Spying Case|",
+   "for": 3,
+   "against": 1,
+   "for_parties": {
+    "Con": 3
+   },
+   "against_parties": {
+    "Lab": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Publish the defence investment plan",
+   "key": "2026-03-24|Defence|",
+   "for": 10,
+   "against": 1,
+   "for_parties": {
+    "Con": 7,
+    "SNP": 1,
+    "Lab": 1,
+    "LD": 1
+   },
+   "against_parties": {
+    "Lab": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Reform the Right to Buy scheme to restrict sales and incentivise council housebuilding",
+   "key": "Social Housing Bill [Lords]",
+   "for": 15,
+   "against": 1,
+   "for_parties": {
+    "Lab": 10,
+    "LD": 4,
+    "Green": 1
+   },
+   "against_parties": {
+    "Con": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Remove the immunity provisions of the Northern Ireland Troubles (Legacy and Reconciliation) Act 2023",
+   "key": "2026-01-21|Northern Ireland Troubles: Legacy and Reconciliation|",
+   "for": 3,
+   "against": 1,
+   "for_parties": {
+    "Lab": 3
+   },
+   "against_parties": {
+    "DUP": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Repeal the Climate Change Act 2008 and abolish the carbon tax",
+   "key": "2026-05-18|Debate on the Address|Backing Business to Create Economic Growth",
+   "for": 1,
+   "against": 1,
+   "for_parties": {
+    "Con": 1
+   },
+   "against_parties": {
+    "Lab": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Transfer the Institute for Apprenticeships and Technical Education's functions to Skills England",
+   "key": "Institute for Apprenticeships and Technical Education (Transfer of Functions etc) Bill [Lords]",
+   "for": 27,
+   "against": 1,
+   "for_parties": {
+    "Lab": 27
+   },
+   "against_parties": {
+    "Con": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Use the MOD Bicester site for asylum accommodation",
+   "key": "2026-10-14|MOD Bicester and Illegal Migrants|",
+   "for": 1,
+   "against": 3,
+   "for_parties": {
+    "Lab": 1
+   },
+   "against_parties": {
+    "Con": 2,
+    "LD": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Abolish business rates for retail and hospitality sectors",
+   "key": "2025-12-10|Seasonal Work|",
+   "for": 2,
+   "against": 0,
+   "for_parties": {
+    "Con": 2
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Abolish the Right to Buy scheme entirely",
+   "key": "Social Housing Bill [Lords]",
+   "for": 0,
+   "against": 3,
+   "for_parties": {},
+   "against_parties": {
+    "Con": 2,
+    "Lab": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Adopt US-style Uyghur Forced Labor Prevention Act provisions banning imports unless supply chains are slavery-free",
+   "key": "2025-03-27|Modern Slavery Act 2015: 10th Anniversary|",
+   "for": 1,
+   "against": 0,
+   "for_parties": {
+    "Con": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Adopt amendment 39 to set a 4.8% uplift in the Universal Credit standard allowance for 2026-2029",
+   "key": "Universal Credit and Personal Independence Payment Bill",
+   "for": 2,
+   "against": 0,
+   "for_parties": {
+    "Ind": 1,
+    "Green": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Adopt full public beneficial ownership registers in all British overseas territories",
+   "key": "2025-07-15|Taxes|",
+   "for": 1,
+   "against": 0,
+   "for_parties": {
+    "Lab": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Adopt legislation to prevent Strategic Lawsuits Against Public Participation (SLAPPs)",
+   "key": "2024-11-21|Strategic Lawsuits Against Public Participation|",
+   "for": 14,
+   "against": 0,
+   "for_parties": {
+    "Lab": 6,
+    "Con": 4,
+    "LD": 2,
+    "DUP": 1,
+    "RUK": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Adopt public ownership of the water industry",
+   "key": "2025-04-23|Sewage|",
+   "for": 2,
+   "against": 0,
+   "for_parties": {
+    "LD": 1,
+    "Green": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Adopt the 2026-27 local government finance settlement",
+   "key": "2026-02-11|Local Government Finance|",
+   "for": 5,
+   "against": 0,
+   "for_parties": {
+    "Lab": 4,
+    "LD": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Adopt the Planning and Infrastructure Bill to streamline planning and accelerate housing and infrastructure delivery",
+   "key": "Planning and Infrastructure Bill",
+   "for": 32,
+   "against": 0,
+   "for_parties": {
+    "Lab": 31,
+    "Green": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Adopt the Product Regulation and Metrology Bill to update product safety and metrology via delegated powers",
+   "key": "Product Regulation and Metrology Bill [Lords]",
+   "for": 10,
+   "against": 0,
+   "for_parties": {
+    "Lab": 9,
+    "LD": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Adopt the new investment rule freeing up \u00a3113 billion for infrastructure and housing",
+   "key": "2025-06-24|Ministry of Housing, Communities and Local Government|",
+   "for": 1,
+   "against": 0,
+   "for_parties": {
+    "Lab": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Appoint Peter Mandelson as ambassador to the United States",
+   "key": "2026-04-21|Peter Mandelson: Government Appointment|",
+   "for": 0,
+   "against": 15,
+   "for_parties": {},
+   "against_parties": {
+    "Lab": 6,
+    "Con": 5,
+    "LD": 1,
+    "PC": 1,
+    "Green": 1,
+    "TUV": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Appoint a dedicated Cabinet Minister for young people and future generations",
+   "key": "2026-05-14|Debate on the Address|Getting Britain Working Again",
+   "for": 1,
+   "against": 0,
+   "for_parties": {
+    "Lab": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Approve money resolution for the Terminally Ill Adults (End of Life) Bill",
+   "key": "Terminally Ill Adults (End of Life) Bill (Money)",
+   "for": 5,
+   "against": 0,
+   "for_parties": {
+    "Lab": 3,
+    "Con": 1,
+    "PC": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Ban cryptocurrency donations to political parties",
+   "key": "Representation of the People Bill",
+   "for": 12,
+   "against": 0,
+   "for_parties": {
+    "Lab": 9,
+    "LD": 2,
+    "Green": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Ban doctors from striking and introduce minimum service levels",
+   "key": "2025-12-02|Income tax (charge)|",
+   "for": 1,
+   "against": 0,
+   "for_parties": {
+    "Con": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Ban smartphones in schools",
+   "key": "Protection of Children (Digital Safety and Data Protection) Bill",
+   "for": 9,
+   "against": 0,
+   "for_parties": {
+    "Lab": 4,
+    "Con": 2,
+    "LD": 2,
+    "Ind": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Ban the sale of tobacco products to anyone born after 2009",
+   "key": "Tobacco and Vapes Bill",
+   "for": 10,
+   "against": 0,
+   "for_parties": {
+    "Lab": 6,
+    "Con": 2,
+    "Ind": 1,
+    "SNP": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Bring water companies into public ownership",
+   "key": "2025-03-20|Coastal Communities|",
+   "for": 1,
+   "against": 0,
+   "for_parties": {
+    "Green": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Build 1.5 million new homes by the end of the Parliament",
+   "key": "2024-07-19|Planning, the Green Belt and Rural Affairs|",
+   "for": 3,
+   "against": 0,
+   "for_parties": {
+    "Lab": 2,
+    "Con": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Cap the price of school uniforms",
+   "key": "Children\u2019s Wellbeing and Schools Bill",
+   "for": 10,
+   "against": 0,
+   "for_parties": {
+    "Lab": 8,
+    "LD": 1,
+    "Con": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Continue and accelerate the transition to renewable energy and electric vehicles",
+   "key": "2026-06-24|Climate Change|",
+   "for": 20,
+   "against": 0,
+   "for_parties": {
+    "Lab": 14,
+    "LD": 5,
+    "Green": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Create a new offence of endangering lives during sea crossings to the UK under Clause 18 of the Border Security, Asylum and Immigration Bill",
+   "key": "Border Security, Asylum and  Immigration Bill",
+   "for": 3,
+   "against": 0,
+   "for_parties": {
+    "Lab": 3
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Create a new offence of trespassing with intent to commit a criminal offence",
+   "key": "Crime and Policing Bill",
+   "for": 2,
+   "against": 0,
+   "for_parties": {
+    "Lab": 2
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Cut business rate relief for rural pubs from 75% to 40%",
+   "key": "2024-11-04|Income Tax (Charge)|",
+   "for": 0,
+   "against": 1,
+   "for_parties": {},
+   "against_parties": {
+    "Con": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Cut winter fuel payments for pensioners",
+   "key": "2024-10-30|Income Tax (Charge)|",
+   "for": 0,
+   "against": 3,
+   "for_parties": {},
+   "against_parties": {
+    "LD": 1,
+    "SNP": 1,
+    "PC": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Deploy British troops to Ukraine as part of a coalition operation",
+   "key": "2026-01-14|Ukraine|",
+   "for": 1,
+   "against": 0,
+   "for_parties": {
+    "LD": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Designate the Islamic Revolutionary Guard Corps (IRGC) as a foreign power threat under the National Security (State Threats) Bill",
+   "key": "National Security (State Threats) Bill",
+   "for": 4,
+   "against": 0,
+   "for_parties": {
+    "Lab": 3,
+    "Con": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Devolve management of the Crown Estate's Welsh assets to the Welsh Government",
+   "key": "2026-05-19|Energy Security|",
+   "for": 1,
+   "against": 0,
+   "for_parties": {
+    "PC": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Embed a statutory whistleblowing function in the Armed Forces Commissioner's role",
+   "key": "Armed Forces Commissioner Bill",
+   "for": 3,
+   "against": 0,
+   "for_parties": {
+    "Con": 1,
+    "Lab": 1,
+    "LD": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Enact a statutory youth service Act imposing a duty on local authorities to provide youth work",
+   "key": "2025-05-15|Youth Services|",
+   "for": 4,
+   "against": 0,
+   "for_parties": {
+    "Lab": 3,
+    "LD": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Enact the Terrorism (Protection of Premises) Bill (Martyn's Law)",
+   "key": "Terrorism (Protection of Premises) Bill",
+   "for": 24,
+   "against": 0,
+   "for_parties": {
+    "Lab": 12,
+    "Con": 7,
+    "LD": 3,
+    "DUP": 1,
+    "TUV": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "End all arms sales and export licenses to Israel",
+   "key": "2024-10-10|Gaza and Humanitarian Aid|",
+   "for": 4,
+   "against": 0,
+   "for_parties": {
+    "Lab": 2,
+    "Ind": 2
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "End the ban on onshore wind farms",
+   "key": "2024-07-17|Debate on the Address|[1st Day]",
+   "for": 2,
+   "against": 0,
+   "for_parties": {
+    "Lab": 2
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Establish Great British Energy as a publicly owned national energy generation company",
+   "key": "Great British Energy Bill",
+   "for": 33,
+   "against": 0,
+   "for_parties": {
+    "Lab": 27,
+    "LD": 2,
+    "Green": 2,
+    "SNP": 1,
+    "Ind": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Establish a government-funded redress scheme for victims of pelvic mesh and sodium valproate",
+   "key": "2025-03-27|Backbench Business|Hughes Report: First Anniversary",
+   "for": 4,
+   "against": 0,
+   "for_parties": {
+    "Lab": 2,
+    "DUP": 1,
+    "LD": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Establish a legal duty of candour on public officials",
+   "key": "Public Office (Accountability) Bill",
+   "for": 36,
+   "against": 0,
+   "for_parties": {
+    "Lab": 30,
+    "Con": 2,
+    "LD": 2,
+    "APNI": 1,
+    "SNP": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Establish an independent regulator for property managing agents",
+   "key": "2026-07-02|Commonhold and Leasehold Reform: Managing Agents|",
+   "for": 12,
+   "against": 0,
+   "for_parties": {
+    "Lab": 10,
+    "LD": 2
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Expand private provision of surgical and diagnostic services in the NHS",
+   "key": "2025-01-06|NHS Backlog|",
+   "for": 1,
+   "against": 0,
+   "for_parties": {
+    "Lab": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Extend free school meals to all children regardless of income",
+   "key": "Children\u2019s Wellbeing and Schools Bill",
+   "for": 6,
+   "against": 0,
+   "for_parties": {
+    "Lab": 4,
+    "YP": 1,
+    "Green": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Extend inflation protection to all pre-1997 pensions in live schemes",
+   "key": "Pension Schemes Bill",
+   "for": 9,
+   "against": 0,
+   "for_parties": {
+    "Lab": 4,
+    "LD": 2,
+    "SNP": 1,
+    "Con": 1,
+    "PC": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Freeze income tax thresholds",
+   "key": "2025-11-26|Income Tax (Charge)|",
+   "for": 0,
+   "against": 3,
+   "for_parties": {},
+   "against_parties": {
+    "LD": 2,
+    "DUP": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Fund the Lower Thames Crossing via private tolls under the Highways (Financing) Bill",
+   "key": "Highways (Financing) Bill",
+   "for": 4,
+   "against": 0,
+   "for_parties": {
+    "Lab": 4
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Grant no new licences for waste incinerators",
+   "key": "2025-04-03|Backbench Business|Waste Incinerators",
+   "for": 2,
+   "against": 0,
+   "for_parties": {
+    "Con": 1,
+    "Lab": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Grant the Secretary of State last-resort powers to direct shutdown of data centres or AI systems in catastrophic risk scenarios",
+   "key": "Cyber Security and Resilience (Network and Information Systems) Bill",
+   "for": 5,
+   "against": 0,
+   "for_parties": {
+    "Lab": 4,
+    "PC": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Implement Conservative-proposed welfare savings including housing benefit cuts",
+   "key": "2025-11-04|Welfare Spending|",
+   "for": 1,
+   "against": 0,
+   "for_parties": {
+    "Con": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Implement Liz Sayce review recommendations on carer's allowance overpayments",
+   "key": "2025-11-20|BACKBENCH BUSINESS|Unpaid Carers: Inequalities",
+   "for": 1,
+   "against": 0,
+   "for_parties": {
+    "Lab": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Implement a fully trans-inclusive ban on conversion practices",
+   "key": "2026-06-04|Pride Month|",
+   "for": 5,
+   "against": 0,
+   "for_parties": {
+    "Lab": 3,
+    "SNP": 1,
+    "LD": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Implement the 57 recommendations of the rural communities report",
+   "key": "2026-01-07|Rural Communities|",
+   "for": 1,
+   "against": 0,
+   "for_parties": {
+    "Con": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Implement the recommendations of the Independent Inquiry into Child Sexual Abuse (IICSA) with legislative commitment and regular reporting",
+   "key": "Children's Wellbeing and Schools Bill",
+   "for": 2,
+   "against": 0,
+   "for_parties": {
+    "LD": 1,
+    "Green": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Implement the \u00a315 billion defence investment package (DIP) funding plan",
+   "key": "2026-10-29|Budget Resolutions - Income Tax (Charge)|",
+   "for": 6,
+   "against": 0,
+   "for_parties": {
+    "Lab": 4,
+    "LD": 2
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Impose Magnitsky sanctions on Dubai Islamic Bank board members over Matthew Cornelius detention",
+   "key": "2024-12-05|Detained British Nationals Abroad|",
+   "for": 1,
+   "against": 0,
+   "for_parties": {
+    "Con": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Impose a blanket ban on pavement parking nationwide",
+   "key": "2026-03-26|Transport Accessibility for Disabled People|",
+   "for": 1,
+   "against": 0,
+   "for_parties": {
+    "Lab": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Increase defence spending to at least 2.68% of GDP by 2030",
+   "key": "2026-07-08|Rearmament and Warfighting Readiness|",
+   "for": 1,
+   "against": 0,
+   "for_parties": {
+    "Lab": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Increase funding to UNRWA as called for by its ambassador",
+   "key": "2024-10-10|Gaza and Humanitarian Aid|",
+   "for": 3,
+   "against": 0,
+   "for_parties": {
+    "Lab": 3
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Increase state funding for hospices to cover a larger share of their costs",
+   "key": "2025-01-13|Hospice and Palliative Care|",
+   "for": 28,
+   "against": 0,
+   "for_parties": {
+    "Lab": 16,
+    "LD": 6,
+    "Ind": 2,
+    "Green": 1,
+    "SNP": 1,
+    "UUP": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Increase the affordable homes programme budget by \u00a3400 million for 2025-26",
+   "key": "2025-06-24|Ministry of Housing, Communities and Local Government|",
+   "for": 1,
+   "against": 0,
+   "for_parties": {
+    "Lab": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Introduce a deposit return scheme for plastic bottles and containers",
+   "key": "2025-01-21|Environmental Protection|",
+   "for": 9,
+   "against": 0,
+   "for_parties": {
+    "Lab": 5,
+    "LD": 3,
+    "DUP": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Introduce a levy on aviation fuel suppliers to fund the Sustainable Aviation Fuel revenue certainty mechanism",
+   "key": "Sustainable Aviation Fuel Bill",
+   "for": 3,
+   "against": 0,
+   "for_parties": {
+    "Lab": 3
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Introduce a taper on the carer's allowance earnings limit",
+   "key": "2025-11-20|BACKBENCH BUSINESS|Unpaid Carers: Inequalities",
+   "for": 1,
+   "against": 0,
+   "for_parties": {
+    "LD": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Introduce an opt-out 'rights reservations' system for copyright law",
+   "key": "2025-01-27|Creative Industries|",
+   "for": 0,
+   "against": 3,
+   "for_parties": {},
+   "against_parties": {
+    "Con": 1,
+    "Lab": 1,
+    "LD": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Introduce independent audits of recommender algorithms as in the EU Digital Services Act",
+   "key": "2025-04-03|UK Democracy: Impact of Digital Platforms|",
+   "for": 1,
+   "against": 0,
+   "for_parties": {
+    "Lab": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Introduce new property taxes on homes worth over \u00a3500,000",
+   "key": "2025-09-03|Property Taxes|",
+   "for": 0,
+   "against": 1,
+   "for_parties": {},
+   "against_parties": {
+    "Con": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Launch an independent public inquiry into the culture enabling Peter Mandelson's appointment",
+   "key": "2026-02-04|Lord Mandelson|",
+   "for": 3,
+   "against": 0,
+   "for_parties": {
+    "YP": 2,
+    "Con": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Maintain funding for the Independent Commission for Aid Impact",
+   "key": "2026-03-04|Foreign, Commonwealth and Development Office|",
+   "for": 1,
+   "against": 0,
+   "for_parties": {
+    "LD": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Maintain the Energy Profits Levy (EPL) until 2030",
+   "key": "2025-12-01|Income tax (charge)|",
+   "for": 0,
+   "against": 2,
+   "for_parties": {},
+   "against_parties": {
+    "Con": 2
+   },
+   "kept": false
+  },
+  {
+   "label": "Maintain the headline corporation tax rate capped at 25%",
+   "key": "2024-10-31|Income tax (charge)|",
+   "for": 1,
+   "against": 0,
+   "for_parties": {
+    "Lab": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Mandate solar panels on all new homes via the New Homes (Solar Generation) Bill",
+   "key": "New Homes (Solar Generation) Bill",
+   "for": 13,
+   "against": 0,
+   "for_parties": {
+    "LD": 6,
+    "Lab": 4,
+    "Con": 1,
+    "Green": 1,
+    "Ind": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Nationalise the railways",
+   "key": "2025-09-11|Regional Transport Inequality|",
+   "for": 0,
+   "against": 1,
+   "for_parties": {},
+   "against_parties": {
+    "Con": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Pass the Building Safety (Remediation of Unsafe Cladding etc) Bill",
+   "key": "Building Safety (Remediation of Unsafe Cladding etc) Bill",
+   "for": 15,
+   "against": 0,
+   "for_parties": {
+    "Lab": 12,
+    "Green": 1,
+    "Con": 1,
+    "LD": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Pass the Climate and Nature Bill",
+   "key": "Climate and Nature Bill",
+   "for": 12,
+   "against": 0,
+   "for_parties": {
+    "Lab": 6,
+    "LD": 3,
+    "Con": 2,
+    "Green": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Pass the European partnership Bill to reduce post-Brexit trade barriers",
+   "key": "2026-05-14|Debate on the Address|Getting Britain Working Again",
+   "for": 3,
+   "against": 0,
+   "for_parties": {
+    "Lab": 3
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Pass the Immigration and Visas Bill to reduce immigration numbers",
+   "key": "2025-05-21|Immigration|",
+   "for": 5,
+   "against": 0,
+   "for_parties": {
+    "Con": 5
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Pass the Renters\u2019 Rights Bill to end no-fault evictions and enforce decent homes standards",
+   "key": "Renters\u2019 Rights Bill",
+   "for": 63,
+   "against": 0,
+   "for_parties": {
+    "Lab": 50,
+    "LD": 10,
+    "YP": 1,
+    "Green": 1,
+    "Ind": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Pass the Steel Industry (Special Measures) Bill to take British Steel into public control",
+   "key": "Steel Industry (Special Measures) Bill",
+   "for": 12,
+   "against": 0,
+   "for_parties": {
+    "Lab": 9,
+    "Con": 1,
+    "PC": 1,
+    "RUK": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Pause and review the carbon border adjustment mechanism due in next year",
+   "key": "2026-10-21|Support for Farmers|",
+   "for": 1,
+   "against": 0,
+   "for_parties": {
+    "SNP": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Prioritise UK medical graduates for NHS foundation and specialty training places",
+   "key": "Medical Training (Prioritisation) Bill",
+   "for": 20,
+   "against": 0,
+   "for_parties": {
+    "Lab": 13,
+    "Con": 4,
+    "LD": 2,
+    "UUP": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Proceed with the Acorn carbon capture and storage project in Scotland",
+   "key": "2026-10-29|Budget Resolutions - Income Tax (Charge)|",
+   "for": 1,
+   "against": 0,
+   "for_parties": {
+    "SNP": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Proscribe the Islamic Revolutionary Guard Corps under the tackling state threats Bill",
+   "key": "2026-05-20|Defence Readiness|",
+   "for": 3,
+   "against": 0,
+   "for_parties": {
+    "Lab": 2,
+    "Con": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Protect the green belt from development",
+   "key": "2024-07-19|Planning, the Green Belt and Rural Affairs|",
+   "for": 5,
+   "against": 0,
+   "for_parties": {
+    "Con": 4,
+    "Lab": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Provide financial redress to women affected by state pension age changes",
+   "key": "2025-07-03|Women\u2019s State Pension Age: Financial Redress|",
+   "for": 17,
+   "against": 0,
+   "for_parties": {
+    "Lab": 6,
+    "LD": 5,
+    "Con": 2,
+    "DUP": 1,
+    "PC": 1,
+    "Ind": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Publish all documents related to Peter Mandelson's appointment as UK ambassador to the US",
+   "key": "2026-02-04|Lord Mandelson|",
+   "for": 1,
+   "against": 0,
+   "for_parties": {
+    "YP": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Raise the age of digital data consent from 13",
+   "key": "2026-02-24|Miscellaneous|",
+   "for": 1,
+   "against": 0,
+   "for_parties": {
+    "LD": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Recognize Russian-occupied Ukrainian territories as Russian",
+   "key": "2026-01-29|Backbench Business|Ukraine: Non-recognition of Russian-occupied Territories",
+   "for": 0,
+   "against": 11,
+   "for_parties": {},
+   "against_parties": {
+    "Lab": 6,
+    "Con": 2,
+    "LD": 2,
+    "DUP": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Reduce VAT for hospitality and tourism to 12.5%",
+   "key": "2025-03-20|Coastal Communities|",
+   "for": 1,
+   "against": 0,
+   "for_parties": {
+    "Lab": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Reform student loan interest rates and repayment thresholds",
+   "key": "2026-03-18|Student Loans|",
+   "for": 7,
+   "against": 0,
+   "for_parties": {
+    "Con": 5,
+    "LD": 1,
+    "Lab": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Reform the NHS dental contract within this Parliament",
+   "key": "2026-06-15|NHS Dentistry|",
+   "for": 19,
+   "against": 0,
+   "for_parties": {
+    "Lab": 8,
+    "LD": 7,
+    "Con": 3,
+    "Green": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Reintroduce free and simple short-term travel arrangements for UK artists to perform in the EU",
+   "key": "2025-01-27|Creative Industries|",
+   "for": 1,
+   "against": 0,
+   "for_parties": {
+    "LD": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Reintroduce the use of private capital for building NHS neighbourhood health centres",
+   "key": "2025-12-02|Income tax (charge)|",
+   "for": 0,
+   "against": 1,
+   "for_parties": {},
+   "against_parties": {
+    "Lab": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Rejoin the single market for food and agricultural products",
+   "key": "2025-05-22|Backbench Business|EU-UK Summit",
+   "for": 0,
+   "against": 2,
+   "for_parties": {},
+   "against_parties": {
+    "Con": 1,
+    "RUK": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Release anonymised individual-level death data linked to covid-19 vaccines to independent researchers",
+   "key": "2025-01-16|Medicines and Healthcare Products Regulatory Agency|",
+   "for": 1,
+   "against": 0,
+   "for_parties": {
+    "RUK": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Require AI companies to disclose specific copyrighted works used in training",
+   "key": "Data (Use and Access) Bill [Lords]",
+   "for": 4,
+   "against": 0,
+   "for_parties": {
+    "Lab": 3,
+    "LD": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Require an Office for Budget Responsibility report on changes to fiscal rules",
+   "key": "Budget Responsibility Bill",
+   "for": 3,
+   "against": 0,
+   "for_parties": {
+    "Con": 1,
+    "Lab": 1,
+    "PC": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Require country of origin marking for ceramic products through secondary legislation",
+   "key": "Product Regulation and Metrology Bill [Lords]",
+   "for": 1,
+   "against": 0,
+   "for_parties": {
+    "Lab": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Require imported animal products to meet UK welfare standards by law",
+   "key": "2026-01-22|Agricultural Sector: Import Standards|",
+   "for": 5,
+   "against": 0,
+   "for_parties": {
+    "Lab": 2,
+    "Con": 1,
+    "PC": 1,
+    "Green": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Require pharmaceutical companies to formally respond to all MHRA safety questions before vaccine authorisation",
+   "key": "2025-01-16|Medicines and Healthcare Products Regulatory Agency|",
+   "for": 1,
+   "against": 0,
+   "for_parties": {
+    "Con": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Restore UK official development assistance to 0.7% of GNI",
+   "key": "2026-03-04|Foreign, Commonwealth and Development Office|",
+   "for": 4,
+   "against": 0,
+   "for_parties": {
+    "Lab": 2,
+    "LD": 2
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Restrict large-scale solar farms on prime agricultural land",
+   "key": "2025-05-15|Backbench Business|Solar Farms",
+   "for": 7,
+   "against": 0,
+   "for_parties": {
+    "Con": 4,
+    "PC": 1,
+    "RUK": 1,
+    "LD": 1
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Scrap the winter fuel payment for pensioners",
+   "key": "2025-03-19|Winter Fuel Payment|",
+   "for": 0,
+   "against": 19,
+   "for_parties": {},
+   "against_parties": {
+    "Con": 11,
+    "Lab": 5,
+    "LD": 2,
+    "SNP": 1
+   },
+   "kept": false
+  },
+  {
+   "label": "Transfer outsourced and subcontracted railway staff into Great British Railways",
+   "key": "Railways Bill",
+   "for": 6,
+   "against": 0,
+   "for_parties": {
+    "Lab": 6
+   },
+   "against_parties": {},
+   "kept": false
+  },
+  {
+   "label": "Use frozen Russian state assets to fund Ukraine's recovery",
+   "key": "Financial Assistance to Ukraine Bill",
+   "for": 14,
+   "against": 0,
+   "for_parties": {
+    "Lab": 8,
+    "LD": 3,
+    "Con": 2,
+    "SNP": 1
+   },
+   "against_parties": {},
+   "kept": false
+  }
+ ]
+}

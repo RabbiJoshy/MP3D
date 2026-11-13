@@ -1,0 +1,276 @@
+{
+  "counts": {
+    "overall": {
+      "confirm": 990,
+      "drop": 56,
+      "flip": 3
+    },
+    "machine_for": {
+      "confirm": 652,
+      "drop": 51,
+      "flip": 3
+    },
+    "machine_against": {
+      "confirm": 338,
+      "drop": 5
+    }
+  },
+  "agreement_rates": {
+    "overall_agreement_rate": 0.9438,
+    "against_agreement_rate": 0.9854,
+    "for_agreement_rate": 0.9235,
+    "by_reason_code": {
+      "correct": {
+        "count": 990,
+        "share": 0.9438
+      },
+      "different_measure": {
+        "count": 38,
+        "share": 0.0362
+      },
+      "too_short_to_tell": {
+        "count": 11,
+        "share": 0.0105
+      },
+      "detail_only_objection": {
+        "count": 5,
+        "share": 0.0048
+      },
+      "wrong_polarity": {
+        "count": 3,
+        "share": 0.0029
+      },
+      "descriptive_not_advocating": {
+        "count": 1,
+        "share": 0.001
+      },
+      "sarcasm_or_quote": {
+        "count": 1,
+        "share": 0.001
+      }
+    },
+    "by_party": {
+      "Con": {
+        "total": 234,
+        "confirm": 219,
+        "flip": 2,
+        "drop": 13,
+        "agreement_rate": 0.9359
+      },
+      "Lab": {
+        "total": 594,
+        "confirm": 567,
+        "flip": 1,
+        "drop": 26,
+        "agreement_rate": 0.9545
+      },
+      "RUK": {
+        "total": 27,
+        "confirm": 26,
+        "flip": 0,
+        "drop": 1,
+        "agreement_rate": 0.963
+      },
+      "LD": {
+        "total": 93,
+        "confirm": 81,
+        "flip": 0,
+        "drop": 12,
+        "agreement_rate": 0.871
+      },
+      "TUV": {
+        "total": 6,
+        "confirm": 6,
+        "flip": 0,
+        "drop": 0,
+        "agreement_rate": 1.0
+      },
+      "Ind": {
+        "total": 23,
+        "confirm": 23,
+        "flip": 0,
+        "drop": 0,
+        "agreement_rate": 1.0
+      },
+      "Green": {
+        "total": 18,
+        "confirm": 17,
+        "flip": 0,
+        "drop": 1,
+        "agreement_rate": 0.9444
+      },
+      "DUP": {
+        "total": 5,
+        "confirm": 5,
+        "flip": 0,
+        "drop": 0,
+        "agreement_rate": 1.0
+      },
+      "SNP": {
+        "total": 22,
+        "confirm": 22,
+        "flip": 0,
+        "drop": 0,
+        "agreement_rate": 1.0
+      },
+      "YP": {
+        "total": 11,
+        "confirm": 11,
+        "flip": 0,
+        "drop": 0,
+        "agreement_rate": 1.0
+      },
+      "PC": {
+        "total": 9,
+        "confirm": 7,
+        "flip": 0,
+        "drop": 2,
+        "agreement_rate": 0.7778
+      }
+    },
+    "by_prob_band": {
+      "0.7-0.8": {
+        "total": 288,
+        "confirm": 255,
+        "flip": 3,
+        "drop": 30,
+        "agreement_rate": 0.8854
+      },
+      "0.8-0.9": {
+        "total": 357,
+        "confirm": 337,
+        "flip": 0,
+        "drop": 20,
+        "agreement_rate": 0.944
+      },
+      "0.9-1.0": {
+        "total": 404,
+        "confirm": 398,
+        "flip": 0,
+        "drop": 6,
+        "agreement_rate": 0.9851
+      }
+    }
+  },
+  "proposals_most_changed": [
+    {
+      "label": "Adopt dynamic alignment on trade with the European Union",
+      "total_claims": 27,
+      "confirm": 10,
+      "drops": 17,
+      "flips": 0,
+      "total_changed": 17,
+      "error_rate": 0.6296
+    },
+    {
+      "label": "Adopt the English Devolution and Community Empowerment Bill",
+      "total_claims": 68,
+      "confirm": 56,
+      "drops": 12,
+      "flips": 0,
+      "total_changed": 12,
+      "error_rate": 0.1765
+    },
+    {
+      "label": "Pass the Employment Rights Bill with new trade union recognition measures",
+      "total_claims": 69,
+      "confirm": 63,
+      "drops": 6,
+      "flips": 0,
+      "total_changed": 6,
+      "error_rate": 0.087
+    },
+    {
+      "label": "Pass the Terminally Ill Adults (End of Life) Bill to legalize assisted dying for terminally ill adults",
+      "total_claims": 129,
+      "confirm": 124,
+      "drops": 4,
+      "flips": 1,
+      "total_changed": 5,
+      "error_rate": 0.0388
+    },
+    {
+      "label": "Refer the Prime Minister to the Committee of Privileges over misleading statements about the Mandelson appointment",
+      "total_claims": 38,
+      "confirm": 34,
+      "drops": 4,
+      "flips": 0,
+      "total_changed": 4,
+      "error_rate": 0.1053
+    },
+    {
+      "label": "Pass the House of Lords (Hereditary Peers) Bill to remove hereditary peers",
+      "total_claims": 42,
+      "confirm": 39,
+      "drops": 3,
+      "flips": 0,
+      "total_changed": 3,
+      "error_rate": 0.0714
+    },
+    {
+      "label": "Abolish the right to jury trial for certain offences currently carrying up to three years' imprisonment",
+      "total_claims": 54,
+      "confirm": 52,
+      "drops": 2,
+      "flips": 0,
+      "total_changed": 2,
+      "error_rate": 0.037
+    },
+    {
+      "label": "Remove the two-child limit on Universal Credit support for families",
+      "total_claims": 97,
+      "confirm": 95,
+      "drops": 2,
+      "flips": 0,
+      "total_changed": 2,
+      "error_rate": 0.0206
+    },
+    {
+      "label": "Leave the European Convention on Human Rights to stop small boat crossings",
+      "total_claims": 8,
+      "confirm": 7,
+      "drops": 1,
+      "flips": 0,
+      "total_changed": 1,
+      "error_rate": 0.125
+    },
+    {
+      "label": "Introduce a presumption to suspend short prison sentences under 12 months",
+      "total_claims": 14,
+      "confirm": 13,
+      "drops": 1,
+      "flips": 0,
+      "total_changed": 1,
+      "error_rate": 0.0714
+    }
+  ],
+  "before_vs_after": {
+    "without_overrides": {
+      "two_sided_arguments": 94,
+      "mps_on_map": 561,
+      "positions_feeding_map": 2497
+    },
+    "with_overrides": {
+      "two_sided_arguments": 89,
+      "mps_on_map": 561,
+      "positions_feeding_map": 2410
+    }
+  },
+  "suggestions": [
+    {
+      "target": "judge_prompt",
+      "issue": "Detail objections and procedural speeches false-positively classified as AGAINST or FOR.",
+      "suggestion": "Add explicit negative few-shot examples for speakers supporting a bill's objective while amending specific operational clauses (detail_only_objection), and for speakers narrating provisions neutrally (descriptive_not_advocating)."
+    },
+    {
+      "target": "thresholds",
+      "issue": "Lower probability band (0.7-0.8) exhibits significantly higher error and drop rates compared to 0.85+.",
+      "suggestion": "Raise acceptance threshold from p(side)>=0.70 to p(side)>=0.82 and p(other)<=0.18, cutting nearly half of noise while preserving clean directional signals."
+    },
+    {
+      "target": "proposal_writing",
+      "issue": "Proposal generation generates duplicate labels for the same bill/policy (e.g. two-child limit, ECHR, Employment Rights) and bundles specific clauses.",
+      "suggestion": "Enforce a cross-proposal canonicalization check against existing fight titles, disallow clause bundling ('to regulate X and Y'), and filter out procedural timetable motions."
+    }
+  ]
+}

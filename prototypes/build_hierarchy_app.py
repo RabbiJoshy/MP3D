@@ -66,6 +66,114 @@ for c in ("party", "party_abbr", "constituency", "name"):
     if c in members: members[c] = members[c].fillna("")
 members["party_colour"] = members.party_colour.fillna("888888")
 FALL = inject_bridge(FALL, members)
+# ---- sk22: contested proposals found debate by debate (generic rule, strict judge); appended so the merge rules below apply to them
+_sk22 = RES / "sk22_fights.json"
+if _sk22.exists() and "--no-sk22" not in sys.argv:
+    _n0 = len(FALL)
+    for _f in json.loads(_sk22.read_text())["fights"]:
+        FALL.append(dict(_f, fight_id=len(FALL)))
+    print("sk22 contested proposals added:", len(FALL) - _n0)
+
+# ---- overrides layer: manually reviewed second layer (positions and labels)
+_overrides_dir = RES / "overrides"
+if _overrides_dir.exists() and "--no-overrides" not in sys.argv:
+    pos_file = _overrides_dir / "positions.jsonl"
+    labels_file = _overrides_dir / "labels.jsonl"
+
+    pos_counts = {"confirm": 0, "flip": 0, "drop": 0}
+    if pos_file.exists():
+        pos_lookup = {}
+        for line in pos_file.read_text().splitlines():
+            if not line.strip(): continue
+            row = json.loads(line)
+            pos_lookup[(row["label"], row["passage_id"])] = row
+            pos_counts[row["action"]] = pos_counts.get(row["action"], 0) + 1
+
+        for f in FALL:
+            flbl = f.get("label", "")
+            acc = {}
+            for k in ("mps_for", "mps_against", "mps_both_sides"):
+                for m in f.get(k, []):
+                    mid = m["member_id"]
+                    m_entry = acc.setdefault(mid, {"member_id": mid, "name": m.get("name", ""), "party": m.get("party", ""), "claims": []})
+                    for c in m.get("claims", []):
+                        ov = pos_lookup.get((flbl, c["passage_id"])) or pos_lookup.get((c.get("measure", flbl), c["passage_id"]))
+                        if ov:
+                            act = ov.get("action", "confirm")
+                            if act == "drop":
+                                continue
+                            elif act == "flip":
+                                h_side = ov.get("human_side", "FOR" if c["side"] == "AGAINST" else "AGAINST")
+                                m_entry["claims"].append({"passage_id": c["passage_id"], "measure": flbl, "side": h_side})
+                            else: # confirm
+                                m_entry["claims"].append(dict(c))
+                        else:
+                            m_entry["claims"].append(dict(c))
+
+            f["mps_for"], f["mps_against"], f["mps_both_sides"] = [], [], []
+            for m in list(acc.values()):
+                if not m["claims"]: continue
+                net = sum(1 if c["side"] == "FOR" else -1 for c in m["claims"])
+                m["stance"] = round(net / len(m["claims"]), 3)
+                m["focus"] = len(m["claims"])
+                f["mps_for" if net > 0 else "mps_against" if net < 0 else "mps_both_sides"].append(m)
+            nf, na = len(f["mps_for"]), len(f["mps_against"])
+            f["status"] = "fight" if nf >= 2 and na >= 2 else "one_short" if min(nf, na) == 1 and max(nf, na) >= 2 else "one_sided"
+
+    label_counts = {"keep": 0, "merge_into": 0, "rename": 0, "retire": 0}
+    if labels_file.exists():
+        lbl_lookup = {}
+        for line in labels_file.read_text().splitlines():
+            if not line.strip(): continue
+            row = json.loads(line)
+            lbl_lookup[row["label"]] = row
+            label_counts[row["action"]] = label_counts.get(row["action"], 0) + 1
+
+        party_of = lambda mid: str(members.loc[mid, "party"]) if mid in members.index else ""
+        new_FALL = []
+        by_label = {f["label"]: f for f in FALL}
+        for f in FALL:
+            flbl = f.get("label", "")
+            ov = lbl_lookup.get(flbl)
+            if not ov:
+                new_FALL.append(f)
+                continue
+            act = ov.get("action", "keep")
+            if act == "retire":
+                continue
+            elif act == "rename":
+                target = ov.get("target")
+                if target:
+                    f["label"] = target
+                    f["description"] = target
+                new_FALL.append(f)
+            elif act == "merge_into":
+                target = ov.get("target")
+                target_f = by_label.get(target)
+                if target_f and target_f is not f:
+                    claims_to_add = []
+                    for k in ("mps_for", "mps_against", "mps_both_sides"):
+                        for m in f.get(k, []):
+                            for c in m.get("claims", []):
+                                claims_to_add.append({
+                                    "member_id": m["member_id"],
+                                    "mp": m.get("name", ""),
+                                    "party": m.get("party", ""),
+                                    "passage_id": c["passage_id"],
+                                    "verdict": c["side"]
+                                })
+                    _merge_fight_claims(target_f, claims_to_add, party_of)
+                else:
+                    new_FALL.append(f)
+            else: # keep
+                new_FALL.append(f)
+
+        FALL = new_FALL
+        for i, f in enumerate(FALL):
+            f["fight_id"] = i
+
+    print(f"overrides applied: positions ({pos_counts.get('confirm', 0)} confirm, {pos_counts.get('flip', 0)} flip, {pos_counts.get('drop', 0)} drop), "
+          f"labels ({label_counts.get('keep', 0)} keep, {label_counts.get('merge_into', 0)} merge_into, {label_counts.get('rename', 0)} rename, {label_counts.get('retire', 0)} retire)")
 
 # ---------------- merge same-bill duplicate fights (generic rules, no hand edits) ----------------
 topic_of = {int(k): v for k, v in ts["topic_of"].items()}
@@ -606,7 +714,10 @@ for ax in range(3):
             loads.append([t, round(c, 3)])
     loads.sort(key=lambda x: -abs(x[1]))
     axl.append(loads)
-    axes.append(", ".join(x[0] for x in loads[:2]) if loads else f"Axis {ax + 1}")
+    # name each axis by the argument that pulls hardest at each end (loading x sqrt(speakers)); same rule for every axis
+    _w = vv[:, ax] * np.sqrt(obs_Y.sum(0))
+    _short = lambda t: re.sub(r"^(Pass|Support|Adopt) the ", "", t)[:60]
+    axes.append(f"{_short(FIGHTS[int(np.argmax(_w))]['label'])} ↔ {_short(FIGHTS[int(np.argmin(_w))]['label'])}" if len(FIGHTS) else f"Axis {ax + 1}")
 
 model_out = {"v": [[round(float(x), 6) for x in row] for row in vv],
              "b": [round(float(x), 6) for x in b_dir],
@@ -640,3 +751,7 @@ summary = {"pilot_used": USE_PILOT, "mps_3plus_subjects": int(((~np.isnan(S)).su
            "groups": [g["name"] for g in groups], "groups_kept": groups_ok}
 (RES / "ha_summary.json").write_text(json.dumps(summary, indent=1, default=float))
 print(json.dumps(summary, indent=1, default=float))
+
+# keep the isolated Map companion preview in step with every build (it is a copy of docs/index.html)
+import runpy
+runpy.run_path(str(HERE / "map_companion" / "build.py"))

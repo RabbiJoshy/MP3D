@@ -1,0 +1,5 @@
+{"written_before_results": "2026-11-13, while the judge run was still in progress",
+ "baseline": {"party_share_of_variance": 0.253, "green_reform_distance": 3.08, "labour_green_distance": 1.43, "mean_r_heldout_fights": 0.881, "within_party_split_vote_auc": 0.657},
+ "pass": {"party_share_of_variance": ">= 0.30", "green_reform_distance": "> 3.08", "labour_green_distance": "> 1.43", "mean_r_heldout_fights": ">= 0.86"},
+ "measured_how": "whitened (rotation-independent) coordinates of MPs on the map, parties with >=5 MPs; scratch diag2.py",
+ "blind_read": "100 random kept positions, 50 FOR and 50 AGAINST, read by a subagent that sees the proposal and passage but not the judge's verdict; pass = >=85% of AGAINST and >=85% of FOR agree"}

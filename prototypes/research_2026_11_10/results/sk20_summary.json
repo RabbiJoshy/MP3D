@@ -1,0 +1,641 @@
+{
+ "prep": {
+  "listed": 4417,
+  "detail_fetched": 4417,
+  "withdrawn_edms": 33,
+  "amendments": 8,
+  "sig_rows": 62493,
+  "withdrawn_sigs": 193,
+  "edms_kept": 4376,
+  "speakers_excluded": [
+   "Ms Nusrat Ghani",
+   "Sir Lindsay Hoyle",
+   "Judith Cummins",
+   "Sir Roger Gale",
+   "Caroline Nokes"
+  ],
+  "members_project_nonspeaker": 651,
+  "signer_ids_total": 475,
+  "signer_ids_in_project": 474,
+  "signature_rows_matched_frac": 0.9999677242358713,
+  "ministers_excluded": "yes: MPs with a gov_posts entry active on the EDM tabling date are ineligible (includes whips; PPSs not identifiable)",
+  "passages_used": 217502,
+  "mps_with_passages": 642,
+  "S_pre_nan_frac": 0.04776121393889867
+ },
+ "cut": "2026-03-01",
+ "cuts_tried": [
+  [
+   "2026-03-01",
+   877
+  ]
+ ],
+ "n_train_edms": 2844,
+ "n_test_edms": 877,
+ "n_fit_rows": 307604,
+ "note_fit": "fit on later half of TRAIN; features from strictly earlier TRAIN EDMs only; negatives 20:1 sampled; S and M centred per EDM; S uses pre-date passages",
+ "results": {
+  "all": {
+   "P0": 0.5,
+   "B0": 0.8491014112631133,
+   "H": 0.8202192321962333,
+   "S_pre": 0.6185391366334246,
+   "S_any": 0.619018569510653,
+   "M": 0.6389936033868244,
+   "B0+H": 0.8546096017796383,
+   "B0+H+S": 0.8571278750847797,
+   "B0+H+S+M": 0.8568929522712343
+  },
+  "Lab": {
+   "P0": 0.5,
+   "B0": 0.9340016171010148,
+   "H": 0.8928895036012068,
+   "S_pre": 0.6574508992951063,
+   "S_any": 0.6610431827987098,
+   "M": 0.7352087295138405,
+   "B0+H": 0.9388643640423576,
+   "B0+H+S": 0.9409410439865109,
+   "B0+H+S+M": 0.9408209669706243
+  },
+  "Con": {
+   "P0": 0.5,
+   "B0": 0.7823006621868418,
+   "H": 0.6718172895187488,
+   "S_pre": 0.5520422238231105,
+   "S_any": 0.5590323245427352,
+   "M": 0.5130272900432076,
+   "B0+H": 0.7794086140822116,
+   "B0+H+S": 0.79237605989148,
+   "B0+H+S+M": 0.7928057595855769
+  },
+  "LD": {
+   "P0": 0.5,
+   "B0": 0.8018970229875789,
+   "H": 0.7766960205492569,
+   "S_pre": 0.5847248456622327,
+   "S_any": 0.583513722708683,
+   "M": 0.5914148544071925,
+   "B0+H": 0.8044653405187989,
+   "B0+H+S": 0.8074385165977549,
+   "B0+H+S+M": 0.8073606012026032
+  },
+  "ncells": {
+   "all": 989,
+   "Lab": 356,
+   "Con": 13,
+   "LD": 562
+  },
+  "overall_auc": {
+   "P0": 0.8260154019332959,
+   "B0": 0.927816778601086,
+   "H": 0.9117127325074805,
+   "S_pre": 0.6908720976080254,
+   "S_any": 0.6915809499142807,
+   "M": 0.7044777706764578,
+   "B0+H": 0.9362975012819951,
+   "B0+H+S": 0.9377833126363891,
+   "B0+H+S+M": 0.937608243889015
+  },
+  "p20": {
+   "P0": 0.21066134549600912,
+   "B0": 0.3324401368301026,
+   "H": 0.3667046750285063,
+   "S_pre": 0.12189281641961232,
+   "S_any": 0.12423033067274801,
+   "M": 0.11584948688711516,
+   "B0+H": 0.36083238312428734,
+   "B0+H+S": 0.3666476624857469,
+   "B0+H+S+M": 0.36641961231470926
+  },
+  "p20_base_rate": 0.03508257173759886,
+  "boot_ci": {
+   "all": {
+    "P0": [
+     0.5,
+     0.5
+    ],
+    "B0": [
+     0.8421710714773786,
+     0.8555852059286075
+    ],
+    "H": [
+     0.8121625128440532,
+     0.8280808681707034
+    ],
+    "S_pre": [
+     0.6100642032540186,
+     0.6272562328459405
+    ],
+    "S_any": [
+     0.6101870592993099,
+     0.6275784964349116
+    ],
+    "M": [
+     0.6302482139067284,
+     0.6477441489407857
+    ],
+    "B0+H": [
+     0.848113980843818,
+     0.8608992568318463
+    ],
+    "B0+H+S": [
+     0.8506404802200908,
+     0.863660511937699
+    ],
+    "B0+H+S+M": [
+     0.8503571843369946,
+     0.8633502347991041
+    ]
+   },
+   "Lab": {
+    "P0": [
+     0.5,
+     0.5
+    ],
+    "B0": [
+     0.9279057664085707,
+     0.9399266176642334
+    ],
+    "H": [
+     0.8807474777791279,
+     0.9038097860366547
+    ],
+    "S_pre": [
+     0.6436070478480693,
+     0.6712593826324232
+    ],
+    "S_any": [
+     0.6469937946508346,
+     0.6737827272641213
+    ],
+    "M": [
+     0.7222808997805451,
+     0.7471003881545952
+    ],
+    "B0+H": [
+     0.9326242312067836,
+     0.9448489658218197
+    ],
+    "B0+H+S": [
+     0.9347370454241563,
+     0.9468479210745367
+    ],
+    "B0+H+S+M": [
+     0.9346550022748091,
+     0.9467820030889144
+    ]
+   },
+   "Con": {
+    "P0": [
+     0.5,
+     0.5
+    ],
+    "B0": [
+     0.7107931198615651,
+     0.8550315433945895
+    ],
+    "H": [
+     0.6147707759703646,
+     0.7289771694258068
+    ],
+    "S_pre": [
+     0.43238669401753055,
+     0.6528194540142438
+    ],
+    "S_any": [
+     0.4392753343203799,
+     0.6619254464037098
+    ],
+    "M": [
+     0.44658807547050694,
+     0.5601015049082961
+    ],
+    "B0+H": [
+     0.7098793282843173,
+     0.8535382789226964
+    ],
+    "B0+H+S": [
+     0.7157949754590555,
+     0.8601726139933522
+    ],
+    "B0+H+S+M": [
+     0.7146063212011242,
+     0.8611603485912114
+    ]
+   },
+   "LD": {
+    "P0": [
+     0.5,
+     0.5
+    ],
+    "B0": [
+     0.7938862286174162,
+     0.8101402424818966
+    ],
+    "H": [
+     0.7678125883736309,
+     0.7849196903783994
+    ],
+    "S_pre": [
+     0.5752459986093782,
+     0.5934658100687353
+    ],
+    "S_any": [
+     0.5738959662353179,
+     0.5922852645236857
+    ],
+    "M": [
+     0.5806980006898745,
+     0.6021583045921288
+    ],
+    "B0+H": [
+     0.797035881960957,
+     0.8120698769700515
+    ],
+    "B0+H+S": [
+     0.7997316965510287,
+     0.8150513466712773
+    ],
+    "B0+H+S+M": [
+     0.7997741945033746,
+     0.8149864094325225
+    ]
+   }
+  },
+  "diffs": {
+   "all: B0+H+S - B0+H": {
+    "point": 0.0025182733051414274,
+    "ci": [
+     0.0011063815895063999,
+     0.00387834900598715
+    ],
+    "passes": true
+   },
+   "all: B0+H+S+M - B0+H+S": {
+    "point": -0.000234922813545424,
+    "ci": [
+     -0.0005980263322640428,
+     0.000124043991791145
+    ],
+    "passes": false
+   },
+   "all: B0+H+S - B0": {
+    "point": 0.008026463821666385,
+    "ci": [
+     0.005546877021370517,
+     0.010521456094717085
+    ],
+    "passes": true
+   },
+   "all: B0+H - B0": {
+    "point": 0.005508190516524958,
+    "ci": [
+     0.003627703769231519,
+     0.0074265713086042184
+    ],
+    "passes": true
+   },
+   "Lab: B0+H+S - B0+H": {
+    "point": 0.0020766799441532813,
+    "ci": [
+     0.0006049720443006418,
+     0.0035829595168850367
+    ],
+    "passes": true
+   },
+   "Lab: B0+H+S+M - B0+H+S": {
+    "point": -0.00012007701588656605,
+    "ci": [
+     -0.00024426995222733006,
+     1.0725678778819573e-05
+    ],
+    "passes": false
+   },
+   "Lab: B0+H+S - B0": {
+    "point": 0.006939426885496092,
+    "ci": [
+     0.004844209435692781,
+     0.009180418538793192
+    ],
+    "passes": true
+   },
+   "Lab: B0+H - B0": {
+    "point": 0.00486274694134281,
+    "ci": [
+     0.0037927243506075624,
+     0.005973802590112135
+    ],
+    "passes": true
+   },
+   "Con: B0+H+S - B0+H": {
+    "point": 0.012967445809268341,
+    "ci": [
+     -0.013989333541437235,
+     0.05218883636894026
+    ],
+    "passes": false
+   },
+   "Con: B0+H+S+M - B0+H+S": {
+    "point": 0.0004296996940968967,
+    "ci": [
+     -0.00331143133926301,
+     0.003938374540130623
+    ],
+    "passes": false
+   },
+   "Con: B0+H+S - B0": {
+    "point": 0.010075397704638167,
+    "ci": [
+     -0.014818956151002679,
+     0.043561472901449676
+    ],
+    "passes": false
+   },
+   "Con: B0+H - B0": {
+    "point": -0.002892048104630174,
+    "ci": [
+     -0.013829172163312628,
+     0.006957795814676018
+    ],
+    "passes": false
+   },
+   "LD: B0+H+S - B0+H": {
+    "point": 0.0029731760789559747,
+    "ci": [
+     0.001112279004930089,
+     0.00454004057766274
+    ],
+    "passes": true
+   },
+   "LD: B0+H+S+M - B0+H+S": {
+    "point": -7.791539515167312e-05,
+    "ci": [
+     -0.00047361430241782133,
+     0.0003496258326415535
+    ],
+    "passes": false
+   },
+   "LD: B0+H+S - B0": {
+    "point": 0.005541493610175974,
+    "ci": [
+     0.002661703760487985,
+     0.008082500626893845
+    ],
+    "passes": true
+   },
+   "LD: B0+H - B0": {
+    "point": 0.002568317531219999,
+    "ci": [
+     0.00042848988390148114,
+     0.004718737583962082
+    ],
+    "passes": true
+   }
+  },
+  "p20_ci": {
+   "P0": [
+    0.20091077537058152,
+    0.2205273660205245
+   ],
+   "B0": [
+    0.3194940136830102,
+    0.343560433295325
+   ],
+   "H": [
+    0.3545581527936147,
+    0.3790322120866591
+   ],
+   "S_pre": [
+    0.11641818700114023,
+    0.12782354618015962
+   ],
+   "S_any": [
+    0.11835518814139111,
+    0.13004561003420753
+   ],
+   "M": [
+    0.10997719498289625,
+    0.12172605473204105
+   ],
+   "B0+H": [
+    0.3485162485746864,
+    0.37372434435575824
+   ],
+   "B0+H+S": [
+    0.35427166476624855,
+    0.3793058722919042
+   ],
+   "B0+H+S+M": [
+    0.35410347776510825,
+    0.3790208095781072
+   ]
+  },
+  "p20_diffs": {
+   "B0+H+S-B0+H": {
+    "point": 0.0058152793614595355,
+    "ci": [
+     0.0031328392246294185,
+     0.008496294184720636
+    ]
+   },
+   "B0+H+S+M-B0+H+S": {
+    "point": -0.00022805017103760816,
+    "ci": [
+     -0.0013112884834663625,
+     0.0008566134549600902
+    ]
+   }
+  },
+  "step4_S_helps": [
+   {
+    "edm": 65642,
+    "date": "2026-04-21",
+    "title": "Coventry City Football Club\u2019s promotion to Premier League",
+    "n_signers": 6,
+    "delta_auc": 0.107,
+    "top_ranked_signed": [
+     "Jim Shannon (DUP)",
+     "Chris Webb (Lab)",
+     "Valerie Vaz (Lab)"
+    ],
+    "top_ranked_not_signed": [
+     "Clive Jones (LD)",
+     "Mr Angus MacDonald (LD)",
+     "Sarah Dyke (LD)"
+    ]
+   },
+   {
+    "edm": 65675,
+    "date": "2026-04-27",
+    "title": "Staffordshire Day 2026",
+    "n_signers": 6,
+    "delta_auc": 0.091,
+    "top_ranked_signed": [
+     "Jim Shannon (DUP)",
+     "Andrew Rosindell (RUK)",
+     "Dr Allison Gardner (Lab)"
+    ],
+    "top_ranked_not_signed": [
+     "Sarah Dyke (LD)",
+     "Mr Angus MacDonald (LD)",
+     "Wera Hobhouse (LD)"
+    ]
+   },
+   {
+    "edm": 65654,
+    "date": "2026-04-22",
+    "title": "Energy Conservation",
+    "n_signers": 12,
+    "delta_auc": 0.074,
+    "top_ranked_signed": [
+     "Carla Lockhart (Ind)",
+     "Andrew Rosindell (RUK)",
+     "Alex Easton (Ind)"
+    ],
+    "top_ranked_not_signed": [
+     "Jim Shannon (DUP)",
+     "Dr Ellie Chowns (Green)",
+     "Adrian Ramsay (Green)"
+    ]
+   },
+   {
+    "edm": 65378,
+    "date": "2026-03-09",
+    "title": "Fipronil and Imidacloprid Pesticides",
+    "n_signers": 27,
+    "delta_auc": 0.07,
+    "top_ranked_signed": [
+     "Adrian Ramsay (Green)",
+     "Dr Ellie Chowns (Green)",
+     "Andrew George (LD)"
+    ],
+    "top_ranked_not_signed": [
+     "Jim Shannon (DUP)",
+     "Sarah Dyke (LD)",
+     "Wera Hobhouse (LD)"
+    ]
+   },
+   {
+    "edm": 65659,
+    "date": "2026-04-22",
+    "title": "Victims of the Pahalgam terrorist attack",
+    "n_signers": 15,
+    "delta_auc": 0.064,
+    "top_ranked_signed": [
+     "Jim Shannon (DUP)",
+     "Andrew George (LD)",
+     "Sarah Dyke (LD)"
+    ],
+    "top_ranked_not_signed": [
+     "Dr Ellie Chowns (Green)",
+     "Bob Blackman (Con)",
+     "Helen Maguire (LD)"
+    ]
+   }
+  ],
+  "step4_S_hurts": [
+   {
+    "edm": 66264,
+    "date": "2026-07-07",
+    "title": "138th anniversary of the Matchgirls' Strike",
+    "n_signers": 10,
+    "delta_auc": -0.109,
+    "top_ranked_signed": [
+     "Jim Shannon (DUP)",
+     "Si\u00e2n Berry (Green)",
+     "Dr Ellie Chowns (Green)"
+    ],
+    "top_ranked_not_signed": [
+     "Rachael Maskell (Lab)",
+     "John McDonnell (Lab)",
+     "Richard Burgon (Lab)"
+    ]
+   },
+   {
+    "edm": 65341,
+    "date": "2026-03-02",
+    "title": "Proscription of the Islamic Revolutionary Guard Corps",
+    "n_signers": 12,
+    "delta_auc": -0.083,
+    "top_ranked_signed": [
+     "Jim Shannon (DUP)",
+     "Bob Blackman (Con)",
+     "Jim Allister (TUV)"
+    ],
+    "top_ranked_not_signed": [
+     "Dr Ellie Chowns (Green)",
+     "Adrian Ramsay (Green)",
+     "Andrew George (LD)"
+    ]
+   },
+   {
+    "edm": 66817,
+    "date": "2026-10-27",
+    "title": "Recognising those who responded to Storms Austen and Boelo",
+    "n_signers": 7,
+    "delta_auc": -0.061,
+    "top_ranked_signed": [
+     "Jim Shannon (DUP)",
+     "Dr Ellie Chowns (Green)",
+     "Christine Jardine (LD)"
+    ],
+    "top_ranked_not_signed": [
+     "Mr Angus MacDonald (LD)",
+     "Sarah Dyke (LD)",
+     "John McDonnell (Lab)"
+    ]
+   },
+   {
+    "edm": 65761,
+    "date": "2026-05-13",
+    "title": "Holding Iran\u2019s regime to account and proscribing the IRGC",
+    "n_signers": 43,
+    "delta_auc": -0.058,
+    "top_ranked_signed": [
+     "Jim Shannon (DUP)",
+     "Dr Ellie Chowns (Green)",
+     "Wera Hobhouse (LD)"
+    ],
+    "top_ranked_not_signed": [
+     "Adrian Ramsay (Green)",
+     "Andrew George (LD)",
+     "Si\u00e2n Berry (Green)"
+    ]
+   },
+   {
+    "edm": 66155,
+    "date": "2026-06-23",
+    "title": "The Albert Tavern, Freuchie",
+    "n_signers": 6,
+    "delta_auc": -0.055,
+    "top_ranked_signed": [
+     "Jim Shannon (DUP)",
+     "Sarah Dyke (LD)",
+     "Clive Jones (LD)"
+    ],
+    "top_ranked_not_signed": [
+     "Mr Angus MacDonald (LD)",
+     "Chris Law (SNP)",
+     "Helen Maguire (LD)"
+    ]
+   }
+  ],
+  "coefs": {
+   "B0+H": {
+    "B0": 1.473,
+    "H": 0.509
+   },
+   "B0+H+S": {
+    "B0": 1.483,
+    "H": 0.466,
+    "S": 0.265
+   },
+   "B0+H+S+M": {
+    "B0": 1.494,
+    "H": 0.467,
+    "S": 0.265,
+    "M": -0.038
+   }
+  }
+ }
+}
