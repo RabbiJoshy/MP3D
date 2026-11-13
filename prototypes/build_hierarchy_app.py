@@ -223,6 +223,22 @@ _, _, _rot = np.linalg.svd(U_dir, full_matrices=False)
 Q_rot = _rot.T
 U_dir = U_dir @ Q_rot
 V_dir = V_dir @ Q_rot
+# Orthogonal Varimax rotation on subject loadings so the 3 axes align with distinct policy clusters
+_on0 = obs_Y.any(1)
+_L = np.zeros((NT, 3))
+for k in range(NT):
+    _ok = _on0 & np.isfinite(S[:, k])
+    if _ok.sum() >= 12 and np.std(S[_ok, k]) > 1e-8:
+        for ax in range(3):
+            if np.std(U_dir[_ok, ax]) > 1e-8: _L[k, ax] = float(np.corrcoef(U_dir[_ok, ax], S[_ok, k])[0, 1])
+_Rv, _d = np.eye(3), 0.0
+for _ in range(50):
+    _d_old, _Lam = _d, _L @ _Rv
+    _u, _s, _vt = np.linalg.svd(_L.T @ (_Lam**3 - (1.0 / max(1, NT)) * _Lam @ np.diag(np.diag(_Lam.T @ _Lam))))
+    _Rv, _d = _u @ _vt, float(np.sum(_s))
+    if _d_old != 0 and _d / _d_old < 1 + 1e-7: break
+U_dir = U_dir @ _Rv
+V_dir = V_dir @ _Rv
 for ax in range(3):
     if U_dir[:, ax].sum() < 0:
         U_dir[:, ax] *= -1; V_dir[:, ax] *= -1
