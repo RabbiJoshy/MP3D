@@ -459,7 +459,7 @@ function draw(){
  const kv=(svg,t)=>`<span class="it">${svg}${t}</span>`;
  const lk=kv(ic('<circle cx="7" cy="7" r="4.5" fill="#9aa4b2"/>'),'for end')+kv(ic('<circle cx="7" cy="7" r="4" fill="none" stroke="#9aa4b2" stroke-width="1.6"/>'),'against end')+kv(ic('<path d="M7 2L12 7L7 12L2 7Z" fill="#9aa4b2"/>'),'inferred / small')+kv(ic('<circle cx="7" cy="7" r="4.5" fill="#9aa4b2" opacity=".3"/>'),'weak fit')+kv(ic('<circle cx="7" cy="7" r="4" fill="#3a4150"/>'),'no score')+(picked?kv('<span class="sw" style="background:#2dd4bf"></span>','MP high')+kv('<span class="sw" style="background:#fb7185"></span>','MP low'):'')+kv(ic('<circle cx="7" cy="7" r="6" fill="#d9b45f"/>'),'party avg')+kv(ic('<circle cx="7" cy="7" r="3.5" fill="#d9b45f"/>'),'party avg, under 8 MPs')+(YOU?kv(ic('<path d="M7 1l1.8 4.2 4.5.4-3.4 3 1 4.4L7 10.6 3.1 13l1-4.4-3.4-3 4.5-.4z" fill="#ffd45e"/>'),'you'):'');
  const lg=$('leg');lg.classList.toggle('c',store.get('legC')==='1');
- lg.innerHTML=`<div class="lk"><button class="lt" id="legT" aria-expanded="${store.get('legC')!=='1'}">Key &#9662;</button>${lk}</div>`+`<div class="axs">${[0,1,2].map(n=>`<button type="button" class="axc" data-ax="${n}" aria-pressed="${AX===n}" title="What does axis ${n+1} mean?"><b>axis ${n+1}</b> ${esc(D.axes[n])}</button>`).join('')}</div>`;
+ lg.innerHTML=`<div class="lk"><button class="lt" id="legT" aria-expanded="${store.get('legC')!=='1'}">Key &#9662;</button>${lk}</div>`+`<div class="axs"><button type="button" class="axc" data-ax="all" aria-pressed="${AX==='all'}" title="Compare all 3 axes side by side"><b>axes</b> Overview</button>${[0,1,2].map(n=>`<button type="button" class="axc" data-ax="${n}" aria-pressed="${AX===n}" title="What does axis ${n+1} mean?"><b>axis ${n+1}</b> ${esc(D.axes[n])}</button>`).join('')}</div>`;
  if(lg.classList.contains('c'))lg.innerHTML='<button class="lt" id="legT" aria-expanded="false" style="margin:0">Key &#9656;</button>'+lg.querySelector('.axs').outerHTML;
  filCount()}
 // ---- tree (with subject search)
@@ -527,7 +527,7 @@ function mpBtns(arr){return arr.map(([i,v])=>`<button class="mpb" data-mp="${i}"
 function topEnds(sc){const a=sc.map((v,i)=>[i,v]).filter(x=>x[1]!=null&&x[1]!==0);
  return{pos:a.filter(x=>x[1]>0).sort((x,y)=>y[1]-x[1]).slice(0,6),neg:a.filter(x=>x[1]<0).sort((x,y)=>x[1]-y[1]).slice(0,6)}}
 function kid(k,t,r,tag,ttl){return`<button class="kid" title="${esc(ttl||t)}" data-nav="${k}"><span>${esc(t)}</span><span class="dim">${r!=null?`<span class="pill" style="background:${lcol(r)}">${r.toFixed(2)}</span> `:''}${esc(tag||'')}</span></button>`}
-function info(){if(AX!==null){$('chip').innerHTML=axisHtml(AX);return}const nd=getNode(sel),par=parentOf(sel);let h='';
+function info(){if(AX!==null){$('chip').innerHTML=axisHtml(AX);drawAxisPlots();return}const nd=getNode(sel),par=parentOf(sel);let h='';
  if(par)h+=`<div class="up"><a href="${hashStr(par,curSel)}" data-nav="${keyOf(par)}">&uarr; Back up to ${esc(par.t==='root'?'All of Parliament':shortName(par,40))}</a></div>`;
  h+=`<h2>${esc(nd.name)}</h2>`;
  if(sel.t==='root'){
@@ -577,11 +577,20 @@ let AXSUB=null;
 function openAxis(n){AXALL=false;AXSUB=null;if(curSel!=null||drawnMP!=null){curSel=null;curMP=null;hideMP();try{history.replaceState(null,'',hashStr(sel,null))}catch(e){}}
  AX=n;if($('app').classList.contains('dock-c'))setDock(false);info();draw()}
 function closeAxis(){AX=null;AXSUB=null;info();draw()}
-function axisHtml(n){const L=(D.axl||[])[n]||[],mx=Math.max(1e-9,...L.map(x=>Math.abs(x[1]))),list=AXALL?L:L.slice(0,8);
- let h=`<div class="up"><button type="button" class="link" data-axclose>&larr; Close</button></div><h2>Axis ${n+1}</h2>`;
- h+=`<p class="sp"><b class="ink">Stance axis (not focus):</b> click a topic below to inspect its arguments without leaving this view.</p>`;
- h+=`<h4>1. Topics &amp; arguments</h4><div class="axk"><span>&larr; &minus; end</span><span>+ end &rarr;</span></div>`;
- list.forEach(([nm,v])=>{const k=subjIdx(nm),w=Math.round(50*Math.abs(v)/mx),bar=`<span class="axb"><i style="${v>=0?'left:50%':'right:50%'};width:${w}%;background:${v>=0?'#d9b45f':'#6fb3e0'}"></i></span>`;
+function axisHtml(n){
+ const tabs=`<div style="display:flex;gap:4px;flex-wrap:wrap;margin:6px 0 8px"><button type="button" class="axc" data-axtab="all" aria-pressed="${n==='all'}">All 3 axes</button>${[0,1,2].map(i=>`<button type="button" class="axc" data-axtab="${i}" aria-pressed="${n===i}">Axis ${i+1}</button>`).join('')}</div>`;
+ if(n==='all'){
+  let h=`<div class="up"><button type="button" class="link" data-axclose>&larr; Close</button></div><h2>The 3 Map Axes</h2>${tabs}<p class="sp">All placed MPs coloured by party along each axis (diamonds = party means). Click any axis to inspect its topics, arguments, and people.</p>`;
+  [0,1,2].forEach(i=>{const top=((D.axl||[])[i]||[]).slice(0,3).map(([nm,v])=>`${esc(nm)} (${v>0?'+':''}${v.toFixed(2)})`).join(' · ');
+   h+=`<div class="axcard" data-axtab="${i}" role="button" tabindex="0" style="margin:8px 0;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.02);cursor:pointer"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:6px"><b style="font-size:12.5px;color:var(--ink)">Axis ${i+1}: ${esc(D.axes[i]||'')}</b><span class="link" style="font-size:11.5px">Explore &rarr;</span></div><div class="meta" style="font-size:11px;margin:2px 0 6px">${top}</div><canvas class="axp" data-axplot="${i}" style="width:100%;height:74px;display:block;border-radius:6px"></canvas></div>`});
+  return h}
+ const L=(D.axl||[])[n]||[],mx=Math.max(1e-9,...L.map(x=>Math.abs(x[1]))),list=AXALL?L:L.slice(0,8);
+ let h=`<div class="up"><button type="button" class="link" data-axtab="all">&larr; All 3 axes</button><button type="button" class="link" data-axclose>Close</button></div><h2>Axis ${n+1}: ${esc(D.axes[n]||'')}</h2>${tabs}`;
+ h+=`<canvas class="axp" data-axplot="${n}" style="width:100%;height:112px;display:block;border-radius:8px;border:1px solid var(--line);margin-bottom:8px"></canvas>`;
+ const ix=D.mps.map((m,i)=>i).filter(i=>D.onmap[i]).sort((a,b)=>XYZ[b][n]-XYZ[a][n]);
+ h+=`<h4>1. Main people at each end</h4><div class="splabel" style="color:#2dd4bf">+ end</div><div class="mpl">${mpBtns(ix.slice(0,4).map(i=>[i,null]))}</div><div class="splabel" style="color:#fb7185;margin-top:6px">&minus; end</div><div class="mpl">${mpBtns(ix.slice(-4).reverse().map(i=>[i,null]))}</div>`;
+ h+=`<h4>2. Topics &amp; arguments on Axis ${n+1}</h4><p class="sp"><b class="ink">Stance axis (not focus):</b> click a topic below to inspect its arguments without leaving this view.</p><div class="axk"><span>&larr; &minus; end</span><span>+ end &rarr;</span></div>`;
+ list.forEach(([nm,v])=>{const k=subjIdx(nm),w=Math.round(50*Math.abs(v)/mx),bar=`<span class="axb"><i style="${v>=0?'left:50%':'right:50%'};width:${w}%;background:${v>=0?'#2dd4bf':'#fb7185'}"></i></span>`;
   const inner=`<span class="axn" title="${esc(nm)}">${esc(nm)}</span>${bar}<span class="axv">${v>0?'+':''}${v.toFixed(2)}</span>`;
   const open=k>=0&&AXSUB===k;
   h+=k>=0?`<button type="button" class="axr" data-axs="${k}" aria-expanded="${open}">${inner}</button>`:`<div class="axr">${inner}</div>`;
@@ -589,14 +598,37 @@ function axisHtml(n){const L=(D.axl||[])[n]||[],mx=Math.max(1e-9,...L.map(x=>Mat
    const fs=D.fights.filter(f=>f.subj===nm&&f.u).map(f=>({f,s:f.u[n]*f.r})).sort((a,b)=>Math.abs(b.s)-Math.abs(a.s));
    h+=`<div style="margin:4px 0 8px 10px;padding-left:8px;border-left:2px solid var(--line)">`;
    if(fs.length){fs.forEach(({f,s})=>{const lo=s>=0?'Opposes':'Supports',hi=s>=0?'Supports':'Opposes';
-    h+=`<div style="padding:4px 0;border-bottom:1px solid rgba(255,255,255,.05)"><div style="display:flex;justify-content:space-between;gap:6px;align-items:baseline"><span style="font-size:12px;color:var(--ink)">${esc(f.label)}</span><button type="button" class="link" data-axgo="F${f.i}" style="flex:none;font-size:11px">Map &nearr;</button></div><div class="meta" style="display:flex;justify-content:space-between;font-size:11px"><span style="color:#6fb3e0">&larr; ${lo}</span><span style="color:#d9b45f">${hi} &rarr;</span></div></div>`})}
+    h+=`<div style="padding:4px 0;border-bottom:1px solid rgba(255,255,255,.05)"><div style="display:flex;justify-content:space-between;gap:6px;align-items:baseline"><span style="font-size:12px;color:var(--ink)">${esc(f.label)}</span><button type="button" class="link" data-axgo="F${f.i}" style="flex:none;font-size:11px">Map &nearr;</button></div><div class="meta" style="display:flex;justify-content:space-between;font-size:11px"><span style="color:#fb7185">&larr; ${lo}</span><span style="color:#2dd4bf">${hi} &rarr;</span></div></div>`})}
    else h+=`<p class="meta" style="margin:4px 0">No two-sided arguments in this topic.</p>`;
    h+=`<button type="button" class="link" data-axgo="S${k}" style="font-size:11.5px;margin-top:4px">Show ${esc(nm)} on sphere &rarr;</button></div>`;
   }});
  if(L.length>8)h+=`<button type="button" class="more" data-axall aria-expanded="${AXALL}">${AXALL?'Show fewer':'Show all '+L.length}</button>`;
- const ix=D.mps.map((m,i)=>i).filter(i=>D.onmap[i]).sort((a,b)=>XYZ[b][n]-XYZ[a][n]);
- h+=`<h4>2. Main people at each end</h4><div class="splabel" style="color:#d9b45f">+ end</div><div class="mpl">${mpBtns(ix.slice(0,4).map(i=>[i,null]))}</div><div class="splabel" style="color:#6fb3e0;margin-top:6px">&minus; end</div><div class="mpl">${mpBtns(ix.slice(-4).reverse().map(i=>[i,null]))}</div>`;
  return h}
+function drawAxisPlots(){
+ const cvs=$('chip').querySelectorAll('canvas[data-axplot]');if(!cvs.length)return;
+ const hsh=i=>{const s=Math.sin((i+1)*12.9898)*43758.5453;return s-Math.floor(s)};
+ cvs.forEach(c=>{
+  const ax=+c.dataset.axplot,d=window.devicePixelRatio||1,W=c.clientWidth||300,H=c.clientHeight||80;
+  c.width=Math.round(W*d);c.height=Math.round(H*d);const x=c.getContext('2d');x.setTransform(d,0,0,d,0,0);
+  x.fillStyle='#0e1117';x.fillRect(0,0,W,H);
+  const padL=10,padR=10,pT=6,pB=H-18,vals=D.mps.map((m,i)=>D.onmap[i]?XYZ[i][ax]:0);
+  const mAbs=Math.max(.85,...vals.map(Math.abs))*1.05,xOf=v=>padL+((v+mAbs)/(2*mAbs))*(W-padL-padR),x0=xOf(0);
+  x.strokeStyle='rgba(255,255,255,.14)';x.lineWidth=1;x.beginPath();x.moveTo(x0,pT);x.lineTo(x0,pB);x.stroke();
+  x.strokeStyle='rgba(255,255,255,.16)';x.beginPath();x.moveTo(padL,pB);x.lineTo(W-padR,pB);x.stroke();
+  x.fillStyle='#8b95a5';x.font='10.5px "Source Sans 3",sans-serif';x.textAlign='left';x.fillText('−',padL,H-4);x.textAlign='center';x.fillText('0',x0,H-4);x.textAlign='right';x.fillText('+',W-padR,H-4);
+  const pts=[],byP={};
+  D.mps.forEach((m,i)=>{if(!D.onmap[i])return;const v=XYZ[i][ax],px=xOf(v),py=pT+5+hsh(i*3+ax)*(pB-pT-18);
+   x.globalAlpha=.82;x.fillStyle=m.col;x.beginPath();x.arc(px,py,2.3,0,7);x.fill();
+   pts.push({i,px,py,v});(byP[m.p]=byP[m.p]||{col:m.col,vs:[]}).vs.push(v)});
+  Object.values(byP).forEach(o=>{if(o.vs.length<4)return;const mn=o.vs.reduce((a,b)=>a+b,0)/o.vs.length,xm=xOf(mn),ym=pB-5;
+   x.globalAlpha=1;x.fillStyle=o.col;x.strokeStyle='#0e1117';x.lineWidth=1;x.beginPath();x.moveTo(xm,ym-4);x.lineTo(xm+4,ym);x.lineTo(xm,ym+4);x.lineTo(xm-4,ym);x.closePath();x.fill();x.stroke()});
+  x.globalAlpha=1;
+  if(AX!=='all'){
+   c.onmousemove=ev=>{const R=c.getBoundingClientRect(),mx=ev.clientX-R.left,my=ev.clientY-R.top;let b=null,bd=81;pts.forEach(p=>{const dd=(p.px-mx)**2+(p.py-my)**2;if(dd<bd){bd=dd;b=p}});
+    c.style.cursor=b?'pointer':'';c.title=b?`${D.mps[b.i].n} (${D.mps[b.i].p}): ${b.v>=0?'+':''}${b.v.toFixed(2)}`:''};
+   c.onclick=ev=>{const R=c.getBoundingClientRect(),mx=ev.clientX-R.left,my=ev.clientY-R.top;let b=null,bd=81;pts.forEach(p=>{const dd=(p.px-mx)**2+(p.py-my)**2;if(dd<bd){bd=dd;b=p}});if(b)go(sel,b.i)}
+  }
+ })}
 function drawInset(){const c=$('ins');insPts=[];if(!c||sel.t!=='group')return;const g=D.groups[sel.i],e1=g.plane[0],e2=g.plane[1],d=window.devicePixelRatio||1,w=c.clientWidth,h=c.clientHeight;c.width=w*d;c.height=h*d;const x=c.getContext('2d');x.setTransform(d,0,0,d,0,0);
  const pts=[];g.sc.forEach((v,i)=>{if(v==null)return;const q=XYZ[i];pts.push([i,q[0]*e1[0]+q[1]*e1[1]+q[2]*e1[2],q[0]*e2[0]+q[1]*e2[1]+q[2]*e2[2]])});
  let m=0.2;pts.forEach(p=>{m=Math.max(m,Math.abs(p[1]),Math.abs(p[2]))});m*=1.12;const sx=(w/2-8)/m,sy=(h/2-8)/m,S=Math.min(sx,sy);
@@ -610,6 +642,7 @@ function drawInset(){const c=$('ins');insPts=[];if(!c||sel.t!=='group')return;co
 addEventListener('resize',()=>{if(sel.t==='group')drawInset()});
 $('chip').addEventListener('change',e=>{if(e.target.id==='gsub'){GSUB=e.target.checked;info();draw()}});
 $('chip').addEventListener('click',e=>{if(e.target.closest('[data-axclose]')){closeAxis();return}
+ const at=e.target.closest('[data-axtab]');if(at){const v=at.dataset.axtab;openAxis(v==='all'?'all':+v);return}
  const as=e.target.closest('[data-axs]');if(as){const k=+as.dataset.axs;AXSUB=AXSUB===k?null:k;info();return}
  const ag=e.target.closest('[data-axgo]');if(ag){AX=null;AXSUB=null;go(selOf(ag.dataset.axgo));return}
  if(e.target.closest('[data-axall]')){AXALL=!AXALL;info();return}
@@ -645,7 +678,7 @@ function setDM(m){DM=m;document.querySelectorAll('#dm button').forEach(b=>b.setA
 $('layPop').addEventListener('click',e=>{const b=e.target.closest('#dm button');if(b)setDM(b.dataset.dm)});
 function setDock(c,save){$('app').classList.toggle('dock-c',c);const b=$('dockbtn');b.setAttribute('aria-expanded',!c);b.innerHTML=c?'&lsaquo;':'&rsaquo;';b.title=c?'Show details':'Collapse details';if(save)store.set('dockC',c?'1':'0')}
 $('dockbtn').onclick=()=>setDock(!$('app').classList.contains('dock-c'),true);
-$('leg').addEventListener('click',e=>{const ac=e.target.closest('[data-ax]');if(ac){e.stopPropagation();AX===+ac.dataset.ax?closeAxis():openAxis(+ac.dataset.ax);return}if(e.target.closest('#legT')){store.set('legC',store.get('legC')==='1'?'0':'1');draw()}});
+$('leg').addEventListener('click',e=>{const ac=e.target.closest('[data-ax]');if(ac){e.stopPropagation();const v=ac.dataset.ax==='all'?'all':+ac.dataset.ax;AX===v?closeAxis():openAxis(v);return}if(e.target.closest('#legT')){store.set('legC',store.get('legC')==='1'?'0':'1');draw()}});
 // ---- layers / filters popovers
 function buildLayers(){$('layPop').innerHTML=`<h3>Topic dots</h3><div class="seg" id="dm" role="group" aria-label="Topic dots" style="margin-bottom:10px"><button data-dm="none" aria-pressed="${DM==='none'}">None</button><button data-dm="subjects" aria-pressed="${DM==='subjects'}">Subjects</button><button data-dm="all" aria-pressed="${DM==='all'}">All</button></div><h3>Show or hide</h3>`+LAYERS.map(([k,t,c])=>`<label class="ck"><input type="checkbox" data-l="${k}" ${L[k]?'checked':''}><i style="background:${c};border-radius:${k.startsWith('rimS')||k==='rimI'?'1px;transform:rotate(45deg) scale(.8)':'50%'}"></i>${t}</label>`).join('')+'<p class="small" style="margin-top:8px">Fight dots show only when Topic dots is set to All. Reset puts the camera and these switches back to the start.</p>'}
 $('layPop').addEventListener('change',e=>{const k=e.target.dataset.l;if(k){L[k]=e.target.checked;draw()}});

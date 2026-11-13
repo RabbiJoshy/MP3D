@@ -242,6 +242,10 @@ V_dir = V_dir @ _Rv
 for ax in range(3):
     if U_dir[:, ax].sum() < 0:
         U_dir[:, ax] *= -1; V_dir[:, ax] *= -1
+# Put the two cleanest ideological axes (1 & 3) on the default front X/Y plane
+_perm = [0, 2, 1]
+U_dir = U_dir[:, _perm]
+V_dir = V_dir[:, _perm]
 _scale = float(np.percentile(np.linalg.norm(U_dir[obs_Y.any(1)], axis=1), 98)) or 1.0
 Z = U_dir / _scale
 vv = V_dir * _scale
