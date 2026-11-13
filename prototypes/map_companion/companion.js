@@ -3,12 +3,32 @@ const originalInfo=info, originalTree=renderTree, originalMP=renderMP, originalP
 const panelPositions=new Map();
 const companionKey=()=>sel.t+':'+(sel.i??'');
 let previousPanel='root:';
+const groupOpen={};
 renderTree=function(){
  const q=tq.trim().toLowerCase();
  if(q){originalTree();document.querySelectorAll('#tree .row').forEach(r=>{r.tabIndex=0;r.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();r.click()}}});return}
- let h='<button class="topic-entry" data-k="root">All of Parliament <span>↗</span></button>';
- D.groups.forEach(g=>{h+='<div class="group-label">'+esc(gname(g))+'</div>';g.subjects.forEach(k=>{const s=D.subjects[k];h+=`<button class="topic-entry row" data-k="S${k}"><span>${esc(s.name)}</span><span>→</span></button>`})});
- const grouped=new Set(D.groups.flatMap(g=>g.subjects));D.subjects.forEach((s,k)=>{if(!grouped.has(k)&&s.name!=='No policy')h+=`<button class="topic-entry row" data-k="S${k}">${esc(s.name)} <span>→</span></button>`});
+ let h='<button class="topic-entry root-entry" data-k="root"><span>All of Parliament</span><span class="meta">'+N+' MPs ↗</span></button>';
+ D.groups.forEach((g,gi)=>{
+  const gkey='G'+gi;
+  if(groupOpen[gkey]===undefined)groupOpen[gkey]=(gi===0);
+  const isOpen=groupOpen[gkey];
+  h+=`<div class="topic-group ${isOpen?'open':'collapsed'}">
+   <button type="button" class="topic-group-header" data-grp="${gi}">
+    <span>${esc(gname(g))}</span>
+    <span class="topic-chevron">▾</span>
+   </button>
+   <div class="topic-group-body">
+    ${g.subjects.map(k=>{
+     const s=D.subjects[k];
+     const fl=D.fights.filter(f=>f.subj===s.name&&f.u).length;
+     return`<button type="button" class="topic-sub-entry" data-k="S${k}">
+      <span>${esc(s.name)}</span>
+      <span class="meta">${fl} proposal${fl===1?'':'s'}</span>
+     </button>`;
+    }).join('')}
+   </div>
+  </div>`;
+ });
  $('tree').innerHTML=h;
 };
 const proposal=(key,title,sub)=>`<button class="comp-proposal" data-nav="${key}">${esc(title)}<small>${esc(sub)} →</small></button>`;
@@ -74,10 +94,34 @@ renderMP=function(i){
 renderPO=function(i){originalPO(i);$('pclose').textContent='← Back'};
 function companionRelationships(){setAppMode('rel');if(!$('rel').querySelector('.comp-rel-back')){const b=document.createElement('button');b.className='comp-rel-back';b.textContent='← Back to map';b.onclick=()=>setAppMode('explore');$('rel').prepend(b)}}
 document.addEventListener('click',e=>{if(e.target.closest('[data-comp-rel]'))companionRelationships()});
-$('tree').addEventListener('click',e=>{if(e.target.closest('[data-k="root"]'))go({t:'root'},null)});
-// Navigation clears the profile instead of keeping an unrelated MP drawer over a new topic.
-$('chip').addEventListener('click',e=>{const nav=e.target.closest('[data-nav]');if(nav){e.preventDefault();e.stopImmediatePropagation();go(selOf(nav.dataset.nav),null)}},true);
-$('tree').addEventListener('click',e=>{const nav=e.target.closest('[data-k]');if(nav&&!e.target.closest('[data-tog]')){e.stopImmediatePropagation();go(selOf(nav.dataset.k),null);$('app').classList.remove('mobile-open')}},true);
+let topicSearchOpen=false;
+const sBtn=$('searchToggle'),sDrawer=$('searchDrawer');
+if(sBtn&&sDrawer){
+ sBtn.onclick=()=>{
+  topicSearchOpen=!topicSearchOpen;
+  sDrawer.hidden=!topicSearchOpen;
+  sBtn.classList.toggle('active',topicSearchOpen);
+  if(topicSearchOpen)$('mpq').focus();
+ };
+}
+$('tree').addEventListener('click',e=>{
+ const grpBtn=e.target.closest('[data-grp]');
+ if(grpBtn){
+  e.preventDefault();
+  const gi=+grpBtn.dataset.grp;
+  const gkey='G'+gi;
+  groupOpen[gkey]=!groupOpen[gkey];
+  renderTree();
+  return;
+ }
+ if(e.target.closest('[data-k="root"]')){go({t:'root'},null);return}
+ const nav=e.target.closest('[data-k]');
+ if(nav&&!e.target.closest('[data-tog]')){
+  e.stopImmediatePropagation();
+  go(selOf(nav.dataset.k),null);
+  $('app').classList.remove('mobile-open');
+ }
+},true);
 $('layPop').addEventListener('click',e=>{if(e.target.closest('[data-comp-axes]')){closePops();openAxis('all')}});
 const originalLayers=buildLayers;buildLayers=function(){originalLayers();$('layPop').insertAdjacentHTML('beforeend','<button class="comp-related" data-comp-axes>Understand the axes →</button>')};
 $('stage').insertAdjacentHTML('beforeend','<div class="comp-map-note">Drag to rotate · Select an MP to read their evidence</div>');
@@ -343,3 +387,61 @@ $('compAxes').onclick=()=>{
 if(document.fonts&&document.fonts.ready){
  document.fonts.ready.then(()=>{if(typeof axfActive==='function'&&axfActive())drawAxFull()});
 }
+
+// Live statistics HUD for quiz
+const QHUD_KEYS = [
+  {k: 40, label: 'Renters’ rights'},
+  {k: 24, label: 'Two-child limit'},
+  {k: 35, label: 'Public railway ownership'},
+  {k: 30, label: 'New oil & gas licences'},
+  {k: 38, label: 'Abolish hereditary peers'},
+  {k: 25, label: 'Steel industry support'},
+  {k: 32, label: 'Water renationalisation'},
+  {k: 5, label: 'Voting rights at 16'},
+  {k: 14, label: 'Private school tax'},
+  {k: 53, label: 'End short prison terms'}
+];
+
+function renderQuizHud(){
+ const hud=$('quizHud');
+ if(!hud||MODE!=='quiz'){if(hud)hud.innerHTML='';return}
+ const p=YOU?YOU.p:null;
+ let h='<div class="qhud-box"><div class="qhud-hdr"><b>Estimated stances</b><span>10 key issues</span></div>';
+ QHUD_KEYS.forEach(item=>{
+  const vk=D.model&&D.model.v?D.model.v[item.k]:null;
+  const dev=(p&&vk)?(vk[0]*p[0]+vk[1]*p[1]+vk[2]*p[2])*1.6:0;
+  const isAns=Q.ans[item.k]!==undefined;
+  const val=isAns?(Q.ans[item.k]>0?0.9:(Q.ans[item.k]<0?-0.9:0)):Math.max(-0.9,Math.min(0.9,dev));
+  const isFor=val>0.1,isAgst=val<-0.1;
+  const col=isFor?'#2dd4bf':(isAgst?'#fb7185':'var(--muted)');
+  const tag=isAns?(Q.ans[item.k]>0?'Your vote: For':(Q.ans[item.k]<0?'Your vote: Against':'Mixed')):(isFor?'In favour':(isAgst?'Opposed':'Neutral'));
+  const pct=Math.round(50+val*45);
+  h+=`<div class="qhud-item">
+   <div class="qhud-item-top">
+    <span class="qhud-item-name" title="${esc(D.fights[item.k].label)}">${esc(item.label)}</span>
+    <span class="qhud-item-stance" style="color:${col}">${tag}</span>
+   </div>
+   <div class="qhud-track">
+    <div class="qhud-mark"></div>
+    <div class="qhud-dot" style="left:${pct}%;background:${col};color:${col}"></div>
+   </div>
+  </div>`;
+ });
+ h+='<button type="button" class="qhud-btn" data-results>View full profile &rarr;</button></div>';
+ hud.innerHTML=h;
+ hud.querySelectorAll('[data-results]').forEach(b=>b.onclick=()=>{
+  Q.step='results';
+  renderQuiz();
+  $('qz').scrollTop=0;
+ });
+}
+const _origRenderQuiz=renderQuiz;
+renderQuiz=function(){
+ _origRenderQuiz();
+ renderQuizHud();
+};
+const _origUpdateYou=updateYou;
+updateYou=function(u){
+ _origUpdateYou(u);
+ renderQuizHud();
+};
