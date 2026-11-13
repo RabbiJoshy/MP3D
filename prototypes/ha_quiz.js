@@ -102,6 +102,29 @@ const HAQuiz=(()=>{
   const g={};matches.forEach(m=>{const p=partyOf(m.i),a=g[p]||(g[p]={p,mps:0,hit:0,tot:0});a.mps++;a.hit+=m.hit;a.tot+=m.nShared});
   return Object.values(g).filter(a=>a.mps>=(minMPs||3)).map(a=>({...a,pct:Math.round(100*a.hit/a.tot)})).sort((a,b)=>b.pct-a.pct||b.mps-a.mps)
  }
- return{question,create,place,match,parties}
+ /* Projected stances across propositions given 3D coordinate p.
+    Uses linear factor model y_hat = v_k . p + b_k or directional projection. */
+ function predictStances(p,fights,model,answeredMap){
+  if(!p||!fights)return[];
+  const answered=answeredMap||{};
+  const out=[];
+  for(let k=0;k<fights.length;k++){
+   const f=fights[k];if(!f)continue;
+   let score=0;
+   if(model&&model.v&&model.b&&model.v[k]){
+    const vk=model.v[k],bk=model.b[k];
+    score=vk[0]*p[0]+vk[1]*p[1]+vk[2]*p[2]+bk;
+   }else if(f.u){
+    score=(p[0]*f.u[0]+p[1]*f.u[1]+p[2]*f.u[2])*(f.r||1);
+   }
+   const isAns=answered[k]!==undefined;
+   const ans=answered[k];
+   const conf=Math.min(1,Math.abs(score));
+   const dir=score>=0.2?'for':(score<=-0.2?'against':'split');
+   out.push({k,f,label:f.label,subj:f.subj,score,conf,dir,answered:isAns,ans});
+  }
+  return out;
+ }
+ return{question,create,place,match,parties,predictStances}
 })();
 if(typeof module!=='undefined')module.exports=HAQuiz;

@@ -1,5 +1,6 @@
+// Legacy unified-app tests use its own artifact; docs/ now contains the hierarchy release.
 const assert=require('node:assert/strict'),fs=require('node:fs'),P=require('./visitor_placement.js');
-const s=fs.readFileSync(__dirname+'/../docs/index.html','utf8').split('const D=')[1],D=JSON.parse(s.slice(0,s.indexOf(';\nconst M=')));
+const s=fs.readFileSync(__dirname+'/app.html','utf8').split('const D=')[1],D=JSON.parse(s.slice(0,s.indexOf(';\nconst M=')));
 const compute=a=>P.compute(a,new Set(),D.mps,D.parties,D.topics,'bal');
 assert.equal(compute({}),null);
 assert.equal(compute({0:1}).topMPs.length,0);

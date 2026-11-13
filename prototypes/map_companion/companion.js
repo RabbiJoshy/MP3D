@@ -182,7 +182,19 @@ if(gameHeading){const p=gameHeading.nextElementSibling;useGuide.prepend(gameHead
 const baseSetAppMode=setAppMode,baseOpenAxis=openAxis;
 let AXFULL=false,axfKeep=null,axfOne=false;
 const axfActive=()=>AXFULL&&MODE==='explore';
-function syncAxesTab(){const on=AXFULL&&MODE==='explore';document.querySelectorAll('.tab-btn').forEach(b=>{if(b.dataset.mode==='axes')b.setAttribute('aria-pressed',on);else if(b.dataset.mode==='explore')b.setAttribute('aria-pressed',MODE==='explore'&&!on)})}
+function syncAxesTab(){
+ const on=AXFULL&&MODE==='explore';
+ document.querySelectorAll('.tab-btn').forEach(b=>{if(b.dataset.mode==='axes')b.setAttribute('aria-pressed',on);else if(b.dataset.mode==='explore')b.setAttribute('aria-pressed',MODE==='explore'&&!on)});
+ const ab=$('compAxes');
+ if(ab){
+  ab.setAttribute('aria-pressed',on);
+  ab.classList.toggle('active',on);
+  ab.title=on?'Show the map':'Explore axes';
+  const w=ab.querySelector('.wide'),s=ab.querySelector('.short');
+  if(w)w.textContent=on?'Show map':'Explore axes';
+  if(s)s.textContent=on?'Map':'Axes';
+ }
+}
 setAppMode=function(m,fromMap){
  if(m==='axes'){if(!fromMap&&!mode3)setModeRaw(true);AXFULL=true;axfKeep=null;if(MODE!=='explore')baseSetAppMode('explore');if(AX===null)baseOpenAxis('all');else{info();draw()}syncAxesTab();return}
  AXFULL=false;axfKeep=null;
@@ -320,7 +332,14 @@ if(matchMedia('(max-width:620px)').matches)$('mpq').placeholder='Find an MP';
 // Keep the axes view in step with the map's 2D / 3D state, and add the map's own entry point.
 const _sm=setModeRaw;setModeRaw=function(m){_sm(m);if(typeof axfActive==='function'&&axfActive())renderAxFull()};
 $('tools').insertAdjacentHTML('afterbegin','<button type="button" class="fbtn" id="compAxes" title="Explore axes"><span class="wide">Explore axes</span><span class="short">Axes</span></button>');
-$('compAxes').onclick=()=>setAppMode('axes',true);
+$('compAxes').onclick=()=>{
+ if(typeof axfActive==='function'&&axfActive()){
+  AXFULL=false;if(AX===null&&axfKeep!==null)AX=axfKeep;axfKeep=null;showCompanionPanel();info();draw();
+ }else{
+  setAppMode('axes',true);
+ }
+ syncAxesTab();
+};
 if(document.fonts&&document.fonts.ready){
  document.fonts.ready.then(()=>{if(typeof axfActive==='function'&&axfActive())drawAxFull()});
 }

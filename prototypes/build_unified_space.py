@@ -596,9 +596,10 @@ print(f"Wrote prototypes/unified.html ({len(page_unified.encode()) // 1024} KB)"
 # Also build the production visitor app (prototypes/app.html, docs/index.html, docs/stance.html) with default_mode="quiz"
 bundle_app = {**bundle, "default_mode": "quiz"}
 page_app = tpl.replace("__DATA__", json.dumps(bundle_app, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/"))
-for out_path in [HERE / "app.html", ROOT / "docs/index.html", ROOT / "docs/stance.html"]:
+# Legacy research output only. build_hierarchy_app.py owns the release pages.
+for out_path in [HERE / "app.html"]:
     out_path.write_text(page_app)
-print(f"Wrote prototypes/app.html, docs/index.html, docs/stance.html ({len(page_app.encode()) // 1024} KB)")
+print(f"Wrote legacy prototypes/app.html ({len(page_app.encode()) // 1024} KB)")
 
 # Build the streamlined 3-tab prototypes/lab.html with a lightweight validation summary bundle
 lab_topics = []

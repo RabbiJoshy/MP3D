@@ -150,7 +150,7 @@ if pr.exists():
 lab_page = (HERE / "lab_template.html").read_text().replace("__DATA__", dump(lab))
 (HERE / "poc_lab.html").write_text(lab_page.replace('src="app.html"', 'src="poc.html"'))
 if "--publish" in sys.argv:
-    for name in ("index.html", "stance.html"): (ROOT / "docs" / name).write_text(page)
+    raise SystemExit("Legacy --publish retired. Use prototypes/build_hierarchy_app.py for release pages.")
 print("axes explain", space["share"], "| noise", space["s2"], "| x+", space["x"]["pos"], "| y+", space["y"]["pos"], "| z+", space["z"]["pos"], "| z-", space["z"]["neg"])
 print("regions", [(r["n"], r["says"]) for r in regions])
 print("page KB", len(page.encode()) // 1024, "| MPs", len(out), "| subjects", [s["k"] for s in subjects])

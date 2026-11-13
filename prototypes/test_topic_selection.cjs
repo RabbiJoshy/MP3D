@@ -1,5 +1,6 @@
+// Legacy unified-app tests use its own artifact; docs/ now contains the hierarchy release.
 const assert=require('node:assert/strict'),fs=require('node:fs'),S=require('./topic_selection.js');
-const s=fs.readFileSync(__dirname+'/../docs/index.html','utf8').split('const D=')[1],D=JSON.parse(s.slice(0,s.indexOf(';\nconst M=')));
+const s=fs.readFileSync(__dirname+'/app.html','utf8').split('const D=')[1],D=JSON.parse(s.slice(0,s.indexOf(';\nconst M=')));
 const before=JSON.stringify(D.mps),model=S.create(D.mps,D.topics),keys=D.topics.filter(t=>t.quiz_review).map(t=>t.k);
 assert.equal(model.rank().length,keys.length);
 assert(model.rank({1:-1,2:0},[3]).every(r=>![1,2,3].includes(r.k)));
