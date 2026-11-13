@@ -1,0 +1,41 @@
+{
+ "positions_total_older": 9659,
+ "by_source": {
+  "fp2": 7542,
+  "pilot": 638,
+  "bridge": 1479
+ },
+ "by_side": {
+  "FOR": 8580,
+  "AGAINST": 1079
+ },
+ "two_sided_positions": 4272,
+ "two_sided_arguments": 89,
+ "confidence_unknown": 0,
+ "groups": {
+  "A": 1189,
+  "B": 664,
+  "D": 54,
+  "later": 7752
+ },
+ "sent_for_reading": 1907,
+ "sent_by_source": {
+  "pilot": 152,
+  "fp2": 1613,
+  "bridge": 142
+ },
+ "sent_by_side": {
+  "FOR": 1317,
+  "AGAINST": 590
+ },
+ "chunks": 7,
+ "chunk_sizes": [
+  286,
+  284,
+  295,
+  295,
+  297,
+  300,
+  150
+ ]
+}

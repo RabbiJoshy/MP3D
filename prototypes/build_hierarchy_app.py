@@ -354,6 +354,17 @@ for ax in range(3):
 _perm = [0, 2, 1]
 U_dir = U_dir[:, _perm]
 V_dir = V_dir[:, _perm]
+# Anchor the orientation: turn this build to face the saved reference (orthogonal Procrustes on MPs in common).
+# Without this the rotation above is recomputed from scratch on every build and the axes reshuffle whenever data is added.
+_reff = RES / "axis_reference.json"
+if _reff.exists() and "--no-anchor" not in sys.argv:
+    _ref = {int(k): v for k, v in json.loads(_reff.read_text())["xyz"].items()}
+    _cm = [m for m in ids if m in _ref and obs_Y[mi[m]].any()]
+    if len(_cm) >= 50:
+        _A = U_dir[[mi[m] for m in _cm]]; _B = np.array([_ref[m] for m in _cm], float)
+        _ua, _sa, _vta = np.linalg.svd(_A.T @ _B); _Ra = _ua @ _vta
+        U_dir = U_dir @ _Ra; V_dir = V_dir @ _Ra
+        print("axes anchored to reference on", len(_cm), "MPs; per-axis r:", [round(float(np.corrcoef(U_dir[[mi[m] for m in _cm], k], _B[:, k])[0, 1]), 2) for k in range(3)])
 _scale = float(np.percentile(np.linalg.norm(U_dir[obs_Y.any(1)], axis=1), 98)) or 1.0
 Z = U_dir / _scale
 vv = V_dir * _scale
@@ -722,7 +733,16 @@ for ax in range(3):
         return t if len(t) <= 46 else t[:46].rsplit(" ", 1)[0] + "…"
     if ax == 0: _axused = set()
     _order = [int(j) for j in np.argsort(-_w) if int(j) not in _axused]      # an argument names at most one axis end
-    if len(_order) >= 2:
+    # Prefer the cached plain names (sk24_axis_names.py), but only while at least 4 of the 7 arguments at each end are still the same;
+    # otherwise fall back to naming the axis by its strongest argument at each end.
+    _o7 = np.argsort(_w); _plus = {FIGHTS[int(j)]["label"] for j in _o7[::-1][:7]}; _minus = {FIGHTS[int(j)]["label"] for j in _o7[:7]}
+    _named = None
+    _anf = RES / "axis_names.json"
+    for _c in (json.loads(_anf.read_text())["axes"] if _anf.exists() else []):
+        if len(_plus & set(_c["plus_args"])) >= 4 and len(_minus & set(_c["minus_args"])) >= 4: _named = f"{_c['plus_name']} ↔ {_c['minus_name']}"
+        elif len(_plus & set(_c["minus_args"])) >= 4 and len(_minus & set(_c["plus_args"])) >= 4: _named = f"{_c['minus_name']} ↔ {_c['plus_name']}"
+    if _named: axes.append(_named)
+    elif len(_order) >= 2:
         _axused.update((_order[0], _order[-1]))
         axes.append(f"{_short(FIGHTS[_order[0]]['label'])} ↔ {_short(FIGHTS[_order[-1]]['label'])}")
     else: axes.append(f"Axis {ax + 1}")

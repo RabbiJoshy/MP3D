@@ -1,0 +1,74 @@
+{
+ "axes": [
+  {
+   "plus_name": "Government programme",
+   "minus_name": "Critics from left and right",
+   "why": "The plus end backs a range of government bills on employment, welfare, and devolution, while the minus end combines left-wing economic proposals with right-wing measures on human rights and immigration.",
+   "plus_args": [
+    "Pass the Employment Rights Bill",
+    "Remove the two-child limit on Universal Credit",
+    "Support the Children's Wellbeing and Schools Bill",
+    "Remove VAT and business rates exemptions for private schools",
+    "Support the English Devolution and Community Empowerment Bill",
+    "Pass the Northern Ireland Troubles Bill",
+    "Pass the Universal Credit and Personal Independence Payment Bill"
+   ],
+   "minus_args": [
+    "Pass the Terminally Ill Adults (End of Life) Bill",
+    "Withdraw from the European Convention on Human Rights",
+    "Refer the Prime Minister to the Committee of Privileges over misleading statements about the Mandelson appointment",
+    "Return water companies to public ownership",
+    "Disapply the Human Rights Act 1998 to immigration and deportation",
+    "Introduce rent controls in the Renters’ Rights Bill",
+    "End the ban on new oil and gas licences"
+   ]
+  },
+  {
+   "plus_name": "Social and economic reform",
+   "minus_name": "Border control and fiscal restraint",
+   "why": "The plus end supports bills on assisted dying, workers' rights, welfare reform, and tax increases, while the minus end focuses on immigration control, benefit restrictions, and energy policy.",
+   "plus_args": [
+    "Pass the Terminally Ill Adults (End of Life) Bill",
+    "Pass the Employment Rights Bill",
+    "Remove the two-child limit on Universal Credit",
+    "Pass the House of Lords (Hereditary Peers) Bill",
+    "Pass the Sentencing Bill",
+    "Pass the Finance Bill",
+    "Raise the energy profits levy"
+   ],
+   "minus_args": [
+    "Pass the Universal Credit and Personal Independence Payment Bill",
+    "End the ban on new oil and gas licences",
+    "Pass the Border Security, Asylum and Immigration Bill",
+    "Pass the Public Authorities (Fraud, Error and Recovery) Bill",
+    "Withdraw from the European Convention on Human Rights",
+    "Require refugees to repay asylum support costs",
+    "Proscribe Palestine Action as a terrorist organisation under the Terrorism Act 2000"
+   ]
+  },
+  {
+   "plus_name": "Tax and constitutional measures",
+   "minus_name": "Social welfare and accountability",
+   "why": "The plus end backs tax rises on private schools, constitutional bills, and assisted dying, while the minus end prioritises welfare expansion, public ownership, and holding the government to account.",
+   "plus_args": [
+    "Pass the Terminally Ill Adults (End of Life) Bill",
+    "Remove VAT and business rates exemptions for private schools",
+    "Restrict jury trials in some cases",
+    "Pass the Diego Garcia Military Base and British Indian Ocean Territory Bill",
+    "Increase secondary Class 1 national insurance contributions",
+    "Impose VAT on independent school fees",
+    "Pass the Northern Ireland Troubles Bill"
+   ],
+   "minus_args": [
+    "Refer the Prime Minister to the Committee of Privileges over misleading statements about the Mandelson appointment",
+    "Remove the two-child limit on Universal Credit",
+    "Pass the Devolution (Immigration) (Scotland) Bill",
+    "Support the Children's Wellbeing and Schools Bill",
+    "Pass the Employment Rights Bill",
+    "Return water companies to public ownership",
+    "End the ban on new oil and gas licences"
+   ]
+  }
+ ],
+ "cost_cents": 0.031
+}
