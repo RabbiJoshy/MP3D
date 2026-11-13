@@ -10,7 +10,10 @@ from concurrent.futures import ThreadPoolExecutor
 import numpy as np, pandas as pd
 ROOT = pathlib.Path("/Users/joshuathomasamar/PycharmProjects/MP3D"); HERE = ROOT / "prototypes/research_2026_11_10"
 O = ROOT / "data/quick/research_2026_11_10/sk22"; O.mkdir(exist_ok=True); RES = HERE / "results"
-N_DEB = int(__import__("os").environ.get("N_DEB", 260)); MIN_SIDE = int(__import__("os").environ.get("MIN_SIDE", 5)); CAP_USD = 1.50; PRICE = 0.042 / 1e6; SIM_MIN = 0.40; TOPK = 2; P_HI, P_LO = 0.7, 0.3
+N_DEB = int(__import__("os").environ.get("N_DEB", 260)); MIN_SIDE = int(__import__("os").environ.get("MIN_SIDE", 5)); CAP_USD = 1.50; PRICE = 0.042 / 1e6; SIM_MIN = 0.40; TOPK = 2; P_HI, P_LO = 0.7, 0.3      # pooling of duplicate labels uses this set, so labels stay stable for the overrides layer
+KEEP_HI, KEEP_LO = 0.7, 0.3   # positions kept. Tested 0.8/0.2 on 2026-11-13: it removed 15 of 32 proposals and 146 of 262 AGAINST positions,
+#                               although every position here had already been reviewed one by one (results/overrides/) and reviewed AGAINSTs were 99% right.
+#                               So this reviewed set stays at 0.7. For a NEW, unreviewed run use 0.8/0.2 on FOR verdicts (audit: 89% right at 0.7-0.8, 99% above 0.9).
 SKIP = {"", "Oral Answers to Questions", "Business of the House", "Points of Order", "Prime Minister", "Speaker's Statement", "Speaker’s Statement"}
 
 def load():
@@ -127,6 +130,7 @@ def assemble():
     remap = {l: max(g, key=lambda x: cnt[x]) for g in grp.values() for l in g}
     print("pooled", sum(len(g) > 1 for g in grp.values()), "duplicate groups:", [g for g in grp.values() if len(g) > 1][:40])
     strict = strict.assign(label=strict.label.map(remap)).drop_duplicates(["label", "passage_id"])
+    strict = strict[((strict.verdict == "FOR") & (strict.p_for >= KEEP_HI) & (strict.p_against <= KEEP_LO)) | ((strict.verdict == "AGAINST") & (strict.p_against >= KEEP_HI) & (strict.p_for <= KEEP_LO))]
     for lbl, d in strict.groupby("label"):
         mps = {"mps_for": [], "mps_against": [], "mps_both_sides": []}
         for mid, dd in d.groupby("member_id"):

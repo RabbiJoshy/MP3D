@@ -716,8 +716,16 @@ for ax in range(3):
     axl.append(loads)
     # name each axis by the argument that pulls hardest at each end (loading x sqrt(speakers)); same rule for every axis
     _w = vv[:, ax] * np.sqrt(obs_Y.sum(0))
-    _short = lambda t: re.sub(r"^(Pass|Support|Adopt) the ", "", t)[:60]
-    axes.append(f"{_short(FIGHTS[int(np.argmax(_w))]['label'])} ↔ {_short(FIGHTS[int(np.argmin(_w))]['label'])}" if len(FIGHTS) else f"Axis {ax + 1}")
+    def _short(t):      # drop the leading verb, brackets and trailing qualifiers, then cut at a word boundary
+        t = re.sub(r"^(Pass|Support|Adopt) the ", "", t); t = re.sub(r"\s*\([^)]*\)|\s*\[[^\]]*\]", "", t)
+        t = re.split(r" (?:to|with|via|by|for all|under) ", t)[0] if len(t) > 46 else t
+        return t if len(t) <= 46 else t[:46].rsplit(" ", 1)[0] + "…"
+    if ax == 0: _axused = set()
+    _order = [int(j) for j in np.argsort(-_w) if int(j) not in _axused]      # an argument names at most one axis end
+    if len(_order) >= 2:
+        _axused.update((_order[0], _order[-1]))
+        axes.append(f"{_short(FIGHTS[_order[0]]['label'])} ↔ {_short(FIGHTS[_order[-1]]['label'])}")
+    else: axes.append(f"Axis {ax + 1}")
 
 model_out = {"v": [[round(float(x), 6) for x in row] for row in vv],
              "b": [round(float(x), 6) for x in b_dir],

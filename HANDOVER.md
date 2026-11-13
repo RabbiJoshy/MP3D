@@ -1,4 +1,38 @@
-# Current release handover — 12 November 2026
+# Current release handover — 13 November 2026
+
+**What the app is.** A descriptive tool: what MPs said in the Commons, with a link to the speech, on a 3D map that separates parties where they actually disagree. It is **not** a predictive model. Two pre-registered tests (`results/sk20_summary.json`, `results/sk21_summary.json`) showed speeches add little to predicting which motions an MP signs, and the map adds nothing beyond party. Say so if asked.
+
+**Live:** https://rabbijoshy.github.io/MP3D/ (GitHub Pages publishes `main` → `/docs`; pushing `docs/` publishes). Local preview: `http://127.0.0.1:8765/prototypes/map_companion/index.html`, refreshed automatically at the end of every build.
+
+## What changed on 13 November
+- **Contested proposals from debates (`research_2026_11_10/sk22_wedge.py`).** One generic rule: every debate with ≥5 Labour and ≥5 non-Labour speakers (260 debates; a second round at ≥3 added 157 more and yielded one extra proposal, so the method is exhausted). DeepSeek writes ≤2 proposals the debate is split on; the strict judge (jev) reads each speaker's 2 best-matching passages; proposals with ≥3 MPs on each side are kept → 32 proposals in `results/sk22_fights.json`. Cost ≈ 63¢.
+- **Overrides layer (`results/overrides/`).** All 1,049 sk22 positions were re-read by Gemini Flash (a second machine opinion, not a human): 990 confirmed, 56 dropped, 3 flipped; 13 labels merged, 2 retired. `positions.jsonl` / `labels.jsonl` are append-only and applied in memory by the builder; `--no-overrides` builds without them, `--no-sk22` without the proposals. `audit.json` has agreement by confidence band: 89% at 0.7–0.8, 94% at 0.8–0.9, 99% above 0.9; AGAINST 99%, FOR 92%.
+- **Threshold lesson.** For a new, unreviewed run use 0.8/0.2 on FOR verdicts. Do **not** apply it to the reviewed set: tested, it removed 15 of 32 proposals and 146 of 262 AGAINST positions that had already been checked.
+- **Axes** are named by the argument pulling hardest at each end (loading × √speakers; one argument names at most one end). "Explore axes" is its own tab.
+- **Earlier the same day (Codex/Antigravity):** 1,487 "bridge" positions (`data/quick/research_2026_11_12/bridge/accepted.json`, 95% FOR, only 20 read-checked), confidence-weighted 3D fit, Varimax rotation (changes axis naming, not distances between MPs), Map companion interface.
+
+## Map numbers (rotation-independent; pass marks fixed beforehand in `results/sk22_passmarks.json`)
+| | 12 Nov | 13 Nov |
+|---|---|---|
+| Two-sided arguments / MPs on map | 77 / 552 | 89 / 561 |
+| Party share of map variance | 25% | 31% |
+| Green–Reform / Labour–Green distance | 3.1 / 1.4 | 3.3 / 1.7 |
+| Held-out argument accuracy (mean r) | 0.88 | 0.89 |
+| Within-party split votes, AUC | 0.66 | 0.70 |
+
+## Still open
+- The 1,487 bridge positions and the older fp2 positions have not had the full second read; the override prompt used for sk22 works on them unchanged.
+- Labour is still one cluster and Reform sits with the Conservatives; more of the same data will not change that.
+- Phone-width pass on a real device. Hover preview exists only on the topic list (not axis or MP mode).
+- Uncommitted edits that predate this work: `README.md`, `build_poc_page.py`, `build_unified_space.py`, two `test_*.cjs` files.
+
+## Build and verify (current)
+    .venv/bin/python prototypes/build_hierarchy_app.py     # writes app_hierarchy.html, docs/, map_companion preview
+    node prototypes/test_release.cjs
+
+---
+
+# Previous release handover — 12 November 2026
 
 This section supersedes the older app paths below. Consolidation is complete locally; no public deployment has been performed.
 
