@@ -404,32 +404,74 @@ const QHUD_KEYS = [
 
 function renderQuizHud(){
  const hud=$('quizHud');
- if(!hud||MODE!=='quiz'){if(hud)hud.innerHTML='';return}
- const p=YOU?YOU.p:null;
- let h='<div class="qhud-box"><div class="qhud-hdr"><b>Estimated stances</b><span>10 key issues</span></div>';
+ if(!hud||MODE!=='quiz'||Q.step==='intro'){if(hud)hud.innerHTML='';return}
+ const nAns=Object.keys(Q.ans).length;
+ let nRevealed=0;
+ let itemsHtml='';
+
  QHUD_KEYS.forEach(item=>{
-  const vk=D.model&&D.model.v?D.model.v[item.k]:null;
-  const dev=(p&&vk)?(vk[0]*p[0]+vk[1]*p[1]+vk[2]*p[2])*1.6:0;
   const isAns=Q.ans[item.k]!==undefined;
-  const val=isAns?(Q.ans[item.k]>0?0.9:(Q.ans[item.k]<0?-0.9:0)):Math.max(-0.9,Math.min(0.9,dev));
-  const isFor=val>0.1,isAgst=val<-0.1;
-  const col=isFor?'#2dd4bf':(isAgst?'#fb7185':'var(--muted)');
-  const tag=isAns?(Q.ans[item.k]>0?'Your vote: For':(Q.ans[item.k]<0?'Your vote: Against':'Mixed')):(isFor?'In favour':(isAgst?'Opposed':'Neutral'));
-  const pct=Math.round(50+val*45);
-  h+=`<div class="qhud-item">
+  const vk=D.model&&D.model.v?D.model.v[item.k]:null;
+  const magk=vk?Math.hypot(...vk):0;
+
+  let isKnown=false;
+  let val=0;
+  let tag='?';
+  let col='var(--muted)';
+
+  if(isAns){
+   isKnown=true;
+   nRevealed++;
+   const a=Q.ans[item.k];
+   val=a>0?0.9:(a<0?-0.9:0);
+   tag=a>0?'Your vote: For':(a<0?'Your vote: Against':'Your vote: Mixed');
+   col=a>0?'#2dd4bf':(a<0?'#fb7185':'var(--brass)');
+  }else if(vk&&magk>0&&nAns>0){
+   // Accumulate evidence from user's actual answers based on Commons correlation
+   let Wk=0,Ek=0;
+   for(const[js,y]of Object.entries(Q.ans)){
+    const j=+js,vj=D.model&&D.model.v?D.model.v[j]:null;
+    if(!vj)continue;
+    const magj=Math.hypot(...vj);
+    if(magj<=0)continue;
+    const cos=(vj[0]*vk[0]+vj[1]*vk[1]+vj[2]*vk[2])/(magj*magk);
+    if(Math.abs(cos)>0.25){
+     const wt=Q.star&&Q.star.has(j)?1.5:1;
+     Wk+=Math.abs(cos)*wt;
+     Ek+=y*cos*wt;
+    }
+   }
+   // Require genuine accumulated evidence (Wk >= 0.95) before making a projection
+   if(Wk>=0.95){
+    isKnown=true;
+    nRevealed++;
+    const dk=Ek/(Wk+0.35);
+    val=Math.max(-0.9,Math.min(0.9,dk*1.25));
+    const isFor=val>0.2,isAgst=val<-0.2;
+    col=isFor?'#2dd4bf':(isAgst?'#fb7185':'var(--dim)');
+    tag=val>=0.5?'Likely in favour':(val>=0.2?'Leaning for':(val<=-0.5?'Likely opposed':(val<=-0.2?'Leaning against':'Neutral')));
+   }
+  }
+
+  const pct=isKnown?Math.round(50+val*45):50;
+  itemsHtml+=`<div class="qhud-item">
    <div class="qhud-item-top">
     <span class="qhud-item-name" title="${esc(D.fights[item.k].label)}">${esc(item.label)}</span>
-    <span class="qhud-item-stance" style="color:${col}">${tag}</span>
+    <span class="qhud-item-stance ${isKnown?'':'is-unknown'}" style="color:${isKnown?col:'var(--muted)'}">${tag}</span>
    </div>
    <div class="qhud-track">
     <div class="qhud-mark"></div>
-    <div class="qhud-dot" style="left:${pct}%;background:${col};color:${col}"></div>
+    <div class="qhud-dot ${isKnown?'':'is-unknown'}" style="left:${pct}%;background:${col};color:${col}"></div>
    </div>
   </div>`;
  });
- h+='<button type="button" class="qhud-btn" data-results>View full profile &rarr;</button></div>';
+
+ const subHdr=nAns===0?'Revealed as you answer':(nRevealed?`${nRevealed}/10 active`:'10 key issues');
+ let h=`<div class="qhud-box"><div class="qhud-hdr"><b>Estimated stances</b><span>${subHdr}</span></div>${itemsHtml}`;
+ h+=`<button type="button" class="qhud-btn" data-results ${nAns?'':'disabled'}>View full profile &rarr;</button></div>`;
  hud.innerHTML=h;
  hud.querySelectorAll('[data-results]').forEach(b=>b.onclick=()=>{
+  if(!nAns)return;
   Q.step='results';
   renderQuiz();
   $('qz').scrollTop=0;
