@@ -77,14 +77,13 @@ addEventListener('hashchange',()=>$('app').classList.remove('companion-map'));
 // Persistent map controls, independent of the detail currently being read.
 let companionZoom=1;
 const baseProjection=P;P=function(v){const p=baseProjection(v);return[cx()+(p[0]-cx())*companionZoom,H/2+(p[1]-H/2)*companionZoom,p[2]]};
-$('tools').insertAdjacentHTML('afterbegin','<div class="comp-dimension" role="group" aria-label="Map dimension"><button id="comp2d" aria-pressed="false">2D</button><button id="comp3d" aria-pressed="true">3D</button></div><button class="fbtn" id="compAxes">Explore axes</button>');
+$('tools').insertAdjacentHTML('afterbegin','<div class="comp-dimension" role="group" aria-label="Map dimension"><button id="comp2d" aria-pressed="false">2D</button><button id="comp3d" aria-pressed="true">3D</button></div>');
 $('stage').insertAdjacentHTML('beforeend','<div class="comp-zoom" role="group" aria-label="Map zoom"><button id="zoomOut" aria-label="Zoom out">−</button><button id="zoomReset" aria-label="Reset zoom">100%</button><button id="zoomIn" aria-label="Zoom in">+</button></div>');
 function zoomMap(z){companionZoom=Math.max(.5,Math.min(3,z));$('zoomReset').textContent=Math.round(companionZoom*100)+'%';$('zoomOut').disabled=companionZoom<=.5;$('zoomIn').disabled=companionZoom>=3;draw()}
 $('zoomIn').onclick=()=>zoomMap(companionZoom*1.2);$('zoomOut').onclick=()=>zoomMap(companionZoom/1.2);$('zoomReset').onclick=()=>zoomMap(1);
 cv.addEventListener('wheel',e=>{e.preventDefault();zoomMap(companionZoom*Math.exp(-Math.max(-100,Math.min(100,e.deltaY))*.002))},{passive:false});
 const previousModeRaw=setModeRaw;setModeRaw=function(m){previousModeRaw(m);$('comp2d').setAttribute('aria-pressed',!m);$('comp3d').setAttribute('aria-pressed',m)};
 $('comp2d').onclick=()=>setMode(false);$('comp3d').onclick=()=>setMode(true);
-$('compAxes').onclick=()=>{showCompanionPanel();openAxis('all')};
 function panelVisible(){return matchMedia('(max-width:820px)').matches?(!$('app').classList.contains('companion-map')&&($('app').classList.contains('mobile-open')||$('app').classList.contains('detail-open'))):!$('app').classList.contains('hide-left')}
 function syncPanelButton(){const on=panelVisible();$('browse').textContent=on?'Hide panel':'Topics';$('browse').setAttribute('aria-expanded',on)}
 function showCompanionPanel(){$('app').classList.remove('hide-left','companion-map');$('app').classList.add('mobile-open');syncPanelButton();draw()}
@@ -129,6 +128,17 @@ const compactProf=finishProf;finishProf=function(h){compactProf(h);$('pclose').t
 const compactMP=renderMP;renderMP=function(i){compactMP(i);$('pclose').textContent='×';$('pclose').title='Close profile';$('pclose').setAttribute('aria-label','Close profile')};
 const compactPO=renderPO;renderPO=function(i){compactPO(i);$('pclose').textContent='×';$('pclose').title='Close profile';$('pclose').setAttribute('aria-label','Close profile')};
 for(const b of document.querySelectorAll('dialog .xbtn')){b.textContent='×';b.title='Close';if(!b.hasAttribute('aria-label'))b.setAttribute('aria-label','Close dialog')}
-// Put the game first in the guide, with a direct entry point.
+// Put the quiz first in the guide, with a direct entry point.
 const useGuide=$('guide-use-panel'),gameHeading=[...useGuide.querySelectorAll('h3')].find(h=>h.textContent==='Find your place');
-if(gameHeading){const p=gameHeading.nextElementSibling;useGuide.prepend(gameHeading,p);p.insertAdjacentHTML('afterend','<button class="primary guide-play">Play Find my place →</button>');useGuide.querySelector('.guide-play').onclick=()=>{$('howDlg').close();setAppMode('quiz')}}
+if(gameHeading){const p=gameHeading.nextElementSibling;useGuide.prepend(gameHeading,p);p.insertAdjacentHTML('afterend','<button class="primary guide-play">Find my place →</button>');useGuide.querySelector('.guide-play').onclick=()=>{$('howDlg').close();setAppMode('quiz')}}
+
+// Explore axes as its own top-level tab: the existing axis explorer is re-hosted in the full side panel.
+const baseSetAppMode=setAppMode,baseOpenAxis=openAxis;
+function syncAxesTab(){const on=AX!==null&&MODE==='explore';document.querySelectorAll('.tab-btn').forEach(b=>{if(b.dataset.mode==='axes')b.setAttribute('aria-pressed',on);else if(b.dataset.mode==='explore')b.setAttribute('aria-pressed',MODE==='explore'&&!on)})}
+setAppMode=function(m){
+ if(m==='axes'){if(MODE!=='explore')baseSetAppMode('explore');if(AX===null)baseOpenAxis('all');else{info();draw()}syncAxesTab();return}
+ if(AX!==null){AX=null;AXSUB=null}
+ baseSetAppMode(m);syncAxesTab()};
+openAxis=function(n){if(MODE!=='explore')baseSetAppMode('explore');showCompanionPanel();baseOpenAxis(n);syncAxesTab()};
+const axesInfo=info;info=function(){axesInfo();syncAxesTab()};
+syncAxesTab();

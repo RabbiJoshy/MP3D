@@ -211,6 +211,7 @@ body[data-mode=quiz] #browse{display:none}
 .mq{border-top:1px solid var(--line);margin-top:9px;padding-top:7px;font-size:12.5px}.mq p{margin:0 0 3px}.mq .ok{color:var(--yes);font-weight:700}.mq .no{color:var(--no);font-weight:700}
 .mq button{margin-top:4px}
 .pm{display:grid;grid-template-columns:62px 1fr 44px;gap:8px;align-items:center;font-size:12.5px;margin:4px 0}.pm .b{height:9px;border-radius:5px;background:var(--bench);border:1px solid var(--line);overflow:hidden}.pm .b i{display:block;height:100%}
+.quiz-routes{display:flex;flex-direction:column;align-items:stretch;gap:8px;margin:14px 0}.quiz-routes button{justify-content:center;height:auto;min-height:var(--h);padding:8px 14px;text-align:center;cursor:pointer}.quiz-or{text-align:center;color:var(--dim);font-size:12px;text-transform:uppercase;letter-spacing:1.5px}
 #qz .linkb{background:none;border:0;color:var(--brass);text-decoration:underline;padding:0;font:inherit;cursor:pointer}
 #rel{position:fixed;z-index:48;top:var(--top);left:0;right:0;bottom:0;background:var(--bench);overflow:auto;display:none;padding:14px var(--gap) 30px}
 #rel.on{display:block}
@@ -233,7 +234,7 @@ body[data-mode=quiz] #browse{display:none}
 <body>
 <header class="masthead">
  <a class="brand" href="#root">MP3D <small>PARLIAMENT'S SPACE</small></a>
- <div class="mode-tabs" role="tablist"><button class="tab-btn" id="tabExplore" data-mode="explore" aria-pressed="true">Explore</button><button class="tab-btn" id="tabQuiz" data-mode="quiz" aria-pressed="false">Find my place</button><button class="tab-btn" id="tabRel" data-mode="rel" aria-pressed="false">Relationships</button></div>
+ <div class="mode-tabs" role="tablist"><button class="tab-btn" id="tabExplore" data-mode="explore" aria-pressed="true">Explore</button><button class="tab-btn" id="tabQuiz" data-mode="quiz" aria-pressed="false">Find my place</button><button class="tab-btn" id="tabAxes" data-mode="axes" aria-pressed="false">Explore axes</button><button class="tab-btn" id="tabRel" data-mode="rel" aria-pressed="false">Relationships</button></div>
  <div class="actions">
   <div id="mpbox"><input type="search" id="mpq" placeholder="Find an MP (name or seat)" autocomplete="off" aria-label="Find an MP" role="combobox" aria-expanded="false" aria-controls="mpsug"><div id="mpsug" role="listbox"></div></div>
   <button class="nav-btn" id="howOpen" title="How it works &amp; about this data">?</button><button class="nav-btn" id="aboutOpen" style="display:none">About</button>
@@ -861,12 +862,12 @@ function renderQuiz(){const el=$('qz');let h='';
  const nAns=Object.keys(Q.ans).length,dir=Object.values(Q.ans).filter(v=>v!==0).length;
  if(Q.step==='intro'){
   if(MODE==='quiz')silentSel({t:'root'});
-  h=`<div class="quiz-eyebrow">Find my place</div><h2>Where do you fit?</h2><p class="quiz-lead">Take a position on real proposals. Find the MPs who share your answers.</p><div class="quiz-steps"><span>01 <b>Choose your side</b></span><span>02 <b>Watch your star move</b></span><span>03 <b>Compare with MPs</b></span></div><p class="meta">Start with a few questions. Keep going for a fuller picture.</p>
-  <p><button class="primary" data-start>Start playing &rarr;</button></p><p><button class="linkb" data-choose>Choose topics</button></p>${nAns?'<p><button class="qbtn" data-results>View my results</button></p>':''}`}
+  h=`<div class="quiz-eyebrow">Find my place</div><h2>Where do you fit?</h2><p class="quiz-lead">Take a position on real proposals. Find the MPs who share your answers.</p><div class="quiz-steps"><span>01 <b>Choose your side</b></span><span>02 <b>See where your answers place you</b></span><span>03 <b>Compare with MPs</b></span></div><p class="meta">Start with a few questions. Keep going for a fuller picture.</p>
+  <div class="quiz-routes"><button class="primary" data-start>Answer the default questions &rarr;</button><span class="quiz-or" aria-hidden="true">or</span><button class="qbtn" data-choose>Choose the topics you care about first &rarr;</button></div>${nAns?'<p><button class="qbtn" data-results>View my results</button></p>':''}`}
  else if(Q.step==='choose'){
   if(MODE==='quiz')silentSel({t:'root'});
   const cnt={};QOK.forEach(k=>{const s=D.fights[k].subj;cnt[s]=(cnt[s]||0)+1});
-  h=`<div class="qtop"><button class="qbtn icon-back" data-intro aria-label="Back to introduction" title="Back to introduction">←</button></div><h2>Choose subjects</h2><p class="meta">Pick your opening topics, or leave blank for a mix.</p><div class="subjpick">${D.subjects.filter(s=>cnt[s.name]).map(s=>`<label><input type="checkbox" data-pick="${esc(s.name)}" ${Q.pick.has(s.name)?'checked':''}> ${esc(s.name)} <span class="meta">${cnt[s.name]} question${cnt[s.name]===1?'':'s'}</span></label>`).join('')}</div><button class="primary" data-start>Start playing &rarr;</button>`}
+  h=`<div class="qtop"><button class="qbtn icon-back" data-intro aria-label="Back to introduction" title="Back to introduction">←</button></div><h2>Choose subjects</h2><p class="meta">Pick your opening topics, or leave blank for a mix.</p><div class="subjpick">${D.subjects.filter(s=>cnt[s.name]).map(s=>`<label><input type="checkbox" data-pick="${esc(s.name)}" ${Q.pick.has(s.name)?'checked':''}> ${esc(s.name)} <span class="meta">${cnt[s.name]} question${cnt[s.name]===1?'':'s'}</span></label>`).join('')}</div><button class="primary" data-start>Start the questions &rarr;</button>`}
  else if(Q.step==='q'){
   const k=Q.hist[Q.idx],f=D.fights[k],a=Q.ans[k];
   if(MODE==='quiz')silentSel({t:'fight',i:k});
