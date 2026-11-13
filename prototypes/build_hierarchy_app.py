@@ -621,6 +621,7 @@ js = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "
 tpl = (HERE / "hierarchy_app_template.html").read_text()
 out = HERE / "app_hierarchy.html"
 tpl = tpl.replace("/*__HA_QUIZ__*/", (HERE / "ha_quiz.js").read_text()).replace("/*__HA_REL__*/", (HERE / "ha_relationships.js").read_text())
+tpl = tpl.replace("/*__MAP_COMPANION_CSS__*/", (HERE / "map_companion/companion.css").read_text()).replace("/*__MAP_COMPANION_JS__*/", (HERE / "map_companion/companion.js").read_text())
 page = tpl.replace("__DATA__", js)
 for target in (out, HERE / "sk13_app_asks.html", ROOT / "docs/index.html", ROOT / "docs/stance.html"):
     target.write_text(page)

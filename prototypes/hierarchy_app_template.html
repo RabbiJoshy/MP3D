@@ -229,7 +229,7 @@ body[data-mode=quiz] #browse{display:none}
  .app.quiz #left{top:auto;bottom:0;left:0;right:0;width:100%;max-width:none;height:60dvh;transform:none;border-top:1px solid var(--line);border-right:0;box-shadow:0 -12px 40px rgba(0,0,0,.4)}
  .app.quiz #tools,.app.quiz #leg,.app.quiz #bar{display:none}.app.quiz #nav{display:none}}
 @media(max-width:620px){:root{--top:88px}.masthead{flex-wrap:wrap;height:var(--top);align-content:center;row-gap:6px}.mode-tabs{order:3;width:100%;justify-content:center}.mode-tabs .tab-btn{flex:1}.actions{margin-left:auto}}
-</style></head>
+</style><style>/*__MAP_COMPANION_CSS__*/</style></head>
 <body>
 <header class="masthead">
  <a class="brand" href="#root">MP3D <small>PARLIAMENT'S SPACE</small></a>
@@ -278,7 +278,7 @@ const cv=$('cv'),ctx=cv.getContext('2d');
 const YAW0=-0.6,PITCH0=0.35;
 let yaw=YAW0,pitch=PITCH0,mode3=true,sel={t:'root'},hov=null,curMP=null,drawnMP=null,W=0,H=0,dpr=1,hover=-1,curSel=null,proj=[],hoverDot=null,rimP=[],tq='';
 let AX=null,AXALL=false,axHit=[];
-let DM='subjects',GSUB=false,focusF=null,YOU=null,MODE='explore';
+let DM='none',GSUB=false,focusF=null,YOU=null,MODE='explore';
 const GPS={};
 function planeSc(gi){if(GPS[gi])return GPS[gi];const g=D.groups[gi],e=g.plane[0];return GPS[gi]=g.sc.map((v,i)=>v==null?null:XYZ[i][0]*e[0]+XYZ[i][1]*e[1]+XYZ[i][2]*e[2])}
 let insPts=[];
@@ -288,7 +288,7 @@ const lcol=r=>r>=.5?'#8fd694':r>=.3?'#d9b45f':'#6b7584';
 const INK='#eef1f5',DIM='#9aa4b2';
 // ---- layers and filters
 const LAYERS=[['mps','MPs','#9aa4b2'],['pavg','Party averages','#d9b45f'],['shape','Selected line / plane','#8fd694'],['rimM','Proposition dots: measured','#6fb3e0'],['rimS','Proposition dots: small sample (diamonds)','#e0a96f'],['rimI','Proposition dots: inferred, one-sided (diamonds)','#c27fd0'],['planes','All subject planes','#6b7584'],['axes','Axis labels','#6b7584']];
-const L0={mps:true,pavg:true,shape:true,rimM:true,rimS:true,rimI:true,planes:false,axes:true};
+const L0={mps:true,pavg:true,shape:true,rimM:true,rimS:true,rimI:true,planes:false,axes:false};
 let L={...L0};
 let FL={parties:new Set(),onlyPos:false,minSub:0};
 // ---- derived per-MP facts
@@ -410,7 +410,7 @@ let VIS=new Array(N).fill(true);
 function draw(){
  dpr=window.devicePixelRatio||1;const R=cv.getBoundingClientRect();W=R.width;H=R.height;if(cv.width!==Math.round(W*dpr)||cv.height!==Math.round(H*dpr)){cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr)}
  ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,W,H);
- const nd=getNode(sel),S=Math.min(W,H)*0.40;
+ const nd=getNode(sel),S=Math.min(W,H)*0.40*companionZoom;
  ctx.save();ctx.strokeStyle='#2a3445';ctx.lineWidth=1;ctx.beginPath();ctx.arc(cx(),H/2,S,0,7);ctx.stroke();
  if(mode3){ctx.globalAlpha=.55;for(let ax=0;ax<3;ax++){ctx.beginPath();for(let k=0;k<=72;k++){const a=k/72*6.2832,c=Math.cos(a),s=Math.sin(a);const v=ax===0?[0,c,s]:ax===1?[c,0,s]:[c,s,0];const p=P(v);k?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1])}ctx.stroke()}}
  axHit=[];
@@ -931,6 +931,7 @@ function setAppMode(m){MODE=m;document.body.dataset.mode=m;$('app').classList.to
  if(m==='quiz')renderQuiz();else if(m==='rel')mountRel();
  if(m==='explore')update(true);else draw()}
 document.querySelectorAll('.tab-btn').forEach(b=>b.onclick=()=>setAppMode(b.dataset.mode));
+/*__MAP_COMPANION_JS__*/
 // ---- start
 buildLayers();buildFilters();
 setDock(store.get('dockC')==='1'||(matchMedia('(max-width:820px)').matches&&store.get('dockC')!=='0'),false);
