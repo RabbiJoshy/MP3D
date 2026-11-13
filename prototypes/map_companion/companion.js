@@ -143,14 +143,14 @@ const baseSetAppMode=setAppMode,baseOpenAxis=openAxis;
 let AXFULL=false,axfKeep=null,axfOne=false;
 const axfActive=()=>AXFULL&&MODE==='explore'&&(AX!==null||axfKeep!==null);
 function syncAxesTab(){const on=(AX!==null||axfKeep!==null)&&MODE==='explore';document.querySelectorAll('.tab-btn').forEach(b=>{if(b.dataset.mode==='axes')b.setAttribute('aria-pressed',on);else if(b.dataset.mode==='explore')b.setAttribute('aria-pressed',MODE==='explore'&&!on)})}
-setAppMode=function(m){
- if(m==='axes'){AXFULL=true;axfKeep=null;if(MODE!=='explore')baseSetAppMode('explore');if(AX===null)baseOpenAxis('all');else{info();draw()}syncAxesTab();return}
+setAppMode=function(m,fromMap){
+ if(m==='axes'){if(!fromMap&&!mode3)setModeRaw(true);AXFULL=true;axfKeep=null;if(MODE!=='explore')baseSetAppMode('explore');if(AX===null)baseOpenAxis('all');else{info();draw()}syncAxesTab();return}
  AXFULL=false;axfKeep=null;
  if(AX!==null){AX=null;AXSUB=null}
  baseSetAppMode(m);syncAxesTab();renderAxFull()};
 openAxis=function(n){AXFULL=false;axfKeep=null;if(MODE!=='explore')baseSetAppMode('explore');showCompanionPanel();baseOpenAxis(n);syncAxesTab()};
 const axesInfo=info;info=function(){axesInfo();
- if(AX!==null&&!axfActive()){const first=$('chip').firstElementChild;if(first)first.insertAdjacentHTML('afterend','<button class="comp-related" data-axf="full">Open full-size axes →</button>')}
+ if(AX!==null&&!axfActive()){const first=$('chip').firstElementChild;if(first)first.insertAdjacentHTML('afterend','<button class="comp-related" data-axf="full">Show all axes full size ⤢</button>')}
  syncAxesTab();renderAxFull()};
 // After a profile opened from the full-size view is closed, return to the axes.
 addEventListener('hashchange',()=>{if(axfKeep!==null&&curSel==null){AX=axfKeep;axfKeep=null;info();draw()}});
@@ -161,10 +161,13 @@ const axEnds=i=>{const p=String(D.axes[i]||'').split(' ↔ ');return p.length===
 function renderAxFull(){
  const on=axfActive();$('app').classList.toggle('axfull',on);axFull.hidden=!on;axTip.style.display='none';
  if(!on){axFull.innerHTML='';return}
- const cur=AX!==null?AX:axfKeep,one=cur!=='all',idx=one?[cur]:[0,1,2];axfOne=one;
- axFull.innerHTML=`<div class="axf-bar"><div><h2>Explore axes</h2><p>The map has three axes. Each dot is an MP and each diamond is a party average. ${one?'Hover a dot to see who it is and click to open their profile.':'Choose an axis to look at it closely.'}</p></div><button class="axf-btn" data-axf="map">Show the map</button></div>`+
- `<div class="axf-tabs" role="group" aria-label="Axis"><button type="button" class="axc" data-axf-ax="all" aria-pressed="${!one}">All 3 axes</button>${[0,1,2].map(i=>`<button type="button" class="axc" data-axf-ax="${i}" aria-pressed="${cur===i}">Axis ${i+1}</button>`).join('')}</div>`+
- `<div class="axf-body${one?' one':''}">`+idx.map(i=>{const e=axEnds(i);return `<section class="axf-ax"><div class="axf-head">${one?`<b style="font:700 17px var(--body)">Axis ${i+1}</b>`:`<button type="button" class="axf-title" data-axf-ax="${i}">Axis ${i+1}</button>`}${one?'':`<button type="button" class="axc" data-axf-ax="${i}">Focus</button>`}</div><div class="axf-ends"><span class="m">← ${esc(e.minus)}</span><span class="p">${esc(e.plus)} →</span></div><div class="axf-plot" data-axf-plot="${i}"><canvas></canvas></div></section>`}).join('')+'</div>';
+ const cur=AX!==null?AX:axfKeep,one=cur!=='all',idx=one?[cur]:(mode3?[0,1,2]:[0,1]);axfOne=one;
+ const SPH='<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3.5 9h17M3.5 15h17" opacity=".7"/></svg>';
+ const EXP='<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"/></svg>';
+ const COL='<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10h-6V4M14 10l7-7M4 14h6v6M10 14l-7 7"/></svg>';
+ const bk=mode3?'Back to all three axes':'Back to both axes';
+ axFull.innerHTML=`<div class="axf-bar"><p>Each dot is an MP. Diamonds are party averages.${mode3?'':' The flat map plots Axis 1 across and Axis 2 up.'}${one?' Hover a dot to see who it is; click to open their profile.':''}</p><div class="axf-tools"><div class="comp-dimension" role="group" aria-label="Map dimension"><button type="button" data-axf-dim="2" aria-pressed="${!mode3}">2D</button><button type="button" data-axf-dim="3" aria-pressed="${mode3}">3D</button></div><button type="button" class="axf-ico" data-axf="map" aria-label="Show the map" title="Show the map">${SPH}</button></div></div>`+
+ `<div class="axf-body${one?' one':idx.length===2?' two':''}">`+idx.map(i=>{const e=axEnds(i);return `<section class="axf-ax"><div class="axf-head">${one?`<b class="axf-title">Axis ${i+1}</b>`:`<button type="button" class="axf-title" data-axf-ax="${i}">Axis ${i+1}</button>`}<button type="button" class="axf-ico sm" ${one?`data-axf-ax="all" aria-label="${bk}" title="${bk}"`:`data-axf-ax="${i}" aria-label="Show this axis only" title="Show this axis only"`}>${one?COL:EXP}</button></div><div class="axf-plot" data-axf-plot="${i}"><canvas></canvas></div><div class="axf-ends"><span class="m">← ${esc(e.minus)}</span><span class="p">${esc(e.plus)} →</span></div></section>`}).join('')+'</div>';
  drawAxFull();
 }
 const axfHandlers=new WeakMap();
@@ -178,7 +181,7 @@ function drawAxFull(){
   g.font='600 14px "Source Sans 3",sans-serif';
   const means=Object.values(groups).filter(q=>q.values.length>=4).map(q=>({...q,mean:q.values.reduce((a,b)=>a+b,0)/q.values.length})).sort((a,b)=>a.mean-b.mean),laneEnd=[];
   means.forEach(q=>{q.x=xOf(q.mean);q.width=g.measureText(q.p).width+20;q.left=Math.max(3,Math.min(w-q.width-3,q.x-8));let lane=0;while(laneEnd[lane]!=null&&laneEnd[lane]+8>q.left)lane++;laneEnd[lane]=q.left+q.width;q.lane=lane});
-  const laneH=22;wrap.style.minHeight=Math.max(150,110+laneEnd.length*laneH+34)+'px';
+  const laneH=22;wrap.style.minHeight=Math.max(150,110+laneEnd.length*laneH+34)+'px';wrap.style.height='';
   const h=wrap.clientHeight,dotH=Math.max(70,h-laneEnd.length*laneH-34),r=single?4.2:3.4,pts=[];c.width=Math.round(w*d);c.height=Math.round(h*d);g.setTransform(d,0,0,d,0,0);
   D.mps.forEach((m,i)=>{if(!D.onmap[i])return;const seed=Math.sin((i*3+ax+1)*12.9898)*43758.5453;pts.push({i,x:xOf(XYZ[i][ax]),y:9+(seed-Math.floor(seed))*(dotH-18)})});
   means.forEach(q=>{q.y=dotH+16+q.lane*laneH});
@@ -200,10 +203,9 @@ function drawAxFull(){
   let tapped=null;
   paint(null);
   c.setAttribute('aria-label',`Axis ${ax+1}. Party averages: `+means.map(q=>q.p+' '+q.mean.toFixed(2)+' ('+q.values.length+' MPs)').join('; '));
-  c.onpointermove=e=>{if(e.pointerType==='touch')return;const h2=hit(e);tip(h2,e.clientX,e.clientY);paint(h2.dot?h2.dot.i:null);c.style.cursor=(h2.dot||!single)?'pointer':''};
+  c.onpointermove=e=>{if(e.pointerType==='touch')return;const h2=hit(e);tip(h2,e.clientX,e.clientY);paint(h2.dot?h2.dot.i:null);c.style.cursor=h2.dot?'pointer':''};
   c.onpointerleave=()=>{axTip.style.display='none';paint(null)};
   c.onclick=e=>{const h2=hit(e);
-   if(!single){setAxFullAxis(ax);return}
    if(!h2.dot){tapped=null;axTip.style.display='none';return}
    if(e.pointerType==='touch'&&tapped!==h2.dot.i){tapped=h2.dot.i;const R=c.getBoundingClientRect();tip(h2,R.left+h2.dot.x,R.top+h2.dot.y);paint(h2.dot.i);return}
    axTip.style.display='none';axfKeep=ax;go(sel,h2.dot.i)};
@@ -211,11 +213,18 @@ function drawAxFull(){
 }
 function setAxFullAxis(v){AX=v;AXSUB=null;axfKeep=null;info();draw()}
 axFull.addEventListener('click',e=>{
+ const dm=e.target.closest('[data-axf-dim]');if(dm){setMode(dm.dataset.axfDim==='3');renderAxFull();return}
  const a=e.target.closest('[data-axf-ax]');if(a){const v=a.dataset.axfAx;setAxFullAxis(v==='all'?'all':+v);axFull.scrollTop=0;return}
  if(e.target.closest('[data-axf="map"]')){AXFULL=false;if(AX===null&&axfKeep!==null)AX=axfKeep;axfKeep=null;showCompanionPanel();info();draw()}});
 $('chip').addEventListener('click',e=>{if(e.target.closest('[data-axf="full"]')){AXFULL=true;axfKeep=null;info();draw()}});
 addEventListener('resize',()=>{if(axfActive())drawAxFull()});
+addEventListener('keydown',e=>{if(e.key==='Escape'&&axfActive()&&axfOne&&!document.querySelector('dialog[open]')){setAxFullAxis('all')}});
 // The Topics panel starts closed on desktop; opening a profile, the quiz or the axes tab still opens it as before.
 if(!matchMedia('(max-width:820px)').matches&&AX===null&&sel.t==='root'&&curSel==null)$('app').classList.add('hide-left');
 syncPanelButton();syncAxesTab();
 if(matchMedia('(max-width:620px)').matches)$('mpq').placeholder='Find an MP';
+
+// Keep the axes view in step with the map's 2D / 3D state, and add the map's own entry point.
+const _sm=setModeRaw;setModeRaw=function(m){_sm(m);if(typeof axfActive==='function'&&axfActive())renderAxFull()};
+$('tools').insertAdjacentHTML('afterbegin','<button type="button" class="fbtn" id="compAxes" title="Explore axes"><span class="wide">Explore axes</span><span class="short">Axes</span></button>');
+$('compAxes').onclick=()=>setAppMode('axes',true);
