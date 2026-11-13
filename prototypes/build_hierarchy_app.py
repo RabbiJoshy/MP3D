@@ -175,27 +175,32 @@ for k, t in enumerate(SUBJ):
     for m, v in scores[t].items():
         if m in mi: S[mi[m], k] = v
 
-fight_y = {}; fight_claims = collections.defaultdict(list)
+fight_y = {}; fight_w = {}; fight_claims = collections.defaultdict(list)
 for fi, f in enumerate(FIGHTS):
     y = np.full(N, np.nan)
+    w = np.ones(N, dtype=float)
     for side in ("for", "against", "both"):
         for m in f[side]:
             if m["id"] in mi:
-                y[mi[m["id"]]] = float(m["stance"])
-                fight_claims[mi[m["id"]]].append([fi, side, [[c["p"], c["s"]] for c in m["claims"][:3]]])
-    fight_y[fi] = y
+                i_m = mi[m["id"]]
+                y[i_m] = float(m["stance"])
+                w[i_m] = min(2.0, float(np.sqrt(max(1, len(m["claims"])))))
+                fight_claims[i_m].append([fi, side, [[c["p"], c["s"]] for c in m["claims"][:3]]])
+    fight_y[fi] = y; fight_w[fi] = w
 
 Y_mat = np.column_stack([fight_y[fi] for fi in range(len(FIGHTS))]) if FIGHTS else np.zeros((N, 0))
+W_mat = np.column_stack([fight_w[fi] for fi in range(len(FIGHTS))]) if FIGHTS else np.ones((N, 0))
 fight_vote_title = {}
 obs_Y = np.isfinite(Y_mat)
-LAM_DIRECT = 3.0
+LAM_DIRECT = 2.5
 
-def _project_direct(y_row, V_mat, b_vec, lam):
+def _project_direct(y_row, w_row, V_mat, b_vec, lam):
     ix = np.isfinite(y_row)
     if not ix.any(): return np.zeros(3)
-    return np.linalg.solve(V_mat[ix].T @ V_mat[ix] + lam * np.eye(3), V_mat[ix].T @ (y_row[ix] - b_vec[ix]))
+    Vx = V_mat[ix]; Vw = Vx * w_row[ix][:, None]
+    return np.linalg.solve(Vw.T @ Vx + lam * np.eye(3), Vw.T @ (y_row[ix] - b_vec[ix]))
 
-def _fit_direct(Y, rank=3, lam=LAM_DIRECT, seed=17, iters=70):
+def _fit_direct(Y, W, rank=3, lam=LAM_DIRECT, seed=17, iters=70):
     M, T = Y.shape
     mask = np.isfinite(Y)
     b = np.nan_to_num(np.nanmean(Y, axis=0))
@@ -204,16 +209,16 @@ def _fit_direct(Y, rank=3, lam=LAM_DIRECT, seed=17, iters=70):
     U = np.zeros((M, rank))
     eye = np.eye(rank)
     for _ in range(iters):
-        for i in range(M): U[i] = _project_direct(Y[i], V, b, lam)
+        for i in range(M): U[i] = _project_direct(Y[i], W[i], V, b, lam)
         for j in range(T):
             ix = mask[:, j]
             if ix.any():
-                A = U[ix]
-                V[j] = np.linalg.solve(A.T @ A + lam * eye, A.T @ (Y[ix, j] - b[j]))
-    U = np.array([_project_direct(Y[i], V, b, lam) for i in range(M)])
+                A = U[ix]; Aw = A * W[ix, j][:, None]
+                V[j] = np.linalg.solve(Aw.T @ A + lam * eye, Aw.T @ (Y[ix, j] - b[j]))
+    U = np.array([_project_direct(Y[i], W[i], V, b, lam) for i in range(M)])
     return U, V, b
 
-U_dir, V_dir, b_dir = _fit_direct(Y_mat, rank=3, lam=LAM_DIRECT, seed=17, iters=70)
+U_dir, V_dir, b_dir = _fit_direct(Y_mat, W_mat, rank=3, lam=LAM_DIRECT, seed=17, iters=70)
 _, _, _rot = np.linalg.svd(U_dir, full_matrices=False)
 Q_rot = _rot.T
 U_dir = U_dir @ Q_rot
@@ -226,7 +231,7 @@ Z = U_dir / _scale
 vv = V_dir * _scale
 ridge_direct = float(LAM_DIRECT * (_scale ** 2))
 on_map = obs_Y.sum(1) >= 1
-replay_err = float(np.max(np.abs(np.array([_project_direct(Y_mat[i], vv, b_dir, ridge_direct) for i in range(N)]) - Z)))
+replay_err = float(np.max(np.abs(np.array([_project_direct(Y_mat[i], W_mat[i], vv, b_dir, ridge_direct) for i in range(N)]) - Z)))
 assert replay_err < 1e-8, f"direct replay mismatch: {replay_err}"
 print(f"{N} MPs ({int(on_map.sum())} placed directly from {len(FIGHTS)} arguments, {int((~on_map).sum())} unplaced; replay err {replay_err:.2e})")
 
