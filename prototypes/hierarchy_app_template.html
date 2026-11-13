@@ -324,19 +324,19 @@ function scol(s,sc){if(s==null)return null;const a=Math.max(-1,Math.min(1,s/sc))
  return`rgb(${g.map((x,i)=>Math.round(x+(c[i]-x)*Math.min(1,.15+.85*t))).join(',')})`}
 function pct(a,q){const b=a.filter(x=>x!=null).map(Math.abs).sort((x,y)=>x-y);return b.length?(b[Math.floor(q*(b.length-1))]||1):1}
 function line(u,r,label,sideLabels,boost,light){
- const weak=r<.3,w=weak?1.4:1.5+5.5*r,al=weak?.5:.4+.6*r;
+ const weak=r<.3,w=sideLabels?1.8:1,al=weak?.35:sideLabels?.8:.38;
  const a=P(u.map(x=>x*1.08)),b=P(u.map(x=>-x*1.08));
- ctx.save();ctx.lineCap='round';ctx.strokeStyle=weak?DIM:lcol(r);ctx.globalAlpha=light?al*.5:boost?Math.max(al,.85):al;ctx.lineWidth=light?Math.max(1,w*.6):w+(boost?1.5:0);if(weak)ctx.setLineDash([5,5]);
+ ctx.save();ctx.lineCap='round';ctx.strokeStyle=sideLabels?'#bec8d5':'#8b9bac';ctx.globalAlpha=light?al*.5:boost?Math.max(al,.85):al;ctx.lineWidth=light?Math.max(1,w*.6):w+(boost?.5:0);if(weak)ctx.setLineDash([5,5]);
  ctx.beginPath();ctx.moveTo(b[0],b[1]);ctx.lineTo(a[0],a[1]);ctx.stroke();ctx.setLineDash([]);
- ctx.globalAlpha=light?.5:Math.max(.55,al);ctx.fillStyle=ctx.strokeStyle;ctx.beginPath();ctx.arc(a[0],a[1],weak?3:4+3*r,0,7);ctx.fill();
- if(sideLabels){ctx.font='600 12px "Source Sans 3",sans-serif';ctx.fillStyle=INK;ctx.globalAlpha=Math.max(.7,al);
+ ctx.globalAlpha=light?.5:Math.max(.55,al);ctx.fillStyle=sideLabels?'#2dd4bf':ctx.strokeStyle;ctx.beginPath();ctx.arc(a[0],a[1],sideLabels?4:2.5,0,7);ctx.fill();
+ if(sideLabels){ctx.fillStyle='#fb7185';ctx.beginPath();ctx.arc(b[0],b[1],4,0,7);ctx.fill();ctx.font='600 12px "Source Sans 3",sans-serif';ctx.fillStyle=INK;ctx.globalAlpha=Math.max(.7,al);
   ctx.fillText('FOR'+(weak?' (weak fit)':''),a[0]+8,a[1]-6);ctx.globalAlpha=.6;ctx.fillText('AGAINST',b[0]+8,b[1]+14)}
  ctx.restore()}
 function disc(pl,r,name,showLabel){const weak=r<.3,e1=pl[0],e2=pl[1];ctx.save();
  const pts=[];for(let k=0;k<=60;k++){const a=k/60*6.2832;pts.push(P([0,1,2].map(i=>Math.cos(a)*e1[i]+Math.sin(a)*e2[i])))}
  ctx.beginPath();pts.forEach((p,k)=>k?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]));ctx.closePath();
- ctx.globalAlpha=weak?.06:.08+.22*r;ctx.fillStyle=lcol(r);ctx.fill();
- ctx.globalAlpha=weak?.45:.5+.4*r;ctx.strokeStyle=lcol(r);ctx.lineWidth=weak?1:2;if(weak)ctx.setLineDash([4,4]);ctx.stroke();ctx.setLineDash([]);
+ ctx.globalAlpha=weak?.018:.035;ctx.fillStyle='#9cacc1';ctx.fill();
+ ctx.globalAlpha=weak?.25:.45;ctx.strokeStyle='#91a1b5';ctx.lineWidth=1;if(weak)ctx.setLineDash([4,4]);ctx.stroke();ctx.setLineDash([]);
  if(showLabel){const p=P(e1);ctx.globalAlpha=.95;ctx.fillStyle=INK;ctx.font='600 12px "Source Sans 3",sans-serif';ctx.fillText(name+(weak?' (weak fit)':''),p[0]+6,p[1]+14)}
  ctx.restore()}
 function shape(nd,boost){
@@ -576,16 +576,13 @@ function closeAxis(){AX=null;AXSUB=null;info();draw()}
 function axisHtml(n){
  const tabs=`<div style="display:flex;gap:4px;flex-wrap:wrap;margin:6px 0 8px"><button type="button" class="axc" data-axtab="all" aria-pressed="${n==='all'}">All 3 axes</button>${[0,1,2].map(i=>`<button type="button" class="axc" data-axtab="${i}" aria-pressed="${n===i}">Axis ${i+1}</button>`).join('')}</div>`;
  if(n==='all'){
-  let h=`<div class="up"><button type="button" class="link" data-axclose>&larr; Close</button></div><h2>The 3 Map Axes</h2>${tabs}<p class="sp">All placed MPs coloured by party along each axis (diamonds = party means). Click any axis to inspect its topics, arguments, and people.</p>`;
-  [0,1,2].forEach(i=>{const top=((D.axl||[])[i]||[]).slice(0,3).map(([nm,v])=>`${esc(nm)} (${v>0?'+':''}${v.toFixed(2)})`).join(' · ');
-   h+=`<div class="axcard" data-axtab="${i}" role="button" tabindex="0" style="margin:8px 0;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.02);cursor:pointer"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:6px"><b style="font-size:12.5px;color:var(--ink)">Axis ${i+1}: ${esc(D.axes[i]||'')}</b><span class="link" style="font-size:11.5px">Explore &rarr;</span></div><div class="meta" style="font-size:11px;margin:2px 0 6px">${top}</div><canvas class="axp" data-axplot="${i}" style="width:100%;height:74px;display:block;border-radius:6px"></canvas></div>`});
-  return h}
+  return `<div class="axis-heading"><h2>Map axes</h2><button class="icon-close" data-axclose aria-label="Close axes" title="Close axes">×</button></div><div class="axis-key">Dots: MPs <span>◆ Party average</span></div>`+[0,1,2].map(i=>`<button class="axis-chart" data-axtab="${i}" aria-label="Explore axis ${i+1}: ${esc(D.axes[i]||'')}"><span class="axis-chart-title"><b>Axis ${i+1}</b><span>${esc(D.axes[i]||'')}</span><span aria-hidden="true">↗</span></span><canvas class="axp" data-axplot="${i}" aria-label="MP positions and labelled party averages on axis ${i+1}"></canvas></button>`).join('')}
  const L=(D.axl||[])[n]||[],mx=Math.max(1e-9,...L.map(x=>Math.abs(x[1]))),list=AXALL?L:L.slice(0,8);
- let h=`<div class="up"><button type="button" class="link" data-axtab="all">&larr; All 3 axes</button><button type="button" class="link" data-axclose>Close</button></div><h2>Axis ${n+1}: ${esc(D.axes[n]||'')}</h2>${tabs}`;
- h+=`<canvas class="axp" data-axplot="${n}" style="width:100%;height:112px;display:block;border-radius:8px;border:1px solid var(--line);margin-bottom:8px"></canvas>`;
+ let h=`<div class="up"><button type="button" class="link" data-axtab="all">&larr; All 3 axes</button><button type="button" class="icon-close" data-axclose aria-label="Close axes" title="Close axes">×</button></div><h2>Axis ${n+1}: ${esc(D.axes[n]||'')}</h2>${tabs}`;
+ h+=`<canvas class="axp" data-axplot="${n}" style="width:100%;height:190px;display:block;border-radius:8px;border:1px solid var(--line);margin-bottom:8px"></canvas>`;
  const ix=D.mps.map((m,i)=>i).filter(i=>D.onmap[i]).sort((a,b)=>XYZ[b][n]-XYZ[a][n]);
- h+=`<h4>1. Main people at each end</h4><div class="splabel" style="color:#2dd4bf">+ end</div><div class="mpl">${mpBtns(ix.slice(0,4).map(i=>[i,null]))}</div><div class="splabel" style="color:#fb7185;margin-top:6px">&minus; end</div><div class="mpl">${mpBtns(ix.slice(-4).reverse().map(i=>[i,null]))}</div>`;
- h+=`<h4>2. Topics &amp; arguments on Axis ${n+1}</h4><p class="sp"><b class="ink">Stance axis (not focus):</b> click a topic below to inspect its arguments without leaving this view.</p><div class="axk"><span>&larr; &minus; end</span><span>+ end &rarr;</span></div>`;
+ h+=`<h4>MPs at each end</h4><div class="splabel" style="color:#2dd4bf">+ end</div><div class="mpl">${mpBtns(ix.slice(0,4).map(i=>[i,null]))}</div><div class="splabel" style="color:#fb7185;margin-top:6px">&minus; end</div><div class="mpl">${mpBtns(ix.slice(-4).reverse().map(i=>[i,null]))}</div>`;
+ h+=`<h4>Topics &amp; positions</h4><div class="axk"><span>&larr; &minus; end</span><span>+ end &rarr;</span></div>`;
  list.forEach(([nm,v])=>{const k=subjIdx(nm),w=Math.round(50*Math.abs(v)/mx),bar=`<span class="axb"><i style="${v>=0?'left:50%':'right:50%'};width:${w}%;background:${v>=0?'#2dd4bf':'#fb7185'}"></i></span>`;
   const inner=`<span class="axn" title="${esc(nm)}">${esc(nm)}</span>${bar}<span class="axv">${v>0?'+':''}${v.toFixed(2)}</span>`;
   const open=k>=0&&AXSUB===k;
@@ -864,20 +861,20 @@ function renderQuiz(){const el=$('qz');let h='';
  const nAns=Object.keys(Q.ans).length,dir=Object.values(Q.ans).filter(v=>v!==0).length;
  if(Q.step==='intro'){
   if(MODE==='quiz')silentSel({t:'root'});
-  h=`<div class="meta">Find my place</div><h2>Where would you sit in this Parliament?</h2><p>Answer questions about real propositions from Commons debates and watch your star move through Parliament's 3D space. Keep going as long as you like, and view your closest MPs anytime.</p><p class="meta">For and Against place you; Mixed and Skip do not. MPs are matched on the questions you both answered, using only what they actually said. Nothing leaves this page.</p>
-  <p><button class="primary" data-start>Start &rarr;</button></p><p><button class="linkb" data-choose>or choose which subjects to start with</button></p>${nAns?'<p><button class="qbtn" data-results>View my results</button></p>':''}`}
+  h=`<div class="quiz-eyebrow">Find my place</div><h2>Where do you fit?</h2><p class="quiz-lead">Take a position on real proposals. Find the MPs who share your answers.</p><div class="quiz-steps"><span>01 <b>Choose your side</b></span><span>02 <b>Watch your star move</b></span><span>03 <b>Compare with MPs</b></span></div><p class="meta">Start with a few questions. Keep going for a fuller picture.</p>
+  <p><button class="primary" data-start>Start playing &rarr;</button></p><p><button class="linkb" data-choose>Choose topics</button></p>${nAns?'<p><button class="qbtn" data-results>View my results</button></p>':''}`}
  else if(Q.step==='choose'){
   if(MODE==='quiz')silentSel({t:'root'});
   const cnt={};QOK.forEach(k=>{const s=D.fights[k].subj;cnt[s]=(cnt[s]||0)+1});
-  h=`<div class="qtop"><button class="qbtn" data-intro>&larr; Back</button></div><h2>Choose subjects</h2><p class="meta">Tick the subjects you care about; the opening questions will come from them. Tick none for the suggested mix.</p><div class="subjpick">${D.subjects.filter(s=>cnt[s.name]).map(s=>`<label><input type="checkbox" data-pick="${esc(s.name)}" ${Q.pick.has(s.name)?'checked':''}> ${esc(s.name)} <span class="meta">${cnt[s.name]} question${cnt[s.name]===1?'':'s'}</span></label>`).join('')}</div><button class="primary" data-start>Start &rarr;</button>`}
+  h=`<div class="qtop"><button class="qbtn icon-back" data-intro aria-label="Back to introduction" title="Back to introduction">←</button></div><h2>Choose subjects</h2><p class="meta">Pick your opening topics, or leave blank for a mix.</p><div class="subjpick">${D.subjects.filter(s=>cnt[s.name]).map(s=>`<label><input type="checkbox" data-pick="${esc(s.name)}" ${Q.pick.has(s.name)?'checked':''}> ${esc(s.name)} <span class="meta">${cnt[s.name]} question${cnt[s.name]===1?'':'s'}</span></label>`).join('')}</div><button class="primary" data-start>Start playing &rarr;</button>`}
  else if(Q.step==='q'){
   const k=Q.hist[Q.idx],f=D.fights[k],a=Q.ans[k];
   if(MODE==='quiz')silentSel({t:'fight',i:k});
-  h=`<div class="qtop"><button class="qbtn" data-back>&larr; Back</button><span class="meta">Question ${Q.idx+1} (${nAns} answered)</span><button class="qbtn" data-results ${nAns?'':'disabled'}>Results &rarr;</button></div><div class="qprog"><i style="width:${Math.min(100,Math.round(100*nAns/15))}%"></i></div>
+  h=`<div class="qtop"><button class="qbtn icon-back" data-back aria-label="Previous question" title="Previous question">←</button><span class="meta">${nAns} answered · Q${Q.idx+1}</span><button class="qbtn" data-results ${nAns?'':'disabled'}>Results &rarr;</button></div><div class="qprog"><i style="width:${Math.min(100,Math.round(100*nAns/15))}%"></i></div>
   <div class="meta">${esc(f.subj)}</div><h2 tabindex="-1" id="qtext">${esc(qText(k))}</h2>
-  <details class="qctx"><summary>About this proposition</summary>${f.desc?`<p>${esc(f.desc)}</p>`:''}<p class="meta">${f.nfor} MPs for and ${f.nag} against were found. The rail through your star shows this proposition; teal is FOR and coral is AGAINST.</p></details>
+  <details class="qctx"><summary>Context</summary>${f.desc?`<p>${esc(f.desc)}</p>`:''}<p class="meta">${f.nfor} MPs for and ${f.nag} against were found. The rail through your star shows this proposition; teal is FOR and coral is AGAINST.</p></details>
   <div class="qans"><button class="qopt for" data-a="1" aria-pressed="${a===1}"><b>For</b><span>${esc(f.fm||'In favour')}</span></button><button class="qopt against" data-a="-1" aria-pressed="${a===-1}"><b>Against</b><span>${esc(f.am||'Opposed')}</span></button></div>
-  <div class="qsec"><button class="qbtn" data-a="0" aria-pressed="${a===0}">Mixed / in between</button><button class="qbtn" data-skip>Skip &middot; no view</button></div>`+(()=>{if(!YOU)return'';let best=null,bd=1e9;for(let i=0;i<N;i++){if(!D.onmap[i])continue;const d=Math.hypot(XYZ[i][0]-YOU.p[0],XYZ[i][1]-YOU.p[1],XYZ[i][2]-YOU.p[2]);if(d<bd){bd=d;best=i}}return best!=null?`<p class="meta" style="margin-top:12px">Your <b style="color:#ffd45e">YOU</b> star is currently nearest <b class="ink">${esc(D.mps[best].n)}</b> (${esc(D.mps[best].p)})</p>`:''})()}
+  <div class="qsec"><button class="qbtn" data-a="0" aria-pressed="${a===0}">Mixed / unsure</button><button class="qbtn" data-skip>Skip</button></div>`+(()=>{if(!YOU)return'';let best=null,bd=1e9;for(let i=0;i<N;i++){if(!D.onmap[i])continue;const d=Math.hypot(XYZ[i][0]-YOU.p[0],XYZ[i][1]-YOU.p[1],XYZ[i][2]-YOU.p[2]);if(d<bd){bd=d;best=i}}return best!=null?`<p class="meta" style="margin-top:12px">Your <b style="color:#ffd45e">YOU</b> star is currently nearest <b class="ink">${esc(D.mps[best].n)}</b> (${esc(D.mps[best].p)})</p>`:''})()}
  else{
   if(MODE==='quiz')silentSel({t:'root'});
   const matches=dir>=3?HAQuiz.match(Q.ans,Q.star,D.fights,N,i=>YOU?Math.hypot(XYZ[i][0]-YOU.p[0],XYZ[i][1]-YOU.p[1],XYZ[i][2]-YOU.p[2]):0):[];

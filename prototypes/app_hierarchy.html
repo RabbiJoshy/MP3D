@@ -243,6 +243,10 @@ body[data-mode=quiz] #browse{display:none}
 .comp-zoom{position:absolute;right:22px;bottom:22px;display:flex;background:var(--bench2);border:1px solid var(--line);border-radius:8px;z-index:6}.comp-zoom button{min-width:38px;height:38px;background:none;border:0;color:var(--ink);font:600 15px var(--body);cursor:pointer}.comp-zoom button:disabled{opacity:.35;cursor:default}#zoomReset{font-size:12px;min-width:52px}.comp-map-note{bottom:72px;right:22px}.app.quiz .comp-map-note{display:none}#howOpen{display:block;font-size:13px}.guide-tabs{display:flex;gap:8px;padding:16px 20px;border-bottom:1px solid var(--line)}.guide-tabs button{background:none;border:0;border-radius:6px;color:var(--dim);font:600 14px var(--body);padding:10px;cursor:pointer}.guide-tabs button[aria-selected=true]{background:var(--bench3);color:var(--ink)}#howDlg{width:min(680px,94vw)}#howDlg h3{font-size:17px;margin:22px 0 8px}#howDlg h3:first-child{margin-top:0}#howDlg p{font-size:15px;line-height:1.65;color:var(--dim);margin:0 0 14px}#howDlg b{color:var(--ink)}#layPop{top:110px;max-width:calc(100% - 24px);width:365px}#layPop .seg{height:auto;flex-wrap:wrap;padding:3px}#layPop .seg button{padding:8px}
 @media(max-width:820px){#nav{max-width:none;right:12px;left:12px;top:12px}#tools{top:58px;right:12px;max-width:calc(100% - 24px);gap:5px}.comp-zoom{bottom:14px;right:14px}#howOpen{font-size:12px;padding:0 6px}.comp-dimension button{padding:4px 9px}.fbtn{font-size:12px}#layPop,#filPop{top:104px}.app.quiz #tools{display:flex}.app.quiz #compAxes,.app.quiz #filBtn,.app.quiz #layBtn{display:none}.app.quiz #tools{top:10px}.app.quiz .comp-zoom{bottom:8px}}
 @media(max-width:620px){#mpq{width:120px}.actions{gap:4px}.brand:after{display:none}#howOpen{display:block}.masthead{padding:0 12px}.guide-tabs{padding:12px;gap:4px}.guide-tabs button{font-size:13px}#howDlg .d-body{padding:18px}.comp-mobile-map{padding:10px 18px}}
+/* Compact panels: readable content, quiet corner controls. */
+#chip.axis-panel{padding:16px 16px 22px}.axis-heading{display:flex;justify-content:space-between;align-items:center;gap:12px}.axis-heading h2{margin:0!important;font-size:23px!important}.icon-close,dialog .xbtn,#pclose{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;flex:none;padding:0;border:0;border-radius:5px;background:transparent;color:var(--dim);font:24px/1 var(--body);cursor:pointer;text-decoration:none}.icon-close:hover,dialog .xbtn:hover,#pclose:hover{background:var(--bench3);color:var(--ink)}.axis-key{display:flex;justify-content:space-between;font-size:12px;color:var(--dim);margin:8px 0 12px}.axis-chart{display:block;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);padding:10px 0 8px;color:var(--ink);cursor:pointer}.axis-chart-title{display:flex;align-items:baseline;gap:8px;margin-bottom:7px;font-size:13px}.axis-chart-title b{white-space:nowrap}.axis-chart-title span:nth-child(2){flex:1;color:var(--dim);font-size:12px}.axis-chart-title span:last-child{font-size:18px;color:var(--dim)}.axis-chart:hover .axis-chart-title{color:var(--brass)}.axis-chart .axp{display:block;width:100%;height:164px;border-radius:4px}#chip.axis-panel>.up{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}#chip.axis-panel>h2{font-size:21px;margin:6px 0 12px}.axis-panel .mpl{gap:4px}.axis-panel h4{margin-top:16px}.p-top{padding:18px 20px 12px;align-items:flex-start}.p-top h2{font-size:24px}.p-body{padding:16px 20px}.comp-back{margin-bottom:16px}.comp-intro{margin-bottom:14px}.comp-section{margin-top:20px}.comp-analysis{margin-top:20px;padding-top:12px}.comp-related{margin-top:16px}.d-top{padding:16px 20px;align-items:center}.guide-play{margin:0 0 12px}#howDlg h3{text-transform:none;letter-spacing:0}#howDlg p{font-size:14px;line-height:1.55}.icon-back{width:30px;min-width:30px;justify-content:center;padding:0!important;border:0!important;font-size:20px!important}
+#qz{padding:24px 24px 28px}#qz h2{font-size:27px;line-height:1.25;letter-spacing:-.4px;margin:8px 0 16px}#qz .quiz-eyebrow{text-transform:uppercase;letter-spacing:1.5px;font-size:11px;color:var(--brass);margin-bottom:12px}#qz .quiz-lead{font-size:17px;line-height:1.55;color:var(--dim)}.quiz-steps{display:grid;gap:14px;margin:28px 0;color:var(--brass);font-size:12px}.quiz-steps b{font-size:14px;color:var(--ink);font-weight:600;margin-left:12px}#qz .primary[data-start]{width:100%;height:44px;justify-content:center;font-size:15px}#qz [data-choose]{font-size:14px;color:var(--dim)}#qz .qtop{display:flex;align-items:center;gap:10px;margin-bottom:12px}#qz .qtop>.meta{flex:1;text-align:center;font-size:12px}#qz .qprog{height:3px;margin:0 0 20px}#qz .qctx{margin:0 0 16px}#qz .qctx summary{font-size:13px;color:var(--dim)}#qz .qans{gap:12px;margin:16px 0 12px}#qz .qopt{padding:18px;border-radius:9px;background:var(--bench);border-color:var(--line)}#qz .qopt b{font-size:16px;margin-bottom:7px}#qz .qopt span{font-size:14px;line-height:1.5;color:var(--dim)}#qz .qopt:hover{background:var(--bench3);border-color:var(--dim)}#qz .qopt.for{border-left:3px solid #2dd4bf}#qz .qopt.against{border-left:3px solid #fb7185}#qz .qsec{display:flex;justify-content:space-between;gap:10px}#qz .qsec .qbtn{border:0;background:none;color:var(--dim);padding:6px 0;font-size:13px}#qz .mcard{padding:14px 0;margin:0;border:0;border-top:1px solid var(--line);border-radius:0;background:none}#qz .mq{padding:10px 0}#qz .subjpick label{padding:10px 0}#qz .qtop [data-results]{border:0;background:none;color:var(--brass);padding:0;font-size:13px}#qz button:disabled{opacity:.4}.app.quiz .comp-zoom{bottom:14px}
+@media(pointer:coarse){.icon-close,dialog .xbtn,#pclose,.icon-back{min-width:44px;min-height:44px}}@media(max-width:620px){#qz{padding:18px 20px}#qz h2{font-size:24px}.quiz-steps{margin:20px 0;gap:10px}#qz .qopt{padding:14px}}
 </style></head>
 <body>
 <header class="masthead">
@@ -546,19 +550,19 @@ function scol(s,sc){if(s==null)return null;const a=Math.max(-1,Math.min(1,s/sc))
  return`rgb(${g.map((x,i)=>Math.round(x+(c[i]-x)*Math.min(1,.15+.85*t))).join(',')})`}
 function pct(a,q){const b=a.filter(x=>x!=null).map(Math.abs).sort((x,y)=>x-y);return b.length?(b[Math.floor(q*(b.length-1))]||1):1}
 function line(u,r,label,sideLabels,boost,light){
- const weak=r<.3,w=weak?1.4:1.5+5.5*r,al=weak?.5:.4+.6*r;
+ const weak=r<.3,w=sideLabels?1.8:1,al=weak?.35:sideLabels?.8:.38;
  const a=P(u.map(x=>x*1.08)),b=P(u.map(x=>-x*1.08));
- ctx.save();ctx.lineCap='round';ctx.strokeStyle=weak?DIM:lcol(r);ctx.globalAlpha=light?al*.5:boost?Math.max(al,.85):al;ctx.lineWidth=light?Math.max(1,w*.6):w+(boost?1.5:0);if(weak)ctx.setLineDash([5,5]);
+ ctx.save();ctx.lineCap='round';ctx.strokeStyle=sideLabels?'#bec8d5':'#8b9bac';ctx.globalAlpha=light?al*.5:boost?Math.max(al,.85):al;ctx.lineWidth=light?Math.max(1,w*.6):w+(boost?.5:0);if(weak)ctx.setLineDash([5,5]);
  ctx.beginPath();ctx.moveTo(b[0],b[1]);ctx.lineTo(a[0],a[1]);ctx.stroke();ctx.setLineDash([]);
- ctx.globalAlpha=light?.5:Math.max(.55,al);ctx.fillStyle=ctx.strokeStyle;ctx.beginPath();ctx.arc(a[0],a[1],weak?3:4+3*r,0,7);ctx.fill();
- if(sideLabels){ctx.font='600 12px "Source Sans 3",sans-serif';ctx.fillStyle=INK;ctx.globalAlpha=Math.max(.7,al);
+ ctx.globalAlpha=light?.5:Math.max(.55,al);ctx.fillStyle=sideLabels?'#2dd4bf':ctx.strokeStyle;ctx.beginPath();ctx.arc(a[0],a[1],sideLabels?4:2.5,0,7);ctx.fill();
+ if(sideLabels){ctx.fillStyle='#fb7185';ctx.beginPath();ctx.arc(b[0],b[1],4,0,7);ctx.fill();ctx.font='600 12px "Source Sans 3",sans-serif';ctx.fillStyle=INK;ctx.globalAlpha=Math.max(.7,al);
   ctx.fillText('FOR'+(weak?' (weak fit)':''),a[0]+8,a[1]-6);ctx.globalAlpha=.6;ctx.fillText('AGAINST',b[0]+8,b[1]+14)}
  ctx.restore()}
 function disc(pl,r,name,showLabel){const weak=r<.3,e1=pl[0],e2=pl[1];ctx.save();
  const pts=[];for(let k=0;k<=60;k++){const a=k/60*6.2832;pts.push(P([0,1,2].map(i=>Math.cos(a)*e1[i]+Math.sin(a)*e2[i])))}
  ctx.beginPath();pts.forEach((p,k)=>k?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]));ctx.closePath();
- ctx.globalAlpha=weak?.06:.08+.22*r;ctx.fillStyle=lcol(r);ctx.fill();
- ctx.globalAlpha=weak?.45:.5+.4*r;ctx.strokeStyle=lcol(r);ctx.lineWidth=weak?1:2;if(weak)ctx.setLineDash([4,4]);ctx.stroke();ctx.setLineDash([]);
+ ctx.globalAlpha=weak?.018:.035;ctx.fillStyle='#9cacc1';ctx.fill();
+ ctx.globalAlpha=weak?.25:.45;ctx.strokeStyle='#91a1b5';ctx.lineWidth=1;if(weak)ctx.setLineDash([4,4]);ctx.stroke();ctx.setLineDash([]);
  if(showLabel){const p=P(e1);ctx.globalAlpha=.95;ctx.fillStyle=INK;ctx.font='600 12px "Source Sans 3",sans-serif';ctx.fillText(name+(weak?' (weak fit)':''),p[0]+6,p[1]+14)}
  ctx.restore()}
 function shape(nd,boost){
@@ -798,16 +802,13 @@ function closeAxis(){AX=null;AXSUB=null;info();draw()}
 function axisHtml(n){
  const tabs=`<div style="display:flex;gap:4px;flex-wrap:wrap;margin:6px 0 8px"><button type="button" class="axc" data-axtab="all" aria-pressed="${n==='all'}">All 3 axes</button>${[0,1,2].map(i=>`<button type="button" class="axc" data-axtab="${i}" aria-pressed="${n===i}">Axis ${i+1}</button>`).join('')}</div>`;
  if(n==='all'){
-  let h=`<div class="up"><button type="button" class="link" data-axclose>&larr; Close</button></div><h2>The 3 Map Axes</h2>${tabs}<p class="sp">All placed MPs coloured by party along each axis (diamonds = party means). Click any axis to inspect its topics, arguments, and people.</p>`;
-  [0,1,2].forEach(i=>{const top=((D.axl||[])[i]||[]).slice(0,3).map(([nm,v])=>`${esc(nm)} (${v>0?'+':''}${v.toFixed(2)})`).join(' · ');
-   h+=`<div class="axcard" data-axtab="${i}" role="button" tabindex="0" style="margin:8px 0;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.02);cursor:pointer"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:6px"><b style="font-size:12.5px;color:var(--ink)">Axis ${i+1}: ${esc(D.axes[i]||'')}</b><span class="link" style="font-size:11.5px">Explore &rarr;</span></div><div class="meta" style="font-size:11px;margin:2px 0 6px">${top}</div><canvas class="axp" data-axplot="${i}" style="width:100%;height:74px;display:block;border-radius:6px"></canvas></div>`});
-  return h}
+  return `<div class="axis-heading"><h2>Map axes</h2><button class="icon-close" data-axclose aria-label="Close axes" title="Close axes">×</button></div><div class="axis-key">Dots: MPs <span>◆ Party average</span></div>`+[0,1,2].map(i=>`<button class="axis-chart" data-axtab="${i}" aria-label="Explore axis ${i+1}: ${esc(D.axes[i]||'')}"><span class="axis-chart-title"><b>Axis ${i+1}</b><span>${esc(D.axes[i]||'')}</span><span aria-hidden="true">↗</span></span><canvas class="axp" data-axplot="${i}" aria-label="MP positions and labelled party averages on axis ${i+1}"></canvas></button>`).join('')}
  const L=(D.axl||[])[n]||[],mx=Math.max(1e-9,...L.map(x=>Math.abs(x[1]))),list=AXALL?L:L.slice(0,8);
- let h=`<div class="up"><button type="button" class="link" data-axtab="all">&larr; All 3 axes</button><button type="button" class="link" data-axclose>Close</button></div><h2>Axis ${n+1}: ${esc(D.axes[n]||'')}</h2>${tabs}`;
- h+=`<canvas class="axp" data-axplot="${n}" style="width:100%;height:112px;display:block;border-radius:8px;border:1px solid var(--line);margin-bottom:8px"></canvas>`;
+ let h=`<div class="up"><button type="button" class="link" data-axtab="all">&larr; All 3 axes</button><button type="button" class="icon-close" data-axclose aria-label="Close axes" title="Close axes">×</button></div><h2>Axis ${n+1}: ${esc(D.axes[n]||'')}</h2>${tabs}`;
+ h+=`<canvas class="axp" data-axplot="${n}" style="width:100%;height:190px;display:block;border-radius:8px;border:1px solid var(--line);margin-bottom:8px"></canvas>`;
  const ix=D.mps.map((m,i)=>i).filter(i=>D.onmap[i]).sort((a,b)=>XYZ[b][n]-XYZ[a][n]);
- h+=`<h4>1. Main people at each end</h4><div class="splabel" style="color:#2dd4bf">+ end</div><div class="mpl">${mpBtns(ix.slice(0,4).map(i=>[i,null]))}</div><div class="splabel" style="color:#fb7185;margin-top:6px">&minus; end</div><div class="mpl">${mpBtns(ix.slice(-4).reverse().map(i=>[i,null]))}</div>`;
- h+=`<h4>2. Topics &amp; arguments on Axis ${n+1}</h4><p class="sp"><b class="ink">Stance axis (not focus):</b> click a topic below to inspect its arguments without leaving this view.</p><div class="axk"><span>&larr; &minus; end</span><span>+ end &rarr;</span></div>`;
+ h+=`<h4>MPs at each end</h4><div class="splabel" style="color:#2dd4bf">+ end</div><div class="mpl">${mpBtns(ix.slice(0,4).map(i=>[i,null]))}</div><div class="splabel" style="color:#fb7185;margin-top:6px">&minus; end</div><div class="mpl">${mpBtns(ix.slice(-4).reverse().map(i=>[i,null]))}</div>`;
+ h+=`<h4>Topics &amp; positions</h4><div class="axk"><span>&larr; &minus; end</span><span>+ end &rarr;</span></div>`;
  list.forEach(([nm,v])=>{const k=subjIdx(nm),w=Math.round(50*Math.abs(v)/mx),bar=`<span class="axb"><i style="${v>=0?'left:50%':'right:50%'};width:${w}%;background:${v>=0?'#2dd4bf':'#fb7185'}"></i></span>`;
   const inner=`<span class="axn" title="${esc(nm)}">${esc(nm)}</span>${bar}<span class="axv">${v>0?'+':''}${v.toFixed(2)}</span>`;
   const open=k>=0&&AXSUB===k;
@@ -1086,20 +1087,20 @@ function renderQuiz(){const el=$('qz');let h='';
  const nAns=Object.keys(Q.ans).length,dir=Object.values(Q.ans).filter(v=>v!==0).length;
  if(Q.step==='intro'){
   if(MODE==='quiz')silentSel({t:'root'});
-  h=`<div class="meta">Find my place</div><h2>Where would you sit in this Parliament?</h2><p>Answer questions about real propositions from Commons debates and watch your star move through Parliament's 3D space. Keep going as long as you like, and view your closest MPs anytime.</p><p class="meta">For and Against place you; Mixed and Skip do not. MPs are matched on the questions you both answered, using only what they actually said. Nothing leaves this page.</p>
-  <p><button class="primary" data-start>Start &rarr;</button></p><p><button class="linkb" data-choose>or choose which subjects to start with</button></p>${nAns?'<p><button class="qbtn" data-results>View my results</button></p>':''}`}
+  h=`<div class="quiz-eyebrow">Find my place</div><h2>Where do you fit?</h2><p class="quiz-lead">Take a position on real proposals. Find the MPs who share your answers.</p><div class="quiz-steps"><span>01 <b>Choose your side</b></span><span>02 <b>Watch your star move</b></span><span>03 <b>Compare with MPs</b></span></div><p class="meta">Start with a few questions. Keep going for a fuller picture.</p>
+  <p><button class="primary" data-start>Start playing &rarr;</button></p><p><button class="linkb" data-choose>Choose topics</button></p>${nAns?'<p><button class="qbtn" data-results>View my results</button></p>':''}`}
  else if(Q.step==='choose'){
   if(MODE==='quiz')silentSel({t:'root'});
   const cnt={};QOK.forEach(k=>{const s=D.fights[k].subj;cnt[s]=(cnt[s]||0)+1});
-  h=`<div class="qtop"><button class="qbtn" data-intro>&larr; Back</button></div><h2>Choose subjects</h2><p class="meta">Tick the subjects you care about; the opening questions will come from them. Tick none for the suggested mix.</p><div class="subjpick">${D.subjects.filter(s=>cnt[s.name]).map(s=>`<label><input type="checkbox" data-pick="${esc(s.name)}" ${Q.pick.has(s.name)?'checked':''}> ${esc(s.name)} <span class="meta">${cnt[s.name]} question${cnt[s.name]===1?'':'s'}</span></label>`).join('')}</div><button class="primary" data-start>Start &rarr;</button>`}
+  h=`<div class="qtop"><button class="qbtn icon-back" data-intro aria-label="Back to introduction" title="Back to introduction">←</button></div><h2>Choose subjects</h2><p class="meta">Pick your opening topics, or leave blank for a mix.</p><div class="subjpick">${D.subjects.filter(s=>cnt[s.name]).map(s=>`<label><input type="checkbox" data-pick="${esc(s.name)}" ${Q.pick.has(s.name)?'checked':''}> ${esc(s.name)} <span class="meta">${cnt[s.name]} question${cnt[s.name]===1?'':'s'}</span></label>`).join('')}</div><button class="primary" data-start>Start playing &rarr;</button>`}
  else if(Q.step==='q'){
   const k=Q.hist[Q.idx],f=D.fights[k],a=Q.ans[k];
   if(MODE==='quiz')silentSel({t:'fight',i:k});
-  h=`<div class="qtop"><button class="qbtn" data-back>&larr; Back</button><span class="meta">Question ${Q.idx+1} (${nAns} answered)</span><button class="qbtn" data-results ${nAns?'':'disabled'}>Results &rarr;</button></div><div class="qprog"><i style="width:${Math.min(100,Math.round(100*nAns/15))}%"></i></div>
+  h=`<div class="qtop"><button class="qbtn icon-back" data-back aria-label="Previous question" title="Previous question">←</button><span class="meta">${nAns} answered · Q${Q.idx+1}</span><button class="qbtn" data-results ${nAns?'':'disabled'}>Results &rarr;</button></div><div class="qprog"><i style="width:${Math.min(100,Math.round(100*nAns/15))}%"></i></div>
   <div class="meta">${esc(f.subj)}</div><h2 tabindex="-1" id="qtext">${esc(qText(k))}</h2>
-  <details class="qctx"><summary>About this proposition</summary>${f.desc?`<p>${esc(f.desc)}</p>`:''}<p class="meta">${f.nfor} MPs for and ${f.nag} against were found. The rail through your star shows this proposition; teal is FOR and coral is AGAINST.</p></details>
+  <details class="qctx"><summary>Context</summary>${f.desc?`<p>${esc(f.desc)}</p>`:''}<p class="meta">${f.nfor} MPs for and ${f.nag} against were found. The rail through your star shows this proposition; teal is FOR and coral is AGAINST.</p></details>
   <div class="qans"><button class="qopt for" data-a="1" aria-pressed="${a===1}"><b>For</b><span>${esc(f.fm||'In favour')}</span></button><button class="qopt against" data-a="-1" aria-pressed="${a===-1}"><b>Against</b><span>${esc(f.am||'Opposed')}</span></button></div>
-  <div class="qsec"><button class="qbtn" data-a="0" aria-pressed="${a===0}">Mixed / in between</button><button class="qbtn" data-skip>Skip &middot; no view</button></div>`+(()=>{if(!YOU)return'';let best=null,bd=1e9;for(let i=0;i<N;i++){if(!D.onmap[i])continue;const d=Math.hypot(XYZ[i][0]-YOU.p[0],XYZ[i][1]-YOU.p[1],XYZ[i][2]-YOU.p[2]);if(d<bd){bd=d;best=i}}return best!=null?`<p class="meta" style="margin-top:12px">Your <b style="color:#ffd45e">YOU</b> star is currently nearest <b class="ink">${esc(D.mps[best].n)}</b> (${esc(D.mps[best].p)})</p>`:''})()}
+  <div class="qsec"><button class="qbtn" data-a="0" aria-pressed="${a===0}">Mixed / unsure</button><button class="qbtn" data-skip>Skip</button></div>`+(()=>{if(!YOU)return'';let best=null,bd=1e9;for(let i=0;i<N;i++){if(!D.onmap[i])continue;const d=Math.hypot(XYZ[i][0]-YOU.p[0],XYZ[i][1]-YOU.p[1],XYZ[i][2]-YOU.p[2]);if(d<bd){bd=d;best=i}}return best!=null?`<p class="meta" style="margin-top:12px">Your <b style="color:#ffd45e">YOU</b> star is currently nearest <b class="ink">${esc(D.mps[best].n)}</b> (${esc(D.mps[best].p)})</p>`:''})()}
  else{
   if(MODE==='quiz')silentSel({t:'root'});
   const matches=dir>=3?HAQuiz.match(Q.ans,Q.star,D.fights,N,i=>YOU?Math.hypot(XYZ[i][0]-YOU.p[0],XYZ[i][1]-YOU.p[1],XYZ[i][2]-YOU.p[2]):0):[];
@@ -1256,6 +1257,37 @@ $('howDlg').innerHTML=`<div class="d-top"><h2>How it works</h2><button class="xb
 $('compGuideClose').onclick=()=>$('howDlg').close();$('compDataDetails').onclick=()=>{$('howDlg').close();$('aboutDlg').showModal()};
 function guideTab(which){for(const k of ['use','data']){$('guide-'+k).setAttribute('aria-selected',k===which);$('guide-'+k+'-panel').hidden=k!==which}}
 for(const k of ['use','data']){$('guide-'+k).onclick=()=>guideTab(k);$('guide-'+k).onkeydown=e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();const next=k==='use'?'data':'use';guideTab(next);$('guide-'+next).focus()}}}
+// Space goes to the plots; party means get their own labelled, collision-free lanes.
+drawAxisPlots=function(){
+ $('chip').querySelectorAll('canvas[data-axplot]').forEach(c=>{
+  const ax=+c.dataset.axplot,d=devicePixelRatio||1,w=c.clientWidth||360,ctx=c.getContext('2d'),groups={};
+  const vals=D.mps.map((m,i)=>D.onmap[i]?XYZ[i][ax]:0),extent=Math.max(.85,...vals.map(Math.abs))*1.05;
+  const xOf=v=>14+(v+extent)/(2*extent)*(w-28);
+  D.mps.forEach((m,i)=>{if(D.onmap[i]){const g=groups[m.p]||(groups[m.p]={p:m.p,col:m.col,values:[]});g.values.push(XYZ[i][ax])}});
+  ctx.font='600 12px "Source Sans 3",sans-serif';
+  const ends=[],means=Object.values(groups).filter(g=>g.values.length>=4).map(g=>({...g,mean:g.values.reduce((a,b)=>a+b,0)/g.values.length})).sort((a,b)=>a.mean-b.mean);
+  means.forEach(g=>{g.x=xOf(g.mean);g.width=ctx.measureText(g.p).width+18;g.left=Math.max(3,Math.min(w-g.width-3,g.x-7));let lane=0;while(ends[lane]!=null&&ends[lane]+7>g.left)lane++;ends[lane]=g.left+g.width;g.lane=lane});
+  const dotHeight=AX==='all'?88:112,h=dotHeight+ends.length*16+25;c.style.height=h+'px';c.width=Math.round(w*d);c.height=Math.round(h*d);ctx.setTransform(d,0,0,d,0,0);
+  ctx.fillStyle='#11161e';ctx.fillRect(0,0,w,h);ctx.strokeStyle='#303a48';ctx.lineWidth=1;
+  ctx.beginPath();ctx.moveTo(xOf(0),6);ctx.lineTo(xOf(0),dotHeight);ctx.moveTo(14,dotHeight);ctx.lineTo(w-14,dotHeight);ctx.stroke();
+  const pts=[];D.mps.forEach((m,i)=>{if(!D.onmap[i])return;const v=XYZ[i][ax],x=xOf(v),seed=Math.sin((i*3+ax+1)*12.9898)*43758.5453,y=10+(seed-Math.floor(seed))*(dotHeight-23);ctx.globalAlpha=.75;ctx.fillStyle=m.col;ctx.beginPath();ctx.arc(x,y,2.6,0,7);ctx.fill();pts.push({i,x,y,v})});ctx.globalAlpha=1;
+  ctx.font='600 12px "Source Sans 3",sans-serif';ctx.textBaseline='middle';means.forEach(g=>{const y=dotHeight+13+g.lane*16;g.y=y;ctx.fillStyle=g.col;ctx.strokeStyle='#e5eaf0';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(g.x,y-5);ctx.lineTo(g.x+5,y);ctx.lineTo(g.x,y+5);ctx.lineTo(g.x-5,y);ctx.closePath();ctx.fill();ctx.stroke();ctx.fillStyle='#e5eaf0';ctx.fillText(g.p,Math.max(3,Math.min(w-ctx.measureText(g.p).width-3,g.x+9)),y)});
+  ctx.font='12px "Source Sans 3",sans-serif';ctx.fillStyle='#aab5c4';ctx.textBaseline='alphabetic';ctx.fillText('−',14,h-3);ctx.textAlign='center';ctx.fillText('0',xOf(0),h-3);ctx.textAlign='right';ctx.fillText('+',w-14,h-3);ctx.textAlign='left';
+  c.setAttribute('aria-label',`Axis ${ax+1}. Party averages: `+means.map(g=>g.p+' '+g.mean.toFixed(2)+' ('+g.values.length+' MPs)').join('; '));
+  function hit(e){const r=c.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;let best=null,dist=100;pts.forEach(p=>{const dd=(p.x-x)**2+(p.y-y)**2;if(dd<dist){dist=dd;best=p}});return{x,y,best}}
+  c.onmousemove=e=>{const {x,y,best}=hit(e),g=means.find(g=>Math.abs(g.y-y)<10&&x>=g.left-5&&x<=g.left+g.width+5);c.title=g?`${g.p}: average ${g.mean.toFixed(2)} · ${g.values.length} MPs`:best?`${D.mps[best.i].n} (${D.mps[best.i].p}): ${best.v.toFixed(2)}`:'';c.style.cursor=AX==='all'||best?'pointer':''};
+  if(AX!=='all')c.onclick=e=>{const {best}=hit(e);if(best)go(sel,best.i)};
+ });
+};
+const compactInfo=info;info=function(){compactInfo();$('chip').classList.toggle('axis-panel',AX!==null);if(AX!==null)drawAxisPlots()};
+addEventListener('resize',()=>{if(AX!==null)drawAxisPlots()});
+const compactProf=finishProf;finishProf=function(h){compactProf(h);$('pclose').textContent='×';$('pclose').title='Close profile';$('pclose').setAttribute('aria-label','Close profile')};
+const compactMP=renderMP;renderMP=function(i){compactMP(i);$('pclose').textContent='×';$('pclose').title='Close profile';$('pclose').setAttribute('aria-label','Close profile')};
+const compactPO=renderPO;renderPO=function(i){compactPO(i);$('pclose').textContent='×';$('pclose').title='Close profile';$('pclose').setAttribute('aria-label','Close profile')};
+for(const b of document.querySelectorAll('dialog .xbtn')){b.textContent='×';b.title='Close';if(!b.hasAttribute('aria-label'))b.setAttribute('aria-label','Close dialog')}
+// Put the game first in the guide, with a direct entry point.
+const useGuide=$('guide-use-panel'),gameHeading=[...useGuide.querySelectorAll('h3')].find(h=>h.textContent==='Find your place');
+if(gameHeading){const p=gameHeading.nextElementSibling;useGuide.prepend(gameHeading,p);p.insertAdjacentHTML('afterend','<button class="primary guide-play">Play Find my place →</button>');useGuide.querySelector('.guide-play').onclick=()=>{$('howDlg').close();setAppMode('quiz')}}
 
 // ---- start
 buildLayers();buildFilters();

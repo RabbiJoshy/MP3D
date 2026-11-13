@@ -101,3 +101,34 @@ $('howDlg').innerHTML=`<div class="d-top"><h2>How it works</h2><button class="xb
 $('compGuideClose').onclick=()=>$('howDlg').close();$('compDataDetails').onclick=()=>{$('howDlg').close();$('aboutDlg').showModal()};
 function guideTab(which){for(const k of ['use','data']){$('guide-'+k).setAttribute('aria-selected',k===which);$('guide-'+k+'-panel').hidden=k!==which}}
 for(const k of ['use','data']){$('guide-'+k).onclick=()=>guideTab(k);$('guide-'+k).onkeydown=e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();const next=k==='use'?'data':'use';guideTab(next);$('guide-'+next).focus()}}}
+// Space goes to the plots; party means get their own labelled, collision-free lanes.
+drawAxisPlots=function(){
+ $('chip').querySelectorAll('canvas[data-axplot]').forEach(c=>{
+  const ax=+c.dataset.axplot,d=devicePixelRatio||1,w=c.clientWidth||360,ctx=c.getContext('2d'),groups={};
+  const vals=D.mps.map((m,i)=>D.onmap[i]?XYZ[i][ax]:0),extent=Math.max(.85,...vals.map(Math.abs))*1.05;
+  const xOf=v=>14+(v+extent)/(2*extent)*(w-28);
+  D.mps.forEach((m,i)=>{if(D.onmap[i]){const g=groups[m.p]||(groups[m.p]={p:m.p,col:m.col,values:[]});g.values.push(XYZ[i][ax])}});
+  ctx.font='600 12px "Source Sans 3",sans-serif';
+  const ends=[],means=Object.values(groups).filter(g=>g.values.length>=4).map(g=>({...g,mean:g.values.reduce((a,b)=>a+b,0)/g.values.length})).sort((a,b)=>a.mean-b.mean);
+  means.forEach(g=>{g.x=xOf(g.mean);g.width=ctx.measureText(g.p).width+18;g.left=Math.max(3,Math.min(w-g.width-3,g.x-7));let lane=0;while(ends[lane]!=null&&ends[lane]+7>g.left)lane++;ends[lane]=g.left+g.width;g.lane=lane});
+  const dotHeight=AX==='all'?88:112,h=dotHeight+ends.length*16+25;c.style.height=h+'px';c.width=Math.round(w*d);c.height=Math.round(h*d);ctx.setTransform(d,0,0,d,0,0);
+  ctx.fillStyle='#11161e';ctx.fillRect(0,0,w,h);ctx.strokeStyle='#303a48';ctx.lineWidth=1;
+  ctx.beginPath();ctx.moveTo(xOf(0),6);ctx.lineTo(xOf(0),dotHeight);ctx.moveTo(14,dotHeight);ctx.lineTo(w-14,dotHeight);ctx.stroke();
+  const pts=[];D.mps.forEach((m,i)=>{if(!D.onmap[i])return;const v=XYZ[i][ax],x=xOf(v),seed=Math.sin((i*3+ax+1)*12.9898)*43758.5453,y=10+(seed-Math.floor(seed))*(dotHeight-23);ctx.globalAlpha=.75;ctx.fillStyle=m.col;ctx.beginPath();ctx.arc(x,y,2.6,0,7);ctx.fill();pts.push({i,x,y,v})});ctx.globalAlpha=1;
+  ctx.font='600 12px "Source Sans 3",sans-serif';ctx.textBaseline='middle';means.forEach(g=>{const y=dotHeight+13+g.lane*16;g.y=y;ctx.fillStyle=g.col;ctx.strokeStyle='#e5eaf0';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(g.x,y-5);ctx.lineTo(g.x+5,y);ctx.lineTo(g.x,y+5);ctx.lineTo(g.x-5,y);ctx.closePath();ctx.fill();ctx.stroke();ctx.fillStyle='#e5eaf0';ctx.fillText(g.p,Math.max(3,Math.min(w-ctx.measureText(g.p).width-3,g.x+9)),y)});
+  ctx.font='12px "Source Sans 3",sans-serif';ctx.fillStyle='#aab5c4';ctx.textBaseline='alphabetic';ctx.fillText('−',14,h-3);ctx.textAlign='center';ctx.fillText('0',xOf(0),h-3);ctx.textAlign='right';ctx.fillText('+',w-14,h-3);ctx.textAlign='left';
+  c.setAttribute('aria-label',`Axis ${ax+1}. Party averages: `+means.map(g=>g.p+' '+g.mean.toFixed(2)+' ('+g.values.length+' MPs)').join('; '));
+  function hit(e){const r=c.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;let best=null,dist=100;pts.forEach(p=>{const dd=(p.x-x)**2+(p.y-y)**2;if(dd<dist){dist=dd;best=p}});return{x,y,best}}
+  c.onmousemove=e=>{const {x,y,best}=hit(e),g=means.find(g=>Math.abs(g.y-y)<10&&x>=g.left-5&&x<=g.left+g.width+5);c.title=g?`${g.p}: average ${g.mean.toFixed(2)} · ${g.values.length} MPs`:best?`${D.mps[best.i].n} (${D.mps[best.i].p}): ${best.v.toFixed(2)}`:'';c.style.cursor=AX==='all'||best?'pointer':''};
+  if(AX!=='all')c.onclick=e=>{const {best}=hit(e);if(best)go(sel,best.i)};
+ });
+};
+const compactInfo=info;info=function(){compactInfo();$('chip').classList.toggle('axis-panel',AX!==null);if(AX!==null)drawAxisPlots()};
+addEventListener('resize',()=>{if(AX!==null)drawAxisPlots()});
+const compactProf=finishProf;finishProf=function(h){compactProf(h);$('pclose').textContent='×';$('pclose').title='Close profile';$('pclose').setAttribute('aria-label','Close profile')};
+const compactMP=renderMP;renderMP=function(i){compactMP(i);$('pclose').textContent='×';$('pclose').title='Close profile';$('pclose').setAttribute('aria-label','Close profile')};
+const compactPO=renderPO;renderPO=function(i){compactPO(i);$('pclose').textContent='×';$('pclose').title='Close profile';$('pclose').setAttribute('aria-label','Close profile')};
+for(const b of document.querySelectorAll('dialog .xbtn')){b.textContent='×';b.title='Close';if(!b.hasAttribute('aria-label'))b.setAttribute('aria-label','Close dialog')}
+// Put the game first in the guide, with a direct entry point.
+const useGuide=$('guide-use-panel'),gameHeading=[...useGuide.querySelectorAll('h3')].find(h=>h.textContent==='Find your place');
+if(gameHeading){const p=gameHeading.nextElementSibling;useGuide.prepend(gameHeading,p);p.insertAdjacentHTML('afterend','<button class="primary guide-play">Play Find my place →</button>');useGuide.querySelector('.guide-play').onclick=()=>{$('howDlg').close();setAppMode('quiz')}}
