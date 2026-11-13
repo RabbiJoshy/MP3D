@@ -33,7 +33,7 @@ const HARel=(()=>{
  function create(root,cfg){
   const names=Object.keys(cfg.sets),calc={};
   names.forEach(n=>{const s=cfg.sets[n];calc[n]=calculate(s.rows,s.topics,s.minShared)});
-  let setName=names[0],view='divide',selected={},side={};
+  let setName=names[0],view='links',selected={},side={};
   const wrap=(txt,max)=>{const lines=[];let line='';for(const w of String(txt).split(' ')){if((line+' '+w).length>max&&line){lines.push(line);line=w}else line+=(line?' ':'')+w}if(line)lines.push(line);return lines.slice(0,3)};
   const cut=(s,n)=>s.length>n?s.slice(0,n-1)+'…':s;
   function ensure(){const c=calc[setName];if(selected[setName]==null||!c.nodes.some(n=>n.k===selected[setName])){
@@ -47,17 +47,17 @@ const HARel=(()=>{
    const stanceLabel=sd<0?topic.lo:topic.hi,related=stanceLinks(S.rows,S.topics,sk,sd,S.minShared,S.minSide);
    const noun=S.noun;
    const toolbar=`<div class="rel-bar"><div class="seg"><span class="sl">Compare</span>${names.map(n=>`<button data-set="${n}" aria-pressed="${n===setName}">${esc(cfg.sets[n].label)}</button>`).join('')}</div>
-    <div class="seg"><span class="sl">View</span><button data-view="divide" aria-pressed="${view==='divide'}">Divisive × distinguishing</button><button data-view="links" aria-pressed="${view==='links'}">${esc(S.label)} links</button><button data-view="stances" aria-pressed="${view==='stances'}">Stances</button></div>
+    <div class="seg"><span class="sl">View</span><button data-view="links" aria-pressed="${view==='links'}">Go together</button><button data-view="stances" aria-pressed="${view==='stances'}">If you back X…</button></div>
     <label class="rel-sel">${esc(noun)} <select id="relSelect">${c.nodes.map(n=>`<option value="${n.k}" ${n.k===sk?'selected':''}>${esc(cut(n.title,70))}</option>`).join('')}</select></label></div>`;
    const stanceControls=view==='stances'?`<div class="rel-sides" aria-label="Choose a stance">${[-1,1].map(v=>`<button data-side="${v}" aria-pressed="${sd===v}">${esc(cut(v<0?topic.lo:topic.hi,90))}</button>`).join('')}</div>`:'';
-   const note=view==='stances'?'Pick a position to see which other positions tend to go with it. Stronger lines mean stronger association; distances have no meaning.':view==='links'?`Pick a ${noun}. Stronger links mean more similar patterns of recorded positions; the ring layout has no distance meaning.`:`Across: how evenly MPs split on the ${noun}. Up: average strength of association with the other ${S.label.toLowerCase()}. Not validated predictive power.`;
+   const note=view==='stances'?'Positions that MPs tend to take together with the one selected above.':'Topics whose MP scores move together (thicker lines = stronger link).';
    const side7=view==='stances'
-    ?(related.slice(0,7).map(x=>`<button data-node="${x.k}" data-stance="${x.side}" class="rel-nb"><span>${esc(x.label)}</span><small>${esc(x.title)}</small><meter min="0" max="1" value="${x.strength}"></meter><small>${x.together} of ${x.cohort} MPs on this side also took that side · |φ| ${x.strength.toFixed(2)}</small></button>`).join('')||'<p class="meta">Not enough shared evidence for stance links.</p>')
+    ?(related.slice(0,7).map(x=>`<button data-node="${x.k}" data-stance="${x.side}" class="rel-nb"><span>${esc(x.label)}</span><small>${esc(x.title)}</small><meter min="0" max="1" value="${x.strength}"></meter><small>${x.together} of ${x.cohort} MPs · |φ| ${x.strength.toFixed(2)}</small></button>`).join('')||'<p class="meta">Not enough shared evidence for stance links.</p>')
     :(near.slice(0,7).map(x=>{const n=c.nodes.find(n=>n.k===(x.a===sk?x.b:x.a));return`<button data-node="${n.k}" class="rel-nb"><span>${esc(n.title)}</span><meter min="0" max="1" value="${x.strength}"></meter><small>|r| ${x.strength.toFixed(2)} · ${x.n} shared MPs</small></button>`}).join('')||'<p class="meta">Not enough shared evidence.</p>');
-   root.innerHTML=`${toolbar}${stanceControls}<div class="rel-grid"><div class="rel-plot"><svg id="relPlot" viewBox="0 0 900 650" role="group" aria-label="${view==='stances'?'Stance relationships':view==='links'?'Links between '+esc(S.label.toLowerCase()):'Divisiveness and distinguishing association'}"></svg><p class="meta">${note}</p></div>
+   root.innerHTML=`${toolbar}${stanceControls}<div class="rel-grid"><div class="rel-plot"><svg id="relPlot" viewBox="0 0 900 650" role="group" aria-label="${view==='stances'?'Stance relationships':'Links between '+esc(S.label.toLowerCase())}"></svg><p class="meta">${note}</p></div>
     <aside class="rel-detail"><h2>${esc(view==='stances'?stanceLabel:chosen.title)}</h2><p class="meta">${view==='stances'?esc(chosen.title):chosen.n+' scored MPs'}</p>${side7}
     <button class="primary" id="relExplore">View on the map &rarr;</button>
-    <details open><summary>How to read this</summary><p><b>Divisive</b> is 4p(1−p), where p is the share of MPs with a positive score, leaving out neutral scores: 1 means an even split. <b>Distinguishing</b> is the mean absolute correlation of this ${esc(noun)} with every other one, over MPs scored on both (at least ${S.minShared} shared MPs per pair). Missing scores are never treated as zero. Strength is absolute Pearson correlation, so flipping a scale does not change it. <b>Stances</b> use the sign of each score: association (phi) between taking one side here and a side elsewhere, with at least ${S.minShared} shared MPs and ${S.minSide} on each side. Party loyalty, overlapping questions and uneven speech coverage can all drive these links. They describe this dataset only, and nobody has tested them as predictors. ${S.extra||''}</p></details></aside></div>`;
+    <details><summary>How this is calculated</summary><p>Computed only over MPs scored on both items (at least ${S.minShared} shared MPs per pair; missing scores are never treated as zero). Link strength is absolute correlation |r| or stance association |φ|.</p></details></aside></div>`;
    const svg=root.querySelector('#relPlot'),coords=new Map();let mk='';
    if(view==='stances'){
     const conn=related.slice(0,7);

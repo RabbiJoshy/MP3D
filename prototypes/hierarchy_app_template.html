@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>MP3D — Parliament's space, by subject and fight</title>
+<title>MP3D — Parliament's space, by subject and proposition</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600;700&display=swap">
 <style>
 :root{--bench:#0e1117;--bench2:#161b24;--bench3:#1f2633;--line:#273142;--ink:#eef1f5;--dim:#9aa4b2;--muted:#6b7584;--brass:#d9b45f;--yes:#8fd694;--no:#e58e7a;
@@ -189,10 +189,9 @@ dialog::backdrop{background:rgba(7,9,13,.72)}
 
 /* tabs, quiz, relationships */
 .mode-tabs .tab-btn{cursor:pointer}
-.app.quiz{--lw:440px}.app.quiz.hide-left #left{visibility:visible;border-right:1px solid var(--line)}
-.app.quiz .lhead,.app.quiz #tree{display:none}#qz{display:none;flex:1;overflow:auto;padding:18px 20px 40px}.app.quiz #qz{display:block}
+.app.quiz{--lw:440px;grid-template-columns:var(--lw) minmax(0,1fr)}.app.quiz.hide-left #left{visibility:visible;border-right:1px solid var(--line)}
+.app.quiz .lhead,.app.quiz #tree,.app.quiz #chip{display:none}#qz{display:none;flex:1;overflow:auto;padding:18px 20px 40px}.app.quiz #qz{display:block}
 body[data-mode=quiz] #browse{display:none}
-.app.quiz #dock{display:none}.app.quiz{grid-template-columns:var(--lw) minmax(0,1fr) 0}
 #qz h2{font:700 20px/1.25 var(--display);margin:6px 0 8px}#qz h3{font:700 11px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--brass);margin:18px 0 6px}
 #qz p{line-height:1.55;margin-bottom:8px}#qz .qtop{display:flex;align-items:center;gap:8px;justify-content:space-between}
 .qprog{height:4px;background:var(--line);border-radius:4px;margin:8px 0 14px}.qprog i{display:block;height:100%;background:var(--brass);border-radius:4px}
@@ -241,8 +240,8 @@ body[data-mode=quiz] #browse{display:none}
  </div>
 </header>
 <div class="app" id="app">
- <aside id="left" aria-label="Topics, subjects, fights and details">
-  <div class="lhead"><h1>Topics</h1><input type="search" id="sq" placeholder="Search subjects and fights" autocomplete="off" aria-label="Search subjects and fights"></div>
+ <aside id="left" aria-label="Topics, subjects, propositions and details">
+  <div class="lhead"><h1>Topics</h1><input type="search" id="sq" placeholder="Search subjects and propositions" autocomplete="off" aria-label="Search subjects and propositions"></div>
   <div id="tree" role="tree"></div>
   <div id="chip"></div>
   <div id="qz" aria-live="polite"></div>
@@ -250,7 +249,7 @@ body[data-mode=quiz] #browse{display:none}
  <main id="stage">
   <canvas id="cv" aria-label="3D map of MPs"></canvas>
   <div id="nav"><button class="fbtn" id="browse" aria-expanded="true" title="Show or hide topics">&#9776; Topics</button><nav id="crumbs" aria-label="Breadcrumb"></nav></div>
-  <div id="tools"><div class="seg" id="bar"><button id="b3" aria-pressed="true">3D</button><button id="b2" aria-pressed="false">2D</button></div><button class="fbtn" id="layBtn" aria-expanded="false">Layers</button><button class="fbtn" id="filBtn" aria-expanded="false">Filters<span class="dotb"></span></button><button class="fbtn" id="reset" title="Reset camera and layers">Reset</button></div>
+  <div id="tools"><button class="fbtn" id="filBtn" aria-expanded="false">Filters<span class="dotb"></span></button><button class="fbtn" id="layBtn" aria-expanded="false">View &#9662;</button></div>
   <div class="float pop" id="layPop" aria-label="Layers"></div>
   <div class="float pop" id="filPop" aria-label="Filters"></div>
   <div id="leg"></div>
@@ -261,11 +260,11 @@ body[data-mode=quiz] #browse{display:none}
 <aside id="profile" aria-label="MP positions"></aside>
 <dialog id="howDlg"><div class="d-top"><h2>How it works</h2><button class="xbtn" data-close="howDlg">&#10005; Close</button></div><div class="d-body">
  <p>Each dot is an MP, placed in one 3D space built from how they spoke on the subjects in Commons debates. Rotate it by dragging; click a dot for that MP's positions.</p>
- <p>Pick anything in the list on the left. A <b>line</b> is one fight (a bill or measure with MPs on both sides) and points towards where MPs who argued <i>for</i> sit. A <b>disc</b> is a subject, spanned by its fights' lines. A group shows its subjects' discs. Dots are coloured by their score on what you picked; grey means no score.</p>
- <p><b>Faint, dashed lines mean the space only partly explains that fight.</b> The fit strength is measured in a map rebuilt without that subject, so it is an honest test, and the page says "weak fit" when the picture should not be trusted.</p>
- <p>In an MP's profile, <b>positions in fights</b> are the two-sided evidence behind the map. <b>Took a side</b> lists speeches on fights where only one side was found. They are shown for context and are not used to place anyone on the map.</p>
- <p>Use <b>Layers</b> to hide parts of the picture, <b>Filters</b> to fade parties or thinly-evidenced MPs, and the box at the top to find an MP. The browser Back button steps back through what you opened.</p>
- <p><b>Find my place</b> (top tabs) asks questions about real fights and places a gold star for you. <b>Relationships</b> shows which subjects go together and which split MPs most.</p><p class="meta">Near-duplicate fights on the same bill are merged before anything is scored. <button type="button" class="link" onclick="document.getElementById('howDlg').close();document.getElementById('aboutDlg').showModal()">About this data &rarr;</button></p></div></dialog>
+ <p>Pick anything in the list on the left. A <b>line</b> is one proposition (a bill or measure with MPs on both sides) and points towards where MPs who argued <i>for</i> sit. A <b>disc</b> is a subject, spanned by its propositions' lines. A group shows its subjects' discs. Dots are coloured by their score on what you picked; grey means no score.</p>
+ <p><b>Faint, dashed lines mean the space only partly explains that proposition.</b> The fit strength is measured in a map rebuilt without that subject, so it is an honest test, and the page says "weak fit" when the picture should not be trusted.</p>
+ <p>In an MP's profile, <b>positions in propositions</b> are the two-sided evidence behind the map. <b>Took a side</b> lists speeches on propositions where only one side was found. They are shown for context and are not used to place anyone on the map.</p>
+ <p>Use <b>View</b> to adjust the display, <b>Filters</b> to fade parties or unplaced MPs, and the box at the top to find an MP. The browser Back button steps back through what you opened.</p>
+ <p><b>Find my place</b> (top tabs) asks questions about real propositions and places a gold star for you. <b>Relationships</b> shows which subjects go together.</p><p class="meta">Near-duplicate propositions on the same bill are merged before anything is scored. <button type="button" class="link" onclick="document.getElementById('howDlg').close();document.getElementById('aboutDlg').showModal()">About this data &rarr;</button></p></div></dialog>
 <dialog id="aboutDlg"><div class="d-top"><h2>About this data</h2><button class="xbtn" data-close="aboutDlg">&#10005; Close</button></div><div class="d-body" id="aboutBody"></div></dialog>
 <script id="d" type="application/json">__DATA__</script>
 <script>
@@ -288,7 +287,7 @@ const lvl=r=>r>=.5?'good fit':r>=.3?'partial fit':'weak fit';
 const lcol=r=>r>=.5?'#8fd694':r>=.3?'#d9b45f':'#6b7584';
 const INK='#eef1f5',DIM='#9aa4b2';
 // ---- layers and filters
-const LAYERS=[['mps','MPs','#9aa4b2'],['pavg','Party averages','#d9b45f'],['shape','Selected line / plane','#8fd694'],['rimM','Fight dots: measured','#6fb3e0'],['rimS','Fight dots: small sample (diamonds)','#e0a96f'],['rimI','Fight dots: inferred, one-sided (diamonds)','#c27fd0'],['planes','All subject planes','#6b7584'],['axes','Axis labels','#6b7584']];
+const LAYERS=[['mps','MPs','#9aa4b2'],['pavg','Party averages','#d9b45f'],['shape','Selected line / plane','#8fd694'],['rimM','Proposition dots: measured','#6fb3e0'],['rimS','Proposition dots: small sample (diamonds)','#e0a96f'],['rimI','Proposition dots: inferred, one-sided (diamonds)','#c27fd0'],['planes','All subject planes','#6b7584'],['axes','Axis labels','#6b7584']];
 const L0={mps:true,pavg:true,shape:true,rimM:true,rimS:true,rimI:true,planes:false,axes:true};
 let L={...L0};
 let FL={parties:new Set(),onlyPos:false,minSub:0};
@@ -455,9 +454,8 @@ function draw(){
  const endName=nd.kind==='fight'?['for','against']:['positive end','negative end'];
  const kv=(svg,t)=>`<span class="it">${svg}${t}</span>`;
  const lk=kv(ic('<circle cx="7" cy="7" r="4.5" fill="#9aa4b2"/>'),'for end')+kv(ic('<circle cx="7" cy="7" r="4" fill="none" stroke="#9aa4b2" stroke-width="1.6"/>'),'against end')+kv(ic('<path d="M7 2L12 7L7 12L2 7Z" fill="#9aa4b2"/>'),'inferred / small')+kv(ic('<circle cx="7" cy="7" r="4.5" fill="#9aa4b2" opacity=".3"/>'),'weak fit')+kv(ic('<circle cx="7" cy="7" r="4" fill="#3a4150"/>'),'no score')+(picked?kv('<span class="sw" style="background:#2dd4bf"></span>','MP high')+kv('<span class="sw" style="background:#fb7185"></span>','MP low'):'')+kv(ic('<circle cx="7" cy="7" r="6" fill="#d9b45f"/>'),'party avg')+kv(ic('<circle cx="7" cy="7" r="3.5" fill="#d9b45f"/>'),'party avg, under 8 MPs')+(YOU?kv(ic('<path d="M7 1l1.8 4.2 4.5.4-3.4 3 1 4.4L7 10.6 3.1 13l1-4.4-3.4-3 4.5-.4z" fill="#ffd45e"/>'),'you'):'');
- const lg=$('leg');lg.classList.toggle('c',store.get('legC')!=='0');
- lg.innerHTML=`<div class="lk"><button class="lt" id="legT" aria-expanded="${store.get('legC')==='0'}">Key &#9662;</button>${lk}</div>`+`<div class="axs"><button type="button" class="axc" data-ax="all" aria-pressed="${AX==='all'}" title="Compare all 3 axes side by side"><b>axes</b> Overview</button>${[0,1,2].map(n=>`<button type="button" class="axc" data-ax="${n}" aria-pressed="${AX===n}" title="What does axis ${n+1} mean?"><b>axis ${n+1}</b> ${esc(D.axes[n])}</button>`).join('')}</div>`;
- if(lg.classList.contains('c'))lg.innerHTML='<button class="lt" id="legT" aria-expanded="false" style="margin:0">Key &#9656;</button>'+lg.querySelector('.axs').outerHTML;
+ const lg=$('leg');lg.classList.remove('c');
+ lg.innerHTML=`<div class="axs" style="margin-top:0;align-items:center"><button type="button" class="axc" data-ax="all" aria-pressed="${AX!==null}" title="Explore the 3 map axes"><b>Axes</b></button>${picked?`<span class="it" style="margin-left:6px"><span class="sw" style="background:#2dd4bf"></span>${endName[0]}</span><span class="it"><span class="sw" style="background:#fb7185"></span>${endName[1]}</span>`:''}</div>`;
  filCount()}
 // ---- tree (with subject search)
 const open={};
@@ -484,7 +482,7 @@ function renderTree(){const q=tq.trim().toLowerCase(),hit=x=>!q||String(x).toLow
   const rest=D.subjects.map((s,k)=>k).filter(k=>!D.groups.some(g=>g.subjects.includes(k)));
   if(rest.length){const rr=subjRows(rest,'ind2');if(rr)h+='<div class="few" style="padding-left:14px">Not in a group (no usable direction):</div>'+rr}}
  else h+=subjRows(D.subjects.map((s,k)=>k).sort((a,b)=>D.subjects[a].name.localeCompare(D.subjects[b].name)),'ind1');
- if(q&&!any)h+='<div class="few" style="padding-left:14px">No subject or fight matches "'+esc(tq)+'".</div>';
+ if(q&&!any)h+='<div class="few" style="padding-left:14px">No subject or proposition matches "'+esc(tq)+'".</div>';
  $('tree').innerHTML=h}
 $('sq').oninput=e=>{tq=e.target.value;renderTree()};
 $('tree').addEventListener('click',e=>{const tg=e.target.closest('[data-tog]');if(tg){open[tg.dataset.tog]=!open[tg.dataset.tog];renderTree();return}
@@ -531,26 +529,26 @@ function info(){const det=AX!==null||sel.t!=='root';$('app').classList.toggle('d
  h+=`<h2>${esc(nd.name)}</h2>`;
  if(sel.t==='root'){
   h+=`<div class="sp"><span class="big">${N}</span> <span class="dim">MPs placed</span></div><p class="meta sp">Every MP with at least one subject score. ${D.onmap.filter(x=>x).length} sit on the research map; the rest are projected from the subjects they have (lower confidence).</p>`;
-  h+=`<p class="meta sp"><b class="ink">This is the full 3D space.</b> Every MP is one point. Its three axes are (1) ${esc(D.axes[0])}, (2) ${esc(D.axes[1])}, (3) ${esc(D.axes[2])}. Groups, subjects and fights are drawn inside it as planes and lines.</p><p class="meta sp">Pick a group below, or a subject or fight in the list on the left. Hover over anything in the list to preview it in the space.</p><h4>Groups</h4><div class="kids">`;
+  h+=`<p class="meta sp"><b class="ink">This is the full 3D space.</b> Every MP is one point. Its three axes are (1) ${esc(D.axes[0])}, (2) ${esc(D.axes[1])}, (3) ${esc(D.axes[2])}. Groups, subjects and propositions are drawn inside it as planes and lines.</p><p class="meta sp">Pick a group below, or a subject or proposition in the list on the left. Hover over anything in the list to preview it in the space.</p><h4>Groups</h4><div class="kids">`;
   D.groups.forEach((g,gi)=>{h+=kid('G'+gi,gname(g),null,g.subjects.length+(g.subjects.length===1?' subject':' subjects'),gfull(g))});h+='</div>';
   const sc=null;h+=`<h4>Party mix of all MPs</h4>`+splitBar(Object.fromEntries(Object.entries(pcount).map(([p,a])=>[p,a.n])),N,'All MPs')}
  else if(sel.t==='os'){const o=nd.o;
-  h+=`<div class="kind">inferred fight (one-sided)</div>`;
+  h+=`<div class="kind">inferred proposition (one-sided)</div>`;
   if(o.desc)h+=`<p class="sp">${esc(o.desc)}</p>`;
   h+=`<div class="sides"><div class="sd pos"><b>Supporters want</b>${esc(o.fm||'the FOR side')}</div><div class="sd neg"><b>Opponents want</b>${esc(o.am||'the AGAINST side')}</div></div>`;
   h+=`<div class="sp"><span class="big">${o.nb}</span> <span class="dim">placed MPs backed it (${o.nfor} for, ${o.nag} against found)</span></div>`;
   h+=o.u?`<div class="sp">Signal <span class="big" style="font-size:18px">${o.r.toFixed(2)}</span> <span class="pill" style="background:${lcol(o.r)}">${lvl(o.r)}</span></div><p class="meta sp">The line runs from the centre of all MPs to the average position of the ${o.side==='for'?'MPs who backed it':'MPs who opposed it'}. Signal = that offset divided by its standard error, rescaled to 0-1.</p>`:'';
-  h+=`<p class="meta sp"><b class="ink">Not used to place any MP.</b> Only one side of this fight was found, so this is a guess from who backed it (it tends to follow party), not a measured fit.</p>`;
+  h+=`<p class="meta sp"><b class="ink">Not used to place any MP.</b> Only one side of this proposition was found, so this is a guess from who backed it (it tends to follow party), not a measured fit.</p>`;
   const cnt={};o.bk.forEach(i=>{const p=D.mps[i].p;cnt[p]=(cnt[p]||0)+1});
   h+=`<h4>Party split of backers</h4>`+splitBar(cnt,o.bk.length,'Backers');
   h+=`<h4>Backers on the map</h4><div class="mpl">${mpBtns(o.bk.slice(0,12).map(i=>[i,null]))}</div>`}
  else{
-  h+=`<div class="kind">${nd.kind}${nd.kind==='fight'?' (a line)':nd.kind==='subject'?' (a plane)':' (a set of subjects)'}</div>`;
+  h+=`<div class="kind">${nd.kind==='fight'?'proposition':nd.kind}${nd.kind==='fight'?' (a line)':nd.kind==='subject'?' (a plane)':' (a set of subjects)'}</div>`;
   if(nd.kind==='fight'){if(nd.f.desc)h+=`<p class="sp">${esc(nd.f.desc)}</p>`;
    h+=`<div class="sides"><div class="sd pos"><b>Those <span style="text-transform:none">for</span> want</b>${esc(nd.f.fm||'the FOR side')}</div><div class="sd neg"><b>Those against want</b>${esc(nd.f.am||'the AGAINST side')}</div></div>`}
-  if(nd.kind==='subject'){const x=nd.sub;h+=`<p class="sp">${x.nfights} fights on this subject (${x.nlines} drawn as lines) feed one scale. It runs from the teal end to the coral end:</p><div class="sides"><div class="sd pos"><b>Teal end</b>${esc(x.hi)}</div><div class="sd neg"><b>Coral end</b>${esc(x.lo)}</div></div>`}
+  if(nd.kind==='subject'){const x=nd.sub;h+=`<p class="sp">${x.nfights} propositions on this subject (${x.nlines} drawn as lines) feed one scale. It runs from the teal end to the coral end:</p><div class="sides"><div class="sd pos"><b>Teal end</b>${esc(x.hi)}</div><div class="sd neg"><b>Coral end</b>${esc(x.lo)}</div></div>`}
   if(nd.kind==='group'){const g=nd.g;h+=`<p class="meta sp"><b class="ink">All subjects:</b> ${esc(nd.full)}</p>`;
-   if(g.plane&&!GSUB)h+=`<p class="sp">One plane for the whole group: the two main directions its ${nd.subs.length} subjects (and their fights) point in. Colour = where an MP sits along the plane's first axis.</p><p class="meta sp">The plane captures ${Math.round(g.capture*100)}% of its subjects' directions.</p>`;
+   if(g.plane&&!GSUB)h+=`<p class="sp">One plane for the whole group: the two main directions its ${nd.subs.length} subjects (and their propositions) point in. Colour = where an MP sits along the plane's first axis.</p><p class="meta sp">The plane captures ${Math.round(g.capture*100)}% of its subjects' directions.</p>`;
    else h+=`<p class="sp">Subjects whose scales point the same way in the space. Colour = average of the subjects' standardised scores.${g.plane?'':' (This group has too few directions for a single plane.)'}</p>`;
    if(D.gstab<.5)h+=`<p class="meta sp"><b class="ink">Groups are tentative.</b> Re-drawing the MP sample gives the same grouping only partly (agreement ${D.gstab.toFixed(2)}; 1 = identical).</p>`;
    if(g.plane)h+=`<label class="ck" style="display:flex;gap:8px;align-items:center;margin-top:8px;cursor:pointer"><input type="checkbox" id="gsub" ${GSUB?'checked':''}> Show subject planes (${nd.subs.length} separate planes)</label>`;
@@ -565,7 +563,7 @@ function info(){const det=AX!==null||sel.t!=='root';$('app').classList.toggle('d
    h+=`<h4>Party split</h4>`+splitBar(pe.pos,pe.np,lp)+splitBar(pe.neg,pe.nn,ln);
    h+=`<h4>Top MPs at each end</h4><div class="splabel">${lp}</div><div class="mpl">${mpBtns(te.pos)||'<span class="meta">none</span>'}</div><div class="splabel" style="margin-top:6px">${ln}</div><div class="mpl">${mpBtns(te.neg)||'<span class="meta">none</span>'}</div>`}
   if(nd.kind==='subject'){const fl=D.fights.map((f,i)=>[f,i]).filter(([f])=>f.subj===nd.sub.name&&f.u).sort((a,b)=>b[0].r-a[0].r),ol=D.os.map((o,i)=>[o,i]).filter(([o])=>o.subj===nd.sub.name&&o.u);
-   h+=`<h4>Fights in this subject</h4><div class="kids">${fl.map(([f,i])=>kid('F'+i,f.label,f.r,f.small?'small n':'')).join('')}${ol.map(([o,i])=>kid('O'+i,'◇ '+o.label,o.r,'inferred')).join('')||''}</div>`;
+   h+=`<h4>Propositions in this subject</h4><div class="kids">${fl.map(([f,i])=>kid('F'+i,f.label,f.r,f.small?'small n':'')).join('')}${ol.map(([o,i])=>kid('O'+i,'◇ '+o.label,o.r,'inferred')).join('')||''}</div>`;
    if(nd.sub.top_focus&&nd.sub.top_focus.length){
     h+=`<h4>Most active speakers (focus, not stance)</h4><p class="meta">Commons avg: ${nd.sub.avg_focus!=null?nd.sub.avg_focus.toFixed(1):'?'}% of speeches</p><div class="mpl">${nd.sub.top_focus.map(([mi,cnt,pct])=>{const m=D.mps[mi];return`<button class="mpbtn" data-mp="${mi}"><span class="dot" style="background:${m.col}"></span>${esc(m.n)} <span class="meta">${pct}% (${cnt})</span></button>`}).join('')}</div>`}}
   if(nd.kind==='group')h+=`<h4>Subjects</h4><div class="kids">${nd.subs.map(k=>kid('S'+k,D.subjects[k].name,D.subjects[k].u?D.subjects[k].r:null,D.subjects[k].n+' MPs')).join('')}</div>`}
@@ -667,35 +665,34 @@ function dotTip(d){const wk=d.r<.3?' &nbsp;<b>weak fit</b>':'';
   return`<b>${esc(f.label)}</b><br>${d.e>0?'wants':'opposes'}: ${esc(txt||(d.e>0?'the FOR side':'the AGAINST side'))}<br>${esc(f.subj||'')} · fit r ${f.r.toFixed(2)} · ${f.n} MPs${wk}${sm}`}
  const s=D.subjects[d.i];return`<b>${esc(s.name)}</b> (subject)<br>${d.e>0?esc(s.hi):esc(s.lo)}<br>fit r ${s.r.toFixed(2)} · ${s.n} MPs${wk}`}
 function nearest(x,y){let b=-1,bd=100;for(const o of proj.slice().sort((a,b)=>b.z-a.z)){if(!VIS[o.i]||(!L.mps&&o.i!==curMP))continue;const d=(o.x-x)**2+(o.y-y)**2;if(d<bd){bd=d;b=o.i}}return b}
-function setModeRaw(m3){mode3=m3;$('b3').setAttribute('aria-pressed',m3);$('b2').setAttribute('aria-pressed',!m3)}
+function setModeRaw(m3){mode3=m3;const b3=$('b3'),b2=$('b2');if(b3)b3.setAttribute('aria-pressed',m3);if(b2)b2.setAttribute('aria-pressed',!m3)}
 function setMode(m3){setModeRaw(m3);try{history.replaceState(null,'',hashStr(sel,curSel))}catch(e){}draw()}
-$('b3').onclick=()=>setMode(true);$('b2').onclick=()=>setMode(false);
 $('browse').onclick=()=>{const a=$('app');if(matchMedia('(max-width:820px)').matches)a.classList.toggle('mobile-open');else{a.classList.toggle('hide-left');$('browse').setAttribute('aria-expanded',!a.classList.contains('hide-left'))}};
 addEventListener('resize',draw);
 try{new ResizeObserver(()=>draw()).observe($('stage'))}catch(e){}
 function setDM(m){DM=m;document.querySelectorAll('#dm button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.dm===m));hoverDot=null;$('tip').style.display='none';draw()}
-$('layPop').addEventListener('click',e=>{const b=e.target.closest('#dm button');if(b)setDM(b.dataset.dm)});
+$('layPop').addEventListener('click',e=>{
+ const b=e.target.closest('#dm button');if(b){setDM(b.dataset.dm);return}
+ if(e.target.id==='b3'){setMode(true);return}if(e.target.id==='b2'){setMode(false);return}
+ if(e.target.id==='reset'){GSUB=false;if(sel.t==='group')info();yaw=YAW0;pitch=PITCH0;L={...L0};setDM('subjects');setModeRaw(true);buildLayers();closePops();try{history.replaceState(null,'',hashStr(sel,curSel))}catch(e){}draw()}
+});
 function setDock(){}
-$('leg').addEventListener('click',e=>{const ac=e.target.closest('[data-ax]');if(ac){e.stopPropagation();const v=ac.dataset.ax==='all'?'all':+ac.dataset.ax;AX===v?closeAxis():openAxis(v);return}if(e.target.closest('#legT')){store.set('legC',store.get('legC')==='0'?'1':'0');draw()}});
-// ---- layers / filters popovers
-function buildLayers(){$('layPop').innerHTML=`<h3>Topic dots</h3><div class="seg" id="dm" role="group" aria-label="Topic dots" style="margin-bottom:10px"><button data-dm="none" aria-pressed="${DM==='none'}">None</button><button data-dm="subjects" aria-pressed="${DM==='subjects'}">Subjects</button><button data-dm="all" aria-pressed="${DM==='all'}">All</button></div><h3>Show or hide</h3>`+LAYERS.map(([k,t,c])=>`<label class="ck"><input type="checkbox" data-l="${k}" ${L[k]?'checked':''}><i style="background:${c};border-radius:${k.startsWith('rimS')||k==='rimI'?'1px;transform:rotate(45deg) scale(.8)':'50%'}"></i>${t}</label>`).join('')+'<p class="small" style="margin-top:8px">Fight dots show only when Topic dots is set to All. Reset puts the camera and these switches back to the start.</p>'}
+$('leg').addEventListener('click',e=>{const ac=e.target.closest('[data-ax]');if(ac){e.stopPropagation();const v=ac.dataset.ax==='all'?'all':+ac.dataset.ax;AX===v?closeAxis():openAxis(v)}});
+// ---- view / filters popovers
+function buildLayers(){$('layPop').innerHTML=`<h3>Dimension</h3><div class="seg" role="group" aria-label="Dimension" style="margin-bottom:10px"><button id="b3" aria-pressed="${mode3}">3D</button><button id="b2" aria-pressed="${!mode3}">2D</button></div><h3>Rim dots</h3><div class="seg" id="dm" role="group" aria-label="Rim dots" style="margin-bottom:10px"><button data-dm="none" aria-pressed="${DM==='none'}">Off</button><button data-dm="subjects" aria-pressed="${DM==='subjects'}">Subjects</button><button data-dm="all" aria-pressed="${DM==='all'}">All</button></div><label class="ck"><input type="checkbox" data-l="axes" ${L.axes?'checked':''}>Show axis labels</label><div style="margin-top:10px"><button class="link" id="reset">Reset view</button></div>`}
 $('layPop').addEventListener('change',e=>{const k=e.target.dataset.l;if(k){L[k]=e.target.checked;draw()}});
 function buildFilters(){const ps=Object.entries(pcount).sort((a,b)=>b[1].n-a[1].n);
- $('filPop').innerHTML=`<h3>Party</h3><div class="chips">${ps.map(([p,a])=>`<button class="pchip" data-p="${esc(p)}" aria-pressed="${FL.parties.has(p)}"><em style="background:${a.col}"></em>${esc(p)} <span style="opacity:.6">${a.n}</span></button>`).join('')}</div><div class="small">Pick one or more; the others fade out. None picked = all shown.</div>
- <h3>Evidence</h3><label class="ck"><input type="checkbox" id="onlyPos" ${FL.onlyPos?'checked':''}><span id="onlyLab"></span></label>
- <div style="margin-top:6px" class="small">Only MPs with at least <b class="ink" id="minV">${FL.minSub}</b> subject${FL.minSub===1?'':'s'} scored</div><input type="range" id="minSub" min="0" max="${Math.min(maxSub,8)}" step="1" value="${FL.minSub}" aria-label="Minimum subjects scored">
- <p class="small" id="filCnt" style="margin-top:8px"></p><button class="link" id="filClear">Clear filters</button>`;onlyLabel()}
-function onlyLabel(){const e=$('onlyLab');if(e)e.textContent='Only MPs with a position on '+(sel.t==='root'?'anything (all of Parliament)':'"'+shortName(sel,34).replace(/^Group: /,'')+'"')}
+ $('filPop').innerHTML=`<h3>Party</h3><div class="chips">${ps.map(([p,a])=>`<button class="pchip" data-p="${esc(p)}" aria-pressed="${FL.parties.has(p)}"><em style="background:${a.col}"></em>${esc(p)} <span style="opacity:.6">${a.n}</span></button>`).join('')}</div><label class="ck" style="margin-top:8px"><input type="checkbox" id="onlyPos" ${FL.onlyPos?'checked':''}><span id="onlyLab"></span></label>
+ <p class="small" id="filCnt" style="margin-top:6px"></p><button class="link" id="filClear">Clear filters</button>`;onlyLabel()}
+function onlyLabel(){const e=$('onlyLab');if(e)e.textContent='Only MPs with a position on '+(sel.t==='root'?'anything':'this')}
 function filCount(){const n=VIS.filter(Boolean).length;const e=$('filCnt');if(e)e.textContent='Showing '+n+' of '+N+' MPs.';$('filBtn').classList.toggle('act',filtersOn());onlyLabel()}
 $('filPop').addEventListener('click',e=>{const c=e.target.closest('.pchip');if(c){const p=c.dataset.p;FL.parties.has(p)?FL.parties.delete(p):FL.parties.add(p);c.setAttribute('aria-pressed',FL.parties.has(p));draw();return}
  if(e.target.id==='filClear'){FL={parties:new Set(),onlyPos:false,minSub:0};buildFilters();draw()}});
-$('filPop').addEventListener('input',e=>{if(e.target.id==='minSub'){FL.minSub=+e.target.value;$('minV').textContent=FL.minSub;draw()}});
 $('filPop').addEventListener('change',e=>{if(e.target.id==='onlyPos'){FL.onlyPos=e.target.checked;draw()}});
 function closePops(){['layPop','filPop'].forEach(p=>$(p).classList.remove('on'));$('layBtn').setAttribute('aria-expanded',false);$('filBtn').setAttribute('aria-expanded',false)}
 function togglePop(p,b){const was=$(p).classList.contains('on');closePops();if(!was){$(p).classList.add('on');$(b).setAttribute('aria-expanded',true)}}
 $('layBtn').onclick=e=>{e.stopPropagation();togglePop('layPop','layBtn')};$('filBtn').onclick=e=>{e.stopPropagation();togglePop('filPop','filBtn')};
 document.addEventListener('pointerdown',e=>{if(!e.target.closest('.pop,#tools'))closePops();if(!e.target.closest('#mpbox'))$('mpsug').style.display='none'});
-$('reset').onclick=()=>{GSUB=false;if(sel.t==='group')info();yaw=YAW0;pitch=PITCH0;L={...L0};setDM('subjects');setModeRaw(true);buildLayers();closePops();try{history.replaceState(null,'',hashStr(sel,curSel))}catch(e){}draw()};
 // ---- find MP (autocomplete)
 const norm=s=>String(s).normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
 const PO=D.po||[],ALL=D.mps.concat(PO),NORM=ALL.map(m=>norm(m.n+' '+m.c+' '+m.p));
@@ -716,24 +713,24 @@ document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>$(b.dataset.c
 $('howOpen').onclick=()=>$('howDlg').showModal();
 const A=D.about,fmt=n=>n.toLocaleString('en-GB');
 $('aboutBody').innerHTML=`<h3>The quiz and Relationships</h3><ul>
- <li><b>Find my place</b>: you answer For / Against / Mixed / Skip on up to five fights (more if you ask). Your answers are compared with each MP's recorded side on the same fights; an MP needs at least three comparable answers to be listed, and a neutral or missing score never counts as agreement. Your star is the average of the fight lines you chose a side on, so it is a rough placement, not a measurement. Nothing is stored or sent.</li>
- <li><b>Relationships</b>: how subjects (or fights) go together across MPs, using only observed scores.</li></ul>
+ <li><b>Find my place</b>: you answer For / Against / Mixed / Skip on up to five propositions (more if you ask). Your answers are compared with each MP's recorded side on the same propositions; an MP needs at least three comparable answers to be listed, and a neutral or missing score never counts as agreement. Your star is the average of the proposition lines you chose a side on, so it is a rough placement, not a measurement. Nothing is stored or sent.</li>
+ <li><b>Relationships</b>: how subjects (or propositions) go together across MPs, using only observed scores.</li></ul>
 <h3>What was read</h3><ul>
  <li><b>${fmt(A.passages_extracted)}</b> Commons speeches read by a language model, which pulled out what measure each was about and which side the speaker took (${fmt(A.claims)} gave a clear for/against).</li>
- <li>A strict judge then checked <b>${fmt(A.dense_candidates)}</b> speeches against the fights in the same debates, to find every MP who took a side.</li>
- <li><b>${A.fights_reported}</b> fights found, <b>${A.fights_merged}</b> after merging duplicates on the same bill; <b>${A.fights_two_sided}</b> have MPs on both sides (drawn as lines).</li>
+ <li>A strict judge then checked <b>${fmt(A.dense_candidates)}</b> speeches against the propositions in the same debates, to find every MP who took a side.</li>
+ <li><b>${A.fights_reported}</b> propositions found, <b>${A.fights_merged}</b> after merging duplicates on the same bill; <b>${A.fights_two_sided}</b> have MPs on both sides (drawn as lines).</li>
  <li><b>${A.mps}</b> MPs placed on <b>${A.subjects}</b> subjects; ${A.mps_on_map} sit on the research map, the others are projected from fewer subjects.</li></ul>
 <h3>How to read the picture</h3><ul>
  <li><b>Grey dot</b>: no score for the thing you picked (they did not speak on it), or faded by a filter.</li>
- <li><b>Diamonds on the rim</b>: a fight with a small sample (few MPs), or an inferred fight where only one side was found, so its direction is guessed from who backed it.</li>
+ <li><b>Diamonds on the rim</b>: a proposition with a small sample (few MPs), or an inferred proposition where only one side was found, so its direction is guessed from who backed it.</li>
  <li><b>Weak fit</b>: the space explains less than 0.3 of that line or subject (tested on a map rebuilt without it). Dashed and faint; treat as a guess.</li>
  <li><b>Placed from N positions</b> in an MP's profile: an MP with fewer than 3 scored subjects is placed roughly.</li></ul>
 <h3>Known limits</h3><ul>
  <li>Positions are read by machine from speeches. In reading checks about 85% were right; the rest were a wrong side or no real position.</li>
  <li>What an MP said is not how they voted. Speech positions matched division votes about 85% of the time.</li>
- <li>Inferred (one-sided) fights follow party: they say who backed a measure, not a measured split.</li>
+ <li>Inferred (one-sided) propositions follow party: they say who backed a measure, not a measured split.</li>
  <li>The map describes who stands where; it does not beat the party line as a predictor.</li>
- <li>Only fights with enough speeches were scored; small fights were left out for budget.</li></ul>`;
+ <li>Only propositions with enough speeches were scored; small propositions were left out for budget.</li></ul>`;
 $('aboutOpen').onclick=()=>$('aboutDlg').showModal();
 // ---- MP drawer
 const SIDE={FOR:'Supports',AGAINST:'Opposes'};
@@ -769,15 +766,15 @@ function renderMP(i){drawnMP=i;$('app').classList.add('mp-open');const m=D.mps[i
  const rows=names.map(nm=>{const s=D.subjects.find(x=>x.name===nm);return{nm,v:s?s.sc[i]:null}}).sort((a,b)=>Math.abs(b.v??0)-Math.abs(a.v??0)).filter(r=>(bySubj[r.nm]||[]).length);
  let h=profTop(m)+'<div class="p-body">';
  h+=chipsHtml(cl.length&&pl(cl.length,'position'),one.length&&one.length+' took a side',A.length&&A.length+' argued');
- if(nsub[i]<3)h+=noteHtml('Placed from little evidence.',`This dot rests on ${nsub[i]} scored subject${nsub[i]===1?'':'s'} and ${npos[i]} fight position${npos[i]===1?'':'s'}${D.onmap[i]?'':', and is projected rather than on the research map'}. Treat its place as rough.`);
+ if(nsub[i]<3)h+=noteHtml('Placed from little evidence.',`This dot rests on ${nsub[i]} scored subject${nsub[i]===1?'':'s'} and ${npos[i]} proposition position${npos[i]===1?'':'s'}${D.onmap[i]?'':', and is projected rather than on the research map'}. Treat its place as rough.`);
  else if(!D.onmap[i])h+=noteHtml('Projected, lower confidence.',`Projected from the ${nsub[i]} subjects they have (lower confidence than MPs on the research map).`);
  h+=focusSec(i);
  if(cl.length){let k=0,body='';
   rows.forEach(({nm,v})=>{const fs=bySubj[nm];body+=`<div class="sh"${k>=LIM?' hidden':''}><span>${esc(nm)}</span><span class="sg ${v==null?'dim':v>0?'pos':'neg'}">${v==null?'no score':(v>0?'+':'')+v.toFixed(2)}</span></div>`;
    fs.forEach(([f,side,cs,fi])=>{const q=cs.find(c=>D.P[c[0]]);body+=itRow(side,SIDET[side]||'Opposes',f.label,q?dFmt(D.P[q[0]].d):'',posDetail('',side,cs),k>=LIM,fi);k++})});
-  h+=secHtml('pos','Positions in fights',cl.length,rows.map(r=>r.nm).join(' · '),'<span class="badge">behind the map</span> Fights with MPs on both sides, grouped by subject, strongest subject first. The signed number is the MP\'s score on that subject\'s scale.',body)}
+  h+=secHtml('pos','Positions in propositions',cl.length,rows.map(r=>r.nm).join(' · '),'<span class="badge">behind the map</span> Propositions with MPs on both sides, grouped by subject, strongest subject first. The signed number is the MP\'s score on that subject\'s scale.',body)}
  if(one.length){const so=one.slice().sort((a,b)=>(D.os[a[0]].subj||'').localeCompare(D.os[b[0]].subj||'')),ns=so.filter(x=>x[1]==='for').length,na=so.filter(x=>x[1]==='against').length,nb=so.length-ns-na;
-  h+=secHtml('took','Took a side',one.length,`${ns} supports · ${na} opposes${nb?` · ${nb} both`:''}`,'<span class="badge">not used for map placement</span> Fights where only one side was found. These speeches show what the MP backed, but they do not move them on the map.',
+  h+=secHtml('took','Took a side',one.length,`${ns} supports · ${na} opposes${nb?` · ${nb} both`:''}`,'<span class="badge">not used for map placement</span> Propositions where only one side was found. These speeches show what the MP backed, but they do not move them on the map.',
    so.map(([oi,side,cs],k)=>{const f=D.os[oi],q=cs.find(c=>D.P[c[0]]);return itRow(side,SIDET[side]||'Opposes',f.label,q?dFmt(D.P[q[0]].d):'',posDetail(f.subj,side,cs),k>=LIM)}).join(''))}
  h+=asksSec(i,false)+'</div>';
  finishProf(h);
@@ -785,7 +782,7 @@ function renderMP(i){drawnMP=i;$('app').classList.add('mp-open');const m=D.mps[i
    el.querySelector('.ir').setAttribute('aria-expanded',true);el.querySelector('.ib').hidden=false;el.scrollIntoView({block:'center'});el.style.boxShadow='0 0 0 2px #d9b45f'}focusF=null}}
 function renderPO(i){drawnMP=i;$('app').classList.add('mp-open');const m=PO[i-N];$('mpq').value=m.n;const n=(D.asks[i]||[]).length;
  let h=profTop(m)+'<div class="p-body">'+chipsHtml(n&&n+' argued');
- h+=noteHtml('Not on the map.','No positions on contested fights yet, so there is nothing to place this MP by.')+focusSec(i)+asksSec(i,true)+'</div>';
+ h+=noteHtml('Not on the map.','No positions on contested propositions yet, so there is nothing to place this MP by.')+focusSec(i)+asksSec(i,true)+'</div>';
  finishProf(h)}
 function lim(sec,all){const its=[...sec.querySelectorAll('.pb>.it,.pb>.sh')];let k=0;
  its.forEach(el=>{if(el.classList.contains('it')){el.hidden=!all&&k>=LIM;k++}});
@@ -868,7 +865,7 @@ function renderQuiz(){const el=$('qz');let h='';
  const nAns=Object.keys(Q.ans).length,dir=Object.values(Q.ans).filter(v=>v!==0).length;
  if(Q.step==='intro'){
   if(MODE==='quiz')silentSel({t:'root'});
-  h=`<div class="meta">Find my place</div><h2>Where would you sit in this Parliament?</h2><p>Answer questions about real fights from Commons debates and watch your star move through Parliament's 3D space. Keep going as long as you like, and view your closest MPs anytime.</p><p class="meta">For and Against place you; Mixed and Skip do not. MPs are matched on the questions you both answered, using only what they actually said. Nothing leaves this page.</p>
+  h=`<div class="meta">Find my place</div><h2>Where would you sit in this Parliament?</h2><p>Answer questions about real propositions from Commons debates and watch your star move through Parliament's 3D space. Keep going as long as you like, and view your closest MPs anytime.</p><p class="meta">For and Against place you; Mixed and Skip do not. MPs are matched on the questions you both answered, using only what they actually said. Nothing leaves this page.</p>
   <p><button class="primary" data-start>Start &rarr;</button></p><p><button class="linkb" data-choose>or choose which subjects to start with</button></p>${nAns?'<p><button class="qbtn" data-results>View my results</button></p>':''}`}
  else if(Q.step==='choose'){
   if(MODE==='quiz')silentSel({t:'root'});
@@ -879,7 +876,7 @@ function renderQuiz(){const el=$('qz');let h='';
   if(MODE==='quiz')silentSel({t:'fight',i:k});
   h=`<div class="qtop"><button class="qbtn" data-back>&larr; Back</button><span class="meta">Question ${Q.idx+1} (${nAns} answered)</span><button class="qbtn" data-results ${nAns?'':'disabled'}>Results &rarr;</button></div><div class="qprog"><i style="width:${Math.min(100,Math.round(100*nAns/15))}%"></i></div>
   <div class="meta">${esc(f.subj)}</div><h2 tabindex="-1" id="qtext">${esc(qText(k))}</h2>
-  <details class="qctx"><summary>About this fight</summary>${f.desc?`<p>${esc(f.desc)}</p>`:''}<p class="meta">${f.nfor} MPs for and ${f.nag} against were found. The gold line in the map is this fight; its FOR end is where those in favour sit.</p></details>
+  <details class="qctx"><summary>About this proposition</summary>${f.desc?`<p>${esc(f.desc)}</p>`:''}<p class="meta">${f.nfor} MPs for and ${f.nag} against were found. The rail through your star shows this proposition; teal is FOR and coral is AGAINST.</p></details>
   <div class="qans"><button class="qopt for" data-a="1" aria-pressed="${a===1}"><b>For</b><span>${esc(f.fm||'In favour')}</span></button><button class="qopt against" data-a="-1" aria-pressed="${a===-1}"><b>Against</b><span>${esc(f.am||'Opposed')}</span></button></div>
   <div class="qsec"><button class="qbtn" data-a="0" aria-pressed="${a===0}">Mixed / in between</button><button class="qbtn" data-skip>Skip &middot; no view</button></div>`+(()=>{if(!YOU)return'';let best=null,bd=1e9;for(let i=0;i<N;i++){if(!D.onmap[i])continue;const d=Math.hypot(XYZ[i][0]-YOU.p[0],XYZ[i][1]-YOU.p[1],XYZ[i][2]-YOU.p[2]);if(d<bd){bd=d;best=i}}return best!=null?`<p class="meta" style="margin-top:12px">Your <b style="color:#ffd45e">YOU</b> star is currently nearest <b class="ink">${esc(D.mps[best].n)}</b> (${esc(D.mps[best].p)})</p>`:''})()}
  else{
@@ -889,13 +886,13 @@ function renderQuiz(){const el=$('qz');let h='';
   h=`<div class="meta">Find my place</div><h2>Your results</h2><p class="meta">${nAns} answered (${dir} for or against, ${mixed} mixed) &middot; ${skipped} skipped &middot; ${subs.size} subject${subs.size===1?'':'s'}</p>`;
   if(dir<3)h+=`<p>Give a For or Against answer to at least three questions to see which MPs match you. ${YOU?'Your gold star is already on the map.':''}</p>`;
   else{
-   h+=`<p class="meta">Your <b style="color:#ffd45e">gold star</b> on the map is the average of the fight lines you took a side on. It is a rough placement, not a measurement.</p>`;
+   h+=`<p class="meta">Your <b style="color:#ffd45e">gold star</b> on the map is the average of the proposition lines you took a side on. It is a rough placement, not a measurement.</p>`;
    const dirKs=Object.keys(Q.ans).filter(k=>Q.ans[k]!==0);
    h+=`<details class="qctx"><summary>Which issues matter most to you?</summary><p class="meta">Tick to give an answer more weight.</p>${dirKs.map(k=>`<label class="ck" style="display:flex;gap:8px;padding:3px 0"><input type="checkbox" data-star="${k}" ${Q.star.has(+k)?'checked':''}> ${esc(D.fights[k].label)}</label>`).join('')}</details>`;
    if(!matches.length)h+=`<p>No MP has three comparable answers with you yet. Try more questions.</p>`;
    else{
     const pm=HAQuiz.parties(matches,i=>D.mps[i].p,3);
-    h+=`<h3>Closest MPs</h3><p class="meta">MPs with at least three questions in common with you. Agreement counts only what each MP said on that fight.</p>`;
+    h+=`<h3>Closest MPs</h3><p class="meta">MPs with at least three questions in common with you. Agreement counts only what each MP said on that proposition.</p>`;
     h+=matches.slice(0,6).map(m=>{const mp=D.mps[m.i];
      return`<article class="mcard"><div class="mh"><span class="dot" style="background:${mp.col}"></span><div><h4><button class="linkb" data-mp="${m.i}">${esc(mp.n)}</button></h4><div class="meta">${esc(mp.p)}${mp.c?' &middot; '+esc(mp.c):''}<br><b class="ink">${m.hit} of ${m.nShared} agree</b>${m.nShared-m.hit?' &middot; '+(m.nShared-m.hit)+' differ':''}</div></div></div>${m.shared.map(s=>`<div class="mq"><p><b>${esc(D.fights[s.k].label)}</b></p><p>You: <b>${sideTxt(Q.ans[s.k])}</b> &middot; ${esc(mp.n.split(' ').slice(-1)[0])}: <b>${sideTxt(s.sc)}</b> <span class="${s.ok?'ok':'no'}">${s.ok?'agree':'differ'}</span></p><button class="qbtn" data-ev="${m.i}:${s.k}" aria-label="Read ${esc(mp.n)}'s evidence on ${esc(D.fights[s.k].label)}">Read evidence &#8599;</button></div>`).join('')}</article>`}).join('');
     h+=`<h3>Party match</h3><p class="meta">Share of comparable answers that agree, for parties with at least 3 matched MPs.</p>${pm.length?pm.map(a=>`<div class="pm"><span><b>${esc(a.p)}</b></span><span class="b"><i style="width:${a.pct}%;background:${pcount[a.p]?pcount[a.p].col:'#888'}"></i></span><span>${a.pct}%<br><small class="meta">${a.mps} MPs</small></span></div>`).join(''):'<p class="meta">No party has 3 matched MPs yet.</p>'}`}}
@@ -923,7 +920,7 @@ function mountRel(){
   const fRows=D.mps.map((m,i)=>{const r=new Map();D.fights.forEach((f,k)=>{if(f.sc[i]!=null)r.set(k,f.sc[i])});return r});
   REL=HARel.create($('rel'),{
    sets:{subjects:{label:'Subjects',noun:'subject',topics:D.subjects.map((s,k)=>({k,title:s.name,lo:s.lo,hi:s.hi})),rows:subjRows,minShared:15,minSide:3,extra:'This view uses the '+D.subjects.length+' subjects. Subjects have only 21 to 164 scored MPs each, so the bar is 15 shared MPs per pair here, lower than the 30 the older version used; subjects with no pair that large are not drawn.'},
-         fights:{label:'Fights',noun:'fight',topics:D.fights.map((f,k)=>({k,title:f.label,lo:'Against: '+f.label,hi:'For: '+f.label})),rows:fRows,minShared:12,minSide:4,extra:'Fights use a lower bar (12 shared MPs) because few MPs spoke on two different fights, so many fights have no links.'}},
+         fights:{label:'Propositions',noun:'proposition',topics:D.fights.map((f,k)=>({k,title:f.label,lo:'Against: '+f.label,hi:'For: '+f.label})),rows:fRows,minShared:12,minSide:4,extra:'Propositions require 12 shared MPs per pair.'}},
    getSel:n=>n==='subjects'&&sel.t==='subj'?sel.i:n==='fights'&&sel.t==='fight'?sel.i:null,
    onSelect:(n,k)=>silentSel(n==='subjects'?{t:'subj',i:k}:{t:'fight',i:k}),
    onExplore:(n,k)=>{silentSel(n==='subjects'?{t:'subj',i:k}:{t:'fight',i:k});setAppMode('explore')}})}
