@@ -8,7 +8,7 @@ renderTree=function(){
  if(q){originalTree();document.querySelectorAll('#tree .row').forEach(r=>{r.tabIndex=0;r.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();r.click()}}});return}
  let h='<button class="topic-entry" data-k="root">All of Parliament <span>↗</span></button>';
  D.groups.forEach(g=>{h+='<div class="group-label">'+esc(gname(g))+'</div>';g.subjects.forEach(k=>{const s=D.subjects[k];h+=`<button class="topic-entry row" data-k="S${k}"><span>${esc(s.name)}</span><span>→</span></button>`})});
- const grouped=new Set(D.groups.flatMap(g=>g.subjects));D.subjects.forEach((s,k)=>{if(!grouped.has(k))h+=`<button class="topic-entry row" data-k="S${k}">${esc(s.name)} <span>→</span></button>`});
+ const grouped=new Set(D.groups.flatMap(g=>g.subjects));D.subjects.forEach((s,k)=>{if(!grouped.has(k)&&s.name!=='No policy')h+=`<button class="topic-entry row" data-k="S${k}">${esc(s.name)} <span>→</span></button>`});
  h+='<button class="comp-related" data-comp-rel>Explore relationships →</button>';$('tree').innerHTML=h;
 };
 const proposal=(key,title,sub)=>`<button class="comp-proposal" data-nav="${key}">${esc(title)}<small>${esc(sub)} →</small></button>`;
