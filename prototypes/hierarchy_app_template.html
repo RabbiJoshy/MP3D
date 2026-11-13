@@ -230,6 +230,7 @@ body[data-mode=quiz] #browse{display:none}
  .app.quiz #left{top:auto;bottom:0;left:0;right:0;width:100%;max-width:none;height:60dvh;transform:none;border-top:1px solid var(--line);border-right:0;box-shadow:0 -12px 40px rgba(0,0,0,.4)}
  .app.quiz #tools,.app.quiz #leg,.app.quiz #bar{display:none}.app.quiz #nav{display:none}}
 @media(max-width:620px){:root{--top:88px}.masthead{flex-wrap:wrap;height:var(--top);align-content:center;row-gap:6px}.mode-tabs{order:3;width:100%;justify-content:center}.mode-tabs .tab-btn{flex:1}.actions{margin-left:auto}}
+.lesscertain{margin-top:10px;border-top:1px dashed var(--line);padding-top:8px}.lesscertain>summary{cursor:pointer;color:var(--dim);font-size:14px;list-style:revert}
 </style><style>/*__MAP_COMPANION_CSS__*/</style></head>
 <body>
 <header class="masthead">
@@ -772,7 +773,9 @@ function renderMP(i){drawnMP=i;$('app').classList.add('mp-open');const m=D.mps[i
   h+=secHtml('pos','Positions in propositions',cl.length,rows.map(r=>r.nm).join(' · '),'<span class="badge">behind the map</span> Propositions with MPs on both sides, grouped by subject, strongest subject first. The signed number is the MP\'s score on that subject\'s scale.',body)}
  if(one.length){const so=one.slice().sort((a,b)=>(D.os[a[0]].subj||'').localeCompare(D.os[b[0]].subj||'')),ns=so.filter(x=>x[1]==='for').length,na=so.filter(x=>x[1]==='against').length,nb=so.length-ns-na;
   h+=secHtml('took','Took a side',one.length,`${ns} supports · ${na} opposes${nb?` · ${nb} both`:''}`,'<span class="badge">not used for map placement</span> Propositions where only one side was found. These speeches show what the MP backed, but they do not move them on the map.',
-   so.map(([oi,side,cs],k)=>{const f=D.os[oi],q=cs.find(c=>D.P[c[0]]);return itRow(side,SIDET[side]||'Opposes',f.label,q?dFmt(D.P[q[0]].d):'',posDetail(f.subj,side,cs),k>=LIM)}).join(''))}
+   (()=>{const row=([oi,side,cs],hid)=>{const f=D.os[oi],q=cs.find(c=>D.P[c[0]]);return itRow(side,SIDET[side]||'Opposes',f.label,q?dFmt(D.P[q[0]].d):'',posDetail(f.subj,side,cs),hid)};
+    const sure=so.filter(x=>!x[3]),less=so.filter(x=>x[3]);
+    return sure.map((x,k)=>row(x,k>=LIM)).join('')+(less.length?`<details class="lesscertain"><summary>Show ${less.length} less certain position${less.length===1?'':'s'}</summary><p class="meta" style="margin:6px 0 8px">The model was less sure about these and they have not been re-read. Check the speech before relying on them.</p>${less.map(x=>row(x,false)).join('')}</details>`:'')})())}
  h+=asksSec(i,false)+'</div>';
  finishProf(h);
  if(focusF!=null){const el=$('profile').querySelector('[data-f="'+focusF+'"]');if(el){const sc=el.closest('.ps');sc.querySelector('.phb').setAttribute('aria-expanded',true);sc.querySelector('.pb').hidden=false;lim(sc,true);

@@ -479,6 +479,15 @@ for g_label, g_names in SUPER_TOPICS:
 stab_val = 1.0
 groups_ok = True
 print("semantic super-topics:", [(g["label"], len(g["subjects"]), g["capture_all"]) for g in groups])
+# Less certain positions: judge confidence below 0.7 and not re-read (the 13 Nov blind review found that band only 62% right).
+# They stay in the data but the profile tucks them behind a "less certain" toggle. None are on map arguments.
+LOWCONF = set()
+_wl = RES / "overrides" / "older" / "worklist_older.jsonl"; _pj = RES / "overrides" / "positions.jsonl"
+if _wl.exists():
+    _read = {(x["label"], x["passage_id"]) for x in map(json.loads, _pj.open())} if _pj.exists() else set()
+    for _w in map(json.loads, _wl.open()):
+        if _w.get("conf") is not None and _w["conf"] < 0.7 and (_w["label"], _w["passage_id"]) not in _read: LOWCONF.add((_w["label"], _w["passage_id"]))
+print("less certain (unread, confidence < 0.7) positions flagged:", len(LOWCONF))
 os_out = []; mp_one = collections.defaultdict(list)
 for pi, f in enumerate(POOL):
     nf = len(f["for"]); na = len(f["against"])
@@ -496,7 +505,10 @@ for pi, f in enumerate(POOL):
                    "u": None if u_os is None else [round(float(x), 4) for x in u_os], "r": round(r_os, 3), "fm": f["fm"], "am": f["am"], "desc": f["desc"]})
     for side in ("for", "against"):
         for m in f[side]:
-            if m["id"] in mi: mp_one[mi[m["id"]]].append([pi, side, [[c["p"], c["s"]] for c in m["claims"][:3]]])
+            if m["id"] in mi:
+                _labs = {FALL[o]["label"] for o in f["orig"]} | {f["label"]}
+                _lc = int(all(any((l, c["p"]) in LOWCONF for l in _labs) for c in m["claims"]))      # every speech behind it is a low-confidence, not re-read verdict
+                mp_one[mi[m["id"]]].append([pi, side, [[c["p"], c["s"]] for c in m["claims"][:3]], _lc])
 
 # ---------------- MPs ----------------
 mp_out = []
