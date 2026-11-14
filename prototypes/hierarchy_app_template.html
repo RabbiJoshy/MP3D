@@ -250,8 +250,8 @@ body[data-mode=quiz] #browse{display:none}
 @media(max-width:900px){.rel-grid{grid-template-columns:1fr}}
 @media(max-width:1180px){.mode-tabs{display:flex;position:static;transform:none}.masthead{gap:6px}.brand{flex:none}.brand small{display:none}}
 @media(max-width:820px){#howOpen{display:none}.tab-btn{padding:0 9px;font-size:12px}
- .app.quiz #stage{align-self:start;height:40dvh;grid-column:2}
- .app.quiz #left{top:auto;bottom:0;left:0;right:0;width:100%;max-width:none;height:60dvh;transform:none;border-top:1px solid var(--line);border-right:0;box-shadow:0 -12px 40px rgba(0,0,0,.4)}
+ .app.quiz #stage{display:none}
+ .app.quiz #left{position:fixed;top:var(--top);bottom:0;left:0;right:0;width:100%;max-width:none;height:auto;transform:none;border:0;box-shadow:none;z-index:45}
  .app.quiz #tools,.app.quiz #leg,.app.quiz #bar{display:none}.app.quiz #nav{display:none}}
 @media(max-width:620px){:root{--top:88px}.masthead{flex-wrap:wrap;height:var(--top);align-content:center;row-gap:6px}.mode-tabs{order:3;width:100%;justify-content:center}.mode-tabs .tab-btn{flex:1}.actions{margin-left:auto}}
 .lesscertain{margin-top:10px;border-top:1px dashed var(--line);padding-top:8px}.lesscertain>summary{cursor:pointer;color:var(--dim);font-size:14px;list-style:revert}
