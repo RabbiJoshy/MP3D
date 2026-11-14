@@ -125,6 +125,75 @@ const HAQuiz=(()=>{
   }
   return out;
  }
- return{question,create,place,match,parties,predictStances}
+ /* ---- Adaptive question choice (information-based) ----
+    Per-argument constants, computed once: n (MPs with a recorded position), balance (1 = evenly split), split (within-party
+    split, 1 = every party divided down the middle), govline (1 = pure government-versus-opposition question). */
+ function stats(fights,partyOf,nMps,keys){
+  const out=new Map();
+  for(const k of keys){
+   const f=fights[k];let n=0,sup=0;const byP={};
+   for(let i=0;i<nMps;i++){const v=f.sc[i];if(v==null||v===0||!Number.isFinite(v))continue;
+    n++;const s=v>0?1:0;sup+=s;const p=partyOf(i),g=byP[p]||(byP[p]={n:0,s:0});g.n++;g.s+=s}
+   const share=n?sup/n:0.5,balance=4*share*(1-share);
+   let num=0,den=0;const big=[];
+   for(const p in byP){const g=byP[p];if(g.n>=5){const s=g.s/g.n;num+=g.n*4*s*(1-s);den+=g.n;big.push({p,n:g.n,s})}}
+   const split=den?num/den:0;
+   let govline=0;
+   const all=Object.entries(byP).sort((a,b)=>b[1].n-a[1].n);
+   if(all.length){
+    const [,L]=all[0],sL=L.s/L.n,top=Math.max(sL,1-sL);
+    if(top>=0.9){const side=sL>=0.5?1:0;   // the side the largest party is on
+     govline=big.filter(g=>g.p!==all[0][0]).every(g=>(side?1-g.s:g.s)>=0.8)?1:0}
+   }
+   out.set(k,{k,n,share,balance,split,govline,subj:f.subj});
+  }
+  return out;
+ }
+ function inv3(m){
+  const [a,b,c]=m[0],[d,e,f]=m[1],[g,h,i]=m[2];
+  const A=e*i-f*h,B=-(d*i-f*g),C=d*h-e*g,det=a*A+b*B+c*C;if(Math.abs(det)<1e-12)return null;
+  return[[A/det,-(b*i-c*h)/det,(b*f-c*e)/det],[B/det,(a*i-c*g)/det,-(a*f-c*d)/det],[C/det,-(a*h-b*g)/det,(a*e-b*d)/det]];
+ }
+ /* Posterior covariance (V_A^T W V_A + ridge*I)^-1 over answered arguments (same weights as place()). */
+ function covariance(answers,star,model){
+  const M=[[model.ridge,0,0],[0,model.ridge,0],[0,0,model.ridge]];
+  for(const ks of Object.keys(answers||{})){const k=+ks,v=model.v[k];if(!v)continue;const wt=star&&star.has(k)?1.8:1;
+   for(let i=0;i<3;i++)for(let j=0;j<3;j++)M[i][j]+=wt*v[i]*v[j]}
+  return inv3(M)||[[1/model.ridge,0,0],[0,1/model.ridge,0],[0,0,1/model.ridge]];
+ }
+ function scoreOf(st,v,S){
+  let u=0;for(let i=0;i<3;i++)for(let j=0;j<3;j++)u+=v[i]*S[i][j]*v[j];
+  return u*(0.35+0.65*st.balance)*(1+st.split)*(st.govline?0.5:1)*Math.min(1,st.n/25);
+ }
+ /* Next argument to ask. ctx={stats, model}; hist = arguments already shown, in order; priorities = chosen subject names.
+    Ranked by expected information, then the diversity guard (no two in a row from one subject; at most 2 per subject in the
+    first 8), relaxed only when nothing else is left. Ties go to the lower index. */
+ function pickNext(ctx,answers,star,hist,priorities,keys){
+  const model=ctx.model,S=covariance(answers,star,model),seen=new Set(hist);
+  let cand=keys.filter(k=>!seen.has(k)&&model.v[k]&&ctx.stats.has(k));
+  const pri=new Set(priorities||[]);
+  if(pri.size){const pk=cand.filter(k=>pri.has(ctx.stats.get(k).subj));if(pk.length)cand=pk}
+  if(!cand.length)return null;
+  const last=hist.length?ctx.stats.get(hist[hist.length-1]):null,lastSubj=last?last.subj:null;
+  const cnt={};hist.forEach(k=>{const st=ctx.stats.get(k);if(st)cnt[st.subj]=(cnt[st.subj]||0)+1});
+  const early=hist.length<8;
+  const tiers=[kk=>ctx.stats.get(kk).subj!==lastSubj&&(!early||(cnt[ctx.stats.get(kk).subj]||0)<2),
+               kk=>ctx.stats.get(kk).subj!==lastSubj,()=>true];
+  for(const ok of tiers){
+   const c=cand.filter(ok);
+   if(c.length){let best=null,bs=-1;for(const k of c){const s=scoreOf(ctx.stats.get(k),model.v[k],S);if(best===null||s>bs+1e-12){best=k;bs=s}}return best}
+  }
+  return null;
+ }
+ /* Live panel: arguments on which the visitor's estimated stance is strongest and most distinctive.
+    p_j = v_j . z + b_j; rank by |p_j| * (0.5 + balance_j). */
+ function hudRank(z,ctx,answers,keys,count){
+  const model=ctx.model,out=[];
+  for(const k of keys){const v=model.v[k],st=ctx.stats.get(k);if(!v||!st)continue;
+   const p=v[0]*z[0]+v[1]*z[1]+v[2]*z[2]+model.b[k];
+   out.push({k,p,score:Math.abs(p)*(0.5+st.balance),answered:answers[k]!==undefined,ans:answers[k]})}
+  return out.sort((a,b)=>b.score-a.score||a.k-b.k).slice(0,count);
+ }
+ return{question,create,place,match,parties,predictStances,stats,covariance,pickNext,hudRank}
 })();
 if(typeof module!=='undefined')module.exports=HAQuiz;

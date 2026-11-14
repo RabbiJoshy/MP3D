@@ -326,7 +326,49 @@ def _fit_direct(Y, W, rank=3, lam=LAM_DIRECT, seed=17, iters=70):
     U = np.array([_project_direct(Y[i], W[i], V, b, lam) for i in range(M)])
     return U, V, b
 
-U_dir, V_dir, b_dir = _fit_direct(Y_mat, W_mat, rank=3, lam=LAM_DIRECT, seed=17, iters=70)
+# ---- Joint fit with one-sided positions as extra evidence (14 Nov 2026).
+# Two-sided arguments alone leave 4 in 10 MPs with only 1-2 positions, and the fit pulls those MPs to the centre.
+# One-sided arguments ("took a side") carry real information about who stands with whom, so they join the fit as extra columns:
+# a recorded position is +1/-1 with the usual weight; saying nothing is a weak 0 (weight ONE_SILENCE), which is what lets a
+# one-sided column say anything at all. Unread low-confidence positions are left out. Tested before adoption
+# (scratch onesided.py): held-out accuracy on two-sided positions 0.831 -> 0.842, low-evidence MPs move out from the centre,
+# party separation and within-party vote prediction unchanged. Visitors are still placed from two-sided arguments only.
+ONE_SILENCE = 0.10
+JOINT = "--no-onesided" not in sys.argv and len(POOL) > 0
+def _fit_joint(Yf, C, rank=3, lam=LAM_DIRECT, seed=17, iters=60):
+    b = (C * Yf).sum(0) / np.maximum(C.sum(0), 1e-9); R = Yf - b
+    rng = np.random.default_rng(seed); V = rng.normal(0, 0.1, (Yf.shape[1], rank)); U = np.zeros((Yf.shape[0], rank)); eye = np.eye(rank)
+    def _us():
+        for i in range(Yf.shape[0]):
+            Vw = V * C[i][:, None]; U[i] = np.linalg.solve(Vw.T @ V + lam * eye, Vw.T @ R[i])
+    for _ in range(iters):
+        _us()
+        for j in range(Yf.shape[1]):
+            Uw = U * C[:, j][:, None]; V[j] = np.linalg.solve(Uw.T @ U + lam * eye, Uw.T @ R[:, j])
+    _us()
+    return U, V, b
+if JOINT:
+    _lc0 = set()
+    _wl0 = RES / "overrides" / "older" / "worklist_older.jsonl"; _pj0 = RES / "overrides" / "positions.jsonl"
+    if _wl0.exists():
+        _rd0 = {(x["label"], x["passage_id"]) for x in map(json.loads, _pj0.open())} if _pj0.exists() else set()
+        for _w in map(json.loads, _wl0.open()):
+            if _w.get("conf") is not None and _w["conf"] < 0.7 and (_w["label"], _w["passage_id"]) not in _rd0: _lc0.add((_w["label"], _w["passage_id"]))
+    _cols = []
+    for _f in POOL:
+        _labs = {FALL[o]["label"] for o in _f["orig"]} | {_f["label"]}
+        _y = np.zeros(N); _c = np.full(N, ONE_SILENCE); _k = 0
+        for _side, _val in (("for", 1.0), ("against", -1.0)):
+            for _m in _f[_side]:
+                if _m["id"] in mi and not all(any((l, cl["p"]) in _lc0 for l in _labs) for cl in _m["claims"]):
+                    _i = mi[_m["id"]]; _y[_i] = _val; _c[_i] = min(2.0, float(np.sqrt(max(1, len(_m["claims"]))))); _k += 1
+        if _k >= 5: _cols.append((_y, _c))
+    _Y1 = np.column_stack([c[0] for c in _cols]); _C1 = np.column_stack([c[1] for c in _cols])
+    _Uj, _Vj, _bj = _fit_joint(np.hstack([np.nan_to_num(Y_mat), _Y1]), np.hstack([np.where(obs_Y, W_mat, 0.0), _C1]))
+    U_dir, V_dir, b_dir = _Uj, _Vj[:Y_mat.shape[1]], _bj[:Y_mat.shape[1]]
+    print(f"joint fit: {Y_mat.shape[1]} two-sided + {len(_cols)} one-sided arguments; {int((_C1 > ONE_SILENCE).sum())} one-sided positions used")
+else:
+    U_dir, V_dir, b_dir = _fit_direct(Y_mat, W_mat, rank=3, lam=LAM_DIRECT, seed=17, iters=70)
 _, _, _rot = np.linalg.svd(U_dir, full_matrices=False)
 Q_rot = _rot.T
 U_dir = U_dir @ Q_rot
@@ -371,7 +413,7 @@ vv = V_dir * _scale
 ridge_direct = float(LAM_DIRECT * (_scale ** 2))
 on_map = obs_Y.sum(1) >= 1
 replay_err = float(np.max(np.abs(np.array([_project_direct(Y_mat[i], W_mat[i], vv, b_dir, ridge_direct) for i in range(N)]) - Z)))
-assert replay_err < 1e-8, f"direct replay mismatch: {replay_err}"
+if not JOINT: assert replay_err < 1e-8, f"direct replay mismatch: {replay_err}"      # with the joint fit MPs also use one-sided evidence, so they are not a pure replay of their two-sided answers
 print(f"{N} MPs ({int(on_map.sum())} placed directly from {len(FIGHTS)} arguments, {int((~on_map).sum())} unplaced; replay err {replay_err:.2e})")
 
 def fit_diameter(Z3, y, min_n=12):

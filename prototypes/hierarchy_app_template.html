@@ -157,6 +157,18 @@ blockquote{margin:8px 0 4px;padding:12px 14px;background:var(--bench3);border-le
 .iv{flex:none;color:var(--muted);font-size:11.5px;white-space:nowrap}
 .ib{padding:0 0 10px 12px;overflow-wrap:anywhere}.ib .m{font-size:12px;color:var(--dim);margin-top:3px}.ib .shared{color:var(--brass)}
 .ib blockquote{margin:4px 0 2px;padding:2px 0 2px 10px;background:none;border-radius:0;font-size:13px;line-height:1.55}
+.xc{display:block;position:relative;margin:8px 0 4px;padding:12px 30px 13px 14px;background:var(--bench3);border:1px solid var(--line);border-left:3px solid var(--brass);border-radius:10px;color:var(--ink);text-decoration:none;transition:background .15s,border-color .15s}
+.xc.for{border-left-color:var(--yes)}.xc.against{border-left-color:var(--no)}
+a.xc:hover{background:#252e3d;border-color:#3a475b}.xc.for:hover{border-left-color:var(--yes)}.xc.against:hover{border-left-color:var(--no)}
+a.xc:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+.xpr{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px}
+.xp{display:inline-block;max-width:100%;padding:2px 9px;border-radius:999px;background:rgba(255,255,255,.07);color:var(--dim);font:500 11.5px/1.5 var(--body);white-space:nowrap}
+.xp.xd{overflow:hidden;text-overflow:ellipsis}
+.xp.xs{font-weight:600}.xp.xs.for{background:rgba(143,214,148,.14);color:var(--yes)}.xp.xs.against{background:rgba(229,142,122,.14);color:var(--no)}
+.xq{font-size:14.5px;line-height:1.65;color:var(--ink);max-width:62ch;overflow-wrap:anywhere}
+.xo{position:absolute;top:9px;right:11px;font-size:13px;line-height:1;color:var(--muted);transition:color .15s}
+a.xc:hover .xo,a.xc:focus-visible .xo{color:var(--ink)}
+.xmore{border:1px solid var(--line);cursor:pointer;margin:6px 0 4px;background:none;color:var(--brass)}.xmore:hover{background:rgba(255,255,255,.07)}
 .ib details{margin-top:6px}.ib details>summary{cursor:pointer;font-size:12px;color:var(--dim)}
 .more{margin:2px 0 8px;height:26px;padding:0 4px;border:0;background:none;color:var(--brass);font:600 12px var(--body);text-decoration:underline}
 /* sk15: axis view and key chips */
@@ -311,6 +323,9 @@ const D=JSON.parse(document.getElementById('d').textContent);
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const $=id=>document.getElementById(id);
 const N=D.mps.length,XYZ=D.xyz;
+// evidence opacity: 1 recorded position = 0.30, rising linearly to 1 at 6 or more
+const EVN=new Array(D.mps.length).fill(0);D.fights.forEach(f=>f.sc.forEach((x,i)=>{if(x!=null)EVN[i]++}));
+const EVF=EVN.map(n=>Math.min(1,.30+.70*Math.max(0,n-1)/5));
 const cv=$('cv'),ctx=cv.getContext('2d');
 const YAW0=-0.6,PITCH0=0.35;
 let yaw=YAW0,pitch=PITCH0,mode3=true,sel={t:'root'},hov=null,curMP=null,drawnMP=null,W=0,H=0,dpr=1,hover=-1,curSel=null,proj=[],hoverDot=null,rimP=[],tq='';
@@ -480,6 +495,7 @@ function draw(){
   if(focusK>=0&&VIS[o.i]){const fp=focusPct(o.i);if(fp>0)rad+=Math.min(3.2,Math.sqrt(fp/Math.max(1,focusAvg))*1.15)}
   if(!VIS[o.i]){fill='#3a4150';al=.1;rad=2}
   else if(picked){const c=scol(picked[o.i],sc);if(c){fill=c;rad+=.6;al=.95}else{fill='#3a4150';al=.16;rad-=1.2}}
+  if(o.i!==curMP&&o.i!==hover)al*=EVF[o.i];
   ctx.globalAlpha=al;ctx.fillStyle=fill;ctx.beginPath();ctx.arc(o.x,o.y,Math.max(1.8,rad),0,7);ctx.fill();
   if(o.i===hover||o.i===curMP){ctx.globalAlpha=1;ctx.strokeStyle='#fff';ctx.lineWidth=2;ctx.stroke()}});
  drawRim(false);
@@ -772,18 +788,24 @@ $('aboutBody').innerHTML=`<h3>The quiz and Relationships</h3><ul>
 $('aboutOpen').onclick=()=>$('aboutDlg').showModal();
 // ---- MP drawer
 const SIDE={FOR:'Supports',AGAINST:'Opposes'};
-function speech(c,both){const q=D.P[c[0]];if(!q)return'';
- return`<blockquote>${both?`<span class="position-side ${c[1]==='FOR'?'for':'against'}">${SIDE[c[1]]||''}</span> `:''}${esc(q.t)}</blockquote><div class="m">${esc(q.d)} · ${esc(q.h)}${q.u?` · <a href="${esc(q.u)}" target="_blank" rel="noopener noreferrer">Read the source debate &#8599;</a>`:''}</div>`}
+const SHORTMON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const dShort=d=>{const m=/^(\d{4})-(\d\d)(?:-(\d\d))?/.exec(d||'');return m?(m[3]?m[3]+' ':'')+SHORTMON[+m[2]-1]+' '+m[1].slice(2):''};
+const cleanQ=t=>String(t==null?'':t).replace(/^[\s\u2026.]+/,'').replace(/[\s\u2026]+$/,'').replace(/\.{3,}$/,'').trim();
+function xcard(side,text,date,deb,url){const sd=side==='for'||side==='against'?side:'';
+ const pills=(sd?`<span class="xp xs ${sd}">${sd==='for'?'Supports':'Opposes'}</span>`:'')+(date?`<span class="xp">${esc(dShort(date))}</span>`:'')+(deb?`<span class="xp xd" title="${esc(deb)}">${esc(deb)}</span>`:'');
+ const inner=`<div class="xpr">${pills}</div><div class="xq">${esc(cleanQ(text))}</div>`;
+ return url?`<a class="xc ${sd}" href="${esc(url)}" target="_blank" rel="noopener noreferrer" aria-label="Open this speech in the debate record">${inner}<span class="xo" aria-hidden="true">&#8599;</span></a>`:`<div class="xc ${sd}">${inner}</div>`}
+function speech(c,both){const q=D.P[c[0]];if(!q)return'';return xcard(c[1]==='FOR'?'for':c[1]==='AGAINST'?'against':'',q.t,q.d,q.h,q.u)}
 const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-const dFmt=d=>{const m=/^(\d{4})-(\d\d)/.exec(d||'');return m?MON[+m[2]-1]+' '+m[1]:''};
+const dFmt=d=>dShort(d);
 let PF={};try{PF=JSON.parse(store.get('sk15_open')||'{}')||{}}catch(e){PF={}}
 const LIM=6;
 function posDetail(subj,side,cs){const both=side==='both',shown=cs.filter(c=>D.P[c[0]]);
- return(subj?`<div class="m">${esc(subj)}</div>`:'')+(shown.length?speech(shown[0],both):'<p class="meta">No speech text available.</p>')+(shown.length>1?`<details><summary>show more (${shown.length-1})</summary>${shown.slice(1).map(c=>speech(c,both)).join('')}</details>`:'')}
+ return(subj?`<div class="m">${esc(subj)}</div>`:'')+(shown.length?speech(shown[0],both):'<p class="meta">No speech text available.</p>')+(shown.length>1?`<div class="xmore-box"><div class="xmore-body" hidden>${shown.slice(1).map(c=>speech(c,both)).join('')}</div><button type="button" class="xp xmore" aria-expanded="false" data-n="${shown.length-1}">+${shown.length-1} more</button></div>`:'')}
 function itRow(side,txt,label,date,detail,hid,fi){return`<div class="it"${hid?' hidden':''}${fi!=null?' data-f="'+fi+'"':''}><button type="button" class="ir" aria-expanded="false"><span class="sdm ${side}"><i></i>${txt}</span><span class="il">${esc(label)}</span><span class="iv">${esc(date)}</span></button><div class="ib" hidden>${detail}</div></div>`}
 const SIDET={for:'Supports',against:'Opposes',both:'Both sides'};
 function askDetail(r){const[,meas,deb,date,oth,ex,u]=r;
- return`<div class="m">${esc(deb)}${date?' · '+esc(date):''}</div>${oth>0?`<div class="m shared">also argued by ${oth} other MP${oth===1?'':'s'}</div>`:''}${ex?`<blockquote>${esc(ex)}</blockquote>`:''}<div class="m">${u?`<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">Read the speech &#8599;</a>`:'<span class="meta">no link available</span>'}</div>`}
+ return`${oth>0?`<div class="m shared">also argued by ${oth} other MP${oth===1?'':'s'}</div>`:''}${ex?xcard(r[0]===0?'for':'against',ex,date,deb,u):`<div class="m">${esc(deb)}${date?' · '+esc(dShort(date)):''}</div><p class="meta">${u?`<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">Open the speech &#8599;</a>`:'No link available.'}</p>`}`}
 function secHtml(id,title,count,preview,help,body,force){const o=force||!!PF[id];
  return`<section class="ps" data-s="${id}"${force?' data-po="1"':''}><div class="ph"><h3 class="pht"><button type="button" class="phb" aria-expanded="${o}" aria-controls="pb-${id}"><span class="chev">&rsaquo;</span><span class="pt">${title}</span><span class="badge">${count}</span><span class="pv">${esc(preview)}</span></button></h3><button type="button" class="qb" aria-expanded="false" aria-label="About: ${title}" title="About this section">?</button></div><p class="meta help" hidden>${help}</p><div class="pb" id="pb-${id}" data-n="${count}"${o?'':' hidden'}>${body}${count>LIM?`<button type="button" class="more" data-more aria-expanded="false">Show all ${count}</button>`:''}</div></section>`}
 function asksSec(i,force){const A=D.asks[i]||[];if(!A.length)return'';const nf=A.filter(r=>r[0]===0).length;
@@ -832,6 +854,7 @@ $('profile').addEventListener('click',e=>{const b=e.target.closest('button');if(
  if(b.classList.contains('phb')){const o=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',o);sec.querySelector('.pb').hidden=!o;if(!sec.dataset.po){PF[sec.dataset.s]=o;store.set('sk15_open',JSON.stringify(PF))}return}
  if(b.classList.contains('qb')){const o=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',o);sec.querySelector('.help').hidden=!o;return}
  if(b.classList.contains('ir')){const o=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',o);b.nextElementSibling.hidden=!o;return}
+ if(b.classList.contains('xmore')){const o=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',o);b.previousElementSibling.hidden=!o;b.textContent=o?'Show fewer':'+'+b.dataset.n+' more';return}
  if(b.classList.contains('more')){lim(sec,b.getAttribute('aria-expanded')!=='true');return}
  if(b.classList.contains('why')){const o=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',o);b.parentNode.nextElementSibling.hidden=!o}});
 function hideMP(){drawnMP=null;$('app').classList.remove('mp-open');$('mpq').value='';$('profile').classList.remove('on')}
@@ -880,24 +903,40 @@ const QS=QOK.map(k=>{const g=groupOf(subjIdx(D.fights[k].subj));return{k,subj:D.
 const QM=HAQuiz.create(rowsQ,QS,15);
 const Q={step:'intro',ans:{},star:new Set(),hist:[],idx:0,target:8,pick:new Set()};
 const qText=k=>HAQuiz.question(D.fights[k].label);
-function nextFight(){const base=Math.floor(Math.max(0,Q.hist.length-1)/5)*5,used=new Set(Q.hist.slice(Q.hist.length%5===0?Q.hist.length:base).map(k=>D.fights[k].subj));
- const r=QM.rank(Q.ans,{excluded:Q.hist,priorities:[...Q.pick],avoidSubj:used});return r.length?r[0].k:null}
-function updateYou(u){const prev=YOU?YOU.p.slice():null,pl=HAQuiz.place(Q.ans,Q.star,D.fights,D.model);YOU=pl?{p:pl.p,n:pl.n}:null;
+const QCTX={model:D.model,stats:HAQuiz.stats(D.fights,i=>D.mps[i].p,D.mps.length,QOK)};
+// Next question: highest expected information about the visitor's position (see HAQuiz.pickNext), recomputed after every answer.
+function nextFight(){return HAQuiz.pickNext(QCTX,Q.ans,Q.star,Q.hist,[...Q.pick],QOK)}
+/* Moves the star to its new estimate. With a question axis `u` it glides along that axis (the caller keeps the question on screen),
+   then calls done(). With prefers-reduced-motion the star jumps and done() runs at once. Before any answer the star starts from the origin (the prior mean). */
+const QGLIDE_MS=750,qReduced=()=>matchMedia('(prefers-reduced-motion:reduce)').matches;
+function updateYou(u,done){const prev=YOU?YOU.p.slice():null,pl=HAQuiz.place(Q.ans,Q.star,D.fights,D.model);YOU=pl?{p:pl.p,n:pl.n}:null;
  if(YOU_ANIM.raf){cancelAnimationFrame(YOU_ANIM.raf);YOU_ANIM.raf=null}
- if(!YOU){YOU_ANIM={from:null,cur:null,u:null,t0:0,raf:null};return}
- if(!prev){YOU_ANIM={from:null,cur:YOU.p.slice(),u:null,t0:0,raf:null};return}
- YOU_ANIM={from:prev,cur:prev.slice(),u:u||null,t0:performance.now(),raf:null};
- const step=now=>{const u_=Math.min(1,(now-YOU_ANIM.t0)/520),e=1-(1-u_)**3;
+ if(YOU_ANIM.finish){const f=YOU_ANIM.finish;YOU_ANIM.finish=null;f(true)}
+ const end=()=>{if(done)done()};
+ if(!YOU){YOU_ANIM={from:null,cur:null,u:null,t0:0,raf:null};end();return}
+ const from=prev||(u&&done?[0,0,0]:null);
+ if(!from||qReduced()||Math.hypot(...from.map((v,j)=>v-YOU.p[j]))<1e-6){YOU_ANIM={from:null,cur:YOU.p.slice(),u:null,t0:0,raf:null};draw();end();return}
+ YOU_ANIM={from,cur:from.slice(),u:u||null,t0:performance.now(),raf:null};
+ let over=false;
+ const fin=(early)=>{if(over)return;over=true;clearTimeout(tm);if(YOU_ANIM.raf){cancelAnimationFrame(YOU_ANIM.raf);YOU_ANIM.raf=null}
+  YOU_ANIM.finish=null;YOU_ANIM.from=null;YOU_ANIM.cur=YOU.p.slice();YOU_ANIM.u=null;draw();if(!early)end()};
+ const tm=setTimeout(()=>fin(false),QGLIDE_MS+250);   // safety net if animation frames are throttled
+ YOU_ANIM.finish=fin;
+ const step=now=>{const u_=Math.min(1,(now-YOU_ANIM.t0)/QGLIDE_MS),e=u_<.5?4*u_**3:1-(-2*u_+2)**3/2;
   YOU_ANIM.cur=YOU_ANIM.from.map((v,j)=>v+(YOU.p[j]-v)*e);draw();
-  if(u_<1)YOU_ANIM.raf=requestAnimationFrame(step);
-  else{YOU_ANIM.from=null;YOU_ANIM.cur=YOU.p.slice();YOU_ANIM.u=null;YOU_ANIM.raf=null;draw()}};
+  if(u_<1)YOU_ANIM.raf=requestAnimationFrame(step);else fin(false)};
  YOU_ANIM.raf=requestAnimationFrame(step)}
 function silentSel(s){sel=s;hov=null;try{history.replaceState(null,'',hashStr(sel,curSel))}catch(e){}update(true)}
 function qAdvance(){
  if(Q.idx+1<Q.hist.length)Q.idx++;
  else{const n=nextFight();if(n==null)Q.step='results';else{Q.hist.push(n);Q.idx=Q.hist.length-1}}
  renderQuiz();$('qz').scrollTop=0}
-function qAnswer(v){const k=Q.hist[Q.idx],u=D.fights[k]&&D.fights[k].u;if(v===null){delete Q.ans[k];Q.star.delete(k)}else{Q.ans[k]=v;if(v===0)Q.star.delete(k)}updateYou(u);qAdvance()}
+/* Answer order: (1) record the answer, (2) the star glides along this question's axis while this question stays on screen, (3) only then the next question and its axis appear. Clicks are ignored while that runs. */
+function qAnswer(v){if(Q.busy)return;const k=Q.hist[Q.idx],u=D.fights[k]&&D.fights[k].u;
+ if(v===null){delete Q.ans[k];Q.star.delete(k);updateYou(u);qAdvance();return}
+ Q.ans[k]=v;if(v===0)Q.star.delete(k);
+ Q.busy=true;const qz=$('qz');qz.classList.add('busy');qz.querySelectorAll('[data-a]').forEach(b=>{b.setAttribute('aria-pressed',String(+b.dataset.a===v));b.disabled=true});
+ updateYou(u,()=>{Q.busy=false;qz.classList.remove('busy');qAdvance()})}
 function qStart(){Q.hist=[];Q.idx=0;const n=nextFight();if(n==null){Q.step='results'}else{Q.hist.push(n);Q.step='q'}renderQuiz()}
 function openEvidence(i,k){focusF=k;drawnMP=null;setAppMode('explore');go({t:'fight',i:k},i)}
 function sideTxt(v){return v>0?'For':'Against'}
@@ -1025,7 +1064,7 @@ function renderQuiz(){const el=$('qz');let h='';
    }).join('')}</div><div style="margin-top:14px;border-top:1px solid var(--line);padding-top:10px"><button class="linkb" data-reset style="color:var(--dim)">Reset all answers</button></div></details>`;
   }}
  el.innerHTML=h;
- const on=(q,fn)=>el.querySelectorAll(q).forEach(b=>b.onclick=()=>fn(b));
+ const on=(q,fn)=>el.querySelectorAll(q).forEach(b=>b.onclick=()=>{if(Q.busy)return;fn(b)});
  on('[data-start]',qStart);on('[data-choose]',()=>{Q.step='choose';renderQuiz()});on('[data-intro]',()=>{Q.step='intro';renderQuiz()});
  on('[data-results]',()=>{Q.step='results';renderQuiz();el.scrollTop=0});
  on('[data-back]',()=>{if(Q.idx>0)Q.idx--;else Q.step='intro';renderQuiz()});
@@ -1033,7 +1072,7 @@ function renderQuiz(){const el=$('qz');let h='';
  on('[data-more]',()=>{const n=nextFight();if(n==null){renderQuiz();return}Q.hist.push(n);Q.idx=Q.hist.length-1;Q.step='q';renderQuiz();el.scrollTop=0});
  on('[data-jump]',b=>{const k=+b.dataset.jump;const ex=Q.hist.indexOf(k);if(ex>=0)Q.idx=ex;else{Q.hist.push(k);Q.idx=Q.hist.length-1}Q.step='q';renderQuiz();el.scrollTop=0});
  on('[data-explore]',()=>setAppMode('explore'));
- on('[data-reset]',()=>{Q.ans={};Q.star.clear();Q.hist=[];Q.idx=0;Q.target=5;Q.step='intro';updateYou();renderQuiz();draw()});
+ on('[data-reset]',()=>{Q.busy=false;Q.ans={};Q.star.clear();Q.hist=[];Q.idx=0;Q.target=5;Q.step='intro';updateYou();renderQuiz();draw()});
  on('[data-mp]',b=>{setAppMode('explore');go(sel,+b.dataset.mp)});
  on('[data-ev]',b=>{const[i,k]=b.dataset.ev.split(':').map(Number);openEvidence(i,k)});
  el.querySelectorAll('[data-pick]').forEach(c=>c.onchange=()=>{c.checked?Q.pick.add(c.dataset.pick):Q.pick.delete(c.dataset.pick)});

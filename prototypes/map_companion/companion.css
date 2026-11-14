@@ -59,15 +59,15 @@
 .qhud-hdr{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
 .qhud-hdr b{font:700 12px var(--body);letter-spacing:.04em;text-transform:uppercase;color:var(--brass)}
 .qhud-hdr span{font-size:11px;color:var(--dim)}
-.qhud-item{margin:6px 0}
+.qhud-list{position:relative}.qhud-empty{font-size:12px;color:var(--dim);padding:4px 0 2px}.qhud-item{position:absolute;left:0;right:0;top:0;height:34px;margin:0;transition:transform .7s cubic-bezier(.16,1,.3,1),opacity .45s ease}.qhud-dot.is-inferred{background:#0e1117;border-width:2px;box-shadow:none}#qz.busy .qopt,#qz.busy .qsec .qbtn{pointer-events:none}
 .qhud-item-top{display:flex;justify-content:space-between;align-items:center;font-size:12px;margin-bottom:2px}
-.qhud-item-name{color:var(--ink);font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:160px}
+.qhud-item-name{color:var(--ink);font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:128px}
 .qhud-item-stance{font-size:10.5px;font-weight:700;letter-spacing:.02em}
 .qhud-item-stance.is-unknown{color:var(--muted);font-weight:700;letter-spacing:.06em;opacity:.8}
 .qhud-track{position:relative;height:5px;background:var(--bench3);border-radius:999px;border:1px solid var(--line);overflow:visible}
 .qhud-mark{position:absolute;left:50%;top:-1px;bottom:-1px;width:1px;background:var(--muted);opacity:.7}
 .qhud-dot{position:absolute;top:50%;transform:translate(-50%,-50%);width:9px;height:9px;border-radius:50%;border:1px solid #0e1117;transition:left .45s cubic-bezier(.16,1,.3,1),background .3s ease,opacity .3s ease;box-shadow:0 0 5px currentColor}
-.qhud-dot.is-unknown{opacity:0;pointer-events:none}
+.qhud-dot.is-unknown{opacity:0;pointer-events:none}@media(prefers-reduced-motion:reduce){.qhud-item,.qhud-dot{transition:none}}
 .qhud-btn{margin-top:10px;width:100%;height:32px;background:var(--bench2);border:1px solid var(--line);border-radius:6px;color:var(--brass);font:600 12px var(--body);cursor:pointer;pointer-events:auto;transition:border-color .15s,color .15s,opacity .15s}
 .qhud-btn:hover:not(:disabled){border-color:var(--brass);color:var(--ink)}
 .qhud-btn:disabled{opacity:.4;cursor:default}
@@ -89,7 +89,7 @@
 #browse[aria-expanded=true]{border-color:var(--line);color:var(--ink)}#browse[aria-expanded=false]{border-color:var(--brass);color:var(--brass)}
 #sq{font-size:15px}.topic-entry{font-size:17px}.topic-entry small{font-size:13px}.group-label{font-size:12.5px}
 .comp-back button{font-size:15px}.comp-count{font-size:14px}.comp-section h3{font-size:14px}.comp-proposal{font-size:17px}.comp-proposal small{font-size:14px}
-.p-body h3,.pt{font-size:15px}.ir{font-size:15px}.ib blockquote{font-size:15px}.ib .m{font-size:13.5px}.ib details>summary{font-size:13.5px}.sh{font-size:13px}.splabel{font-size:13px}
+.p-body h3,.pt{font-size:15px}.ir{font-size:15px}.ib .m{font-size:13.5px}.xp{font-size:12px}.xq{font-size:15px}.ib details>summary{font-size:13.5px}.sh{font-size:13px}.splabel{font-size:13px}
 .axc{font-size:14px}.axr{font-size:14px}.axv{font-size:13px}.axk{font-size:12.5px}.axis-key{font-size:14px}.axis-chart-title{font-size:15px}.axis-chart-title span:nth-child(2){font-size:14px}
 #qz .quiz-eyebrow{font-size:12.5px}#qz .quiz-lead{font-size:18px}.quiz-steps{font-size:13px}.quiz-steps b{font-size:16px}#qz .primary[data-start]{font-size:17px}#qz [data-choose]{font-size:16px}
 #qz p{font-size:16px}#qz .qtop>.meta{font-size:13.5px}#qz .qctx summary{font-size:14.5px}#qz .qopt b{font-size:17px}#qz .qopt span{font-size:16px}#qz .qsec .qbtn{font-size:15px}#qz .mcard h4{font-size:16px}#qz .mcard,#qz .mq{font-size:15px}
@@ -166,3 +166,18 @@ button.axf-title{cursor:pointer}button.axf-title:hover{color:var(--brass)}
 #compAxes .short{display:none}
 @media(max-width:620px){#compAxes .wide{display:none}#compAxes .short{display:inline}}
 .axf-body.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+
+/* Depth on an axis: argument pills under each end of the expanded axis */
+.axf-args{margin-top:8px;display:flex;flex-direction:column;gap:5px}.axf-args.p{align-items:flex-end}
+.axf-args-h{font-size:11px;color:var(--muted);letter-spacing:.02em}
+.axf-pills{display:flex;flex-wrap:wrap;gap:5px}.axf-args.p .axf-pills{justify-content:flex-end}
+.axf-pill{display:inline-flex;align-items:baseline;gap:4px;max-width:100%;padding:2px 10px;border:1px solid var(--line);border-radius:999px;background:var(--bench3);color:var(--dim);font:500 12px/1.5 var(--body);cursor:pointer;text-align:left}
+.axf-pill b{color:var(--yes);font-weight:600}.axf-pill span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;max-width:260px}
+.axf-pill:hover,.axf-pill:focus-visible{border-color:var(--brass);color:var(--ink)}
+.axf-pill.on{border-color:var(--brass);background:rgba(217,180,95,.16);color:var(--ink)}.axf-pill.on::after{content:"pinned";font-size:10.5px;color:var(--brass)}
+.axf-body.one .axf-ax,.app.axfull.mp-open .axf-body.one .axf-ax{height:auto;min-height:0}
+.axf-body.one .axf-plot{flex:none;height:max(300px,calc(100vh - 400px));min-height:300px}
+.axf-body.one{flex:none}
+@media(max-width:900px){.axf-body.one .axf-plot{height:420px}.axf-body.one .axf-ends{flex-direction:column}.axf-body.one .axf-end{max-width:100%}.axf-body.one .axf-end.p{align-items:flex-start;text-align:left;margin-left:0}.axf-args.p{align-items:flex-start}.axf-args.p .axf-pills{justify-content:flex-start}.axf-pill span{max-width:70vw}}
+/* The quiz draws its own FOR / AGAINST labels on the arrow, so the legend box is redundant there (it rendered as an empty pill). */
+.app.quiz #leg{display:none}

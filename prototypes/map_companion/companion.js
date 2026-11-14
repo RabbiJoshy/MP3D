@@ -176,7 +176,7 @@ syncPanelButton();
 const drawMode=()=>L.mps&&L.pavg?'both':L.pavg?'avg':'mps';
 buildLayers=function(){
  const dmode=drawMode(),parties=Object.entries(pcount).sort((a,b)=>b[1].n-a[1].n),fitted=D.onmap.filter(Boolean).length;
- $('layPop').innerHTML=`<h3>What the map draws</h3><div class="seg" id="drawSel" role="group" aria-label="What the map draws"><button data-draw="both" aria-pressed="${dmode==='both'}">MPs and party averages</button><button data-draw="avg" aria-pressed="${dmode==='avg'}">Party averages only</button><button data-draw="mps" aria-pressed="${dmode==='mps'}">MPs only</button></div><h3>Party</h3><div class="chips" id="partyChips">${parties.map(([p,a])=>`<button class="pchip" data-p="${esc(p)}" aria-pressed="${FL.parties.has(p)}"><em style="background:${a.col}"></em>${esc(p)} <span style="opacity:.6">${a.n}</span></button>`).join('')}</div><p class="map-who">The map shows the ${N} MPs with enough recorded positions to place.</p><h3>Topics around the map</h3><p class="meta" style="margin:8px 0 12px">Show clickable markers for topics and proposals around the edge of the sphere.</p><div class="seg" id="dm" role="group" aria-label="Topic markers"><button data-dm="none" aria-pressed="${DM==='none'}">Hidden</button><button data-dm="subjects" aria-pressed="${DM==='subjects'}">Topics</button><button data-dm="all" aria-pressed="${DM==='all'}">Topics + proposals</button></div><label class="ck" style="margin-top:16px"><input type="checkbox" data-l="axes" ${L.axes?'checked':''}>Show axis labels on map</label><button class="comp-related" id="reset">Reset map view</button>`;
+ $('layPop').innerHTML=`<h3>What the map draws</h3><div class="seg" id="drawSel" role="group" aria-label="What the map draws"><button data-draw="both" aria-pressed="${dmode==='both'}">MPs and party averages</button><button data-draw="avg" aria-pressed="${dmode==='avg'}">Party averages only</button><button data-draw="mps" aria-pressed="${dmode==='mps'}">MPs only</button></div><p class="meta" style="margin:8px 0 0;font-size:12px">Fainter dots are MPs with fewer recorded positions.</p><h3>Party</h3><div class="chips" id="partyChips">${parties.map(([p,a])=>`<button class="pchip" data-p="${esc(p)}" aria-pressed="${FL.parties.has(p)}"><em style="background:${a.col}"></em>${esc(p)} <span style="opacity:.6">${a.n}</span></button>`).join('')}</div><p class="map-who">The map shows the ${N} MPs with enough recorded positions to place.</p><h3>Topics around the map</h3><p class="meta" style="margin:8px 0 12px">Show clickable markers for topics and proposals around the edge of the sphere.</p><div class="seg" id="dm" role="group" aria-label="Topic markers"><button data-dm="none" aria-pressed="${DM==='none'}">Hidden</button><button data-dm="subjects" aria-pressed="${DM==='subjects'}">Topics</button><button data-dm="all" aria-pressed="${DM==='all'}">Topics + proposals</button></div><label class="ck" style="margin-top:16px"><input type="checkbox" data-l="axes" ${L.axes?'checked':''}>Show axis labels on map</label><button class="comp-related" id="reset">Reset map view</button>`;
 };
 $('layPop').addEventListener('click',e=>{
  const dr=e.target.closest('[data-draw]');if(dr){const m=dr.dataset.draw;L.mps=m!=='avg';L.pavg=m!=='mps';$('drawSel').querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',b===dr));draw();return}
@@ -186,7 +186,7 @@ const baseFilCount=filCount;filCount=function(){baseFilCount();$('layBtn').class
 $('layPop').addEventListener('click',e=>{if(e.target.closest('#reset'))zoomMap(1)});
 document.querySelector('.comp-map-note').textContent='Drag to rotate · Scroll to zoom · Select an MP';
 $('howOpen').textContent='How it works';$('howOpen').title='How to use the map and where the data comes from';
-$('howDlg').innerHTML=`<div class="d-top"><h2>How it works</h2><button class="xbtn" id="compGuideClose" aria-label="Close guide">✕ Close</button></div><div class="guide-tabs" role="tablist" aria-label="Guide sections"><button id="guide-use" role="tab" aria-selected="true" aria-controls="guide-use-panel">Using the app</button><button id="guide-data" role="tab" aria-selected="false" aria-controls="guide-data-panel">Where the data comes from</button></div><div class="d-body" id="guide-use-panel" role="tabpanel" aria-labelledby="guide-use"><h3>Start with a topic</h3><p>Open <b>Topics</b> and choose Health, Housing or another topic. Open a proposal to see the positions MPs took. <b>All topics</b> takes you back; <b>Hide panel</b> gives the map more room.</p><h3>Explore the map</h3><p>Each small dot is an MP. MPs with similar recorded positions tend to sit closer together. Drag to rotate in 3D, or choose 2D for a flat view. Scroll over the map or use + and − to zoom; the percentage button resets zoom.</p><h3>Understand what you see</h3><p>At the overview, colours show parties. With a proposal selected, teal means support and coral means opposition. Grey means no score for that selection, not neutrality. Larger labelled circles show party averages.</p><p><b>Explore axes</b> explains the main directions in the map. Under <b>Map options</b>, turn on topic markers to explore issues directly around the sphere.</p><h3>Read the evidence</h3><p>Select an MP or search by name or constituency. Open a position to read supporting excerpts and follow the source debate. A speech position is not the same thing as a parliamentary vote.</p><h3>Find your place</h3><p>Answer real policy questions in <b>Find my place</b> to see a rough position and compare your answers with MPs. Mixed and skipped answers do not place you.</p><h3>Explore connections</h3><p>Use <b>Related topics & positions</b> inside a topic to see which positions tend to go together. The back button returns to the map.</p></div><div class="d-body" id="guide-data-panel" role="tabpanel" aria-labelledby="guide-data" hidden><h3>1 · Start with Commons speeches</h3><p>The app uses parliamentary debate records. It keeps the speaker, date and source link so you can go back to the original words.</p><h3>2 · Identify proposals and positions</h3><p>AI reads the speeches to identify the specific proposal being discussed and whether an MP supports it, opposes it or expresses both sides. Further model checks test candidate passages against the proposal.</p><h3>3 · Combine and organise</h3><p>Repeated versions of the same proposal are merged. The checked positions are organised into topics, with excerpts attached to MPs’ profiles. Talking a lot about a topic is kept separate from taking a position.</p><h3>4 · Read it a second time</h3><p>Several thousand positions were then read again by a different AI model that was not shown the first verdict. Where the second reading disagreed, the position was removed or corrected. Positions the first model was unsure about were wrong often enough that every one used for the map was re-read. Each correction is stored separately from the original output, so the effect of the checking can be measured.</p><h3>5 · Build a shared map</h3><p>Patterns across MPs’ recorded positions are condensed into three dimensions. Similar patterns tend to be near each other. Topic shapes and proposal lines help explain directions in that space; they are summaries, not exact descriptions of every opinion.</p><h3>6 · Show the limits</h3><p>AI can misread a speech, and the second reading is also done by a model, not a person. Missing evidence does not mean an MP is neutral. MPs with little evidence have less reliable placements, and a weak fit means the map does not explain that issue well.</p><p>Some proposals only have evidence from one side. Their directions are inferred from their backers and are labelled accordingly; they are not used to position MPs.</p><p>The map describes what MPs have said. It is not a forecast: when tested, it did not predict how MPs vote or which motions they sign beyond what their party already tells you.</p><p>Use the map to explore, then check the excerpts and sources before drawing conclusions about an individual MP.</p><button class="comp-related" id="compDataDetails">More data and method details →</button></div>`;
+$('howDlg').innerHTML=`<div class="d-top"><h2>How it works</h2><button class="xbtn" id="compGuideClose" aria-label="Close guide">✕ Close</button></div><div class="guide-tabs" role="tablist" aria-label="Guide sections"><button id="guide-use" role="tab" aria-selected="true" aria-controls="guide-use-panel">Using the app</button><button id="guide-data" role="tab" aria-selected="false" aria-controls="guide-data-panel">Where the data comes from</button></div><div class="d-body" id="guide-use-panel" role="tabpanel" aria-labelledby="guide-use"><h3>Start with a topic</h3><p>Open <b>Topics</b> and choose Health, Housing or another topic. Open a proposal to see the positions MPs took. <b>All topics</b> takes you back; <b>Hide panel</b> gives the map more room.</p><h3>Explore the map</h3><p>Each small dot is an MP. MPs with similar recorded positions tend to sit closer together. Drag to rotate in 3D, or choose 2D for a flat view. Scroll over the map or use + and − to zoom; the percentage button resets zoom.</p><h3>Understand what you see</h3><p>At the overview, colours show parties. With a proposal selected, teal means support and coral means opposition. Grey means no score for that selection, not neutrality. Larger labelled circles show party averages.</p><p><b>Explore axes</b> explains the main directions in the map. Under <b>Map options</b>, turn on topic markers to explore issues directly around the sphere.</p><h3>Read the evidence</h3><p>Select an MP or search by name or constituency. Open a position to read supporting excerpts and follow the source debate. A speech position is not the same thing as a parliamentary vote.</p><h3>Find your place</h3><p>Answer real policy questions in <b>Find my place</b> to see a rough position and compare your answers with MPs. Mixed and skipped answers do not place you.</p><h3>Explore connections</h3><p>Use <b>Related topics & positions</b> inside a topic to see which positions tend to go together. The back button returns to the map.</p></div><div class="d-body" id="guide-data-panel" role="tabpanel" aria-labelledby="guide-data" hidden><h3>1 · Start with Commons speeches</h3><p>The app uses parliamentary debate records. It keeps the speaker, date and source link so you can go back to the original words.</p><h3>2 · Identify proposals and positions</h3><p>AI reads the speeches to identify the specific proposal being discussed and whether an MP supports it, opposes it or expresses both sides. Further model checks test candidate passages against the proposal.</p><h3>3 · Combine and organise</h3><p>Repeated versions of the same proposal are merged. The checked positions are organised into topics, with excerpts attached to MPs’ profiles. Talking a lot about a topic is kept separate from taking a position.</p><h3>4 · Read it a second time</h3><p>Several thousand positions were then read again by a different AI model that was not shown the first verdict. Where the second reading disagreed, the position was removed or corrected. Positions the first model was unsure about were wrong often enough that every one used for the map was re-read. Each correction is stored separately from the original output, so the effect of the checking can be measured.</p><h3>5 · Build a shared map</h3><p>Patterns across MPs’ recorded positions are condensed into three dimensions. Proposals with MPs on both sides carry most of the weight; proposals where only supporters spoke add lighter evidence about who stands with whom, which matters most for MPs who have said little. Similar patterns tend to be near each other. Topic shapes and proposal lines help explain directions in that space; they are summaries, not exact descriptions of every opinion.</p><h3>6 · Show the limits</h3><p>AI can misread a speech, and the second reading is also done by a model, not a person. Missing evidence does not mean an MP is neutral. MPs with little evidence have less reliable placements, and a weak fit means the map does not explain that issue well.</p><p>Some proposals only have evidence from one side. Their directions are inferred from their backers and are labelled accordingly; they are not used to position MPs.</p><p>The map describes what MPs have said. It is not a forecast: when tested, it did not predict how MPs vote or which motions they sign beyond what their party already tells you.</p><p>Use the map to explore, then check the excerpts and sources before drawing conclusions about an individual MP.</p><button class="comp-related" id="compDataDetails">More data and method details →</button></div>`;
 $('compGuideClose').onclick=()=>$('howDlg').close();$('compDataDetails').onclick=()=>{$('howDlg').close();$('aboutDlg').showModal()};
 function guideTab(which){for(const k of ['use','data']){$('guide-'+k).setAttribute('aria-selected',k===which);$('guide-'+k+'-panel').hidden=k!==which}}
 for(const k of ['use','data']){$('guide-'+k).onclick=()=>guideTab(k);$('guide-'+k).onkeydown=e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();const next=k==='use'?'data':'use';guideTab(next);$('guide-'+next).focus()}}}
@@ -265,16 +265,25 @@ const axEnds=i=>{
   negTopics: negTopics
  };
 };
+let axfArgPin=null,axfArgHov=null,axfArgAx=null,axfEvN=null;
+const axfArgEff=()=>axfOne?(axfArgHov!==null?axfArgHov:axfArgPin):null;
+const axfTop=(a)=>{if(!axfEvN)axfEvN=D.fights.map(f=>f.sc.reduce((n,x)=>n+(x!=null?1:0),0));
+ const w=D.fights.map((f,j)=>({j,w:D.model.v[j][a]*Math.sqrt(axfEvN[j])})).filter(x=>isFinite(x.w));
+ w.sort((x,y)=>y.w-x.w);return{plus:w.filter(x=>x.w>0).slice(0,5),minus:w.filter(x=>x.w<0).slice(-5).reverse()}};
+// Sign convention (checked against the data): a positive score means the MP supports the argument. MPs at the end an argument pulls towards mostly support it, so both ends are prefixed "For:".
+function axArgs(a,side){const t=axfTop(a),L=side>0?t.plus:t.minus;if(!L.length)return'';
+ return `<div class="axf-args ${side>0?'p':'m'}"><small class="axf-args-h">Arguments that pull this way</small><div class="axf-pills">${L.map(x=>{const lb=D.fights[x.j].label;return `<button type="button" class="axf-pill${axfArgPin===x.j?' on':''}" data-axf-arg="${x.j}" aria-pressed="${axfArgPin===x.j}" title="${esc(lb)}"><b>For:</b> <span>${esc(lb)}</span></button>`}).join('')}</div></div>`}
+function axfPillState(){axFull.querySelectorAll('.axf-pill').forEach(b=>{const on=+b.dataset.axfArg===axfArgPin;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on)})}
 function renderAxFull(){
  const on=axfActive();$('app').classList.toggle('axfull',on);axFull.hidden=!on;axTip.style.display='none';
  if(!on){axFull.innerHTML='';return}
- const cur=AX!==null?AX:(axfKeep!==null?axfKeep:'all'),one=cur!=='all',idx=one?[cur]:(mode3?[0,1,2]:[0,1]);axfOne=one;
+ const cur=AX!==null?AX:(axfKeep!==null?axfKeep:'all'),one=cur!=='all',idx=one?[cur]:(mode3?[0,1,2]:[0,1]);axfOne=one;if(axfArgAx!==cur){axfArgAx=cur;axfArgPin=null;axfArgHov=null}
  const SPH='<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3.5 9h17M3.5 15h17" opacity=".7"/></svg>';
  const EXP='<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"/></svg>';
  const COL='<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10h-6V4M14 10l7-7M4 14h6v6M10 14l-7 7"/></svg>';
  const bk=mode3?'Back to all three axes':'Back to both axes';
  axFull.innerHTML=`<div class="axf-bar"><p>Each dot is an MP, grouped by party. Large circled dots are party averages.${mode3?'':' The flat map plots Axis 1 across and Axis 2 up.'}${one?' Hover a dot to see who it is; click to open their profile.':''}</p><div class="axf-tools"><div class="comp-dimension" role="group" aria-label="Map dimension"><button type="button" data-axf-dim="2" aria-pressed="${!mode3}">2D</button><button type="button" data-axf-dim="3" aria-pressed="${mode3}">3D</button></div><button type="button" class="axf-ico" data-axf="map" aria-label="Show the map" title="Show the map">${SPH}</button></div></div>`+
- `<div class="axf-body${one?' one':idx.length===2?' two':''}">`+idx.map(i=>{const e=axEnds(i);return `<section class="axf-ax"><div class="axf-head">${one?`<b class="axf-title">Axis ${i+1}</b>`:`<button type="button" class="axf-title" data-axf-ax="${i}">Axis ${i+1}</button>`}<button type="button" class="axf-ico sm" ${one?`data-axf-ax="all" aria-label="${bk}" title="${bk}"`:`data-axf-ax="${i}" aria-label="Show this axis only" title="Show this axis only"`}>${one?COL:EXP}</button></div><div class="axf-plot" data-axf-plot="${i}"><canvas></canvas></div><div class="axf-ends"><div class="axf-end m"><span class="axf-end-label">← ${esc(e.minus)}</span>${e.negTopics.length?`<small class="axf-end-topics">${esc(e.negTopics.join(' · '))}</small>`:''}</div><div class="axf-end p"><span class="axf-end-label">${esc(e.plus)} →</span>${e.plusTopics.length?`<small class="axf-end-topics">${esc(e.plusTopics.join(' · '))}</small>`:''}</div></div></section>`}).join('')+'</div>';
+ `<div class="axf-body${one?' one':idx.length===2?' two':''}">`+idx.map(i=>{const e=axEnds(i);return `<section class="axf-ax"><div class="axf-head">${one?`<b class="axf-title">Axis ${i+1}</b>`:`<button type="button" class="axf-title" data-axf-ax="${i}">Axis ${i+1}</button>`}<button type="button" class="axf-ico sm" ${one?`data-axf-ax="all" aria-label="${bk}" title="${bk}"`:`data-axf-ax="${i}" aria-label="Show this axis only" title="Show this axis only"`}>${one?COL:EXP}</button></div><div class="axf-plot" data-axf-plot="${i}"><canvas></canvas></div><div class="axf-ends"><div class="axf-end m"><span class="axf-end-label">← ${esc(e.minus)}</span>${e.negTopics.length?`<small class="axf-end-topics">${esc(e.negTopics.join(' · '))}</small>`:''}${one?axArgs(i,-1):''}</div><div class="axf-end p"><span class="axf-end-label">${esc(e.plus)} →</span>${e.plusTopics.length?`<small class="axf-end-topics">${esc(e.plusTopics.join(' · '))}</small>`:''}${one?axArgs(i,1):''}</div></div></section>`}).join('')+'</div>';
  drawAxFull();
  requestAnimationFrame(()=>drawAxFull());
 }
@@ -330,7 +339,10 @@ function drawAxFull(){
    g.strokeStyle='#303a48';g.beginPath();g.moveTo(xOf(0),top);g.lineTo(xOf(0),top+H);g.moveTo(x0,top+H+.5);g.lineTo(x1,top+H+.5);g.stroke();
    const selMp=(curSel!=null&&curSel<N)?curSel:null;
    const target=hi!==undefined?hi:selMp;
-   pts.forEach(p=>{g.globalAlpha=target==null||target===p.i?.82:.35;g.fillStyle=D.mps[p.i].col;g.beginPath();g.arc(p.x,p.y,p.r,0,7);g.fill()});g.globalAlpha=1;
+   const ae=axfArgEff(),asc=ae!=null?D.fights[ae].sc:null;
+   pts.forEach(p=>{let al=target==null||target===p.i?.82:.35,col=D.mps[p.i].col;
+    if(asc){const x=asc[p.i];if(x>0){col='#2dd4bf';al=.9}else if(x<0){col='#fb7185';al=.9}else{col='#4a5363';al=.22}if(target!=null&&target!==p.i)al*=.6}
+    g.globalAlpha=al;g.fillStyle=col;g.beginPath();g.arc(p.x,p.y,p.r,0,7);g.fill()});g.globalAlpha=1;
    if(target!=null){const p=pts.find(q=>q.i===target);if(p){g.fillStyle=D.mps[target].col;g.strokeStyle='#fff';g.lineWidth=2.5;g.beginPath();g.arc(p.x,p.y,p.r+3,0,7);g.fill();g.stroke()}}
    means.forEach(q=>{const L=q.lane||(q.lane=lanes.find(l=>l.p===q.p)),mx=xOf(q.mean),tk=Math.min(L.hh/2-2,12),R=single?8.5:7.5;
     g.strokeStyle='rgba(255,255,255,.35)';g.lineWidth=1.5;g.beginPath();g.moveTo(mx,L.cy-tk);g.lineTo(mx,L.cy+tk);g.stroke();
@@ -358,7 +370,10 @@ function drawAxFull(){
  });
 }
 function setAxFullAxis(v){AX=v;AXSUB=null;axfKeep=null;info();draw()}
+axFull.addEventListener('pointerover',e=>{const b=e.target.closest('.axf-pill');if(!b||e.pointerType==='touch')return;axfArgHov=+b.dataset.axfArg;drawAxFull()});
+axFull.addEventListener('pointerout',e=>{const b=e.target.closest('.axf-pill');if(!b||e.pointerType==='touch'||b.contains(e.relatedTarget))return;axfArgHov=null;drawAxFull()});
 axFull.addEventListener('click',e=>{
+ const pb=e.target.closest('.axf-pill');if(pb){const j=+pb.dataset.axfArg;axfArgPin=axfArgPin===j?null:j;axfArgHov=null;axfPillState();drawAxFull();return}
  const dm=e.target.closest('[data-axf-dim]');if(dm){setMode(dm.dataset.axfDim==='3');renderAxFull();return}
  const a=e.target.closest('[data-axf-ax]');if(a){const v=a.dataset.axfAx;setAxFullAxis(v==='all'?'all':+v);axFull.scrollTop=0;return}
  if(e.target.closest('[data-axf="map"]')){AXFULL=false;if(AX===null&&axfKeep!==null)AX=axfKeep;axfKeep=null;showCompanionPanel();info();draw()}});
@@ -389,92 +404,63 @@ if(document.fonts&&document.fonts.ready){
 }
 
 // Live statistics HUD for quiz
-const QHUD_KEYS = [
-  {k: 40, label: 'Renters’ rights'},
-  {k: 24, label: 'Two-child limit'},
-  {k: 35, label: 'Public railway ownership'},
-  {k: 30, label: 'New oil & gas licences'},
-  {k: 38, label: 'Abolish hereditary peers'},
-  {k: 25, label: 'Steel industry support'},
-  {k: 32, label: 'Water renationalisation'},
-  {k: 5, label: 'Voting rights at 16'},
-  {k: 14, label: 'Private school tax'},
-  {k: 53, label: 'End short prison terms'}
-];
 
+/* Live panel: the arguments on which the visitor's estimated stance is strongest and most distinctive right now
+   (p_j = v_j . z + b_j, ranked by |p_j| * (0.5 + balance_j)). Rows are keyed by argument and glide to their new place. */
+const QHUD_ROWS=10,QHUD_ROW_H=40;
+let _hudRows=new Map();
+function _hudStance(r){
+ const p=r.p,val=Math.max(-1,Math.min(1,p));
+ if(r.answered){
+  const a=r.ans;
+  return{val:a>0?0.9:(a<0?-0.9:0),tag:a>0?'Answered: For':(a<0?'Answered: Against':'Answered: Mixed'),col:a>0?'#2dd4bf':(a<0?'#fb7185':'var(--brass)')};
+ }
+ const col=val>0.2?'#2dd4bf':(val<-0.2?'#fb7185':'var(--dim)');
+ const tag=val>=0.5?'Inferred: for':(val>=0.2?'Inferred: leaning for':(val<=-0.5?'Inferred: against':(val<=-0.2?'Inferred: leaning against':'Inferred: neutral')));
+ return{val,tag,col};
+}
 function renderQuizHud(){
  const hud=$('quizHud');
- if(!hud||MODE!=='quiz'||Q.step==='intro'){if(hud)hud.innerHTML='';return}
+ if(!hud)return;
+ if(MODE!=='quiz'||Q.step==='intro'){hud.innerHTML='';_hudRows=new Map();return}
  const nAns=Object.keys(Q.ans).length;
- let nRevealed=0;
- let itemsHtml='';
-
- QHUD_KEYS.forEach(item=>{
-  const isAns=Q.ans[item.k]!==undefined;
-  const vk=D.model&&D.model.v?D.model.v[item.k]:null;
-  const magk=vk?Math.hypot(...vk):0;
-
-  let isKnown=false;
-  let val=0;
-  let tag='?';
-  let col='var(--muted)';
-
-  if(isAns){
-   isKnown=true;
-   nRevealed++;
-   const a=Q.ans[item.k];
-   val=a>0?0.9:(a<0?-0.9:0);
-   tag=a>0?'Your vote: For':(a<0?'Your vote: Against':'Your vote: Mixed');
-   col=a>0?'#2dd4bf':(a<0?'#fb7185':'var(--brass)');
-  }else if(vk&&magk>0&&nAns>0){
-   // Accumulate evidence from user's actual answers based on Commons correlation
-   let Wk=0,Ek=0;
-   for(const[js,y]of Object.entries(Q.ans)){
-    const j=+js,vj=D.model&&D.model.v?D.model.v[j]:null;
-    if(!vj)continue;
-    const magj=Math.hypot(...vj);
-    if(magj<=0)continue;
-    const cos=(vj[0]*vk[0]+vj[1]*vk[1]+vj[2]*vk[2])/(magj*magk);
-    if(Math.abs(cos)>0.25){
-     const wt=Q.star&&Q.star.has(j)?1.5:1;
-     Wk+=Math.abs(cos)*wt;
-     Ek+=y*cos*wt;
-    }
-   }
-   // Require genuine accumulated evidence (Wk >= 0.95) before making a projection
-   if(Wk>=0.95){
-    isKnown=true;
-    nRevealed++;
-    const dk=Ek/(Wk+0.35);
-    val=Math.max(-0.9,Math.min(0.9,dk*1.25));
-    const isFor=val>0.2,isAgst=val<-0.2;
-    col=isFor?'#2dd4bf':(isAgst?'#fb7185':'var(--dim)');
-    tag=val>=0.5?'Likely in favour':(val>=0.2?'Leaning for':(val<=-0.5?'Likely opposed':(val<=-0.2?'Leaning against':'Neutral')));
-   }
+ if(!hud.querySelector('.qhud-list')){
+  _hudRows=new Map();
+  hud.innerHTML=`<div class="qhud-box"><div class="qhud-hdr"><b>What defines you now</b><span></span></div><div class="qhud-list" style="height:${QHUD_ROWS*QHUD_ROW_H}px"></div><div class="qhud-empty">Your strongest views appear here as you answer.</div><button type="button" class="qhud-btn" data-results>View full profile &rarr;</button></div>`;
+  hud.querySelector('[data-results]').onclick=()=>{
+   if(Q.busy||!Object.keys(Q.ans).length)return;
+   Q.step='results';renderQuiz();$('qz').scrollTop=0;
+  };
+ }
+ const list=hud.querySelector('.qhud-list'),btn=hud.querySelector('[data-results]');
+ btn.disabled=!nAns;
+ hud.querySelector('.qhud-empty').style.display=nAns?'none':'block';
+ const ranked=(nAns&&YOU)?HAQuiz.hudRank(YOU.p,QCTX,Q.ans,QOK,QHUD_ROWS):[];
+ const nA=ranked.filter(r=>r.answered).length;
+ hud.querySelector('.qhud-hdr span').textContent=nAns?`${nA} answered, ${ranked.length-nA} inferred`:'';
+ const keep=new Set(ranked.map(r=>r.k));
+ for(const[k,el]of _hudRows){
+  if(!keep.has(k)){_hudRows.delete(k);el.style.opacity='0';setTimeout(()=>el.remove(),500)}
+ }
+ ranked.forEach((r,idx)=>{
+  const st=_hudStance(r),pct=Math.round(50+st.val*45),y=idx*QHUD_ROW_H;
+  let el=_hudRows.get(r.k);
+  const fresh=!el;
+  if(fresh){
+   el=document.createElement('div');el.className='qhud-item';
+   el.style.transform=`translateY(${y}px)`;el.style.opacity='0';
+   el.innerHTML=`<div class="qhud-item-top"><span class="qhud-item-name"></span><span class="qhud-item-stance"></span></div><div class="qhud-track"><div class="qhud-mark"></div><div class="qhud-dot"></div></div>`;
+   list.appendChild(el);_hudRows.set(r.k,el);
+   requestAnimationFrame(()=>requestAnimationFrame(()=>{el.style.opacity='1'}));
   }
-
-  const pct=isKnown?Math.round(50+val*45):50;
-  itemsHtml+=`<div class="qhud-item">
-   <div class="qhud-item-top">
-    <span class="qhud-item-name" title="${esc(D.fights[item.k].label)}">${esc(item.label)}</span>
-    <span class="qhud-item-stance ${isKnown?'':'is-unknown'}" style="color:${isKnown?col:'var(--muted)'}">${tag}</span>
-   </div>
-   <div class="qhud-track">
-    <div class="qhud-mark"></div>
-    <div class="qhud-dot ${isKnown?'':'is-unknown'}" style="left:${pct}%;background:${col};color:${col}"></div>
-   </div>
-  </div>`;
- });
-
- const subHdr=nAns===0?'Revealed as you answer':(nRevealed?`${nRevealed}/10 active`:'10 key issues');
- let h=`<div class="qhud-box"><div class="qhud-hdr"><b>Estimated stances</b><span>${subHdr}</span></div>${itemsHtml}`;
- h+=`<button type="button" class="qhud-btn" data-results ${nAns?'':'disabled'}>View full profile &rarr;</button></div>`;
- hud.innerHTML=h;
- hud.querySelectorAll('[data-results]').forEach(b=>b.onclick=()=>{
-  if(!nAns)return;
-  Q.step='results';
-  renderQuiz();
-  $('qz').scrollTop=0;
+  el.dataset.k=r.k;el.dataset.rank=idx;el.dataset.answered=r.answered?'1':'0';
+  const nm=el.querySelector('.qhud-item-name'),tg=el.querySelector('.qhud-item-stance'),dot=el.querySelector('.qhud-dot');
+  nm.textContent=D.fights[r.k].label;nm.title=D.fights[r.k].label;
+  tg.textContent=st.tag;tg.style.color=st.col;
+  dot.style.left=pct+'%';dot.style.background=r.answered?st.col:'#0e1117';dot.style.borderColor=st.col;dot.style.color=st.col;
+  dot.classList.toggle('is-inferred',!r.answered);
+  el.style.transform=`translateY(${y}px)`;
+  if(!fresh)el.style.opacity='1';
  });
 }
 const _origRenderQuiz=renderQuiz;
@@ -483,7 +469,7 @@ renderQuiz=function(){
  renderQuizHud();
 };
 const _origUpdateYou=updateYou;
-updateYou=function(u){
- _origUpdateYou(u);
+updateYou=function(u,done){
+ _origUpdateYou(u,done);
  renderQuizHud();
 };
