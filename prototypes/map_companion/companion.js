@@ -55,6 +55,7 @@ info=function(){
  let h=`${crumbsHtml}<h2>${titleName}</h2>`;
  if(sel.t==='subj'){
   const fs=D.fights.map((f,i)=>[f,i]).filter(([f])=>f.subj===nd.sub.name),os=D.os.map((o,i)=>[o,i]).filter(([o])=>o.subj===nd.sub.name&&o.u);
+  h+='<p class="comp-lens-note">Bigger dots talk about this topic more. Colour shows which side they lean.</p>';
   h+='<p class="comp-intro">Explore the proposals, the positions MPs took, and the speeches behind them.</p>';
   h+='<section class="comp-section"><h3>Propositions</h3>'+fs.map(([f,i])=>proposal('F'+i,f.label,`${f.n} scored MPs${!f.u?' · Too little evidence for a map line':f.small?' · Small sample':''}`)).join('')+'</section>';
   if(os.length)h+=`<details class="comp-analysis"><summary>Other proposals · ${os.length} inferred</summary>${os.map(([o,i])=>proposal('O'+i,o.label,'One-sided evidence · inferred direction')).join('')}</details>`;
@@ -204,7 +205,7 @@ $('layPop').addEventListener('click',e=>{
 $('layBtn').innerHTML='Map options<span class="dotb"></span>';
 const baseFilCount=filCount;filCount=function(){baseFilCount();$('layBtn').classList.toggle('act',filtersOn())};
 $('layPop').addEventListener('click',e=>{if(e.target.closest('#reset')){FL.parties.clear();partiesMore=false;filCount();buildLayers();zoomMap(1)}});
-document.querySelector('.comp-map-note').textContent='Drag to rotate · Scroll to zoom · Select an MP';
+document.querySelector('.comp-map-note').innerHTML='Drag to rotate · Scroll to zoom · Select an MP<span class="comp-edge-hint"> · Hover the edge to see what divides MPs there</span>';
 $('howOpen').textContent='How it works';$('howOpen').title='How to use the map and where the data comes from';
 $('howDlg').innerHTML=`<div class="d-top"><h2>How it works</h2><button class="xbtn" id="compGuideClose" aria-label="Close guide">✕ Close</button></div><div class="guide-tabs" role="tablist" aria-label="Guide sections"><button id="guide-use" role="tab" aria-selected="true" aria-controls="guide-use-panel">Using the app</button><button id="guide-data" role="tab" aria-selected="false" aria-controls="guide-data-panel">Where the data comes from</button></div><div class="d-body" id="guide-use-panel" role="tabpanel" aria-labelledby="guide-use"><h3>Start with a topic</h3><p>Open <b>Topics</b> and choose Health, Housing or another topic. Open a proposal to see the positions MPs took. <b>All topics</b> takes you back; <b>Hide panel</b> gives the map more room.</p><h3>Explore the map</h3><p>Each small dot is an MP. MPs with similar recorded positions tend to sit closer together. Drag to rotate in 3D, or choose 2D for a flat view. Scroll over the map or use + and − to zoom; the percentage button resets zoom.</p><h3>Understand what you see</h3><p>At the overview, colours show parties. With a proposal selected, teal means support and coral means opposition. Grey means no score for that selection, not neutrality. Larger labelled circles show party averages.</p><p><b>Explore axes</b> explains the main directions in the map. Choosing a topic or proposal in the <b>Topics</b> panel draws its direction across the map: a proposal as a line from its <b>for</b> end to its <b>against</b> end, a topic as a fan of those lines.</p><h3>Read the evidence</h3><p>Select an MP or search by name or constituency. Open a position to read supporting excerpts and follow the source debate. A speech position is not the same thing as a parliamentary vote.</p><h3>Find your place</h3><p>Answer real policy questions in <b>Find my place</b> to see a rough position and compare your answers with MPs. Mixed and skipped answers do not place you.</p><h3>Explore connections</h3><p>Use <b>Related topics & positions</b> inside a topic to see which positions tend to go together. The back button returns to the map.</p></div><div class="d-body" id="guide-data-panel" role="tabpanel" aria-labelledby="guide-data" hidden><h3>1 · Start with Commons speeches</h3><p>The app uses parliamentary debate records. It keeps the speaker, date and source link so you can go back to the original words.</p><h3>2 · Identify proposals and positions</h3><p>AI reads the speeches to identify the specific proposal being discussed and whether an MP supports it, opposes it or expresses both sides. Further model checks test candidate passages against the proposal.</p><h3>3 · Combine and organise</h3><p>Repeated versions of the same proposal are merged. The checked positions are organised into topics, with excerpts attached to MPs’ profiles. Talking a lot about a topic is kept separate from taking a position.</p><h3>4 · Read it a second time</h3><p>Several thousand positions were then read again by a different AI model that was not shown the first verdict. Where the second reading disagreed, the position was removed or corrected. Positions the first model was unsure about were wrong often enough that every one used for the map was re-read. Each correction is stored separately from the original output, so the effect of the checking can be measured.</p><h3>5 · Build a shared map</h3><p>Patterns across MPs’ recorded positions are condensed into three dimensions. Proposals with MPs on both sides carry most of the weight; proposals where only supporters spoke add lighter evidence about who stands with whom, which matters most for MPs who have said little. Similar patterns tend to be near each other. Topic shapes and proposal lines help explain directions in that space; they are summaries, not exact descriptions of every opinion.</p><h3>6 · Show the limits</h3><p>AI can misread a speech, and the second reading is also done by a model, not a person. Missing evidence does not mean an MP is neutral. MPs with little evidence have less reliable placements, and a weak fit means the map does not explain that issue well.</p><p>Some proposals only have evidence from one side. Their directions are inferred from their backers and are labelled accordingly; they are not used to position MPs.</p><p>The map describes what MPs have said. It is not a forecast: when tested, it did not predict how MPs vote or which motions they sign beyond what their party already tells you.</p><p>Use the map to explore, then check the excerpts and sources before drawing conclusions about an individual MP.</p><button class="comp-related" id="compDataDetails">More data and method details →</button></div>`;
 $('compGuideClose').onclick=()=>$('howDlg').close();$('compDataDetails').onclick=()=>{$('howDlg').close();$('aboutDlg').showModal()};
@@ -413,6 +414,7 @@ function drawAxisEnds(){
  ctx.globalCompositeOperation='destination-over';ctx.lineWidth=1;
  for(let i=0;i<n;i++){const a=ends.find(e=>e.i===i&&e.side>0),b=ends.find(e=>e.i===i&&e.side<0);ctx.strokeStyle=AX===i?'rgba(217,180,95,.34)':'rgba(154,164,178,.13)';ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()}
  ctx.globalCompositeOperation='source-over';
+ if(rimJ!=null&&rimTipRect)tagRects.push({rimTip:1,x0:rimTipRect.x0-4,y0:rimTipRect.y0-4,x1:rimTipRect.x1+4,y1:rimTipRect.y1+4});
  const obs=axObstacles(),blocked=[];
  if(L.pavg)pAvg.forEach(a=>{const p=P(a.v);blocked.push({x0:p[0]-15,y0:p[1]-15,x1:p[0]+15,y1:p[1]+15})});
  tagRects.forEach(t=>blocked.push(t));
@@ -591,3 +593,97 @@ updateYou=function(u,done){
  _origUpdateYou(u,done);
  renderQuizHud();
 };
+
+// ---- Topic lens: pointing at a topic row in the panel previews it on the map (dot size = focus, colour = stance).
+{const rowTopic=e=>{const r=e.target.closest&&e.target.closest('.topic-sub-entry[data-k],.row[data-k]'),k=r&&r.dataset.k;return k&&/^S\d+$/.test(k)?+k.slice(1):null};
+ const setLens=k=>{if(k===lensHov)return;lensHov=k;draw()};
+ $('tree').addEventListener('mouseover',e=>setLens(rowTopic(e)));
+ $('tree').addEventListener('focusin',e=>setLens(rowTopic(e)));
+ $('tree').addEventListener('mouseleave',()=>setLens(null));
+ $('tree').addEventListener('focusout',e=>{if(!$('tree').contains(e.relatedTarget))setLens(null)});
+ $('left').addEventListener('mouseleave',()=>setLens(null))}
+// ---- Hover the edge: the proposal whose direction points at that part of the rim lights up (selected-proposal look, as a preview).
+const RIM_BAND=34,RIM_MIN_ALIGN=.85,RIM_HYST=.04,RIM_HOLD_DEG=8,RIM_MIN_N=10;
+const rim={side:0,th:0,anchor:0,inBand:false,tip:false,tapKey:null};
+const rimNj=D.fights.map(f=>f.sc.reduce((a,x)=>a+(x!=null?1:0),0));
+const rimV=D.model.v.map(v=>{const n=Math.hypot(v[0],v[1],v[2])||1;return v.map(x=>x/n)});
+const rimOn=()=>MODE==='explore'&&!axfActive()&&sel.t==='root'&&AX===null;
+function rimGeom(x,y){const dx=x-cx(),dy=H/2-y,d=Math.hypot(dx,dy),R=Math.min(W,H)*0.40*companionZoom;return{d,R,inBand:Math.abs(d-R)<=RIM_BAND/2,th:Math.atan2(dy,dx)}}
+// the rim point as a direction in map coordinates: screen-plane (cos, sin, 0) taken back through the current rotation
+function rimDir3(th){const cy=Math.cos(yaw),sy=Math.sin(yaw),cp=Math.cos(pitch),sp=Math.sin(pitch),x=Math.cos(th),y=Math.sin(th);
+ return[cy*x+sy*sp*y,cp*y,sy*x-cy*sp*y]}
+function rimCands(th){
+ const out=[],d3=mode3?rimDir3(th):null;
+ for(let j=0;j<rimV.length;j++){const f=D.fights[j];if(!f||!f.u||rimNj[j]<RIM_MIN_N)continue;const v=rimV[j];let a;
+  if(mode3)a=v[0]*d3[0]+v[1]*d3[1]+v[2]*d3[2];
+  else{const Lp=Math.hypot(v[0],v[1]);if(Lp<.35)continue;a=(v[0]*Math.cos(th)+v[1]*Math.sin(th))/Lp}
+  const w=Math.sqrt(Math.min(rimNj[j],40)/40);
+  for(const side of[1,-1]){const al=a*side;if(al>=RIM_MIN_ALIGN)out.push({j,side,al,score:al*w})}}
+ return out.sort((a,b)=>b.score-a.score)}
+function rimPick(th){
+ const cs=rimCands(th),best=cs[0]||null,cur=rimJ!=null?cs.find(c=>c.j===rimJ&&c.side===rim.side):null;
+ const dAng=Math.abs(Math.atan2(Math.sin(th-rim.anchor),Math.cos(th-rim.anchor)))*180/Math.PI;
+ if(cur&&best&&(best===cur||(dAng<=RIM_HOLD_DEG&&best.score<cur.score+RIM_HYST)))return cur;
+ if(best)rim.anchor=th;
+ return best}
+function rimHideTip(){if(rim.tip){rim.tip=false;const t=$('tip');t.style.display='none';t.classList.remove('rim-tip');t.style.maxWidth=''}rimTipRect=null}
+function rimClear(){const had=rimJ!=null||rim.inBand||rim.tip;rimJ=null;rim.inBand=false;rimHideTip();return had}
+function rimApply(x,y,touch){
+ if(!rimOn()){rimClear();return false}
+ const g=rimGeom(x,y);
+ if(!g.inBand||nearest(x,y)>=0||axAt(x,y)){rimClear();return false}
+ rim.inBand=true;rim.th=g.th;
+ const c=rimPick(g.th);rimJ=c?c.j:null;rim.side=c?c.side:0;return true}
+function rimShowTip(x,y,touch){
+ const t=$('tip');if(rimJ==null){rimHideTip();return}
+ const f=D.fights[rimJ];
+ t.innerHTML=`<div class="rim-n">${esc(f.label)}</div><div class="axt-m">${rim.side>0?'MPs towards this edge tend to support it':'MPs towards this edge tend to oppose it'}</div><div class="axt-m">${touch?'Tap again to open':'Click to open'}</div>`;
+ t.classList.add('rim-tip');t.style.maxWidth='270px';t.style.display='block';rim.tip=true;
+ const w=t.offsetWidth,h=t.offsetHeight,c=cx();let ox=x-c,oy=y-H/2;const on=Math.hypot(ox,oy)||1;ox/=on;oy/=on;
+ const tx=-oy,ty=ox,dirs=[[tx*.6-ox*.8,ty*.6-oy*.8],[-tx*.6-ox*.8,-ty*.6-oy*.8],[tx,ty],[-tx,-ty],[-ox,-oy],[tx*.6+ox*.8,ty*.6+oy*.8],[-tx*.6+ox*.8,-ty*.6+oy*.8]],arcPts=[-.16,-.1,-.05,0,.05,.1,.16].map(d=>{const a=rim.th+d;return[c+Math.cos(a)*on,H/2-Math.sin(a)*on]});
+ let best=null;
+ dirs.forEach(([dx,dy],k)=>{const gap=14+w/2*Math.abs(dx)+h/2*Math.abs(dy);let rx=x+dx*gap,ry=y+dy*gap;
+  const nx=Math.max(6+w/2,Math.min(W-6-w/2,rx)),ny=Math.max(6+h/2,Math.min(H-6-h/2,ry)),shift=Math.hypot(nx-rx,ny-ry);
+  const r={x0:nx-w/2,y0:ny-h/2,x1:nx+w/2,y1:ny+h/2};let ov=0;
+  tagRects.forEach(b=>{if(b.rimTip)return;const ix=Math.min(r.x1,b.x1)-Math.max(r.x0,b.x0),iy=Math.min(r.y1,b.y1)-Math.max(r.y0,b.y0);if(ix>0&&iy>0)ov+=ix*iy});
+  if(L.pavg)pAvg.forEach(a=>{const q=P(a.v);if(q[0]>r.x0-8&&q[0]<r.x1+8&&q[1]>r.y0-8&&q[1]<r.y1+8)ov+=500});
+  for(const o of proj){if(VIS[o.i]&&o.x>r.x0&&o.x<r.x1&&o.y>r.y0&&o.y<r.y1&&EVF[o.i]>.3)ov+=3}
+  arcPts.forEach(q=>{if(q[0]>r.x0-6&&q[0]<r.x1+6&&q[1]>r.y0-6&&q[1]<r.y1+6)ov+=600});
+  const cost=ov+shift*40+k*8;if(!best||cost<best.cost)best={cost,r}});
+ t.style.left=best.r.x0+'px';t.style.top=best.r.y0+'px';
+ const old=rimTipRect;rimTipRect=best.r;if(!old||Math.abs(old.x0-best.r.x0)>1||Math.abs(old.y0-best.r.y0)>1)draw()}
+const rimDown={on:false,x:0,y:0,moved:0};
+cv.addEventListener('pointerdown',e=>{const R=cv.getBoundingClientRect();rimDown.on=true;rimDown.x=e.clientX;rimDown.y=e.clientY;rimDown.moved=0;rimDown.px=e.clientX-R.left;rimDown.py=e.clientY-R.top},true);
+// capture phase: runs before the map's own pointer handler, so the one redraw it does already shows the preview
+cv.addEventListener('pointermove',e=>{
+ if(rimDown.on)rimDown.moved=Math.max(rimDown.moved,Math.abs(e.clientX-rimDown.x)+Math.abs(e.clientY-rimDown.y));
+ if(drag||e.pointerType==='touch'){rimClear();return}
+ const R=cv.getBoundingClientRect();rimApply(e.clientX-R.left,e.clientY-R.top,false)},true);
+cv.addEventListener('pointermove',e=>{
+ if(drag||e.pointerType==='touch')return;
+ const R=cv.getBoundingClientRect(),x=e.clientX-R.left,y=e.clientY-R.top;
+ if(rimJ!=null)rimShowTip(x,y,false);
+ if(rim.inBand&&hover<0&&!axEndHov)cv.style.cursor='pointer'});
+cv.addEventListener('pointerleave',e=>{if(e.pointerType==='touch')return;if(rimClear())draw()});
+cv.addEventListener('pointerup',e=>{
+ const was=rimDown.on&&rimDown.moved<5;rimDown.on=false;if(!was)return;
+ const R=cv.getBoundingClientRect(),x=e.clientX-R.left,y=e.clientY-R.top;
+ if(nearest(x,y)>=0||axAt(x,y)){rimClear();return}
+ const open=j=>{rimClear();rim.tapKey=null;$('tip').style.display='none';go({t:'fight',i:j},null)};
+ if(e.pointerType==='touch'){
+  if(!rimOn()||!rimGeom(x,y).inBand){rim.tapKey=null;if(rimClear())draw();return}
+  const prev=rimJ,prevSide=rim.side;rimApply(x,y,true);
+  if(rimJ==null){rim.tapKey=null;rimHideTip();draw();return}
+  const key=rimJ+':'+rim.side;
+  if(rim.tapKey===key&&prev===rimJ&&prevSide===rim.side){open(rimJ);return}
+  rim.tapKey=key;draw();rimShowTip(x,y,true);return}
+ if(rimJ!=null&&rimOn())open(rimJ)});
+const drawBeforeRim=draw;
+draw=function(){
+ if((rimJ!=null||rim.inBand)&&!rimOn()){rimJ=null;rim.inBand=false;rimHideTip()}
+ drawBeforeRim();
+ if(!rim.inBand||!rimOn())return;
+ const c=[cx(),H/2],R=Math.min(W,H)*0.40*companionZoom,lit=rimJ!=null;
+ ctx.save();ctx.setTransform(dpr,0,0,dpr,0,0);ctx.lineCap='round';ctx.lineWidth=lit?4:3;
+ ctx.strokeStyle=lit?(rim.side>0?FORC:AGC):'#9aa4b2';ctx.globalAlpha=lit?.6:.28;
+ ctx.beginPath();ctx.arc(c[0],c[1],R,-rim.th-.16,-rim.th+.16);ctx.stroke();ctx.restore()};
