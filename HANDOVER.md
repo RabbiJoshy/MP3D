@@ -1,4 +1,18 @@
-# Handover — 15 November 2026 (read this first; it supersedes anything below that disagrees)
+# Handover — 15 November 2026, late (read this first; it supersedes anything below that disagrees)
+
+## Latest round (after the section below was written) — live commit `442e293`
+- **Final second read:** 2,642 more positions read blind by Gemini via `sk25_reading_job.py` (files in `results/overrides/final_read/`): 998 map positions at ≥ 0.9 confidence (959 confirmed, 39 dropped) and 1,644 profile positions at 0.7-0.9 (1,359 confirmed, 285 dropped). **Every map position has now been read twice.** `positions.jsonl` has 8,313 rows (6,853 confirm, 1,407 drop, 53 flip).
+- **Which one-sided positions feed the map (do not change without re-testing):** judge confidence ≥ 0.9, or confirmed in the 13-14 Nov reviews. Confirmations from the `final_read` pass clean profiles but are NOT map evidence. Within-party split-vote AUC under the three rules tested: this rule 0.706; adding the final_read confirmations 0.682; ≥ 0.9 only 0.680. Before the final read it was 0.725; the gap is about the size of the run-to-run noise.
+- **Current numbers:** 526 MPs, 75 arguments, held-out fit 0.93, within-party AUC 0.706 (AUC_all from `research_2026_11_12/eval_within_party.py`; do not confuse it with AUC_3plus, which reads about 0.03 higher), party share 32.6%.
+- **Map centred:** after anchoring, the cloud is shifted to its visual midpoint and the shift absorbed into the intercepts (a pure translation; no distances change).
+- **Quiz:** party matching no longer hides parties with few MPs (`minMPs = 1`, skips `Ind`, needs ≥ 3 comparable stances).
+- **Axis names now:** 1 Government programme ↔ Critics from left and right; 2 Social and democratic reform ↔ Restrictive welfare and justice; 3 Security and fiscal measures ↔ Devolution and social protection. Names are regenerated with `sk24_axis_names.py` when fewer than 4 of 7 arguments at an end still match.
+- **Tried and reverted, do not repeat without a new argument:** a "three-channel" fit that added (a) redundancy down-weighting of near-duplicate bills, (b) topic focus across 21 domains and (c) semantic embeddings of asks into the position map. Against live it was flat or worse on every check (within-party AUC 0.725 → 0.690, held-out fit 0.93 → 0.91, effective dimensions 2.51 → 2.39), axis 1 stayed "Government programme", and only 11% of each MP's ten nearest neighbours survived, because channels (b) and (c) measure what MPs talk about, not which side they take. If topic focus is wanted, build it as a separate view or as a lens over the position map.
+- **Why the map is shaped as it is (measured):** three camps: Labour loyalists, the right opposition, and the left/liberal opposition plus Labour rebels, who side with Labour on one bloc of bills and with the Conservatives on another. Held-out accuracy by number of dimensions: 0.811, 0.832, 0.832, then 0.826-0.829 for 4 to 8, so the evidence supports about two dimensions and a weak third. 17 of 75 arguments divide parties internally. The user does NOT want predefined, content-coded axes.
+
+---
+
+# Handover — 15 November 2026 (earlier the same day)
 
 **State:** live and sendable at https://rabbijoshy.github.io/MP3D/ (GitHub Pages serves `main` → `/docs`; the working branch `rebuild/speech-space` is kept identical). Local preview: `http://127.0.0.1:8765/prototypes/map_companion/index.html`, refreshed by every build (start `.venv/bin/python -m http.server 8765` from the repo root if it is down).
 
