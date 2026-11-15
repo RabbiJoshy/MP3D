@@ -175,6 +175,15 @@ if _overrides_dir.exists() and "--no-overrides" not in sys.argv:
     print(f"overrides applied: positions ({pos_counts.get('confirm', 0)} confirm, {pos_counts.get('flip', 0)} flip, {pos_counts.get('drop', 0)} drop), "
           f"labels ({label_counts.get('keep', 0)} keep, {label_counts.get('merge_into', 0)} merge_into, {label_counts.get('rename', 0)} rename, {label_counts.get('retire', 0)} retire)")
 
+# ---- subject corrections (overrides/subjects.jsonl, append-only): a reviewed fix where the automatic subject was clearly wrong
+_subj_fix = {}
+_sjf = RES / "overrides" / "subjects.jsonl"
+if _sjf.exists() and "--no-overrides" not in sys.argv:
+    for _x in map(json.loads, _sjf.open()): _subj_fix[_x["label"]] = _x["subject"]
+    _nfix = 0
+    for _f in FALL:
+        if _f.get("label") in _subj_fix and _f.get("topic") != _subj_fix[_f["label"]]: _f["topic"] = _subj_fix[_f["label"]]; _nfix += 1
+    print("subject corrections applied:", _nfix, "of", len(_subj_fix))
 # ---------------- merge same-bill duplicate fights (generic rules, no hand edits) ----------------
 topic_of = {int(k): v for k, v in ts["topic_of"].items()}
 def stance_of(f):
@@ -354,13 +363,19 @@ if JOINT:
         _rd0 = {(x["label"], x["passage_id"]) for x in map(json.loads, _pj0.open())} if _pj0.exists() else set()
         for _w in map(json.loads, _wl0.open()):
             if _w.get("conf") is not None and _w["conf"] < 0.7 and (_w["label"], _w["passage_id"]) not in _rd0: _lc0.add((_w["label"], _w["passage_id"]))
+    # Only one-sided positions that were confirmed on a second read, or that the judge scored at 0.9 or more, may help place MPs
+    # (the 13-14 Nov reviews found one-sided positions about 92% right at >= 0.9 but only about 79% right at 0.7-0.9).
+    _ok1 = {(x["label"], x["passage_id"]) for x in map(json.loads, _pj0.open()) if x.get("action") == "confirm"} if _pj0.exists() else set()
+    if _wl0.exists():
+        for _w in map(json.loads, _wl0.open()):
+            if _w.get("conf") is not None and _w["conf"] >= 0.9: _ok1.add((_w["label"], _w["passage_id"]))
     _cols = []
     for _f in POOL:
         _labs = {FALL[o]["label"] for o in _f["orig"]} | {_f["label"]}
         _y = np.zeros(N); _c = np.full(N, ONE_SILENCE); _k = 0
         for _side, _val in (("for", 1.0), ("against", -1.0)):
             for _m in _f[_side]:
-                if _m["id"] in mi and not all(any((l, cl["p"]) in _lc0 for l in _labs) for cl in _m["claims"]):
+                if _m["id"] in mi and any(any((l, cl["p"]) in _ok1 for l in _labs) for cl in _m["claims"]):
                     _i = mi[_m["id"]]; _y[_i] = _val; _c[_i] = min(2.0, float(np.sqrt(max(1, len(_m["claims"]))))); _k += 1
         if _k >= 5: _cols.append((_y, _c))
     _Y1 = np.column_stack([c[0] for c in _cols]); _C1 = np.column_stack([c[1] for c in _cols])

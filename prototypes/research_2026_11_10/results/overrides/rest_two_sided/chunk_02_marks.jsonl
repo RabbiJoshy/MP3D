@@ -1,0 +1,235 @@
+{"id": 3, "human_side": "FOR", "reason": "clear", "note": "Welcomes abolition of NHS England putting services on frontline", "reviewer": "claude-sonnet-5-5"}
+{"id": 9, "human_side": "AGAINST", "reason": "clear", "note": "Opposes government APR changes, wants indexing and 100% BPR retained", "reviewer": "claude-sonnet-5-5"}
+{"id": 18, "human_side": "AGAINST", "reason": "clear", "note": "Says throwing out human rights is wrong; criticises Bill", "reviewer": "claude-sonnet-5-5"}
+{"id": 24, "human_side": "AGAINST", "reason": "clear", "note": "Rejects dynamic alignment as outsourcing standards to foreign body", "reviewer": "claude-sonnet-5-5"}
+{"id": 28, "human_side": "AGAINST", "reason": "clear", "note": "Wants regulatory autonomy; warns against copying EU rules", "reviewer": "claude-sonnet-5-5"}
+{"id": 34, "human_side": "FOR", "reason": "clear", "note": "Labour MP welcomes Budget and end of private school subsidy", "reviewer": "claude-sonnet-5-5"}
+{"id": 40, "human_side": "FOR", "reason": "clear", "note": "Says private schools must contribute; supports VAT revenue measures", "reviewer": "claude-sonnet-5-5"}
+{"id": 46, "human_side": "AGAINST", "reason": "clear", "note": "Reasoned amendment opposes restricting appeal rights in magistrates courts", "reviewer": "claude-sonnet-5-5"}
+{"id": 50, "human_side": "FOR", "reason": "clear", "note": "Argues for making the most of North Sea oil and gas", "reviewer": "claude-sonnet-5-5"}
+{"id": 54, "human_side": "FOR", "reason": "clear", "note": "Backs North Sea for security, economy; attacks Secretary of State", "reviewer": "claude-sonnet-5-5"}
+{"id": 58, "human_side": "AGAINST", "reason": "clear", "note": "Cites climate incompatibility and public cost of new licences", "reviewer": "claude-sonnet-5-5"}
+{"id": 62, "human_side": "FOR", "reason": "clear", "note": "Criticises vote against new North Sea licences", "reviewer": "claude-sonnet-5-5"}
+{"id": 71, "human_side": "FOR", "reason": "clear", "note": "Supports Bill's regulator, rejects claim football is fine", "reviewer": "claude-sonnet-5-5"}
+{"id": 84, "human_side": "FOR", "reason": "clear", "note": "Minister defending Bill's licensing regime and regulator", "reviewer": "claude-sonnet-5-5"}
+{"id": 92, "human_side": "FOR", "reason": "clear", "note": "Supports empowering independent regulator to block super league", "reviewer": "claude-sonnet-5-5"}
+{"id": 96, "human_side": "FOR", "reason": "clear", "note": "Welcomes Bill and its licensing regime", "reviewer": "claude-sonnet-5-5"}
+{"id": 102, "human_side": "AGAINST", "reason": "clear", "note": "Calls regulator a quango; says Bill fails spectacularly", "reviewer": "claude-sonnet-5-5"}
+{"id": 109, "human_side": "FOR", "reason": "clear", "note": "Argues costs no reason to forgo a regulator", "reviewer": "claude-sonnet-5-5"}
+{"id": 119, "human_side": "AGAINST", "reason": "clear", "note": "Attacks making all schools follow national curriculum as centralisation", "reviewer": "claude-sonnet-5-5"}
+{"id": 132, "human_side": "FOR", "reason": "clear", "note": "Asks how government will give votes at 16", "reviewer": "claude-sonnet-5-5"}
+{"id": 144, "human_side": "FOR", "reason": "clear", "note": "Argues votes at 16 let youngsters learn about politics", "reviewer": "claude-sonnet-5-5"}
+{"id": 166, "human_side": "FOR", "reason": "clear", "note": "Supports votes at 16; rejects review amendment as delaying", "reviewer": "claude-sonnet-5-5"}
+{"id": 174, "human_side": "FOR", "reason": "clear", "note": "Minister delivering lower business rates for retail and hospitality", "reviewer": "claude-sonnet-5-5"}
+{"id": 178, "human_side": "FOR", "reason": "clear", "note": "Minister urges rejection of new clauses; defends dividend tax measures", "reviewer": "claude-sonnet-5-5"}
+{"id": 185, "human_side": "FOR", "reason": "clear", "note": "Welcomes clause 29 and urges voting for the Bill", "reviewer": "claude-sonnet-5-5"}
+{"id": 189, "human_side": "FOR", "reason": "clear", "note": "Defends Bill's record and rejects the new clause", "reviewer": "claude-sonnet-5-5"}
+{"id": 196, "human_side": "AGAINST", "reason": "clear", "note": "Calls NICs rise an unfair jobs tax; voted against", "reviewer": "claude-sonnet-5-5"}
+{"id": 202, "human_side": "AGAINST", "reason": "clear", "note": "Minister asks to withdraw clause, prefers water commission route", "reviewer": "claude-sonnet-5-5"}
+{"id": 208, "human_side": "FOR", "reason": "clear", "note": "Urges rent stabilisation tied to wages or inflation", "reviewer": "claude-sonnet-5-5"}
+{"id": 213, "human_side": "FOR", "reason": "clear", "note": "Asks whether Bill could give mayors levy powers", "reviewer": "claude-sonnet-5-5"}
+{"id": 221, "human_side": "FOR", "reason": "clear", "note": "Welcomes lifting of the onshore wind ban", "reviewer": "claude-sonnet-5-5"}
+{"id": 227, "human_side": "NEITHER", "reason": "different_measure", "note": "Worries Bill causes back-door alignment; no explicit customs union stance", "reviewer": "claude-sonnet-5-5"}
+{"id": 232, "human_side": "FOR", "reason": "clear", "note": "Wants customs union leading to single market access", "reviewer": "claude-sonnet-5-5"}
+{"id": 241, "human_side": "FOR", "reason": "clear", "note": "Welcomes Bill's steps on removal and trafficking gangs", "reviewer": "claude-sonnet-5-5"}
+{"id": 250, "human_side": "NEITHER", "reason": "different_measure", "note": "Supports a different bill on citizenship deprivation orders", "reviewer": "claude-sonnet-5-5"}
+{"id": 260, "human_side": "NEITHER", "reason": "different_measure", "note": "Discusses clause amendments and channel crossings; no stance on Bill", "reviewer": "claude-sonnet-5-5"}
+{"id": 266, "human_side": "FOR", "reason": "clear", "note": "Welcomes Bill empowering local leaders via franchising", "reviewer": "claude-sonnet-5-5"}
+{"id": 275, "human_side": "FOR", "reason": "clear", "note": "Urges Bill to back public ownership; supports reforming buses", "reviewer": "claude-sonnet-5-5"}
+{"id": 280, "human_side": "FOR", "reason": "clear", "note": "Hopes Bill lets Dorset council franchise bus services", "reviewer": "claude-sonnet-5-5"}
+{"id": 291, "human_side": "NEITHER", "reason": "descriptive_not_advocating", "note": "Describes bus decline and evidence; Bill stance only hinted", "reviewer": "claude-sonnet-5-5"}
+{"id": 295, "human_side": "FOR", "reason": "clear", "note": "Lib Dem wants Bill to succeed, supports franchising, tabled amendments", "reviewer": "claude-sonnet-5-5"}
+{"id": 302, "human_side": "FOR", "reason": "clear", "note": "Minister defends franchising reforms and Bee Network delivery", "reviewer": "claude-sonnet-5-5"}
+{"id": 311, "human_side": "FOR", "reason": "clear", "note": "Delighted Bill puts children in care at its heart", "reviewer": "claude-sonnet-5-5"}
+{"id": 339, "human_side": "FOR", "reason": "clear", "note": "Welcomes Bill's measures for holistic education and breakfast clubs", "reviewer": "claude-sonnet-5-5"}
+{"id": 349, "human_side": "FOR", "reason": "clear", "note": "Says Bill's multi-agency and social work measures will be vital", "reviewer": "claude-sonnet-5-5"}
+{"id": 357, "human_side": "FOR", "reason": "clear", "note": "Minister explains clauses 30 and 37 bringing settings into regulation", "reviewer": "claude-sonnet-5-5"}
+{"id": 366, "human_side": "FOR", "reason": "clear", "note": "Welcomes Bill's antisocial behaviour and stalking protection powers", "reviewer": "claude-sonnet-5-5"}
+{"id": 379, "human_side": "FOR", "reason": "clear", "note": "Welcomes off-road bike seizure, retail worker offence, spiking offence", "reviewer": "claude-sonnet-5-5"}
+{"id": 388, "human_side": "NEITHER", "reason": "descriptive_not_advocating", "note": "Describes Bill's device and search powers; calls for more resources", "reviewer": "claude-sonnet-5-5"}
+{"id": 398, "human_side": "FOR", "reason": "clear", "note": "Cites new powers on repeat offenders and bikes; notes union welcomes Bill", "reviewer": "claude-sonnet-5-5"}
+{"id": 409, "human_side": "FOR", "reason": "clear", "note": "Welcomes Bill's economic crime provisions and clause 103 cost protection", "reviewer": "claude-sonnet-5-5"}
+{"id": 421, "human_side": "FOR", "reason": "clear", "note": "Proud of Bill's measures on stalking, intimate image abuse, spiking", "reviewer": "claude-sonnet-5-5"}
+{"id": 426, "human_side": "NEITHER", "reason": "different_measure", "note": "Backs a Bill amid Courts debate; unclear which measure", "reviewer": "claude-sonnet-5-5"}
+{"id": 434, "human_side": "AGAINST", "reason": "clear", "note": "Minister says UK Government does not support devolving immigration powers", "reviewer": "claude-sonnet-5-5"}
+{"id": 438, "human_side": "AGAINST", "reason": "clear", "note": "Argues treaty surrenders sovereignty and impedes base operations", "reviewer": "claude-sonnet-5-5"}
+{"id": 442, "human_side": "FOR", "reason": "clear", "note": "Defends treaty as good value securing Diego Garcia", "reviewer": "claude-sonnet-5-5"}
+{"id": 449, "human_side": "FOR", "reason": "clear", "note": "Argues without treaty base is at risk from legal challenge", "reviewer": "claude-sonnet-5-5"}
+{"id": 460, "human_side": "AGAINST", "reason": "clear", "note": "Calls it a bad deal; says it deserves no Second Reading", "reviewer": "claude-sonnet-5-5"}
+{"id": 464, "human_side": "AGAINST", "reason": "clear", "note": "Calls Bill tawdry and unenforceable; self-determination argument", "reviewer": "claude-sonnet-5-5"}
+{"id": 469, "human_side": "AGAINST", "reason": "clear", "note": "Calls Chagos deal a surrender violating 1966 US treaty", "reviewer": "claude-sonnet-5-5"}
+{"id": 474, "human_side": "FOR", "reason": "clear", "note": "Says employment rights Bill will ban zero-hours exploitation, end fire and rehire", "reviewer": "claude-sonnet-5-5"}
+{"id": 480, "human_side": "FOR", "reason": "clear", "note": "Defends Bill as pro-business, pro-worker with CBI backing", "reviewer": "claude-sonnet-5-5"}
+{"id": 503, "human_side": "FOR", "reason": "clear", "note": "Praises Bill's sick pay, holiday pay and end to fire and rehire", "reviewer": "claude-sonnet-5-5"}
+{"id": 509, "human_side": "FOR", "reason": "clear", "note": "Proud Labour delivered employment Bill for workers", "reviewer": "claude-sonnet-5-5"}
+{"id": 520, "human_side": "AGAINST", "reason": "clear", "note": "Says Bill returns to 1970s and holds businesses back", "reviewer": "claude-sonnet-5-5"}
+{"id": 529, "human_side": "FOR", "reason": "clear", "note": "Minister defends Bill as not harming shipbuilding or raising problems", "reviewer": "claude-sonnet-5-5"}
+{"id": 540, "human_side": "FOR", "reason": "clear", "note": "Welcomes Bill returning; backs fair work and guaranteed hours", "reviewer": "claude-sonnet-5-5"}
+{"id": 551, "human_side": "FOR", "reason": "clear", "note": "Says government right to make employment more rewarding via Bill", "reviewer": "claude-sonnet-5-5"}
+{"id": 560, "human_side": "AGAINST", "reason": "clear", "note": "Says Conservatives cannot support this terrible Bill", "reviewer": "claude-sonnet-5-5"}
+{"id": 568, "human_side": "NEITHER", "reason": "different_measure", "note": "Supports a Lords amendment for flexibility; not clearly on Bill itself", "reviewer": "claude-sonnet-5-5"}
+{"id": 573, "human_side": "FOR", "reason": "clear", "note": "Defends Bill, urges rejecting Lords amendments weakening it", "reviewer": "claude-sonnet-5-5"}
+{"id": 584, "human_side": "FOR", "reason": "clear", "note": "SNP opposes Lords amendments weakening Bill, backs day-one rights", "reviewer": "claude-sonnet-5-5"}
+{"id": 592, "human_side": "FOR", "reason": "clear", "note": "Argues against right-to-request amendment; defends zero-hours protections", "reviewer": "claude-sonnet-5-5"}
+{"id": 605, "human_side": "FOR", "reason": "clear", "note": "Minister defends Bill against claims on seasonal contracts", "reviewer": "claude-sonnet-5-5"}
+{"id": 614, "human_side": "FOR", "reason": "clear", "note": "Congratulates Bill; says spirit is one all should support", "reviewer": "claude-sonnet-5-5"}
+{"id": 623, "human_side": "FOR", "reason": "clear", "note": "Says devolution saves money and voting against would be bananas", "reviewer": "claude-sonnet-5-5"}
+{"id": 630, "human_side": "FOR", "reason": "clear", "note": "Welcomes Bill and councillor address protections", "reviewer": "claude-sonnet-5-5"}
+{"id": 635, "human_side": "FOR", "reason": "clear", "note": "Says Finance Bill measures will be a turning point", "reviewer": "claude-sonnet-5-5"}
+{"id": 642, "human_side": "FOR", "reason": "clear", "note": "Supports Budget and welcomes the capital gains tax clause", "reviewer": "claude-sonnet-5-5"}
+{"id": 648, "human_side": "NEITHER", "reason": "different_measure", "note": "Defends process for assisted dying Bill, a different measure", "reviewer": "claude-sonnet-5-5"}
+{"id": 654, "human_side": "FOR", "reason": "clear", "note": "Minister presents Finance Bill revenue measures and spending choices", "reviewer": "claude-sonnet-5-5"}
+{"id": 660, "human_side": "FOR", "reason": "clear", "note": "Defends Budget choices of taxing gambling and mansions to cut child poverty", "reviewer": "claude-sonnet-5-5"}
+{"id": 665, "human_side": "FOR", "reason": "clear", "note": "Minister defends sugar levy increase in the Finance Bill", "reviewer": "claude-sonnet-5-5"}
+{"id": 671, "human_side": "FOR", "reason": "clear", "note": "States support for Bill removing 92 hereditary peers", "reviewer": "claude-sonnet-5-5"}
+{"id": 679, "human_side": "FOR", "reason": "clear", "note": "Endorses closing private school tax loophole; funds teachers, breakfast clubs", "reviewer": "claude-sonnet-5-5"}
+{"id": 685, "human_side": "FOR", "reason": "clear", "note": "Says private school measures fund 6,500 new teachers", "reviewer": "claude-sonnet-5-5"}
+{"id": 699, "human_side": "NEITHER", "reason": "different_measure", "note": "Speaks on product regulation clause, not the rating Bill", "reviewer": "claude-sonnet-5-5"}
+{"id": 705, "human_side": "FOR", "reason": "clear", "note": "Rebuts critics and defends Troubles Bill as acceptable", "reviewer": "claude-sonnet-5-5"}
+{"id": 711, "human_side": "AGAINST", "reason": "clear", "note": "Calls Troubles Bill a betrayal dragging veterans through courts", "reviewer": "claude-sonnet-5-5"}
+{"id": 717, "human_side": "FOR", "reason": "clear", "note": "Calls Bill imperfect but marked improvement; wants it to go further", "reviewer": "claude-sonnet-5-5"}
+{"id": 723, "human_side": "FOR", "reason": "clear", "note": "Welcomes Bill's veteran protections and ending on-the-run immunity", "reviewer": "claude-sonnet-5-5"}
+{"id": 732, "human_side": "AGAINST", "reason": "clear", "note": "Says Bill leads to EU realignment and hampers businesses", "reviewer": "claude-sonnet-5-5"}
+{"id": 739, "human_side": "AGAINST", "reason": "clear", "note": "Calls Bill a Trojan horse tying UK to EU rules", "reviewer": "claude-sonnet-5-5"}
+{"id": 743, "human_side": "FOR", "reason": "clear", "note": "Asks to extend the fraud powers to local government", "reviewer": "claude-sonnet-5-5"}
+{"id": 758, "human_side": "FOR", "reason": "clear", "note": "Welcomes Bill's fraud recovery powers and search and seizure alignment", "reviewer": "claude-sonnet-5-5"}
+{"id": 764, "human_side": "FOR", "reason": "clear", "note": "Says Bill is last-resort powers protecting claimants; welcome", "reviewer": "claude-sonnet-5-5"}
+{"id": 774, "human_side": "NEITHER", "reason": "different_measure", "note": "Speaks against a different welfare bill on PIP eligibility", "reviewer": "claude-sonnet-5-5"}
+{"id": 780, "human_side": "FOR", "reason": "clear", "note": "Minister defends fraud recovery powers and resourcing", "reviewer": "claude-sonnet-5-5"}
+{"id": 784, "human_side": "FOR", "reason": "clear", "note": "Minister defends direct deduction powers as proportionate", "reviewer": "claude-sonnet-5-5"}
+{"id": 789, "human_side": "FOR", "reason": "clear", "note": "Says campaigners will welcome Bill ending no-fault evictions", "reviewer": "claude-sonnet-5-5"}
+{"id": 804, "human_side": "FOR", "reason": "clear", "note": "Warmly welcomes Bill; ends section 21 evictions", "reviewer": "claude-sonnet-5-5"}
+{"id": 821, "human_side": "FOR", "reason": "clear", "note": "Says Bill's changes will support secure renting in Truro", "reviewer": "claude-sonnet-5-5"}
+{"id": 835, "human_side": "FOR", "reason": "clear", "note": "Argues Bill's tenancy changes give certainty to landlords and tenants", "reviewer": "claude-sonnet-5-5"}
+{"id": 849, "human_side": "FOR", "reason": "clear", "note": "Welcomes Government amendments and fairer renting reforms", "reviewer": "claude-sonnet-5-5"}
+{"id": 855, "human_side": "FOR", "reason": "clear", "note": "Urges resisting Lords amendment to keep councils' enforcement powers", "reviewer": "claude-sonnet-5-5"}
+{"id": 859, "human_side": "FOR", "reason": "clear", "note": "Says no-fault eviction ban cannot come soon enough", "reviewer": "claude-sonnet-5-5"}
+{"id": 865, "human_side": "NEITHER", "reason": "different_measure", "note": "Praises policing measures in Crime Bill, not Sentencing Bill", "reviewer": "claude-sonnet-5-5"}
+{"id": 870, "human_side": "NEITHER", "reason": "different_measure", "note": "Welcomes respect orders and bike seizure from Crime Bill", "reviewer": "claude-sonnet-5-5"}
+{"id": 877, "human_side": "FOR", "reason": "clear", "note": "Praises Bill's flexible sentencing and ending short sentences", "reviewer": "claude-sonnet-5-5"}
+{"id": 883, "human_side": "FOR", "reason": "clear", "note": "Minister defends Bill against opposition criticism, cites Gauke review", "reviewer": "claude-sonnet-5-5"}
+{"id": 888, "human_side": "FOR", "reason": "clear", "note": "Welcomes Bill's emphasis on rehabilitation alongside punishment", "reviewer": "claude-sonnet-5-5"}
+{"id": 897, "human_side": "FOR", "reason": "clear", "note": "Welcomes Government amendments and whole-life order extension", "reviewer": "claude-sonnet-5-5"}
+{"id": 905, "human_side": "FOR", "reason": "clear", "note": "Minister says we must act today on British Steel", "reviewer": "claude-sonnet-5-5"}
+{"id": 914, "human_side": "FOR", "reason": "clear", "note": "Says maintaining steelmaking is right; supports acting", "reviewer": "claude-sonnet-5-5"}
+{"id": 921, "human_side": "FOR", "reason": "clear", "note": "Says government should have the proposed powers", "reviewer": "claude-sonnet-5-5"}
+{"id": 926, "human_side": "FOR", "reason": "clear", "note": "Defends government intervention against paralysing amendments", "reviewer": "claude-sonnet-5-5"}
+{"id": 933, "human_side": "FOR", "reason": "clear", "note": "Argues assisted death is more humane than self-starvation", "reviewer": "claude-sonnet-5-5"}
+{"id": 941, "human_side": "FOR", "reason": "clear", "note": "Doctor says assisted dying is the right change", "reviewer": "claude-sonnet-5-5"}
+{"id": 948, "human_side": "AGAINST", "reason": "clear", "note": "Says Bill is unsafe and rushed; not the answer", "reviewer": "claude-sonnet-5-5"}
+{"id": 955, "human_side": "FOR", "reason": "clear", "note": "Doctor urges support for Bill with safeguards", "reviewer": "claude-sonnet-5-5"}
+{"id": 966, "human_side": "FOR", "reason": "clear", "note": "Defends assisted dying as dignified death using husband's example", "reviewer": "claude-sonnet-5-5"}
+{"id": 977, "human_side": "AGAINST", "reason": "clear", "note": "Calls Bill riddled with difficulties; warns of death on demand", "reviewer": "claude-sonnet-5-5"}
+{"id": 988, "human_side": "AGAINST", "reason": "clear", "note": "Urges colleagues not to vote for Bill for lack of scrutiny", "reviewer": "claude-sonnet-5-5"}
+{"id": 998, "human_side": "FOR", "reason": "clear", "note": "Says assisted dying and palliative care improvements can both happen", "reviewer": "claude-sonnet-5-5"}
+{"id": 1002, "human_side": "AGAINST", "reason": "clear", "note": "Passionately argues for respecting life against assisted dying", "reviewer": "claude-sonnet-5-5"}
+{"id": 1013, "human_side": "FOR", "reason": "clear", "note": "Says opposition has a gaping hole; backs Bill's logic", "reviewer": "claude-sonnet-5-5"}
+{"id": 1022, "human_side": "FOR", "reason": "clear", "note": "Urges support for choice; assisted dying complements palliative care", "reviewer": "claude-sonnet-5-5"}
+{"id": 1027, "human_side": "FOR", "reason": "clear", "note": "Supports clause 4 and amendment for compassionate end-of-life choice", "reviewer": "claude-sonnet-5-5"}
+{"id": 1033, "human_side": "AGAINST", "reason": "clear", "note": "Says Bill cuts PIP purely on cost and was not in manifesto", "reviewer": "claude-sonnet-5-5"}
+{"id": 1040, "human_side": "AGAINST", "reason": "clear", "note": "Urges Labour MPs to vote against this cruel Bill", "reviewer": "claude-sonnet-5-5"}
+{"id": 1044, "human_side": "FOR", "reason": "clear", "note": "Defends Bill's protections for universal credit health premium recipients", "reviewer": "claude-sonnet-5-5"}
+{"id": 1064, "human_side": "FOR", "reason": "clear", "note": "Welcomes clause 4 on nature-based drainage solutions", "reviewer": "claude-sonnet-5-5"}
+{"id": 1072, "human_side": "FOR", "reason": "clear", "note": "Will support Bill though thinks it not radical enough", "reviewer": "claude-sonnet-5-5"}
+{"id": 1076, "human_side": "FOR", "reason": "clear", "note": "Proud to have supported Bill; welcomes enforcement strengthening", "reviewer": "claude-sonnet-5-5"}
+{"id": 1081, "human_side": "NEITHER", "reason": "different_measure", "note": "Talks about high seas Biodiversity Bill, not the water Bill", "reviewer": "claude-sonnet-5-5"}
+{"id": 1086, "human_side": "FOR", "reason": "clear", "note": "Minister rejects amendment, defending Bill's special administration changes", "reviewer": "claude-sonnet-5-5"}
+{"id": 1097, "human_side": "FOR", "reason": "clear", "note": "Says future starts with railways back in public ownership", "reviewer": "claude-sonnet-5-5"}
+{"id": 1108, "human_side": "FOR", "reason": "clear", "note": "Constituents delighted by government committing to publicly owned railway", "reviewer": "claude-sonnet-5-5"}
+{"id": 1115, "human_side": "FOR", "reason": "clear", "note": "Says privatised rail failed; pleased with move to public model", "reviewer": "claude-sonnet-5-5"}
+{"id": 1128, "human_side": "FOR", "reason": "clear", "note": "Asks if bringing railways into public hands will help accessibility", "reviewer": "claude-sonnet-5-5"}
+{"id": 1132, "human_side": "FOR", "reason": "clear", "note": "Looks forward to supporting Bill; criticises opponents", "reviewer": "claude-sonnet-5-5"}
+{"id": 1139, "human_side": "FOR", "reason": "clear", "note": "Says Labour believes in publicly owned railways run for people", "reviewer": "claude-sonnet-5-5"}
+{"id": 1147, "human_side": "FOR", "reason": "clear", "note": "Attacks 30 years of profit-driven railways; welcomes legislation", "reviewer": "claude-sonnet-5-5"}
+{"id": 1153, "human_side": "FOR", "reason": "clear", "note": "Argues fragmented privatisation failed; railway should work as one", "reviewer": "claude-sonnet-5-5"}
+{"id": 1161, "human_side": "NEITHER", "reason": "different_measure", "note": "Minister describes existing windfall tax and generator levy, no new rise", "reviewer": "claude-sonnet-5-5"}
+{"id": 1165, "human_side": "FOR", "reason": "clear", "note": "Supports VAT on private schools, argues schools can absorb costs", "reviewer": "claude-sonnet-5-5"}
+{"id": 1171, "human_side": "FOR", "reason": "clear", "note": "Teacher backs removing VAT exemption and rates relief", "reviewer": "claude-sonnet-5-5"}
+{"id": 1175, "human_side": "FOR", "reason": "clear", "note": "Government MP backs revenue from removing private school tax breaks", "reviewer": "claude-sonnet-5-5"}
+{"id": 1181, "human_side": "AGAINST", "reason": "clear", "note": "Calls VAT on independent schools ill-conceived; urges government rethink", "reviewer": "claude-sonnet-5-5"}
+{"id": 1187, "human_side": "AGAINST", "reason": "clear", "note": "Opposes removing charitable rate relief; says not to tax education", "reviewer": "claude-sonnet-5-5"}
+{"id": 1191, "human_side": "AGAINST", "reason": "clear", "note": "Argues VAT on school fees will not fulfil its aims", "reviewer": "claude-sonnet-5-5"}
+{"id": 1195, "human_side": "AGAINST", "reason": "clear", "note": "Lib Dems oppose ending VAT exemption and rates relief", "reviewer": "claude-sonnet-5-5"}
+{"id": 1206, "human_side": "FOR", "reason": "clear", "note": "Welcomes scrapping the two-child limit as systemic change", "reviewer": "claude-sonnet-5-5"}
+{"id": 1221, "human_side": "FOR", "reason": "clear", "note": "Attacks Conservatives for opposing withdrawal of the two-child cap", "reviewer": "claude-sonnet-5-5"}
+{"id": 1229, "human_side": "FOR", "reason": "clear", "note": "Argues two-child limit failed its objectives and no other country has it", "reviewer": "claude-sonnet-5-5"}
+{"id": 1233, "human_side": "AGAINST", "reason": "clear", "note": "Defends two-child cap; asks why benefit recipients avoid hard choices", "reviewer": "claude-sonnet-5-5"}
+{"id": 1242, "human_side": "AGAINST", "reason": "clear", "note": "Says Bill weakens trust, endless spending without strategy", "reviewer": "claude-sonnet-5-5"}
+{"id": 1254, "human_side": "FOR", "reason": "clear", "note": "Welcomes scrapping two-child limit as cruel and unfair", "reviewer": "claude-sonnet-5-5"}
+{"id": 1260, "human_side": "FOR", "reason": "clear", "note": "Defends lifting children from poverty by removing the cap", "reviewer": "claude-sonnet-5-5"}
+{"id": 1266, "human_side": "FOR", "reason": "clear", "note": "Calls two-child limit cruel and punitive of children", "reviewer": "claude-sonnet-5-5"}
+{"id": 1278, "human_side": "FOR", "reason": "clear", "note": "Glad punitive two-child cap is being scrapped", "reviewer": "claude-sonnet-5-5"}
+{"id": 1287, "human_side": "FOR", "reason": "clear", "note": "Proud Labour removed the cap as most effective anti-poverty step", "reviewer": "claude-sonnet-5-5"}
+{"id": 1295, "human_side": "FOR", "reason": "clear", "note": "Says ending two-child limit lifts half a million children from poverty", "reviewer": "claude-sonnet-5-5"}
+{"id": 1300, "human_side": "FOR", "reason": "clear", "note": "Argues cap failed on employment and birth rate; opposes it", "reviewer": "claude-sonnet-5-5"}
+{"id": 1313, "human_side": "FOR", "reason": "clear", "note": "Says limit punishes children, has no effect on family planning", "reviewer": "claude-sonnet-5-5"}
+{"id": 1322, "human_side": "AGAINST", "reason": "clear", "note": "Conservative stands for welfare savings against the two-child cap change", "reviewer": "claude-sonnet-5-5"}
+{"id": 1332, "human_side": "AGAINST", "reason": "clear", "note": "Conservative says two-child limit should be retained", "reviewer": "claude-sonnet-5-5"}
+{"id": 1337, "human_side": "FOR", "reason": "clear", "note": "Delighted by Budget lifting two-child cap", "reviewer": "claude-sonnet-5-5"}
+{"id": 1350, "human_side": "FOR", "reason": "clear", "note": "Delighted government is removing the pernicious two-child cap", "reviewer": "claude-sonnet-5-5"}
+{"id": 1363, "human_side": "FOR", "reason": "clear", "note": "Argues children should not live in poverty; cap ineffective", "reviewer": "claude-sonnet-5-5"}
+{"id": 1378, "human_side": "FOR", "reason": "clear", "note": "Moved amendment to take women out of abortion criminal law", "reviewer": "claude-sonnet-5-5"}
+{"id": 1382, "human_side": "FOR", "reason": "clear", "note": "Says NC1 stops brutal investigations; end criminalising women", "reviewer": "claude-sonnet-5-5"}
+{"id": 1387, "human_side": "NEITHER", "reason": "different_measure", "note": "Minister rebuts Conservative Rwanda deterrent claims; no repeal stance", "reviewer": "claude-sonnet-5-5"}
+{"id": 1393, "human_side": "FOR", "reason": "clear", "note": "Commends removal of presumption of parental involvement in Bill", "reviewer": "claude-sonnet-5-5"}
+{"id": 1399, "human_side": "AGAINST", "reason": "clear", "note": "Opposes clause 57 imposing leader and cabinet on Sheffield", "reviewer": "claude-sonnet-5-5"}
+{"id": 1405, "human_side": "AGAINST", "reason": "clear", "note": "Calls forced refugee payments misconceived and cruel tax on poverty", "reviewer": "claude-sonnet-5-5"}
+{"id": 1412, "human_side": "FOR", "reason": "clear", "note": "Opposition wants exemptions narrowed so more asylum support is repaid", "reviewer": "claude-sonnet-5-5"}
+{"id": 1417, "human_side": "FOR", "reason": "clear", "note": "Minister defends legal framework to recover asylum support through tax", "reviewer": "claude-sonnet-5-5"}
+{"id": 1421, "human_side": "AGAINST", "reason": "clear", "note": "Opposes undermining trial by jury as statist ideology", "reviewer": "claude-sonnet-5-5"}
+{"id": 1429, "human_side": "AGAINST", "reason": "clear", "note": "Says Bill barely cuts workload; improve courts without attacking juries", "reviewer": "claude-sonnet-5-5"}
+{"id": 1433, "human_side": "AGAINST", "reason": "clear", "note": "Says jury trial is precious and should not be transferred", "reviewer": "claude-sonnet-5-5"}
+{"id": 1438, "human_side": "AGAINST", "reason": "clear", "note": "Warns against sacrificing jury liberty for administrative convenience", "reviewer": "claude-sonnet-5-5"}
+{"id": 1445, "human_side": "AGAINST", "reason": "clear", "note": "Concerned juries lose role judging protest cases", "reviewer": "claude-sonnet-5-5"}
+{"id": 1451, "human_side": "AGAINST", "reason": "clear", "note": "Argues jury better than judge alone for defendants and victims", "reviewer": "claude-sonnet-5-5"}
+{"id": 1460, "human_side": "FOR", "reason": "clear", "note": "Supports Bill including jury restriction as part of needed reforms", "reviewer": "claude-sonnet-5-5"}
+{"id": 1469, "human_side": "NEITHER", "reason": "different_measure", "note": "Wants Thames Water rebuilt as public benefit company, not general ownership", "reviewer": "claude-sonnet-5-5"}
+{"id": 1475, "human_side": "NEITHER", "reason": "different_measure", "note": "Asks special administration and public interest company for Thames only", "reviewer": "claude-sonnet-5-5"}
+{"id": 1483, "human_side": "FOR", "reason": "clear", "note": "Wants urgent move to public ownership and review of models", "reviewer": "claude-sonnet-5-5"}
+{"id": 1489, "human_side": "NEITHER", "reason": "different_measure", "note": "Welcomes scrapping two-child cap, not the overall benefit cap", "reviewer": "claude-sonnet-5-5"}
+{"id": 1493, "human_side": "AGAINST", "reason": "clear", "note": "Minister says benefit cap keeps work incentive and will not change", "reviewer": "claude-sonnet-5-5"}
+{"id": 1497, "human_side": "FOR", "reason": "clear", "note": "Says Bill puts buses back at heart of communities", "reviewer": "claude-sonnet-5-5"}
+{"id": 1510, "human_side": "FOR", "reason": "clear", "note": "Minister defends reform Bill as not ideological, enabling better buses", "reviewer": "claude-sonnet-5-5"}
+{"id": 1514, "human_side": "FOR", "reason": "clear", "note": "Asks whether Bill will deliver rural bus network; supportive", "reviewer": "claude-sonnet-5-5"}
+{"id": 1518, "human_side": "FOR", "reason": "clear", "note": "Asks Bill to tackle poor services and restore fare cap", "reviewer": "claude-sonnet-5-5"}
+{"id": 1523, "human_side": "FOR", "reason": "clear", "note": "Says Bill empowers mayors; welcomes zero-emission timetable", "reviewer": "claude-sonnet-5-5"}
+{"id": 1531, "human_side": "FOR", "reason": "clear", "note": "Says clause 14 and Bill serve communities let down by buses", "reviewer": "claude-sonnet-5-5"}
+{"id": 1539, "human_side": "FOR", "reason": "clear", "note": "Welcomes Bill's family group decision-making as transformative", "reviewer": "claude-sonnet-5-5"}
+{"id": 1560, "human_side": "FOR", "reason": "clear", "note": "Welcomes Bill's register, breakfast clubs, uniform cap", "reviewer": "claude-sonnet-5-5"}
+{"id": 1584, "human_side": "FOR", "reason": "clear", "note": "Heartened by the wellbeing Bill, calls for more", "reviewer": "claude-sonnet-5-5"}
+{"id": 1593, "human_side": "FOR", "reason": "clear", "note": "Welcomes Bill's uniform cap and free breakfast clubs", "reviewer": "claude-sonnet-5-5"}
+{"id": 1618, "human_side": "FOR", "reason": "clear", "note": "Says Bill returns academies to collaboration; supports it", "reviewer": "claude-sonnet-5-5"}
+{"id": 1625, "human_side": "NEITHER", "reason": "different_measure", "note": "Supports schedule in Employment Rights Bill, a different Bill", "reviewer": "claude-sonnet-5-5"}
+{"id": 1631, "human_side": "FOR", "reason": "clear", "note": "Minister rejects amendments as loopholes in children not in school register", "reviewer": "claude-sonnet-5-5"}
+{"id": 1637, "human_side": "NEITHER", "reason": "different_measure", "note": "Discusses term-time holiday absence petition, unrelated to the Bill", "reviewer": "claude-sonnet-5-5"}
+{"id": 1647, "human_side": "FOR", "reason": "clear", "note": "Calls Employment Rights Bill long overdue and good for economy", "reviewer": "claude-sonnet-5-5"}
+{"id": 1667, "human_side": "FOR", "reason": "clear", "note": "Says employment rights uplift long overdue; ends pay robbery", "reviewer": "claude-sonnet-5-5"}
+{"id": 1672, "human_side": "AGAINST", "reason": "clear", "note": "Calls Bill a trade union charter sending Britain back to 1970s", "reviewer": "claude-sonnet-5-5"}
+{"id": 1681, "human_side": "NEITHER", "reason": "descriptive_not_advocating", "note": "Discusses maternity discrimination and fatherhood premium; no clear Bill stance", "reviewer": "claude-sonnet-5-5"}
+{"id": 1694, "human_side": "FOR", "reason": "clear", "note": "Praises Bill's sick pay, care pay agreement, school support staff body", "reviewer": "claude-sonnet-5-5"}
+{"id": 1713, "human_side": "FOR", "reason": "clear", "note": "Supports Fair Work Agency strengthening and fair pay agreements", "reviewer": "claude-sonnet-5-5"}
+{"id": 1729, "human_side": "AGAINST", "reason": "clear", "note": "Says Conservatives cannot support this terrible Bill", "reviewer": "claude-sonnet-5-5"}
+{"id": 1733, "human_side": "FOR", "reason": "clear", "note": "Defends Bill's zero-hours provisions against Lords amendments", "reviewer": "claude-sonnet-5-5"}
+{"id": 1746, "human_side": "FOR", "reason": "clear", "note": "Urges rejecting Lords amendment undermining harassment protections in Bill", "reviewer": "claude-sonnet-5-5"}
+{"id": 1755, "human_side": "FOR", "reason": "clear", "note": "Rejects claim Bill raises unemployment; defends probation provisions", "reviewer": "claude-sonnet-5-5"}
+{"id": 1770, "human_side": "FOR", "reason": "clear", "note": "Proud to vote for the pro-worker Bill", "reviewer": "claude-sonnet-5-5"}
+{"id": 1774, "human_side": "FOR", "reason": "clear", "note": "Calls Bill important step improving workers' lives", "reviewer": "claude-sonnet-5-5"}
+{"id": 1778, "human_side": "FOR", "reason": "clear", "note": "Defends Bill as manifesto commitment rejected by opponents", "reviewer": "claude-sonnet-5-5"}
+{"id": 1782, "human_side": "FOR", "reason": "clear", "note": "Welcomes Bill and repeal of 2016 anti-union legislation", "reviewer": "claude-sonnet-5-5"}
+{"id": 1787, "human_side": "FOR", "reason": "clear", "note": "Opposes Lords amendment 62 threshold; backs Bill's union provisions", "reviewer": "claude-sonnet-5-5"}
+{"id": 1794, "human_side": "NEITHER", "reason": "different_measure", "note": "Asks whether Bill could give mayors levy powers; no stance on Bill", "reviewer": "claude-sonnet-5-5"}
+{"id": 1809, "human_side": "FOR", "reason": "clear", "note": "Says devolution saves money; voting against would be bananas", "reviewer": "claude-sonnet-5-5"}
+{"id": 1815, "human_side": "NEITHER", "reason": "different_measure", "note": "Pushes new clause for Yorkshire regional body, criticising settlement", "reviewer": "claude-sonnet-5-5"}
+{"id": 1822, "human_side": "FOR", "reason": "clear", "note": "Lib Dem welcomes government's rural amendments to Bill and implementation", "reviewer": "claude-sonnet-5-5"}
+{"id": 1839, "human_side": "FOR", "reason": "clear", "note": "Says Skills England transfer and levy reform will be transformative", "reviewer": "claude-sonnet-5-5"}
+{"id": 1849, "human_side": "FOR", "reason": "clear", "note": "Proud of mighty Bill; speaks against amendment 6", "reviewer": "claude-sonnet-5-5"}
+{"id": 1853, "human_side": "FOR", "reason": "clear", "note": "Says Bill's veteran protections and Legacy Commission reforms help families", "reviewer": "claude-sonnet-5-5"}
+{"id": 1863, "human_side": "NEITHER", "reason": "different_measure", "note": "Supports the Armed Forces Bill, a different Bill", "reviewer": "claude-sonnet-5-5"}
+{"id": 1873, "human_side": "FOR", "reason": "clear", "note": "Welcomes Bill's veteran protections and ending on-the-run immunity", "reviewer": "claude-sonnet-5-5"}
+{"id": 1885, "human_side": "FOR", "reason": "clear", "note": "Supports new clause 15 and assisted dying after Dignitas case", "reviewer": "claude-sonnet-5-5"}
+{"id": 1898, "human_side": "AGAINST", "reason": "clear", "note": "Warns coercion and wrongful deaths among vulnerable if Bill passes", "reviewer": "claude-sonnet-5-5"}
+{"id": 1909, "human_side": "FOR", "reason": "clear", "note": "Says opponents have gaping hole given people travel abroad", "reviewer": "claude-sonnet-5-5"}
+{"id": 1915, "human_side": "NEITHER", "reason": "different_measure", "note": "Opposes a specific amendment on asking why; Bill stance implicit", "reviewer": "claude-sonnet-5-5"}
+{"id": 1919, "human_side": "FOR", "reason": "clear", "note": "Welcomes right to try and says welfare reform needed", "reviewer": "claude-sonnet-5-5"}
+{"id": 1925, "human_side": "FOR", "reason": "clear", "note": "Willing to vote Bill through; backs its support measures", "reviewer": "claude-sonnet-5-5"}
+{"id": 1929, "human_side": "FOR", "reason": "clear", "note": "Says it is right that we proceed with this Bill", "reviewer": "claude-sonnet-5-5"}

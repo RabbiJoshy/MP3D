@@ -1,0 +1,1850 @@
+[
+ {
+  "id": 0,
+  "label": "Amend the Finance Bill's agricultural property relief rules",
+  "current_subject": "Agriculture",
+  "subject": "Agriculture",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1,
+  "label": "Implement the Finance (No. 2) Bill tax and business rates measures",
+  "current_subject": "Macroeconomics",
+  "subject": "Macroeconomics",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 2,
+  "label": "Allow solar power developments on agricultural land",
+  "current_subject": "Energy",
+  "subject": "Energy",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 3,
+  "label": "Pass the Terminally Ill Adults (End of Life) Bill",
+  "current_subject": "Conscience (free votes)",
+  "subject": "Conscience (free votes)",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 4,
+  "label": "Remove women from criminal law related to abortion",
+  "current_subject": "Civil rights",
+  "subject": "Conscience (free votes)",
+  "action": "change",
+  "note": "Abortion is a free vote"
+ },
+ {
+  "id": 5,
+  "label": "Extend voting rights to 16 and 17-year-olds",
+  "current_subject": "Civil rights",
+  "subject": "Civil rights",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 6,
+  "label": "Require coroners to investigate assisted dying deaths",
+  "current_subject": "Civil rights",
+  "subject": "Conscience (free votes)",
+  "action": "change",
+  "note": "Assisted dying, free vote"
+ },
+ {
+  "id": 7,
+  "label": "Establish an independent football regulator",
+  "current_subject": "Culture",
+  "subject": "Culture",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 8,
+  "label": "Support the Football Governance Bill's media revenue redistribution",
+  "current_subject": "Culture",
+  "subject": "Culture",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 9,
+  "label": "Appoint David Kogan as chair of the Independent Football Regulator",
+  "current_subject": "Culture",
+  "subject": "Culture",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 10,
+  "label": "Pass the Northern Ireland Troubles Bill",
+  "current_subject": "Defence",
+  "subject": "Law and crime",
+  "action": "change",
+  "note": "Prosecutions/legacy bill, not defence"
+ },
+ {
+  "id": 11,
+  "label": "Pass the Diego Garcia Military Base and British Indian Ocean Territory Bill",
+  "current_subject": "Public lands",
+  "subject": "Defence",
+  "action": "change",
+  "note": "Military base treaty"
+ },
+ {
+  "id": 12,
+  "label": "Enable dynamic alignment with EU product regulations",
+  "current_subject": "Domestic commerce",
+  "subject": "Domestic commerce",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 13,
+  "label": "Pass the Product Regulation and Metrology Bill",
+  "current_subject": "Foreign trade",
+  "subject": "Foreign trade",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 14,
+  "label": "Pass the Non-Domestic Rating (Multipliers and Private Schools) Bill",
+  "current_subject": "Domestic commerce",
+  "subject": "Domestic commerce",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 15,
+  "label": "Pass the Public Authorities (Fraud, Error and Recovery) Bill",
+  "current_subject": "Social welfare",
+  "subject": "Social welfare",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 16,
+  "label": "Increase remote gaming duty to 40% and general betting duty to 25%",
+  "current_subject": "Macroeconomics",
+  "subject": "Macroeconomics",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 17,
+  "label": "Support the Children's Wellbeing and Schools Bill",
+  "current_subject": "Law and crime",
+  "subject": "Education",
+  "action": "change",
+  "note": "Schools bill"
+ },
+ {
+  "id": 18,
+  "label": "Remove VAT and business rates exemptions for private schools",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 19,
+  "label": "Support the Institute for Apprenticeships and Technical Education Bill",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 20,
+  "label": "Extend the national curriculum to all schools via the Children\u2019s Wellbeing and Schools Bill",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 21,
+  "label": "Transfer IfATE's functions to Skills England",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 22,
+  "label": "Mandate play-based learning at key stage 1",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 23,
+  "label": "Increase tuition fee caps for higher education providers",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 24,
+  "label": "Remove the two-child limit on Universal Credit",
+  "current_subject": "Macroeconomics",
+  "subject": "Social welfare",
+  "action": "change",
+  "note": "Benefit rule"
+ },
+ {
+  "id": 25,
+  "label": "Pass the Steel Industry (Special Measures) Bill",
+  "current_subject": "Employment",
+  "subject": "Domestic commerce",
+  "action": "change",
+  "note": "Steel industry intervention"
+ },
+ {
+  "id": 26,
+  "label": "Pass the Employment Rights Bill",
+  "current_subject": "Employment",
+  "subject": "Employment",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 27,
+  "label": "Pass the Universal Credit and Personal Independence Payment Bill",
+  "current_subject": "Social welfare",
+  "subject": "Social welfare",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 28,
+  "label": "Introduce visitor levy powers for local authorities",
+  "current_subject": "Government operations",
+  "subject": "Government operations",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 29,
+  "label": "Increase secondary Class 1 national insurance contributions",
+  "current_subject": "Macroeconomics",
+  "subject": "Macroeconomics",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 30,
+  "label": "End the ban on new oil and gas licences",
+  "current_subject": "Energy",
+  "subject": "Energy",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 31,
+  "label": "Raise the energy profits levy",
+  "current_subject": "Energy",
+  "subject": "Energy",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 32,
+  "label": "Return water companies to public ownership",
+  "current_subject": "Public lands",
+  "subject": "Domestic commerce",
+  "action": "change",
+  "note": "Utility ownership"
+ },
+ {
+  "id": 33,
+  "label": "Impose a duty on local authorities to contribute to Environment Act and Climate Change Act targets",
+  "current_subject": "Environment",
+  "subject": "Environment",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 34,
+  "label": "Negotiate a UK-EU customs union by 2030",
+  "current_subject": "Foreign trade",
+  "subject": "Foreign trade",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 35,
+  "label": "Passenger Railway Services (Public Ownership) Bill",
+  "current_subject": "Transport",
+  "subject": "Transport",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 36,
+  "label": "Pass the English Devolution and Community Empowerment Bill",
+  "current_subject": "Government operations",
+  "subject": "Government operations",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 37,
+  "label": "Require local authorities to adopt the cabinet and leader model",
+  "current_subject": "Government operations",
+  "subject": "Government operations",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 38,
+  "label": "Pass the House of Lords (Hereditary Peers) Bill",
+  "current_subject": "Government operations",
+  "subject": "Government operations",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 39,
+  "label": "Require MHRA licensing of substances for assisted dying",
+  "current_subject": "Health",
+  "subject": "Conscience (free votes)",
+  "action": "change",
+  "note": "Assisted dying, free vote"
+ },
+ {
+  "id": 40,
+  "label": "Pass the Renters\u2019 Rights Bill",
+  "current_subject": "Housing",
+  "subject": "Housing",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 41,
+  "label": "Implement the national scheme of delegation for planning permissions",
+  "current_subject": "Housing",
+  "subject": "Housing",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 42,
+  "label": "Introduce rent controls in the Renters\u2019 Rights Bill",
+  "current_subject": "Housing",
+  "subject": "Housing",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 43,
+  "label": "Abolish fixed-term tenancies in the Renters\u2019 Rights Bill",
+  "current_subject": "Housing",
+  "subject": "Housing",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 44,
+  "label": "Require refugees to repay asylum support costs",
+  "current_subject": "Immigration",
+  "subject": "Immigration",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 45,
+  "label": "Pass the Devolution (Immigration) (Scotland) Bill",
+  "current_subject": "Immigration",
+  "subject": "Immigration",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 46,
+  "label": "Pass the Border Security, Asylum and Immigration Bill",
+  "current_subject": "Immigration",
+  "subject": "Immigration",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 47,
+  "label": "Establish the Independent Immigration Appeals Authority",
+  "current_subject": "Immigration",
+  "subject": "Immigration",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 48,
+  "label": "Criminalise irregular entry under the Nationality and Borders Act",
+  "current_subject": "Immigration",
+  "subject": "Immigration",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 49,
+  "label": "Disapply the Human Rights Act 1998 to immigration and deportation",
+  "current_subject": "Immigration",
+  "subject": "Immigration",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 50,
+  "label": "Establish a Crown court bench division for cases likely to receive a sentence of three years or less",
+  "current_subject": "Law and crime",
+  "subject": "Law and crime",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 51,
+  "label": "Pass the Sentencing Bill",
+  "current_subject": "Law and crime",
+  "subject": "Law and crime",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 52,
+  "label": "Restrict jury trials in some cases",
+  "current_subject": "Law and crime",
+  "subject": "Law and crime",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 53,
+  "label": "Introduce a presumption to suspend short custodial sentences of 12 months or less",
+  "current_subject": "Law and crime",
+  "subject": "Law and crime",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 54,
+  "label": "End the automatic right of appeal from magistrates court",
+  "current_subject": "Law and crime",
+  "subject": "Law and crime",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 55,
+  "label": "Repeal the presumption of parental involvement in family courts",
+  "current_subject": "Law and crime",
+  "subject": "Law and crime",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 56,
+  "label": "Pass the Finance Bill",
+  "current_subject": "Macroeconomics",
+  "subject": "Macroeconomics",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 57,
+  "label": "Require the Chancellor to publish a household finance impact assessment",
+  "current_subject": "Macroeconomics",
+  "subject": "Macroeconomics",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 58,
+  "label": "Extend income tax threshold freeze to 2031",
+  "current_subject": "Macroeconomics",
+  "subject": "Macroeconomics",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 59,
+  "label": "Increase the main rates of capital gains tax",
+  "current_subject": "Macroeconomics",
+  "subject": "Macroeconomics",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 60,
+  "label": "Uprating alcohol duty using RPI",
+  "current_subject": "Macroeconomics",
+  "subject": "Macroeconomics",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 61,
+  "label": "Devolve the Crown Estate to Wales",
+  "current_subject": "Public lands",
+  "subject": "Public lands",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 62,
+  "label": "Scrapping the overall benefit cap",
+  "current_subject": "Social welfare",
+  "subject": "Social welfare",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 63,
+  "label": "Abolish the right to jury trial for certain offences currently carrying up to three years' imprisonment",
+  "current_subject": "Law and crime",
+  "subject": "Law and crime",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 64,
+  "label": "Impose VAT on independent school fees",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 65,
+  "label": "Introduce a wealth tax on assets over \u00a310 million",
+  "current_subject": "Employment",
+  "subject": "Macroeconomics",
+  "action": "change",
+  "note": "Tax measure"
+ },
+ {
+  "id": 66,
+  "label": "Introduce financial charges for asylum seekers to contribute towards the costs of the asylum system",
+  "current_subject": "Immigration",
+  "subject": "Immigration",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 67,
+  "label": "Means-test winter fuel payments by limiting them to pension credit recipients",
+  "current_subject": "Energy",
+  "subject": "Social welfare",
+  "action": "change",
+  "note": "Pensioner benefit"
+ },
+ {
+  "id": 68,
+  "label": "Proceed with the Pathways trial on puberty blockers for children",
+  "current_subject": "Health",
+  "subject": "Health",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 69,
+  "label": "Proscribe Palestine Action as a terrorist organisation under the Terrorism Act 2000",
+  "current_subject": "Law and crime",
+  "subject": "Law and crime",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 70,
+  "label": "Refer the Prime Minister to the Committee of Privileges over misleading statements about the Mandelson appointment",
+  "current_subject": "No policy",
+  "subject": "Government operations",
+  "action": "change",
+  "note": "Parliamentary conduct matter"
+ },
+ {
+  "id": 71,
+  "label": "Remove charitable business rates relief from private schools in England",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 72,
+  "label": "Repeal the Safety of Rwanda (Asylum and Immigration) Act 2024",
+  "current_subject": "Immigration",
+  "subject": "Immigration",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 73,
+  "label": "Require Attorney General consent for prosecutions of Troubles-related offences",
+  "current_subject": "Law and crime",
+  "subject": "Law and crime",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 74,
+  "label": "Withdraw from the European Convention on Human Rights",
+  "current_subject": "Immigration",
+  "subject": "Civil rights",
+  "action": "change",
+  "note": "Human rights convention"
+ },
+ {
+  "id": 75,
+  "label": "Introduce a wealth tax and tax excess corporate profits",
+  "current_subject": "Macroeconomics",
+  "subject": "Macroeconomics",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1000,
+  "label": "Pass the Animal Welfare (Import of Dogs, Cats and Ferrets) Bill",
+  "current_subject": "Agriculture",
+  "subject": "Agriculture",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1001,
+  "label": "Pass the Dogs (Protection of Livestock) (Amendment) Bill",
+  "current_subject": "Agriculture",
+  "subject": "Agriculture",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1002,
+  "label": "Pass the Biodiversity Beyond National Jurisdiction Bill",
+  "current_subject": "Public lands",
+  "subject": "Environment",
+  "action": "change",
+  "note": "Marine biodiversity treaty"
+ },
+ {
+  "id": 1003,
+  "label": "Include amendments to the Terminally Ill Adults (End of Life) Bill",
+  "current_subject": "Civil rights",
+  "subject": "Conscience (free votes)",
+  "action": "change",
+  "note": "Assisted dying, free vote"
+ },
+ {
+  "id": 1004,
+  "label": "Require doctors to discuss the substance to be provided during assisted dying assessments",
+  "current_subject": "Civil rights",
+  "subject": "Conscience (free votes)",
+  "action": "change",
+  "note": "Assisted dying, free vote"
+ },
+ {
+  "id": 1005,
+  "label": "Introduce automatic voter registration",
+  "current_subject": "Civil rights",
+  "subject": "Civil rights",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1006,
+  "label": "Reject new clauses 14 to 17 and new clause 21",
+  "current_subject": "Civil rights",
+  "subject": "Civil rights",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1007,
+  "label": "Pass the Data (Use and Access) Bill",
+  "current_subject": "Technology",
+  "subject": "Domestic commerce",
+  "action": "change",
+  "note": "Technology not an allowed subject"
+ },
+ {
+  "id": 1008,
+  "label": "Set age 18 for initial assisted dying discussion in Terminally Ill Adults Bill",
+  "current_subject": "Civil rights",
+  "subject": "Conscience (free votes)",
+  "action": "change",
+  "note": "Assisted dying, free vote"
+ },
+ {
+  "id": 1009,
+  "label": "Exclude people with only mental disorders or disabilities from eligibility under the Terminally Ill Adults (End of Life) Bill",
+  "current_subject": "Civil rights",
+  "subject": "Conscience (free votes)",
+  "action": "change",
+  "note": "Assisted dying, free vote"
+ },
+ {
+  "id": 1010,
+  "label": "Require AI transparency on copyright works in the Data (Use and Access) Bill",
+  "current_subject": "Culture",
+  "subject": "Culture",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1011,
+  "label": "Establish a national commission on electoral reform",
+  "current_subject": "Government operations",
+  "subject": "Government operations",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1012,
+  "label": "Ban political donations made in cryptoassets",
+  "current_subject": "Civil rights",
+  "subject": "Government operations",
+  "action": "change",
+  "note": "Party funding rules"
+ },
+ {
+  "id": 1013,
+  "label": "Support the Sporting Events Bill [Lords]",
+  "current_subject": "Culture",
+  "subject": "Culture",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1014,
+  "label": "Apply copyright law to data mining and AI-generative activity",
+  "current_subject": "Technology",
+  "subject": "Culture",
+  "action": "change",
+  "note": "Copyright; Technology not allowed"
+ },
+ {
+  "id": 1015,
+  "label": "Require key football matches to be free-to-air",
+  "current_subject": "Culture",
+  "subject": "Culture",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1016,
+  "label": "Empower the regulator to block clubs from joining breakaway leagues",
+  "current_subject": "Culture",
+  "subject": "Culture",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1017,
+  "label": "Pass the Sporting Events Bill to tackle ticket touting",
+  "current_subject": "Culture",
+  "subject": "Culture",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1018,
+  "label": "Establish local authority registers of heritage public houses",
+  "current_subject": "Culture",
+  "subject": "Culture",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1019,
+  "label": "Create a new football-specific offence of unauthorised entry to designated matches",
+  "current_subject": "Culture",
+  "subject": "Culture",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1020,
+  "label": "Require clubs to consult fans on heritage and operational matters",
+  "current_subject": "Culture",
+  "subject": "Culture",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1021,
+  "label": "Increase defence spending to meet strategic review targets",
+  "current_subject": "Defence",
+  "subject": "Defence",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1022,
+  "label": "Require single living accommodation for service personnel to meet reasonable standards",
+  "current_subject": "Defence",
+  "subject": "Defence",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1023,
+  "label": "Establish an Armed Forces Commissioner",
+  "current_subject": "Defence",
+  "subject": "Defence",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1024,
+  "label": "Create the Defence Housing Service",
+  "current_subject": "Defence",
+  "subject": "Defence",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1025,
+  "label": "Enact the Armed Forces Bill",
+  "current_subject": "Defence",
+  "subject": "Defence",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1026,
+  "label": "Publish the defence investment plan before the NATO summit",
+  "current_subject": "Defence",
+  "subject": "Defence",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1027,
+  "label": "Increase the maximum age for reservist recall to 65",
+  "current_subject": "Defence",
+  "subject": "Defence",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1028,
+  "label": "Pass the Cyber Security and Resilience (Network and Information Systems) Bill",
+  "current_subject": "Domestic commerce",
+  "subject": "Domestic commerce",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1029,
+  "label": "Pass the Bank Resolution (Recapitalisation) Bill",
+  "current_subject": "Domestic commerce",
+  "subject": "Domestic commerce",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1030,
+  "label": "Include retail businesses in the Cyber Security and Resilience Bill",
+  "current_subject": "Domestic commerce",
+  "subject": "Domestic commerce",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1031,
+  "label": "Introduce New Clause 4 to the Product Regulation and Metrology Bill",
+  "current_subject": "Domestic commerce",
+  "subject": "Domestic commerce",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1032,
+  "label": "Include online marketplaces in the Product Regulation and Metrology Bill",
+  "current_subject": "Domestic commerce",
+  "subject": "Domestic commerce",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1033,
+  "label": "Increase funding for further education colleges",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1034,
+  "label": "Expand school-based nurseries using spare classrooms",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1035,
+  "label": "Make citizenship education compulsory in primary schools",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1036,
+  "label": "Require registration of home-educated children",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1037,
+  "label": "Implement the Schools White Paper SEND reforms",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1038,
+  "label": "Ban mobile phone use in schools",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1039,
+  "label": "Increase the core schools budget",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1040,
+  "label": "Exempt early years providers from national insurance increases",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1041,
+  "label": "Strengthen the national curriculum for physical education",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1042,
+  "label": "Introduce new technical and vocational pathways from age 14",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1043,
+  "label": "Implement the Best Start in Life strategy for early years",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1044,
+  "label": "Cancel the next wave of free schools",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1045,
+  "label": "Make careers education a compulsory part of the school curriculum",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1046,
+  "label": "Increase funding for SEND and mainstream school accessibility",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1047,
+  "label": "Cut funding for the International Baccalaureate in state schools",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1048,
+  "label": "Publish revised statutory RSHE guidance",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1049,
+  "label": "Transform the apprenticeship levy into a growth and skills levy",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1050,
+  "label": "Extend local authority powers to direct academies to admit children",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1051,
+  "label": "Reform the educational assessment system",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1052,
+  "label": "Recruit an additional 6,500 teachers",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1053,
+  "label": "Cut school funding per pupil",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1054,
+  "label": "Reform the national school funding formula",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1055,
+  "label": "Require all state-funded school teachers to have or be working towards qualified teacher status",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1056,
+  "label": "Support the Government's music education funding and curriculum reforms",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1057,
+  "label": "Introduce a national dyslexia strategy",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1058,
+  "label": "Support the prison education system to reduce reoffending",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1059,
+  "label": "Limit schools to requiring at most three branded uniform items per pupil per year",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1060,
+  "label": "Close Great Alne primary school",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1061,
+  "label": "Introduce Ofsted school report cards",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1062,
+  "label": "Adopt a gender-specific strategy for boys in education",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1063,
+  "label": "Include financial education in the national curriculum",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1064,
+  "label": "Implement the youth guarantee to offer all young people the chance to earn and learn",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1065,
+  "label": "Establish free breakfast clubs in all primary schools",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1066,
+  "label": "Expand SEND content in initial teacher training",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1067,
+  "label": "Reform the dedicated schools grant funding formula for rural schools",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1068,
+  "label": "Universal screening and teacher training for neurodivergence",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1069,
+  "label": "Increase awareness and support for young carers in education",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1070,
+  "label": "Expand funded childcare to 30 hours for working parents",
+  "current_subject": "Education",
+  "subject": "Education",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1071,
+  "label": "Increase the national living wage",
+  "current_subject": "Employment",
+  "subject": "Employment",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1072,
+  "label": "Require union members to opt-in to political fund contributions",
+  "current_subject": "Employment",
+  "subject": "Employment",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1073,
+  "label": "Abolish business rates",
+  "current_subject": "Employment",
+  "subject": "Domestic commerce",
+  "action": "change",
+  "note": "Business rates, not employment"
+ },
+ {
+  "id": 1074,
+  "label": "Impose tariffs on steel imports from 1 July",
+  "current_subject": "Foreign trade",
+  "subject": "Foreign trade",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1075,
+  "label": "Reduce the unfair dismissal qualifying period to six months",
+  "current_subject": "Employment",
+  "subject": "Employment",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1076,
+  "label": "Establish the Fair Work Agency",
+  "current_subject": "Employment",
+  "subject": "Employment",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1077,
+  "label": "Include community energy in the Great British Energy Bill",
+  "current_subject": "Energy",
+  "subject": "Energy",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1078,
+  "label": "Pass the Sustainable Aviation Fuel Bill",
+  "current_subject": "Transport",
+  "subject": "Transport",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1079,
+  "label": "Require solar panels on new homes",
+  "current_subject": "Energy",
+  "subject": "Energy",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1080,
+  "label": "Pass the Great British Energy Bill",
+  "current_subject": "Energy",
+  "subject": "Energy",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1081,
+  "label": "Pass the Climate and Nature Bill",
+  "current_subject": "Energy",
+  "subject": "Environment",
+  "action": "change",
+  "note": "Climate and nature bill"
+ },
+ {
+  "id": 1082,
+  "label": "Require GB Energy to reduce household energy bills",
+  "current_subject": "Energy",
+  "subject": "Energy",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1083,
+  "label": "Accelerate the transition to clean energy",
+  "current_subject": "Energy",
+  "subject": "Energy",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1084,
+  "label": "Pass the Planning and Infrastructure Bill",
+  "current_subject": "Housing",
+  "subject": "Housing",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1085,
+  "label": "Pass the Crown Estate Bill to expand its investment and borrowing powers",
+  "current_subject": "Energy",
+  "subject": "Energy",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1086,
+  "label": "Lift the ban on onshore wind in England",
+  "current_subject": "Energy",
+  "subject": "Energy",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1087,
+  "label": "Issue statutory guidance to local authorities on fly-tipping",
+  "current_subject": "Environment",
+  "subject": "Environment",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1088,
+  "label": "Support the Water (Special Measures) Bill",
+  "current_subject": "Environment",
+  "subject": "Environment",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1089,
+  "label": "Include chalk stream protections in the Planning and Infrastructure Bill",
+  "current_subject": "Environment",
+  "subject": "Environment",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1090,
+  "label": "Establish a nature restoration fund in the Planning and Infrastructure Bill",
+  "current_subject": "Environment",
+  "subject": "Environment",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1091,
+  "label": "Include nature-based solutions in sewerage management plans",
+  "current_subject": "Environment",
+  "subject": "Environment",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1092,
+  "label": "Require 100% monitoring of storm overflows",
+  "current_subject": "Environment",
+  "subject": "Environment",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1093,
+  "label": "Add penalty points to driving licences for fly-tipping offences",
+  "current_subject": "Environment",
+  "subject": "Environment",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1094,
+  "label": "Accept amendment 40 to the Planning and Infrastructure Bill",
+  "current_subject": "Environment",
+  "subject": "Environment",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1095,
+  "label": "Establish a water restoration fund supported by fines from polluters",
+  "current_subject": "Environment",
+  "subject": "Environment",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1096,
+  "label": "Establish the Cunliffe water review as the independent review of the water industry",
+  "current_subject": "Public lands",
+  "subject": "Environment",
+  "action": "change",
+  "note": "Water industry review"
+ },
+ {
+  "id": 1097,
+  "label": "Introduce the Carbon Border Adjustment Mechanism",
+  "current_subject": "Foreign trade",
+  "subject": "Foreign trade",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1098,
+  "label": "Pass the Bus Services (No. 2) Bill",
+  "current_subject": "Government operations",
+  "subject": "Transport",
+  "action": "change",
+  "note": "Bus services bill"
+ },
+ {
+  "id": 1099,
+  "label": "Include town and parish councils in the English Devolution and Community Empowerment Bill",
+  "current_subject": "Government operations",
+  "subject": "Government operations",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1100,
+  "label": "Introduce online registration for postal and proxy votes",
+  "current_subject": "Government operations",
+  "subject": "Government operations",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1101,
+  "label": "Pass the Budget Responsibility Bill",
+  "current_subject": "Macroeconomics",
+  "subject": "Macroeconomics",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1102,
+  "label": "Support the Bus Services (No. 2) Bill",
+  "current_subject": "Transport",
+  "subject": "Transport",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1103,
+  "label": "Establish Great British Railways",
+  "current_subject": "Transport",
+  "subject": "Transport",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1104,
+  "label": "Pass the Mental Health Bill [Lords]",
+  "current_subject": "Health",
+  "subject": "Health",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1105,
+  "label": "Abolish NHS England and restructure health bodies",
+  "current_subject": "Health",
+  "subject": "Health",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1106,
+  "label": "Support the Health Bill's changes to Integrated Care Boards",
+  "current_subject": "Health",
+  "subject": "Health",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1107,
+  "label": "Pass the Tobacco and Vapes Bill",
+  "current_subject": "Health",
+  "subject": "Health",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1108,
+  "label": "Create a single patient record in the Health Bill",
+  "current_subject": "Health",
+  "subject": "Health",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1109,
+  "label": "Support the Social Housing Bill",
+  "current_subject": "Housing",
+  "subject": "Housing",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1110,
+  "label": "Introduce a use-it-or-lose-it power for planning permissions",
+  "current_subject": "Housing",
+  "subject": "Housing",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1111,
+  "label": "Extend the decent homes standard and Awaab's law to the private rented sector",
+  "current_subject": "Housing",
+  "subject": "Housing",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1112,
+  "label": "Require private registered providers to notify local authorities before selling social housing",
+  "current_subject": "Housing",
+  "subject": "Housing",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1113,
+  "label": "Limit rent payable in advance at the start of a tenancy",
+  "current_subject": "Housing",
+  "subject": "Housing",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1114,
+  "label": "Create a landlord database under the Renters\u2019 Rights Bill",
+  "current_subject": "Housing",
+  "subject": "Housing",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1115,
+  "label": "Use scientific age assessments for asylum seekers",
+  "current_subject": "Immigration",
+  "subject": "Immigration",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1116,
+  "label": "Establish safe and legal routes for asylum seekers",
+  "current_subject": "Immigration",
+  "subject": "Immigration",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1117,
+  "label": "End the use of hotels for asylum seeker accommodation",
+  "current_subject": "Immigration",
+  "subject": "Immigration",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1118,
+  "label": "Establish a binding annual cap on all non-visitor visas",
+  "current_subject": "Immigration",
+  "subject": "Immigration",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1119,
+  "label": "Deprive dual nationals of British citizenship for national security",
+  "current_subject": "Immigration",
+  "subject": "Immigration",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1120,
+  "label": "Create a new offence for endangering people at sea during small boat crossings",
+  "current_subject": "Immigration",
+  "subject": "Immigration",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1121,
+  "label": "Establish the Border Security Command and enhance powers to tackle criminal gangs",
+  "current_subject": "Immigration",
+  "subject": "Immigration",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1122,
+  "label": "Pass the Financial Assistance to Ukraine Bill",
+  "current_subject": "International affairs",
+  "subject": "Defence",
+  "action": "change",
+  "note": "Ukraine support; International affairs not allowed"
+ },
+ {
+  "id": 1123,
+  "label": "Pass the Crime and Policing Bill",
+  "current_subject": "Law and crime",
+  "subject": "Law and crime",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1124,
+  "label": "Introduce a mandatory duty to report child sexual abuse",
+  "current_subject": "Law and crime",
+  "subject": "Law and crime",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1125,
+  "label": "Introduce respect orders for persistent antisocial behaviour",
+  "current_subject": "Law and crime",
+  "subject": "Law and crime",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1126,
+  "label": "Pass the Public Office (Accountability) Bill",
+  "current_subject": "Law and crime",
+  "subject": "Law and crime",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1127,
+  "label": "Expand legal aid for bereaved families in inquests involving public authorities",
+  "current_subject": "Law and crime",
+  "subject": "Law and crime",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1128,
+  "label": "Remove the \u00a3200 threshold for shoplifting offences",
+  "current_subject": "Law and crime",
+  "subject": "Law and crime",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1129,
+  "label": "Create a new offence of assaulting a retail worker",
+  "current_subject": "Law and crime",
+  "subject": "Law and crime",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1130,
+  "label": "Establish a national inquiry into child sexual exploitation grooming gangs",
+  "current_subject": "Law and crime",
+  "subject": "Law and crime",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1131,
+  "label": "Impose a lifetime driving ban for death by dangerous or careless driving",
+  "current_subject": "Law and crime",
+  "subject": "Law and crime",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1132,
+  "label": "Increase public capital spending in the Budget",
+  "current_subject": "Macroeconomics",
+  "subject": "Macroeconomics",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1133,
+  "label": "Extend the inheritance tax threshold freeze",
+  "current_subject": "Macroeconomics",
+  "subject": "Macroeconomics",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1134,
+  "label": "Uprate the Pension Protection Fund levy in line with inflation",
+  "current_subject": "Macroeconomics",
+  "subject": "Macroeconomics",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1135,
+  "label": "Increase business rates on properties with a rateable value of \u00a3500,000 or more",
+  "current_subject": "Macroeconomics",
+  "subject": "Macroeconomics",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1136,
+  "label": "Grant Natural England compulsory purchase powers in the Planning and Infrastructure Bill",
+  "current_subject": "Public lands",
+  "subject": "Public lands",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1137,
+  "label": "Insert new clause 18 into the Water (Special Measures) Bill",
+  "current_subject": "Public lands",
+  "subject": "Environment",
+  "action": "change",
+  "note": "Water bill clause"
+ },
+ {
+  "id": 1138,
+  "label": "Pass the Infants, Parents and Carers Bill",
+  "current_subject": "Social welfare",
+  "subject": "Social welfare",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1139,
+  "label": "Require local authorities to publish a local kinship care offer",
+  "current_subject": "Social welfare",
+  "subject": "Social welfare",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1140,
+  "label": "Automatic registration of eligible children for free school meals",
+  "current_subject": "Social welfare",
+  "subject": "Social welfare",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1141,
+  "label": "Support the Children\u2019s Wellbeing and Schools Bill provisions for care leavers",
+  "current_subject": "Social welfare",
+  "subject": "Social welfare",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1142,
+  "label": "Cap profits of non-local authority children's social care providers",
+  "current_subject": "Social welfare",
+  "subject": "Social welfare",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1143,
+  "label": "Co-produce the Timms review with disabled people",
+  "current_subject": "Social welfare",
+  "subject": "Social welfare",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1144,
+  "label": "Increase the universal credit standard allowance",
+  "current_subject": "Social welfare",
+  "subject": "Social welfare",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1145,
+  "label": "Cut the health element of Universal Credit for new claims",
+  "current_subject": "Social welfare",
+  "subject": "Social welfare",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1146,
+  "label": "Pass the Space Industry (Indemnities) Bill",
+  "current_subject": "Technology",
+  "subject": "Domestic commerce",
+  "action": "change",
+  "note": "Space industry; Technology not allowed"
+ },
+ {
+  "id": 1147,
+  "label": "Pass the Protection of Children (Digital Safety and Data Protection) Bill",
+  "current_subject": "Technology",
+  "subject": "Law and crime",
+  "action": "change",
+  "note": "Child online safety; Technology not allowed"
+ },
+ {
+  "id": 1148,
+  "label": "Fund the lower Thames crossing via tolls",
+  "current_subject": "Transport",
+  "subject": "Transport",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1149,
+  "label": "Pass the Railways Bill",
+  "current_subject": "Transport",
+  "subject": "Transport",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1150,
+  "label": "Support the Civil Aviation (Consumer Protection and Regulatory Reform) Bill",
+  "current_subject": "Transport",
+  "subject": "Transport",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1151,
+  "label": "Abolish floating bus stops",
+  "current_subject": "Transport",
+  "subject": "Transport",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1152,
+  "label": "Remove time restrictions on disabled concessionary travel passes",
+  "current_subject": "Transport",
+  "subject": "Transport",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1153,
+  "label": "Include a passenger growth target in the Railways Bill",
+  "current_subject": "Transport",
+  "subject": "Transport",
+  "action": "keep",
+  "note": ""
+ },
+ {
+  "id": 1154,
+  "label": "Adopt dynamic alignment on trade with the European Union",
+  "current_subject": "Foreign trade",
+  "subject": "Foreign trade",
+  "action": "keep",
+  "note": ""
+ }
+]

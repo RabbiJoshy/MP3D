@@ -329,7 +329,7 @@ const EVF=EVN.map(n=>Math.min(1,.30+.70*Math.max(0,n-1)/5));
 const cv=$('cv'),ctx=cv.getContext('2d');
 const YAW0=-0.6,PITCH0=0.35;
 let yaw=YAW0,pitch=PITCH0,mode3=true,sel={t:'root'},hov=null,curMP=null,drawnMP=null,W=0,H=0,dpr=1,hover=-1,curSel=null,proj=[],hoverDot=null,rimP=[],tq='';
-let AX=null,AXALL=false,axHit=[];
+let axEndHov=null,AX=null,AXALL=false,axHit=[],axEndTip=()=>false,axEndClick=ah=>openAxis(ah.i);
 let DM='none',GSUB=false,focusF=null,YOU=null,MODE='explore';
 const GPS={};
 function planeSc(gi){if(GPS[gi])return GPS[gi];const g=D.groups[gi],e=g.plane[0];return GPS[gi]=g.sc.map((v,i)=>v==null?null:XYZ[i][0]*e[0]+XYZ[i][1]*e[1]+XYZ[i][2]*e[2])}
@@ -339,8 +339,8 @@ const lvl=r=>r>=.5?'good fit':r>=.3?'partial fit':'weak fit';
 const lcol=r=>r>=.5?'#8fd694':r>=.3?'#d9b45f':'#6b7584';
 const INK='#eef1f5',DIM='#9aa4b2';
 // ---- layers and filters
-const LAYERS=[['mps','MPs','#9aa4b2'],['pavg','Party averages','#d9b45f'],['shape','Selected line / plane','#8fd694'],['rimM','Proposition dots: measured','#6fb3e0'],['rimS','Proposition dots: small sample (diamonds)','#e0a96f'],['rimI','Proposition dots: inferred, one-sided (diamonds)','#c27fd0'],['planes','All subject planes','#6b7584'],['axes','Axis labels','#6b7584']];
-const L0={mps:true,pavg:true,shape:true,rimM:true,rimS:true,rimI:true,planes:false,axes:false};
+const LAYERS=[['mps','MPs','#9aa4b2'],['pavg','Party averages','#d9b45f'],['shape','Selected line / plane','#8fd694'],['rimM','Proposition dots: measured','#6fb3e0'],['rimS','Proposition dots: small sample (diamonds)','#e0a96f'],['rimI','Proposition dots: inferred, one-sided (diamonds)','#c27fd0'],['planes','All subject planes','#6b7584']];
+const L0={mps:true,pavg:true,shape:true,rimM:true,rimS:true,rimI:true,planes:false};
 let L={...L0};
 let FL={parties:new Set(),onlyPos:false,minSub:0};
 // ---- derived per-MP facts
@@ -471,13 +471,6 @@ function draw(){
  ctx.save();ctx.strokeStyle='#2a3445';ctx.lineWidth=1;ctx.beginPath();ctx.arc(cx(),H/2,S,0,7);ctx.stroke();
  if(mode3){ctx.globalAlpha=.55;for(let ax=0;ax<3;ax++){ctx.beginPath();for(let k=0;k<=72;k++){const a=k/72*6.2832,c=Math.cos(a),s=Math.sin(a);const v=ax===0?[0,c,s]:ax===1?[c,0,s]:[c,s,0];const p=P(v);k?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1])}ctx.stroke()}}
  axHit=[];
- if(L.axes){ctx.font='700 13px "Source Sans 3",sans-serif';ctx.textBaseline='middle';
-  [[1,0,0],[0,1,0],[0,0,1]].forEach((v,i)=>{if(!mode3&&i===2)return;
-   [1,-1].forEach(sgn=>{const a=P(v.map(x=>x*sgn*1.12)),t='Axis '+(i+1)+(sgn>0?' +':' −'),w=ctx.measureText(t).width,px=a[0]-w/2-7,py=a[1]-11,pw=w+14,ph=22;
-    ctx.globalAlpha=AX===i?1:.88;ctx.fillStyle='rgba(14,17,23,.86)';ctx.strokeStyle=AX===i?'#d9b45f':'#3b4659';ctx.lineWidth=AX===i?1.6:1;
-    ctx.beginPath();ctx.roundRect(px,py,pw,ph,11);ctx.fill();ctx.stroke();
-    ctx.fillStyle=AX===i?'#d9b45f':'#eef1f5';ctx.fillText(t,px+7,a[1]+.5);
-    axHit.push({i,x:px-4,y:py-4,w:pw+8,h:ph+8})})});ctx.textBaseline='alphabetic'}
  ctx.restore();
  const picked=nd.sc||null,sc=picked?pct(picked,.96):1;
  VIS=D.mps.map((m,i)=>visible(i,nd));
@@ -706,11 +699,12 @@ let drag=null;
 cv.addEventListener('pointerdown',e=>{drag={x:e.clientX,y:e.clientY,moved:0};cv.setPointerCapture(e.pointerId);closePops()});
 cv.addEventListener('pointermove',e=>{const R=cv.getBoundingClientRect();
  if(drag){const dx=e.clientX-drag.x,dy=e.clientY-drag.y;drag.moved+=Math.abs(dx)+Math.abs(dy);if(mode3){yaw+=dx*.008;pitch=Math.max(-1.5,Math.min(1.5,pitch+dy*.008))}drag.x=e.clientX;drag.y=e.clientY;draw();return}
- const x=e.clientX-R.left,y=e.clientY-R.top;const hd=dotAt(x,y);hoverDot=hd;const ah=axAt(x,y);hover=hd||ah?-1:nearest(x,y);const t=$('tip');cv.style.cursor=hd||ah?'pointer':'';
+ const x=e.clientX-R.left,y=e.clientY-R.top;const hd=dotAt(x,y);hoverDot=hd;const nm=hd?-1:nearest(x,y),ah=hd||nm>=0?null:axAt(x,y);hover=hd||ah?-1:nm;const t=$('tip');cv.style.cursor=hd||ah?'pointer':'';axEndHov=ah?ah.i+':'+ah.side:null;
  if(hd){t.style.display='block';t.style.left=Math.min(x+12,W-310)+'px';t.style.top=(y+12)+'px';t.innerHTML=dotTip(hd.d)}
+ else if(ah){axEndTip(ah,x,y,e)}
  else if(hover>=0){const m=D.mps[hover];t.style.display='block';t.style.left=(x+12)+'px';t.style.top=(y+12)+'px';t.textContent=m.n+' ('+m.p+') · '+nsub[hover]+' subject'+(nsub[hover]===1?'':'s')}else t.style.display='none';draw()});
 const axAt=(x,y)=>axHit.find(h=>x>=h.x&&x<=h.x+h.w&&y>=h.y&&y<=h.y+h.h);
-cv.addEventListener('pointerup',e=>{if(drag&&drag.moved<5){const R=cv.getBoundingClientRect();const ah=axAt(e.clientX-R.left,e.clientY-R.top);if(ah){openAxis(ah.i);drag=null;return}const hd=dotAt(e.clientX-R.left,e.clientY-R.top);if(hd){go(hd.d.t==='subj'?{t:'subj',i:hd.d.i}:{t:hd.d.t,i:hd.d.i})}else{const i=nearest(e.clientX-R.left,e.clientY-R.top);if(i>=0)go(sel,i)}}drag=null});
+cv.addEventListener('pointerup',e=>{if(drag&&drag.moved<5){const R=cv.getBoundingClientRect();const px=e.clientX-R.left,py=e.clientY-R.top,hd=dotAt(px,py),i=hd?-1:nearest(px,py),ah=hd||i>=0?null:axAt(px,py);if(ah){axEndClick(ah,e);drag=null;return}if(hd){go(hd.d.t==='subj'?{t:'subj',i:hd.d.i}:{t:hd.d.t,i:hd.d.i})}else if(i>=0)go(sel,i)}drag=null});
 function dotAt(x,y){let b=null,bd=1e9;for(const q of rimP){const d=Math.hypot(q.x-x,q.y-y);if(d<=q.rad+3&&d-q.rad*0.3<bd){bd=d-q.rad*0.3;b=q}}return b}
 function dotTip(d){const wk=d.r<.3?' &nbsp;<b>weak fit</b>':'';
  if(d.t==='os'){const o=D.os[d.i],txt=d.e>0?o.fm:o.am;
@@ -728,12 +722,12 @@ function setDM(m){DM=m;document.querySelectorAll('#dm button').forEach(b=>b.setA
 $('layPop').addEventListener('click',e=>{
  const b=e.target.closest('#dm button');if(b){setDM(b.dataset.dm);return}
  if(e.target.id==='b3'){setMode(true);return}if(e.target.id==='b2'){setMode(false);return}
- if(e.target.id==='reset'){GSUB=false;if(sel.t==='group')info();yaw=YAW0;pitch=PITCH0;L={...L0};setDM('subjects');setModeRaw(true);buildLayers();closePops();try{history.replaceState(null,'',hashStr(sel,curSel))}catch(e){}draw()}
+ if(e.target.id==='reset'){GSUB=false;if(sel.t==='group')info();yaw=YAW0;pitch=PITCH0;L={...L0};setDM('none');setModeRaw(true);buildLayers();closePops();try{history.replaceState(null,'',hashStr(sel,curSel))}catch(e){}draw()}
 });
 function setDock(){}
 $('leg').addEventListener('click',e=>{const ac=e.target.closest('[data-ax]');if(ac){e.stopPropagation();const v=ac.dataset.ax==='all'?'all':+ac.dataset.ax;AX===v?closeAxis():openAxis(v)}});
 // ---- view / filters popovers
-function buildLayers(){$('layPop').innerHTML=`<h3>Dimension</h3><div class="seg" role="group" aria-label="Dimension" style="margin-bottom:10px"><button id="b3" aria-pressed="${mode3}">3D</button><button id="b2" aria-pressed="${!mode3}">2D</button></div><h3>Rim dots</h3><div class="seg" id="dm" role="group" aria-label="Rim dots" style="margin-bottom:10px"><button data-dm="none" aria-pressed="${DM==='none'}">Off</button><button data-dm="subjects" aria-pressed="${DM==='subjects'}">Subjects</button><button data-dm="all" aria-pressed="${DM==='all'}">All</button></div><label class="ck"><input type="checkbox" data-l="axes" ${L.axes?'checked':''}>Show axis labels</label><div style="margin-top:10px"><button class="link" id="reset">Reset view</button></div>`}
+function buildLayers(){$('layPop').innerHTML=`<h3>Dimension</h3><div class="seg" role="group" aria-label="Dimension" style="margin-bottom:10px"><button id="b3" aria-pressed="${mode3}">3D</button><button id="b2" aria-pressed="${!mode3}">2D</button></div><h3>Rim dots</h3><div class="seg" id="dm" role="group" aria-label="Rim dots" style="margin-bottom:10px"><button data-dm="none" aria-pressed="${DM==='none'}">Off</button><button data-dm="subjects" aria-pressed="${DM==='subjects'}">Subjects</button><button data-dm="all" aria-pressed="${DM==='all'}">All</button></div><div style="margin-top:10px"><button class="link" id="reset">Reset view</button></div>`}
 $('layPop').addEventListener('change',e=>{const k=e.target.dataset.l;if(k){L[k]=e.target.checked;draw()}});
 function buildFilters(){const ps=Object.entries(pcount).sort((a,b)=>b[1].n-a[1].n);
  $('filPop').innerHTML=`<h3>Party</h3><div class="chips">${ps.map(([p,a])=>`<button class="pchip" data-p="${esc(p)}" aria-pressed="${FL.parties.has(p)}"><em style="background:${a.col}"></em>${esc(p)} <span style="opacity:.6">${a.n}</span></button>`).join('')}</div><label class="ck" style="margin-top:8px"><input type="checkbox" id="onlyPos" ${FL.onlyPos?'checked':''}><span id="onlyLab"></span></label>
