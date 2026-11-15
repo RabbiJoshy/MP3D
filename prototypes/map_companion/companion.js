@@ -418,13 +418,13 @@ function drawAxisEnds(){
  const obs=axObstacles(),blocked=[];
  if(L.pavg)pAvg.forEach(a=>{const p=P(a.v);blocked.push({x0:p[0]-15,y0:p[1]-15,x1:p[0]+15,y1:p[1]+15})});
  tagRects.forEach(t=>blocked.push(t));
- const rl0=re=>Math.max(re+14,S+(mode3?14:12)),placed=[];ctx.font='600 12px "Source Sans 3",sans-serif';ctx.textBaseline='middle';ctx.textAlign='center';
+ const rl0=re=>Math.max(re+14,S+(mode3?14:12)),placed=[];ctx.font='600 13.5px "Source Sans 3",sans-serif';ctx.textBaseline='middle';ctx.textAlign='center';
  const ord=ends.slice().sort((a,b)=>Math.hypot(b.x-c[0],b.y-c[1])-Math.hypot(a.x-c[0],a.y-c[1]));
  let busy=false;const labs=[];
  for(const e of ord){
   const dep=mode3?Math.max(0,Math.min(1,(e.z+.3)/.6)):1,re=Math.hypot(e.x-c[0],e.y-c[1]);
   let dx=e.x-c[0],dy=e.y-c[1];if(re<1){dx=0;dy=-1}else{dx/=re;dy/=re}
-  const tw=ctx.measureText(e.name).width,w=tw+10,h=18,rl=rl0(re);
+  const tw=ctx.measureText(e.name).width,w=tw+10,h=20,rl=rl0(re);
   let rx=c[0]+dx*rl+dx*w/2,ry=c[1]+dy*rl+dy*h/2,shifted=false;
   const nx=Math.max(4+w/2,Math.min(W-4-w/2,rx)),ny=Math.max(4+h/2,Math.min(H-4-h/2,ry));const sh=Math.hypot(nx-rx,ny-ry);if(sh>0){shifted=true;rx=nx;ry=ny}
   if(shifted&&!mode3&&Math.abs(dy)<.5)ry-=14;
@@ -432,11 +432,11 @@ function drawAxisEnds(){
   let ok=mode3?(dep>0&&re>=.5*S&&sh<10):!tagRects.some(b=>axHit2(rect,b));
   if(ok&&mode3&&(blocked.some(b=>axHit2(rect,b))||obs.some(b=>axHit2(rect,b))||placed.some(b=>axHit2({x0:rect.x0-3,y0:rect.y0-3,x1:rect.x1+3,y1:rect.y1+3},b))))ok=false;
   if(ok)placed.push(rect);
-  labs.push({e,st:axSt[e.key]||(axSt[e.key]={a:0}),rect,dx,dy,re,dep,tw,ok,lines:[e.name],fs:12,inside:false});
+  labs.push({e,st:axSt[e.key]||(axSt[e.key]={a:0}),rect,dx,dy,re,dep,tw,ok,lines:[e.name],fs:13.5,inside:false});
  }
  // Narrow windows: the sphere fills the width, so a label may sit just inside the outline, over the wireframe but clear of party averages and dense dots.
  if(mode3&&W<=1100){
-  const want=W>=600?3:1,maxDots=W>=600?4:1,fs=W>=600?11:10.5,cand=labs.filter(L=>!L.ok&&L.dep>.45).sort((a,b)=>b.dep-a.dep);
+  const want=W>=600?3:1,maxDots=W>=600?4:1,fs=W>=600?12.5:12,cand=labs.filter(L=>!L.ok&&L.dep>.45).sort((a,b)=>b.dep-a.dep);
   let have=labs.filter(L=>L.ok).length;
   const dotsIn=r=>{let n=0;for(const o of proj){if(o.x>=r.x0&&o.x<=r.x1&&o.y>=r.y0&&o.y<=r.y1&&VIS[o.i]&&EVF[o.i]>.3)n++}return n};
   ctx.font='600 '+fs+'px "Source Sans 3",sans-serif';
