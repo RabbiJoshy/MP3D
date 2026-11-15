@@ -1,3 +1,51 @@
+# Handover — 15 November 2026 (read this first; it supersedes anything below that disagrees)
+
+**State:** live and sendable at https://rabbijoshy.github.io/MP3D/ (GitHub Pages serves `main` → `/docs`; the working branch `rebuild/speech-space` is kept identical). Local preview: `http://127.0.0.1:8765/prototypes/map_companion/index.html`, refreshed by every build (start `.venv/bin/python -m http.server 8765` from the repo root if it is down).
+
+**What the app is:** a descriptive tool. What MPs said in the Commons since July 2024, each position linked to the speech, on a 3D map. It is not predictive, and "How it works" says so.
+
+## Build, test, publish
+    .venv/bin/python prototypes/build_hierarchy_app.py     # 30-60 s
+    for t in test_release test_visitor_placement test_map_evidence test_topic_selection test_topic_relationships; do node prototypes/$t.cjs; done
+    node --check prototypes/map_companion/companion.js && node --check prototypes/ha_quiz.js
+- Edit sources only: `prototypes/hierarchy_app_template.html`, `prototypes/map_companion/companion.js|css`, `prototypes/ha_quiz.js`, `prototypes/build_hierarchy_app.py`. Never hand-edit `docs/` or `app_hierarchy.html`.
+- Publish = commit the rebuilt `docs/` and push to `main`, **only when the user says so**.
+- `companion.js` is large and has been wiped once by a bad edit: make small targeted edits and run `node --check` after each.
+
+## The user's rules
+- One finished preview, not changes piece by piece. Short, plain answers. Ask before spending more than about 10¢ or pushing.
+- Never open `.env`. No hand-written proposition lists or cherry-picked topics.
+- **Override files are append-only:** `results/overrides/positions.jsonl`, `labels.jsonl`, `subjects.jsonl`. Never rewrite them. Builder flags: `--no-overrides`, `--no-sk22`, `--no-anchor`, `--no-onesided`.
+- UI tone: semi-professional, plain British English, sentence case, nothing childish.
+
+## The map now
+- **526 MPs, 75 two-sided arguments, 20 subjects; 566 MPs have profiles.** Party explains 33% of the map; held-out fit 0.93; within-party split-vote AUC 0.73 (0.5 = chance). Pass marks: `results/sk22_passmarks.json`.
+- **Joint fit (14 Nov):** one-sided positions join the fit as lighter evidence (a recorded position is ±1; silence is a weak 0, weight 0.10), but only if confirmed on a second read or scored ≥ 0.9 by the judge (1,320 positions). This spread out the MPs who had only 1-2 two-sided positions and had been pulled to the centre. Visitors in the quiz are still placed from two-sided arguments only. Tested and rejected: weighting arguments by within-party split (fuller, but lost 2-4 points of accuracy).
+- **Axes are anchored** to `results/axis_reference.json`, names cached in `results/axis_names.json`: 1 Government programme ↔ Critics from left and right; 2 Social and economic reform ↔ Border control and fiscal restraint; 3 Tax and constitutional measures ↔ Social welfare and accountability (the weakest). Government versus opposition is still the main axis: about two thirds of arguments are party-line.
+- **Second read (overrides):** 5,671 positions re-read by a second model (4,535 confirmed, 1,083 dropped, 53 flipped). Every map position with judge confidence below 0.9 has been read twice. Accuracy by confidence: below 0.7 about 50-62%; 0.7-0.9 about 80-86%; above 0.9 about 92%.
+- **Not yet read:** 998 map positions at ≥ 0.9 (about 8% expected wrong); about 2,900 one-sided positions shown in profiles, of which roughly 1,600 at 0.7-0.9 are displayed as normal entries (about one in five expected wrong) and those below 0.7 sit behind the "less certain" toggle. Reading chunks and marks live under `results/overrides/{older,prominent,rest_two_sided}/`; give each reader its own scratch folder.
+- **Subjects:** 29 automatic subject labels corrected (`subjects.jsonl`).
+
+## The interface now
+- Brand "MP3D"; tabs Explore and Take the quiz. Topics panel closed on first load at every width; hide/show is an icon (`#panelHide` in the panel header, a matching icon on the map).
+- **No topic or proposal markers on the map.** Choosing a proposal in the panel draws it as a line through the centre with For and Against ends and tints MPs; choosing a topic shows a fan of its proposals.
+- **Axis end labels place themselves** on the map; hovering one shows the arguments at that end and opens Explore axes. Explore axes is full size, with party lanes, 2D/3D, expand per axis, and the arguments pulling each way.
+- Map options: Show (MPs and averages / Averages / MPs) and Parties only. Low-evidence MPs are drawn fainter.
+- Quiz: the next question is chosen by expected information, balance and within-party split (`pickNext` in `ha_quiz.js`); the star glides along the answered axis before the next axis appears; "What defines you now" replaces the fixed list.
+- Profiles: speech excerpts are cards with pills; dates as DD MMM YY.
+
+## Not verified by anyone
+- Real phones and Safari (touch: tap for a name, tap again for the profile).
+- The quiz from first question to final result by hand; the reduced-motion path.
+
+## Worth doing next, in order
+1. Read the 1,600 mid-confidence one-sided positions shown in profiles, and the 998 high-confidence map positions (free, subagent readers).
+2. "Who breaks from their party, and on what", and cross-party allies (free, from checked positions; the user has seen the idea and not said yes).
+3. A first screen that says what the app is (the user rejected a tagline plus three buttons; ask which direction).
+4. Evidence that is not government bills (signed motions, the "asks" in profiles): the only route to a map where government versus opposition is not the main axis. Hours of work plus its own validation.
+
+---
+
 # Handover — 13 November 2026, evening (read this first)
 
 **State:** the app is live and sendable. https://rabbijoshy.github.io/MP3D/ is built from `main` (`/docs`); last published commit `1d575f6`. Local preview: `http://127.0.0.1:8765/prototypes/map_companion/index.html` (refreshed automatically by every build).

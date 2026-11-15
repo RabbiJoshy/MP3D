@@ -223,3 +223,5 @@ body[data-mode=quiz] .app.quiz-hidden #browse{display:inline-flex}
 /* Axis end tooltip */
 #tip .axt-m{opacity:.62;margin-top:5px}#tip .axt-l{margin:3px 0 0;padding-left:15px}#tip .axt-l li{margin:1px 0}
 #browse.is-off+#crumbs{max-width:100%}
+/* The map legend box is retired: axes have their own labels and a selected proposal line carries For / Against tags. It otherwise rendered as an empty pill. */
+#leg{display:none !important}
