@@ -99,8 +99,8 @@ const HAQuiz=(()=>{
  }
  /* Party summary over MPs that have >=3 comparable answers: share of comparable answers that agree. */
  function parties(matches,partyOf,minMPs){
-  const g={};matches.forEach(m=>{const p=partyOf(m.i),a=g[p]||(g[p]={p,mps:0,hit:0,tot:0});a.mps++;a.hit+=m.hit;a.tot+=m.nShared});
-  return Object.values(g).filter(a=>a.mps>=(minMPs||3)).map(a=>({...a,pct:Math.round(100*a.hit/a.tot)})).sort((a,b)=>b.pct-a.pct||b.mps-a.mps)
+  const g={};matches.forEach(m=>{const p=partyOf(m.i);if(!p||p==='Ind')return;const a=g[p]||(g[p]={p,mps:0,hit:0,tot:0});a.mps++;a.hit+=m.hit;a.tot+=m.nShared});
+  return Object.values(g).filter(a=>a.mps>=(minMPs||1)&&a.tot>=3).map(a=>({...a,pct:Math.round(100*a.hit/a.tot)})).sort((a,b)=>b.pct-a.pct||b.mps-a.mps)
  }
  /* Projected stances across propositions given 3D coordinate p.
     Uses linear factor model y_hat = v_k . p + b_k or directional projection. */

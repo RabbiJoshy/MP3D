@@ -993,13 +993,13 @@ function renderQuiz(){const el=$('qz');let h='';
    // If >= 3 directional answers, also show direct voting match agreement
    const matches=dir>=3?HAQuiz.match(Q.ans,Q.star,D.fights,N,i=>Math.hypot(XYZ[i][0]-YOU.p[0],XYZ[i][1]-YOU.p[1],XYZ[i][2]-YOU.p[2])):null;
    if(matches&&matches.length){
-    const pm=HAQuiz.parties(matches,i=>D.mps[i].p,3);
-    h+=`<h3>Voting record agreement</h3><p class="meta">MPs with at least three direct votes in common with you:</p>`;
+    const pm=HAQuiz.parties(matches,i=>D.mps[i].p,1);
+    h+=`<h3>Voting record agreement</h3><p class="meta">MPs with at least three direct positions in common with you:</p>`;
     h+=matches.slice(0,4).map(m=>{const mp=D.mps[m.i];
      return`<article class="mcard"><div class="mh"><img style="width:36px;height:36px;border-radius:50%;object-fit:cover;margin-right:4px;flex:none" src="https://members-api.parliament.uk/api/Members/${Number(mp.id)}/Portrait?cropType=ThreeTwo" alt="${esc(mp.n)}" loading="lazy" onerror="this.remove()"><div><h4><button class="linkb" data-mp="${m.i}">${esc(mp.n)}</button></h4><div class="meta"><span class="dot" style="display:inline-block;vertical-align:middle;margin-right:4px;background:${mp.col}"></span>${esc(mp.p)}${mp.c?' &middot; '+esc(mp.c):''}<br><b class="ink">${m.hit} of ${m.nShared} agree</b>${m.nShared-m.hit?' &middot; '+(m.nShared-m.hit)+' differ':''}</div></div></div></article>`;
     }).join('');
     if(pm.length){
-     h+=`<h3>Party match</h3><p class="meta">Share of comparable votes that agree, for parties with at least 3 matched MPs.</p>${pm.map(a=>`<div class="pm"><span><b>${esc(a.p)}</b></span><span class="b"><i style="width:${a.pct}%;background:${pcount[a.p]?pcount[a.p].col:'#888'}"></i></span><span>${a.pct}%<br><small class="meta">${a.mps} MPs</small></span></div>`).join('')}`;
+     h+=`<h3>Party match</h3><p class="meta">Share of comparable positions that agree across matched MPs.</p>${pm.map(a=>`<div class="pm"><span><b>${esc(a.p)}</b></span><span class="b"><i style="width:${a.pct}%;background:${pcount[a.p]?pcount[a.p].col:'#888'}"></i></span><span>${a.pct}%<br><small class="meta">${a.mps} MP${a.mps===1?'':'s'}</small></span></div>`).join('')}`;
     }
    }
   }

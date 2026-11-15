@@ -363,12 +363,19 @@ if JOINT:
         _rd0 = {(x["label"], x["passage_id"]) for x in map(json.loads, _pj0.open())} if _pj0.exists() else set()
         for _w in map(json.loads, _wl0.open()):
             if _w.get("conf") is not None and _w["conf"] < 0.7 and (_w["label"], _w["passage_id"]) not in _rd0: _lc0.add((_w["label"], _w["passage_id"]))
-    # Only one-sided positions that were confirmed on a second read, or that the judge scored at 0.9 or more, may help place MPs
-    # (the 13-14 Nov reviews found one-sided positions about 92% right at >= 0.9 but only about 79% right at 0.7-0.9).
-    _ok1 = {(x["label"], x["passage_id"]) for x in map(json.loads, _pj0.open()) if x.get("action") == "confirm"} if _pj0.exists() else set()
+    # One-sided positions may help place MPs if the judge scored them at 0.9 or more
+    # (the 13-14 Nov reviews found one-sided positions about 92% right at >= 0.9 but only about 79% right at 0.7-0.9)...
+    _ok1 = set()
     if _wl0.exists():
         for _w in map(json.loads, _wl0.open()):
             if _w.get("conf") is not None and _w["conf"] >= 0.9: _ok1.add((_w["label"], _w["passage_id"]))
+    # ...plus the one-sided positions confirmed in the 13-14 Nov second reads, which were already part of the tested fit.
+    # Positions confirmed in the later "final_read" pass (15 Nov) clean up profiles but are NOT added as map evidence:
+    # adding them doubled the one-sided evidence and cut within-party vote AUC from 0.725 to 0.682, and dropping the
+    # earlier confirmed ones as well (judge >= 0.9 only) was tested too and scored 0.680. This set scores 0.706.
+    if _pj0.exists():
+        for _x in map(json.loads, _pj0.open()):
+            if _x.get("action") == "confirm" and not str(_x.get("group", "")).startswith("final_read"): _ok1.add((_x["label"], _x["passage_id"]))
     _cols = []
     for _f in POOL:
         _labs = {FALL[o]["label"] for o in _f["orig"]} | {_f["label"]}
@@ -422,6 +429,10 @@ if _reff.exists() and "--no-anchor" not in sys.argv:
         _ua, _sa, _vta = np.linalg.svd(_A.T @ _B); _Ra = _ua @ _vta
         U_dir = U_dir @ _Ra; V_dir = V_dir @ _Ra
         print("axes anchored to reference on", len(_cm), "MPs; per-axis r:", [round(float(np.corrcoef(U_dir[[mi[m] for m in _cm], k], _B[:, k])[0, 1]), 2) for k in range(3)])
+# Centre [0, 0, 0] on the visual midpoint of the cloud (3rd..97th percentile) and absorb the offset into b_dir
+_mid = 0.5 * (np.percentile(U_dir[_on0], 3, axis=0) + np.percentile(U_dir[_on0], 97, axis=0))
+U_dir = U_dir - _mid[None, :]
+b_dir = b_dir + V_dir @ _mid
 _scale = float(np.percentile(np.linalg.norm(U_dir[obs_Y.any(1)], axis=1), 98)) or 1.0
 Z = U_dir / _scale
 vv = V_dir * _scale
