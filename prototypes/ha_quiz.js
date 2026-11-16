@@ -127,7 +127,27 @@ const HAQuiz=(()=>{
  }
  /* ---- Adaptive question choice (information-based) ----
     Per-argument constants, computed once: n (MPs with a recorded position), balance (1 = evenly split), split (within-party
-    split, 1 = every party divided down the middle), govline (1 = pure government-versus-opposition question). */
+    split, 1 = every party divided down the middle), govline (1 = pure government-versus-opposition question), plus a generic
+    clarity/duplicate signature so procedural/umbrella bills and near-duplicate wordings do not crowd out major policy questions. */
+ const OBSCURE_RE=/Committee of Privileges|IfATE|Metrolog|Multipliers|Fraud, Error|Finance \(No\. 2\) Bill|^Pass the Finance Bill$|Universal Credit and Personal Independence Payment Bill|Children.s Wellbeing and Schools Bill|Attorney General consent|MHRA licensing|Pathways trial|bench division|parental involvement|magistrates court|Diego Garcia|Northern Ireland Troubles|Biodiversity Beyond|Mental Health Bill|Institute for Apprenticeships|leader model|play-based|Devolution \(Immigration\) \(Scotland\)/i;
+ const STOP_W=new Set('pass support implement bill act extend introduce require remove establish amend abolish certain some cases rules measures england public authorities'.split(' '));
+ function normWords(s){
+  return new Set(String(s||'').toLowerCase()
+   .replace(/independent school\w*|private school\w*/g,'topic_privateschool')
+   .replace(/jury trial\w*|trial by jury|bench division/g,'topic_jurytrial')
+   .replace(/assisted dying|assisted suicide|terminally ill/g,'topic_assisteddying')
+   .replace(/wealth tax/g,'topic_wealthtax')
+   .replace(/two-child|benefit cap/g,'topic_benefitcap')
+   .replace(/football/g,'topic_football')
+   .replace(/[^a-z0-9_\s]/g,' ')
+   .split(/\s+/).filter(w=>w.length>3&&!STOP_W.has(w)));
+ }
+ function isDupWords(wA,wB){
+  if(!wA||!wB)return false;
+  let inter=0,tag=false;
+  wA.forEach(w=>{if(wB.has(w)){inter++;if(w.startsWith('topic_'))tag=true}});
+  return tag||inter>=2;
+ }
  function stats(fights,partyOf,nMps,keys){
   const out=new Map();
   for(const k of keys){
@@ -145,7 +165,8 @@ const HAQuiz=(()=>{
     if(top>=0.9){const side=sL>=0.5?1:0;   // the side the largest party is on
      govline=big.filter(g=>g.p!==all[0][0]).every(g=>(side?1-g.s:g.s)>=0.8)?1:0}
    }
-   out.set(k,{k,n,share,balance,split,govline,subj:f.subj});
+   const lbl=f.label||'';
+   out.set(k,{k,n,share,balance,split,govline,subj:f.subj,obscure:OBSCURE_RE.test(lbl),words:normWords(lbl)});
   }
   return out;
  }
@@ -161,38 +182,62 @@ const HAQuiz=(()=>{
    for(let i=0;i<3;i++)for(let j=0;j<3;j++)M[i][j]+=wt*v[i]*v[j]}
   return inv3(M)||[[1/model.ridge,0,0],[0,1/model.ridge,0],[0,0,1/model.ridge]];
  }
- function scoreOf(st,v,S){
+ function scoreOf(st,v,b,S,z,nShown){
   let u=0;for(let i=0;i<3;i++)for(let j=0;j<3;j++)u+=v[i]*S[i][j]*v[j];
-  return u*(0.35+0.65*st.balance)*(1+st.split)*(st.govline?0.5:1)*Math.min(1,st.n/25);
+  const vn2=v[0]*v[0]+v[1]*v[1]+v[2]*v[2]||1;
+  const uNorm=u/Math.pow(vn2,0.65);
+  // Logistic boundary uncertainty at the visitor's current 3D position z: peaks when v_k . z + b_k == 0
+  let boundary=1;
+  if(z){
+   const logit=1.5*(v[0]*z[0]+v[1]*z[1]+v[2]*z[2]+(b||0));
+   const pz=1/(1+Math.exp(-logit));
+   boundary=0.35+0.65*(4*pz*(1-pz));
+  }
+  const opener=(nShown<2&&st.subj==='Conscience (free votes)')?0.2:1;
+  return uNorm*boundary*Math.pow(Math.max(1,st.n),0.55)*(0.4+0.6*st.balance)*(1+0.35*st.split)*(st.govline?0.85:1)*(st.obscure?0.15:1)*opener;
  }
  /* Next argument to ask. ctx={stats, model}; hist = arguments already shown, in order; priorities = chosen subject names.
-    Ranked by expected information, then the diversity guard (no two in a row from one subject; at most 2 per subject in the
-    first 8), relaxed only when nothing else is left. Ties go to the lower index. */
+    Ranked by expected information at the visitor's current 3D estimate z, then the diversity guard (no two in a row from one
+    subject; at most 2 per subject in the first 8; no near-duplicate wording of an already-asked question), relaxed only when
+    nothing else is left. Ties go to the lower index. */
  function pickNext(ctx,answers,star,hist,priorities,keys){
-  const model=ctx.model,S=covariance(answers,star,model),seen=new Set(hist);
+  const model=ctx.model,dirAns={};
+  for(const[ks,a]of Object.entries(answers||{}))if(a!==0)dirAns[ks]=a;
+  const S=covariance(dirAns,star,model),pl=place(dirAns,star,null,model),z=pl?pl.p:null,seen=new Set(hist);
   let cand=keys.filter(k=>!seen.has(k)&&model.v[k]&&ctx.stats.has(k));
   const pri=new Set(priorities||[]);
   if(pri.size){const pk=cand.filter(k=>pri.has(ctx.stats.get(k).subj));if(pk.length)cand=pk}
   if(!cand.length)return null;
   const last=hist.length?ctx.stats.get(hist[hist.length-1]):null,lastSubj=last?last.subj:null;
   const cnt={};hist.forEach(k=>{const st=ctx.stats.get(k);if(st)cnt[st.subj]=(cnt[st.subj]||0)+1});
+  const histW=hist.map(k=>ctx.stats.get(k)&&ctx.stats.get(k).words).filter(Boolean);
+  const notDup=kk=>!histW.some(hw=>isDupWords(ctx.stats.get(kk).words,hw));
   const early=hist.length<8;
-  const tiers=[kk=>ctx.stats.get(kk).subj!==lastSubj&&(!early||(cnt[ctx.stats.get(kk).subj]||0)<2),
+  const tiers=[kk=>notDup(kk)&&ctx.stats.get(kk).subj!==lastSubj&&(!early||(cnt[ctx.stats.get(kk).subj]||0)<2),
+               kk=>notDup(kk)&&ctx.stats.get(kk).subj!==lastSubj,
                kk=>ctx.stats.get(kk).subj!==lastSubj,()=>true];
   for(const ok of tiers){
    const c=cand.filter(ok);
-   if(c.length){let best=null,bs=-1;for(const k of c){const s=scoreOf(ctx.stats.get(k),model.v[k],S);if(best===null||s>bs+1e-12){best=k;bs=s}}return best}
+   if(c.length){let best=null,bs=-1;for(const k of c){const s=scoreOf(ctx.stats.get(k),model.v[k],model.b&&model.b[k],S,z,hist.length);if(best===null||s>bs+1e-12){best=k;bs=s}}return best}
   }
   return null;
  }
  /* Live panel: arguments on which the visitor's estimated stance is strongest and most distinctive.
-    p_j = v_j . z + b_j; rank by |p_j| * (0.5 + balance_j). */
+    p_j = v_j . z + b_j; rank by |p_j| * (0.5 + balance_j), suppressing obscure/duplicate un-answered items. */
  function hudRank(z,ctx,answers,keys,count){
-  const model=ctx.model,out=[];
+  const model=ctx.model,raw=[];
   for(const k of keys){const v=model.v[k],st=ctx.stats.get(k);if(!v||!st)continue;
-   const p=v[0]*z[0]+v[1]*z[1]+v[2]*z[2]+model.b[k];
-   out.push({k,p,score:Math.abs(p)*(0.5+st.balance),answered:answers[k]!==undefined,ans:answers[k]})}
-  return out.sort((a,b)=>b.score-a.score||a.k-b.k).slice(0,count);
+   const p=v[0]*z[0]+v[1]*z[1]+v[2]*z[2]+model.b[k],isAns=answers[k]!==undefined;
+   const obsMult=(!isAns&&st.obscure)?0.4:1;
+   raw.push({k,p,score:Math.abs(p)*(0.5+st.balance)*obsMult,answered:isAns,ans:answers[k],words:st.words})}
+  raw.sort((a,b)=>b.score-a.score||a.k-b.k);
+  const out=[],usedW=[];
+  for(const r of raw){
+   if(!r.answered&&usedW.some(hw=>isDupWords(r.words,hw)))continue;
+   out.push(r);if(r.words)usedW.push(r.words);
+   if(out.length>=count)break;
+  }
+  return out;
  }
  return{question,create,place,match,parties,predictStances,stats,covariance,pickNext,hudRank}
 })();
